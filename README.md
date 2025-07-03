@@ -56,6 +56,7 @@ Data flow:
 ├── data/
 │ └── html_pages/ # raw crawl output
 └── index/ # Lucene index (generated)
+
 ---
 
 ## 4 . Quick-Start Guide
