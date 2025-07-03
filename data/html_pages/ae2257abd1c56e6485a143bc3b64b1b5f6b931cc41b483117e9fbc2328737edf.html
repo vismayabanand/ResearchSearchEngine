@@ -1,0 +1,574 @@
+
+<div style="width:800px">
+
+                                                                                                     
+<BODY TEXT="#000000" LINK="#0000b4" VLINK="#0000b4" ALINK="#0000b4">
+<font face="Arial" size=2>
+
+<table border="0" cellpadding="2" width="100%">
+<tbody>
+</tbody>
+<tbody><tr>
+<hr color="#997733" WIDTH=98%>
+</tr>
+</tbody></table>
+
+<center>
+<H1><font color=grey>Understanding & Managing the Dynamic Behavior of<br> Parallel Programs</font> <img src="../../Gifs/ucr.png" width="25"></H1>
+<font color="#660000" size="4" face="Cursive">Rajiv Gupta</font>
+<br>
+<a href="https://www.linkedin.com/in/chaitanya-mamatha-ananda-a39684124/?originalSubdomain=in">Chaitanya Mamatha Ananda</a> 
+<br>
+<br>
+<a href="https://www.cs.ucr.edu/~xsun042/">Xiaofan Sun</a> (2023) 
+<br>
+<a href="https://www.cs.ucr.edu/~aalav003/">Dr. Arash Alavi</a> (2019)
+<br>
+<a href="https://www.cs.ucr.edu/~hli035/">Dr. Hongbo Li</a> (2018)
+<br>
+<a href="">Dr. Zachary Benavides</a> (2018)
+<br>
+<a href="http://www.cs.ucr.edu/~bzhou003">Dr. Bo Zhou</a> (2016)
+<br>
+<a href="http://www.cs.ucr.edu/~vsing004">Dr. Vineet Singh</a> (2016)
+<br>
+<a href="http://www.cs.ucr.edu/~wangy">Dr. Yan Wang</a> (2014) 
+<br>
+<a href="http://www.cs.ucr.edu/~linc">Dr. Changhui Lin</a> (2013)
+<br>
+<a href="http://www.nec-labs.com/~mfeng">Dr. Min Feng</a> (2012)
+<br>
+<a href="http://www.cs.ucr.edu/~tianc">Dr. Chen Tian</a> (2010)
+<br>
+<a href="http://homepages.inf.ed.ac.uk/vnagaraj/">Prof. Vijayanand Nagarajan</a> (2009)
+<br>
+<a href="http://www.cs.ucr.edu/~jeffreyd">Dr. Dennis Jeffrey</a> (2009)
+<br>
+<a href="http://www.cs.arizona.edu/~tmsriram">Dr. Sriraman Tallam</a> (2007)
+</center>
+<P>
+
+<table border="0" cellpadding="2" width="100%">
+<tbody>
+</tbody>
+<tbody><tr>
+<td ALIGN=LEFT>
+<font face=Calibri color="#0000b4" size="5">
+Description
+</font>
+<!--
+<font face=Calibri color="#045FB4" size="5">
+<img src="../../Gifs/gold.jpg" width="85%">
+-->
+</td>
+</tr>
+</tbody></table>
+
+<hr color="#997733" WIDTH=98%>
+
+<ul>
+<p align="justify" style="WIDTH:99%;">
+The advent of multicore processors has introduced new opportunities for achieving increased 
+reliability. However, powerful dynamic execution monitoring techniques that impose low runtime 
+overhead are required to realize these opportunities. This project is aimed at developing 
+efficient monitoring techniques and utilizing them in building powerful software tools for 
+interactive debugging as well as runtime fault detection and recovery. 
+<ul>
+<li><p align="justify" style="WIDTH:99%;">
+<b>Efficient Monitoring & Applications</b> - runtime monitoring of parallel and multithreaded programs poses 
+significant challenges. For a wide variety of tasks such as dynamic slicing and information
+flow tracking, monitoring is carried by associating meta-data with program data. It is essential
+to maintain a consistent view of the data and meta-data by updating program data and the meta-data 
+atomically. Our goal is to maintain this consistent view at a low overhead cost for which we are 
+developing a combination of dynamic binary translation techniques 
+<font size=1, color="#660000">[SP&E'11b,SIGOPS'09]</font>, programmable architectural mechanisms 
+<font size=1, color="#660000">[ISCA'09,VEE'09]</font>, and additional software techniques
+<font size=1, color="#660000">[ISSTA'07,FSE'06]</font>. These monitoring capability is being built 
+upon a sequentially consistent multicore system <font size=1, color="#660000">[SC'14,ICS'13,ASPLOS'12,PACT'10]</font>. We employ efficient monitoring technqiues to capture execution profiles of parallel and distributed applications to enable performance debugging <font size=1, color="#660000">[HPDC'16,RV'17,PACMPL'19,FMSD'19]</font> and dynamic analysis for autotuning <font size=1, color="#660000">[CGO'19]</font>. In our recent work we are exploting runtime information for optimizing memory performance <font size=1, color="#660000">[CGO'25]</font> and memory footprint of memory intensive applications.
+<P>
+<li><p align="justify" style="WIDTH:99%;">
+<b>Interactive Debugging and Deterministic Replay</b> - we are developing an interactive debugging 
+interface that combines several capabilities that together reduce debugging effort and increase 
+debugging speed. The capabilities that yield these benefits include: sophisticated state alteration 
+commands for dynamically switching the directions of conditional branches and suppressing 
+the execution of statements; sophisticated state inspection commands including those for 
+computing, browsing, and pruning dynamic slices; state rollback and checkpointing commands 
+to allow reexecuting the program from any earlier checkpoints. Our prototype is built on 
+top of GDB; thus all commands that are supported by GDB are also available to the programmer
+<font size=1, color="#660000">[SCAM'13]</font>. We have also developed an enhanced delta debugging
+technique based upon relevant inputs dynamic analysis <font size=1, color="#660000">[ISSRE'13]</font>.
+To support debugging of parallel programs we have integrated some of the above techniques
+with deterministic replay in DrDebug <font size=1, color="#660000">[CGO'14]</font> and 
+LightPlay <font size=1, color="#660000">[LCPC'14]</font> systems. We have developed techniques for debugging when faults lead to violation of data structure constraints <font size=1, color="#660000">[ISSRE'16,CC'16,SANER'15]</font>. Our recent work has developed a dynamic slicing and other analysis tools to help in debugging of Android applications <font size=1, color="#660000">[ICSE'19,INFOCOM'19,ASIACCS'18]</font>.
+<P>
+<li><p align="justify" style="WIDTH:99%;">
+<b>Fault Detection, Avoidance, and Recovery</b> - runtime monitoring is being employed for 
+developing a powerful techniques for runtime detection of faults (e.g., memory bugs, data races,
+and atomicity violations 
+<font size=1, color="#660000">[ISMM'13,CGO'13,SPE'11a,ISSTA'08,ICSM'08]</font>) and security 
+holes through dynamic information flow tracking <font size=1, color="#660000">[INTERACT'08]</font>. 
+We are also considering errors involving violations of integrity of data structures 
+<font size=1, color="#660000">[CC'16]</font> and instability involving floating-point data
+<font size=1, color="#660000">[OOPSLA'15]</font>.
+In scenarios where both sequential and parallel versions of a program are available, we detect 
+faults by comparing the executions of the two program versions. We have also developed online 
+fault detection, avoidance and recovery techniques for clusters <font size=1, color="#660000">[SC'17,IPDPS'18,HIPS'18,CC'19]</font>, multicores <font size=1, color="#660000">[COMPSAC'08,ISMM'09]</font>, and mobile systems <font size=1, color="#660000">[PAM'17,EASE'15,ISSRE'15]</font>. Our recent work is aimed at developing concolic testing techniques for parallel programs that utilize dynamic concurrent data structures <font size=1, color="#660000">[ICS'21]</font>.
+</ul>
+<P>
+</ul>
+<P>
+</ul>
+
+<table border="0" cellpadding="2" width="100%">
+<tbody>
+</tbody>
+<tbody><tr>
+<td ALIGN=LEFT>
+<font face=Calibri color="#0000b4" size="5">
+Publications
+</font>
+<!--
+<img src="../../Gifs/gold.jpg" width="85%">
+-->
+</td>
+</tr>
+</tbody></table>
+
+<hr color="#997733" WIDTH=98%>
+
+
+
+<UL>
+<OL>
+<P>
+<li><p align="justify">
+<a href="">
+PreFix: Optimizing the Performance of Heap-Intensive Applications</a><BR>
+<b>C.M. Ananda, R. Gupta, S. Tallam, H. Shen, and X.D. Li.</b>
+<em>IEEE/ACM International Symposium on Code Generation and Optimization</em> (<font color="#660000">CGO</font>),
+pages 1-13, March 2025.<br>
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/doi/10.1145/3652024.3665505">
+SSRD: Shapes and Summaries for Race Detection in Concurrent Data Structures</a><BR>
+<b>X. Sun and R. Gupta.</b>
+<em>ACM SIGPLAN International Symposium on Memory Management</em> (<font color="#660000">ISMM</font>),
+pages 68-81, June 2024.<br>
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/doi/abs/10.1145/3447818.3460962">
+DSGEN: Concolic Testing GPU Implementations of Concurrent Dynamic Data Structures</a><BR>
+<b>X. Sun and R. Gupta.</b>
+<em>ACM International Conference on Supercomputing</em> (<font color="#660000">ICS</font>),
+pages 75-87, June 2021.<br>
+<P>
+<li><p align="justify">
+<a href="https://link.springer.com/article/10.1007%2Fs10703-019-00341-0">
+Annotation Guided Collection of Context-Sensitive Parallel Execution Profiles</a><BR>
+<b>Z. Benavides, K. Vora, R. Gupta, and X. Zhang.</b>
+<em>Formal Methods in System Design, An International Journal</em> (<font color="#660000">FMSD</font>),
+Springer, Volume 54, Issue 3, pages 388-415, November 2019.<br>
+Among best papers from RV 2017 with extended versions invited for publication in FMSD.<br>
+<b><font color=#660000>download:</font></b> <a href="https://www.cs.ucr.edu/~gupta/fmsd-artifacts.zip">https://www.cs.ucr.edu/~gupta/fmsd-artifacts.zip</a>
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/citation.cfm?doid=3366395.3360582">
+DProf: Distributed Profiler with Strong Guarantees</a><BR>
+<b>Z. Benavides, K. Vora, and R. Gupta.</b>
+<em>Proceedings of the ACM on Programming Languages</em> (<font color="#660000">PACMPL</font>), Volume 3, Issue <font color="#640000">OOPSLA</font>, Article 156, 24 pages, Athens, Greece, October 2019.
+<P>
+<li><p align="justify">
+<a href="">
+When The Attacker Knows A Lot: The GAGA Graph Anonymizer</a><BR>
+<b>A. Alavi, R. Gupta, and Z. Qian.</b>
+<em>22nd Information Security Conference</em>
+(<font color="#660000">ISC</font>), LNCS 11723, Springer, pages 211-230, New York, NY, September 2019.
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/citation.cfm?id=3339649">
+Dynamic Slicing for Android</a><BR>
+<b>T. Azim, A. Alavi, I. Neamtiu, and R. Gupta.</b>
+<em>41st ACM/IEEE International Conference on Software Engineering</em>
+(<font color="#660000">ICSE</font>), pages 1154-1164, Montreal, Canada, May 2019.
+<b><font color=#660000>download:</font></b> <a href="https://github.com/archer29m/AndroidSlicer">https://github.com/archer29m/AndroidSlicer</a>
+<P>
+<li><p align="justify">
+<a href="https://www.semanticscholar.org/paper/Figment%3A-Fine-grained-Permission-Management-for-Gasparis-Qian/81a7573fc1c9d63ea7d44b15d1be893b832642b8">
+Figment: Fine-grained Permission management for Mobile Apps</a><br>
+<b>I. Gasparis, Z. Qian, C. Song, S.V. Krishnamurthy, R. Gupta, and P. Yu.</b>
+<em>IEEE International Conference on Computer Communications</em>
+(<font color="#660000">INFOCOM</font>), pages 1405-1413, Paris, France, April-May, 2019.
+<P>
+<li><p align="justify">
+<a href="https://ieeexplore.ieee.org/document/8661177">
+White-Box Program Tuning</a><br>
+<b>W-C. Lee, Y. Liu, P. Liu, S. Ma, H.J. Choi, X. Zhang, and R. Gupta.</b>
+<em>IEEE/ACM International Symposium on Code Generation and Optimization</em> 
+(<font color="#660000">CGO</font>), pages 122-135, Washington DC, February 2019.
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/citation.cfm?doid=3302516.3307353">
+Efficient Concolic Testing for MPI Applications</a><br>
+<b>H. Li, Z. Chen, and R. Gupta.</b>
+<em>International Conference on Compiler Construction</em> 
+(<font color="#660000">CC</font>), pages 193-204, Washington DC, February 2019.
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/citation.cfm?doid=3196494.3196533">
+Droid M+: Developer Support for Imbibing Android’s New Permission Model</a><br>
+<b>I. Gasparis, A. Aqil, Z. Qian, C. Song, S.V. Krishnamurthy, R. Gupta, and E. Colbert.</b>
+<em>ACM Asia Conference on Computer and Communications Security</em> 
+(<font color="#660000">ASIACCS</font>), pages 765-776, Songdo, Incheon, Korea, June 2018.
+<P>
+<li><p align="justify">
+<a href="https://ieeexplore.ieee.org/document/8425240">
+COMPI: Concolic Testing for MPI Applications</a><br>
+<b>H. Li, S. Li, Z. Benavides, Z. Chen, and R. Gupta.</b>
+<em>32nd IEEE International Parallel and Distributed Processing Symposium</em> 
+(<font color="#660000">IPDPS</font>), pages 865-874, Vancouver, British Columbia, May 2018.
+<P>
+<li><p align="justify">
+<a href="https://ieeexplore.ieee.org/document/8425443">
+Non-Intrusively Avoiding Scaling Problems in and out of MPI Collectives</a><br>
+<b>H. Li, Z. Chen, R. Gupta, and M. Xie.</b>
+<em>International Workshop on High-Level Parallel Programming Models and Supportive Environments</em> 
+(<font color="#660000">HIPS</font>), pages 415-424, in IEEE IPDPSW Proceedings, Vancouver, British Columbia, May 2018.
+<P>
+<li><p align="justify">
+<a href="https://dl.acm.org/citation.cfm?doid=3126908.3126938">
+ParaStack: Efficient Hang Detection for MPI Programs at Large Scale</a><br>
+<b>H. Li, Z. Chen, and R. Gupta.</b>
+<em>ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis</em> 
+(<font color="#660000">SC</font>), Article No. 63, 12 pages, Denver, Colorado, November 2017.
+<P>
+<li><p align="justify">
+<a href="https://link.springer.com/chapter/10.1007/978-3-319-67531-2_7">
+Annotation Guided Collection of Context-Sensitive Parallel Execution Profiles </a><br>
+<b>Z. Benavides, R. Gupta, and X. Zhang.</b>
+<em>The 17th International Conference on Runtime Verification</em> 
+(<font color="#660000">RV</font>), LNCS 10548, Springer, pages 103-120, Seattle, Washington, September 2017.
+<P>
+<li><p align="justify">
+<a href="https://link.springer.com/chapter/10.1007/978-3-319-54328-4_8">
+Where is the Weakest Link? A Study on Security Discrepancies between Android Apps and Their Website Counterparts</a><br>
+<b>A. Alavi, A. Quach, H. Zhang, B. Marsh, F. Ul Haq, Z. Qian, L. Lu, and R. Gupta.</b>
+<em>The Passive and Active Measurement Conference</em> 
+(<font color="#660000">PAM</font>), LNCS 10176, pages 100-112, Springer, Sydney, Australia, March 2017.
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?id=2907311">
+Parallel Execution Profiles</a><br>
+<b>Z. Benavides, R. Gupta, and X. Zhang.</b>
+<em>25th ACM International Symposium on High-Performance Parallel and Distributed Computing</em> 
+(<font color="#660000">HPDC</font>), pages 215-218, Kyoto, Japan, May-June 2016.
+<P>
+<li><p align="justify">
+<a href="http://ieeexplore.ieee.org/abstract/document/7774523/">
+Proving Concurrent Data Structures Linearizable
+</a><BR>
+<b>V. Singh, I. Neamtiu, and R. Gupta.</b>
+<em>The 27th IEEE International Symposium on Software Reliability Engineering</em> (<font color="#660000">ISSRE</font>), pages 230-240, Ottawa, Canada, October 2016.
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?doid=2892208.2892215">
+Automatic Fault Location for Data Structures
+</a><BR>
+<b>V. Singh, R. Gupta, and I. Neamtiu.</b>
+<em>25th International Conference on Compiler Construction</em> (<font color="#660000">CC</font>), pages 99-109, Barcelona, Spain, March 2016.
+<P>
+<li><p align="justify">
+<a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7381843">
+Experience Report: How Do Bug Characteristics Differ Across Severity Classes: A Multi-platform Study
+</a><BR>
+<b>B. Zhou, I. Neamtiu, and R. Gupta.</b>
+<em>The 26th IEEE International Symposium on Software Reliability Engineering</em> (<font color="#660000">ISSRE</font>), pages 507-517, Gaithersburg, Maryland, November 2015.
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?doid=2814270.2814299">
+RAIVE: Runtime Assessment of Floating-Point Instability by Vectorization
+</a><BR>
+<b>W-C. Lee, T. Bao, Y. Zheng, X. Zhang, K. Vora, and R. Gupta.</b>
+<em>ACM SIGPLAN International Conference on Object Oriented Programming Systems, Languages and Applications</em> (<font color="#660000">OOPSLA</font>), pages 623-638, Pittsburgh, PA, October 2015.  
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?doid=2745802.2745808">
+A Cross-platform Analysis of Bugs and Bug-fixing in Open Source Projects: Desktop vs. Android vs. iOS
+</a><BR>
+<b>B. Zhou, I. Neamtiu, and R. Gupta.</b>
+<em>19th International Conference on Evaluation and Assessment in Software Engineering</em> (<font color="#660000">EASE</font>), Article 7, 10 pages, Nanjing, China, April 2015.
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?doid=2745802.2745807">
+Predicting Concurrency Bugs: How Many, What Kind and Where Are They?
+</a><BR>
+<b>B. Zhou, I. Neamtiu, and R. Gupta.</b>
+<em>19th International Conference on Evaluation and Assessment in Software Engineering</em> (<font color="#660000">EASE</font>), Article 6, 10 pages, Nanjing, China, April 2015.
+<P>
+<li><p align="justify">
+<a href="../Publications/Comp/saner15.pdf">
+MG++: Memory Graphs for Analyzing Dynamic Data Structures
+</a><BR>
+<b>V. Singh, R. Gupta, and I. Neamtiu.</b>
+<em>22nd IEEE International Conference on Software Analysis, Evolution, and Reengineering</em> (<font color="#660000">SANER</font>), pages 291-300, Montreal, Canada, March 2015.
+<P>
+<li><p align="justify">
+<a href="http://dl.acm.org/citation.cfm?id=2683606&CFID=591187632&CFTOKEN=28315783">
+Fence Scoping</a><br>
+<b>C. Lin, V. Nagarajan, and R. Gupta.</b>
+<em>ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis</em> (<font color="#660000">SC</font>), pages 105-116, New Orleans, Louisiana, November 2014.
+<P>
+<li><p align="justify">
+<a href="../Publications/Comp/lcpc-lightplay.pdf">
+LightPlay: Efficient Replay with GPUs</a><br>
+<b>M. Feng, F. Khorasani, R. Gupta, and L.N. Bhuyan.</b>
+<em>27th International Workshop on Languages and Compilers for Parallel Computing</em>
+(<font color="#660000">LCPC</font>), LNCS 8967, Chapter 22, pages 332-347, Hillsboro, Oregon, September 2014.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/2544137.2544152">
+DrDebug: Deterministic Replay based Cyclic Debugging with Dynamic Slicing</a><br>
+<b>Y. Wang, H. Patil, C. Pereira, G. Lueck, R. Gupta, and I. Neamtiu.</b>
+<em>IEEE/ACM International Symposium on Code Generation and Optimization</em>
+(<font color="#660000">CGO</font>), pages 98-108, Orlando, Florida, March 2014.
+<b><font color=#660000>DrDebug download:</font></b> <a href="http://www.drdebug.org"><b>Replay</b></a> & <a
+ href="https://software.intel.com/en-us/articles/pintool-slicing"><b>Slicing</b></a>
+<P>
+<li><p align="justify">
+<a href="http://doi.ieeecomputersociety.org/10.1109/ISSRE.2013.6698926">
+Relevant Inputs Analysis and its Applications</a> <BR>
+<b>Y. Wang, R. Gupta, and I. Neamtiu.</b>
+<em>The 24th IEEE International Symposium on Software Reliability Engineering</em>
+(<font color="#660000">ISSRE</font>), pages 268-277, Pasadena, CA, November 2013.
+<P>
+<li><p align="justify">
+<a href="http://doi.ieeecomputersociety.org/10.1109/SCAM.2013.6648188">
+A State-Alteration and Inspection-based Interactive Debugger</a> <BR>
+<b>Y. Wang, M. Feng, R. Gupta, and I. Neamtiu.</b>
+<em>13th International Working Conference on Source Code Analysis and Manipulation</em>
+(<font color="#660000">SCAM</font>), pages 84-93, Eindhoven, Netherlands, September 2013. 
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/2464157.2464159">
+Generating Sound and Effective Memory Debuggers</a> <BR>
+<b>Y. Wang, I. Neamtiu, and R. Gupta.</b>
+<em>International Symposium on Memory Management</em>
+(<font color="#660000">ISMM</font>), pages 51-62, Seattle, Washington, June 2013.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/2464996.2465015">
+Address-aware Fences</a> <br>
+<b>C. Lin, V. Nagarajan, and R. Gupta.</b>
+<em>27th International Conference on Supercomputing</em> (<font color="#660000">ICS</font>), pages 313-324, Eugene, Oregon, June 2013.
+<P>
+<li><p align="justify">
+<a href="http://doi.ieeecomputersociety.org/10.1109/CGO.2013.6494979">
+Lightweight Fault Detection in Parallelized Programs</a> <BR>
+<b>L. Tan, M. Feng, and R. Gupta.</b>
+<em>IEEE/ACM International Symposium on Code Generation and Optimization</em>
+(<font color="#660000">CGO</font>), pages 1-11, Shenzhen, China, February 2013.
+<p>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1002/spe.1105">
+A System for Debugging via Online Tracing and Dynamic Slicing</a> <BR>
+<b>V. Nagarajan, D. Jeffrey, and R. Gupta.</b>
+<em>Software - Practice & Experience</em> (<font color="#660000">SP&E</font>),
+Vol. 42, No. 8, pages 995-1014, August 2012.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/2150976.2151006">
+Efficient Sequential Consistency via Conflict Ordering</a> <br>
+<b>C. Lin, V. Nagarajan, R. Gupta, and B. Rajaram.</b>
+<em>ACM 17th International Conference on
+Architectural Support for Programming Languages and Operating Systems</em> (<font color="#660000">ASPLOS</font>),
+London, UK, March 2012.
+<p>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1007/s10766-011-0176-3">
+Efficient Sequential Consistency Using Conditional Fences</a> <br>
+<b>C. Lin, V. Nagarajan, and R. Gupta.</b>
+<em>International Journal of Parallel Programming</em> (<font color="#660000">IJPP</font>),
+Vol. 40, No. 1, pages 84-117, Feb. 2012. Special issue of best papers from PACT 2010.
+<p>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1002/spe.1040">
+Isolating Bugs in Multithreaded Programs Using Execution Suppression</a> <br>
+<b>D. Jeffrey, Y. Wang, C. Tian, and R. Gupta.</b>
+<em>Software - Practice & Experience</em> (<font color="#660000">SP&E</font>),
+Vol. 41, No. 11, pages 1259-1288, October 2011.
+<p>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1854273.1854312">
+Efficient Sequential Consistency Using Conditional Fences</a> <br>
+<b>C. Lin, V. Nagarajan, and R. Gupta.</b>
+<em>19th International Conference on Parallel Architectures and Compilation Techniques</em> (<font color="#660000">PACT</font>),
+pages 295-306, Vienna, Austria, September 2010. 
+<p>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1002/spe.922">
+Automated Dynamic Detection of Busy-wait Synchronizations</a> <br>
+<b>C. Tian, V. Nagarajan, R. Gupta, and S. Tallam.</b>
+<em>Software - Practice & Experience</em> (<font color="#660000">SP&E</font>), 
+Vol. 39, No. 11, pages 947-972, 2009. 
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1542431.1542439">
+Self-Recovery in Server Programs</a> <br>
+<b>V. Nagarajan, D. Jeffrey, and R. Gupta.</b>
+<em>International Symposium on Memory Management</em> (<font color="#660000">ISMM</font>),
+pages 49-58, Dublin, Ireland, June 2009. 
+<p>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1555754.1555798">
+ECMon: Exposing Cache Events for Monitoring</a> <br>
+<b>V. Nagarajan and R. Gupta.</b>
+<em>ACM/IEEE 36th International Symposium on Computer Architecture</em> (<font color="#660000">ISCA</font>),
+pages 349-360, Austin, Texas, June 2009.
+<P>
+<li><p align="justify">
+<a href=" http://doi.acm.org/10.1145/1531793.1531798">
+Runtime Monitoring on Multicores via OASES</a> <br>
+<b>V. Nagarajan and R. Gupta.</b>
+<em>ACM SIGOPS Operating Systems Review,</em> (<font color="#660000">SIGOPS</font>),
+special issue on the interaction among the OS, Compilers, and Multicore Processors,
+pages 15-24, Vol. 43, No. 2, April 2009 (Invited Paper).
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1508293.1508295">
+Architectural Support for Shadow Memory in Multiprocessors</a> <br>
+<b>V. Nagarajan and R. Gupta.</b>
+<em>ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments</em> (<font color="#660000">VEE</font>),
+pages 1-10, Washington DC, March 2009.
+<P>
+<li><p align="justify">
+<a href="http://doi.ieeecomputersociety.org/10.1109/ICSM.2008.4658058">
+Dynamic Slicing of Multithreaded Programs for Race Detection</a> <br>
+<b>S. Tallam, C. Tian, and R. Gupta.</b>
+<em>International Conference on Software Maintenance</em> (<font color="#660000">ICSM</font>),
+pages 97-106, Beijing, China, September 2008.
+<P>
+<li><p align="justify">
+<a href="http://doi.ieeecomputersociety.org/10.1109/COMPSAC.2008.23">
+Avoiding Program Failures Through Safe Execution Perturbations</a> <br>
+<b>S. Tallam, C. Tian, R. Gupta, and X. Zhang.</b>
+<em>IEEE Computer Software and Applications Conference</em> (<font color="#660000">COMPSAC</font>),
+pages 152-159, Turku, Finland, August 2008.
+<P>
+<li><p align="justify">
+<a href=" http://doi.acm.org/10.1145/1390630.1390649">
+Dynamic Recognition of Synchronization Operations for Improved Data Race Detection</a> <br>
+<b>C. Tian, V. Nagarajan, R. Gupta, and S. Tallam.</b>
+<em>International Symposium on Software Testing and Analysis</em> (<font color="#660000">ISSTA</font>),
+pages 143-154, Seattle, July 2008.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1390841.1390846">
+Support for Symmetric Shadow Memory in Multiprocessors</a> <br>
+<b>V. Nagarajan and R. Gupta.</b>
+<em>Workshop on Parallel and Distributed Systems: Testing, Analysis, and Debugging</em> (<font color="#660000">PADTAD</font>),
+9 pages, Seattle, July 2008.
+<P>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1109/IPDPS.2008.4536382">
+Scalable Dynamic Information Flow Tracking and its Applications</a> <br>
+<b>R. Gupta, N. Gupta, X. Zhang, D. Jeffrey, V. Nagarajan, S. Tallam, and C. Tian.</b>
+<em>NSF Next Generation Software Workshop</em> (<font color="#660000">NSFNGS</font>),
+colocated with IPDPS, pages 1-5, Florida, April 2008.
+<P>
+<li><p align="justify">
+<a href="../Publications/Comp/interact08.pdf">
+Dynamic Information Flow Tracking on Multicores</a> <br>
+<b>V. Nagarajan, H-S. Kim, Y. Wu, and R. Gupta.</b>
+<em>Workshop on Interaction between Compilers and Computer Architectures</em> (<font color="#660000">INTERACT</font>),
+Co-located with HPCA, Salt Lake City, Feb. 2008.
+<P>
+<li><p align="justify">
+<a href="../Publications/Comp/stmcs.pdf">
+Synchronization Aware Conflict Resolution for Runtime Monitoring Using Transactional Memory</a> <br>
+<b>C. Tian, V. Nagarajan, and R. Gupta.</b>
+<em>Workshop on Software Tools for Multicore Systems</em> (<font color="#660000">STMCS</font>),
+colocated with CGO, pages 1-6, Boston, April 2008.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1273463.1273491">
+Enabling Tracing of Long-Running Multithreaded Programs via Dynamic Execution Reduction</a> <BR>
+<b>S. Tallam, C. Tian, X. Zhang, and R. Gupta.</b>
+<em>International Symposium on Software Testing and Analysis</em> (<font color="#660000">ISSTA</font>),
+pages 207-218, London, July 2007.
+<P>
+<li><p align="justify">
+<a href="http://doi.acm.org/10.1145/1181775.1181786">
+Dynamic Slicing Long Running Programs through Execution Fast Forwarding</a> <BR>
+<b>X. Zhang, S. Tallam, and R. Gupta.</b>
+<em>14th ACM SIGSOFT Symposium on Foundations of Software Engineering</em> (<font color="#660000">FSE</font>),
+pages 81-91, Portland, Oregon, November 2006.
+<P>
+<li><p align="justify">
+<a href="http://dx.doi.org/10.1007/3-540-57502-2_67">
+Distributed Slicing and Partial Re-execution for Distributed Programs</a> <br>
+<b>E. Duesterwald, R. Gupta, and M.L. Soffa.</b>
+<em>5th Workshop on Languages and Compilers for Parallel Computing</em> (<font color="#660000">LCPC</font>),
+LNCS 757 Springer Verlag, pages 497-511, Yale University, New Haven, Connecticut, August 1992.
+<P>
+</OL>
+</UL>
+
+<table border="0" cellpadding="2" width="100%">
+<tbody>
+</tbody>
+<tbody><tr>
+<td ALIGN=LEFT>
+<font face=Calibri color="#0000b4" size="5">
+Funding
+</font>
+<!--
+<img src="../../Gifs/gold.jpg" width="90%">
+-->
+</td>
+</tr>
+</tbody></table>
+
+<hr color="#997733" WIDTH=98%>
+
+
+<UL>
+<UL>
+<li>
+<a href="http://www.fastlane.nsf.gov/servlet/showaward?award=2226448">
+SHF: Small: CT-DDS - Scalable Concolic Testing of Parallel Applications
+With Shared Dynamic Data Structures</a>,<BR>
+<em><font color="#660000">National Science Foundation</font></em>, CCF-2226448, 10/2022-9/2025.<BR>
+<P>
+<li>
+<a href="http://www.fastlane.nsf.gov/servlet/showaward?award=1617424">
+TWC: Small: Collaborative: Improving Android Security with Dynamic Slicing</a>,<BR>
+<em><font color="#660000">National Science Foundation</font></em>, CCF-1617424, 9/2016-8/2020.<BR>
+<P>
+<li>
+<font color="#0000b4">Dynamic Slicing for Interactive Debugging of Multithreaded Programs</font>,<BR>
+<em><font color="#660000">Intel Corporation</font></em>, 6/2012-9/2015.
+<P>
+<li>
+<a href="http://www.fastlane.nsf.gov/servlet/showaward?award=1318103">
+SHF: Small: Memory Consistency - Hardware, Compiler, and Programming Support</a>,<BR>
+<em><font color="#660000">National Science Foundation</font></em>, CCF-1318103, 9/2013-8/2017.<BR>
+<P>
+<li>
+<a href="http://www.fastlane.nsf.gov/servlet/showaward?award=0963996">
+SHF: Medium: Programmable Monitoring Framework for Multicore Systems</a>,<BR>
+<em><font color="#660000">National Science Foundation</font></em>, CCF-0963996, 9/2010-8/2014.</a></strong><BR>
+<P>
+<li>
+<a href="http://www.fastlane.nsf.gov/servlet/showaward?award=0751961">
+CSR-AES-RCS: Scalable and Efficient Dynamic Information Flow Tracking in Multithreaded Programs</a>,<BR>
+<em><font color="#660000">National Science Foundation</font></em>, CNS-0751961/0719791, 9/2007-8/2010.</a></strong>
+</UL>
+</UL>
+
+<table border="0" cellpadding="2" width="100%">
+<tbody>
+</tbody>
+<tbody><tr>
+<hr color="#997733">
+</tr>
+</tbody></table>
+</div>

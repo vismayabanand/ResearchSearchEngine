@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zhijia's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+        body {
+            max-width: 1366px;
+	    margin: auto;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+            color: #5f5f5f;
+            background: #f8f8f8;
+            line-height: 140%;
+
+        }
+
+        header {
+            background: #003DA5;
+            height: 60px;
+        }
+
+	nav img {
+	    float: left;
+	    margin-top: 10px;
+	    margin-left: 5px;
+	    margin-bottom: 5px;
+	    width: 145px;
+	}
+
+	.dept {
+	    float: left;
+	    margin-top: 10px;
+	    padding-left: 5px;
+	    border-left: 1px solid #FFB81C;
+	    font-size: 12pt;
+	    color: white;
+	    width: 150px;
+	}
+
+	.menu {
+	    float: right;
+	    padding-top: 30px;
+        }
+
+        nav li {
+            display: inline;
+            padding-right: 15px;
+        }
+
+        nav li a.active {
+            border-bottom: 3px solid #FFB81C;
+            padding-bottom: 2px;
+        }
+
+        nav li a {
+            color: white;
+            font-size: 11pt;
+            text-decoration: none;
+        }
+
+        ul {
+            margin: 0px;
+        }
+
+        li {
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #003DA5;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a.award {
+            font-weight: bold;
+            color: #FFB81C;
+        }
+
+	td {
+	   text-align: left;
+	}
+
+        #headshot {
+            float: left;
+            height: 180px;
+            padding-right: 25px;
+        }
+
+        h3 {
+            padding-top: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        div.main {
+            float: left;
+            width: 75%;
+            max-width: 1600px;
+        }
+
+        div section.main-top {
+            float: left;
+            width: 100%;
+        }
+
+	.description {
+	    font-size: 9pt;
+    	}
+
+        aside {
+            float: right;
+            width: 20%;
+            padding-right: 30px;
+        }
+
+        footer {
+            float: left;
+            width: 100%;
+            margin-top: 20px;
+            background: #2D6CC0;
+            height: 20px;
+        }
+
+        footer p {
+            float: right;
+            color: white;
+            margin-top: 2px;
+            margin-right: 40px;
+            font-size: 8pt;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            section div.box {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            section div.box {
+                width: 90%;
+            }
+
+            div.main {
+                width: 100%;
+            }
+
+            aside {
+                float: left;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            header {
+                height: 120px;
+            }
+
+            section div.box {
+                width: 90%;
+                margin-left: 5px;
+            }
+        }
+
+        /*========= Shadow Effect ========*/
+        .effect {
+            position: relative;
+        }
+
+        .effect:before,
+        .effect:after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            bottom: 15px;
+            left: 10px;
+            width: 50%;
+            top: 80%;
+            max-width: 300px;
+            background: #777;
+            box-shadow: 0 15px 10px #777;
+            transform: rotate(-3deg);
+        }
+
+        .effect:after {
+            transform: rotate(3deg);
+            right: 10px;
+            left: auto;
+        }
+
+        .box {
+            width: 95%;
+            float: left;
+            background: #FFF;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding: 10px;
+            font-size: 10pt;
+        }
+
+        .row2 {
+            clear: left;
+        }
+
+        .project-img {
+            float: left;
+            margin-right: 5px;
+        }
+
+        blockquote {
+            float: left;
+            max-width: 1000px;
+            font-size: 110%;
+            font-style: italic;
+            font-family: Georgia, Times, serif;
+            margin: 0px 0px 10px 10px;
+            padding: 10px;
+            border-top: 1px solid #665544;
+            border-bottom: 1px solid #665544;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+	<div class="logo"> 
+	    <img src="images/logo1.png">
+	    <div class="dept">Computer Science and Engineering</div>
+	</div>
+        <ul class="menu">
+           <li><a href="" class="active">Home</a></li>
+           <li><a href="html/publications.html">Publication</a></li>
+           <li><a href="html/teaching.html">Teaching</a></li>
+           <li><a href="html/service.html">Service</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <section class="main-top">
+
+            <p><img src="images/headshot.png" id="headshot"></p>
+            <h1 style="display: inline;">Zhijia Zhao</h1> <i>/* zh sounds like j */</i>
+            <br /><br />
+            Associate Professor
+            <br />
+            <a href="https://riple.cs.ucr.edu/">RIPLE</a> Research Group <br />
+            <a href="https://www1.cs.ucr.edu">Computer Science and Engineering</a>, UC Riverside
+
+
+            <p><b>Short Bio</b>: I received my Ph.D. in Computer Science from the 
+               <a href="https://www.wm.edu/as/computerscience/index.php">College of William and Mary</a> in 2015
+               under the supervision of <a href="https://people.engr.ncsu.edu/xshen5/">Prof. Xipeng Shen</a>. 
+               In the same year, I joined UC Riverside as an assistant professor, and later became an associate professor in 2020. 
+               I am fortunate and grateful to be a recipient of <em>NSF CAREER Award</em>
+               (2018), <em>Regents Faculty Fellowship</em> (2018), <em>Hellman Fellowship</em> (2018), 
+               <em>Best Paper Runner-up Award</em> at MobiSys'18, and <em>Best Paper Award</em> at ASPLOS'20 and ASPLOS'22. 
+            </p>
+        </section>
+
+        <section class="main-top">
+            <h3>Research Interests</h3>
+	    <p>
+	    My research group develops algorithms and software libraries for high-performance data analytics, focusing on non-tabular (NoSQL) data such as graphs, semi-structured data (e.g., JSON/XML), markup data (e.g., HTML), raw text, and binary serialization formats (e.g., ProtoBuf). We enhance performance through efficient parallelization, redundancy elimination, and improved data locality. Additionally, we explore program analysis and AI/ML techniques to address correctness and performance challenges in real-world software applications.
+	    </p>
+            <ul>
+                <li>Program optimization and parallelization (with multicore, SIMD, and GPU)</li>
+		<li>Data analytics (e.g., for JSON and graph data)</li>
+		<li>Program analysis (e.g., for mobile and web apps)</li>
+		<li>AI (knowledge representation and reasoning, and LLM)</li>
+                <!--li>High-performance data analytics based on modern computer architectures, especially for (JSON) documents and graphs; </li>
+                <li>Program analysis for improving software reliability, especially for event-based applications (like Android apps).</li-->
+            </ul>
+        </section>
+
+        <section class="main-top">
+            <h3>Selected Works</h3>
+            <!--div class="box effect">
+		    <table> <tr>
+            <td> <img src="images/bitwise.png" class="project-img" width="60px"> </td>
+            <td> <b>Auto-Parallelization of Inherently Serial Bitstream Programs</b>
+            </td>
+		    </tr> </table>
+            </div-->
+
+            <div class="box effect">
+		    <table> <tr>
+            <td> <img src="images/semi.png" class="project-img" width="60px"> </td>
+            <td> <b> Streaming and Indexing of Semi-Structured Data </b>
+                [<a href="https://dl.acm.org/authorize?N668211">PPoPP'17</a>, 
+                 <a href="https://dl.acm.org/citation.cfm?id=3304008">ASPLOS'19</a>,
+                 <a href="http://vldb.org/pvldb/vol14/p694-zhao.pdf">VLDB'21</a>,
+                 <a href="https://dl.acm.org/doi/10.1145/3503222.3507719">ASPLOS'22</a> (<a href="https://asplos-conference.org/2022/" class="award">Best Paper Award</a>),
+		 <a href="">SIGMOD'23</a>]
+                <div class="description">Semi-structured data, like JSON and its variations, is the de facto standard 
+                    for information exchange on the web and the basis for modern NoSQL document stores (e.g., MongoDB 
+                    and Firebase). With nested structures, it is difficult to process such data in a scalable way. To 
+                    address this, we leverage the automata theory and parallelization techniques to automatically 
+                    generate data-parallel code with small memory footprint.</div> 
+            </td>
+		    </tr> </table>
+            </div>
+
+            <div class="box effect">
+            <table> <tr>
+            <td> <img src="images/graph.png" class="project-img" width="60px"> </td>
+            <td> <b>Graph Analytics: GPU Acceleration</b>
+                [<a href="https://dl.acm.org/authorize?N668218">ASPLOS'18</a>,
+                <a href="https://dl.acm.org/doi/abs/10.1145/3342195.3387537">EuroSys'20</a>]
+    		, <b>Incremental</b>
+		[<a href="https://dl.acm.org/doi/10.1145/3447786.3456226">EuroSys'21</a>, <a href="">SoCC'24</a>]
+	        and <b>Concurrent Evaluation</b>
+                [<a href="https://dl.acm.org/doi/abs/10.1145/3567955.3567963">ASPLOS'23</a>]
+                <div class="description"> 
+                Many real-world computation problems can be modeled as graph problems. As the graphs are often large 
+		and irregular by nature, it is difficult to process them efficiently. We developed novel graph 
+                transformations to make graph more ``regular'' so that they can be processed efficiently on GPUs. To 
+                deal with the case that the graph is too large to fit into GPU memory, we designed a technique that 
+                can efficiently seperate the active part of the graph and only load that into the GPU memory. 
+                As the graph changes dynamically, we found a general solution that can incrementally evaluate graph
+                queries (based on graph triangle inequalities) to reduce the latency. Finally, in the senario of 
+		concurrent graph queries, we proposed an alignment method that reduces the ``misalignments'' among 
+		graph queries that are evaluated together.  </br>
+		</div>
+            </td>
+            </tr> </table>
+            </div>
+            
+            <div class="box effect">
+            <table> <tr>
+            <td> <img src="images/runtime.png" class="project-img" width="60px"> </td>
+            <td> <b>Analyzing and Preserving Mobile App State</b>
+                [<a href="https://dl.acm.org/authorize?N668219">MobiSys'18</a> (<a href="https://www.sigmobile.org/mobisys/2018/papers/" class="award">Best Paper Runner-up Award</a>), <a href="https://dl.acm.org/doi/10.1145/3428228">OOPSLA'20</a>]
+                <div class="description">Mobile systems (e.g., Android) expose changes on the device configuration (e.g.,
+                    orientation, screen size, or keyboard availability) to the apps at runtime to enable rich user
+                    experiences. When handled inappropriately, these changes can cause unresponsiveness, state loss, 
+                    or even app crash. In this work, we analyze the common causes to various runtime change issues and 
+                    design novel runtime change handling solutions to address them. </div>
+            </td> 
+            </tr> </table>            
+            </div>
+
+            <div class="box effect row2">
+            <table> <tr>
+            <td> <img src="images/fsm.png" class="project-img" width="60px"> </td>
+            <td> <b>Parallelizing Finite-State Machine (FSM) Computations</b> 
+                [<a href="https://dl.acm.org/authorize?N668226">ASPLOS'14</a>, 
+                 <a href="https://dl.acm.org/authorize?N668213">ASPLOS'15</a>,
+                 <a href="https://dl.acm.org/authorize?N668212">PACT'16</a>, 
+                 <a href="https://dl.acm.org/authorize?N668210">ICS'17</a>,
+                 <a href="https://dl.acm.org/doi/abs/10.1145/3373376.3378461">ASPLOS'20</a> (<a href="https://asplos-conference.org/2021/2020/index.html" class="award">Best Paper Award</a>),
+                 <a href="https://dl.acm.org/doi/10.1145/3445814.3446705">ASPLOS'21</a>]
+                <div class="description"> FSM serves as the computation model for a variety of performance-critical 
+                   applications (e.g., pattern matching and decoding). However, the model runs in serial &ndash; 
+                   each transition depends on the prior state. In a series of works, we "broke" the state dependencies 
+                   with disciplined speculation (ASPLOS'14 and '15), introduced multi-level parallelism (PACT'16), 
+                   examined and improved the scalability of FSM parallelization (ICS'17, ASPLOS'21).
+
+		   In addition, we found that bitstream programs that rely on bitwise operations (e.g., AND, SHIFT, and XOR) to 
+                    process long sequences of bits, can be effectively modeled by FSMs, hence parallelizable with FSM parallelization techniques. To achieve this, we proposed 
+                    bit-level dependency analysis and modeling techniques to reduce bitstream programs to FSMs (ASPLOS'20).</div>
+            </td> 
+            </tr> </table>          
+            </div>
+
+        </section>
+
+
+    </div>
+    <aside>
+        <h3>Contacts</h3>
+        <!--ul style="list-style-type:none;"-->
+        <ul>
+            <li> zhijia [at] cs.ucr.edu</li>
+            <li> 951-827-2993 </li>
+            <li> Winston Chung Hall 412</li>
+        </ul>
+
+        <h3>Ph.D. Students</h3>
+        <ul>
+	    <li> Sakib Fuad</li> <!--2021 Fall-->
+	    <li> Ashkan Vedadi</li> <!--2023 Winter-->
+	    <li> Josue Crandall</li> <!--2022 Fall-->
+	    <li> Zhijie Wang</li> <!--2023 Fall-->
+            [<a href="html/opening.html">Openings for Fall 2025</a>] 
+        <br/>
+        <br/>
+            <b>Alumni:</b> 
+            <li> <a href="https://www.cs.ucr.edu/~xyin014/">Dr. Xizhe Yin*</a> at Siemens </li>
+            <li> <a href="https://csc.lsu.edu/~ufarooq/">Prof. Umar Farooq</a> at LSU</li>
+            <li> <a href="http://www.cs.ucr.edu/~anode001/">Dr. Amir Nodehi</a> at BreezeML </li>
+            <li> <a href="http://www.cs.ucr.edu/~ljian006/">Dr. Lin Jiang</a> at Meta </li>
+            <li> <a href="https://junqiao-qiu.github.io/website/">Prof. Junqiao Qiu</a> at CityU, HK</li>
+	</ul>
+            <br/>
+            * <i>co-advised by Dr. Rajiv Gupta </i>
+        
+        <h3>Software Release</h3>
+
+        <ul>
+
+            <li><strong>JSONSki</strong>: streaming JSONPath evaluation with fast-forwarding 
+                [<a href="https://github.com/AutomataLab/JSONSki">Github</a>]</li>
+            <li><strong>Pison</strong>: a parallel indexing tool for high performance JSON analytics 
+                [<a href="https://github.com/AutomataLab/Pison">Github</a>]</li>
+            <li><strong>Subway</strong>: out-of-GPU-memory graph processing library
+                [<a href="https://github.com/AutomataLab/Subway">Github</a>]</li>
+            <li><strong>JPStream</strong>: streaming JSONPath evaluation on multi-core CPUs 
+                [<a href="https://automatalab.github.io/JPStream/">Github</a>]</li>
+            <li><strong>Tigr</strong>: a CUDA library for processing irregular graphs on GPUs
+                [<a href="https://github.com/AutomataLab/Tigr">Github</a>]</li>
+            <li><strong>S3</strong>: a scalability-sensitive speculation framework for FSMs
+                [<a href="https://github.com/JunqiaoQiu/S3">Github</a>]</li>
+            <li><strong>MicroSpec</strong>: a C++ library with both SIMD and thread-level speculation for FSM
+                parallelization
+                [<a href="https://github.com/JunqiaoQiu/MicroSpec">Github</a>]</li>
+            <li><strong>HPar</strong>: a prototype of data-parallel HTML5 parser
+                [<a href="https://github.com/zhijia/HPar">Github</a>]</li>
+        </ul>
+
+    </aside>
+    <div>
+        <br /><br />
+        <blockquote>"Research is to see what everyone else has seen, and to think what nobody else has thought." 
+            - Albert Szent-Gyorgyi </blockquote>
+    </div>
+    <!--footer>
+        <p>&copy Copyright 2018 Zhijia Zhao</p>
+    </footer-->
+</body>
+
+</html>

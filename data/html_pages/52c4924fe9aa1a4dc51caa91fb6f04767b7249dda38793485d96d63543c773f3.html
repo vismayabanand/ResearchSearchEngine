@@ -1,0 +1,455 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Natural Programming</title>
+<link rel=stylesheet href="style.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="images/natprog.ico" type="image/x-icon" />
+<script type="text/javascript">
+
+function makeHeaderLink(name, link) {
+	
+	if(document.URL.indexOf(link) == -1) document.write("<a class=navlink href=\"" + link + "\">" + name + "</a>&nbsp;&nbsp;&nbsp;");
+	else document.write("<b class=navlink>" + name + "</b>&nbsp;&nbsp;&nbsp;");
+	
+}
+
+function timestamp() {
+	var d = new Date();
+	document.write("" + d.getSeconds() + " " + d.getMilliseconds())
+}		
+
+function embedMovie (path, width, height) {
+	var result =
+		"<div class='clickme'>click to play</div>" +
+		"<object class=\"demo\" standby=\"loading...\"" +
+		"width=" + width + " " +
+		"height=" + height + " " +
+		"classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" " +
+		"codebase=\"http://www.apple.com/qtactivex/qtplugin.cab\"> " +
+		"<param name=\"src\" value=\"movies/" + path + ".jpg\" /> " +
+		"<param name=\"href\" value=\"" + path + ".mov\" /> " +
+		"<param name=\"target\" value=\"myself\" /> " +
+		"<param name=\"scale\" value=\"aspect\" />" +
+		"<param name=\"bgcolor\" value=\"000000\" />" +
+		"<embed type=\"video/quicktime\" src=\"movies/" + path + ".jpg\" href=\"" + path + ".mov\" width=" + width + " height=" + height + " target=\"myself\">" +
+		"</object>"
+	document.write(result)
+}
+</script>
+</head>
+<body>
+
+<br>
+
+<!-- match the width below: 40 + padding -->
+<div style="width:44em; margin: auto; text-align: justify;">
+
+	<a href="index.html"><img class=navlink style="width:6em;" src="images/logo.png"></a>
+		
+	<script type="text/javascript">
+	
+	var isTopPage = 
+		(document.URL.indexOf("index.html") >=0 || 
+		document.URL.indexOf("publications.html") >= 0 ||
+		document.URL.indexOf("contact.html") >= 0 ||
+		document.URL.indexOf("news.html") >= 0 ||
+		document.URL.indexOf("funding.html") >= 0)
+
+	if(isTopPage)
+		makeHeaderLink("projects", "index.html");
+	else 
+		document.write("<a href=\"index.html\" style=\"color:black;\"><b>projects</b></a>&nbsp;&nbsp;&nbsp;");
+		
+	makeHeaderLink("pubs", "publications.html");
+	makeHeaderLink("people", "contact.html");
+	makeHeaderLink("press", "news.html");
+	makeHeaderLink("funding", "funding.html");
+	
+	</script>
+
+
+	<a href="http://www.cmu.edu"><img class=navlink style="width:6em; margin-bottom: -.25em;" src="images/logo-cmu.jpg"></a>
+
+	<a href="http://www.hcii.cmu.edu"><img class=navlink style="width:3em;" src="images/logo-hcii.jpg"></a>
+
+</div>
+
+<br>
+
+<div style="margin: auto; width: 40em; background-color:#FFFAC9; border:solid 1px #D0D0D0; padding:2em;">
+	
+
+<h2>API Usability</h2>
+
+
+
+<table width="100%" border="2">
+  <tr>
+    <td><p><em>An  overview article about API Usability in general!</em></p>
+<div class=pdfs>
+<a href="http://dl.acm.org/authorize?N03391" title="Improving API usability"><img src="http://dl.acm.org/images/oa.gif" width="20" height="20" border="0" alt="ACM DL Author-ize service" style="vertical-align:top"/></a><hr/>
+<A href="http://www.cs.cmu.edu/~natprog/papers/p62-myers-CACM-API_Usability.pdf"> Local</A>
+
+</div>
+<p class=ref>Brad A. Myers and Jeffrey Stylos, "Improving API Usability", <em>Communications of the ACM</em>,  vol 59, No. 6, June, 2016, pp. 62-69.</p>
+
+<p><em>Brad Myers gave a <strong> talk</strong> on "Human-Centered Methods for Improving API Usability"  at Stanford on October 27, 2017. See the <a href="http://hci.stanford.edu/courses/cs547/speaker.php?date=2017-10-27">Talk announcement</a> and <a href="https://www.youtube.com/watch?v=6meyYnrCQ5o&index=1&list=PLoROMvodv4rMyupDF2O00r19JsmolyXdD">YouTube video of talk</a>.</em></p>
+</td>
+  </tr>
+</table>
+
+<p>Whether creating a piece of desktop software, writing applications for handheld devices, using web services or middleware, or scripting the Web, the use of application programming interfaces (APIs) in modern software development is ubiquitous. These APIs, also called software development kits
+  (SDKs), toolkits, web services, middleware, frameworks, or libraries, are often large, complex, and broad in scope, containing many hundreds or thousands of classes and interfaces. A typical developer may use only a small portion of the total functionality of an API, but learning even that subset can be a daunting task for new programmers.
+  
+<p>
+API designers must consider many factors when creating an API, such as the deveoper's use cases, class granularity, level of abstraction, consistency with other APIs, etc. Research has also shown that designing APIs carefully for their intended audience improves usability. APIs are valuable and important to companies' income, yet are rarely evaluated for usability.
+<p>We are investigating many aspects of how to evaluate and improve the usability of APIs. We are studying the implications of choosing particular API design patterns on programmer productivity and API learning,  the needs of API Designers, guidelines for designing REST APIs, usability issues with specific APIs, the interactions between security and usability of APIs, and new <a href="#tools">tools and documentation techniques </a>that help when it 
+  is not possible to revise the API itself.
+ 
+<h2><a name="webservices">Web Services</a></h2>
+<p>A current focus, funded by grants from Google, is on REST APIs and web services in general. 
+
+We analyzed the guidelines published for REST APIs, and identified issues that API designers reported. We are studying the usability of the Apache Beam API for parallel computation on big data in the cloud, and created a plugin called <a href="https://github.com/fvoichick/alabaster/wiki">Alabaster</a> to help with the Python SDK for Beam.</p>
+
+<div class=pdfs><a href="https://ieeexplore.ieee.org/document/8506523">ieee</a><br>
+  <a href="http://www.cs.cmu.edu/~NatProg/papers/p249-murphy.pdf">local</a></div>
+<p class=ref>Lauren Murphy, Mary Beth Kery, Tosin Alliyu, Andrew Macvean and Brad A. Myers, "API Designers in the Field: Design Practices and Challenges for Creating Usable APIs", <em>2018 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC'18),</em> October 1 - 4, 2018, Lisbon, Portugal. pp. 249-258.</p>
+
+<div class=pdfs><a href="http://www.cs.cmu.edu/~NatProg/papers/API-Usability-Styleguides-PLATEAU2017.pdf">local</a></div>
+<p class=ref>Lauren Murphy, Tosin Alliyu, Mary Beth Kery, Andrew Macvean, Brad A. Myers. "Preliminary Analysis of REST API Style Guidelines". <em>8th Workshop on Evaluation and Usability of Programming Languages and Tools (<a href="http://2017.splashcon.org/track/plateau-2017">PLATEAU'2017</a>) at SPLASH 2017</em>. 23 Oct 2017, Vancouver, BC.</p>
+
+
+
+<h2><a name="security">API Usability and Security</a></h2>
+<p>We  received an NSF grant (<a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1423054">CNS-1423054</a>) and a grant from the Software Engineering Institute (<a href="http://www.sei.cmu.edu/">SEI</a>) to study the interactions between making an API more <em>usable</em> and making it more <em>secure</em>.  In some cases, these appear to be in concert (making the API more usable makes it easier to use correctly, so there are fewer security errors), and in other cases, security and usability seem to be in conflict. See also the SEI's CERT Secure Coding Initiative <a href="https://www.securecoding.cert.org/confluence/display/sci/CERT+Secure+Coding+Initiative">section on API Usability and Security</a>.</p><br>
+
+<div class=pdfs>
+  <a href="http://www.cs.cmu.edu/~NatProg/papers/onward18essays-p7-p-682d101-38832-final.pdf">local</a></div>
+<p class=ref>Michael Coblenz, Jonathan Aldrich, Brad Myers and Joshua Sunshine, "Interdisciplinary Programming Language Design", <em>Onward! 2018 Essays</em>, at SPLASH 2018, November 4-9, 2018, Boston, MA. pp. 133-146.</p>
+
+<div class=pdfs>
+  <a href="http://www.hciforblockchain.org/wp-content/uploads/sites/25/2018/04/Coblenz.pdf">local</a>
+</div>
+<p class=ref>Michael Coblenz, Jonathan Aldrich, Joshua Sunshine, Brad A. Myers, "User-Centered Design of Permissions, Typestate, and Ownership in the Obsidian Blockchain Language," <em>HCI for Blockchain: Studying, Designing, Critiquing and Envisioning Distributed Ledger Technologies Workshop at CHI'2018</em>, April 22, 2018, Montreal, QC, Canada.</p>
+
+<div class=pdfs><a href="http://www.cs.cmu.edu/~NatProg/papers/barnaby17%20-%20Obsidian-plateau.pdf">local</a></div>
+<p class=ref>Celeste Barnaby, Michael Coblenz, Tyler Etzel, Eliezer Kanal, Joshua Sunshine, Brad Myers, Jonathan Aldrich. "A User Study to Inform the Design of the Obsidian Blockchain DSL."&nbsp;<em>8th Workshop on Evaluation and Usability of Programming Languages and Tools (<a href="http://2017.splashcon.org/track/plateau-2017">PLATEAU'2017</a>) at SPLASH 2017</em>. 23 Oct 2017.</p>
+
+
+<div class=pdfs>
+<a href="http://ieeexplore.ieee.org/abstract/document/8077806/">ieee</a> <br/> 
+<a href="http://www.cs.cmu.edu/~NatProg/papers/Weber-IEEE-2017.pdf">local</a>
+</div>
+<p class=ref>Sam Weber, Michael Coblenz, Brad Myers, Jonathan Aldrich, Joshua Sunshine. &quot;Empirical Studies on the Security and Usability 
+  Impact of Immutability,&quot; <em>IEEE Secure Development Conference (<a href="https://secdev.ieee.org/2017/home/">SecDev'2017</a>)</em>, September 24-26, 2017, Cambridge, MA. pp. 50-53.</p>
+
+<div class=pdfs>
+<a href="http://dl.acm.org/citation.cfm?id=3097428&CFID=916492960&CFTOKEN=31331782">acm</a>
+<!-- , IEEE DL, -->
+<a href="http://www.cs.cmu.edu/~NatProg/papers/p496-coblenz-Glacier-ICSE-2017.pdf">Local</a>
+</div>
+<p class=ref>Michael Coblenz, Whitney Nelson, Jonathan  Aldrich, Brad Myers and Joshua Sunshine, "Glacier: Transitive Class Immutability for Java", <i>ICSE'2017: The 39th International Conference on Software Engineering</i>, 
+Buenos Aires, Argentina, May 20-28, 2017. pp. 496-506. </p>
+
+<div class=pdfs>
+ <a href="http://dl.acm.org/citation.cfm?id=2884798">acm</a><br/>
+ <a href="http://www.cs.cmu.edu/~NatProg/papers/p736-coblenz-Immutability.pdf">local</a>
+ </div>
+<p class=ref>Michael Coblenz, Joshua Sunshine,  Jonathan Aldrich, Brad Myers, Sam Weber,  Forrest Shull, &quot;Exploring Language Support for Immutability&quot; <i>ICSE'2016: The 38th International Conference on Software Engineering</i>, 
+  Austin, TX, May 14 - 22, 2016.  pp. 736-747.</p>
+  <!--Glacier-->
+
+<div class=pdfs>
+<a href="http://www.cs.cmu.edu/~NatProg/papers/245_55_Coblenz_VLHCC2015.pdf">local</a></div>
+<p class=ref>Michael Coblenz, Robert Seacord, Brad Myers, Joshua Sunshine and Jonathan Aldrich, "A Course-Based Usability Analysis of Cilk Plus and OpenMP"<em>, 2015 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC'15),</em> October 18&ndash;22, 2015, Atlanta, Georgia. pp. 245-249.</p>
+
+
+<div class=pdfs>
+<a href="http://www.cs.cmu.edu/~natprog/papers/Myers-Poster-2017 Final.pdf">poster</a>
+</div>
+<p class=ref>Brad A. Myers, Sam Weber, Robert Seacord, Michael Coblenz, Whitney Nelson, Jonathan Aldrich, and Joshua Sunshine, "TWC: Small: Empirical Evaluation of the Usability and Security Implications of Application Programming Interface Design" (Poster), <em><a href="http://cps-vo.org/group/satc-pi-meeting-17/">National Science Foundation Secure and Trustworthy Cyberspace (SaTC) Principal Investigators' Meeting (SaTCPI'17)</a></em>, January 9-11, 2017, Arlington, VA.</p>
+
+
+<div class=pdfs>
+    <a href="papers/poster-NSF meeting 2015-Jan final.pdf">poster</a>
+</div>
+<p class=ref>Brad A. Myers, Sam Weber, and Robert Seacord, Michael Coblenz, David Keaton, Forrest J. Shull, Joshua Sunshine, Robert Schiela, "TWC: Small: Empirical Evaluation of the Usability andSecurity Implications of Application Programming Interface Design" (Poster), <em><a href="https://www.usenix.org/conference/satcpi15">National Science Foundation Secure and Trustworthy Cyberspace (SaTC) Principal Investigators' Meeting (SaTCPI'15)</a></em>, January 5-7, 2015, Arlington, VA</p>
+
+
+<div class=pdfs>
+<a href="papers/2014-weber-law-abstract.pdf">local</a><br>
+<a href="http://www.acsac.org/2014/workshops/law/WIP-Weber.pdf">slides</a>
+</div>
+<p class=ref>Sam Weber, Robert Seacord,
+Forrest Shull, David Keaton, Brad Myers, Michael Coblenz, "Empirical Evaluation of API Usability and Security", <em><a href="http://www.acsac.org/2014/workshops/law/">Layered Assurance Workshop</a></em>, December 8, 2014, New Orleans, LA. p. 35.</p>
+
+<div class=pdfs>
+<a href="http://dl.acm.org/citation.cfm?doid=2688204.2688218">ACM</a><br>
+<a href="http://www.cs.cmu.edu/~natprog/papers/p59-coblenz-Plateau2014.pdf">local</a>
+</div>
+<p class=ref>
+Michael Coblenz, Jonathan Aldrich, Brad Myers and Josh Sunshine. "Considering Productivity Effects of Explicit Type Declarations", <em>The Fifth Workshop on Evaluation and Usability of Programming Languages and Tools</em> <a href="http://2014.splashcon.org/track/plateau2014">(PLATEAU 2014)</a>, at SPLASH 2014, 21 Oct 2014, Portland, OR. pp. 59-61.</p>
+
+<h2><a name="thesis">Thesis</a></h2>
+<p>Jeff Stylos's PhD dissertation includes much of this research that happened between 2006 and 2010.</p>
+
+<div class=pdfs>
+<a href="http://www.cs.cmu.edu/~natprog/papers/CMU-CS-09-130-Stylos-Dissertation.pdf">local</a>
+</div>
+<p class=ref>Jeffrey Stylos. <b>Making APIs More Usable with Improved API Designs, Documentation and Tools</b>.
+PhD dissertation, May, 2009. Carnegie Mellon Computer Science Department Technical Report No. CMU-CS-09-130.</p>
+
+
+<h2><a name="studies">Studies of APIs</a></h2>
+
+<div class=pdfs><a href="https://ieeexplore.ieee.org/document/8818681">ieee</a><br/>  <a href="http://www.cs.cmu.edu/~NatProg/papers/Horvath-VL-HCC-2019.pdf">local</a></div>
+<p class=ref>
+Amber Horvath, Sachin Grover, Sihan Dong, Emily Zhou, Finn Voichick, Mary Beth Kery, Shwetha Shinju, Daye Nam, Mariann Nagy and Brad Myers. <strong>The Long Tail: Understanding Discoverability of API Functionality</strong>, <em>2019 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC'19),</em> October 14–18, 2019, Memphis, TN. pp. 157-161.</p>
+
+
+<div class=pdfs>
+	<a href="http://www.cs.cmu.edu/~NatProg/papers/API-Usability-Styleguides-PLATEAU2017.pdf">Local</a>
+</div>
+<p class=ref>Lauren Murphy, Tosin Alliyu, Mary Beth Kery, Andrew Macvean, Brad A. Myers. <strong>Preliminary Analysis of REST API Style Guidelines</strong>. <I>8th Workshop on Evaluation and Usability of Programming Languages and Tools (<a href="http://2017.splashcon.org/track/plateau-2017">PLATEAU'2017</a>) at SPLASH 2017</I>. 23 Oct 2017.</p>
+
+<div class=pdfs>
+	<a href="papers/CHI_2009-API-sig-p2771.pdf">local</a>
+</div>
+<p class=ref>John M. Daughtry, Jeffrey Stylos, Umer Farooq, Brad A. Myers (2009). <b>API Usability: CHI'2009 
+Special Interest Group Meeting</b>, <i>Extended Abstracts, CHI'2009</i>,
+Boston, MA, April 4-9, 2009. pp. 2771-2774.
+</p>
+
+
+<div class=pdfs>
+<a href="papers/FSE2008-p105-stylos.pdf">local</a><br>
+</div>
+<p class=ref>
+Stylos, J., Myers, B. (2008). <b>The Implications of Method Placement on API Learnability</b>. 
+<i>Sixteenth ACM SIGSOFT Symposium on Foundations of Software Engineering</i>, FSE 2008. Atlanta, 
+GA, November 9-14, 2008. pp. 105-112.</p>
+
+
+<div class=pdfs>
+    <a href="papers/Stylos2007APIDesignDecisions.pdf">local</a><br>
+</div>
+<p class=ref>
+Stylos, J., Myers, B. (2007). <b>Mapping the Space of API Design Decisions</b>. 
+<i>IEEE Symposium on Visual Languages and Human-Centric Computing</i>, VL/HCC'07. Sept 23-27, 2007, Coeur d'Alene, 
+Idaho. pp. 50-57.</p>
+
+
+<div class=pdfs>
+    <a href="papers/Ellis2007FactoryUsability.pdf">local</a><br>
+</div>
+<p class=ref>
+Ellis, B., Stylos J., Myers B. (2007).
+<b>The Factory Pattern in API Design: A Usability Evaluation</b>.
+<i>International Conference on Software Engineering</i>,
+Minneapolis, MN, USA, May 20-26, pp. 302-312.
+
+
+<div class=pdfs>
+    <a href="papers/Stylos2007CreateSetCall.pdf">local</a><br>
+</div>
+<p class=ref>
+Stylos J, Clarke S. (2007).
+<b>Usability Implications of Requiring Parameters in Objects' Constructors</b>.
+<i>International Conference on Software Engineering</i>,
+Minneapolis, MN, USA, May 20-26, pp. 529-539.
+
+<h2><a name="tools">Tools to help with APIs</a></h2>
+<p>(Note that each of these tools have their own pages:
+<a href="http://www.cs.cmu.edu/~NatProg/dacite.html">Dacite</a>, 
+<a href="http://www.cs.cmu.edu/~NatProg/graphite.html">Graphite</a>, 
+<a href="http://www.cs.cmu.edu/~calcite">Calcite</a>,
+<a href="http://edelstein.pebbles.cs.cmu.edu/jadeite/">Jadeite</a>,
+<a href="http://edelstein.pebbles.cs.cmu.edu/apatite/">Apatite</a>, 
+<a href="mica.html">Mica,</a> 
+<a href="http://www.cs.cmu.edu/~euklas/">Euklas</a>, <a href="https://github.com/fvoichick/alabaster/wiki">Alabaster</a>).</p>
+
+
+
+<div class=pdfs><a href="https://ieeexplore.ieee.org/document/8952239">ieee</a><br/>
+  <a href="https://cmustrudel.github.io/papers/ase19marble.pdf">preprint</a></div>
+<p class=ref>
+Daye Nam, Amber Horvath, Andrew Macvean, Brad Myers, Bogdan Vasilescu, <strong>MARBLE: Mining for Boilerplate Code to Identify API Usability Problems</strong>, <em>34th IEEE/ACM International Conference on Automated Software Engineering (ASE 2019).</em> Nov. 11 - 15, 2019. San Diego, CA. pp. 615-627.</p>
+
+<div class=pdfs>
+<a href="http://dx.doi.org/10.1016/j.jss.2016.12.036">DOI</a><br/>
+<A href="http://www.cs.cmu.edu/~natprog/papers/dacite-journal-final.pdf">local</A>
+</div>
+<p class=ref>André L. Santos and Brad A. Myers, <strong>Design Annotations to Improve API Discoverability</strong>. 2015, (DACITE),  <em>The Journal of Systems & Software</em>, volume 126, April, 2017, Pages 17&ndash;33.<div class="pdfs">
+	<a href="http://dl.acm.org/citation.cfm?id=2688208">ACM</a><br>
+    <a href="http://www.cs.cmu.edu/~natprog/papers/p13-doerner-PLATEAU_Euklas-final.pdf">local</a>
+</div>
+<p class=ref>Christian D&ouml;rner, Andrew Faulring, Brad A. Myers. "EUKLAS - Supporting Copy-and-Paste 
+	Strategies for Integrating Example Code", <em>The Fifth Workshop on Evaluation and Usability of Programming Languages and Tools</em> <a href="http://2014.splashcon.org/track/plateau2014">(PLATEAU 2014)</a>, at SPLASH 2014, 21 Oct 2014, Portland, OR. pp. 13-20.</p> 
+  
+<div class="pdfs">
+	<a href="http://www.cs.cmu.edu/~NatProg/papers/p859-548-omar-icse-2012-graphite.pdf">local</a>
+	<a href="http://www.cs.cmu.edu/~comar/graphite-demo.mp4">movie</a>
+</div>
+<p class=ref>Cyrus Omar, YoungSeok Yoon, Thomas D. LaToza, Brad A. Myers, <strong>Active Code Completion</strong>.
+	<i>ICSE'2012: 34nd International Conference on Software Engineering</i>,
+Zurich, Switzerland, 2-9 June 2012. pp. 859-869.<!-- ICSE 2012 21.3% acceptance ratio -->
+</p>
+
+<div class=pdfs>
+<a href="http://dx.doi.org/10.1109/VLHCC.2010.12">ieee</a><br>
+<a href="http://www.cs.cmu.edu/~NatProg/papers/Calcite%20VLHCC%202010%20Final.pdf">local</a>
+</div>
+<p class=ref>Mathew Mooty, Andrew Faulring, Jeffrey Stylos and Brad Myers.
+<strong>Calcite: Completing Code Completion for Constructors using Crowds</strong>,
+<i>2010 IEEE Symposium on Visual Languages and Human-Centric Computing
+  (VL/HCC'10)</i>, Leganes-Madrid, Spain, 21-25 September 2010. pp. 15-22.
+</p>
+
+<div class=pdfs>
+<a href="http://dx.doi.org/10.1109/VLHCC.2010.13">ieee</a><br>
+<a href="http://www.cs.cmu.edu/~NatProg/papers/apatite_vlhcc_2010_final.pdf">local</a>
+</div>
+<p class=ref>
+Daniel S. Eisenberg, Jeffrey Stylos, Andrew Faulring, Brad A. 
+Myers. <strong>Using Association Metrics to Help Users Navigate API Documentation</strong>,
+<i>2010 IEEE Symposium on Visual Languages and Human-Centric Computing
+  (VL/HCC'10)</i>, Leganes-Madrid, Spain, 21-25 September 2010. pp. 23-30.</p>
+	<!-- Apatite -->
+
+<div class=pdfs>
+<a href="http://www.cs.cmu.edu/~NatProg/papers/p1331-eisenberg-apatite-CHI.pdf">local</a><br>
+<a href="http://www.cs.cmu.edu/~NatProg/papers/p1331-eisenberg-apatite-CHI.mov">movie</a>
+</div>
+<p class=ref>
+Daniel S. Eisenberg, Jeffrey Stylos, and Brad A. Myers, <strong>Apatite: A New Interface for Exploring APIs,</strong>
+<i>Proceedings CHI'2010: Human Factors in Computing Systems</I>.
+    Atlanta, GA, April 10-15, 2010. pp. 1331-1334.</p>
+
+<div class=pdfs>
+  <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5295283&isnumber=5295238">ieee</a><br>
+  <a href="papers/Stylos2009Jadeite.pdf">local</a>
+</div>
+<p class=ref>Jeffrey Stylos, Andrew Faulring, Zizhuang Yang, Brad A. Myers.<b> Improving API Documentation Using 
+API Usage Information</b>. <i>2009 IEEE Symposium on Visual Languages and Human-Centric Computing,
+VL/HCC'09</i>, Sept. 20-24, 2009. Corvallis, Oregon. pp. 119-126.</p>
+
+<div class=pdfs>
+	<a href="papers/p4429-jadeite-poster-chi2009.pdf">local</a>
+</div>
+<p class=ref>Jeffrey Stylos, Brad A. Myers, Zizhuang Yang. (2009) <b>Jadeite: Improving API Documentation 
+Using Usage Information</b>. <i>Extended Abstracts, CHI'2009</i>, (Work in Progress Poster).
+Boston, MA, April 4-9, 2009. pp. 4429-4434.</p>
+
+<div class=pdfs>
+	<a href="papers/Stylos2006Mica.pdf">local</a>
+</div>
+<p class=ref>
+Stylos, J. and Myers, B. A. (2006)
+<b>Mica: A Web-Search Tool for Finding API Components and Examples</b>.
+<i>IEEE Symposium on Visual Languages and Human-Centric Computing</i>,
+Brighton, UK, September 5-7, 195-202.
+</p>
+
+
+<h2><a name="eSOA"><a name="SAP">Usability of SAP's APIs</a></a></h2>
+As a subproject, we had a long and fruitful collaboration with <a href="http://www.sap.com/">SAP</a> 
+to improve the usability of various of their APIs and programmer tools, including their Enterprise Service Oriented Architecture (eSOA) APIs, their IDE for the SAP NetWeaver Gateway, and their HANA tools and APIs. SAP's 
+eSOA usability effort faced interesting and novel challenges. By examining the APIs and tools that are part of the eSOA life cycle, we  identified pain points, 
+barriers and means of improvement relevant to eSOA APIs and other domains as well. For the NetWeaver Gateway, we used HCI techniques to evaluate and iteratively improve the IDE. And for HANA, we evaluated how to improve the developer experience.
+
+<p><a href="Klaus-Weber_letter_1-8-09.html">Here is a nice letter</a> from 2009 from Dr. 
+Klaus Weber, Executive Vice President, Business Suite Extensions, SAP AG, about 
+our work with SAP (<a href="Klaus-Weber_letter_1-8-09.html">html</a>).</p>
+
+ <div class=pdfs>
+    <a href="http://www.cs.cmu.edu/~natprog/papers/p37-faulring-2012CHASE.pdf">local</a>
+</div>
+<p class=ref>
+Andrew Faulring, Brad A. Myers,Yaad Oren, Keren Rotenberg. <strong>A Case Study of Using HCI Methods to Improve Tools for Programmers</strong>.
+ <i>Cooperative and Human Aspects of Software Engineering
+(<a href="http://www.chaseresearch.org/workshops/chase2012">CHASE</a>)</i>, An ICSE 2012 Workshop. Zurich, Switzerland, June 2, 2012. pp. 37-39.
+</p>
+
+<div class=pdfs>
+    <a href="http://www.igi-global.com/bookstore/article.aspx?titleid=39119">igi</a><br>
+</div>
+<p class=ref>
+Brad A. Myers, Sae Young Jeong, Yingyu Xie, Jack Beaton, Jeff Stylos, 
+Ralf Ehret, Jan Karstens, Arkin Efeoglu, Daniela K. Busse.
+<strong>Studying the Documentation of an API for Enterprise Service-Oriented
+Architecture</strong>. <i>The Journal of Organizational and End User
+Computing, JOEUC</i>,
+a publication of the Information Resources Management Association, IGI
+Publishing. Special Issue on End-User Development.
+vol. 22, no. 1, Jan-Mar, 2010. pp. 23-51.
+DOI: 10.4018/joeuc.2010101903.
+<!--  from IS-EUD paper -->
+</p>
+
+
+
+ <div class=pdfs>
+    <a href="papers/iseud-documentationusability-final-54350086.pdf">local</a>
+</div>
+<p class=ref>
+Jeong, S., Xie, Y., Beaton, J., Myers, B., Stylos, J.,
+Ehret, R., Karstens, J., Efeoglu, A., Busse, D. (2009). <b>Improving
+Documentation for eSOA APIs Through User Studies</b>.
+<i>Second International Symposium on End User Development</i>
+(<a href="http://www.eud2009.org/">IS-EUD'2009</a>), 
+March 2-4, 2009. Siegen, Germany. Springer-Verlag, LNCS 5435, pp. 86-105.<div class=pdfs>
+    <a href="papers/Stylos2008SAPCaseStudy.pdf">local</a><br>
+</div>
+<p class=ref>
+Stylos, J., Graf, B., Busse, D., Ziegler, C., Ehret, R., Karstens, J. (2008). <b>A Case Study of API Redesign for Improved Usability</b>. <i>IEEE Symposium on Visual Languages and Human-Centric Computing</i>, VL/HCC'08. Sept 15-19, 2008, Herrsching am Ammersee, German. pp. 189-192.
+
+
+<div class=pdfs>
+    <a href="papers/Beaton2008ESOA-VLHCC.pdf">local</a>
+</div>
+<p class=ref>
+Beaton, J., Jeong, S., Xie, Y., Stylos, J., Myers, B. (2008). <b>Usability challenges for enterprise service-oriented architecture APIs</b>. <i>IEEE Symposium on Visual Languages and Human-Centric Computing</i>, VL/HCC'08. Sept 15-19, 2008, Herrsching am Ammersee, German. pp. 193-196.
+
+
+<div class=pdfs>
+    <a href="papers/SDSOA-p29.pdf">local</a>
+</div>
+<p class=ref>
+Beaton, J., Myers, B., Stylos, J., Jeong, S., Xie, Y. (2008). <b>Usability Evaluation for Enterprise SOA APIs</b>. <i>2nd International Workshop on Systems Development in SOA Environments</i>, SDSOA 2008, Co-located with ICSE 2008, Leipzig, Germany. May 12, 2008. pp. 29-34.</p>
+
+<h2><a name="funding">Funding</a></h2>
+<p>Our API Usability research has been funded by generous grants from SAP (2007-2011), CMU's Software Engineering Institute (2014-2015), the NSF (grant CNS-1423054 and its REU supplements - 2014-2018), and Google (2017-2019).</p>
+<p><span style="line-height: 9pt; margin-top: 0; margin-bottom: 0"><small><font size="2">[Any opinions, findings and conclusions or recommendations expressed in this material are 
+  those of the author(s) and do not necessarily reflect those of the National Science Foundation or any other sponsor.] </font></small></span>
+</p>
+<h2><a name="links">External Links</a></h2>
+<ux>
+<li><a href="https://sites.google.com/site/apiusability/Home">APIUsability.org</a> is collecting resources on  people, papers, events, and talks about API Usability.</li></ux>
+
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<center>
+  Copyright &#169; 1996-2020 - Carnegie Mellon University - All Rights Reserved.
+</center>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4222815-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>CS229: Machine Learning</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <link rel="stylesheet" href="./style/bootstrap-theme.min.css">
+      <link href="./style/newstyle.css" rel="stylesheet" type="text/css">
+      <style>
+        table { table-layout: fixed; }
+        table td { width: 100px; word-wrap: break-word; }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-md navbar-dark">
+         <a href="http://cs229.stanford.edu/">
+            <img src="./static/seal-dark-red.png" style="height:40px; float: left; margin-left: 20px; margin-right: 20px;">
+         </a>
+         <a class="navbar-brand" href="http://cs229.stanford.edu/">CS229</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" 
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+      </nav>
+      
+      <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+            <h1 class="display-5">CS229: Machine Learning</h1>
+            <h2 class="display-5">Winter 2025</h2>
+            <br>
+            <div></div>
+            <h2>Instructors</h2>
+            <table>
+               <tr>
+                  <td>
+                     <div class="instructor">
+                        <a href="https://cs.stanford.edu/~sanmi/">
+                           <div class="instructorphoto">
+                              <img src="static/2025_winter/sanmi_koyejo.jpg">
+                           </div>
+                           <div>Sanmi Koyejo</div>
+                        </a>
+                     </div>
+                  </td>
+                  <td>
+                     <div class="instructor">
+                        <a href="https://profiles.stanford.edu/ludwig-schmidt">
+                           <div class="instructorphoto">
+                              <img src="static/2025_winter/ludwig_schmidt.png">
+                           </div>
+                           <div>Ludwig Schmidt</div>
+                        </a>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+            <br />
+            <p><strong>Course Description</strong>&nbsp;&nbsp; This course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs, practical advice); reinforcement learning and adaptive control. The course will also discuss recent applications of machine learning, such as to robotic control, data mining, autonomous navigation, bioinformatics, speech recognition, and text and web data processing.</p>
+         </div>
+      </div>
+      
+      <br>
+      
+      <section id="info">
+         <div class="container">
+            <h2>Course Information</h2>
+            <dl>
+               <dt>Time and Location</dt>
+               <dd>Instructor Lectures: Mon, Wed 1:30 PM - 2:50 PM (PT) at 
+                  <a href="https://campus-map.stanford.edu/?id=GATESB1">Gates B1 Auditorium</a>
+               </dd>
+               <dd>CA Lectures: Please check the 
+                  <a href="">
+                     Syllabus
+                  </a> page or the course's Canvas calendar for the latest information.
+               </dd>
+               <dd>Prerequisites: knowledge of basic computer science principles and skills at a level sufficient to write a reasonably non-trivial computer program in Python/NumPy to the equivalency of CS106A, CS106B, or CS106X, familiarity with probability theory to the equivalency of CS 109, MATH151, or STATS 116, and familiarity with multivariable calculus and linear algebra to the equivalency of MATH51 or CS205. Please see pset0 on ED.</dd>
+               <dt>Quick Links</dt>
+               <dd>All links will require a Stanford email to access. Course documents are only shared with Stanford University affiliates.</dd>
+               <ul>
+                  <li>
+                     <a href="https://docs.google.com/document/d/1WxzSBGMwYWS6rb9h38Z9VZwnwgiNgW4g/edit#heading=h.gjdgxs">Course Logistics and FAQ</a>
+                  </li>
+                  <li>
+                     <a href="">Syllabus and Course Materials</a>
+                  </li>
+                  <li>
+                     <a href="https://docs.google.com/document/d/1D2AZKxSpG2oHcaqMvG3Ct5w8MT3Z4-U3/edit?usp=drive_link&ouid=105379549583112057959&rtpof=true&sd=true">Final Project Information</a>
+                  </li>
+                  <li>Previous Offerings:
+                     <a href="index.html.fall24_prev">Fall 2024</a>,
+                     <a href="index.html-backup-summer24">Summer 2024</a>,
+                     <a href="index.html_winter_2024_backup">Winter 2024</a>, 
+                     <a href="index.html-backup-fall23">Fall 2023</a>, 
+                     <a href="index.html-backup-summer23">Summer 2023</a>, 
+                     <a href="./2023_index.html">Spring 2023</a>, 
+                     <a href="syllabus-fall2022.html">Fall 2022</a>, 
+                     <a href="index-sum22.html">Summer 2022</a>, 
+                     <a href="syllabus-spring2022.html">Spring 2022</a>, 
+                     <a href="syllabus-fall2021.html">Fall 2021</a>, 
+                     <a href="syllabus-spring2021.html">Spring 2021</a>, 
+                     <a href="syllabus-fall2020.html">Fall 2020</a>
+                  </li>
+               </ul>
+               <dt>Contact and Communication</dt>
+               <dd>
+                  Ed is the primary method of communication for this class. Please do NOT reach out to the instructors (or course staff) directly, otherwise your questions may get lost. Due to a large number of inquiries, we encourage you to first read the 
+                  <a href="https://docs.google.com/document/d/1WxzSBGMwYWS6rb9h38Z9VZwnwgiNgW4g/edit#heading=h.gjdgxs">Course Logistics and FAQ</a> document for commonly asked questions, and then create a post on Ed to contact the course staff.
+               </dd>
+               <dd>
+                  This quarter we will be using <a href="https://edstem.org/us/courses/70557">Ed</a> as the course forum.
+                  <ul>
+                     <li>All official announcements and communication will happen over Ed.</li>
+                     <li>Any questions regarding course content and course organization should be posted on Ed. You are strongly encouraged to answer other students' questions when you know the answer.</li>
+                     <li>For private matters specific to you (e.g. special accommodations, requesting alternative arrangements etc.), please create a private post on Ed.</li>
+                     <li>For longer discussions with TAs, please attend office hours.</li>
+                     <li>TA office hours can be found on <a href="https://canvas.stanford.edu/courses/203537">Canvas</a>. For the course calendar, see also <a href="https://canvas.stanford.edu/courses/203537">Canvas</a> and the <a href="">Syllabus and Course Materials</a> page.</li>
+                     <li>Before the beginning of the course, please contact the head TA for logistical questions (ideally after consulting the FAQ link).</li>
+                  </ul>
+               </dd>
+            </dl>
+         </div>
+      </section>
+      
+      <div class="container" style="margin-top: 2em">
+         <h2>Course Staff</h2>
+         <p>To help with project advice, each member of course staff's ML expertise is also listed below.</p>
+
+ <!-- Course Manager and Head Course Assistant Side by Side -->
+  <table>
+    <tr>
+      <td style="vertical-align: top; padding-right: 2em;">
+        <dt>Course Manager</dt>
+        <div class="instructor">
+          <a href="mailto:johncho@stanford.edu">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/JohnCho.jpg" alt="John Cho">
+            </div>
+            <div>John Cho</div>
+          </a>
+        </div>
+      </td>
+      <td style="vertical-align: top; padding-right: 2em;">
+        <dt>Head Course Assistant</dt>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/amanspatel/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/AmanPatel.jpg" alt="Aman Patel">
+            </div>
+            <div>Aman Patel</div>
+          </a>
+          <div>Computational Biology, General ML</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  
+  <!-- Course Assistants -->
+  <dt>Course Assistants</dt>
+  <table>
+    <tr>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/shinyweng/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/ShinyWeng.png" alt="Shiny Weng">
+            </div>
+            <div>Shiny Weng</div>
+          </a>
+          <div>Statistical Learning, Trustworthiness, Computer Vision</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://zipengfu.github.io/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/ZipengFu.jpg" alt="Zipeng Fu">
+            </div>
+            <div>Zipeng Fu</div>
+          </a>
+          <div>Robot Learning, Reinforcement Learning</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/jfrausto/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/JacobFrausto.png" alt="Jacob Frausto">
+            </div>
+            <div>Jacob Frausto</div>
+          </a>
+          <div>Computer Vision, Reinforcement Learning, LLM agents</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/thomas-s-chen/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/ThomasChen.jpg" alt="Thomas Chen">
+            </div>
+            <div>Thomas Chen</div>
+          </a>
+          <div>ML theory</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/SimranNayak.jpg" alt="Simran Nayak">
+            </div>
+            <div>Simran Nayak</div>
+          </a>
+          <div>Statistical Learning, General ML</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://jubayer-ibn-hamid.github.io">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/JubayerIbnHamid_3.png" alt="Jubayer Ibn Hamid">
+            </div>
+            <div>Jubayer Ibn Hamid</div>
+          </a>
+          <div>Reinforcement learning, Robot learning</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/amyguan3/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/AmyGuan.JPG" alt="Amy Guan">
+            </div>
+            <div>Amy Guan</div>
+          </a>
+          <div>Statistical Learning</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/priya-khandelwal-86b84018b/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/Priya_Khandelwal_Headshot.jpg" alt="Priya Khandelwal">
+            </div>
+            <div>Priya Khandelwal</div>
+          </a>
+          <div>Computer Vision, GNNs, ML Systems, LLMs</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.johnrso.xyz/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/JohnSo.jpeg" alt="John So">
+            </div>
+            <div>John So</div>
+          </a>
+          <div>Robot Learning, RL, CV</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/saketika-chekuri/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/SaiChekuri.jpg" alt="Sai Saketika Chekuri">
+            </div>
+            <div>Sai Saketika Chekuri</div>
+          </a>
+          <div>General ML, Computer Vision, RL</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/irgau/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/MedhanieIrgau.jpg" alt="Medhanie Irgau">
+            </div>
+            <div>Medhanie Irgau</div>
+          </a>
+          <div>Generative Models, Privacy, PEFT</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/zhen-wu-326a70230/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/ZhenWu.jpg" alt="Zhen Wu">
+            </div>
+            <div>Zhen Wu</div>
+          </a>
+          <div>Character Animation, Robotics</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/zikui-wang/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/ZikuiWang.jpg" alt="Zikui Wang">
+            </div>
+            <div>Zikui Wang</div>
+          </a>
+          <div>Computer Vision, LLMs</div>
+        </div>
+      </td>
+      <td>
+        <div class="instructor">
+          <a href="https://cs229.stanford.edu/">
+            <div class="instructorphoto">
+              <img src="./static/2025_winter/arya.png" alt="Arya B.">
+            </div>
+            <div>Arya B.</div>
+          </a>
+          <div>NLPs, GNNs, Systems, Robotics, CV</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+      
+
+
+
+
+<section id="schedule" style="margin-top: 2em">
+  <div class="container">
+    <h2>Course Schedule (January – March 2025)</h2>
+    <p><em>Note: This schedule is tentative and subject to change.</em></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Session</th>
+          <th>Topic</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- January -->
+        <tr>
+          <td>Jan 6, 2025</td>
+          <td>Lecture 1</td>
+          <td>Introduction: What is Machine Learning, History of ML/AI</td>
+          <td>Problem Set 0 Released</td>
+        </tr>
+        <tr>
+          <td>Jan 8, 2025</td>
+          <td>Lecture 2</td>
+          <td>Linear Regression, Training, Gradient Descent, Normal Equations</td>
+          <td>Problem Set 1 Released</td>
+        </tr>
+        <tr>
+          <td>Jan 10, 2025</td>
+          <td>TA Lecture 1</td>
+          <td>Linear Algebra Review</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Jan 13, 2025</td>
+          <td>Lecture 3</td>
+          <td>Regularization, Ridge Regression, Validation Sets</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Jan 15, 2025</td>
+          <td>Lecture 4</td>
+          <td>Linear classifiers, Logistic Regression, Learning from Weighted Data</td>
+          <td>Problem Set 0 Due (11:59pm PT)</td>
+        </tr>
+        <tr>
+          <td>Jan 17, 2025</td>
+          <td>TA Lecture 2</td>
+          <td>Probability Review</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="font-weight: bold; color: blue;">
+          <td>Jan 20, 2025</td>
+          <td>Lecture 5</td>
+          <td>MLK - HOLIDAY, NO LECTURE</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Jan 22, 2025</td>
+          <td>Lecture 6</td>
+          <td>Neural Networks: Introduction, Basic Architecture (MLP)</td>
+          <td>
+            Problem Set 2 Released<br>
+            Problem Set 1 Due (11:59pm PT)
+          </td>
+        </tr>
+        <tr>
+          <td>Jan 24, 2025</td>
+          <td>TA Lecture 3</td>
+          <td>Python/Numpy</td>
+          <td>Final Project Proposal Due (11:59pm PT)</td>
+        </tr>
+        <tr>
+          <td>Jan 27, 2025</td>
+          <td>Lecture 7</td>
+          <td>Neural Networks: Multi-Class Loss, Backpropagation</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Jan 29, 2025</td>
+          <td>Lecture 8</td>
+          <td>Neural Networks: Optimization, Advanced Architecture</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Jan 31, 2025</td>
+          <td>TA Lecture 4</td>
+          <td>Pytorch</td>
+          <td>&nbsp;</td>
+        </tr>
+        <!-- February -->
+        <tr>
+          <td>Feb 3, 2025</td>
+          <td>Lecture 9</td>
+          <td>Neural Networks: Transformers and Language Models</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Feb 5, 2025</td>
+          <td>Lecture 10</td>
+          <td>Neural Networks: Convolutional Networks (CNNs) and Pre-trained Models</td>
+          <td>
+            Problem Set 3 Released<br>
+            Problem Set 2 Due (11:59pm PT)
+          </td>
+        </tr>
+        <tr>
+          <td>Feb 7, 2025</td>
+          <td>TA Lecture 5</td>
+          <td>Midterm Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 10, 2025</td>
+          <td>Lecture 11</td>
+          <td>Decision Trees</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Feb 12, 2025</td>
+          <td>Lecture 12</td>
+          <td>Boosting, Adaboost</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr style="font-weight: bold; color: red;">
+          <td>Feb 13, 2025</td>
+          <td>MIDTERM</td>
+          <td>MIDTERM Exam</td>
+          <td>Location TBA (6-9pm PT)<br>No TA Lecture </td>
+        </tr>
+        <tr style="font-weight: bold; color: blue;">
+          <td>Feb 17, 2025</td>
+          <td>Lecture 13</td>
+          <td>President's Day - HOLIDAY, NO LECTURE</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Feb 19, 2025</td>
+          <td>Lecture 14</td>
+          <td>Advance Machine Learing </td>
+          <td>
+            Problem Set 4 Released<br>
+            Problem Set 3 Due (11:59pm PT)
+          </td>
+        </tr>
+        <tr>
+          <td>Feb 21, 2025</td>
+          <td>TA Lecture 6</td>
+          <td>Optimization</td>
+          <td>Final Project Milestone Due (11:59pm PT)</td>
+        </tr>
+        <tr>
+          <td>Feb 24, 2025</td>
+          <td>Lecture 15</td>
+          <td>PCA & Autoencoders</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Feb 26, 2025</td>
+          <td>Lecture 16</td>
+          <td>Unsupervised learning, KMeans, & GMM</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Feb 28, 2025</td>
+          <td>TA Lecture 7</td>
+          <td>Evaluation Metrics</td>
+          <td>&nbsp;</td>
+        </tr>
+        <!-- March -->
+        <tr>
+          <td>Mar 3, 2025</td>
+          <td>Lecture 17</td>
+          <td>Reinforcement learning</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Mar 5, 2025</td>
+          <td>Lecture 18</td>
+          <td>Reinforcement Learning</td>
+          <td>Problem Set 4 Due March 7 (11:59pm PT)</td>
+        </tr>
+        <tr>
+          <td>Mar 10, 2025</td>
+          <td>Lecture 19</td>
+          <td>Fairness & Algorithmic Bias</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Mar 12, 2025</td>
+          <td>Lecture 20</td>
+          <td>Ethics lecture</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Mar 14, 2025</td>
+          <td>Final Project Report</td>
+          <td>&nbsp;</td>
+          <td>Final Project Report<br>Due (11:59pm PT)</td>
+        </tr>
+        <tr>
+          <td>Mar 19, 2025</td>
+          <td>Final Project Poster Session</td>
+          <td>&nbsp;</td>
+          <td>3:30 pm - 6:30 pm PT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+      
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
+         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" 
+         crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" 
+         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" 
+         crossorigin="anonymous"></script>
+   </body>
+</html>

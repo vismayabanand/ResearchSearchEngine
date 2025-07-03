@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript"></script>
+    <script src="scripts.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+<script src="/js/searchbar.js"></script> 
+<header>
+        <div class="announcement-bar">
+            <div class="content-width">
+                <img src="/images/SUSig_White.png" height="20px"/>
+            </div>
+        </div>
+        <div class="header-section content-width">
+            <div class="search-section  flex">
+                <a href="/index.html"><img src="/images/stanford-line1-31.png" height="24px"/></a>
+                <div class="search-bar ui-front">
+                    <input type="search" placeholder="Search" id="autocomplete-4" />
+                    <img src="/images/icon.svg"/>
+                </div>
+            </div>
+            <nav class="content-width">
+                <div class="desktop-nav">
+                    <ul class="menu flex">
+                        <li>
+                            <a>About</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/chief_message.html">Chief's Message</a>
+                                </li>
+                                <li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li> 
+                                <li>
+                                    <a href="/our-team.html">Our Team</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Alerts</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>
+                                <li>
+                                    <a href="/clery_act.html">Clery Act</a>
+                                </li>    
+                                <li>
+                                    <a href="/alertsu.html">Past Alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/bicycle-abatement.html">Bike Abatement</a>
+                                </li>
+								<li>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaulMLphJ41A7j2CEYKr1U1g-qbPxHs6vtqH_typqwVQJ3mw/viewform">Bike Safety Class Registration</a>
+								</li>
+                                <li>
+                                    <a href="/bicycle-sale.html">Bike Sales</a>
+                                </li>    
+                                <li>
+                                    <a href="/event-security-request.html">Event Security</a>
+                                </li>
+                                <li>
+                                    <a href="/house-checks.html">House Checks</a>
+                                </li>     
+                                <li>
+                                    <a href="/lost-found.html">Lost & Found</a>
+                                </li>    
+                                <li>
+                                    <a href="/StanfordSafeZone.html">SafeZone</a>
+                                </li>       
+                                <li>
+                                    <a href="/security-assessment.html">Security Assessment</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Information</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html" target="_blank">AlertSU</a>
+                                </li>    
+                                <li>
+                                    <a href="/bicycle-registration.html" target="_blank">Bike Registration</a>
+                                </li>   
+
+								<!--<li>
+                                    <a href="/bicycle-safety-class.html">Bike Safety Class</a>
+                                </li> 	-->							
+                                <li>
+                                    <a href="/hate-violence-report.html" target="_blank">Ca Ed. Code: Hate Violence Incidents</a>
+                                </li>
+								<li>
+								    <a href="/CPSA-course.html" target="_blank">Community Public Safety Academy (CPSA)</a>
+                                </li>
+                                <li>
+								    <a href="/core_values.html" target="_blank">Core Values</a>
+                                </li>
+                                <li>
+                                    <a href="/crime-map.html" target="_blank">Crime Map</a>
+                                </li>
+                                <!--<li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li>
+                                <li>
+                                    <a href="/parking-enforcement.html">Parking Enforcement</a>
+                                </li>-->        
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1gXviAXUVCCgZrXvvz4c9pIe4qnxtrLGO/view?usp=sharing" target="_blank">Parking & Circulation Map</a>
+                                </li>    
+                                <li>
+                                    <a href="/personnel-training.html" target="_blank">Sworn Personnel Training</a>
+                                </li>
+                                <li>
+                                    <a href="/sworn-policies.html" target="_blank">Sworn Policies & Procedures</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Safety, Security, & Fire Report</a>
+                                </li>
+								<li>
+                                    <a href="https://transparency.flocksafety.com/stanford-university-ca-pd" target="_blank">Stanford ALPR (Flock)</a>
+                                </li>
+                                <li>
+                                    <a href="/stanford-dish.html" target="_blank">Stanford Dish</a>
+                                </li>    
+                                <li>
+                                    <a href="https://ehs.stanford.edu/reference/suggested-travel-routes" target="_blank">Suggested Travel Routes</a>
+                                </li>    
+                                <li>
+                                    <a href="/transparency-dashboard.html">Transparency Dashboard</a>
+                                </li>
+								<!--<li>
+                                    <a href="/university-agent.html">University Agents</a>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Contact Us</a>
+                            <ul class="sub-menu">
+							<li>
+                                    <a href="/pdf/Collision_Report.pdf" target="_blank">Collision Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/EmployeeComplaintForm.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Email Us</a>
+                                </li> 
+								 <li>
+                                    <a href="/file-policereport.html">File a Police Report</a>
+                                </li>
+                                <li>
+                                    <!--<a href="/pdf/Report_Request_Form.pdf" target="_blank">Request Police Report</a>-->
+									 <a href="/police-report.html" target="_blank">Request Police Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Resources</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/active-threat.html">Active Threat</a>
+                                </li>    
+                                <li>
+                                    <a href="/campus-policies.html">Campus Policies</a>
+                                </li>    
+                                <li>
+                                    <a href="/county-contacts.html">County/Fire/Sheriff</a>
+                                </li>
+                                <li>
+                                    <a href="/domestic-violence.html">Domestic Violence</a>
+                                </li>
+                                <li>
+                                    <a href="/fraud-awareness.html">Fraud Awareness</a>
+                                </li>
+								<li>
+                                    <a href="https://eservices.sccgov.org/sfp">Livescan Services</a>
+                                </li>
+                                <li>    
+                                    <a href="/sexual-assult.html">Sexual Assault</a>
+                                </li>
+                                <li>
+                                    <a href="/victim-resources.html">Victim Resources</a>
+                                </li>
+								
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Clery Act/Annual Safety Report</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/clery_act.html">About Clery</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Annual Safety Report</a>
+                                </li>   
+                                <li>
+                                    <a href="/pdf/CSA-Flowchart.pdf" target="_blank">Clery Reporting Guideline</a>
+                                </li>    
+                                <li>
+                                    <a href="/cleryindex.html" target="_blank">Clery Travel Form</a>
+                                </li>
+                                <li>
+                                    <a href="/pdf/CSA-Report-Form.pdf" target="_blank">CSA Report Form</a>
+                                </li> 
+								<li>
+                                    <a href="/pdf/SU-CleryCrimeDefinitions.pdf" target="_blank">Clery Crime Definitions</a>
+                                </li> 								
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/employment.html" target="_blank">Employment</a>
+                        </li>
+						
+						<li>
+                            <a href="/feedback.html" target="_blank">Feedback</a>
+                        </li>
+					<!-------F E E D B A C K F O R M-------------------->
+					<!--<li>
+					<a>Feedback</a>
+                            <ul class="sub-menu">
+
+							<li>
+                                    <a href="/pdf/EmployeeComplaintForm2023.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Compliment</a>
+                                </li> 
+								 
+                                
+                            </ul>
+							</li>
+                        										
+						<!----------------------------------------------------------->
+
+                    </ul>
+                </div>
+                <div class="mobile-nav" id="mobileNavContainer">
+                    <button id="mobileMenuIcon">
+                        <img src="/images/Menu-Icon.svg"  width="40px" height="40px"/>
+                    </button>
+                    <div id="mobileOverlay"></div>
+                    <ul class="menu flex side-nav" id="MobileNavId">
+                        <button id="closeMenuIcon">
+                            <img src="/images/Close-Icon.svg"/>
+                        </button>
+                        <li>
+                            <a>About</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/chief_message.html">Chief's Message</a>
+                                </li>
+                                <!-- <li>
+                                    <a>History</a>
+                                </li> -->
+								
+								<li>
+                                    <a href="/memorandum-of-understanding.html" target="_blank">Memorandum of Understanding</a>
+                                </li> 
+                                <li>
+                                    <a href="/our-team.html">Our Team</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Alerts</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>
+                                <li>
+                                    <a href="/clery_act.html">Clery Act</a>
+                                </li>    
+                                <li>
+                                    <a href="/alertsu.html">Past Alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/bicycle-abatement.html" target="_blank">Bike Abatement</a>
+                                </li>
+								<li>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaulMLphJ41A7j2CEYKr1U1g-qbPxHs6vtqH_typqwVQJ3mw/viewform">Bike Safety Class Registration</a>
+								</li>
+                                <li>
+                                    <a href="/bicycle-sale.html" target="_blank">Bike Sales</a>
+                                </li>    
+                                <li>
+                                    <a href="/event-security-request.html" target="_blank">Event Security</a>
+                                </li>
+                                <li>
+                                    <a href="/house-checks.html">House Checks</a>
+                                </li>     
+                                <li>
+                                    <a href="/lost-found.html">Lost & Found</a>
+                                </li>    
+                                <li>
+                                    <a href="/StanfordSafeZone.html" target="_blank">SafeZone</a>
+                                </li>       
+                                <li>
+                                    <a href="/security-assessment.html" target="_blank">Security Assessment</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Information</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>    
+                                <li>
+                                    <a href="/bicycle-registration.html">Bike Registration</a>
+                                </li>  
+
+								<!--<li>
+                                    <a href="/bicycle-safety-class.html">Bike Safety Class</a>
+                                </li>--> 								
+                                <li>
+                                    <a href="/hate-violence-report.html" target="_blank">Ca Ed. Code: Hate Violence Incidents</a>
+                                </li>
+								<li>
+								    <a href="/CPSA-course.html" target="_blank">Community Public Safety Academy (CPSA)</a>
+                                </li>
+                                <li>
+                                    <a href="/core_values.html" target="_blank">Core Values</a>
+                                </li>
+                                <li>
+                                    <a href="/crime-map.html" target="_blank">Crime Map</a>
+                                </li>
+                                <!--<li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li>
+                                <li>
+                                    <a href="/parking-enforcement.html">Parking Enforcement</a>
+                                </li> -->       
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1gXviAXUVCCgZrXvvz4c9pIe4qnxtrLGO/view?usp=sharing" target="_blank">Parking & Circulation Map</a>
+                                </li>    
+                                <li>
+                                    <a href="/personnel-training.html" target="_blank">Sworn Personnel Training</a>
+                                </li>
+                                <li>
+                                    <a href="/sworn-policies.html" target="_blank">Sworn Policies & Procedures</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Safety, Security, & Fire Report</a>
+                                </li>
+								<li>
+                                    <a href="https://transparency.flocksafety.com/stanford-university-ca-pd" target="_blank">Stanford ALPR (Flock)</a>
+                                </li>
+                                <li>
+                                    <a href="/stanford-dish.html" target="_blank">Stanford Dish</a>
+                                </li>   
+								<li>
+                                    <a href="https://ehs.stanford.edu/reference/suggested-travel-routes" target="_blank">Suggested Travel Routes</a>
+                                </li>    
+                                <li>
+                                    <a href="/transparency-dashboard.html" target="_blank">Transparency Dashboard</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Contact Us</a>
+                            <ul class="sub-menu">
+							<li>
+                                    <a href="/pdf/Collision_Report.pdf" target="_blank">Collision Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/EmployeeComplaintForm.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Email Us</a>
+                                </li> 
+								 <li>
+                                    <a href="/file-policereport.html">File a Police Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/Report_Request_Form.pdf" target="_blank">Request Police Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Resources</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/active-threat.html">Active Threat</a>
+                                </li>    
+                                <li>
+                                    <a href="/campus-policies.html">Campus Policies</a>
+                                </li>    
+                                <li>
+                                    <a href="/county-contacts.html">County/Fire/Sheriff</a>
+                                </li>
+                                <li>
+                                    <a href="/domestic-violence.html">Domestic Violence</a>
+                                </li>
+                                <li>
+                                    <a href="/fraud-awareness.html">Fraud Awareness</a>
+                                </li>
+								<li>
+                                    <a href="https://eservices.sccgov.org/sfp">Livescan Services</a>
+                                </li>
+                                <li>    
+                                    <a href="/sexual-assult.html">Sexual Assult</a>
+                                </li>
+                                <li>
+                                    <a href="/victim-resources.html">Victim Resources</a>
+                                </li>
+								
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Clery Act/Annual Safety Report</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/clery_act.html">About Clery</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Annual Safety Report</a>
+                                </li>   
+                                <li>
+                                    <a href="/pdf/CSA-Flowchart.pdf" target="_blank">Clery Reporting Guideline</a>
+                                </li>    
+                                <li>
+                                    <a href="/cleryindex.html" target="_blank">Clery Travel Form</a>
+                                </li>
+                                <li>
+                                    <a href="/pdf/CSA-Report-Form.pdf" target="_blank">CSA Report Form</a>
+                                </li> 
+								<li>
+                                    <a href="/pdf/SU-CleryCrimeDefinitions.pdf" target="_blank">Clery Crime Definitions</a>
+                                </li> 								
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/employment.html">Employment</a>
+                        </li> 
+						<li>
+                            <a href="/feedback.html" target="_blank">Feedback</a>
+                        </li>
+						
+						<!-------F E E D B A C K F O R M-------------------->
+					<!--<li>
+					<a>Feedback</a>
+                            <ul class="sub-menu">
+
+							<li>
+                                    <a href="/pdf/EmployeeComplaintForm2023.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Compliment</a>
+                                </li> 
+								 
+                                
+                            </ul>
+							</li>-->
+                        										
+						<!----------------------------------------------------------->
+						
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>    <div class="main-content">
+        <div class="hero-section">
+            <div class="content-width">
+                <div class="core-values flex">
+                    <img src="/images/star2.png" width="300px"/>
+                    <a href="/core_values.html"><button>CORE VALUES</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="multi-column">
+            <div class="content-width flex" style="flex-direction: column;">
+                <div class="flex alerts-section" style="justify-content: space-between;">
+                    <div class="content-box" style="min-height: 100px;">
+                        
+
+
+    <h2>Current Alerts</h2>
+                    <a href="alertsu.html?alertid=1434"><p>Timely Warning- Sexual Battery</p></a>              <a href="/alertsu.html"><button>PREVIOUS ALERTS</button></a>
+                    </div>
+					<div class="content-box flex" style="min-height: 100px; flex-direction: column; justify-content: space-between;">
+                        
+
+<h2>Current Announcements</h2>
+<div style="padding-top:10px;text-align:center"><font style="padding-left:5px;">There are no announcements at this time.</font></div><p><a href="/notification.html"><button>PREVIOUS ANNOUNCEMENTS</button></a>
+                    </div>
+                    
+                </div> 
+                <div class="long-content-box">
+                    <!--<h2>Affirmation of DPS Values</h2>-->
+					<h2>DPS Core Values</h2>
+                    <!--<p>The members of the Stanford Department of Public Safety firmly believe in the value of all human life and the principles of fairness, integrity, and respect. We condemn any form of violence or discrimination against individuals based on their race, ethnicity, or any other characteristic. The actions of the former police officers that lead to the death of Tyre Nichols violate the principles and values which we believe in and stand for as a department. We will continue to work to build trust and accountability between law enforcement and the community we serve.</p>-->
+					<p> The members of the Stanford Department of Public Safety are committed to the goal of providing high quality services with a positive, cooperative attitude.The hallmarks of our service and conduct will be a dedication to the principles of honesty, integrity, fairness, courage and courtesy.</p>
+					<div class="flex" style="justify-content: center;">
+                    <a  href="/core_values.html" target="_blank"><button style="font-size: 14px;">CORE VALUES</button></a>
+                </div>
+                </div>
+				
+				 <div class="long-content-box">
+                    <!--<h2>Affirmation of DPS Values</h2>-->
+					<h2> <marquee bgcolor="orange">ANNUAL CAR SHOW 2025</marquee></h2>
+					<img src="/images/CarShow2025.png" width="100%" hight="50%">
+                    <!--<p>The members of the Stanford Department of Public Safety firmly believe in the value of all human life and the principles of fairness, integrity, and respect. We condemn any form of violence or discrimination against individuals based on their race, ethnicity, or any other characteristic. The actions of the former police officers that lead to the death of Tyre Nichols violate the principles and values which we believe in and stand for as a department. We will continue to work to build trust and accountability between law enforcement and the community we serve.</p>-->
+					<p> 🚗 Rev your engines and mark your calendars! 🚗</p>
+<p>🎉 Stanford DPS presents the 2nd Annual Car Show! 🎉</p>
+Get ready to witness some of the sleekest rides on campus as we showcase a stunning array of cars from classics to modern marvels. Whether you're a car enthusiast or just love a good time, this event is for YOU!
+<p>📅 Date: May 21, 2025 🕒 Time: 10:30-1:30pm📍 </p>
+<p>Location: SUDPS, 233 Bonair Siding, Stanford University</p>
+And guess what? Admission is FREE! That's right, bring your friends, family, and fellow car enthusiasts for a day of fun, food, and fantastic music. 🎶🌭
+Feast your eyes on vintage beauties, custom builds, and everything in between. Plus, enjoy mouthwatering food and groovy tunes by DJ Kao to keep the vibe going all day long.
+Got a cool car you want to show off? Register now to reserve your spot in the lineup! Call or email Pete Posada for more details and registration 
+<a href="tel:6507239633">650-723-9633</a> / <a href="mailto:pete.posada@stanford.edu">pete.posada@stanford.edu</b></a>.
+Don't miss out on this exciting opportunity to celebrate automotive excellence and community spirit at Stanford DPS’s 2nd Annual Car Show. See you there! 🚗💨</p>
+
+					<div class="flex" style="justify-content: center;">
+                    <a  href="https://app.smartsheet.com/b/form/348bc5c4d35244c19723b601503ac5f5" target="_blank"><button style="font-size: 14px;">REGISTER YOUR CAR</button></a>
+                </div>
+                </div>
+								
+            </div>
+        </div>
+        <div class="heading">
+            <h2 class="content-width">Services</h2>
+        </div>
+        <div class="six-block-section">
+            <div class="content-width flex">
+                <div class="content-box flex">
+                    <img src="/images/96a01d66e8d76a5e97234da0d8196cf55585efdb527e356241c41578b7a999b0f4a649d26b25da388cff680f97ad3748d5f29a27697ac4e879af63_1280.jpg">
+                    <div class="description flex">
+                        <h3>Bike Abatement</h3>
+                        <p>Stanford Department of Public Safety removes abandoned bicycles from racks in order to maintain an adequate number of secure parking spaces. </p>
+                        <div class="buttons flex">
+                            <a href="/bicycle-abatement.html"><button>MORE INFORMATION</button></a>
+                            <a href="https://app.smartsheet.com/b/form/bb2679898a5348dc947e73a174a9c834"><button>BIKE REMOVAL REQUEST</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/Trucks.jpg">
+                    <div class="description flex">
+                        <h3>Event Security</h3>
+                        <p>Stanford Department of Public Safety provides event support in the form of event security, traffic control, parking enforcement, and many other support services.</p>
+                        <div class="buttons flex">
+                            <a href="/event-security-request.html"><button>MORE INFORMATION</button></a>
+                            <a href="https://app.smartsheet.com/b/form/56c182d337b4419ebfb360ae6a4ff0d6"><button>EVENT SECURITY REQUEST</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/174-0.jpeg">
+                    <div class="description flex">
+                        <h3>House Checks</h3>
+                        <p>Stanford Department of Public Safety provides house check services to ensure residences are safe and secure during vacations or extended leaves.</p>
+                        <div class="buttons flex">
+                            <a href="/house-checks.html"><button>MORE INFORMATION</button></a>
+                            <a href="https://app.smartsheet.com/b/form/79bb65ec2ce145e483f8a571b393db10"><button>HOUSE CHECK REQUEST</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/SafeZoneApp.png">
+                    <div class="description flex">
+                        <h3>SafeZone</h3>
+                        <p>As an option to enhance personal safety, Stanford is offering students, staff and faculty a mobile phone application called SafeZone, at no cost.</p>
+                        <div class="buttons flex">
+                            <a href="/StanfordSafeZone.html"><button>MORE INFORMATION</button></a>
+                            <div class="apps flex">
+                                <a href="https://apps.apple.com/gb/app/safezone/id533054756"><img src="/images/applestore.png" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.criticalarc.safezoneapp"><img src="/images/googleplay.png" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/Security-Assessment.png">
+                    <div class="description flex">
+                        <h3>Security Assessment</h3>
+                        <p>Faculty and staff residing in University housing and Stanford Building Managers may request a security assessment by trained SUDPS crime prevention staff.</p>
+                        <div class="buttons flex">
+                            <a href="/security-assessment.html"><button>MORE INFORMATION</button></a>
+                            <!--<a href="/"><button>SECURITY ASSESSMENT REQUEST</button></a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/LostandFound.png">
+                    <div class="description flex">
+                        <h3>Lost & Found</h3>
+                        <p>To report a lost/found item please send an email to us. You will only be contacted in the event that one of these recipients has the item you have lost, or is looking for the item you have found..</p>
+                        <div class="buttons flex">
+                            <a href="/lost-found.html"><button>MORE INFORMATION</button></a>
+                            <!--<a href="mailto:lostandfoundsu@stanford.edu"><button>REPORT A LOST ITEM</button></a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h2 class="content-width">Information</h2>
+        </div>
+        <div class="six-block-section">
+            <div class="content-width flex">
+                <div class="content-box flex">
+                    <img src="/images/readmemo1.jpg">
+                    <div class="description flex">
+                        <h3>News Releases</h3>
+                        <p>The Stanford Department of Public Safety periodically posts news releases that highlight either significant accomplishments of the department or important information relevant to the Stanford Community and their safety and awareness.</p>
+                        <div class="buttons flex">
+                            <a href="/news-releases.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/employment-all-scaled.jpg">
+                    <div class="description flex">
+                        <h3>Employment</h3>
+                        <p>Stanford Department of Public Safety is currently hiring for Sheriff Deputy, Public Safety Officer, and Special Events Patrol</p>
+                        <div class="buttons flex">
+                            <a href="/employment.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/ScreenShot2016-10-26at2.08.33PM.png">
+                    <div class="description flex">
+                        <h3>AlertSU</h3>
+                        <p>Stanford Department of Public Safety sends out emergency notifications, timely warnings, and community alerts via the AlertSU program.</p>
+                        <div class="buttons flex">
+                            <a href="/alertsu_home.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/download.png">
+                    <div class="description flex">
+                        <h3>Bike Registration</h3>
+                        <p>Register your bike through Project 529 Garage. If your bike is stolen or missing, you will be able to use the Project 529 system to broadcast alerts and share a photo of your bike.</p>
+                        <div class="buttons flex">
+                            <a href="/bicycle-registration.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box flex">
+                    <img src="/images/threatAwareness.jpg">
+                    <div class="description flex">
+                        <h3>Active Threat</h3>
+                        <p>Stanford Department of Public Safety provides active threat awareness training.</p>
+                        <div class="buttons flex">
+                            <a href="/active-threat.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="content-box flex">
+                    <img src="/images/Dish-Sunset.jpg">
+                    <div class="description flex">
+                        <h3>Stanford Dish</h3>
+                        <p>Stanford Department of Public Safety provides oversight of the Stanford Dish hiking trails.</p>
+                        <div class="buttons flex">
+                            <a href="/stanford-dish.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>-->
+				
+				 <div class="content-box flex">
+                    <img src="/images/cpsa-2024.jpg">
+                    <div class="description flex">
+                        <h3>Community Public Safety Academy</h3>
+                        <p>CPSA is intended to enrich community member's knowledge of working in campus public safety, cultivate relationships,and foster understanding with the community to which we all belong.</p>
+                        <div class="buttons flex">
+                            <a href="/CPSA-Course.html"><button>MORE INFORMATION</button></a>
+                        </div>
+                    </div>
+                </div>
+				
+
+            </div>
+        </div>
+        <div class="heading">
+            <h2 class="content-width">Contact Us</h2>
+        </div>
+        <div class="multi-column">
+            <div class="content-width flex">
+                <div class="content-box" style="min-height: 230px">
+                    <h2>Emergencies</h2>
+                    <p>Dial 911 or 9-9-1-1 from a Campus Phone</p>
+                    <h2>Non-Emergencies</h2>
+                    <p>(650) 329-2413</p>
+                </div>
+                <div class="content-box">
+                    <h2>Main Office</h2>
+                    <p>(650) 723-9633</p>
+                    <p>Monday-Friday 8:00 AM - 5:00 PM</p>
+                    <p>233 Bonair Siding Road<br />Stanford, CA 94305</p>
+                    <a href="/email-us.html" target="_blank"><button>EMAIL US</button></a>
+					
+                </div>
+            </div>
+        </div>
+        <div class="heading">
+            <h2 class="content-width">Find Us</h2>
+        </div>
+        <div class="content-width">
+            <div class="find-us-map flex">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.3492229693197!2d-122.1572228055743!3d37.42885412019071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb05b41a0ac7%3A0xafe07d6ae31844b7!2sThe%20Stanford%20University%20Department%20of%20Public%20Safety!5e0!3m2!1sen!2sus!4v1692904693079!5m2!1sen!2sus" width="100%" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="content-width">
+            <div class="footer-container flex">
+                <img src="/images/SUSig_Stack_White-1.png" />
+                <div class="footer-nav flex">
+                    <ul class="flex">
+                        <li><a href="https://www.stanford.edu/"><strong>Stanford Home</strong></a></li>
+                        <li><a href="https://visit.stanford.edu/basics/index.html"><strong>Maps & Directions</strong></a></li>
+                        <li><a href="https://www.stanford.edu/search/"><strong>Search Stanford</strong></a></li>
+                        <li><a href="https://emergency.stanford.edu/"><strong>Emergency Info</strong></a></li>
+                    </ul>
+                    <ul class="flex">
+                        <li><a href="https://www.stanford.edu/site/terms/">Terms of Use</a></li>
+                        <li><a href="https://www.stanford.edu/site/privacy/">Privacy</a></li>
+                        <li><a href="https://uit.stanford.edu/security/copyright-infringement">Copyright</a></li>
+                        <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4">Trademark</a></li>
+                        <li><a href="http://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/">Non-Discrimination</a></li>
+                        <li><a href="https://www.stanford.edu/site/accessibility">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="padding: 5px 0;">©Copyright Stanford University.   Stanford, California 94305.</p>
+        </div>
+    </footer></body>
+</html>

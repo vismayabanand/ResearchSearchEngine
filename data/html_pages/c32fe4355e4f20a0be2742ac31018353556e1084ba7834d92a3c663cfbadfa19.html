@@ -1,0 +1,337 @@
+
+<html>
+<head>
+<TITLE> Randomized Algorithms and Probabilistic Analysis (CS265/CME309)</TITLE>
+</head>
+<meta name="keywords" content="Greg, Gregory, Valiant, Stanford, Randomized Algorithms, Probabilistic Analysis, CS265, CME309">
+<meta name="description" content="Greg, Gregory, Valiant, Stanford, Randomized Algorithms, Probabilistic
+Analysis, CS265, CME309">
+<body>
+
+<h1> CS265/CME309: Randomized Algorithms and Probabilistic Analysis, Fall 2019</h1>
+<hr style="width: 100%; height: 2px;"><br>
+<p>
+
+<b>Announcements:</b> 
+  <li>12/4: <a href="./lectureNotes/l19.pdf"><i>Final lecture slides</i></a>: Today's lecture will be on some research of my students and me which leverages some of the tools that we've seen during class.
+ <li>12/2: Today's lecture will be on "Expander Codes".  We'll spend the first half discussing expander graphs (sparse graphs that behave like dense ones in the sense that they are well-connected), and the second half discussing how to use expander graphs to make good error-correcting codes.
+  <li>11/16: <a href="./lectureNotes/l17.pdf"><i>Lecture 17 notes</i></a>: The Martingale Stopping Theorem (aka the Optional Stopping Theorem). [This material will be covered monday, and the last question on ps8 will require this material---just a direct application of Theorem 1---so I wanted to post the notes early.]
+  <li>11/13: <a href="./lectureNotes/l16.pdf"><i>Lecture 16 notes</i></a>: Martingales, the Doob Martingale, and Azuma-Hoeffding Tail Bounds.
+ <li>11/12: <a href="./midterm_2017.pdf"><i>Midterm exam from 2017</i></a>: This was very hard, (and I used some of these problems on this year's psets) but grades were curved generously.  Here are solutions: <a href="./midterm_2017_sols.pdf"><i>2017 solutions</i></a>.
+ <li>11/12: I'll hold a special midterm/final prep office hour Tuesday (11/19), 5-7pm (in my office or in the room across the hall from my office).  I'll be happy to go through the practice midterms, or talk about any of the concepts we've covered.  I will *NOT* discuss problems from Problem Set 8 at this office hour (unless/until everyone's midterm/final questions have already been answered).
+ <li>11/11: <a href="./midterm_2018.pdf"><i>Last year's midterm exam</i></a>: This was quite a hard exam, and I really liked question 3...maybe a bit too much.  The material on last year's exam did not include Markov chains and Martingales, which your exam will cover.  [Last year they also had a take-home final...]
+ <li>11/11: <a href="./lectureNotes/l15.pdf"><i>Lecture 15 notes</i></a>: Mixing Times, Strong Stationary Times, and Coupling.
+ <li>11/11: The eighth and final problem set is here: <a href="ps8.pdf"><i>Problem Set 8</i></a>. It is due at 11:59pm on Tuesday, 11/19.  <a href="./ps8_template.tex"><i>Solution template for ps8.</i></a></li>
+<li>11/10: We will be having the in-class "final" exam on Wednesday, November 20th.  The exam will during our normal class time, and we will likely split between our current classroom and the one across the breezeway (waiting to confirm that).  The exam will be closed books/laptop, though you will be allowed to bring one double-sided page of notes, that you must have prepared yourself.  I will post some midterm exams from previous years, though those exams only cover the material through October.
+<li>11/10: For the next few weeks, Shivam will be holding the remote student office hours Tuesdays, 10-10:30am.
+<li>11/6: <a href="./lectureNotes/l14.pdf"><i>Lecture 14 notes</i></a>: The Fundamental Theorem of Markov Chains, and stationary distributions.
+<li>11/5: <a href="./lectureNotes/l13.pdf"><i>Lecture 13 notes</i></a>: Introduction to Markov Chains and a randomized 2-SAT algorithm.</li>
+<li>11/5: The seventh problem set is here: <a href="ps7.pdf"><i>Problem Set 7</i></a>. It is due at 11:59pm on Tuesday, 11/12.  <a href="./ps7_template.tex"><i>Solution template for ps7.</i></a></li>
+<li>10/30: <a href="./lectureNotes/l12.pdf"><i>Lecture 12 notes</i></a>: Moser's ``Entropic Proof'' of the Constructive/Algorithmic Lovasz Local Lemma.</li>
+<li>10/30: <a href="./ps5_selected_sols.pdf"><i>Selected solutions for problem set 5.</i></a></li>
+<li> 10/28: The sixth problem set is here: <a href="ps6.pdf"><i>Problem Set 6</i></a>. It is due at 11:59pm on Tuesday, 11/5.  <a href="./ps6_template.tex"><i>Solution template for ps6.</i></a></li>
+<li>10/28: <a href="./lectureNotes/l11.pdf"><i>Lecture 11 notes</i></a>: The Second-Moment Method, and Lovasz Local Lemma and applications. </li>
+<li>10/26: Shashwat's Monday office hours are being shifted earlier, from 9am-10:30am in Huang Basement, and Shivam will now be having Monday office hours from 10:30-11:30 also in Huang Basement.</li>
+<li>10/26: I'll be out of town Monday (10/28).  We'll still have lecture (Vatsal has kindly offered to give another guest lecture), though I won't be having my usual Monday 4-5:30pm office hours.  I'll still be active on Piazza.</li>
+<li>10/24: I updated the lecture notes, though they are a little more rough then usual (I'm still feeling pretty sick, and will tidy them up when I'm feeling a bit better). </li>
+<li>10/23: <a href="./lectureNotes/l10.pdf"><i>Lecture 10 notes</i></a>: Introduction to the Probabilistic Method, Ramsey Numbers, and de-randomization via conditional probabilities. </li>
+<li>10/23: <a href="./ps4_selected_sols.pdf"><i>Selected solutions for problem set 4.</i></a></li>
+<li> 10/21: For the off-campus/remote students, Shivam will hold a special dial-in office hours (its been hard juggling the skype/hangouts students with those in person during the OH).  If you are a remote student who would like to join, please email me with "CS265: REMOTE STUDENT" in the email title, and we will ping you to figure out a convenient time to hold this office hour.</li>
+<li> 10/21: The fifth problem set is here: <a href="ps5.pdf"><i>Problem Set 5</i></a>. It is due at 11:59pm on Tuesday, 10/29.  <a href="./ps5_template.tex"><i>Solution template for ps5.</i></a></li>
+<li>10/21: <a href="./lectureNotes/l9.pdf"><i>Lecture 9 notes</i></a>: Johnson-Lindenstrauss dimension reduction, and introduction to nearest neighbor search.</li>
+<li>10/16: <a href="./ps3_selected_sols.pdf"><i>Selected solutions for problem set 3.</i></a>: In general, I will post solutions/solution sketches for the one or two questions from the pset that students have the most questions on....</li>
+<li>10/16: <a href="./lectureNotes/l8.pdf"><i>Lecture 8 notes</i></a>: metric embeddings, and Bourgain's embedding of any finite metric into R^d under L1.</li>
+<li> 10/14: The fourth problem set is here: <a href="ps4.pdf"><i>Problem Set 4</i></a>. It is due at 11:59pm on Tuesday, 10/22.  <a href="./ps4_template.tex"><i>Solution template for ps4.</i></a></li>
+<li>10/14: <a href="./lectureNotes/l7.pdf"><i>Lecture 7 notes</i></a>  are now posted.</li>
+<li>10/13: My 4-5:30pm Monday office hours will be cancelled this week (I'll be out of town Mon/Tues).</li>
+<li>10/9: <a href="./lectureNotes/l6.pdf"><i>Lecture 6 notes</i></a>  are now posted.</li>
+<li> 10/7: The third problem set is here: <a href="ps3.pdf"><i>Problem Set 3</i></a>. It is due at 11:59pm on Tuesday, 10/15.  Feel free to use this <a href="./ps3_template.tex"><i>solution template for ps3.</i></a></li>
+<li>10/7: <a href="./lectureNotes/l5.pdf"><i>Lecture 5 notes</i></a>  are now posted.</li>
+<li>10/7:  Starting this week, Ray's office hours will be in Gates B26.</li>
+<li>10/1: <a href="./lectureNotes/primality.pdf"><i>Lecture notes</i></a> for this week have been updated to include the "fingerprinting" application we discussed at the end of class.</li>
+<li> 9/30: The second homework is here: <a href="ps2.pdf"><i>Problem Set 2</i></a>. It is due at 11:59pm on Tuesday, 10/8.  Feel free to use this <a href="./ps2_template.tex"><i>solution template for ps2.</i></a></li>
+<li> 9/30: Lecture notes for this week: <a href="./lectureNotes/primality.pdf"><i>Lecture 3 and 4 Notes (combined).</i></a>  [These will be updated after Wednesday's class to include Lecture 4 material.]</li>
+<li> 9/27: For those of you who wanted the latex of the problem set, or wanted the problem statements in your solution, feel free to use this <a href="./ps1_template.tex"><i>solution template for ps1.</i></a></li>
+<li> 9/26: I'll be giving an open lecture today in the <a href="http://isl.stanford.edu/colloquium.html"><i>ISL colloquium</i></a> (4:30pm in Packard 101), which might be of interest to some of you.</li>
+<li> 9/25: Lecture notes for today's class are <a href="./lectureNotes/l2.pdf"><i>Lecture 2 Notes.</i></a></li>
+<li> 9/25: The first homework is here: <a href="ps1.pdf"><i>Problem Set 1</i></a>. It is due at 11:59pm on Tuesday.  In future, homeworks will be posted Monday night, and will be due 8 days later.
+<li> 9/25: Beginning Monday, we will be moving across the breezeway to our new classroom, Thornton 110!!
+<li> 9/25: For those of you who tried to enroll but were not able to, the enrollment cap has now been removed (so try again).
+<li> 9/23: First day of class!  Lecture notes for today's class are <a href="./lectureNotes/l1.pdf"><i>Lecture 1 Notes.</i></a></li>
+<li> 8/23: We have a Piazza page for class discussions  <a href="http://piazza.com/stanford/fall2019/cs265cme309"><i>HERE</i></a> .  This is for your benefit, though you do not need to join it.  The TAs and I will do our best to monitor it and will try to answer any questions asked on the forum, though please refer to this course website for all announcements/corrections, etc.  Also, please feel free to discuss/answer questions that your classmates post.</li>  
+<p>
+<p>
+<br>
+
+<b>Instructor:</b> <A HREF="http://theory.stanford.edu/~valiant/">Gregory Valiant</A> (Office hours: Monday 4-5:30pm, Gates 470. Contact info: send email to my last name at stanford dot edu)
+
+<p>
+
+<b>Teaching Assistants:</b> <br>
+Ray Li (rayyli@stanford), Shashwat Silas (silas@stanford), Shivam Garg (shivam13@stanford)
+<p>
+
+<b>Office Hours:</b> <br>
+Greg: Monday 4-5:30pm, Gates 470<br>
+Ray: Friday 10:30-noon, Gates B26<br>
+Shashwat: Monday 9:00-10:30am, Huang Basement<br>
+Shivam: Monday 10:30-11:30, Huang Basement, and remote student dial-in Tuesdays, 10-10:30am<br>
+<p>
+
+
+<b>Class Time/location:</B> 1:30-2:50 Mon/Wed. Location: <a href = "https://campus-map.stanford.edu/?srch=Thornt110">Thornton Center, 110</a> (starting Monday, 9/30).
+
+<p>
+
+<b>Course description:</B>
+
+Randomness pervades the natural processes around us, from the formation of networks, to genetic recombination, to quantum physics. Randomness is also a powerful tool that can be leveraged to create algorithms and data structures which, in many cases, are more efficient and simpler than their deterministic counterparts. This course covers the key tools of probabilistic analysis, and applications of these tools to understand the behaviors of random processes and algorithms. Emphasis is on theoretical foundations, though we will apply this theory broadly, discussing applications in machine learning and data analysis, networking, and systems. 
+
+
+<p>
+
+<b>Topics:</B> Markov and Chebyshev inequalities, Chernoff bounds, random graphs, and expanders, moment generating functions, metric embeddings, the probabilistic method, Lovasz Local Lemma, Markov chains and random walks, MCMC, martingales, stopping times, Azuma-Hoeffding inequality, and many powerful and elegant randomized algorithms whose analyses rely on the above tools.
+
+<p>
+
+<b>Prerequisites:</B> CS 161 and STAT 116, or equivalents and instructor consent.
+
+<p>
+
+<b>Grading:</B> 65% problem sets, 35% in-class exam.
+<p>
+<b>Problem Set Policies:</B> Late problem sets will not be accepted, though your TWO lowest problem set scores will be dropped.  We strongly encourage using LaTex to typeset your problem sets, and have a LaTex <a href="template.tex"><i>template</i></a> that you may use.   We will be using the <a href="https://gradescope.com"><i>Gradescope</i></a> online submission system.  You should receive an email saying that you've been enrolled in CS265/CME309 from Gradescope. If not, create an account on Gradescope using your Stanford ID and join CS265/CME309 using entry code <b>92EK55</b>.<br> <br>
+
+You are encouraged to find a partner, and hand in 1 problem set with both names.  As always, collaboration and discussion of the problems is encouraged, though you must understand everything that you hand in, and the writeup that your partner and you hand in must be your own group's writing.
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--
+<b>Lecture 1 (9/25):</B>  Introduction, models of computation, randomized polynomial identity testing algorithm (Schwartz-Zippel).
+<p>
+<b>Lecture 2 (9/27):</B>   Randomized min-cut algorithm [sec 1.5 in Prob. and Comp. edition 2, sec 1.4 in P&C ed. 1], linearity of expectation, coupon-collecting [sec 2.4 in P&C ed 1 and 2].  <br> 
+<p>
+Problem Set 1  <a href="ps1.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/2.
+<p>
+<b>Lecture 3 (10/2):</B>  Randomized Primality Testing.  This is what originally put randomized algorithms on the map back in the late 1970's, and modern cryptography as we know it would not be possible without the existence of fast randomized primality checking algorithms.  Lecture notes <a href="primality.pdf"><i>HERE</i></a>.
+<p>
+<b> Lecture 4 (10/4):</b> Proof of correctness of Rabin/Miller randomized primality testing algorithm (see notes from Lecture 3).  Two applications, including fingerprinting and string matching.
+<p>
+<p>
+Problem Set 2  <a href="ps2.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/9.
+<p>
+<b> Lecture 5 (10/9):</b> Markov's inequality and Chebyshev's inequality, linear-time sampling-based median algorithm (sections 3.1, 3.2, and 3.3 in <i>Prob. and Comp.</i>).
+<p>
+<b> Lecture 6 (10/11):</b> Moment generating functions and Chernoff bounds (sections 4.1-4.3 in <i>Prob. and Comp.</i> If we have time, randomized routing on the hypercube (section 4.6 in <i>Prob. and Comp.</i>.
+<p>
+<p>
+Problem Set 3  <a href="ps3.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/16.
+<p>
+<p>
+<b> Lecture 7 (10/16):</b> Balls in bins, the "Poissonization" technique (Sections 5.2-5.5 in <i>Prob. and Comp.</i>) and "Power of Two Choices" (section 17.1 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 8 (10/18):</b> Metric embeddings, and the probabilistic embedding of any n-point metric into L1 with O(log(n)) distortion (due to Bourgain). Lecture notes <a href="metricE.pdf">here</a>.
+<p>
+<p>
+Problem Set 4  <a href="ps4.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/23.
+<p>
+<p>
+<b> Lecture 9 (10/23):</b> Metric embeddings continued, Johnson-Lindenstrauss [JL] dimension reduction, and random hyperplane hashing (a form of locality sensitive hashing). Lecture notes <a href="JL.pdf">here</a> contain proof of JL and discussion of locality sensitive hashing (an application of JL). A more recent line of work on faster JL transformations began with this 2006 paper: <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf">here</a>, and a higher level more concise treatment is <a href="https://cacm.acm.org/magazines/2010/2/69359-faster-dimension-reduction/fulltext">here</a>.
+<p>
+<b> Lecture 10 (10/25):</b> The Probabilistic Method: bounding Ramsey numbers, derandomization via conditional expectations.  (Chapter 6 in <i>Prob. and Comp,</i> NOT including Lovasz Local Lemma sections).
+<p>
+Problem Set 5  <a href="ps5.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/30.
+<p>
+<b> Lecture 11 (10/30):</b> Lovasz Local Lemma, and examples.  (Section 6.7 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 12 (11/1):</b>  Constructive LLL.  In class we will see Moser's "entropic" proof--see Terry Tao's blog post for a very nice summary <a href="https://terrytao.wordpress.com/2009/08/05/mosers-entropy-compression-argument/">here</a>.  Lecture notes from a few years ago, covering the algorithm and formal theorem statement and a more general (but less pretty) proof via Galton-Watson branching processes <a href="LLLc.pdf">here</a>.   Also see the 2014 paper of Achlioptas and Iliopoulos' extending Moser's entropic arguments <a href = "https://arxiv.org/abs/1406.0242">here</a>.
+<p>
+Problem Set 6  <a href="ps6.pdf"><i>HERE</i></a>.  Due 10am, tuesday 11/6.
+<p>
+<b> Lecture 13 (11/6):</b>   Intro to Markov Chains, and analysis of randomized 2-SAT algorithm.  (Section 7.1-7.2 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 14 (11/8):</b>  Fundamental Theorem of Markov Chains/stationary distributions (sections 7.3 and 7.4 in <i>Prob. and Comp.</i>), Markov Chain Monte Carlo (Section 11.4)
+<p>
+<b> Lecture 15 (11/13):</b>   Mixing Times, Strong Stationary Times, and Coupling (chapter 11 in <i>Prob. and Comp.</i>).
+ <p>
+Problem Set 7  <a href="ps7.pdf"><i>HERE</i></a>.  Due 10am, tuesday 11/13.
+<p>
+<b> In-Class Midterm (11/15):</b>
+<p>
+<b> Lecture 16 (11/27):</b>   Martingales, the Doob Martingale, and Azuma-Hoeffding tail bounds (sections 13.1, 13.4, and 13.5 in <i>Prob. and Comp.</i>).
+<p>
+Problem Set 8  <a href="ps8.pdf"><i>HERE</i></a>.  Due 10pm, Wednesday 12/5.
+<p>
+<b> Lecture 17 (11/29):</b>   Martingales, stopping times and the martingale stopping theorem (section 13.2 in <i>Prob. and Comp.</i>) and Wald's Equation (section 13.3).   A formal proof of the stopping theorem is not given in the text---see the notes <a href="https://www.math.dartmouth.edu/~pw/math100w13/lalonde.pdf"><i>here</i></a> for a formal proof, and a bit more about the formality required for proving these martingale results.
+<p> 
+<b>Lecture 18 (12/4):</B>  Crash course on coding theory.  [This material will not be on the final exam.]
+<p>
+<b>Lecture 19 (12/6):</B>  Discussion of some of my recent research, related to the material covered in the course.  [This material will not be on the final exam.]   The slides from today's lecture are available <a href="lec18.pdf"><i>here,</i></a> and contain pointers to the papers described.
+<br>
+<p>
+Take-Home Final <a href="final.pdf"><i>HERE</i></a>.  Due 11:59pm, Thursday, 12/13.
+<br>
+-->
+<b>Schedule:</B> <br>
+<p>
+<b> Week 1 (9/23, 9/25):</b> Introduction, models of computation, randomized polynomial identity testing algorithm (Schwartz-Zippel), Karger's randomized min-cut algorithm.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l1.pdf"><i>Lecture 1.</i></a>  Models of randomized computation, and the Schwartz-Zippel randomized polynomial identity test.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l2.pdf"><i>Lecture 2.</i></a>  Karger's randomized min-cut algorithm, and analysis of Quicksort with random pivots.  
+<p>
+<b> Week 2 (9/30, 10/2):</b> Randomized Primality Testing. This is what originally put randomized algorithms on the map back in the late 1970's, and modern cryptography as we know it would not be possible without the existence of fast randomized primality checking algorithms.  We also discussed some non-crypto applications of the ability to efficiently choose random prime numbers, including succinct "fingerprints".
+<p style="margin-left:2%;">   Lecture notes for this week: <a href="./lectureNotes/primality.pdf"><i>Lecture 3 and 4 Notes (combined).</i></a>  [These will be updated after Wednesday's class to include Lecture 4 material.]
+<p>
+<b> Week 3 (10/7, 10/9):</b> Markov's inequality, Chebyshev's inequality, moment generating functions and Chernoff bounds.  Randomized routing.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l5.pdf"><i>Lecture 5.</i></a>  Markov's and Chebyshev's inequalities, and sampling-based median algorithm.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l6.pdf"><i>Lecture 6.</i></a>  Moment-generating functions, Chernoff bounds, and randomized routing on the hypercube.  
+<p>
+<b> Week 4 (10/14, 10/16):</b> Balls in bins, the "Poissonization" technique, "power of two choices".  Metric embeddings.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l7.pdf"><i>Lecture 7.</i></a>  Balls in bins, the "Poissonization" technique, "power of two choices".
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l8.pdf"><i>Lecture 8.</i></a>  Introduction to Metric Embeddings, and Bourgain's low-distortion randomized embedding of any finite metric into L1.
+<p>
+<b> Week 5 (10/21, 10/23):</b> Metric embeddings continued, and one lecture on the "probabilistic method".
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l9.pdf"><i>Lecture 9</i></a>: Johnson-Lindenstrauss dimension reduction, and introduction to nearest neighbor search.
+<p style="margin-left:2%;">    Lecture notes <a href="./lectureNotes/l10.pdf"><i>Lecture 10.</i></a>  The Probabilistic Method: bounding Ramsey numbers, derandomization via conditional expectations. 
+<p>
+<b> Week 6 (10/28, 10/30):</b>Second-Moment Method and Lovasz Local Lemma (and algorithmic version), with applications.
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l11.pdf"><i>Lecture 11</i></a>: Probabilistic Method Continued: Second-moment method and the Lovasz Local Lemma (leveraging local dependencies to avoid the union bound)!
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l12.pdf"><i>Lecture 12</i></a>: Moser's ``Entropic Proof'' of the Constructive/Algorithmic Lovasz Local Lemma.
+<p>
+<b> Week 7 (11/4, 11/6):</b>Intro to Markov Chains, Mixing Times.
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l13.pdf"><i>Lecture 13</i></a>: Introduction to Markov chains, and a randomized algorithm for 2-SAT.
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l14.pdf"><i>Lecture 14</i></a>: The Fundamental Theorem of Markov Chains, and stationary distributions.
+<p>
+<b> Week 8 (11/11, 11/13):</b>Strong Stationary Times, and Coupling.  Martingales, stopping times.
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l15.pdf"><i>Lecture 15</i></a>: Mixing Times, Strong Stationary Times, and Coupling
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l16.pdf"><i>Lecture 16</i></a>: Martingales, the Doob martingale, and Azuma-Hoeffding tail bounds.
+<p>
+<b> Week 9 (11/18):</b>The Martingale Stopping Theorem, and applications.
+<p style="margin-left:2%;">Lecture notes <a href="./lectureNotes/l17.pdf"><i>Lecture 17</i></a>: The Martingale Stopping Theorem (aka the Optional Stopping Theorem), and applications. 
+<p>
+<b> 11/20: In-class Exam (in place of formal final exam)</b>
+<p>
+<b> Week 10 (12/2, 12/4):</b>Expander codes, and final lecture on current research threads.
+<p style="margin-left:2%;">Lecture 18: Expander Codes.  We'll spend the first half discussing expander graphs (sparse graphs that behave like dense ones in the sense that they are well-connected), and the second half discussing how to use expander graphs to make good error-correcting codes.
+<p style="margin-left:2%;">Lecture 19: This final lecture talked about some recent research of my students and me that builds on some of the things we saw in class.  <a href="./lectureNotes/l19.pdf"><i>Slides here</i></a>.
+<p>
+<!--
+
+
+
+
+
+<a href="https://www.youtube.com/playlist?list=PLD1x6lURoAYZieeFsTABGZUEPnRj3V1Pf"><i>[Lecture 2 video]</i></a>.
+<p>
+Problem Set 1  <a href="ps1.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/2.
+<p>
+<b> Lecture 3 (10/2):</b>   Randomized Primality Testing.  This is what originally put randomized algorithms on the map back in the late 1970's, and modern cryptography as we know it would not be possible without the existence of fast randomized primality checking algorithms.  Lecture notes <a href="primality.pdf"><i>HERE</i></a>.
+<p>
+<b> Lecture 4 (10/4):</b> Proof of correctness of Rabin/Miller randomized primality testing algorithm (see notes from Lecture 3). 
+<p>
+Problem Set 2  <a href="ps2.pdf"><i>HERE</i></a>.  Due 10am, Tuesday 10/9.
+<p>
+<b> Lecture 5 (10/9):</b> Markov's inequality and Chebyshev's inequality (sections 3.1, 3.2, and 3.3 in <i>Prob. and Comp.</i>).  Moment generating functions and Chernoff bounds (sections 4.1-4.3 in <i>Prob. and Comp.</i>
+<p>
+<b> Lecture 6 (10/11):</b> Randomized routing on the hypercube (section 4.6 in <i>Prob. and Comp.</i>
+<p>
+Problem Set 3  <a href="ps3.pdf"><i>HERE</i></a>.  Due 10am, Tuesday 10/16.
+<p>
+<b> Lecture 7 (10/16):</b> Balls in bins, the "Poissonization" technique (Sections 5.2-5.5 in <i>Prob. and Comp.</i>) and "Power of Two Choices" (section 17.1 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 8 (10/18):</b> Metric embeddings, and the probabilistic embedding of any n-point metric into L1 with O(log(n)) distortion (due to Bourgain). Lecture notes <a href="metricE.pdf">here</a>.
+<p>
+<p>
+Problem Set 4  <a href="ps4.pdf"><i>HERE</i></a>.  Due 10am, Tuesday 10/23.
+<p>
+<b> Lecture 9 (10/23):</b> Metric embeddings continued, Johnson-Lindenstrauss [JL] dimension reduction, and high level discussion of "Fast Johnson-Lindenstrauss" transform. Lecture notes <a href="JL_inprogress.pdf">here</a> contain proof of JL and discussion of locality sensitive hashing (an application of JL).  We didn't cover the Fast JL in much detail, and I havent added it to the notes yet: the original paper is <a href="https://www.cs.princeton.edu/~chazelle/pubs/FJLT-sicomp09.pdf">here</a>, and a higher level more concise treatment is <a href="https://cacm.acm.org/magazines/2010/2/69359-faster-dimension-reduction/fulltext">here</a>.
+<p>
+<b> Lecture 10 (10/25):</b> The Probabilistic Method: bounding Ramsey numbers, derandomization via conditional expectations.  (Chapter 6 in <i>Prob. and Comp,</i> NOT including Lovasz Local Lemma sections).
+<p>
+<p>
+Problem Set 5  <a href="ps5.pdf"><i>HERE</i></a>.  Due 10am, tuesday 10/30.
+<p>
+<b> Lecture 11 (10/30):</b> Lovasz Local Lemma, and examples.  (Section 6.7 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 12 (11/1):</b>  Constructive LLL.  In class we saw Moser's "entropic" proof--see Terry Tao's blog post for a very nice summary <a href="https://terrytao.wordpress.com/2009/08/05/mosers-entropy-compression-argument/">here</a>.  Lecture notes from two years ago, covering the algorithm and formal theorem statement and a more general (but less pretty) proof via Galton-Watson branching processes <a href="LLLc.pdf">here</a>.   Also see the 2014 paper of Achlioptas and Iliopoulos' extending Moser's entropic arguments <a href = "https://arxiv.org/abs/1406.0242">here</a>.
+<p>
+<b> Problem Set 6  <a href="ps6.pdf"><i>HERE</i></a>.  Due 10am, Tuesday 11/6.
+<p>
+<b> Lecture 13 (11/6):</b>   Intro to Markov Chains, and analysis of randomized 2-SAT algorithm.  (Section 7.1-7.2 in <i>Prob. and Comp.</i>)
+<p>
+<b> Lecture 14 (11/8):</b>  Fundamental Theorem of Markov Chains/stationary distributions (sections 7.3 and 7.4 in <i>Prob. and Comp.</i>), Markov Chain Monte Carlo (Section 11.4)
+<p>
+Problem Set 7  <a href="ps7.pdf"><i>HERE</i></a>.  Due 10am, tuesday 11/13.
+
+<b> Lecture 15 (11/13):</b>   Mixing Times, Strong Stationary Times, and Coupling (chapter 11 in <i>Prob. and Comp.</i>).
+ <p>
+ <b> In-class midterm (11/15)</b> Solutions <a href="midterm_2017_sols.pdf"><i>here</i></a>.  ????
+<p>
+<p>
+<b> Lecture 16 (11/29):</b>   Martingales, the Doob Martingale, and Azuma-Hoeffding tail bounds (sections 13.1, 13.4, and 13.5 in <i>Prob. and Comp.</i>).
+<p>
+<b> Lecture 17 (11/31):</b>   Martingales, stopping times and the martingale stopping theorem (section 13.2 in <i>Prob. and Comp.</i>) and Wald's Equation (section 13.3).   A formal proof of the stopping theorem is not given in the text---see the notes <a href="https://www.math.dartmouth.edu/~pw/math100w13/lalonde.pdf"><i>here</i></a> for a formal proof, and a bit more about the formality required for proving these martingale results.
+<p> 
+Problem Set 8  <a href="ps8.pdf"><i>HERE</i></a>.  Due 10am, tuesday 12/5.
+ <p>
+<b>Lecture 18 (12/5):</B>  Crash course on coding theory.  [This material will not be on the final exam.]
+<p>
+<b>Lecture 19 (12/7):</B>  Discussion of some recent research related to the course.
+<br>
+-->
+
+<!-- <b>Lecture 2 (9/29):</B>  Randomized min-cut algorithm (section 1.4 in Probability and Computing), linearity of expectation, coupon-collecting (section 2.4 in Prob. and Comp.), and analysis of Quicksort with random pivoting (section 2.5 in Prob. and Comp.).
+<p>
+Problem Set 1  <a href="ps1.pdf"><i>HERE</i></a>.  Due 10am, Thursday 10/6.
+<p>
+<b>Lecture 3 (10/4):</B>  Randomized Primality Testing.  This is what originally put randomized algorithms on the map back in the late 1970's, and modern cryptography as we know it would not be possible without the existence of fast randomized primality checking algorithms.  Lecture notes <a href="primality.pdf"><i>HERE</i></a>.
+<p>
+<b>Lecture 4 (10/6):</B>  Proof of correctness of Rabin/Miller randomized primality testing algorithm (see notes from Lecture 3).  Markov's inequality and Chebyshev's inequality (sections 3.1, 3.2, and 3.3 in <i>Prob. and Comp.</i>).   Randomized linear time median algorithm (sec. 3.4).
+<p>
+Problem Set 2  <a href="ps2.pdf"><i>HERE</i></a>.  Due 10am, Thursday 10/13.
+<p>
+<b>Lecture 5 (10/11):</B>  Moment generating functions and Chernoff bounds (sections 4.1-4.3 in <i>Prob. and Comp.</i>
+<p>
+<b>Lecture 6 (10/13):</B>  Randomized routing on the hypercube (section 4.5 in <i>Prob. and Comp.</i>
+<p>
+Problem Set 3  <a href="ps3.pdf"><i>HERE</i></a>.  Due 10am, Thursday 10/20.
+<p>
+<b>Lecture 7 (10/18):</B>  Balls in bins, the "Poissonization" technique (Sections 5.2-5.5 in <i>Prob. and Comp.</i>) and "Power of Two Choices" (section 14.1 in <i>Prob. and Comp.</i>)
+<p>
+<b>Lecture 8 (10/20):</B>  Metric embeddings, and the probabilistic embedding of any n-point metric into L1 with O(log(n)) distortion (due to Bourgain). Lecture notes <a href="metricE.pdf">here</a>.
+<p>
+Problem Set 4  <a href="ps4.pdf"><i>HERE</i></a>.  Due 10am, Thursday 10/27.
+<p>
+<b>Lecture 9 (10/25):</B>  Metric embeddings continued, Johnson-Lindenstrauss dimension reduction, and discussion of Locality Sensitive Hashing. Lecture notes <a href="JL_inprogress.pdf">here</a>.
+<p>
+<b>Lecture 10 (10/27):</B>  The Probabilistic Method: bounding Ramsey numbers, derandomization via conditional expectations.  (Chapter 6 in <i>Prob. and Comp,</i> NOT including Lovasz Local Lemma sections).
+<p>
+Problem Set 5  <a href="ps5.pdf"><i>HERE</i></a>.  Due 10am, Thursday 11/3.
+<p>
+<b>Lecture 11 (11/1):</b> Lovasz Local Lemma, and examples.  (Section 6.7 in <i>Prob. and Comp.</i>)
+<p>
+<b>Lecture 12 (11/3):</b> Constructive LLL.  In class we saw Moser's "entropic" proof--see Terry Tao's blog post for a summary <a href="https://terrytao.wordpress.com/2009/08/05/mosers-entropy-compression-argument/">here</a>.  Lecture notes from two years ago, covering the algorithm and formal theorem statement and a more general (but less pretty) proof via Galton-Watson branching processes <a href="LLLc.pdf">here</a>.   Also see the 2014 paper of Achlioptas and Iliopoulos' extending Moser's entropic arguments <a href = "https://arxiv.org/abs/1406.0242">here</a>.
+<p>
+<b>In class midterm (11/8) in Dinkelspeil Auditorium.</b>
+<p>
+<b>Lecture 13 (11/10):</B>  Intro to Markov Chains, and analysis of randomized 2-SAT algorithm.  (Section 7.1-7.2 in <i>Prob. and Comp.</i>)
+<p>
+Problem Set 6  <a href="ps6.pdf"><i>HERE</i></a>.  Due 10am, Thursday 11/17.
+<p>
+<b>Lecture 14 (11/15):</B>  Fundamental Theorem of Markov Chains/stationary distributions (sections 7.3 and 7.4), Markov Chain Monte Carlo (Section 10.4)
+<p>
+<b>Lecture 15 (11/17):</B>  Mixing Times, Strong Stationary Times, and Coupling (chapter 11 in <i>Prob. and Comp.</i>).
+<p>
+Problem set 7 is  <a href="ps7.pdf"><i>HERE</i></a>.  Due 10am, MONDAY 12/5.
+<p>
+<b>Lecture 16 (11/29):</B>  Martingales, the Doob Martingale, and Azuma-Hoeffding tail bounds (sections 12.1, 12.4, and 12.5 in <i>Prob. and Comp.</i>).
+<p>
+<b>Lecture 17 (12/1):</B>  Martingales, stopping times and the martingale stopping theorem (section 12.2 in <i>Prob. and Comp.</i>) and Wald's Equation (section 12.3).
+<p>
+Problem set 8 is  <a href="ps8.pdf"><i>HERE</i></a>.  Due 10am, FRIDAY 12/9.
+<p>
+<b>Lecture 18 (12/6):</B>  Crash course on coding theory.  [This material will not be on the final exam.]
+<p>
+<b>Lecture 19 (12/8):</B>  Tales from the front lines: discussion of some recent research related to the course.  [This material will not be on the final exam.]
+<p> -->

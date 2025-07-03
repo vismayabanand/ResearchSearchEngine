@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=E<dge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- write_head_public.twig -->
+<title>
+    Subjects - CMU LibGuides at Carnegie Mellon University
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive"/>
+
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691"/>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.17.2/lg-public.min.css"/>
+<script src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<!-- js_include_fallback_lg.twig -->
+<script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>jQuery.ui || document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');</script>
+<!-- !js_include_fallback_lg.twig -->
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.17.2/lg-public.min.js"></script>
+<!-- !write_head_public.twig -->
+<style>
+body, .innerbox p, .innerbox div, .innerbox font, .innerbox span, .innerbox td { font: normal 16px Arial, Helvetica, sans-serif !important;} 
+body, .headerbox {font: normal 16px Verdana}
+.s-lib-box .s-lib-box-title {font-size: 18.5px;font-family: font-family: 'Arimo', sans-serif;}
+#s-lg-guide-header-tags {display:none;} /* this hides the ability to add or display tags */
+#s-srch-facet-0-tag {display:none;} /* this removes the Tags facet from the search results page */
+</style>
+
+<style>
+  .s-lib-box-content ol, .s-lib-box-content ul {margin-top: 0;margin-bottom: 0px;}
+ </style>
+
+<style>
+/* Tabbed Boxes Styling */
+.s-lib-jqtabs .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: #c0c0c0;
+    color: #000000;
+    font-size: 16px;
+}
+.nav-tabs>li>a {
+    color: #000000;
+    background-color: #e3e3e3;
+    font-size: 16px;
+}
+</style>
+
+
+<style>
+
+/* jk updated template styles */
+.menu.primary li{
+  float: left;
+  list-style-type: none;
+}
+
+ul.menu.primary li a {
+  border-bottom: solid 1px #ccc;
+  color: #231f20;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 70%;
+  display: block;
+  padding: 16px 10px;
+  border-bottom: solid 4px transparent;
+  padding-top: 25px;
+}
+
+ ul.menu.primary li a:hover {
+    color: #231f20;
+    background-color: #f8f9f9;
+    border-bottom: solid 4px #ffc808; 
+}
+
+ul.menu.primary li a.is-active {
+  background-color: #f8f9f9;
+  border-bottom: solid 4px #ffc808; 
+}
+
+li.stickylogo {
+    top: -25px;
+    position: relative;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.menu-container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1170px;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+@media (min-width: 992px)
+.container {
+    width: 970px;
+}
+@media (min-width: 768px)
+.container {
+    width: 750px;
+}
+#jk-s-lib-bc {
+    padding-top: 50px;
+}
+
+#jk-s-lib-bc ol#s-lib-bc-list li a{
+    color: #000000;
+    border-bottom: 1px solid #000000;
+    text-decoration: none;
+  }
+#jk-s-lib-bc ol#s-lib-bc-list li a:hover{
+    text-decoration: none;
+    color: #b00;
+}
+
+
+#s-lg-tabs-container .jk-guide-buttons .nav-tabs > .active > a, #s-lg-tabs-container .jk-guide-buttons .nav-tabs > .active > button, #s-lg-tabs-container .jk-guide-buttons .nav-pills > .active > a, #s-lg-tabs-container .jk-guide-buttons .nav-pills > .active > button{
+
+    color: black;
+   .jk-guide-buttons: default;
+    background-color: #f5f5f5;
+    border: 1px solid;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    border-bottom: solid black;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .jk-guide-buttons .nav-tabs > li > a{
+  border: 1px solid transparent;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .jk-guide-buttons .nav-tabs > li > a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #A6192E;
+    border-bottom: solid #ffc808; 
+}
+
+.jk-guide-header-info h1 {
+    font-weight: 600;
+}
+
+
+footer {
+  background-color: #A6192E;
+  padding: 1.875rem 0.9375rem; }
+  @media screen and (min-width: 767px) {
+    footer {
+      padding: 3.125rem;
+      background-image: url("https://library.cmu.edu/images/newfooter.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-position: 0 70%;
+       } }
+  footer img.logomark {
+    display: none; }
+    @media screen and (min-width: 767px) {
+      footer img.logomark {
+        display: block;
+        position: absolute;
+        right: 100px;
+        top: 60px;
+        width: 450px;
+        height: auto;
+        opacity: 0.1; } }
+  footer img.cmufooterlogo {
+    display: none; }
+    @media screen and (min-width: 767px) {
+      footer img.cmufooterlogo {
+        display: block;
+        position: absolute;
+        right: 13%;
+        bottom: 31%;
+        width: 500px;
+        height: auto;
+        opacity: 1; } }
+  footer .footer-links.secondary {
+    display: block;
+    margin-top: 40px;
+    width: 100%; }
+    @media screen and (min-width: 767px) {
+      footer .footer-links.secondary {
+        margin-top: 0px;
+        width: 40%;
+        display: inline-block; } }
+  footer .footer-links h4, footer .footer-links p strong {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 130%;
+    margin-bottom: 1.4rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-transform: uppercase; }
+  footer .footer-links p {
+    color: #ffffff;
+    font-size: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-top: 1.4rem; }
+  footer .footer-links ul,
+  footer .footer-links li {
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 90%;
+    text-transform: uppercase;
+    line-height: 230%;
+    margin-left: 0;
+    letter-spacing: 1px; }
+    footer .footer-links ul:last-of-type,
+    footer .footer-links li:last-of-type {
+      margin-bottom: 35px; }
+    footer .footer-links ul a,
+    footer .footer-links li a {
+      color: #ffffff; }
+      footer .footer-links ul a:hover,
+      footer .footer-links li a:hover {
+        color: #ffffff;
+        border-bottom: solid 2px #b00; }
+  footer .socialicons {
+    margin: 25px 0; }
+    @media screen and (min-width: 767px) {
+      footer .socialicons {
+        margin-top: 35px;
+        margin-bottom: 25px; } }
+    footer .socialicons img {
+      padding-right: 7px;
+      width: 38px;
+      height: 38px; }
+  footer .footer-links.secondary.right p {
+    font-size: 80%;
+    line-height: 200%; }
+    footer .footer-links.secondary.right p a {
+      color: #ffffff; }
+      footer .footer-links.secondary.right p a:hover {
+        color: #ffffff;
+        border-bottom: solid 2px #b00; }
+  footer img.footergive {
+    width: 260px;
+    height: auto;
+    display: block; }
+
+footer a.button-yellow {
+  font-size: 80%;
+  margin-top: 45px;
+  padding: 10px 20px; }
+footer p.copyright {
+  color: #ffffff;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px; }
+</style>
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 496,
+        tracking_parameters: {"_st_site_id":496},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        loadSubjectGuides(0);
+    });
+
+    loadSubjectGuides = function (subject_id) {
+        var is_subject = (subject_id != 0);
+        const loadingText = '<div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>';
+        jQuery("#s-lg-sb-content-guides").html(loadingText);
+        jQuery("#s-lg-sb-content-databases").html(loadingText);
+        jQuery("#s-lg-sb-experts-div").html(loadingText);
+
+        if (is_subject) {
+            jQuery.ajax({
+                url: "/sb_process.php",
+                dataType: "json",
+                data: {
+                    action: 540,
+                    subject_id: subject_id
+                },
+                success: function (response, textStatus) {
+                    if (response.errCode == 200) {
+                        jQuery("#s-lg-sb-content-guides").html(response.data.guides);
+                        jQuery("#s-lg-sb-content-databases").html(response.data.databases);
+                        jQuery("#s-lg-sb-experts-div").html(response.data.experts);
+                        jQuery("#s-lg-sb-content-blog-posts").html(response.data.blog_posts);
+                        jQuery("#s-lg-sb-content-er-courses").html(response.data.er_courses);
+                    }
+
+                    // Init popovers.
+                    springSpace.UI.xhrPopover();
+                    springSpace.UI.initPopOvers();
+                    jQuery(".az-bs-tooltip").tooltip();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    springSpace.UI.error(errorThrown);
+                }
+            });
+        }
+    }
+
+    
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '21'});
+        });
+</script>
+<style>
+    h2.muted {
+        font-size: 18px;
+    }
+</style>
+</head>
+<body class="s-lib-public-body">
+<a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to Main Content</a><!-- BEGIN: Page Header -->
+<a href="https://www.library.cmu.edu">
+<img border="0" alt="Carnegie Mellon University Libraries" src="https://library.cmu.edu/sites/default/files/2024-08/UL_CMU_Logo_Horiz_Black.png"></a><!-- END: Page Header -->
+<!-- BEGIN: Content Header -->
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb">
+        <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://www.library.cmu.edu">Carnegie Mellon University</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://guides.library.cmu.edu/">CMU LibGuides</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Subjects</li></ol>    </nav>
+    <h1 id="s-lib-public-header-title">Subjects</h1>
+    <div id="s-lib-public-header-desc">Browse our best resources, organized by subject</div>
+</div>
+<!-- END: Content Header -->
+<!-- BEGIN: Nav Bar -->
+<div id="s-lib-public-nav" class="container s-lib-side-borders">
+    </div>
+<!-- END: Nav Bar -->
+<!-- BEGIN: content -->
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+    <section aria-label="Subject Search Bar">
+        <div id="s-lg-sb-search-bar" class="row">
+            <div id="sb-search-col-1" class="col-md-12 center">
+                <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle pad-right-med" data-toggle="collapse"
+                    data-target="#s-lg-sb-nav-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="s-lg-sb-label" class="navbar-brand">
+                <span id="s-lg-sb-count" class="badge" style="margin-left:10px;">65</span>
+                <span id="s-lg-sb-label-text">SUBJECTS</span>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="s-lg-sb-nav-1">
+            <div class="navbar-form navbar-left" role="search" style="margin-top:8px;">
+                <div class="form-group row">
+                    <div class="col-md-10" style="display:inline-block;">
+                        <label class="control-label sr-only" for="sel-guide-drop">Guide Subject Filter</label>
+                        <select name="sel-guide-drop" id="sel-guide-drop" class="form-control" style="width:100%;">
+                                                            <option selected value="">
+                                    Select a Subject...
+                                </option>
+                                                        <option value="sb.php?subject_id=100368" >
+                                    Architecture
+                                </option>
+                            <option value="sb.php?subject_id=100366" >
+                                    Art
+                                </option>
+                            <option value="sb.php?subject_id=136981" >
+                                    Bioinformatics
+                                </option>
+                            <option value="sb.php?subject_id=100365" >
+                                    Biological Sciences
+                                </option>
+                            <option value="sb.php?subject_id=100438" >
+                                    Business
+                                </option>
+                            <option value="sb.php?subject_id=44491" >
+                                    Careers
+                                </option>
+                            <option value="sb.php?subject_id=44472" >
+                                    Chemistry
+                                </option>
+                            <option value="sb.php?subject_id=44486" >
+                                    CMU Campuses Outside of Pittsburgh
+                                </option>
+                            <option value="sb.php?subject_id=44478" >
+                                    Computer Science
+                                </option>
+                            <option value="sb.php?subject_id=133188" >
+                                    Cybersecurity
+                                </option>
+                            <option value="sb.php?subject_id=197152" >
+                                    Dance
+                                </option>
+                            <option value="sb.php?subject_id=44454" >
+                                    Design
+                                </option>
+                            <option value="sb.php?subject_id=156237" >
+                                    Digital Humanities
+                                </option>
+                            <option value="sb.php?subject_id=207478" >
+                                    Digital Scholarship
+                                </option>
+                            <option value="sb.php?subject_id=44455" >
+                                    Drama
+                                </option>
+                            <option value="/economy" >
+                                    Economics
+                                </option>
+                            <option value="sb.php?subject_id=48710" >
+                                    Education
+                                </option>
+                            <option value="sb.php?subject_id=44461" >
+                                    Engineering & Public Policy
+                                </option>
+                            <option value="sb.php?subject_id=44488" >
+                                    Engineering: Biomedical
+                                </option>
+                            <option value="sb.php?subject_id=44489" >
+                                    Engineering: Chemical
+                                </option>
+                            <option value="sb.php?subject_id=44460" >
+                                    Engineering: Civil & Environmental
+                                </option>
+                            <option value="sb.php?subject_id=44481" >
+                                    Engineering: Electrical & Computer
+                                </option>
+                            <option value="sb.php?subject_id=44490" >
+                                    Engineering: Materials Science
+                                </option>
+                            <option value="sb.php?subject_id=44463" >
+                                    Engineering: Mechanical
+                                </option>
+                            <option value="sb.php?subject_id=44464" >
+                                    English
+                                </option>
+                            <option value="sb.php?subject_id=44492" >
+                                    Entrepreneurship
+                                </option>
+                            <option value="sb.php?subject_id=44475" >
+                                    Environment
+                                </option>
+                            <option value="sb.php?subject_id=191969" >
+                                    Ethnic & Gender Studies
+                                </option>
+                            <option value="sb.php?subject_id=44476" >
+                                    Film Studies
+                                </option>
+                            <option value="sb.php?subject_id=218489" >
+                                    First Year Writing
+                                </option>
+                            <option value="sb.php?subject_id=44487" >
+                                    For Library Staff
+                                </option>
+                            <option value="sb.php?subject_id=159682" >
+                                    General Topics
+                                </option>
+                            <option value="sb.php?subject_id=156743" >
+                                    GIS
+                                </option>
+                            <option value="sb.php?subject_id=89496" >
+                                    Health & Medicine
+                                </option>
+                            <option value="sb.php?subject_id=44465" >
+                                    History
+                                </option>
+                            <option value="sb.php?subject_id=44484" >
+                                    How To...
+                                </option>
+                            <option value="sb.php?subject_id=74981" >
+                                    IDeATe
+                                </option>
+                            <option value="sb.php?subject_id=44462" >
+                                    Information Networking
+                                </option>
+                            <option value="sb.php?subject_id=123020" >
+                                    Information Systems
+                                </option>
+                            <option value="sb.php?subject_id=44466" >
+                                    Language & Linguistics
+                                </option>
+                            <option value="sb.php?subject_id=78397" >
+                                    Law & Legal
+                                </option>
+                            <option value="sb.php?subject_id=158198" >
+                                    Library & Information Science
+                                </option>
+                            <option value="sb.php?subject_id=137674" >
+                                    Management
+                                </option>
+                            <option value="sb.php?subject_id=44473" >
+                                    Mathematical Sciences
+                                </option>
+                            <option value="sb.php?subject_id=130108" >
+                                    Metrics
+                                </option>
+                            <option value="sb.php?subject_id=44456" >
+                                    Music
+                                </option>
+                            <option value="sb.php?subject_id=188019" >
+                                    Neuroscience
+                                </option>
+                            <option value="sb.php?subject_id=218488" >
+                                    Open Educational Resources
+                                </option>
+                            <option value="sb.php?subject_id=44480" >
+                                    Philosophy
+                                </option>
+                            <option value="sb.php?subject_id=44474" >
+                                    Physics
+                                </option>
+                            <option value="/political-science" >
+                                    Political Science
+                                </option>
+                            <option value="sb.php?subject_id=44467" >
+                                    Psychology
+                                </option>
+                            <option value="sb.php?subject_id=123019" >
+                                    Public Policy
+                                </option>
+                            <option value="sb.php?subject_id=156239" >
+                                    Publishing
+                                </option>
+                            <option value="sb.php?subject_id=52518" >
+                                    Reference
+                                </option>
+                            <option value="sb.php?subject_id=155921" >
+                                    Religion
+                                </option>
+                            <option value="sb.php?subject_id=211397" >
+                                    Research Data Management
+                                </option>
+                            <option value="sb.php?subject_id=52520" >
+                                    Robotics
+                                </option>
+                            <option value="sb.php?subject_id=156238" >
+                                    Scholarly Communication
+                                </option>
+                            <option value="sb.php?subject_id=44468" >
+                                    Social & Decision Sciences
+                                </option>
+                            <option value="/special-collections" >
+                                    Special Collections
+                                </option>
+                            <option value="sb.php?subject_id=44469" >
+                                    Statistics
+                                </option>
+                            <option value="sb.php?subject_id=197151" >
+                                    Tools
+                                </option>
+                            <option value="sb.php?subject_id=44457" >
+                                    Visual Resources
+                                </option>
+                            <option value="sb.php?subject_id=156363" >
+                                    Women's Studies
+                                </option>
+                                                    </select>
+                    </div>
+
+                    <div class="col-md-2 pad-left-none" style="display:inline-block;">
+                        <button type="button" class="btn btn-small btn-primary"
+                                onclick="window.location.href = '/' + (jQuery('#sel-guide-drop').val().replace(/^\/+/, ''));">
+                            Go
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+            </div>
+        </div>
+    </section>
+    <section aria-label="Content by Subject">
+        <div id="s-lg-sb-cols" class="row">
+            <div id="col1" class="col-md-8 center">
+
+            </div>
+            <div id="col2" class="col-md-4 center">
+                <div style="padding-top: 9px;"></div>
+                <div class="margin-bottom-xlg"><div class="s-lib-public-side-header"><h2 class="pad-bottom-sm">Search</h2></div><div class="txt pad-top-sm"><div class="margin-bottom-med">Search the full text of this site. Results will link to pages containing your terms; results from subject page searches are automatically filtered by that subject.</div></div><div class="input-append"><form role="search" method="GET" action="/srch.php"><label class="control-label sr-only" for="s-lg-guide-search">Guide Search Terms</label><input class="form-control" name="q" id="s-lg-guide-search" type="text" placeholder="Enter Search Words" maxlength="260"><button class="btn btn-info" type="submit" style="margin-top:2px;" role="button">Search</button></form></div></div>            </div>
+        </div>
+    </section>
+</div>
+<!-- END: content -->
+<!-- BEGIN: Page Footer -->
+<div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://cmu.libapps.com/libapps/login.php?site_id=496">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"><a href="mailto:email-us@cmu.libanswers.com">Report a problem.</a></div></div></div><!-- END: Page Footer -->
+<div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div><!-- popover.twig -->
+<div id="s-lib-popover-title" class="hide">
+    <span class="text-info">
+        <strong>title</strong>
+    </span>
+
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
+        &times;
+    </button>
+</div>
+
+<div id="s-lib-popover-content" class="hide">
+    <i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<!-- !popover.twig -->
+<!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+<!-- BEGIN: Custom Footer -->
+
+
+<!-- END: Custom Footer -->
+</body>

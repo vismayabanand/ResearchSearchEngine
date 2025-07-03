@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://zarlab.cs.ucla.edu/xmlrpc.php" />
+<title>ZarLab &#8211; UCLA Computational Genetics</title>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//zarlab.cs.ucla.edu' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//jetpack.wordpress.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//public-api.wordpress.com' />
+<link rel='dns-prefetch' href='//0.gravatar.com' />
+<link rel='dns-prefetch' href='//1.gravatar.com' />
+<link rel='dns-prefetch' href='//2.gravatar.com' />
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="ZarLab &raquo; Feed" href="https://zarlab.cs.ucla.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="ZarLab &raquo; Comments Feed" href="https://zarlab.cs.ucla.edu/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/zarlab.cs.ucla.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3.5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://zarlab.cs.ucla.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.3.5' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='mediaelement-css' href='https://zarlab.cs.ucla.edu/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://zarlab.cs.ucla.edu/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.3.5' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #111111;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--gray: #f4f4f4;--wp--preset--color--yellow: #e5ae4a;--wp--preset--color--blue: #21759b;--wp--preset--color--green: #7c9b30;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 48px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 17px;--wp--preset--font-size--huge: 64px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='adventurous-style-css' href='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/style.css?ver=20231101-173306' type='text/css' media='all' />
+<link rel='stylesheet' id='adventurous-block-style-css' href='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/css/blocks.css?ver=4.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='adventurous-responsive-css' href='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/css/responsive.css?ver=6.3.5' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='adventurous-iecss-css' href='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/css/ie.css?ver=6.3.5' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='youtube-channel-gallery-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/youtube-channel-gallery/styles.css?ver=6.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.magnific-popup-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/youtube-channel-gallery/magnific-popup.css?ver=6.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=12.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/jetpack/css/jetpack.css?ver=12.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/js/html5.min.js?ver=3.7.3' id='adventurous-html5-js'></script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/js/selectivizr.min.js?ver=20130114' id='selectivizr-js'></script>
+<link rel="https://api.w.org/" href="https://zarlab.cs.ucla.edu/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://zarlab.cs.ucla.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3.5" />
+<link rel='shortlink' href='https://wp.me/36Nw1' />
+
+<!-- teachPress -->
+<script type="text/javascript" src="https://zarlab.cs.ucla.edu/wp-content/plugins/teachpress/js/frontend.js?ver=9.0.4"></script>
+<link type="text/css" href="https://zarlab.cs.ucla.edu/wp-content/plugins/teachpress/styles/teachpress_front.css?ver=9.0.4" rel="stylesheet" />
+<!-- END teachPress -->
+	<style>img#wpstats{display:none}</style>
+			<style type="text/css">
+		</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ZarLab" />
+<meta property="og:description" content="UCLA Computational Genetics" />
+<meta property="og:url" content="https://zarlab.cs.ucla.edu/" />
+<meta property="og:site_name" content="ZarLab" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:creator" content="@zarlab" />
+<meta name="twitter:site" content="@zarlab" />
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="home blog wp-custom-logo wp-embed-responsive group-blog right-sidebar content-full">
+
+
+
+<div id="page" class="hfeed site">
+
+	    
+	<header id="masthead">
+    
+    	        
+    	<div id="hgroup-wrap" class="container">
+        
+       		<div id="header-left">
+				<div id="site-logo"><a href="https://zarlab.cs.ucla.edu/" class="custom-logo-link" rel="home" aria-current="page"><img width="343" height="71" src="https://zarlab.cs.ucla.edu/wp-content/uploads/cropped-Untitled-3.png" class="custom-logo" alt="ZarLab" decoding="async" /></a></div><!-- #site-logo -->
+		<div id="hgroup" class="logo-enable logo-left assistive-text"><h1 id="site-title">
+				<a href="https://zarlab.cs.ucla.edu/" title="ZarLab" rel="home">ZarLab</a>
+				</h1><p id="site-description"> UCLA Computational Genetics</p>
+		</div><!-- #hgroup -->	</div><!-- #header-left"> -->
+ 
+    <div id="header-right" class="header-sidebar widget-area">
+        <aside class="widget widget_nav_menu">
+                    <div id="header-menu">
+            <nav id="access" class="site-navigation" role="navigation">
+                <h2 class="assistive-text">Primary Menu</h2>
+                <div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+                <div class="menu-header-container"><ul class="menu"><li id="menu-item-103" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-103"><a href="http://zarlab.cs.ucla.edu">Home</a></li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="https://zarlab.cs.ucla.edu/about/">About</a></li>
+<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="https://zarlab.cs.ucla.edu/group/">Group</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://zarlab.cs.ucla.edu/research/">Research</a></li>
+<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="https://zarlab.cs.ucla.edu/software/">Software</a></li>
+<li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a href="https://zarlab.cs.ucla.edu/publications/">Publications</a></li>
+<li id="menu-item-1972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1972"><a href="https://zarlab.cs.ucla.edu/education/">Education</a>
+<ul class="sub-menu">
+	<li id="menu-item-1347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1347"><a href="https://zarlab.cs.ucla.edu/education/undergraduate-studies/">Undergraduate Studies</a></li>
+	<li id="menu-item-1348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1348"><a href="https://zarlab.cs.ucla.edu/education/graduate-studies/">Graduate Studies</a></li>
+	<li id="menu-item-1349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1349"><a href="https://zarlab.cs.ucla.edu/education/seminars/">Seminars</a></li>
+	<li id="menu-item-1432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1432"><a href="https://zarlab.cs.ucla.edu/education/programs/">Programs</a></li>
+	<li id="menu-item-1346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1346"><a href="https://zarlab.cs.ucla.edu/education/online-resources/">Online Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-1970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970"><a href="https://zarlab.cs.ucla.edu/advice/">Advice</a></li>
+</ul></div>            </nav><!-- .site-navigation .main-navigation -->
+        </div>
+        </aside>
+        <aside class="widget widget_search" id="header-search-widget">
+            <span id="header-search" href="#"></span>
+            <div class="header-search-wrap displaynone">
+                	<form method="get" class="searchform" action="https://zarlab.cs.ucla.edu/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search …" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+            </div>
+        </aside>
+        <div id="header-mobile-menu"><a href="#" class="mobile-nav closed"><span class="mobile-menu-bar"></span></a></div>  
+    </div><!-- #header-right .widget-area -->
+            
+        </div><!-- #hgroup-wrap -->
+        
+                
+	</header><!-- #masthead .site-header -->
+    
+	 
+    
+    <div id="main-wrapper">
+		<!-- Disable Header Image --><div id="featured-post" class="layout-three"><section class="container" ><div class="featued-content-wrap">
+						<article id="featured-post-1" class="post hentry">
+								<figure class="featured-homepage-image">
+									<a title="Computational Genomics Summer Institute" href="http://computationalgenomics.bioinformatics.ucla.edu" target="_blank">
+										<img src="http://zarlab.cs.ucla.edu/wp-content/uploads/featuredcontent-cgsi3.gif" class="wp-post-image" alt="Computational Genomics Summer Institute" title="Computational Genomics Summer Institute">
+									</a>
+								</figure>
+								<div class="entry-container">
+										<header class="entry-header">
+											<h2 class="entry-title">
+												<a href="http://computationalgenomics.bioinformatics.ucla.edu" title="Computational Genomics Summer Institute" target="_blank">Computational Genomics Summer Institute</a>
+											</h2>
+										</header>
+										<div class="entry-content">
+											CGSI is a unique opportunity for scholars to foster relationships and unleash the full potential of their projects.
+										</div>
+								</div><!-- .entry-container -->
+						</article><!-- .slides -->
+						<article id="featured-post-2" class="post hentry">
+								<figure class="featured-homepage-image">
+									<a title="Bioinformatics @ UCLA" href="http://bioinformatics.ucla.edu" target="_blank">
+										<img src="http://zarlab.cs.ucla.edu/wp-content/uploads/featuredcontent-bioinformatics2.gif" class="wp-post-image" alt="Bioinformatics @ UCLA" title="Bioinformatics @ UCLA">
+									</a>
+								</figure>
+								<div class="entry-container">
+										<header class="entry-header">
+											<h2 class="entry-title">
+												<a href="http://bioinformatics.ucla.edu" title="Bioinformatics @ UCLA" target="_blank">Bioinformatics @ UCLA</a>
+											</h2>
+										</header>
+										<div class="entry-content">
+											Learn about our Interdepartmental Graduate and Undergraduate Minor programs.
+										</div>
+								</div><!-- .entry-container -->
+						</article><!-- .slides -->
+						<article id="featured-post-3" class="post hentry">
+								<figure class="featured-homepage-image">
+									<a title="Seminars @ UCLA" href="http://zarlab.cs.ucla.edu/education/seminars/" target="_blank">
+										<img src="http://zarlab.cs.ucla.edu/wp-content/uploads/featuredcontent-seminars.gif" class="wp-post-image" alt="Seminars @ UCLA" title="Seminars @ UCLA">
+									</a>
+								</figure>
+								<div class="entry-container">
+										<header class="entry-header">
+											<h2 class="entry-title">
+												<a href="http://zarlab.cs.ucla.edu/education/seminars/" title="Seminars @ UCLA" target="_blank">Seminars @ UCLA</a>
+											</h2>
+										</header>
+										<div class="entry-content">
+											Subscribe to our Seminars calendar to stay in touch with the latest talks relevant to Bioinformatics.
+										</div>
+								</div><!-- .entry-container -->
+						</article><!-- .slides --></div><!-- .featued-content-wrap --></section><!-- .container --></div><!-- #featured-post -->    
+        
+		<div id="main"> 
+                 
+			<div id="content-sidebar" class="container">
+
+    <div id="primary" class="content-area">
+        <div id="content" class="site-content" role="main">
+        
+                
+            	<nav role="navigation" id="nav-above" class="site-navigation paging-navigation">
+		<h3 class="assistive-text">Post navigation</h3>
+
+	
+					            <div class="nav-previous"><a href="https://zarlab.cs.ucla.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+            
+            
+	
+	</nav><!-- #nav-above -->
+	        
+                                
+                
+<article id="post-2314" class="post-2314 post type-post status-publish format-standard hentry category-news">
+
+	
+    
+    <div class="entry-container">
+
+		<header class="entry-header">
+    		<h2 class="entry-title"><a href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" title="Permalink to UCLA Computational Medicine Faculty Positions" rel="bookmark">UCLA Computational Medicine Faculty Positions</a></h2>
+			                <div class="entry-meta">
+                    <span class="on-date">Posted on <a href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" title="9:35 am" rel="bookmark"><time class="entry-date" datetime="2019-10-11T09:35:54-07:00">October 11, 2019</time></a></span><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://zarlab.cs.ucla.edu/author/eleazareskin/" title="View all posts by Eleazar Eskin" rel="author">Eleazar Eskin</a></span></span>                </div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		            <div class="entry-content">
+                <div class="kcite-section" kcite-section-id="2314">
+
+<p>The UCLA Department of Computational Medicine is looking to hire new faculty.&nbsp; Please pass this advertisement to anyone who may be interested.<br><br></p>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://mail.google.com/mail/u/0?ui=2&amp;ik=efbb1d72b3&amp;attid=0.1&amp;permmsgid=msg-a:r7599562730038250760&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ8MOvSA6r2N8uI1uVhqhNPtAvgLMlvJ7WmhdvjRRIXOlawdfoSOMJt1UwPSetS-hGMVV9JRyLJ3ONZCMqF3w0Yy70_KAhLvufLvLjk18oGuwFNOK9NLxjgPGS4&amp;disp=emb&amp;realattid=ii_k1ld52r00" alt="image.png"/></figure>
+
+
+
+<p>The David Geffen School of Medicine (DGSOM) is searching for tenure-track faculty to join the Department of Computational Medicine. The successful candidate will enjoy a richly collaborative working environment and a possible joint appointment with the UCLA Henry Samueli School of Engineering and Applied Sciences (HSSEAS), the UCLA Division of Life Sciences, or the Departments of Biostatistics or Epidemiology in the Fielding School of Public Health (FSPH). We are seeking candidates with strong research programs in the quantitative biomedical sciences, with emphasis on the development and use of novel mathematical models and computational methods. We plan to hire at the Assistant Professor level but will certainly consider exceptional candidates at higher ranks.</p>
+
+
+
+<p>The DGSOM and HSSEAS have invested in Computational Medicine to lead the transformation of biomedical sciences by leveraging recent advances in the mathematical, computational, and data sciences. The recently established Institute for Precision Health in the DGSOM provides unique opportunities to build upon successful collaborations between these two schools and encourage new ones. UCLA plans to hire multiple faculty over the next few years with diverse research interests in applications across biology, medicine, and public health. Some of the faculty will be hired to support the Department of Computational Medicine’s Biomathematics Graduate Program, a leading program nationally with a long and illustrious tradition, and these faculty will be expected to play an active role in the program. Candidates for these positions will be judged on productivity, creativity, commitment to realistic biological models, mathematical sophistication, and ability to collaborate across disciplinary boundaries. Faculty will also be hired in other interdisciplinary areas of interest including Computational Genomics, Clinical Machine Learning, and Computer Vision applied to Medical Imaging.</p>
+
+
+
+<p>Candidates should hold a Ph.D., M.D., or equivalent by the date of appointment and provide the potential for scholarly impact through publications, excellence in teaching, and strong oral and written communication skills. We welcome candidates whose experience in teaching, research, or community service has prepared them to contribute to our commitment to diversity and excellence. Faculty appointment level and salary will be commensurate with the candidate’s experience and qualifications.</p>
+
+
+
+<p>Applicants should submit a cover letter, curriculum vitae, list of three references, research statement, teaching statement, and statement of contributions to equity and diversity inclusion to Bogdan Pasaniuc, Chair of the Computational Medicine Faculty Search Committee.</p>
+
+
+
+<p>Many of the on-campus interviews will occur during January 21-22 and February 18-19, 2020.<br>Questions about the search should be directed towards Bogdan Pasaniuc (<a target="_blank" rel="noreferrer noopener">pasaniuc@ucla.edu</a>) Chair of the Search Committee or Eleazar Eskin (<a target="_blank" rel="noreferrer noopener">eeskin@cs.ucla.edu</a>) Chair of the Department of Computational Medicine.</p>
+
+
+
+<p>Apply at:<br><a href="https://recruit.apo.ucla.edu/JPF04995" target="_blank" rel="noreferrer noopener">https://recruit.apo.ucla.edu/JPF04995</a></p>
+
+
+
+<p>The University of California is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age or protected veteran status. For the complete University of California nondiscrimination and affirmative action policy, see UC Nondiscrimination &amp; Affirmative Action Policy.<br><a href="http://policy.ucop.edu/doc/4000376/NondiscrimAffirmAct" target="_blank" rel="noreferrer noopener">http://policy.ucop.edu/doc/4000376/NondiscrimAffirmAct</a><br></p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://mail.google.com/mail/u/0?ui=2&amp;ik=efbb1d72b3&amp;attid=0.2&amp;permmsgid=msg-a:r7599562730038250760&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ-mzF-1nfo6CUpG3TqRveKUZeA-d-Q-sI7VjRIY8uFu-MdCPBep97xBty2Tll9Jvbn0HzvI3PyrYQ842O4F2_-4ljKN6PH5na7sFpBgBVgumt4Sgah4L0orrSw&amp;disp=emb&amp;realattid=ii_k1ld7qxy0" alt="image.png"/></figure>
+
+
+
+<p></p>
+<!-- kcite active, but no citations found -->
+</div> <!-- kcite-section 2314 --><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" data-text="UCLA Computational Medicine Faculty Positions" data-via="zarlab" >Tweet</a></li><li class="share-facebook"><div class="fb-share-button" data-href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" data-layout="button_count"></div></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button" href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" target="_blank" title="Click to print" ><span>Print</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button" href="mailto:?subject=%5BShared%20Post%5D%20UCLA%20Computational%20Medicine%20Faculty%20Positions&body=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fucla-computational-medicine-faculty-positions%2F&share=email" target="_blank" title="Click to email a link to a friend" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you&#039;re having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="fdfcc7980e" data-email-share-track-url="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/?share=email"><span>Email</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button" href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/?share=reddit" target="_blank" title="Click to share on Reddit" ><span>Reddit</span></a></li><li class="share-pinterest"><div class="pinterest_button"><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fucla-computational-medicine-faculty-positions%2F&#038;media=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc67efbb23c329f0497e861e5541cf6a0%3Fs%3D96%26d%3Dmm%26r%3Dg&#038;description=UCLA%20Computational%20Medicine%20Faculty%20Positions" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div></li><li class="share-tumblr"><a class="tumblr-share-button" target="_blank" href="https://www.tumblr.com/share" data-title="UCLA Computational Medicine Faculty Positions" data-content="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" title="Share on Tumblr"data-posttype="link">Share on Tumblr</a></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/" data-counter="right"></script></div></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-45949317-2314-681954082970a' data-src='https://widgets.wp.com/likes/#blog_id=45949317&amp;post_id=2314&amp;origin=zarlab.cs.ucla.edu&amp;obj_id=45949317-2314-681954082970a' data-name='like-post-frame-45949317-2314-681954082970a' data-title='Like or Reblog'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>                            </div><!-- .entry-content -->
+        
+        <footer class="entry-meta">
+        	<span class="in-category">Posted in <a href="https://zarlab.cs.ucla.edu/category/news/" rel="category tag">News</a></span>			            			        </footer><!-- .entry-meta -->
+
+  	</div><!-- .entry-container -->
+
+</article><!-- #post-2314 -->        
+                    
+                
+<article id="post-2289" class="post-2289 post type-post status-publish format-standard hentry category-uncategorized tag-cgsi">
+
+	
+    
+    <div class="entry-container">
+
+		<header class="entry-header">
+    		<h2 class="entry-title"><a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" title="Permalink to Computational Genomics Summer Institute 2019" rel="bookmark">Computational Genomics Summer Institute 2019</a></h2>
+			                <div class="entry-meta">
+                    <span class="on-date">Posted on <a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" title="1:46 pm" rel="bookmark"><time class="entry-date" datetime="2019-02-15T13:46:00-08:00">February 15, 2019</time></a></span><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://zarlab.cs.ucla.edu/author/eleazareskin/" title="View all posts by Eleazar Eskin" rel="author">Eleazar Eskin</a></span></span>                </div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		            <div class="entry-content">
+                <div class="kcite-section" kcite-section-id="2289">
+
+<figure class="wp-block-image"><img decoding="async" fetchpriority="high" width="590" height="254" src="http://zarlab.cs.ucla.edu/wp-content/uploads/cgsi-logo-1.png" alt="" class="wp-image-2293" srcset="http://zarlab.cs.ucla.edu/wp-content/uploads/cgsi-logo-1.png 590w, http://zarlab.cs.ucla.edu/wp-content/uploads/cgsi-logo-1-500x215.png 500w" sizes="(max-width: 590px) 100vw, 590px" /></figure>
+
+
+
+<table class="wp-block-table is-style-regular"><tbody><tr><td>The 2019 UCLA Computational Genomics Summer Institute.CGSI brings together mathematical and computational scientists, sequencing technology developers in both industry and academia, and the biologists who use the instruments for particular research applications. Research talks, workshops, journal clubs, and social events provide a unique opportunity to foster interactions between these three communities over an extended period of time and advance the mathematical foundations of this exciting field.<br><br><strong>DATES</strong><br><strong>SHORT PROGRAM #1: July 15 &#8211; 19, 2019<br>SHORT PROGRAM #2: July 29 &#8211; August 2, 2019<br>LONG PROGRAM: July 10 &#8211; August 2, 2019</strong><br>@ UCLA Campus, Los Angeles<br>Visit our website to learn more: <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://computationalgenomics.bioinformatics.ucla.edu/2019-cgsi/" target="_blank">CGSI 2019</a><br>Check out the schedule from last year: <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://computationalgenomics.bioinformatics.ucla.edu/wp-content/uploads/2019/01/18CGSI_Schedule_withslides.pdf" target="_blank">CGSI 2</a><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5cbd64d1de&amp;e=a4f84d74ee" target="_blank">018</a><br><br><strong>The application is open now!</strong><br>Apply now for this upcoming summer’s Short and Long Courses:<br>STEP #1 <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://docs.google.com/forms/d/e/1FAIpQLSdZFy53CXprrDxrb79SwaiF7W12EKEm-hPAd7jBAMApZZF7vg/viewform?usp=send_form" target="_blank">APPLY</a><br>STEP #2 <a href="mailto:uclacgsi@gmail.com?subject=CGSI%20Aplication%20-%20CV%20-%20%22Your%20name%22" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">SEND YOUR CV to uclacgsi@gmail.com</a><br><br>The regular registration deadline to apply for the 2019 programs is <strong>March 1st, 2019</strong>.</td></tr><tr><td><strong>Overview</strong><br>In 2015, Profs. <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://web.cs.ucla.edu/~eeskin/" target="_blank">Eleazar Eskin</a> (UCLA), <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.eranhalperingenomics.com/" target="_blank">Eran Halperin</a> (UCLA), <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://jnpopgen.org/" target="_blank">John Novembre</a> (The University of Chicago), and <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://compbio.cs.brown.edu/" target="_blank">Ben Raphael</a> (Brown University) created the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://computationalgenomics.bioinformatics.ucla.edu/" target="_blank">Computational Genomics Summer Institute</a> (CGSI). A collaboration with the <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://www.ipam.ucla.edu/" target="_blank">Institute for Pure and Applied Mathematics</a> (IPAM), CGSI aims to build a community focused on methods development in Bioinformatics.<br><br><strong>The 2019 CGSI Organizers</strong><br><br>CGSI Program Co-directors:<br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=f3d3ac9845&amp;e=a4f84d74ee" target="_blank">Eleazar Eskin, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=d86dbf0206&amp;e=a4f84d74ee" target="_blank">Eran Halperin, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=a2ddcea9aa&amp;e=a4f84d74ee" target="_blank">Dima Shlyakhtenko, UCLA IPAM</a><br><br>CGSI Organizing Committee:<br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=3eebc7ff84&amp;e=a4f84d74ee" target="_blank">Jessica (Jingyi) Li, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=6e2f81a12b&amp;e=a4f84d74ee" target="_blank">Sriram Sankararaman, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=b20d676449&amp;e=a4f84d74ee" target="_blank">David Koslicki, Oregon State University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5128e9eba4&amp;e=a4f84d74ee" target="_blank">Eran Halperin, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=12746a8c96&amp;e=a4f84d74ee" target="_blank">Eleazar Eskin, UCLA</a><br><br>The 2016, 2017 and 2018 programs were a huge success &#8211; we hope you will be a part of the program this summer!<br><strong><a href="http://computationalgenomics.bioinformatics.ucla.edu/wp-content/uploads/2019/01/18CGSI_Schedule_withslides.pdf" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">You can see our 2018 schedule with the videos here.</a></strong><br><br><strong>Social Programs from previous years includes:</strong><br>Concert at the Hollywood Bowl<br>Bike rides along the Pacific Coast<br>Retreat in the Mountains<br><br><strong>2019 Faculty</strong><br><strong>(</strong><em>Additional faculty will be added in the next few months)</em><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=f2d880a992&amp;e=a4f84d74ee" target="_blank">Can Alkan, Bilkent University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=cc4c2d04b0&amp;e=a4f84d74ee" target="_blank">David </a><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=ee40d36987&amp;e=a4f84d74ee" target="_blank">Anastasiu</a><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=1d80e01427&amp;e=a4f84d74ee" target="_blank">, San Jose State University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=29bfcba3e1&amp;e=a4f84d74ee" target="_blank">Valerie Arboleda, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=4047c9baa9&amp;e=a4f84d74ee" target="_blank">Sharon Aviran, UC Davis</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=866c8e976f&amp;e=a4f84d74ee" target="_blank">Vineet Bafna, UCSD</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=8dcc230cbb&amp;e=a4f84d74ee" target="_blank">Lisa Bastarache, Vanderbilt University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=e78bd2bb2d&amp;e=a4f84d74ee" target="_blank">Dan Benjamin, USC</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=378ccf47e3&amp;e=a4f84d74ee" target="_blank">Gillian Belbin, Icahn School of Medicine at Mount Sinai</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=a421435257&amp;e=a4f84d74ee" target="_blank">Ran Blekhman, University of Minnesota</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=0bfa443671&amp;e=a4f84d74ee" target="_blank">Paul Boutros, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=afff690304&amp;e=a4f84d74ee" target="_blank">Na Cai, EBI</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=169d8be545&amp;e=a4f84d74ee" target="_blank">Shai Carmi, The Hebrew University of Jerusalem</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5a49c3b0ab&amp;e=a4f84d74ee" target="_blank">Rayan Chikhi, CNRS</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=03f2c88d04&amp;e=a4f84d74ee" target="_blank">Karen Conneely, Emory University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=19c0c4568a&amp;e=a4f84d74ee" target="_blank">Nancy Cox, Vanderbilt University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=e24de4afb2&amp;e=a4f84d74ee" target="_blank">Jason Ernst, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=3a22f90fbe&amp;e=a4f84d74ee" target="_blank">Eleazar Eskin, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=b0621b033e&amp;e=a4f84d74ee" target="_blank">Jonathan Flint, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=83cd275985&amp;e=a4f84d74ee" target="_blank">Nandita Garud, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=2661278daa&amp;e=a4f84d74ee" target="_blank">Simon Gravel, McGill University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=ad8a922dd7&amp;e=a4f84d74ee" target="_blank">Eran Halperin, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=e8586ab182&amp;e=a4f84d74ee" target="_blank">Jo Hardin, Pomona College</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=2768ee3ad6&amp;e=a4f84d74ee" target="_blank">Fereydoun Hormozdiari, UC Davis</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=658114833d&amp;e=a4f84d74ee" target="_blank">Haky (Hae Kyung) </a><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=377d837c5e&amp;e=a4f84d74ee" target="_blank">Im</a><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=eaee801ff9&amp;e=a4f84d74ee" target="_blank">, University of Chicago</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=9fb71ea34b&amp;e=a4f84d74ee" target="_blank">Iuliana Ionita, Columbia University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=56c4d77df5&amp;e=a4f84d74ee" target="_blank">Hyun Min Kang, University of Michigan</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=44a0b2f68a&amp;e=a4f84d74ee" target="_blank">Eimear Kenny, Icahn School of Medicine at Mount Sinai</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=ac75309cc3&amp;e=a4f84d74ee" target="_blank">David Koslicki, Oregon State University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=0080a8ea67&amp;e=a4f84d74ee" target="_blank">Smita Krishnaswamy, Yale University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=c126a99a3e&amp;e=a4f84d74ee" target="_blank">Jessica (Jingyi) Li, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=0c4dc5fc3f&amp;e=a4f84d74ee" target="_blank">Jian Ma, CMU</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=3aefa85fd5&amp;e=a4f84d74ee" target="_blank">Anna Spafo Malaspina, SIB</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=d40f4a59a3&amp;e=a4f84d74ee" target="_blank">Jonathan Marchini, Regeneron Genetics Center</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=efed183867&amp;e=a4f84d74ee" target="_blank">Siavash Mir Arabbaygi, UCSD</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=c282e026f4&amp;e=a4f84d74ee" target="_blank">Quaid Morris, University of Toronto</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=c97fc7a772&amp;e=a4f84d74ee" target="_blank">Magnus Nordborg, GMI, Austria</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=d67c51e7ac&amp;e=a4f84d74ee" target="_blank">John Novembre, University of Chicago</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5845962478&amp;e=a4f84d74ee" target="_blank">Layla Oesper, Carleton College</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=df336ae9f2&amp;e=a4f84d74ee" target="_blank">Bogdan Pasaniuc, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=d32bb6b4c0&amp;e=a4f84d74ee" target="_blank">Ben Raphael, Princeton University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=30521a0b61&amp;e=a4f84d74ee" target="_blank">Saharon Rosset, Tel Aviv University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=49c5993966&amp;e=a4f84d74ee" target="_blank">Sushmita Roy, WID</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=d1987b1ace&amp;e=a4f84d74ee" target="_blank">Cenk Sahinalp, Indiana University Bloomington</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=4149d92ecc&amp;e=a4f84d74ee" target="_blank">Sriram Sankararaman, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=fc6d34b73f&amp;e=a4f84d74ee" target="_blank">Michael Schatz, Johns Hopkins University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=23d07ed5ef&amp;e=a4f84d74ee" target="_blank">Alexander Schönhuth, CWI, Amsterdam</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=b6726dfd37&amp;e=a4f84d74ee" target="_blank">Sagiv Shifman, The Hebrew University of Jerusalem</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=a31d210c9b&amp;e=a4f84d74ee" target="_blank">Sagi Snir, University of Haifa</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=9320ca66d7&amp;e=a4f84d74ee" target="_blank">Jae-Hoon Sul, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=40edf19564&amp;e=a4f84d74ee" target="_blank">Fabio Vandin, University of Padova</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=e20ad9b1bd&amp;e=a4f84d74ee" target="_blank">Peter Vischer, University of Queensland, Australia</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=99d1078318&amp;e=a4f84d74ee" target="_blank">Naomi Wray, University of Queensland, Australia</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=f9a71a34d7&amp;e=a4f84d74ee" target="_blank">Yi Xing, UCLA</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5a190b76b5&amp;e=a4f84d74ee" target="_blank">Alex Zelikovsky, Georgia State University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=5864240edb&amp;e=a4f84d74ee" target="_blank">James Zou, Stanford University</a><br><a rel="noreferrer noopener" href="https://ucla.us11.list-manage.com/track/click?u=4dada5071380a1bffc57a5e22&amp;id=38d154556b&amp;e=a4f84d74ee" target="_blank">Or Zuk, Hebrew University</a></td></tr></tbody></table>
+
+
+
+<p></p>
+<!-- kcite active, but no citations found -->
+</div> <!-- kcite-section 2289 --><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" data-text="Computational Genomics Summer Institute 2019" data-via="zarlab" >Tweet</a></li><li class="share-facebook"><div class="fb-share-button" data-href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" data-layout="button_count"></div></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button" href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" target="_blank" title="Click to print" ><span>Print</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button" href="mailto:?subject=%5BShared%20Post%5D%20Computational%20Genomics%20Summer%20Institute%202019&body=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fcomputational-genomics-summer-institute-2019%2F&share=email" target="_blank" title="Click to email a link to a friend" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you&#039;re having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="b0a200c24b" data-email-share-track-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/?share=email"><span>Email</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button" href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/?share=reddit" target="_blank" title="Click to share on Reddit" ><span>Reddit</span></a></li><li class="share-pinterest"><div class="pinterest_button"><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fcomputational-genomics-summer-institute-2019%2F&#038;media=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fwp-content%2Fuploads%2Fcgsi-logo-1.png&#038;description=Computational%20Genomics%20Summer%20Institute%202019" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div></li><li class="share-tumblr"><a class="tumblr-share-button" target="_blank" href="https://www.tumblr.com/share" data-title="Computational Genomics Summer Institute 2019" data-content="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" title="Share on Tumblr"data-posttype="link">Share on Tumblr</a></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/" data-counter="right"></script></div></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-45949317-2289-681954082cf81' data-src='https://widgets.wp.com/likes/#blog_id=45949317&amp;post_id=2289&amp;origin=zarlab.cs.ucla.edu&amp;obj_id=45949317-2289-681954082cf81' data-name='like-post-frame-45949317-2289-681954082cf81' data-title='Like or Reblog'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>                            </div><!-- .entry-content -->
+        
+        <footer class="entry-meta">
+        	<span class="in-category">Posted in <a href="https://zarlab.cs.ucla.edu/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="sep"> | </span><span class="in-tag">Tagged <a href="https://zarlab.cs.ucla.edu/tag/cgsi/" rel="tag">CGSI</a></span>			            			        </footer><!-- .entry-meta -->
+
+  	</div><!-- .entry-container -->
+
+</article><!-- #post-2289 -->        
+                    
+                
+<article id="post-2275" class="post-2275 post type-post status-publish format-standard hentry category-education category-research tag-training">
+
+	
+    
+    <div class="entry-container">
+
+		<header class="entry-header">
+    		<h2 class="entry-title"><a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" title="Permalink to Computational Genomics Summer Institute &#8211; Apply Today" rel="bookmark">Computational Genomics Summer Institute &#8211; Apply Today</a></h2>
+			                <div class="entry-meta">
+                    <span class="on-date">Posted on <a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" title="7:00 pm" rel="bookmark"><time class="entry-date" datetime="2018-03-27T19:00:15-07:00">March 27, 2018</time></a></span><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://zarlab.cs.ucla.edu/author/eleazareskin/" title="View all posts by Eleazar Eskin" rel="author">Eleazar Eskin</a></span></span>                </div><!-- .entry-meta -->
+					</header><!-- .entry-header -->
+
+		            <div class="entry-content">
+                <div class="kcite-section" kcite-section-id="2275">
+<p><a title="CGSI website" href="http://computationalgenomics.bioinformatics.ucla.edu/programs/2018-cgsi/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://computationalgenomics.bioinformatics.ucla.edu/programs/2018-cgsi/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNGWiTuQEpkRspALY-KSxGbcma3pSw"><img decoding="async" class="m_7662720239797616722mcnImage CToWUd" src="https://ci4.googleusercontent.com/proxy/aM63fY8NZMvOl3LMPIDlekSsdSxUvR7EykEol1dPArP_nRoj-_uzMKnW3JNo7_92AkHTx4gh-ebkMECuQ3Kucm7XxstSN6QFvIvwD5Q753aEF7RQDrvAv4CeQWFM4uEC-eU1vnCPowM14E1sK1QTveDYmNZ1ryEpZExO1iM=s0-d-e1-ft#https://gallery.mailchimp.com/4dada5071380a1bffc57a5e22/images/da50a82f-58b4-4434-a95d-87a32ca530cd.png" alt="" width="564" align="center" /></a></p>
+<p>&nbsp;</p>
+<h1><span style="font-family: lato, 'helvetica neue', helvetica, arial, sans-serif;">CGSI &#8211; extended application deadline</span></h1>
+<p><strong>Rolling admissions are starting March 15th.<br />
+Registration Fee:</strong><br />
+$550 apply by <span class="aBn" tabindex="0" data-term="goog_1970677944"><span class="aQJ">April 1st</span></span><br />
+$650 apply by <span class="aBn" tabindex="0" data-term="goog_1970677945"><span class="aQJ">April 15th</span></span><br />
+$750 apply after <span class="aBn" tabindex="0" data-term="goog_1970677946"><span class="aQJ">April 15th</span></span><br />
+Subsidized housing for CGSI is guaranteed for anyone who applied by <span class="aBn" tabindex="0" data-term="goog_1970677947"><span class="aQJ">April 15th</span></span>.  Housing for applicants who apply after <span class="aBn" tabindex="0" data-term="goog_1970677948"><span class="aQJ">April 15th</span></span> will be given on a first come first serve basis subject to availability.</p>
+<p><strong>We have filled most of the slots in the 2018 CGSI Long Course,</strong> however, there are still a few available slots.<br />
+The long program has been a huge success last year and many people were not able to be admitted as they did not apply on time &#8211; make sure that this year you are not left behind!<br />
+<strong>There are also still available spaces in the 2018 CGSI Short Course.</strong><br />
+Register now to get the lower rate and subsidized housing.</p>
+<p><strong>DATES</strong><br />
+<strong>SHORT PROGRAM #1: <span class="aBn" tabindex="0" data-term="goog_1970677949"><span class="aQJ">July 16 &#8211; 20, 2018</span></span><br />
+SHORT PROGRAM #2: <span class="aBn" tabindex="0" data-term="goog_1970677950"><span class="aQJ">July 30 &#8211; August 3, 2018</span></span><br />
+LONG PROGRAM: <span class="aBn" tabindex="0" data-term="goog_1970677951"><span class="aQJ">July 11 &#8211; August 3, 2018</span></span></strong><br />
+@ UCLA Campus, Los Angeles<br />
+Visit our website to learn more.</p>
+<h3><strong>The application is open!</strong></h3>
+<p>Apply now for this upcoming summer’s Short and Long Courses:</p>
+<p><span style="font-family: lato, 'helvetica neue', helvetica, arial, sans-serif;">STEP #1 <a href="https://goo.gl/forms/X6ozSyEuSWRHwumE3" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://goo.gl/forms/X6ozSyEuSWRHwumE3&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNH-unUy1FgScEvYjAeMbix0JltwKw">APPLY</a></span><br />
+STEP #2 <a href="mailto:uclacgsi@gmail.com" target="_blank" rel="noopener">SEND YOUR CV</a></p>
+<p>&nbsp;</p>
+<p dir="ltr"><strong>Watch the best talks in 2018 CGWI</strong></p>
+<p dir="ltr">Our first offering of the Computational Genomics Winter Institute was a success. In our feedback survey, we asked the participants to pick three talks they wanted to highlight on our website. We would first like to emphasize that the feedback we got was that all the talks in CGWI were excellent. But we are happy to announce that the ones that received the most votes are the talks of Brian Browning, Casey Greene, Su-In Lee, and John Novembre. We now have links to these videos highlighted on the front page of CGWI for easy access, and links to all of the talks are also available at the <a href="http://computationalgenomics.bioinformatics.ucla.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://computationalgenomics.bioinformatics.ucla.edu/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNGa9Ufq0U_soumVIh30vBgolDcL-Q">CGSI website.</a><br />
+<a href="http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/su-in-lee-interpretable-machine-learning-for-precision-medicine/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/su-in-lee-interpretable-machine-learning-for-precision-medicine/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNFMaw8_0cdWmyVpV4S6oJs9mYFwYQ"><img decoding="async" class="CToWUd" src="https://ci6.googleusercontent.com/proxy/DAjplcLjgAYPPjc5GncOy27WkckciJnKPbozMl1A-2VAFDnU8plr_OuX2Ng_ByZgfmQ_evYEbozwB-vi7O9ZIsO5D8dy1FLrUcUOsc45S9vyNgvsTb5wDZg2af5OauEgX4V0CQ4MlLpCIO_EoQAl87PCWYOGpG9tT78MWcA=s0-d-e1-ft#https://gallery.mailchimp.com/4dada5071380a1bffc57a5e22/images/a4c74209-5d5f-479a-a1a1-7dc711ae55b0.png" width="200" height="102" /></a><br />
+Su-In Lee: &#8220;Interpretable Machine Learning for Precision Medicine.&#8221;</p>
+<p><a href="http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/casey-greene-deep-learning-privacy-preserving-data-sharing-along-with-some-hints-and-tips/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/casey-greene-deep-learning-privacy-preserving-data-sharing-along-with-some-hints-and-tips/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNEO9FVmyNjziQ5AtujYfHAZdF5OIA"><img decoding="async" class="CToWUd" src="https://ci5.googleusercontent.com/proxy/0BgwqKOZNwwN29k6m8m8bvcmUyWrFlJ5QR_KJSMUPRZFGo9Lj3hSKUw5zhT-P39iSla-mfQvQyIu1NJmeP8BCwZVbBCjyWPXy673XTto9SFGa0ty4Q8HvPmnIjSr9OGBy1r-52eEC71Z_RLvdpOY2ZrM-UNRfA2xAag-dLQ=s0-d-e1-ft#https://gallery.mailchimp.com/4dada5071380a1bffc57a5e22/images/7436dc24-57d1-4221-9747-aa6976553962.png" width="200" height="103" /></a><br />
+Casey Greene: &#8220;Deep learning: privacy preserving data sharing along with some hints and tips.&#8221;</p>
+<p><a href="http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/john-novembre-computational-tools-for-understanding-geographic-structure-in-genetic-variation-data/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://computationalgenomics.bioinformatics.ucla.edu/portfolio-item/john-novembre-computational-tools-for-understanding-geographic-structure-in-genetic-variation-data/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNF_ZzNBGR48tZOQzm9JeaVxeO3NUA"><img decoding="async" loading="lazy" class="CToWUd" src="https://ci3.googleusercontent.com/proxy/KovGk1KLSmeKnqfak0iUli9xzQbkhyDECHAZukcwKmKCNXooO2Dj4oUzgPzy00PNzMA7SWWZUdAkh8LnVBb5dxgAs_pZLCSx4m-2N-DXdxC2vy-ek3gM5Yh9XB3qYrZ32kfG0wtpNqKJAY1d-ceR20vd7aI7nONyZJJvAwE=s0-d-e1-ft#https://gallery.mailchimp.com/4dada5071380a1bffc57a5e22/images/2f8689ed-bf09-468f-9737-5ea9daf4243a.png" width="200" height="103" /></a><br />
+John Novembre: &#8220;Computational tools for understanding geographic structure in genetic variation data.&#8221;</p>
+<p dir="ltr"><strong>The 2018 CGSI Organizers</strong></p>
+<p>CGSI Co-organizers:<br />
+<a href="http://www.hormozdiarilab.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.hormozdiarilab.org/&amp;source=gmail&amp;ust=1522287909387000&amp;usg=AFQjCNGV3T6fTd2HcRspIuqymdPOhEw0oA">Fereydoun Hormozdiari, UC Davis</a><br />
+<a href="http://koslicki.math.oregonstate.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://koslicki.math.oregonstate.edu/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNHn-oQ4nuys4-NjcJBlaUvN6G9dQw">David Koslicki, Oregon State University</a><br />
+<a href="https://www.eeb.ucla.edu/Faculty/Lohmueller/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.eeb.ucla.edu/Faculty/Lohmueller/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNHuGfiXWJ3c-tmDiWqIibh8VAnIxQ">Kirk Lohmueller, UCLA</a><br />
+<a href="http://blekhmanlab.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://blekhmanlab.org/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNElnbV28pt02UUBKkG31rur0XHO9Q">Ran Blekhman, University of Minnesota</a></p>
+<p>CGSI Program Co-directors:<br />
+<a href="http://zarlab.cs.ucla.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://zarlab.cs.ucla.edu/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNEOYSrWiqxhzOLANTEs78rVGNNSYQ">Eleazar Eskin, UCLA</a><br />
+<a href="https://www.eranhalperingenomics.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.eranhalperingenomics.com/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNG3snYiDtgUHLk7V6Jr_MiIPNQXHQ">Eran Halperin, UCLA</a><br />
+<a href="https://www.math.ucla.edu/news/professor-dima-shlyakhtenko-appointed-director-ipam" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.math.ucla.edu/news/professor-dima-shlyakhtenko-appointed-director-ipam&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNGZhZxSIwi5A18OntpPJKGr9_Luug">Dima Shlyakhtenko, UCLA IPAM</a></p>
+<p>CGSI Steering Committee<br />
+<a href="http://zarlab.cs.ucla.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://zarlab.cs.ucla.edu/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNEOYSrWiqxhzOLANTEs78rVGNNSYQ">Eleazar Eskin, UCLA</a><br />
+<a href="https://www.eranhalperingenomics.com/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.eranhalperingenomics.com/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNG3snYiDtgUHLk7V6Jr_MiIPNQXHQ">Eran Halperin, UCLA</a><br />
+<a href="http://jnpopgen.org/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://jnpopgen.org/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNG-dtJJ9Niu1KAc_0RmXGjgp7bfEQ">John Novembre, University of Chicago</a><br />
+<a href="http://compbio.cs.brown.edu/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://compbio.cs.brown.edu/&amp;source=gmail&amp;ust=1522287909388000&amp;usg=AFQjCNEUpIIujcGqO2nwXeMV9uGh3ELYVA">Ben Raphael, Princeton University</a></p>
+<!-- kcite active, but no citations found -->
+</div> <!-- kcite-section 2275 --><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" data-text="Computational Genomics Summer Institute - Apply Today" data-via="zarlab" >Tweet</a></li><li class="share-facebook"><div class="fb-share-button" data-href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" data-layout="button_count"></div></li><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button" href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" target="_blank" title="Click to print" ><span>Print</span></a></li><li class="share-email"><a rel="nofollow noopener noreferrer" data-shared="" class="share-email sd-button" href="mailto:?subject=%5BShared%20Post%5D%20Computational%20Genomics%20Summer%20Institute%20-%20Apply%20Today&body=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fcomputational-genomics-summer-institute-apply-today%2F&share=email" target="_blank" title="Click to email a link to a friend" data-email-share-error-title="Do you have email set up?" data-email-share-error-text="If you&#039;re having problems sharing via email, you might not have email set up for your browser. You may need to create a new email yourself." data-email-share-nonce="046e4c24e7" data-email-share-track-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/?share=email"><span>Email</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button" href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/?share=reddit" target="_blank" title="Click to share on Reddit" ><span>Reddit</span></a></li><li class="share-pinterest"><div class="pinterest_button"><a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fzarlab.cs.ucla.edu%2Fcomputational-genomics-summer-institute-apply-today%2F&#038;media=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fc67efbb23c329f0497e861e5541cf6a0%3Fs%3D96%26d%3Dmm%26r%3Dg&#038;description=Computational%20Genomics%20Summer%20Institute%20-%20Apply%20Today" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a></div></li><li class="share-tumblr"><a class="tumblr-share-button" target="_blank" href="https://www.tumblr.com/share" data-title="Computational Genomics Summer Institute - Apply Today" data-content="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" title="Share on Tumblr"data-posttype="link">Share on Tumblr</a></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/" data-counter="right"></script></div></li><li class="share-end"></li></ul></div></div></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-45949317-2275-681954082f67c' data-src='https://widgets.wp.com/likes/#blog_id=45949317&amp;post_id=2275&amp;origin=zarlab.cs.ucla.edu&amp;obj_id=45949317-2275-681954082f67c' data-name='like-post-frame-45949317-2275-681954082f67c' data-title='Like or Reblog'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>                            </div><!-- .entry-content -->
+        
+        <footer class="entry-meta">
+        	<span class="in-category">Posted in <a href="https://zarlab.cs.ucla.edu/category/education/" rel="category tag">Education</a>, <a href="https://zarlab.cs.ucla.edu/category/research/" rel="category tag">Research</a></span><span class="sep"> | </span><span class="in-tag">Tagged <a href="https://zarlab.cs.ucla.edu/tag/training/" rel="tag">training</a></span>			            			        </footer><!-- .entry-meta -->
+
+  	</div><!-- .entry-container -->
+
+</article><!-- #post-2275 -->        
+                    
+            	<nav role="navigation" id="nav-below" class="site-navigation paging-navigation">
+		<h3 class="assistive-text">Post navigation</h3>
+
+	
+					            <div class="nav-previous"><a href="https://zarlab.cs.ucla.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+            
+            
+	
+	</nav><!-- #nav-below -->
+	        
+                
+        </div><!-- #content .site-content -->
+        
+    </div><!-- #primary .content-area -->
+
+	
+	<div id="secondary" class="widget-area" role="complementary">
+		<aside id="media_image-2" class="widget widget_media_image"><img width="400" height="281" src="https://zarlab.cs.ucla.edu/wp-content/uploads/logo2small.gif" class="image wp-image-2088 alignnone attachment-full size-full" alt="" decoding="async" style="max-width: 100%; height: auto;" loading="lazy" /></aside><aside id="blog_subscription-2" class="widget widget_blog_subscription jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+			<div class="wp-block-jetpack-subscriptions__container">
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2"
+				data-blog="45949317"
+				data-post_access_level="everybody" >
+									<div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div>
+										<p id="subscribe-email">
+						<label id="jetpack-subscribe-label"
+							class="screen-reader-text"
+							for="subscribe-field-blog_subscription-2">
+							Email Address						</label>
+						<input type="email" name="email" required="required"
+																					value=""
+							id="subscribe-field-blog_subscription-2"
+							placeholder="Email Address"
+						/>
+					</p>
+
+					<p id="subscribe-submit"
+											>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="source" value="https://www.zarlab.xyz/"/>
+						<input type="hidden" name="sub-type" value="widget"/>
+						<input type="hidden" name="redirect_fragment" value="subscribe-blog-blog_subscription-2"/>
+												<button type="submit"
+															class="wp-block-button__link"
+																					name="jetpack_subscriptions_widget"
+						>
+							Subscribe						</button>
+					</p>
+							</form>
+						</div>
+			
+</aside><aside id="eo_event_list_widget-2" class="widget EO_Event_List_Widget"><h3 class="widget-title">Upcoming Seminars @UCLA</h3><ul  class="eo-events eo-events-widget"><li class="eo-no-events">No Seminars Scheduled</li></ul></aside><aside id="youtubechannelgallery_widget-2" class="widget youtubechannelgallery ytccf"><h3 class="widget-title">ZarLabUCLA YouTube Channel</h3><div class="vmcerror">Error type: "Forbidden". Error message: "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>." Domain: "youtube.quota". Reason: "quotaExceeded". <br><br>Did you added your own Google API key? Look at the <a href="http://poselab.com/en/youtube-channel-gallery-help" target="_blank">help</a>.<br><br>Check in YouTube if the id <a href="https://www.youtube.com/playlist?list=PL119S3xPW6dRVQaEGGHD2izpq2OSo-TYj" target="_blank">PL119S3xPW6dRVQaEGGHD2izpq2OSo-TYj</a> belongs to a playlist. Check the <a href="http://wordpress.org/extend/plugins/youtube-channel-gallery/faq/" target="_blank">FAQ</a> of the plugin or send error messages to <a href="https://wordpress.org/support/plugin/youtube-channel-gallery" target="_blank">support</a>.</div></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/ucla-computational-medicine-faculty-positions/">UCLA Computational Medicine Faculty Positions</a>
+											<span class="post-date">October 11, 2019</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-2019/">Computational Genomics Summer Institute 2019</a>
+											<span class="post-date">February 15, 2019</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/computational-genomics-summer-institute-apply-today/">Computational Genomics Summer Institute &#8211; Apply Today</a>
+											<span class="post-date">March 27, 2018</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/the-multivariate-normal-distribution-framework-for-analyzing-association-studies-overview/">The Multivariate Normal Distribution Framework for Analyzing Association Studies: Overview</a>
+											<span class="post-date">October 30, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/fine-mapping-causal-variants-and-allelic-heterogeneity/">Fine Mapping Causal Variants and Allelic Heterogeneity</a>
+											<span class="post-date">September 5, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/involving-undergraduates-in-genomics-research-to-narrow-the-education-research-gap/">Involving undergraduates in genomics research to narrow the education-research gap</a>
+											<span class="post-date">August 28, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/applying-meta-analysis-to-genotype-tissue-expression-data-from-multiple-tissues-to-identify-eqtls-and-increase-the-number-of-egenes/">Applying meta-analysis to genotype-tissue expression data from multiple tissues to identify eQTLs and increase the number of eGenes</a>
+											<span class="post-date">July 31, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/addressing-the-digital-divide-in-contemporary-biology-lessons-from-teaching-unix/">Addressing the Digital Divide in Contemporary Biology: Lessons from Teaching UNIX</a>
+											<span class="post-date">July 20, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/first-annual-bioinformatics-minor-end-of-year-celebration/">First Annual Bioinformatics Minor End-of-Year Celebration</a>
+											<span class="post-date">June 12, 2017</span>
+									</li>
+											<li>
+					<a href="https://zarlab.cs.ucla.edu/inside-ajhg-a-chat-with-eleazar-eskin/">Inside AJHG: A Chat with Eleazar Eskin</a>
+											<span class="post-date">June 5, 2017</span>
+									</li>
+					</ul>
+
+		</aside><aside id="tag_cloud-2" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="https://zarlab.cs.ucla.edu/tag/bigsummer/" class="tag-cloud-link tag-link-83 tag-link-position-1" style="font-size: 10.333333333333pt;" aria-label="BIGsummer (5 items)">BIGsummer</a>
+<a href="https://zarlab.cs.ucla.edu/tag/bioinformatics-training-philosophy/" class="tag-cloud-link tag-link-166 tag-link-position-2" style="font-size: 13.703703703704pt;" aria-label="bioinformatics training philosophy (10 items)">bioinformatics training philosophy</a>
+<a href="https://zarlab.cs.ucla.edu/tag/buhmhan/" class="tag-cloud-link tag-link-36 tag-link-position-3" style="font-size: 13.185185185185pt;" aria-label="buhmhan (9 items)">buhmhan</a>
+<a href="https://zarlab.cs.ucla.edu/tag/caviar/" class="tag-cloud-link tag-link-110 tag-link-position-4" style="font-size: 11.240740740741pt;" aria-label="CAVIAR (6 items)">CAVIAR</a>
+<a href="https://zarlab.cs.ucla.edu/tag/cgsi/" class="tag-cloud-link tag-link-90 tag-link-position-5" style="font-size: 10.333333333333pt;" aria-label="CGSI (5 items)">CGSI</a>
+<a href="https://zarlab.cs.ucla.edu/tag/coursework/" class="tag-cloud-link tag-link-131 tag-link-position-6" style="font-size: 10.333333333333pt;" aria-label="coursework (5 items)">coursework</a>
+<a href="https://zarlab.cs.ucla.edu/tag/danhe/" class="tag-cloud-link tag-link-37 tag-link-position-7" style="font-size: 8pt;" aria-label="danhe (3 items)">danhe</a>
+<a href="https://zarlab.cs.ucla.edu/tag/datduong/" class="tag-cloud-link tag-link-103 tag-link-position-8" style="font-size: 10.333333333333pt;" aria-label="datduong (5 items)">datduong</a>
+<a href="https://zarlab.cs.ucla.edu/tag/education/" class="tag-cloud-link tag-link-154 tag-link-position-9" style="font-size: 11.888888888889pt;" aria-label="education (7 items)">education</a>
+<a href="https://zarlab.cs.ucla.edu/tag/eleazareskin/" class="tag-cloud-link tag-link-87 tag-link-position-10" style="font-size: 16.814814814815pt;" aria-label="eleazareskin (18 items)">eleazareskin</a>
+<a href="https://zarlab.cs.ucla.edu/tag/emrahkostem/" class="tag-cloud-link tag-link-21 tag-link-position-11" style="font-size: 11.240740740741pt;" aria-label="emrahkostem (6 items)">emrahkostem</a>
+<a href="https://zarlab.cs.ucla.edu/tag/eqtl/" class="tag-cloud-link tag-link-40 tag-link-position-12" style="font-size: 14.222222222222pt;" aria-label="eQTL (11 items)">eQTL</a>
+<a href="https://zarlab.cs.ucla.edu/tag/eranhalperin/" class="tag-cloud-link tag-link-29 tag-link-position-13" style="font-size: 8pt;" aria-label="eranhalperin (3 items)">eranhalperin</a>
+<a href="https://zarlab.cs.ucla.edu/tag/eunyongkang/" class="tag-cloud-link tag-link-45 tag-link-position-14" style="font-size: 13.703703703704pt;" aria-label="eunyongkang (10 items)">eunyongkang</a>
+<a href="https://zarlab.cs.ucla.edu/tag/farhadhormozdiari/" class="tag-cloud-link tag-link-27 tag-link-position-15" style="font-size: 17.333333333333pt;" aria-label="farhadhormozdiari (20 items)">farhadhormozdiari</a>
+<a href="https://zarlab.cs.ucla.edu/tag/graduatetraining/" class="tag-cloud-link tag-link-18 tag-link-position-16" style="font-size: 12.537037037037pt;" aria-label="graduatetraining (8 items)">graduatetraining</a>
+<a href="https://zarlab.cs.ucla.edu/tag/gwas/" class="tag-cloud-link tag-link-82 tag-link-position-17" style="font-size: 17.851851851852pt;" aria-label="GWAS (22 items)">GWAS</a>
+<a href="https://zarlab.cs.ucla.edu/tag/harryyang/" class="tag-cloud-link tag-link-99 tag-link-position-18" style="font-size: 9.2962962962963pt;" aria-label="harryyang (4 items)">harryyang</a>
+<a href="https://zarlab.cs.ucla.edu/tag/hmdp/" class="tag-cloud-link tag-link-20 tag-link-position-19" style="font-size: 10.333333333333pt;" aria-label="hdmp (5 items)">hdmp</a>
+<a href="https://zarlab.cs.ucla.edu/tag/heritability/" class="tag-cloud-link tag-link-33 tag-link-position-20" style="font-size: 8pt;" aria-label="heritability (3 items)">heritability</a>
+<a href="https://zarlab.cs.ucla.edu/tag/jaehoonsul/" class="tag-cloud-link tag-link-31 tag-link-position-21" style="font-size: 13.703703703704pt;" aria-label="jaehoonsul (10 items)">jaehoonsul</a>
+<a href="https://zarlab.cs.ucla.edu/tag/jenniferzou/" class="tag-cloud-link tag-link-104 tag-link-position-22" style="font-size: 8pt;" aria-label="jenniferzou (3 items)">jenniferzou</a>
+<a href="https://zarlab.cs.ucla.edu/tag/joannejoo/" class="tag-cloud-link tag-link-52 tag-link-position-23" style="font-size: 11.888888888889pt;" aria-label="joannejoo (7 items)">joannejoo</a>
+<a href="https://zarlab.cs.ucla.edu/tag/jonathanflint/" class="tag-cloud-link tag-link-88 tag-link-position-24" style="font-size: 8pt;" aria-label="jonathanflint (3 items)">jonathanflint</a>
+<a href="https://zarlab.cs.ucla.edu/tag/metaanalysis/" class="tag-cloud-link tag-link-35 tag-link-position-25" style="font-size: 10.333333333333pt;" aria-label="metaanalysis (5 items)">metaanalysis</a>
+<a href="https://zarlab.cs.ucla.edu/tag/methods/" class="tag-cloud-link tag-link-62 tag-link-position-26" style="font-size: 19.407407407407pt;" aria-label="methods (29 items)">methods</a>
+<a href="https://zarlab.cs.ucla.edu/tag/michaelbilow/" class="tag-cloud-link tag-link-81 tag-link-position-27" style="font-size: 10.333333333333pt;" aria-label="michaelbilow (5 items)">michaelbilow</a>
+<a href="https://zarlab.cs.ucla.edu/tag/mixedmodels/" class="tag-cloud-link tag-link-30 tag-link-position-28" style="font-size: 12.537037037037pt;" aria-label="mixedmodels (8 items)">mixedmodels</a>
+<a href="https://zarlab.cs.ucla.edu/tag/mousegenetics/" class="tag-cloud-link tag-link-16 tag-link-position-29" style="font-size: 11.240740740741pt;" aria-label="mousegenetics (6 items)">mousegenetics</a>
+<a href="https://zarlab.cs.ucla.edu/tag/nickfurlotte/" class="tag-cloud-link tag-link-34 tag-link-position-30" style="font-size: 8pt;" aria-label="nickfurlotte (3 items)">nickfurlotte</a>
+<a href="https://zarlab.cs.ucla.edu/tag/paper/" class="tag-cloud-link tag-link-118 tag-link-position-31" style="font-size: 22pt;" aria-label="paper (47 items)">paper</a>
+<a href="https://zarlab.cs.ucla.edu/tag/philosophy/" class="tag-cloud-link tag-link-156 tag-link-position-32" style="font-size: 9.2962962962963pt;" aria-label="philosophy (4 items)">philosophy</a>
+<a href="https://zarlab.cs.ucla.edu/tag/populationstructure/" class="tag-cloud-link tag-link-137 tag-link-position-33" style="font-size: 13.185185185185pt;" aria-label="populationstructure (9 items)">populationstructure</a>
+<a href="https://zarlab.cs.ucla.edu/tag/research/" class="tag-cloud-link tag-link-64 tag-link-position-34" style="font-size: 17.074074074074pt;" aria-label="research (19 items)">research</a>
+<a href="https://zarlab.cs.ucla.edu/tag/review-article/" class="tag-cloud-link tag-link-168 tag-link-position-35" style="font-size: 10.333333333333pt;" aria-label="review-article (5 items)">review-article</a>
+<a href="https://zarlab.cs.ucla.edu/tag/rna/" class="tag-cloud-link tag-link-96 tag-link-position-36" style="font-size: 11.240740740741pt;" aria-label="RNA (6 items)">RNA</a>
+<a href="https://zarlab.cs.ucla.edu/tag/seminar/" class="tag-cloud-link tag-link-115 tag-link-position-37" style="font-size: 13.185185185185pt;" aria-label="seminar (9 items)">seminar</a>
+<a href="https://zarlab.cs.ucla.edu/tag/sequencing/" class="tag-cloud-link tag-link-19 tag-link-position-38" style="font-size: 12.537037037037pt;" aria-label="sequencing (8 items)">sequencing</a>
+<a href="https://zarlab.cs.ucla.edu/tag/sergheimangul/" class="tag-cloud-link tag-link-85 tag-link-position-39" style="font-size: 15.12962962963pt;" aria-label="sergheimangul (13 items)">sergheimangul</a>
+<a href="https://zarlab.cs.ucla.edu/tag/software/" class="tag-cloud-link tag-link-117 tag-link-position-40" style="font-size: 18.759259259259pt;" aria-label="software (26 items)">software</a>
+<a href="https://zarlab.cs.ucla.edu/tag/thesis-defense/" class="tag-cloud-link tag-link-98 tag-link-position-41" style="font-size: 11.888888888889pt;" aria-label="thesis defense (7 items)">thesis defense</a>
+<a href="https://zarlab.cs.ucla.edu/tag/training/" class="tag-cloud-link tag-link-86 tag-link-position-42" style="font-size: 15.777777777778pt;" aria-label="training (15 items)">training</a>
+<a href="https://zarlab.cs.ucla.edu/tag/videos/" class="tag-cloud-link tag-link-17 tag-link-position-43" style="font-size: 15.777777777778pt;" aria-label="videos (15 items)">videos</a>
+<a href="https://zarlab.cs.ucla.edu/tag/writing/" class="tag-cloud-link tag-link-60 tag-link-position-44" style="font-size: 13.703703703704pt;" aria-label="writing (10 items)">writing</a>
+<a href="https://zarlab.cs.ucla.edu/tag/writingtips/" class="tag-cloud-link tag-link-39 tag-link-position-45" style="font-size: 13.703703703704pt;" aria-label="writingtips (10 items)">writingtips</a></div>
+</aside>
+			</div><!-- #secondary .widget-area -->
+	 
+			</div><!-- #content-sidebar --> 
+            
+		</div><!-- #main -->             
+     
+         
+        
+   	</div><!-- #main-wrapper -->
+           
+         
+    
+	<footer id="colophon" role="contentinfo">
+    
+		
+<div id="footer-sidebar">
+    <div id="supplementary" class="three container">
+                <div id="first" class="widget-area" role="complementary">
+            <aside id="search-5" class="widget widget_search">	<form method="get" class="searchform" action="https://zarlab.cs.ucla.edu/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search …" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside><aside id="widget_adventurous_social_widget-5" class="widget widget_widget_adventurous_social_widget">
+		<ul class="social-profile"><li class="twitter"><a href="https://twitter.com/zarlab" title="Twitter" target="_blank">Twitter</a></li><li class="you-tube"><a href="https://www.youtube.com/channel/UCgKpLJmKBYXafJnqRT4TIjg" title="YouTube" target="_blank">YouTube</a></li>
+		</ul></aside>        </div><!-- #first .widget-area -->
+            
+            
+                <div id="third" class="widget-area" role="complementary">
+            <aside id="text-4" class="widget widget_text">			<div class="textwidget"><a href="http://zarlab.cs.ucla.edu/tag/writingtips/"><img src="http://zarlab.cs.ucla.edu/wp-content/uploads/writingtips.gif"></a></div>
+		</aside>        </div><!-- #third .widget-area -->
+                
+                <div id="fourth" class="widget-area" role="complementary">
+            <aside id="categories-6" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-2"><a href="https://zarlab.cs.ucla.edu/category/education/">Education</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://zarlab.cs.ucla.edu/category/news/">News</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://zarlab.cs.ucla.edu/category/research/">Research</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://zarlab.cs.ucla.edu/category/software/">Software</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://zarlab.cs.ucla.edu/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-55"><a href="https://zarlab.cs.ucla.edu/category/writing/">Writing</a>
+</li>
+			</ul>
+
+			</aside>        </div><!-- #third .widget-area -->
+                
+    </div><!-- #supplementary -->
+</div><!-- #footer-sidebar -->   
+        
+ 		<div id="site-generator"><div class="site-info container"><div class="copyright">Copyright &copy; 2017&nbsp;<a href="http://zarlab.cs.ucla.edu/" title="ZarLab" ><span>ZarLab</span></a>&nbsp;All Rights Reserved.</div><div class="powered">Adventurous Theme by&nbsp;<a href="https://catchthemes.com" target="_blank" title="Catch Themes"><span>Catch Themes</span></a></div></div><!-- .site-info container --></div><!-- #site-generator -->       
+           
+             
+	</footer><!-- #colophon .site-footer -->
+    
+    <a href="#masthead" id="scrollup"></a> 
+    
+</div><!-- #page .hfeed .site -->
+
+<!-- Kcite Plugin Installed: Disabled as there are no shortcodes-->
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/zarlab.cs.ucla.edu\/ucla-computational-medicine-faculty-positions\/":2314,"https:\/\/zarlab.cs.ucla.edu\/computational-genomics-summer-institute-2019\/":2289,"https:\/\/zarlab.cs.ucla.edu\/computational-genomics-summer-institute-apply-today\/":2275};
+	</script>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<div id="fb-root"></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			document.body.addEventListener( 'is.post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+								<script type="text/javascript">
+				( function () {
+					// Pinterest shared resources
+					var s = document.createElement( 'script' );
+					s.type = 'text/javascript';
+					s.async = true;
+					s.setAttribute( 'data-pin-hover', true );					s.src = window.location.protocol + '//assets.pinterest.com/js/pinit.js';
+					var x = document.getElementsByTagName( 'script' )[ 0 ];
+					x.parentNode.insertBefore(s, x);
+					// if 'Pin it' button has 'counts' make container wider
+					function init() {
+						var shares = document.querySelectorAll( 'li.share-pinterest' );
+						for ( var i = 0; i < shares.length; i++ ) {
+							var share = shares[ i ];
+							var countElement = share.querySelector( 'a span' );
+							if (countElement) {
+								var countComputedStyle = window.getComputedStyle(countElement);
+								if ( countComputedStyle.display === 'block' ) {
+									var countWidth = parseInt( countComputedStyle.width, 10 );
+									share.style.marginRight = countWidth + 11 + 'px';
+								}
+							}
+						}
+					}
+
+					if ( document.readyState !== 'complete' ) {
+						document.addEventListener( 'load', init );
+					} else {
+						init();
+					}
+				} )();
+			</script>
+					<script id="tumblr-js" type="text/javascript" src="https://assets.tumblr.com/share-button.js"></script>
+						<script type="text/javascript">
+				( function () {
+					var currentScript = document.currentScript;
+
+					// Helper function to load an external script.
+					function loadScript( url, cb ) {
+						var script = document.createElement( 'script' );
+						var prev = currentScript || document.getElementsByTagName( 'script' )[ 0 ];
+						script.setAttribute( 'async', true );
+						script.setAttribute( 'src', url );
+						prev.parentNode.insertBefore( script, prev );
+						script.addEventListener( 'load', cb );
+					}
+
+					function init() {
+						loadScript( 'https://platform.linkedin.com/in.js?async=true', function () {
+							if ( typeof IN !== 'undefined' ) {
+								IN.init();
+							}
+						} );
+					}
+
+					if ( document.readyState === 'loading' ) {
+						document.addEventListener( 'DOMContentLoaded', init );
+					} else {
+						init();
+					}
+
+					document.body.addEventListener( 'is.post-load', function() {
+						if ( typeof IN !== 'undefined' ) {
+							IN.parse();
+						}
+					} );
+				} )();
+			</script>
+			<link rel='stylesheet' id='academicons-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/teachpress/includes/academicons/css/academicons.min.css?ver=6.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='https://zarlab.cs.ucla.edu/wp-content/plugins/teachpress/includes/fontawesome/css/all.min.css?ver=6.3.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/js/adventurous-custom.min.js?ver=20231101-173305' id='adventurous-custom-js'></script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/themes/adventurous/js/navigation.min.js?ver=20150601' id='adventurous-navigation-js'></script>
+<script defer type='text/javascript' src='https://stats.wp.com/e-202519.js' id='jetpack-stats-js'></script>
+<script id="jetpack-stats-js-after" type="text/javascript">
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'45949317',post:'0',tz:'-7',srv:'zarlab.cs.ucla.edu',j:'1:12.7.2'} ]);
+_stq.push([ "clickTrackerInit", "45949317", "0" ]);
+</script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/plugins/jetpack/_inc/build/likes/queuehandler.min.js?ver=12.7.2' id='jetpack_likes_queuehandler-js'></script>
+<script type='text/javascript' id='sharing-js-js-extra'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://zarlab.cs.ucla.edu/wp-content/plugins/jetpack/_inc/build/sharedaddy/sharing.min.js?ver=12.7.2' id='sharing-js-js'></script>
+<script id="sharing-js-js-after" type="text/javascript">
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+</script>
+	<iframe src='https://widgets.wp.com/likes/master.html?ver=202519#ver=202519' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	
+</body>
+</html>
+<!-- Dynamic page generated in 0.328 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2025-05-05 17:12:56 -->
+
+<!-- super cache -->

@@ -1,0 +1,136 @@
+	<html>
+<head>
+<style>
+#circuit1 {
+background-image: url("circuit.png");
+background-repeat: no-repeat;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+.container{position:relative;}
+.container video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+z-index:0;
+}
+.overlay {
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+}
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+</style>
+<LINK REL="SHORTCUT ICON" HREF="http://www.cs.ucla.edu/~reinman/gr2.ico">
+<script language="JavaScript">
+<!--
+if (document.images) {
+  image0on = new Image();
+  image0on.src="images/currenton.jpg";
+  image0off = new Image();
+  image0off.src="images/currentoff.jpg";
+  image1on = new Image();
+  image1on.src="images/linkson.bmp";
+  image1off = new Image();
+  image1off.src="images/linksoff.bmp";
+  image2on = new Image();
+  image2on.src="cdscon.png";
+  image2off = new Image();
+  image2off.src="cdscoff.png";
+  image3on = new Image();
+  image3on.src="pubon.png";
+  image3off = new Image();
+  image3off.src="puboff.png";
+  image4on = new Image();
+  image4on.src="emailon.png";
+  image4off = new Image();
+  image4off.src="emailoff.png";
+  image5on = new Image();
+  image5on.src="researchon.png";
+  image5off = new Image();
+  image5off.src="researchoff.png";
+  image6on = new Image();
+  image6on.src="images/nameplate3_rune.jpg";
+  image6off = new Image();
+  image6off.src="images/nameplate4.jpg";
+  image7on = new Image();
+  image7on.src="images/newheadshotgp.jpg";
+  image7off = new Image();
+  image7off.src="images/newheadshot.jpg";
+  image8on = new Image();
+  image8on.src="cvon.png";
+  image8off = new Image();
+  image8off.src="cvoff.png";
+  image9on = new Image();
+  image9on.src="images/cfar_on.png";
+  image9off = new Image();
+  image9off.src="images/cfar_off.png";
+}
+
+function changeImages() {
+  if (document.images) {
+    for (var i=0; i<changeImages.arguments.length; i+=2) {
+      document[changeImages.arguments[i]].src = eval(changeImages.arguments[i+1] + ".src");
+    }
+  }
+}
+// -->
+// &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="pubnew.html" onMouseOver="changeImages('image3', 'image3on')" onMouseOut="changeImages('image3', 'image3off')"><img name="image3" src="puboff.jpg" alt="" border="0"></a>
+// <a href="studentsnew.html" onMouseOver="changeImages('image0', 'image0on')" onMouseOut="changeImages('image0', 'image0off')"><img name="image0" src="images/currentoff.jpg" alt="" border="0"></a>
+
+</script>
+</head>
+
+<BODY 
+	BACKGROUND=""	
+	BGCOLOR="000000" 
+	TEXT="FFFFFF" 
+        LINK="3288EE" 
+        VLINK="3288EE" 
+        ALINK="00882F">
+ <Title>Glenn Reinman</Title>
+
+<center>
+</center>
+<div class="container">
+<img src="circuit.png" width=850</img>
+<div class="overlay">
+<table>
+<tr><th>
+<p><img SRC="nameplate4.png"></p>
+</th>
+<tr><th>   
+<a href="mars/CV.pdf" target="_top" onMouseOver="changeImages('image8', 'image8on')" onMouseOut="changeImages('image8', 'image8off')"><img name="image8" src="cvoff.png" height=50 alt="" border="0"></a><br><br>
+</th>
+<tr><th>   
+<a href="mars/mars.htm" target="_top" onMouseOver="changeImages('image5', 'image5on')" onMouseOut="changeImages('image5', 'image5off')"><img name="image5" src="researchoff.png" height=50 alt="" border="0"></a><br><br>
+</th>
+<tr><th>
+<img src="address2.png" height=100 border="0">
+</th>
+<tr><th>
+<a href="mailto:reinman@cs.ucla.edu" onMouseOver="changeImages('image4', 'image4on')" onMouseOut="changeImages('image4', 'image4off')"><img name="image4" SRC="emailoff.png" height=30 alt="" border="0"></a>
+</th></table>
+</body>
+</div>
+</div>
+</html>
+
+

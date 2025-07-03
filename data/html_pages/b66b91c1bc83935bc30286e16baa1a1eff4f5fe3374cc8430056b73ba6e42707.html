@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="The policy for minimum software versions at Stanford is N-2, which is the current version plus the two most recently supported versions available. N-3 versions will be sunset four months later (rounded to the end of the month). At times, a particular service may have different needs and risks. In these instances, the service owner is empowered to establish a more stringent policy to ensure that the software used in their service is up-to-date and secure." />
+<link rel="canonical" href="https://uit.stanford.edu/guide/sunset-schedule" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Service and Software Sunset Schedule | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_M5qLXIWvM6sBVaqIJY1k5JHdttWdwSOyAzVrhd0zwLQ.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_O2uKCmXQWdlOa3s2WWVBP7HXMuGOET-oTGioTfORQ9w.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xKroXt1_E9JqHuY-bQMoAn2rt14MHBu295U_c41vhNk.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNz-GKwzAIB_AXapsPe6BgEtdzJBrUrNvbX9kdHGs52BdBfn8VwQw9Et8wu2jIZktXYp_gDEaOcaOC_yG1rnLHeKUH2pRE3FyhxwSqJGGtkqDO5s9KvJ69oRmsaHH72pednWU_nUUxZGldGNltOabmOSlCyTpa-iDckMdPrOjoUBe4wWMyB76KljjIw99QLvxOh4_ezGRoxmjAFi8H-m3mvZnsaY4tJDCc7oSbhVddmpRR8RuYKaSd" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/26942","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJyNkOGKxCAMhF_I1h8H9zoSNXXtVVOSdLv79ivHwmLbg_sTnPmGIQZEUF2uMwYltkFkXDlXNXAGkhXdniP-BXNZme7opvxAOYbmq4wnUlGG1XlgzmQnqgo7ChV032ecFvKwDKLPJdd05s39uWgtKAIJxe23tsKZV4oXrtDGAZ1AFfdlAjHaQGWlilVlPMaHwTNCDLwV_49wwbqZRJQWdArJpjaOeoQZHr1ZjCjUiTi6Lav99IZYe9RfskOHK3as_3SP3mJowshTFIv1IGiadoLA4WY_z7fL99zqYEFWsWfLzWLuGXexv3MsFLcFX35WBls","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-one-sidebar layout-sidebar-second page-node-26942 path-guide-sunset-schedule path-node node--type-service-information">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          </header>
+    <main class="page-content" id="page-content">
+            <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                    <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+              
+                  <div id="block-stanford-uit-breadcrumbs" region="breadcrumb" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+  <nav role="navigation" aria-label="breadcrumb" style="">
+  <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+        </ol>
+</nav>
+
+
+    </div>
+  </div>
+
+
+                                    <div class="content-top">
+                        <div id="block-stanford-uit-page-title" region="content_top" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+  <h1 class="title"><span class="field field--name-title field--type-string field--label-hidden">Service and Software Sunset Schedule</span>
+</h1>
+
+
+    </div>
+  </div>
+
+
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article class="node node--type-service-information node--view-mode-full clearfix">
+  <header>
+    
+        
+      </header>
+  <div class="node__content clearfix">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The policy for <strong>minimum software versions</strong> at Stanford is <strong>N-2, which is the current version plus the two most recently supported versions available</strong>. N-3 versions will be sunset four months later (rounded to the end of the month). At times, a particular service may have different needs and risks. In these instances, the service owner is empowered to establish a more stringent policy to ensure that the software used in their service is up-to-date and secure.</p><p>Below is a sunset schedule for prominent University IT services and other widely used software at Stanford.</p><table class="table table-striped"><thead><tr><th style="width:20%;" scope="col">Service / Software</th><th style="width:20%;" scope="col">Sunset Date</th><th style="width:60%;" scope="col">Notes</th></tr></thead><tbody><tr><td>Windows 10</td><td>September 15, 2025</td><td>Microsoft will no longer provide security updates for Windows 10 after October 14, 2025.&nbsp;<a href="https://mydevices.stanford.edu">MyDevices</a>&nbsp;will begin marking Windows 10 devices as non-compliant on Sept. 15th, 2025 to ensure that these devices have been upgraded by the Microsoft deadline. See this page on upgrade options <a href="https://uit.stanford.edu/service/helpdesk/windows">Windows at Stanford</a></td></tr><tr><td>Android prior to 13</td><td>April 1, 2025</td><td>Android 15 was released on October 15, 2024. We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.</td></tr><tr><td>macOS 12 (Monterey)</td><td>Feb 3, 2025</td><td>macOS 12 (Monterey) will be sunset.&nbsp;<a href="https://mydevices.stanford.edu">MyDevices</a>&nbsp;will begin marking&nbsp;macOS 12 (Monterey) devices as non-compliant on Feb 3, 2025 and will be no longer able to connect to the network at March 6th, 2025.</td></tr><tr><td>iOS prior to 16.0</td><td>Feb 3, 2025</td><td>iOS below version 16 will be sunset.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.&nbsp;</td></tr><tr><td>Cisco AnyConnect VPN</td><td>March 31, 2024</td><td>On March 31, 2024, Cisco will end software and security updates and support for its AnyConnect client. Cisco has replaced its AnyConnect client with its Secure Client. Starting March 14, 2024, client software upgrade is available by <a href="https://uit.stanford.edu/service/vpn">manual download</a> and will be offered to those with the app when they connect to the Stanford Public VPN.</td></tr><tr><td>WebAFS</td><td>Early 2024</td><td>WebAFS, a web-based interface that allows file access to Andrew File Storage (AFS), is sunsetting on Jan. 7, 2024. The AFS platform itself is not affected and continues to be fully supported by University IT. While WebAFS will no longer be available, other alternatives will continue to be made available, such as 1) <a href="https://web.stanford.edu/group/webafs-filedrawers/">SecureFTP client</a>&nbsp;or 2) <a href="https://uit.stanford.edu/service/afs/installing-openafs-auristor">installing the AFS client</a> on your system.</td></tr><tr><td>SWDE &amp; Device Enrollment</td><td>Early 2024</td><td>SWDE and Device Enrollment will be discontinued by early 2024, making way for our new and improved replacement service, <a href="https://uit.stanford.edu/service/registration">Stanford Device Registration (SDR)</a>.</td></tr><tr><td>macOS 11 (Big Sur)</td><td>Feb 1, 2024</td><td>macOS 11 (Big Sur) will be sunset.&nbsp;&nbsp;Continuing forward when new macOS versions are released, n-3 versions will be sunset 4 months later (rounded to the end of the month).</td></tr><tr><td>iOS prior to 15.0</td><td>Feb 1, 2024</td><td>iOS 17 was released in Sept. 2023.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.&nbsp; Continuing forward when new macOS versions are released, n-3 versions will be sunset 4 months later (rounded to the end of the month).</td></tr><tr><td>Certain</td><td>Oct. 25, 2023</td><td>Stanford’s use of Certain will end when its contract expires Oct. 25, 2023. UIT is replacing Certain with a more flexible and comprehensive events management platform—Cvent. Please refer to <a href="https://uit.stanford.edu/news/cvent-preparing-launch-stanford">this article</a> and the <a href="https://uit.stanford.edu/service/cvent">Cvent service page</a> for more information.</td></tr><tr><td>TLS 1.0/1.1 support for Duo HTTP API</td><td>June 30, 2023</td><td>After June 30, 2023, TLS 1.0 and 1.1 connection requests to Duo will not receive a response, resulting in blocked multi-factor authentication. See <a href="https://help.duo.com/s/article/7546?language=en_US">this article</a> for details.</td></tr><tr><td>iOS prior to 14.0</td><td>May 1, 2023</td><td>iOS 16 was released in June 2022.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on. Moving forward when new macOS versions are released, n-3 versions will be sunset 4 months later (rounded to the end of the month).</td></tr><tr><td>macOS 10.15 (Catalina)</td><td>May 1, 2023</td><td>macOS 10.15 (Catalina) will be sunset.&nbsp;&nbsp;Moving forward when new macOS versions are released, n-3 versions will be sunset 4 months later (rounded to the end of the month).</td></tr><tr><td>Stanford University Box</td><td>February 28, 2023</td><td>UIT has <a href="https://uit.stanford.edu/news/stanford-university-box-retire-february-2023">retired the Stanford Box service</a> after taking will steps to significantly reduce the usage of Stanford University Box over a three-year period.&nbsp; Importantly, this transition only applies to Stanford University Box, not Medicine Box. See the "<a href="https://uit.stanford.edu/news/three-year-plan-reduce-use-stanford-box">Three-Year Plan to Reduce Use of Stanford Box</a>" article.</td></tr><tr><td>Windows 8.1</td><td>January 10, 2023</td><td>End of extended support by Microsoft.</td></tr><tr><td>Privileged Admin Workstation (PAW) SecOps VPN</td><td>Aug 1, 2022</td><td>Discontinuing PAW VPN. Ring 1 PAWs to transition to <a href="https://uit.stanford.edu/service/cardinalprotect">Cardinal Protect</a> and Ring 0 PAWs to Global Protect</td></tr><tr><td>macOS 10.14 (Mojave)</td><td>May 1, 2022</td><td>macOS 12.0 (Monterey) was released in October 2021.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.&nbsp; On this date, macOS 10.14 (Mojave) will be sunsetted.</td></tr><tr><td>Carbon Black Application Control (Bit9)</td><td>April 30, 2022</td><td>Discontinuing Carbon Black Application Control (Bit9) subscription.&nbsp; Will be replaced with CrowdStrike (see new <a href="https://uit.stanford.edu/service/edr">Advanced Endpoint Protection service page</a>).</td></tr><tr><td>iOS prior to 13.0</td><td>December 1, 2021</td><td>iOS 15 was released in September 2021.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.</td></tr><tr><td>Cisco AnyConnect</td><td>July 15, 2021</td><td>TLS 1.0/1.1 support on the VPN will terminate for security reasons affecting all Cisco AnyConnect clients using below version 4.7. We recommend upgrading to the latest version available on the VPN service page:&nbsp;<a href="https://uit.stanford.edu/service/vpn">https://uit.stanford.edu/service/vpn</a></td></tr><tr><td>Stanford Secure SSID</td><td>March 22, 2021</td><td>University IT is consolidating wireless networks to simplify the user experience.&nbsp; The original encrypted wireless network (“Stanford Secure”) will be replaced by eduroam.&nbsp; Cardinal Key is now supported for eduroam access (must use a Cardinal Key issued after Jan 1, 2021). For more information, see the "<a href="https://uit.stanford.edu/news/make-switch-eduroam-replaces-stanford-secure-wireless-network">Make the Switch: eduroam Replaces "Stanford Secure" Wireless Network</a>" article.</td></tr><tr><td>Android prior to 10</td><td>January 10, 2023</td><td>Android 12 was released on October 4, 2021. We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.</td></tr><tr><td>macOS prior to 10.14 (Mojave)</td><td>March 1, 2021</td><td>macOS 11.0 (Big Sur) was released in November 2020.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.</td></tr><tr><td>ESET Anti-malware for Mac OS</td><td>December 5, 2020</td><td>Discontinuing Stanford's ESET subscription.&nbsp; Will be replaced with CrowdStrike (see new <a href="https://uit.stanford.edu/service/edr">Advanced Endpoint Protection service page</a>).</td></tr><tr><td>iOS prior to 12.0</td><td>September 1, 2020</td><td>iOS 14 was released in September 2020.&nbsp; In order to support the industry-imposed deadline to support two-step authentication for email access, clients must use iOS 12 or later. &nbsp;For more information, see the "<a href="https://uit.stanford.edu/news/surge-phishing-attacks-addressing-threat">Surge in Phishing</a>" article published in December 2019</td></tr><tr><td>Form Builder</td><td>July 30, 2020</td><td>UIT will replace Form Builder with a more modern, secure, and easily-managed web forms service. Please refer to the <a href="https://uit.stanford.edu/program/content-management">Web Content Management Program</a> website for more information</td></tr><tr><td>iOS prior to 11.0</td><td>March 1, 2020</td><td>iOS 13 was released in September 2019.&nbsp; We are adhering to a practice of supporting the current and previous two major versions of operating systems in order to ensure they remain actively patched and have the modern capabilities that we rely on.</td></tr><tr><td>Windows 7</td><td>January 16, 2020</td><td>Microsoft will no longer provide security updates for Windows 7 after January 14, 2020. <a href="https://mydevices.stanford.edu">MyDevices</a> will begin marking Windows 7 devices as non-compliant on December 17, 2019 to ensure that these devices have been upgraded by the Microsoft deadline. To facilitate upgrades, Windows 10 has a&nbsp;<a href="https://support.microsoft.com/en-us/help/15078/windows-make-older-programs-compatible">built-in mechanism</a>&nbsp;for running applications that were designed for previous versions of Windows.</td></tr><tr><td>Windows Server 2008</td><td>January 14, 2020</td><td>End of extended support by Microsoft.</td></tr><tr><td>BlueJeans</td><td>August 31, 2019</td><td>UIT will retire the BlueJeans service at the end of the academic year and encourages the use of <a href="https://uit.stanford.edu/service/zoom">Zoom</a>, the <a href="https://collabtools.stanford.edu">recommended video collaboration platform</a> at Stanford.</td></tr><tr><td>Remedy</td><td>August 1, 2019</td><td>Remedy has been decommissioned as part of the&nbsp;<a href="https://uit.stanford.edu/service-management/servicenow">ServiceNow </a>rollout. Please refer to the <a href="https://us7.campaign-archive.com/?u=8285346764b0c44c5b40176a8&amp;id=74ea633625">Service Management Newsletter Issue #18</a> for more information.</td></tr><tr><td>SCEP Anti-malware for macOS</td><td>January 1, 2019</td><td>SCEP no longer provides anti-malware updates for Mac computers. For Macs running OS X 10.9 and later, ESET replaces Microsoft’s System Center Endpoint Protection (SCEP) anti-malware solution. For additional information see the&nbsp;<a href="https://uit.stanford.edu/news/install-new-anti-virus-application-your-mac-month">UIT news article</a>.</td></tr></tbody></table></div>
+      
+
+
+  </div>
+</article>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockupdated-date-block" id="block-views-block-updated-date-block" region="content">
+  
+    
+      <div class="content">
+      <div region="content"><div class="view view-updated-date view-id-updated_date view-display-id-block js-view-dom-id-e02ca69ec8ea753f5e64eac79262ea50770d51d392591e34b88cc30fe6604c43">
+  
+    
+      
+      <div class="view-content row">
+          <div class="views-row">
+    <div class="views-field views-field-field-modified-date"><div class="field-content">Last modified <time datetime="2025-04-14T14:05:25-07:00" class="datetime">April 14, 2025</time>
+ </div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                        <div class="sidebar col-12 col-lg-4 col-md-5">
+                      <aside class="section" role="complementary">
+                          <section class="ps-md-4 region region-sidebar-second">
+    <div class="views-element-container block block-views block-views-blockservice-information-support-and-faq-links-block" id="block-views-block-service-information-support-and-faq-links-block" region="sidebar_second">
+  
+      <h2>Help</h2>
+    
+      <div class="content">
+      <div region="sidebar_second"><div class="view view-service-information-support-and-faq-links view-id-service_information_support_and_faq_links view-display-id-block js-view-dom-id-26817f182d20720a204cd940872712cfcc0ee90dc2a0b05108790827c18e1af3">
+  
+    
+      <div class="view-header">
+      <i class="fa fa-question-circle fa-4x pull-left"></i>
+    </div>
+      
+      <div class="view-content row">
+          <div class="views-row">
+    <div class="views-field views-field-field-service-support-links"><div class="field-content"><div class="item-list"><ul class="list-group"><li class="list-group-item"><a href="https://stanford.service-now.com/services?id=get_help&amp;cmdb_ci=09d16ae013a38200d11dbda12244b06d">Submit a Help Ticket</a></li></ul></div></div></div><div class="views-field views-field-field-service-faq-links"><div class="field-content"><div class="item-list"><ul class="list-group"><li class="list-group-item"><a href="https://stanford.service-now.com/it_services?id=kb_home">Browse IT Knowledge Base</a></li></ul></div></div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+                      </aside>
+                    </div>
+                                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                    </main>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/guide/sunset-schedule" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

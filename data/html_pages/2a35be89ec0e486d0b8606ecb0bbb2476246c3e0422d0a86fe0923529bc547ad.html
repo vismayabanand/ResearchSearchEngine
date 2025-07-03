@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS 147 2024</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <script src="style.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        id="navigation"
+        class="navbar navbar-dark fixed-top navbar-expand-md"
+      >
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active-tab">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="calendar.html" class="nav-link">Calendar</a>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="logistics.html" class="nav-link">Logistics</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link" style="padding-bottom: 2px">Resources</a>
+                  <div class="dropdown-content">
+                    <a href="currentVideos.html">2024 Videos</a>
+                    <a href="videos.html">Past Videos</a>
+                    <a href="webresources.html">React/Design</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container" style="padding-top: 130px; padding-bottom: 100px">
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <div class="title">
+            CS 147: Introduction to Human-Computer Interaction
+          </div>
+          <div class="subtitle">Autumn 2024</div>
+          <div class="body" id="course-description">
+            Introduces fundamental methods and principles for designing,
+            implementing, and evaluating user interfaces. Topics: user-centered
+            design, rapid prototyping, experimentation, direct manipulation,
+            cognitive principles, visual design, social software, software
+            tools. Learn by doing: work with a team on a quarter-long design
+            project, supported by lectures, readings, and studios. Prerequisite:
+            106B or X or equivalent programming experience. Recommended that CS
+            Majors have also taken one of 142, 193P, or 193A, or are currently
+            taking 147L.
+          </div>
+        </div>
+        <div class="col-6 col-md-5">
+          <img
+            src="img/expo/expo_1.jpg"
+            alt="Image of a previous year's expo"
+            width="100%"
+          />
+        </div>
+      </div>
+      <div class="section-head">Student Quick Actions</div>
+      <div class="row">
+        <!--<div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 7: Heuristic Evaluation (Individual)<br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Due at the start of your Thur/Fri studio (Nov 10-11)<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_07_Heuristic_Evaluation_Individual.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">Resources for Mobile Development</div>
+            <div class="body">
+              <a href="https://web.stanford.edu/class/cs47/#schedule"
+                >CS47 lectures and assignments</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+            <div class="card-content">
+                <div class="card-title">Assignment 1<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">Due at the start of your Thur/Fri studio (Oct. 3-4)<br></p></div>
+                <div class="body"><a href="assignments/Assignment_01_Needfinding.pdf" target="_blank">Assignment Link</a></div>
+            </div>
+        </div> -->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 5: Low-fi Prototype and Test <br /><p style="font-size: 18px; font-style: italic; font-weight: normal">Checkpoint: Tue, Oct 22 @ 5 PM <br> <br> Due at the start of your Thur/Fri studio (Oct. 24-25)<br/> </p>
+            </div>
+            <div class="body">
+              <a href="assignments/Assignment_05_Low-fi_Prototyping_and_Pilot_Usability_Testing.pdf" target="_blank">Assignment Link</a>
+            </div>
+          </div>
+        </div> -->
+        <!--     
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 4: Video<br /><p style="font-size: 18px; font-style: italic; font-weight: normal">Due at the start of your Thur/Fri studio (Oct. 17-18)<br /></p>
+            </div>
+            <div class="body">
+              <a href="assignments/Assignment_04_Concept_Video.pdf" target="_blank">Assignment Link</a>
+            </div>
+          </div>
+        </div>-->
+        <!-- <div class="col-6 col-md-4 middle-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 6: A6 Medium-fi Prototype<br />
+              <p style="font-size: 18px; font-style: italic; font-weight: normal">
+                Checkpoint due Oct 31-Nov 1<br />Due Monday, Nov 4 @ 5 PM<br />
+              </p>
+            </div>
+            <div class="body">
+              <a href="assignments/Assignment_06_Interactive_Medium-Fi_Prototype.pdf" target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 7: Individual Heuristic Evaluation <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Due by Studio Nov 7-8th<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_07_Heuristic_Evaluation_Individual.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 9: Group Heuristic Evaluation <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Due Friday, Nov 8 @ 11:59 PM<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_09_Summary_of_Heuristic_Evaluation_of_Prototypes_Group.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!--<div class="col-6 col-md-4 middle-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 3: Website<br />
+              <p style="font-size: 18px; font-style: italic; font-weight: normal">
+                Checkpoint due Oct 31-Nov 1<br />Due Wed, Nov 20th @ 11:59 PM<br /><br />
+              </p>
+            </div>
+            <div class="body">
+              <a href="assignments/Assignment_03_Website" target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div> -->
+
+        <!--
+        <div class="col-6 col-md-4 left-card">
+            <div class="card-content">
+                <div class="card-title">Team Name Form<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">Due Mon, Oct 14th 11:59 PM<br></p></div>
+                <div class="body"><a href="https://docs.google.com/forms/d/e/1FAIpQLSczmhdCelEHp_hmxU1rLKQda5kkVcADJS8DAgTg4LSMQLZiBA/viewform" target="_blank">Team Name Form</a></div>
+            </div>
+        </div>-->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+              <div class="card-title">Midterm Tips<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">Midterm is Wed, Nov 13<br></p></div>
+              <div class="body"><a href="assignments/24au_147_Midterm_Tips.pdf" target="_blank">Midterm Tips PDF</a></div>
+          </div>
+      </div> -->
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Project Expo <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Friday, Dec. 8 <br />
+                <a href="lectures/19-project-expo.pdf" target="_blank"
+                  >Slides</a
+                >
+              </p>
+            </div>
+            <div class="body">
+              <a href="lectures/19-project-expo-award-winners.pdf" target="_blank"
+                >See this year's winners!</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 10: Poster, Pitch, Demo Video <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Draft due Dec 2 <br />
+                Final due Dec 4, 12pm Noon <br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_10_Poster_Pitch.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div>  -->
+        <!-- <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 8: Interactive Hi-fi Prototype<br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Midway due by studio week 9<br />
+                Video demo due by Wed, Dec 4<br />
+                Complete due by studio week 10<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_08_Interactive_High-fi_Prototype_Group.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Assignment 11: Final Report <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Writeup due Sun, Dec 8<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="assignments/Assignment_11_Final_Report.pdf"
+                target="_blank"
+                >Assignment Link</a
+              >
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Midterm Details<br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                What is going to be on the midterm?<br />
+              </p>
+            </div>
+            <div class="body">
+              <a href="logistics.html#midterm" target="_blank">Midterm Link</a>
+            </div>
+          </div>
+        </div>-->
+        <!--<div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              CS147L Resources for React Native<br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                View Past Lectures<br />
+              </p>
+            </div>
+            <div class="body">
+              <a
+                href="https://hci.cs.stanford.edu/courses/cs147l/2023/au/"
+                target="_blank"
+                >CS147L Website Link</a
+              >
+            </div>
+          </div>
+        </div>-->
+        <!--<div class="col-6 col-md-4 left-card">
+                    <div class="card-content">
+                        <div class="card-title">Studio Preferences Survey<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">Due Wed., Sep. 25 at 5PM<br></p></div>
+                        <div class="body">
+                            <a href="https://bit.ly/cs147-24au-studio" target="_blank">Survey</a>
+                        </div>
+                    </div>
+        </div> -->
+        <!-- <div class="col-6 col-md-4 left-card">
+            <div class="card-content">
+                <div class="card-title">Schedule Conflict Concerns<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">If you have a known conflict<br></p></div>
+                <div class="body"><a href="https://bit.ly/cs147-24au-conflicts" target="_blank">Conflict Survey</a></div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Review Grading Policy<br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                Review the grading policy to understand course expectations<br />
+              </p>
+            </div>
+            <div class="body">
+              <a href="logistics.html#grading" target="_blank"
+                >Assignment Grading</a
+              >
+            </div>
+          </div>
+        </div> -->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">Review Syllabus & Schedule<br /></div>
+            <div class="body">
+              <a href="logistics.html" target="_blank">Syllabus</a>,
+              <a href="timeline.pdf" target="_blank">Course Timeline</a>,
+              <a href="assignments.pdf" target="_blank">Assignments Overview</a>
+            </div>
+          </div>
+        </div>-->
+        <!--
+        <div class="col-6 col-md-4 left-card">
+                    <div class="card-content">
+                        <div class="card-title">Team Mixer<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">Gates 403, Tue Sep 24, 6.00 PM - 7.30 PM<br></p></div>
+                        <div class="body">Looking for a team? We will be hosting a mixer for you to find potential teammates. There'll be pizza!</div>
+                    </div>
+        </div> -->
+        <!--<div class="col-6 col-md-4 right-card">
+          <div class="card-content">
+              <div class="card-title">Schedule Conflict Concerns<br><p style="font-size: 18px;font-style: italic; font-weight: normal;">If you have a known conflict<br></p></div>
+              <div class="body"><a href="https://bit.ly/cs147-24au-conflicts" target="_blank">Conflict Survey</a></div>
+          </div>
+      </div>-->
+      </div>
+
+      <div class="section-head">Design Workshops</div>
+      <div class="row">
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Prototyping with AI Workshop <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                <a
+                  href="workshop/prototyping-and-ai-workshop.mp4"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Zoom Recording</a
+                >
+                <br />
+                <a
+                  href="workshop/Prototyping with AI.pdf"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Workshop slides</a
+                >
+              </p>
+            </div>
+            <div class="body">
+              <span style="font-weight: bold"
+                >Wed, 11/6, 6:30pm, Gates 403 </span
+              ><br />
+              Prompting 101, LLMs for React Native Development, Coding Tutorials
+              (3 worked examples), Safety & Ethics
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Figma Basics <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                <a
+                  href="workshop/2024-Figma-Workshop.mp4"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Figma Zoom Recording</a
+                >
+                <br />
+                <a
+                  href="workshop/Shortcuts.png"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Figma Shortcuts Sheet</a
+                >
+                <br />
+                <a
+                  href="workshop/Plug-ins.png"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Figma Plug-Ins Sheet</a
+                >
+              </p>
+            </div>
+            <div class="body">
+              Learn how to use auto-layout and basic prototyping techniques to
+              build any interface. For beginners.
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Design Systems <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                <a
+                  href="https://hci.stanford.edu/courses/cs147/2022/wi/workshop/Workshop 2_Design Systems.mp4"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                  >Past Recording</a
+                >
+              </p>
+            </div>
+            <div class="body">
+              Learn how to create a design system, from colors to components.
+              For beginner and intermediate levels. <br />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 left-card">
+          <div class="card-content">
+            <div class="card-title">
+              Accessible Design <br />
+              <p
+                style="font-size: 18px; font-style: italic; font-weight: normal"
+              >
+                <a
+                  href="https://hci.stanford.edu/courses/cs147/2022/wi/workshop/Workshop%203_Accessibility.mp4"
+                  style="
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: normal;
+                  "
+                >
+                  Past Recording</a
+                >
+              </p>
+            </div>
+            <div class="body">
+              Beyond an inclusive design process, how can we concretely build
+              accessibly? For all levels. <br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head">Course Components</div>
+      <div class="row">
+        <div class="col-6 col-md-4 left-card">
+          <img
+            src="img/design.png"
+            alt="Image of 2 people brainstorming with post-it notes"
+            width="100%"
+          />
+          <div class="card-content">
+            <div class="card-title">Design</div>
+            <div class="body">
+              The dt+UX course focuses on bringing design thinking, processes,
+              and tools to user experience design. From sketching to hands-on
+              studio sessions, students in the dt+UX course learn the importance
+              of making many design artifacts before narrowing down the space to
+              focus on a final design.
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 middle-card">
+          <img
+            src="img/prototype.png"
+            alt="Screenshots of low-fi prototype"
+            width="100%"
+          />
+          <div class="card-content">
+            <div class="card-title">Prototype</div>
+            <div class="body">
+              Prototyping is the key tool to move ideas out of a designer's head
+              and put them into a tangible form to evalaute for inclusion in the
+              next design iteration. Students in the dt+UX course produce
+              protoypes that range from paper sketches to concept videos to
+              wireframes to code running on the target platform.
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 right-card">
+          <img
+            src="img/evaluate.png"
+            alt="Image of students testing a paper prototype"
+            width="100%"
+          />
+          <div class="card-content">
+            <div class="card-title">Evaluate</div>
+            <div class="body">
+              Evaluation is how we choose whether a design or feature moves
+              forward in our process or needs to be discarded or revised.
+              Students in the dt+UX course learn and use evaluation techniques
+              that run the gamut from critique to expert evaluation to usability
+              testing in the lab or field to remote usability testing.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

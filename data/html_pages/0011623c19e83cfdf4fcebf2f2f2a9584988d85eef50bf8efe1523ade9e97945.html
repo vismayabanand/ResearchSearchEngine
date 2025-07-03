@@ -1,0 +1,716 @@
+<!doctype html>
+<html>
+<head>
+<title>Physiqual</title>
+<link rel="stylesheet" href="./physiqual.css">
+<link rel="stylesheet" href="./mdl/material.min.css">
+<link rel="stylesheet" href="./jqueryui/jquery-ui.min.css">
+<script src="./mdl/material.min.js"></script>
+<script src="./jquery-3.0.0.min.js"></script>
+<script src="./jqueryui/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" src="./Browser-Ponies/basecfg.js" id="browser-ponies-config"></script><script type="text/javascript" src="./Browser-Ponies/browserponies.js" id="browser-ponies-script"></script>
+<script>
+    $(function() {
+        $( "#accordion" ).accordion({collapsible: true, active: false});
+        $( "#accordion2" ).accordion({heightStyle: "content", collapsible: true, active: false});
+        $( "#accordion3" ).accordion({heightStyle: "content", collapsible: true, active: false});
+
+        if (location.search==="?puppies"){
+            var script3 = document.createElement("script");
+            script3.type = "text/javascript";
+            script3.innerHTML = "/* <![CDATA[ */ (function (cfg) {BrowserPonies.setBaseUrl(cfg.baseurl);BrowserPonies.loadConfig(BrowserPoniesBaseConfig);BrowserPonies.loadConfig(cfg);})({\"baseurl\":\"http://physbam.stanford.edu/physiqual/Browser-Ponies/\",\"fadeDuration\":500,\"volume\":1,\"fps\":25,\"speed\":3,\"audioEnabled\":true,\"showFps\":false,\"showLoadProgress\":false,\"speakProbability\":0.2,\"spawn\":{\"applejack\":1,\"fluttershy\":1,\"pinkie pie\":1,\"rainbow dash\":1,\"rarity\":1,\"twilight sparkle\":1},\"autostart\":true}); /* ]]> */";
+            document.body.appendChild(script3);
+
+        }
+    });
+</script>
+</head>
+<body>
+
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+    <span class="mdl-layout__title">Physiqual</span>
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="#info">Information</a>
+        <a class="mdl-navigation__link" href="#tracks">Tracks</a>
+        <a class="mdl-navigation__link" href="#areas">Sections</a>
+        <a class="mdl-navigation__link" href="#contact">Contacts</a>
+    </nav>
+    </div>
+    </header>
+    <div class="mdl-layout__drawer">
+    <span class="mdl-layout__title">Navigation</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#info">Information</a>
+        <a class="mdl-navigation__link" href="#tracks">Tracks</a>
+        <a class="mdl-navigation__link" href="#areas">Sections</a>
+        <a class="mdl-navigation__link" href="#contact">Contacts</a>
+    </nav>
+    </div>
+
+    <main class="mdl-layout__content">
+        <div class="mdl-grid" id="info">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <p class="section-title">General Information</p>
+                <p>The Physiqual is a qualifying examination in the Computer Science Department covering a wide range of topics focused on applied mathematics and the physical world. A student must choose and complete one of the following tracks to pass the Physiqual. Each track is composed up of five sections. For each section, the candidate may take the relevant course(s) and receive a grade of A- or better. Make sure to notify Ronald Fedkiw if you do so. Alternatively, the student may approach the examiner listed under <a href="#contact">"Contacts"</a> to schedule a block of time for an exam. We request that you do not discuss an exam that you have taken with any other student who has yet to take that section (as they may choose the same examiner who may use the same questions). After completing an exam section, have your examiner email <a href="mailto:fedkiw@cs.stanford.edu">fedkiw@cs.stanford.edu</a> with the results. Be sure to CC Verna Wong on all communications to be able to track your progress.</p> 
+            </div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
+
+        <div class="mdl-grid" id="tracks">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <p class="section-title">Tracks</p>
+                <p>Of the following five tracks, any may be taken to complete the Physiqual.</a>
+                <div class="track-list" id="accordion">
+                    <h3>Traditional</h3>
+                    <div><p>
+                        <ul>
+                            <li>Applied Mathematics (CS205L)</li>
+                            <li>Computational Geometry (CS268) or Geometric and Topological Data Analysis (CS233)</li>
+                            <li>Computer Graphics (CS348b)</li>
+                            <li>Computer Vision (CS231a) OR Convolutional Neural Networks (CS231n)</li>
+                            <li>Robotics (CS223a)</li>
+                        </ul>
+                    </p></div>
+
+                    <h3>Visual Computing</h3>
+                    <div><p>
+                        <ul>
+                            <li>Applied Mathematics (CS205L)</li>
+                            <li>Computational Geometry (CS268) or Geometric and Topological Data Analysis (CS233)</li>
+                            <li>Convex Optimization (CS334a)</li>
+                            <li>Computer Graphics (CS348b)</li>
+                            <li>Computer Vision (CS231a) OR Convolutional Neural Networks (CS231n)</li>
+                        </ul>
+                    </p></div>
+
+                    <h3>Robotics/Vision</h3>
+                    <div><p>
+                        <ul>
+                            <li>Applied Mathematics (CS205L)</li>
+                            <li>Computational Geometry (CS268) or Geometric and Topological Data Analysis (CS233)</li>
+                            <li>Convex Optimization (CS334a)</li>
+                            <li>Computer Vision (CS231a) OR Convolutional Neural Networks (CS231n)</li>
+                            <li>Robotics (CS223a)</li>
+                        </ul>
+                    </p></div>
+
+                    <h3>Machine Learning</h3>
+                    <div><p>
+                        <ul>
+                            <li>Applied Mathematics (CS205L)</li>
+                            <li>Computational Geometry (CS268) or Geometric and Topological Data Analysis (CS233)</li>
+                            <li>Convex Optimization (CS334a)</li>
+                            <li>Machine Learning (CS229)</li>
+                            <li>Robotics (CS223a) OR Computer Vision (CS231a) OR Convolutional Neural Networks (CS231n)</li>
+                        </ul>
+                    </p></div>
+
+                    <h3>Computational Geometry</h3>
+                    <div><p>
+                        <ul>
+                            <li>Applied Mathematics (CS205L)</li>
+                            <li>Computational Geometry (CS268)</li>
+                            <li>Convex Optimization (CS334a)</li>
+                            <li>Geometric Modeling and Processing (CS348a)</li>
+                            <li>Geometric and Topological Data Analysis (CS233)</li>
+                        </ul>
+                    </p></div>
+
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
+
+        <div class="mdl-grid" id="areas">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <p class="section-title">Section Reading Lists</p>
+                <div class="track-list" id="accordion3">
+                    <h3>Applied Mathematics (CS205L)</h3>
+                    <div>
+			<div class="reference"><b>From: Scientific Computing: An Introductory Survey, Second edition</b>,<br>
+			  Author:  Michael T. Heath, McGraw Hill, 2002.</div>
+			<ol>
+			   <li> Scientific Computing (1.1-1.3)
+			   <li> Systems of Linear Equations (2.1-2.6)
+			   <li> Linear Least Squares (3.1-3.7)
+			   <li> Eigenvalue Problems (4.1-4.7)
+			   <li> Nonlinear Equations (5.1-5.6)
+			   <li> Optimization (6.1-6.7)
+			   <li> Interpolation (7.1-7.4)
+			   <li> Numerical Integration and Differentiation (8.1-8.7)
+			   <li> Initial Value Problems for Ordinary Differential Equations ( 9.1-9.3)
+			   <li> Boundary  Value  Problems for Ordinary Differential Equations ( 10.1-10.7)
+			   <li> Partial Differential Equations (11.1-11.6)
+			   <li> Fast Fourier Transform (12.1-12.4)
+			   <li> Random Numbers and Stochastic Simulation (13.1-13.4)
+			</ol>
+
+			<div class="reference"><b>From: Numerical Linear Algebra</b><br>
+			   Author: L. N. Trefethen and D. Bau, III, SIAM 1997<br>
+			   Pages:    1-47, 77-85, 181-193 (69 total). 
+			</div>
+
+			<ul>
+			   <li>1. Fundamental
+			   <ul>
+			     <li> 1. Matrix Vector Multiplication
+			     <li> 2. Orthogonal Vectors and Matrices
+			     <li> 3. Norms
+			     <li> 4. The Singular Value Decomposition
+			     <li> 5. More on the SVD
+			     </ul>
+			   <li>2. QR Factorization and Least Squares
+			   <ul>
+			     <li> Projection
+			     <li> 11. Least Squares Problems (skip section on QR factorization on page 83)
+			     </ul>
+			   <li>5. Eigenvalues
+			   <ul>
+			     <li> 24. Eigenvalue Problems
+			     <li> 25. Overview of Eigenvalue Algorithms (stop on page 193, just before
+			       "The Two Phases of  Eigenvalue Computations")
+			       </ul>
+			</ul>
+
+			<div class="reference">
+			   <b>From:     Practical Optimization</b>,<br>
+			   Author:  Gill, W. Murray, and M. H. Wright, Academic Press, 1993<br>
+			   Pages:    59-154 (96 total).<br>
+			</div>
+
+			<ul>
+			<li>   3. Optimality Conditions
+			<ul>
+			     <li>4.1 Methods for Univariate Functions
+			     <li>4.2 Methods for Multivariate Non-Smooth Functions
+			     <li>4.3 Methods for Multivariate Smooth Functions
+			     <li>4.4 Second Derivative Methods
+			     <li>4.5 First Derivative Methods
+			     <li>4.6 Non-Derivative Methods for Smooth Functions
+			     <li>4.7 Methods for Sums of Squares
+			     <li>4.8 Methods for Large-Scale Problems
+			</ul>
+			</ul>
+
+
+                    </div>
+
+                    <h3>Computational Geometry (CS268)</h3>
+                    <div>
+			<div class="reference">
+			   <b>From:     Computational Geometry, Algorithms and Applications</b>,<br>
+			   Author:  M. De Berg, M. van Kreveld, M. Overmars, and O. Schwarzkopf,<br>
+			   Pages:    19-248, 289-304 (246 pages total) [[but omit all *'ed sections,  page count about 210]].
+			</div>
+			<ul>
+			   <li>2. Line Segment Intersection<ul>
+			     <li>2.1. Line Segment Intersection
+			     <li>2.2. The Doubly-Connected Edge List
+			     <li>2.3. Computing the Overlay of Two Subdivisions
+			     <li>2.4. Boolean Operations
+			     </ul>
+
+			   <li>3. Polygon Triangulation<ul>
+			     <li>3.1, Guarding and Triangulations
+			     <li>3.3. Partitioning a Polygon into Monotone Pieces
+			     <li>3.4. Triangulating a Monotone Polygon
+			     </ul>
+
+			   <li>4. Linear Programming<ul>
+			     <li>4.1. The Geometry of Casting
+			     <li>4.2. Half-Plane Intersection
+			     <li>4.3. Incremental Linear Programming
+			     <li>4.4. Randomized Linear Programming
+			     <li>4.5. Unbounded Linear Programs
+			     </ul>
+
+			   <li>5. Orthogonal Range Searching<ul>
+			     <li>5.1. 1-Dimensional Range Searching
+			     <li>5.2. Kd-Trees
+			     <li>5.3. Range Trees
+			     <li>5.4. Higher-Dimensional Range Trees
+			     <li>5.5. General Sets of Points
+			     </ul>
+
+			   <li>6. Point Location<ul>
+			     <li>6.1. Point Location and Trapezoidal Maps
+			     <li>6.2. A Randomized Incremental Algorithm
+			     <li>6.3. Dealing with Degenerate Cases
+			     </ul>
+
+			   <li>7. Voronoi Diagrams<ul>
+			     <li>7.1. Definition and Basic Properties
+			     <li>7.2. Computing the Voronoi Diagram
+			     </ul>
+
+			   <li>8. Arrangements and Duality<ul>
+			     <li>8.1. Computing the Discrepancy
+			     <li>8.2. Duality
+			     <li>8.3. Arrangements of Lines
+			     <li>8.4. Levels and Discrepancy
+			     </ul>
+
+			   <li>9. Delaunay Triangulations<ul>
+			     <li>9.1. Triangulations of Planar Point Sets
+			     <li>9.2. The Delaunay Triangulation
+			     <li>9.3. Computing the Delaunay Triangulation
+			     <li>9.4. The Analysis
+			     </ul>
+
+			   <li>10. More Geometric Data Structures<ul>
+			     <li>10.1. Interval Trees
+			     <li>10.2. Priority Search Trees
+			     <li>10.3. Segment Trees
+			     </ul>
+
+			   <li>11. Convex Hulls<ul>
+			     <li>11.1. The Complexity of Convex hulls in 3-Space
+			     <li>11.2. Computing Convex Hulls in 3-Space
+			     </ul>
+
+			   <li>14. Quad Trees<ul>
+			     <li>14.1. Uniform and Non-Uniform Meshes
+			     <li>14.2. Quadtrees for Point Sets
+			     <li>14.3. From Quadtrees to Meshes
+			     </ul>
+			</ul>
+                    </div>
+
+                    <h3>Convex Optimization (CS334a)</h3>
+                    <div>
+			<div class="reference"><b>Convex Optimization</b>,<br>
+			   Author:  Stephen Boyd and Lieven Vandenberghe<br>
+			   Source:   available at the Stanford bookstore and online <a href="http://web.stanford.edu/~boyd/cvxbook/">here</a>.
+			</div>
+                    </div>
+
+                    <h3>Machine Learning (CS229a)</h3>
+                    <div>
+			<div class="reference"><b>CS229 Lectures Notes</b>,<br>
+			   Author:  Andrew Ng<br>
+			   Source:   online <a href="http://cs229.stanford.edu/materials.html">here</a>.
+			</div>
+
+                    </div>
+
+
+                    <h3>Computer Vision (CS231a)</h3>
+                    <div>
+			<div class="reference"><b>Introductory Techniques for 3-D Computer Vision</b><br>
+			   Author:  E. Trucco and A. Verri, Prentice Hall, 1998,<br>
+			   Pages:    15-278 (253 total).
+			</div>
+
+			<ul>
+			   <li>2. Digital Snapshots<ul>
+			     <li>2.1. Introduction
+			     <li>2.2. Intensity Images
+			     <li>2.3. Acquiring Digital Images
+			     <li>2.4. Camera Parameters
+			     <li>2.5. Range Data and Range Sensors
+			     </ul>
+
+			   <li>3. Dealing with Image Noise<ul>
+			     <li>3.1. Image Noise
+			     <li>3.2. Noise Filtering
+			     </ul>
+
+			   <li>4. Image Features<ul>
+			     <li>4.1. What are Image Features?
+			     <li>4.2. Edge Detection
+			     <li>4.3. Point Features: Corners
+			     <li>4.4. Surface Extraction from Range Images
+			     </ul>
+
+			   <li>5. More Image Features<ul>
+			     <li>5.1. Introduction: Line and Curve Detection
+			     <li>5.2. The Hough Transform
+			     <li>5.3. Fitting Ellipses to Image Data
+			     <li>5.4. Deformable Contours
+			     <li>5.5. Line Grouping
+			     </ul>
+
+			   <li>6. Camera Calibration<ul>
+			     <li>6.1. Introduction
+			     <li>6.2. Direct Parameter Calibration
+			     <li>6.3. Camera Parameters from the Projection Matrix
+			     <li>6.4. Concluding Remarks
+			     </ul>
+
+			   <li>7. Stereopsis<ul>
+			     <li>7.1. Introduction
+			     <li>7.2. The Correspondence Problem
+			     <li>7.3. Epipolar Geometry
+			     <li>7.4. 3-D Reconstruction
+			     </ul>
+
+			   <li>8. Motion<ul>
+			     <li>8.1. Introduction
+			     <li>8.2. The Motion Field of Rigid Objects
+			     <li>8.3. The Notion of Optical Flow
+			     <li>8.4. Estimating the Motion Field
+			     <li>8.5. Using the Motion Field
+			     <li>8.6. Motion-based Segmentation
+			     </ul>
+
+			<!--   <li>9. Shape from Single-Image Cues<ul>
+			     <li>9.1. Introduction
+			     <li>9.2. Shape from Shading
+			     <li>9.3. Finding Albedo and Illuminant Direction
+			     <li>9.4. A Variational Method for Shape from Shading
+			     <li>9.5. Shape from Texture
+			     </ul>
+
+			   <li>10. Recognition<ul>
+			     <li>10.1. What does it Mean to Recognize?
+			     <li>10.2. Interpretation Trees
+			     <li>10.3. Invariants
+			     <li>10.4. Appearance-Based Identification
+			     <li>10.5. Concluding Remarks in Object Identification
+			     <li>10.6 3-D Object Modeling
+			     </ul> -->
+			</ul>
+                    </div>
+
+                    <h3>Robotics (CS223a)</h3>
+                    <div>
+			<div class="reference"><b>From: Robot Motion Planning</b>,<br>
+			   Author:  J.C. Latombe, Kluwer Academic Publishers, 1991,<br>
+			   Pages:    3-54 (52 pages total).
+			</div>
+
+			<ul><li>Chapter 1. Introduction and Overview<ul>
+			   <li>1. Aspects of Motion Planning
+			   <li>2. Basic Problem
+			   <li>3. Configuration Space Formulation<ul>
+			     <li>3.1. Notion of Configuration Space
+			     <li>3.2. Notion of a Path
+			     <li>3.3. Obstacles in Configuration Space
+			     <li>3.4. Translational Case</ul>
+
+			     <li>4. Planning Approaches<ul>
+			     <li>4.1. Roadmap
+			     <li>4.2. Cell Decomposition
+			     <li>4.3. Potential Field
+			     <li>4.4. Global vs. Local Method</ul>
+
+			     <li>5. Extensions of the Basic Problem<ul>
+				<li>5.1. Multiple Moving Objects<ul>
+				  <li>Moving Obstacle
+				  <li>Multiple Robots
+				  <li>Articulated Robots</ul>
+				 <li>5.2. Kinematic Constraints<ul>
+				    <li>Holonomic Constraints
+				    <li>Nonholonomic Constraints</ul>
+				 <li>5.3. Uncertainty
+				 <li>5.4. Movable Objects</ul>
+
+			     <li>6. Computational Complexity
+			     <li>7. Reduction of Complexity<ul>
+				 <li>7.4. Focusing Attention on a Subset of the Workspace</ul>
+
+			     <li>8. Relation to Other Problems<ul>
+				<li>8.1. Interaction with Real-Time Motion Control
+				<li>8.2. Interaction with Sensing
+				<li>8.3. Interaction with Task-Level Planning</ul>
+
+			     <li>9. Literature Landmarks
+			</ul></ul>
+
+			<div class="reference">
+			   <b>From:     Probabilistic Roadmaps for Path Planning in High-Dimensional</b>
+			   Configuration Spaces,<br>
+			   Author:  L.E. Kavraki, P. Svestka, J.C. Latombe, and M. Overmars.
+			   IEEE Transactions on Robotics and Automation, 12(4):566-580, 1996.<br>
+			   Source:   <a href="http://robotics.stanford.edu/~latombe/pub.html#C">http://robotics.stanford.edu/~latombe/pub.html#C</a>   (27 pages).
+			</div>
+                        <br/>
+
+			<div class="reference"><b>From: Introduction to Robotics</b>,<br>
+			   Author:  Oussama Khatib and Krasimir Kolarov – Lecture Notes (CS223A)<br>
+			   Source:   available at the Stanford bookstore.
+			</div>
+
+			<ul>
+			   <li>1.      Spatial Description<ul>
+			     <li>1.1.    Manipulator Structure
+			     <li>1.2.    Transformations
+			     <li>1.3.    Configuration Representations</ul>
+			   <li>2.      Direct Kinematics<ul>
+			     <li>2.1.    Introduction
+			     <li>2.2.    Link Description
+			     <li>2.3.    Conventions for the First and Last Link
+			     <li>2.4.    Attaching Frames to Links
+			     <li>2.5.    Propagation of Frames
+			     <li>2.6.    Kinematics of Manipulators
+			     <li>2.7.    Direct Kinematics</ul>
+			   <li>3.      Inverse Kinematics<ul>
+			     <li>3.1.    Introduction
+			     <li>3.2.    Closed Form Solutions
+			     <li>3.3.    Pieper’s Solution
+			     <li>3.4.    Existence of Solution
+			     <li>3.5.    Workspace of the Manipulator
+			     <li>3.6.    Number of Solutions</ul>
+			   <li>4.      The Jacobian<ul>
+			     <li>4.1.    Introduction
+			     <li>4.2.    Differential Motion
+			     <li>4.3.    Basic Jacobian
+			     <li>4.4.    Linear/Angular Motion
+			     <li>4.5.    Combined Linear and Angular Motion
+			     <li>4.6.    Jacobian: Velocity Propagation
+			     <li>4.7.    Jacobian: Explicit Form
+			     <li>4.8.    Kinematic Singularities
+			     <li>4.9.    Jacobian at Wrist/EndEffector
+			     <li>4.10.Static Forces
+			     <li>4.11.More on Explicit Form: Jv</ul>
+			   <li>5.      Dynamics<ul>
+			     <li>5.1.    Introduction
+			     <li>5.2.    Newton-Euler Formulation
+			     <li>5.3.    Lagrange Formulation</ul>
+			   <li>6.      Trajectory Generation<ul>
+			     <li>6.1.    Introduction
+			     <li>6.2.    Joint Space vs. Cartesian Space
+			     <li>6.3.    Path Planning With Polynomial Trajectories
+			     <li>6.4.    Planning With Intermediate Points
+			     <li>6.5.    Straight Paths With Parabolic Blends
+			     <li>6.6.    Generalized Path Planning</ul>
+			   <li>7.      Manipulator Control<ul>
+			     <li>7.1.    Introduction
+			     <li>7.2.    Passive Natural Systems
+			     <li>7.3.    Passive-Behavior Control
+			     <li>7.4.    Disturbance Rejection
+			     <li>7.5.    Actuation System
+			     <li>7.6.    PD Control for Multi-Link Systems
+			     <li>7.7.    Operational Space Control</ul>
+			</ul>
+                    </div>
+
+                    <h3>Computer Graphics (CS348b)</h3>
+                    <div>
+			<div class="reference">
+			   <b>From:    CS348a course reader</b><br>
+			   Source: available at the Stanford bookstore. 
+			</div>
+
+			<ul>
+			     <li> Handout 15. The Polar Forms of Polynomial Curves
+			     <li> Handout 16. Modeling Smooth Curved Shapes
+			     <li> Handout 17. Cubic Parameteric Curves
+			     <li> Handout 18. Spline Curves
+			     <li> Handout 19. Joints and Splines via Polar Forms
+			     <li> Handout 20. B-splines
+			     <li> Handout 21. Rational Curves; Tensor Product Surfaces
+			     <li> Handout 22. Total Degree Surfaces
+			</ul>
+
+			<div class="reference">   <b>From:     Computer Graphics, Principles and Practice</b>,<br>
+			   Author:   J.  D.  Foley,  A.  van Dam, S. K. Feiner, and J. F. Hughes,<br>
+			   Addison-Wesley, 1990, Pages:                       563-604 and 648-757 (149  pages total) </div>
+
+			<ul>
+			   <li>Gray-Scale and Color
+			   <li>15. Visible Surface Determination
+			   <li>16. Illumination and Shading
+			</ul>
+
+			<div class="reference">
+			   <b>From:     Radiosity and Realistic Image Synthesis,</b><br>
+			   Author:  M. F. Cohen and J. R. Wallace, Academic Press, 1993,<br>
+			   Pages:    13-130 (118 pages total)
+			</div>
+
+			<ul>
+			   <li>2. Rendering Concepts (by Pat Hanrahan) 
+			   <li>3. Discretizing the Rendering Equation 
+			   <li>4. The Form Factor 
+			   <li>5. Radiosity Matrix Solutions 
+
+			</ul>
+                    </div>
+
+                    <h3>Geometric Modeling and Processing (CS348a)</h3>
+                    <div>
+			<div class="reference"><b>CS348a Course Reader</b>,<br>
+			   Author:  Leonidas Guibas<br>
+			   Source:   available at the Stanford bookstore</a>.
+			</div>
+
+                    </div>
+ 
+                    <h3>Geometric and Topological Data Analysis (CS233)</h3>
+                    <div>
+			<div class="reference"><b>CS233 Assigned Readings</b>,<br>
+			   Author:  Multiple<br>
+			   Source:   online <a href="http://cs233.stanford.edu/">here</a>.
+			</div>
+                    </div>
+
+               </div>
+
+            </div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
+
+        <div class="mdl-grid" id="contact">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+                <p class="section-title">Contacts</p>
+                <p>Potential examiners for each area include:</p>
+
+                <div class="track-list" id="accordion2">
+                    <h3>Applied Mathematics</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Ronald Fedkiw 
+                                    <a href="mailto:fedkiw@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://physbam.stanford.edu/~fedkiw/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Computational Geometry</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Leonidas J. Guibas
+                                    <a href="mailto:guibas@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://geometry.stanford.edu/member/guibas/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Convex Optimization</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Stephen Boyd
+                                    <a href="mailto:boyd@stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://stanford.edu/~boyd/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Machine Learning</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Andrew Ng
+                                    <a href="mailto:ang@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://www.andrewng.org/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Computer Vision</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Fei-Fei Li
+                                    <a href="mailto:feifeili@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://vision.stanford.edu/feifeili/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Silvio Savarese
+                                    <a href="mailto:ssilvio@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://cvgl.stanford.edu/silvio/index.html"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <h3>Robotics</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Oussama Khatib
+                                    <a href="mailto:khatib@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://cs.stanford.edu/group/manips/ok.html"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Computer Graphics</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Pat Hanrahan
+                                    <a href="mailto:hanrahan@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="https://graphics.stanford.edu/~hanrahan/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Geometric Modeling and Processing</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Leonidas J. Guibas
+                                    <a href="mailto:guibas@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://geometry.stanford.edu/member/guibas/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>Geometric and Topological Data Analysis</h3>
+                    <div>
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content">
+                                    Leonidas J. Guibas
+                                    <a href="mailto:guibas@cs.stanford.edu"><i class="material-icons mdl-list__item-icon" >email</i></a>
+                                    <a href="http://geometry.stanford.edu/member/guibas/"><i class="material-icons mdl-list__item-icon">web</i></a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
+    </main>
+
+    <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">Last Updated: March 24th, 2021</div>
+        </div>
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>
+

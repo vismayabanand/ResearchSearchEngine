@@ -1,0 +1,109 @@
+<!---------------html.pl::OutputHtmlHeader--------------->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+			"http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+        <TITLE>WebEvent 4.03</TITLE>
+
+<link rel="stylesheet" type="text/css" href="/webevent/basic/4.03/style.css" title="master">
+
+<script language="javascript">
+	
+//<--
+
+
+
+
+if (document.images) {
+
+image1on = new Image();
+image1on.src = "/webevent/basic/4.03/images/nv_day_on.gif";
+
+image2on = new Image();
+image2on.src = "/webevent/basic/4.03/images/nv_week_on.gif";
+
+image3on = new Image();
+image3on.src = "/webevent/basic/4.03/images/nv_2week_on.gif";
+
+image4on = new Image();
+image4on.src = "/webevent/basic/4.03/images/nv_month_on.gif";
+
+image5on = new Image();
+image5on.src = "/webevent/basic/4.03/images/nv_year_on.gif";
+
+
+image1off = new Image();
+image1off.src = "/webevent/basic/4.03/images/nv_day_off.gif";
+
+image2off = new Image();
+image2off.src = "/webevent/basic/4.03/images/nv_week_off.gif";
+
+image3off = new Image();
+image3off.src = "/webevent/basic/4.03/images/nv_2week_off.gif";
+
+image4off = new Image();
+image4off.src = "/webevent/basic/4.03/images/nv_month_off.gif";
+
+image5off = new Image();
+image5off.src = "/webevent/basic/4.03/images/nv_year_off.gif";
+
+
+	}
+function changeImages() {
+if (document.images)
+{ 
+for (var i=0; i<changeImages.arguments.length; i+=2) { 
+document[changeImages.arguments[i]].src = eval(changeImages.arguments[i+1] + ".src"); 
+		}
+ 	}
+ }
+
+    function popUp(URL,w,h) {
+        winl = (screen.width - w) / 2;
+        wint = (screen.height - h) / 2;
+
+        day = new Date();
+        id = day.getTime();
+        eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width="+w+",height="+h+",top="+wint+",left="+winl+"');");
+    }
+
+// -->
+
+
+</script>
+
+
+
+
+</HEAD>
+
+<BODY topmargin="5" leftmargin="5" marginheight="5" marginwidth="5" >
+
+
+
+
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr valign="top">
+    <td>
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+
+    <tr valign="top">
+	<td colspan=7 align=right>
+	    <A HREF="http://www.webevent.com/cs/r/pbbasic_4.03"><IMG SRC="/webevent/basic/4.03/images/poweredwhite.gif" BORDER=0></A>
+	</td>
+    </tr>
+</table>
+</td></tr></tr></table>
+<P>
+<div align=center><p><h2><b>Welcome to the Computer Science Department Calendars</b></h2></p></div> Please choose a calendar from the list below or <A HREF="/cgi-bin/webevent.cgi?cmd=login&ncmd=startup">log in</a> now to access additional calendars.<P>
+<P>You currently have access to the following calendars:
+<UL>
+<li><a href="/cgi-bin/webevent.cgi?cmd=opencal&cal=cal2&">Seminars</a>
+</ul>
+<HR>
+<H5>
+<P ALIGN=LEFT>
+Powered by
+<A HREF="http://www.WebEvent.com/cs/r/pbbasic_4.03" TARGET="_NEW">WebEvent (tm)</A>.</P></H5>
+</BODY>
+</HTML>

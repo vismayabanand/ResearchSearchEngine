@@ -1,0 +1,424 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Artificial Intelligence Seminar Series, sponsored by SambaNova Systems</title>
+
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <link href="background.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- <style>
+  body {
+   margin:0;
+   padding:0;
+  }
+</style>
+ -->
+<style>
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+    .container, .container-md, .container-sm {
+        max-width: 750px;
+    }
+}
+
+.new_td {
+  vertical-align: middle;
+  text-align: middle;
+}
+
+.btn-outline-primary, .btn-outline-secondary, .btn-warning, .btn-outline-light, .btn-outline-danger, .btn-danger {
+  font-size: 0.7rem;
+  padding: .2rem .5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.responsiveCal {
+ position: relative; overflow: hidden;
+ }
+
+ .responsiveCal iframe {
+ position: relative; top:0; left: 0; width: 80%;
+ }
+</style>
+</head>
+
+
+<body>
+
+<div id="particles">
+<div id="webcoderskull">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="background.js"></script>
+
+<div class="jumbotron text-center" style="padding:20px">
+  <h1 style="color:#3b5998">
+      <a href="https://www.cmu.edu/"><img src="cmu_logo.png" style="vertical-align:middle;right-padding:10px;height:70px;"></a>
+    <b style="padding-left:10px;">CMU Artificial Intelligence Seminar Series</b> <sup style="font-size:0.6em">sponsored by</sup>
+    <a href="https://sambanova.ai/"><img src="SambaNova.svg" style="vertical-align:top;height:40px;"></a>
+  </h1><hr>
+</div>
+
+
+
+<div class="container">
+  <!-- <div class="alert alert-warning" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+    </svg> Notice: Sign up <a href="https://mscorexm.qualtrics.com/jfe/form/SV_blKQOciT1jCydls">here</a> to receive email invitations for Morgan Stanley ML Research Department's own Seminar Series. Check out a sample of past talks including by Professor Stephen Roberts on <a href="https://video.morganstanley.com/sharevideo/0b2e18a2-7bee-4432-b7d9-23b1a1a531a2">Deep Learning in Finance</a>, Professor Dilip Madan on <a href="https://video.morganstanley.com/sharevideo/56c71e79-6100-4c46-9869-75762397d449">Applications of ML for Finance</a>, and Researcher Alessandro Achilles on <a href="https://video.morganstanley.com/sharevideo/95d4f7c5-eed4-4c05-8ea5-c33c166a8764">Estimating Informativeness of Samples with Smooth Unique Information</a>.
+  </div> -->
+<h2 style="color:#3b5998">About the Artificial Intelligence Seminar Series</h2>
+
+<p> This is the home page for the Artificial Intelligence Seminar Series, sponsored by <a href="https://sambanova.ai">SambaNova Systems</a>, at the <a href="http://www.cs.cmu.edu/">School of Computer Science</a>
+of <a href="http://www.cmu.edu/">Carnegie Mellon
+	University</a>. The faculty coordinator is <a href="http://www.zicokolter.com/">Zico Kolter</a> and the student coordinators are <a href="https://eungyeupkim.github.io/">Eungyeup Kim</a> and <a href="https://home.victorakinwande.com">Victor Akinwande</a>. The <a href="https://mailman.srv.cs.cmu.edu/mailman/listinfo/ai-seminar-announce">mailing list</a> for upcoming AI Seminar talk announcements is on the <a href="http://mailman.srv.cs.cmu.edu/mailman/listinfo">SCS mailman server</a>. Unless otherwise noted, the meetings are on Tuesdays at 12:00 PM Eastern Time (always available virtually, and usually in person in GHC 6115).
+</p>
+
+<p>This seminar aims to cover a wide variety of AI topics, such as computer vision, natural language processing (NLP), theoretical ML, AI fairness & ethics, cognitive science, AI hardware, etc. See more about CMU AI initiative <a href="https://ai.cs.cmu.edu/">here</a>. Please contact <a href="https://home.victorakinwande.com">Victor</a> for arrangements or questions about this page.</p>
+
+<a class="btn btn-outline-secondary" href="https://mailman.srv.cs.cmu.edu/mailman/listinfo/ai-seminar-announce" style="font-size:0.8rem">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+  </svg> Subscribe to the seminar mailing list</a>
+
+<a class="btn btn-danger" href="https://www.youtube.com/channel/UCLh3OUmBGe4wPyVZiI771ng" style="font-size:0.8rem">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+  </svg> Subscribe to our youtube (recording) channel</a><br><br>
+
+<h2 style="color:#3b5998;padding-top:30px"><a name="schedule">Schedule</a></h2>
+
+(Click the <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0d6efd" class="bi bi-calendar-event" viewBox="0 0 16 16">
+    <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+</svg> icon in table to add a single talk to your Google calendar)
+
+<p>
+</p>
+
+<table class="table table-striped table-hover" style="opacity:0.8">
+
+  <thead class="thead-light" style="font-size:14px"><tr>
+
+    <th>Date & Time</th>
+
+    <th>Location</th>
+
+    <th>Speaker</th>
+
+    <th>Affiliation</th>
+
+    <th>Title</th>
+
+    <th>Video Link</th>
+  </tr>
+
+  </thead> <tbody>
+<!--
+<tr>
+<td>Month, Day, Year<br> <b>special time/room info</b></td>
+<td><a href="">Name</a></td>
+<td>Institution</td>
+<td><a href="2009-10/name.txt">TBD</a></td>
+<td><a href="">Host</a></td>
+<td><a href="">Contact</a></td>
+<td>Joint .. Seminar; note special time and place!</td>
+</tr>
+-->
+
+<!-- BEGIN SPEAKERS -->
+
+<!-- ROW -->
+<tr><td class="new_td">Feb 4, 2025<br>12:00PM
+    <a target="_blank" rel="nofollow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg>
+    </a><br>
+      </td>
+      <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+        </svg>Zoom</a></td>
+      <td class="new_td"><a href="">
+        Yuchen Li
+        </a></td>
+  <td class="new_td">Carnegie Mellon University</td>
+
+  <td class="new_td">
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Towards Mathematical Understanding of Modern Language Models</a>
+  </td>
+
+  <td class="new_td"><a class="btn btn-outline-danger" href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+    </svg> YouTube</a></td>
+  </tr>
+  <!-- /ROW -->
+
+
+<!-- ROW -->
+<tr><td class="new_td">Feb 18, 2025<br>12:00PM
+    <a target="_blank" rel="nofollow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+      </svg>
+    </a><br>
+      </td>
+      <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+        </svg>Zoom</a></td>
+      <td class="new_td"><a href="">
+        Keegan Harris
+        </a></td>
+  <td class="new_td">Carnegie Mellon University</td>
+
+  <td class="new_td">
+    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Should You Use Your Large Language Model to Explore or Exploit?</a>
+  </td>
+
+  <td class="new_td"><a class="btn btn-outline-danger" href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+    </svg> YouTube</a></td>
+  </tr>
+  <!-- /ROW -->
+    <!-- ROW -->
+    <tr><td class="new_td">Feb 25, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+              <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </a><br>
+          </td>
+          <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+          <td class="new_td"><a href="https://bengio.abracadoudou.com">Samy Bengio</a></td>
+      <td class="new_td">Apple</td>
+
+      <td class="new_td">
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">How far can transformers reason? the globality barrier and inductive scratchpad</a>
+      </td>
+
+      <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+      </tr>
+      <!-- /ROW -->
+
+    <!-- ROW -->
+    <tr><td class="new_td">Mar 18, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+              <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+        </a><br>
+          </td>
+          <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+          <td class="new_td"><a href="https://akgoldberg.github.io/research/">Alexander Goldberg</a></td>
+      <td class="new_td">Carnegie Mellon University</td>
+
+      <td class="new_td">
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Balancing Transparency and Reviewer Anonymity in Scientific Peer Review</a>
+      </td>
+
+      <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+      </tr>
+      <!-- /ROW -->
+
+    <!-- ROW -->
+    <tr><td class="new_td">Mar 25, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </a><br>
+        </td>
+        <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+        <td class="new_td"><a href="https://andyzoujm.github.io/">Andy Zou</a></td>
+    <td class="new_td">Carnegie Mellon University</td>
+
+    <td class="new_td">
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Red Teaming AI Agents in-the-wild</a>
+    </td>
+
+    <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+    </tr>
+    <!-- /ROW -->
+
+    <!-- ROW -->
+    <tr><td class="new_td">Apr 1, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </a><br>
+        </td>
+        <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+        <td class="new_td"><a href="#">Anh Nguyen</a></td>
+    <td class="new_td">Carnegie Mellon University</td>
+
+    <td class="new_td">
+        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Sample complexity of data-driven tuning of model hyperparameters in neural networks with structured parameter-dependent dual function</a>
+    </td>
+
+    <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+    </tr>
+    <!-- /ROW -->
+
+       <!-- ROW -->
+       <tr><td class="new_td">Apr 22, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </a><br>
+        </td>
+        <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+        <td class="new_td"><a href="#">Ameet Talwalkar</a></td>
+    <td class="new_td">Carnegie Mellon University</td>
+
+    <td class="new_td">
+        <a href="https://www.cs.cmu.edu/~atalwalk/bio.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">Why AI Needs Specialization</a>
+    </td>
+
+    <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+    </tr>
+    <!-- /ROW -->
+
+
+
+     <!-- ROW -->
+     <tr><td class="new_td">Apr 29, 2025<br>12:00PM
+        <a target="_blank" rel="nofollow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-calendar-event" viewBox="0 0 16 16">
+            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+        </svg>
+        </a><br>
+        </td>
+        <td class="new_td"><a class="btn btn-outline-secondary" href="https://cmu.zoom.us/j/99510233317?pwd=ZGx4aExNZ1FNaGY4SHI3Qlh0YjNWUT09">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-video-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z"/>
+            </svg>Zoom</a></td>
+        <td class="new_td"><a href="#">Victor Akinwande</a></td>
+    <td class="new_td">Carnegie Mellon University</td>
+
+    <td class="new_td">
+        <a href="https://home.victorakinwande.com/" data-bs-toggle="tooltip" data-bs-placement="top" title="Click the talk title for more details">HyperCLIP: Adapting Vision-Language models with Hypernetworks</a>
+    </td>
+
+    <td class="new_td"><a class="btn btn-outline-danger" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.122C.002 7.343.01 6.6.064 5.78l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+        </svg> YouTube</a></td>
+    </tr>
+    <!-- /ROW -->
+
+
+</table>
+
+<p>You may also add the AI seminar calendar to your own calendar:</p>
+
+<div class="responsiveCal">
+<iframe src="https://calendar.google.com/calendar/embed?height=350&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Y211LmFpLnNlbWluYXJAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%2333B679&amp;mode=MONTH&amp;showNav=1&amp;title=CMU%20AI%20Seminar" style="border-width:0" width="700" height="350" frameborder="0" scrolling="yes"></iframe>
+</div>
+
+
+<h2 style="color:#3b5998;padding-top:30px"><a name="links">Links</a></h2>
+
+<p></p>
+
+<ul>
+
+<li>Past AI seminars:
+<a href="prev/24fall.html">Fall 2024</a>,
+<a href="prev/24sp.html">Spring 2024</a>,
+<a href="past/23sp.html">Spring 2023</a>,
+<a href="past/index_fall22.html">Fall 2022</a>,
+<a href="past/22sp.html">Spring 2022</a>,
+<a href="past/21fall.html">Fall 2021</a>,
+<a href="past/21sp.html">Spring 2021</a>,
+<a href="past/20fall.html">Fall 2020</a>,
+<a href="past/20sp.html">Spring 2020</a>,
+<a href="past/19fall.html">Fall 2019</a>,
+<a href="past/19sp.html">Spring 2019</a>,
+<a href="past/18fall.html">Fall 2018</a>,
+<a href="past/18sp.html">Spring 2018</a>,
+<a href="past/17fall.html">Fall 2017</a>,
+<a href="past/17sp.html">Spring 2017</a>,
+<a href="past/16fall.html">Fall 2016</a>,
+<a href="past/16sp.html">Spring 2016</a>,
+<a href="past/10.html">2010-2015</a>,
+<a href="past/09.html">2009</a>,
+<a href="past/08.html">2008</a>,
+<a href="past/06.html">2006-2007</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar05.html">2005</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar04.html">2004</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar03.html">2003</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar02.html">2002</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar01.html">2001</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar00.html">2000</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar99.html">1999</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar98.html">1998</a>,
+<a href="http://www.cs.cmu.edu/%7Eaiseminar/past/aiseminar97.html">1997</a>.</li>
+
+  <li>Other related seminars at CMU:
+    <ul>
+  <!-- <li><a href="http://www.cs.cmu.edu/%7Elearning/">Machine Learning Lunch</a></li>  -->
+  <!-- <li><a href="http://calendar.cs.cmu.edu/ml/google_seminar">ML/Google Distinguished Lectures</a></li> -->
+  <li><a href="https://lti.cs.cmu.edu/lti-colloquium">LTI Colloquium</a></li>
+  <li><a href="https://www.ri.cmu.edu/ri-seminar-series/">RI Seminar Series</a></li>
+    </ul>
+  </li>
+
+  <li>
+    CMU's <a href="https://www.cs.cmu.edu/calendar">School of Computer Science (SCS) event calendar</a>
+  </li>
+</ul>
+
+</div>
+</div>
+</div>
+</body></html>
+

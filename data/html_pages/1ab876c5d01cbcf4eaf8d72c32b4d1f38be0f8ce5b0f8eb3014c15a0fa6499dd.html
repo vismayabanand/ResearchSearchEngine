@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<title>
+			Secure Shell (SSH) - 
+			    SCS Computing Facilities - Carnegie Mellon University
+		</title>
+		<meta content="Secure Shell (SSH) - Carnegie Mellon University School of Computer Science" name="description"/>
+		<meta content="Carnegie Mellon University School of Computer Science" name="author"/>
+		<meta content="Secure Shell (SSH) - SCS Computing Facilities - Carnegie Mellon University" property="og:title"/>    
+    <meta content="Accounts, SCS, Access, Desktop, Laptop, Computing, Windows, Ubuntu, macOS, Computers" property="og:description"/>
+    <meta content="Secure Shell (SSH) - Carnegie Mellon University School of Computer Science" property="og:description"/>
+    <meta content="website" property="og:type"/>
+<meta content="http://computing.cs.cmu.edu/security/security-ssh.html" property="og:url"/> 
+
+<meta content="d52b7a52ac1e007442004caf7d353c35" name="id"/>
+<!-- Path is https://computing.cs.cmu.edu -->
+		<link href="../css/main-legacy.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/magnific-popup.css" rel="stylesheet" type="text/css"/>
+		<link href="../site-images/favicon.ico" rel="icon"/>
+		<link href="../site-images/favicon-152.png" rel="apple-touch-icon-precomposed"/>
+		<meta content="#9f0000" name="msapplication-TileColor"/>
+		<meta content="/site-images/favicon-144.png" name="msapplication-TileImage"/>
+		    
+    
+		
+
+<!-- Google Analytics GA4 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HMNJ98RBTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HMNJ98RBTS');
+</script>
+<!-- End Google Analytics GA4 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33466045-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-33466045-4', { 'anonymize_ip': true, 'cookie_domain': 'computing.cs.cmu.edu', 'cookie_expires': 0 });
+</script>
+<!-- End Global site tag (gtag.js) - Google Analytics -->
+
+
+	</head>
+	<body class="no-js">
+	    
+
+<script>
+    if ( window.location.hostname == "computing-test.cs.cmu.edu" || window.location.hostname == "www.computing-test.cs.cmu.edu" || window.location.hostname == "computing-preview.cs.cmu.edu" || window.location.hostname == "www.computing-preview.cs.cmu.edu" ) {
+        document.write('<style>#internal-banner {z-index: 200; height: 57px; width: 100%; background: #FFFF55; position: fixed; top: 0; padding: 0em; box-sizing: border-box;box-shadow: 0px 2px 10px rgba(0,0,0,0.5);overflow: hidden;} #internal-banner p {display: inline-block; height: 57px; line-height: 57px; padding-left: 1em; padding-right: 1em; padding-bottom: 0; padding-top: 0;} #container {margin-top: 57px;} .roof {top: 57px;} nav.tree {top: 57px !important} .menu-on .menu-btn {top: 57px !important}</style>');
+        document.write('<div id="internal-banner"><p><strong>This is the Computing Preview site!</strong> It may not contain fully vetted or accurate information.</p> <p><a href="https://computing.cs.cmu.edu/security/security-ssh.html">Visit on the live site</a></p></div>');
+    }if ( window.location.hostname == "computing-webdev.cs.cmu.edu" || window.location.hostname == "www.computing-webdev.cs.cmu.edu" ) {
+        document.write('<style>#internal-banner {z-index: 200; height: 57px; width: 100%; background: #FF5555; position: fixed; top: 0; padding: 0em; box-sizing: border-box;box-shadow: 0px 2px 10px rgba(0,0,0,0.5);overflow: hidden;} #internal-banner p {display: inline-block; height: 57px; line-height: 57px; padding-left: 1em; padding-right: 1em; padding-bottom: 0; padding-top: 0;} #container {margin-top: 57px;} .roof {top: 57px;} nav.tree {top: 57px !important} .menu-on .menu-btn {top: 57px !important}</style>');
+        document.write('<div id="internal-banner"><p><strong>This is a development testbed.</strong> You might be lost...</p> <p><a href="https://computing.cs.cmu.edu">Visit the live site</a></p></div>');
+    }
+</script>
+
+		<div id="container">
+			
+
+
+
+
+
+<div class="roof darkgrey invert">
+    <div>
+        <a class="wordmark" href="https://cs.cmu.edu/">Carnegie Mellon University School of Computer Science</a>
+        <a aria-label="Jump to navigation" class="menu-btn" href="#nav"><b>—</b><b>—</b><b>—</b></a>
+        
+        
+                        <form action="https://search.cmu.edu" class="search" method="get">
+            <label>
+                <span>Search</span>
+                <input aria-label="Search" name="q" placeholder="Search"/>
+                <input id="site" name="siteSearch" type="hidden" value="https://computing.cs.cmu.edu"/>
+            </label>
+            <input id="id_ie" name="ie" type="hidden" value="UTF-8"/>
+            <button title="Submit" type="submit">Search</button>
+        </form>
+        
+        
+                						<div class="quicklinks">	
+			<span>Quick Links:</span>
+						<a href="../landing/student">Students</a><a href="../landing/faculty">Faculty</a><a href="../landing/staff">Staff</a><a class="helpbutton" href="../gethelp">Submit a Ticket</a>
+		</div>
+    </div>
+</div>
+
+			<header>
+				  
+       
+
+            <div id="sitename">
+                                    <h1><a href="../index">SCS Computing Facilities</a></h1>                                             </div>    
+    
+                 
+				        
+    <div class="breadcrumbs">
+                                <a href="../index">~help</a>
+        
+                                      /  <a href="index">Security and Computing</a>
+                                                  /              Secure Shell (SSH)
+                            </div>
+
+			</header>
+			<div id="content">
+				    
+
+
+
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <div class="content" id="ssh-intro">
+                        <div class="content-body">                             <h1>Secure Shell (SSH)</h1>
+<p>Secure Shell (SSH) is a cryptographic network protocol which allows for data to be securely exchanged between two computers using an encrypted channel. SSH is typically used to log into a remote machine and execute commands or to perform secure file transfer using the associated SFTP or SCP protocols. Additionally, SSH supports a range of features including tunneling arbitrary TCP ports and X11 connections. In SCS, we use the OpenSSH implementation of the SSH protocol suite.&#160;&#160;</p>
+<h2>How&#160;To Get SSH Client Software</h2>
+<p>SCS Computing Facilities includes SSH clients by default on all Linux, macOS and Windows systems that we build.&#160;</p>
+<p><strong>Linux</strong>: Linux machines provided by SCSCF have the OpenSSH client installed by default. Most other Linux systems should also have an SSH client installed by default. If there is no SSH client present, see the package management documentation for the appropriate Linux distribution for notes on how to install an SSH client.<br/><br/><strong>macOS</strong>: The OpenSSH client is installed by default on all systems running macOS.<br/><br/><strong>Windows</strong>: Windows machines provided by SCSCF will include the command line SSH client <a href="https://www.chiark.greenend.org.uk/&#126;sgtatham/putty/latest.html" rel="noopener" target="_blank">PuTTY</a>&#160;by default. The&#160;<a href="https://winscp.net/eng/download.php">WinSCP</a>&#160;client is also installed by default for users seeking a graphical interface for transferring files over SSH using SCP. Either of these clients can be used to access AFS from a Windows computer by SSHing to a Linux computer that mounts AFS, like linux.gp.cs.cmu.edu.</p>
+<h2>Using SSH on SCS Linux hosts</h2>
+<p>Linux hosts built by SCS Computing Facilities allow remote login via SSH to users on the system by default. In order to connect to an account on an SCS Linux computer via SSH, the SCS username and Kerberos password for that account will be required.&#160;</p>
+<p>SCS Computing Facilities enables the sshd_config option <code>PermitRootLogin without-password</code>&#160;in order to allow select SCSCF staff to securely log in to Linux machines we manage as root. This option must remain enabled in order for us to log in to a machine in order to assist with support requests.&#160;</p>
+<h3><strong>Connecting to an SCS Linux host</strong></h3>
+<p>Both Linux and macOS support connecting to a remote system via SSH through their respective command line interfaces. To use SSH on these machines, first open a terminal program.&#160;</p>
+<p><strong>Launch Interactive Shell Session on Remote Host</strong></p>
+<p>To initiate a shell session on a remote host like the <a href="../desktop/os-linuxgp">general purpose Linux computers</a>, use a command like this:</p>
+<pre>% ssh username@linux.gp.cs.cmu.edu</pre>
+<p>This will launch a new shell session that will persist until the connection is terminated.<br/><br/><strong>Run a Single Command on a Remote Server</strong><br/><br/>To run a single command on a remote server instead of spawning a shell session, you can add the command after the connection information, like this:</p>
+<pre>% ssh <a href="mailto:username@linux.gp.cs.cmu.edu ">username@linux.gp.cs.cmu.edu </a>command</pre>
+<p>&#160;This will connect to the remote host, authenticate with your credentials, and execute the command specified. The connection will immediately close afterwards.</p>
+<p><strong>Logging into a Server with a Different Port</strong><br/><br/>By default, the SSH daemon on a server listens for incoming requests on port 22. SSH clients will attempt to connect on port 22 unless instructed otherwise. When using the SSH command line client, the&#160;<code>-p</code> option can be use to specify that a non-standard port is being used. For example, to connect to a remote system called example.com on port 2222, a command like this would be used:</p>
+<pre>% ssh -p 2222 <a href="mailto:username@example.com">username@example.com</a></pre>
+<p>You can avoid having to use the -p option every time you login to the remote server by creating or editing the <strong>&#126;/.ssh/config</strong> file in your home directory on the computer that runs the ssh command. This file supports setting different configuration options for different remote hosts. An example entry that will connect to example.com on port 2222 follows:</p>
+<pre>Host example<br/>    HostName example.com<br/>    Port 2222</pre>
+<p><br/>Once that is complete, SSH connections to example.com on the non-standard port can be initiated with this command:</p>
+<pre>% ssh example</pre>
+<p>&#160;</p>
+<h2>Using SSH on macOS hosts</h2>
+<h3>Connecting to a macOS Host</h3>
+<p>&#160;macOS hosts built by SCS Computing Facilities are not accessible via SSH by default. Enabling Remote Login can be enabled in order to make the machine accessible via SSH. <a href="https://www.booleanworld.com/access-mac-ssh-remote-login/">This guide</a> contains instructions on enabling Remote Login. Once Remote Login has been enabled, you will be able to use your username and password to log in to the macOS machine using an SSH client on another computer.</p>
+<p>The SSH Client on macOS hosts works similarly to the one on Linux hosts:</p>
+<p><strong>Launch Interactive Shell Session on Remote Host</strong></p>
+<p>To initiate a shell session on a remote host like the <a href="../desktop/os-linuxgp">general purpose Linux computers</a>, use a command like this:</p>
+<pre>% ssh username@linux.gp.cs.cmu.edu</pre>
+<p>This will launch a new shell session that will persist until the connection is terminated.<br/><br/><strong>Run a Single Command on a Remote Server</strong><br/><br/>To run a single command on a remote server instead of spawning a shell session, you can add the command after the connection information, like this:</p>
+<pre>% ssh <a href="mailto:username@linux.gp.cs.cmu.edu ">username@linux.gp.cs.cmu.edu </a>command</pre>
+<p>&#160;This will connect to the remote host, authenticate with your credentials, and execute the command specified. The connection will immediately close afterwards.</p>
+<p><strong>Logging into a Server with a Different Port</strong><br/><br/>By default, the SSH daemon on a server listens for incoming requests on port 22. SSH clients will attempt to connect on port 22 unless instructed otherwise. When using the SSH command line client, the&#160;<code>-p</code> option can be use to specify that a non-standard port is being used. For example, to connect to a remote system called example.com on port 2222, a command like this would be used:</p>
+<pre>% ssh -p 2222 <a href="mailto:username@example.com">username@example.com</a></pre>
+<p>You can avoid having to use the -p option every time you login to the remote server by creating or editing the <strong>&#126;/.ssh/config</strong> file in your home directory on the computer that runs the ssh command. This file supports setting different configuration options for different remote hosts. An example entry that will connect to example.com on port 2222 follows:<br/><br/></p>
+<pre>Host example<br/>    HostName example.com<br/>    Port 2222</pre>
+<p><br/>Once that is complete, SSH connections to example.com on the non-standard port can be initiated with this command:</p>
+<pre>% ssh example</pre>
+<p>&#160;</p>
+<h2>Using SSH on Windows hosts</h2>
+<p>The SSH clients on Windows provide the much of the same functionality as the clients for Linux and macOS. To support Kerberized authentication for Windows SSH clients, we install MIT Kerberos for Windows by default on Windows computers that we build.</p>
+<p><strong>Launch Interactive Shell Session on Remote Host</strong></p>
+<ul style="list-style-type: disc;">
+<li>Open PuTTY</li>
+<li>Set the remote host in the "Hostname or IP address" text box under Session</li>
+<li>(Optional) Enable credential delegation under Connection &gt; SSH &gt; Auth &gt; GSSAPI</li>
+<li>(Optional) Turn on X11 forwarding under Connection &gt; SSH &gt; X11</li>
+<li>(Optional) Save your session configuration under Session using the Saved Sessions dialog</li>
+</ul>
+<p>Depending on your Kerberos configuration, you may be prompted for credentials upon connecting. For more information on Kerberos credentials and authentication, visit the page on&#160;<a href="../help-support/kerberos" rel="noopener" target="_blank">Kerberos</a>.<br/>&#160;<br/><br/><strong>Run a Single Command on a Remote Server</strong><br/><br/> The plink command-line client comes as part of the complete PuTTY distribution.&#160; It has a similar syntax to the command-line ssh Linux client. To run a single command on a remote host, run a command like this:<br/><br/></p>
+<pre>plink &lt;user&gt;@&lt;host&gt; &lt;command&gt;</pre>
+<p>For example, to run the <code>date</code> command on linux.gp.cs.cmu.edu as the user example:</p>
+<pre>plink <a href="mailto:example@linux.gp.cs.cmu.edu ">example@linux.gp.cs.cmu.edu </a>date</pre>
+<p><strong>Copy Files Between Two Hosts</strong><br/><br/> The pscp command-line client comes as part of the complete PuTTY distribution. It has a similar syntax to the command-line scp Linux client. Use a command like this to transfer a file on the local computer to a remote host via SCP:<br/><br/></p>
+<pre>pscp &lt;local file&gt; &lt;user&gt;@&lt;host&gt;:&lt;remote directory&gt;</pre>
+<p><br/>See the <a href="https://the.earth.li/&#126;sgtatham/putty/0.70/htmldoc/" rel="noopener" target="_blank">PuTTY documentation</a> for more information about <code>plink</code> and <code>pscp</code> usage.&#160;</p>
+<h2>Tips &amp; Tricks</h2>
+<h3>SSH Keys</h3>
+<p>SSH supports public key authentication as an alternative to password-based authentication. SCS Computing Facilities strongly recommends using a passphrase when generating an SSH key pair. SSH keys created without a passphrase should be stored in a secure location and should not be stored in a networked file system like AFS or NFS. SCS users may wish to explore using public key authentication for connecting to or from computers that do not use the SCS Kerberos configuration.&#160;</p>
+<p>A strong SSH key pair can be generated by running the following command</p>
+<pre>ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname) [$(date)]"&#160;</pre>
+<p>By default, this will create a key in &#126;/.ssh/id_rsa.pub.&#160;</p>
+<p>The public key can be transferred to a remote host using the ssh-copy-id command.&#160;</p>
+<pre>ssh-copy-id username@remote_host</pre>
+<p>Future attempts to SSH to this remote host will first attempt to use the public key for authentication, rather than your password. You will be prompted for the passphrase for the private key, if you set one.&#160;</p>
+<h3>Managing SSH keys for multiple hosts</h3>
+<p>The SSH configuration file on your local computer lets you provide default SSH options when connecting to remote hosts. This includes using a different key for a particular remote host. Here is an example of some popularly used settings you can put in the SSH configuration file (<code>&#126;/.ssh/config</code>): <br/><br/><br/></p>
+<pre>Host remote_alias<br/>    HostName example.com<br/>    User username<br/>    Port port_number<br/>    IdentityFile &#126;/.ssh/alternate_key       <br/><br/></pre>
+<p>When you issue the command <code>ssh remote_alias</code>, the SSH client will include the options specified in the section of the configuration file for this host.</p>
+<h3>SSH Tunneling</h3>
+<p>SSH supports the setup of encrypted tunnels between a specific port on your local machine and a specific port on a remote host. This is also commonly referred to as SSH port forwarding and is useful&#160; in order to provide SSH encryption for traffic that would otherwise go over the network in the clear.</p>
+<p>See this article on <a href="https://www.howtogeek.com/168145/how-to-use-ssh-tunneling/" rel="noopener" target="_blank">How to Use SSH Tunneling to Access Restricted Servers and Browse Securely</a> for more information on the possibilities provided by SSH tunneling.&#160;</p>
+                                                    </div><div class="sidebar">                                                         <div class="list  grey">
+                            <ul>
+                                                                                                                                    <li><a href="index" target="_self">Security and Computing</a></li>
+                                                                                                                                    <li><a href="../help-support/instance-manager" target="_blank">Kerberos Instance Manager</a></li>
+                                                                    <li><a href="https://www.cmu.edu/iso/" target="_self">CMU Information Security Office</a></li>
+                                                                                                                                    <li><a href="security-linux" target="_blank">Linux Security</a></li>
+            </ul>
+        	</div>
+                                                        
+		<div class="list  darkgrey invert">
+			<h1>Need Help?</h1>
+		
+				<ul>
+			   																		        	        	        			<li><a href="../forms/submit-ticket" target="_blank">Submit a Ticket</a></li>
+												<li><a href="tel:4122684231" target="_self">Call 412-268-4231</a></li>
+			   																		        	        	        			<li><a href="../help-support/location-map" target="_blank">Visit GHC 4203</a></li>
+		</ul>
+	</div>                             </div>                          </div>                     
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="feedback-section grid column2 red invert nav">
+	<div class="feedback-instructions">
+		<h2 class="para-5"><span class="font-48">Was this page helpful?</span></h2>
+		<p>Use this box to give us feedback on this webpage and its content. If you need a response, please include your Andrew ID.</p>
+		<p>Need technical support?  <a href="../forms/submit-ticket">Submit a ticket</a></p>
+	</div>
+	<div class="feedback-goes-here">
+		<input aria-hidden="true" class="hidden" id="show-feedback" type="checkbox"/>
+		<label aria-hidden="true" class="feedback-button" for="show-feedback">Give us Feedback!</label>
+		<iframe allowtransparency="true" frameborder="0" height="235" id="feedback-form" scrolling="no" src="https://cmu-scs.forms-db.com/embed.php?id=20031&amp;element_3=/security/security-ssh%20Secure+Shell+%28SSH%29" style="width: 100%; border: none;" title="Website Feedback" width="300">
+        <a href="https://cmu-scs.forms-db.com/view.php?id=20031&amp;element_3=/security/security-ssh%20Secure+Shell+%28SSH%29" title="Website Feedback">Website Feedback</a></iframe>
+
+	</div>
+</div>
+
+
+				<footer class="grid invert">
+					<div class="contactscs">
+	<section>
+		<h2>SCS Help Desk</h2>
+		<description>Computing support and general advice
+		</description>
+		<p>GHC 4203</p>
+		<p>help@cs.cmu.edu</p>
+		<p><a href="tel:4122684231">412-268-4231</a></p>
+		<p>Monday—Friday, 9am—5pm</p>
+		<!--<p class="specialhours">Special Hours:<br/>Friday March 30, 9 AM - Noon</p>-->
+	</section>
+
+	<section>
+		<h2>SCS Operations</h2>
+		<description>Machine rooms, SCS printers, Audio-Visual, 
+			<br/>after-hours support
+		</description>
+		<p><a href="tel:4122682608">412-268-2608</a></p>
+		<p>24/7 machine room operations</p>
+	</section>
+
+
+
+	<a class="university-wordmark" href="https://cmu.edu">
+		<img alt="Carnegie Mellon University Logo" src="../site-images/cmu/cmu-wordmark-white-small.png"/>
+	</a>
+</div>
+					
+
+
+<div>
+   <nav id="nav">
+
+     
+         
+         
+         
+         
+         
+    
+                    <ul>
+                                        <li>                              <a href="../index" target="_self">         
+                Homepage
+    </a>
+    </li>
+                 
+            
+                            <li class="">                              <a href="../accounts-access/index" target="_self">          
+                Accounts and Access
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../accounts-access/access-mgmt" target="_self">         
+                Access Managment
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../accounts-access/transition-student-services" target="_self">         
+                Transition Student Services
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="../accounts-access/transition-services" target="_self">         
+                Transition Faculty and Staff Services
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../business/index" target="_self">          
+                Business
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../business/support-charges" target="_self">         
+                Support Charges
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/purchasing" target="_self">         
+                Purchasing and Technical Procurement
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/receiving" target="_self">         
+                Receiving
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../business/support-hardware" target="_self">         
+                Hardware Support
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/support-software" target="_self">         
+                Software Support
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../comm-collab/index" target="_self">          
+                Communication and Collaboration
+    </a>
+             
+                              
+                                                 
+                                                                     
+                                                                     
+                                                                     
+    
+                    <ul>
+                                        <li>                              <a href="../comm-collab/email" target="_self">         
+                Email
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../comm-collab/email-mailman-faq" target="_self">         
+                FAQ: Mailing Lists
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../comm-collab/email-mailman-restrict" target="_self">         
+                Mailing Lists: Restrict Posting to a Privileged Group
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../comm-collab/email-mailman" target="_self">         
+                Mailing Lists: Mailman
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../comm-collab/email-clients" target="_self">         
+                Email Client Configuration
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                                                 
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../comm-collab/av-guidelines" target="_self">         
+                Audio-Visual Room Guidelines
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../comm-collab/email-mailman-settings" target="_self">         
+                Mailing Lists: Mailman Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../comm-collab/mailman-reference" target="_self">         
+                Mailing Lists: Mailman Reference Guide
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../desktop/index" target="_self">          
+                Desktop Computing
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../desktop/supported-hardware" target="_self">         
+                Supported Computer Hardware
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/os-software" target="_self">         
+                Operating Systems and Software
+    </a>
+    </li>
+                                                                                                         
+                                                                     
+    
+                            <li>                              <a href="../desktop/support-mac" target="_self">         
+                macOS Support
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/support-linux" target="_self">         
+                Linux Support
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-unsupportedsca" target="_self">         
+                Linux Service Configuration Add-Ons
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-openvm" target="_self">         
+                Launching an SCS Virtual Machine
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/os-linuxgp" target="_self">         
+                Linux GP: General Purpose Linux Hosts
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/recom-configs" target="_self">         
+                Recommended Computers and Configurations
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/recom-other" target="_self">         
+                Recommended Accessories
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-scspublic" target="_self">         
+                One-Time SCS Printing Enrollment Procedure
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/printing" target="_self">         
+                Printing in SCS
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/printing-posters" target="_self">         
+                Poster Printing
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/network" target="_self">         
+                Networking
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-lifecycle" target="_self">         
+                Operating System Support Lifecycle
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/ntp-settings" target="_self">         
+                Networking: Check NTP Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/ip-renew" target="_self">         
+                Networking: Release and Renew IP Address
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/check-dns-settings" target="_self">         
+                Networking: Check DNS Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-linux-private" target="_self">         
+                Printing on Unsupported Linux Computers
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-windows-private" target="_self">         
+                Printing on Unsupported Windows Computers
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                            <li>                              <a class="external" href="https://computing.cs.cmu.edu/desktop/recom-dell.html#desktops" target="_blank">         
+                Recommended Dell Desktops for Linux
+    </a>
+    </li>
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/anyconnect-sbl" target="_self">         
+                anyconnect-sbl
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/remotemacsetup" target="_self">         
+                Remote Apple Mac Setup
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/afs-cellservdb" target="_self">         
+                AFS CellServDB
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../server/index" target="_self">          
+                Server Computing
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../server/project-servers" target="_self">         
+                Project Server Consulting
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../server/server-cert-ts" target="_self">         
+                Web Server Certificate Troubleshooting
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../server/server-certs" target="_self">         
+                Web Server Certificates
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../research/index" target="_self">          
+                Research Computing
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../research/hpc" target="_self">         
+                High Performance Computing (HPC)
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../help-support/index" target="_self">          
+                Help and Support
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../help-support/afs-user-vol" target="_self">         
+                AFS User Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-backup-restore" target="_self">         
+                AFS Backup and Restore
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-project-vol" target="_self">         
+                AFS Project Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-academic-vol" target="_self">         
+                AFS Academic Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/mysql-backup" target="_self">         
+                Linux MySQL Backup
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/kerberos" target="_self">         
+                Kerberos
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-quota" target="_self">         
+                AFS Quotas
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/instance-manager" target="_self">         
+                Kerberos Instance Manager
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../help-support/web-publishing" target="_self">         
+                Web Publishing: Personal or Project Websites
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/laptop-loan" target="_self">         
+                Laptop Lending
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../help-support/equip-registration" target="_self">         
+                Equipment Registration and Management
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/using-htaccess" target="_self">         
+                Using .htaccess files in AFS
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-acls" target="_self">         
+                AFS Permissions (Access Control Lists)
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-auth" target="_self">         
+                AFS Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-cache" target="_self">         
+                AFS Cache Manager and Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-cells" target="_self">         
+                AFS Cells and Cross-Realm Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-crossplatform" target="_self">         
+                AFS Cross-Plat  Directories
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-auth-daemons" target="_self">         
+                AFS Daemon Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-using" target="_self">         
+                AFS in SCS
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="../help-support/afs-groups" target="_self">         
+                AFS Groups
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../help-support/afs-troubleshooting" target="_self">         
+                AFS Troubleshooting
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../help-support/location-map" target="_self">         
+                Help Desk Location
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                            <li>                              <a class="external" href="https://computing.cs.cmu.edu/desktop/microsoft-updates.html" target="_self">         
+                Microsoft Updates
+    </a>
+    </li>
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+         
+         
+         
+            
+                            <li class="">                              <a href="../backup/index" target="_self">          
+                Backup
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../backup/faq-archivalbackup" target="_self">         
+                Frequently Asked Questions: Archival Backup Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/faq-datarecovery" target="_self">         
+                Frequently Asked Questions: Data Protection Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/data-protection" target="_self">         
+                Data Protection Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/archival-backups" target="_self">         
+                Archival Backup Service
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="index" target="_self">          
+                Security and Computing
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li class="active">                              <a href="security-ssh" target="_self">         
+                Secure Shell (SSH)
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="security-linux" target="_self">         
+                Security: Linux
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="security-firewall" target="_self">         
+                Security: Firewalls and SCS
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="security-xserver" target="_self">         
+                Security: X Server
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="security-password" target="_self">         
+                Security: Passwords
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="security-phishing" target="_self">         
+                Security: Phishing, Hoaxes &amp; Scams
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="security-windows" target="_self">         
+                Security: Windows
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../news/index" target="_self">          
+                News Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+            
+                    <ul>
+                                        <li class="">                              <a href="../news/2018/index" target="_self">          
+                2018 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2019/index" target="_self">          
+                2019 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2020/index" target="_self">          
+                2020 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2021/index" target="_self">          
+                2021 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2022/index" target="_self">          
+                2022 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2023/index" target="_self">          
+                2023 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                    </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../people/index" target="_self">          
+                People
+    </a>
+             
+                              
+                                                 
+                                                                                                 
+            
+                    <ul>
+                                        <li class="">                              <a href="../people/bussvcs/index" target="_self">          
+                Business Services People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/hd/index" target="_self">          
+                Help Desk People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/ops/index" target="_self">          
+                Computer Operations People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/pc/index" target="_self">          
+                PC Engineering People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/pm/index" target="_self">          
+                Project Management People
+    </a>
+             
+                              
+                                                                    </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/tcp/index" target="_self">          
+                Technical Communication Platforms People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/unix/index" target="_self">          
+                Unix Engineering People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+                                                                     
+                                                                     
+            
+                            <li class="">                              <a href="../people/webapps/index" target="_self">          
+                Web Application Services People
+    </a>
+             
+                              
+                                                 
+                                                                     
+                                                                                        </li>
+                                                                    </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../dashboard/index" target="_self">          
+                Dashboard Events Archive
+    </a>
+             
+                              
+                                                 
+                                                                                                 
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                     
+         
+         
+    
+                            <li>                              <a href="../sitemap" target="_self">         
+                Site Map
+    </a>
+    </li>
+                 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+                                                                                                                                                    </ul>
+    </nav>
+</div>
+
+
+
+					<div class="legal">
+						<a href="https://www.cmu.edu/legal/">Legal Info</a>
+						<a href="../people/index">People</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+		
+
+<script src="../js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="../js/main-legacy.js" type="text/javascript"></script>
+<script src="../js/magnific.js" type="text/javascript"></script>
+
+
+		 
+                
+
+        
+		    
+    
+		
+		
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- MOVED TO HEAD -->
+<!-- UA-33466045-4 - computing.cs.cmu.edu -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33466045-4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-33466045-4', { 'anonymize_ip': true, 'cookie_domain': 'computing.cs.cmu.edu', 'cookie_expires': 0 });
+</script>-->
+
+<!-- Google Analytics, but ONLY for custom events -->
+<!-- Regular page views are handled by gtag.js in the head (in /_cms/blocks/analytis - head - scs-cf) -->
+<!-- UA-33466045-4 - computing.cs.cmu.edu -->
+
+<script>
+    /* <![CDATA[ */
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-33466045-4', 'auto');
+		var dimensionValue = 'Cascade';
+		ga('set', 'dimension1', dimensionValue); // siteVersion
+		
+		// Do NOT send a pageview here, because that is taken care of in gtag.js in the head
+		// ga('send', 'pageview'); 
+    /* ]]> */
+</script>
+
+
+<!-- Google Analytis for custom events - custom code -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    // Custom tracking, as per updated on CS.CMU.EDU
+    
+    	let googleAnalytics = {
+    		"settings": {
+    			"googleanalytics": {
+    				"trackOutbound": 1,
+    				"trackMailto": 1,
+    				"trackDownload": 1,
+    				"trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip",
+    				"trackNewsletterUrl": 1
+    				
+    			}
+    		},
+    		"googleanalytics": {
+    
+    		}
+    	};
+    
+    
+    	var dimensionValue = 'Cascade, pre-Redscale';
+    	ga('set', 'dimension1', dimensionValue); // siteVersion
+    
+    
+    
+    	(function ($) {
+    
+    
+    
+    	$(document).ready(function() {
+    	
+    	// Track links from the Loopback newsletter
+    	if (googleAnalytics.settings.googleanalytics.trackNewsletterUrl && window.location.hash && googleAnalytics.googleanalytics.isNewsletterUrl(window.location.hash)) {
+	    	// Google Drive event is clicked
+			console.log("SENDING event Pageview from Loopback Newsletter");
+			ga("send", {
+				"hitType": "event",
+				"eventCategory": "Pageview from Loopback Newsletter",
+				"eventAction": window.location.hash,
+				"eventLabel": window.location.href,
+				"transport": "beacon", 
+				'dimension1': dimensionValue // siteVersion
+			});
+			// Unset the tracking hash appended by the newsletter
+			window.location.hash = "";
+    	}
+    
+    	// Attach mousedown, keyup, touchstart events to document only and catch
+    	// clicks on all elements.
+    	$(document.body).bind("mousedown keyup touchstart", function(event) {
+    
+    		// Catch the closest surrounding link of a clicked element.
+    		$(event.target).closest("a,area").each(function() {
+    
+    		// Is the clicked URL internal?
+    		if (googleAnalytics.googleanalytics.isInternal(this.href)) {
+    			// Skip 'click' tracking, if custom tracking events are bound.
+    			if ($(this).is('.colorbox') && (googleAnalytics.settings.googleanalytics.trackColorbox)) {
+    			// Do nothing here. The custom event will handle all tracking.
+    			//console.info("Click on .colorbox item has been detected.");
+    			}
+    			// Is download tracking activated and the file extension configured for download tracking?
+    			else if (googleAnalytics.settings.googleanalytics.trackDownload && googleAnalytics.googleanalytics.isDownload(this.href)) {
+    			// Download link clicked.
+    			console.log("SENDING event Downloads");
+    			ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Downloads",
+    				"eventAction": googleAnalytics.googleanalytics.getDownloadExtension(this.href).toUpperCase(),
+    				"eventLabel": googleAnalytics.googleanalytics.getPageUrl(this.href),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			// Google Analytics (1 of 2)
+    			if (googleAnalytics.googleanalytics.isGoogleDrive(this.href)) {
+    				// Google Drive event is clicked
+    				console.log("SENDING event Google Drive");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Google Drive",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			}
+    			else if (googleAnalytics.googleanalytics.isInternalSpecial(this.href)) {
+    			// Keep the internal URL for Google Analytics website overlay intact.
+    			console.log("SENDING special pageview");
+    			ga("send", {
+    				"hitType": "pageview",
+    				"page": googleAnalytics.googleanalytics.getPageUrl(this.href),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			}
+    		}
+    		else {
+    			if (googleAnalytics.settings.googleanalytics.trackMailto && $(this).is("a[href^='mailto:'],area[href^='mailto:']")) {
+    			// Mailto link clicked.
+    			console.log("SENDING Mailto link");
+    			ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Mails",
+    				"eventAction": "Click",
+    				"eventLabel": this.href.substring(7),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			}
+    			else if (googleAnalytics.settings.googleanalytics.trackOutbound && this.href.match(/^\w+:\/\//i)) {
+    			if (googleAnalytics.settings.googleanalytics.trackDomainMode !== 2 || (googleAnalytics.settings.googleanalytics.trackDomainMode === 2 && !googleAnalytics.googleanalytics.isCrossDomain(this.hostname, googleAnalytics.settings.googleanalytics.trackCrossDomains))) {
+    				// External link clicked / No top-level cross domain clicked.
+    				console.log("SENDING event outbound links");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Outbound links",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			// Google Analytics (2 of 2)
+    			if (googleAnalytics.googleanalytics.isGoogleDrive(this.href)) {
+    				// Google Drive event is clicked
+    				console.log("SENDING event Google Drive");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Google Drive",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			}
+    		}
+    		});
+    	});
+    
+    	// Track hash changes as unique pageviews, if this option has been enabled.
+    	if (googleAnalytics.settings.googleanalytics.trackUrlFragments) {
+    		window.onhashchange = function() {
+    		console.log("SENDING onhashchange");
+    		ga("send", {
+    			"hitType": "pageview",
+    			"page": location.pathname + location.search + location.hash,
+    			'dimension1': dimensionValue // siteVersion
+    		});
+    		};
+    	}
+    
+    	// Colorbox: This event triggers when the transition has completed and the
+    	// newly loaded content has been revealed.
+    	if (googleAnalytics.settings.googleanalytics.trackColorbox) {
+    		$(document).bind("cbox_complete", function () {
+    		var href = $.colorbox.element().attr("href");
+    		if (href) {
+    			console.log("SENDING colorbox pageview");
+    			ga("send", {
+    			"hitType": "pageview",
+    			"page": googleAnalytics.googleanalytics.getPageUrl(href),
+    			'dimension1': dimensionValue // siteVersion
+    			});
+    		}
+    		});
+    	}
+    
+    	});
+    
+    	/**
+    	* Check whether the hostname is part of the cross domains or not.
+    	*
+    	* @param string hostname
+    	*   The hostname of the clicked URL.
+    	* @param array crossDomains
+    	*   All cross domain hostnames as JS array.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isCrossDomain = function (hostname, crossDomains) {
+    	/**
+    	* jQuery < 1.6.3 bug: $.inArray crushes IE6 and Chrome if second argument is
+    	* `null` or `undefined`, https://bugs.jquery.com/ticket/10076,
+    	* https://github.com/jquery/jquery/commit/a839af034db2bd934e4d4fa6758a3fed8de74174
+    	*
+    	* @todo: Remove/Refactor in D8
+    	*/
+    	if (!crossDomains) {
+    		return false;
+    	}
+    	else {
+    		return $.inArray(hostname, crossDomains) > -1 ? true : false;
+    	}
+    	};
+    
+    	/**
+    	* Check whether this is a download URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isDownload = function (url) {
+    	var isDownload = new RegExp("\\.(" + googleAnalytics.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+    	return isDownload.test(url);
+    	};
+    
+    	/**
+    	* Check whether this is an absolute internal URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isInternal = function (url) {
+    	var isInternal = new RegExp("^(https?):\/\/" + window.location.host, "i");
+    	return isInternal.test(url);
+    	};
+    
+    	/**
+    	* Check whether this is a special URL or not.
+    	*
+    	* URL types:
+    	*  - gotwo.module /go/* links.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isInternalSpecial = function (url) {
+    	var isInternalSpecial = new RegExp("(\/go\/.*)$", "i");
+    	return isInternalSpecial.test(url);
+    	};
+    
+    	/**
+    	* Extract the relative internal URL from an absolute internal URL.
+    	*
+    	* Examples:
+    	* - https://mydomain.com/node/1 -> /node/1
+    	* - https://example.com/foo/bar -> https://example.com/foo/bar
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return string
+    	*   Internal website URL
+    	*/
+    	googleAnalytics.googleanalytics.getPageUrl = function (url) {
+    	var extractInternalUrl = new RegExp("^(https?):\/\/" + window.location.host, "i");
+    	return url.replace(extractInternalUrl, '');
+    	};
+    
+    	/**
+    	* Extract the download file extension from the URL.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return string
+    	*   The file extension of the passed url. e.g. "zip", "txt"
+    	*/
+    	googleAnalytics.googleanalytics.getDownloadExtension = function (url) {
+    	var extractDownloadextension = new RegExp("\\.(" + googleAnalytics.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+    	var extension = extractDownloadextension.exec(url);
+    	return (extension === null) ? '' : extension[1];
+    	};
+    
+    
+    
+    	/**
+    	* Check whether this is a Google Drive URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isGoogleDrive = function (url) {
+    		var isGoogleDrive = new RegExp("^(https?):\/\/" + "drive.google.com", "i");
+    		return isGoogleDrive.test(url);
+    	}
+    	
+    	/**
+    	* Check whether this is a tracked newsletter URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isNewsletterUrl = function (url) {
+    		var isNewsletterUrl = new RegExp("^#loopback", "i");
+    		return isNewsletterUrl.test(url);
+    	}
+    
+    	})(jQuery);
+    	;
+    /* ]]> */
+</script>
+
+
+<!-- SiteImprove //www.cmu.edu/__utm.js" type="text/javascript"></script>--><!-- SiteImprove -->
+<script type="text/javascript">
+    /*<![CDATA[*/
+    (function() {
+    	var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+    	sz.src = '//siteimproveanalytics.com/js/siteanalyze_18633.js';
+    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+    })();
+    /*]]>*/
+</script>
+
+<!-- Cascade Live -->
+<script async="async" src="https://live.clive.cloud/page-views/track/58"></script>
+		<!-- MagnificPopup Lightbox stuff -->
+		<script type="text/javascript">
+                //<![CDATA[     /* Grr XHTML */
+                        $(document).ready(function() {
+                                $('.videothumbnail').magnificPopup({
+                                        disableOn: 750,
+                                        type: 'iframe',
+                                        disableOn: function() {         /* Disable on small (most phones) or really wide-short (iPhone X) screens */
+                                                if( $(window).width() < 750 || $(window).height() < 500) {
+                                                        return false;
+                                                }       
+                                                return true;
+                                        }
+                                });
+                        });
+                //]]>
+		</script>
+	</body>
+</html>

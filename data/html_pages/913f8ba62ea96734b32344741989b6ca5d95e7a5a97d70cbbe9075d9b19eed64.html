@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<title>
+			Mailing Lists: Mailman Reference Guide - 
+			    SCS Computing Facilities - Carnegie Mellon University
+		</title>
+		<meta content="Mailing Lists: Mailman Reference Guide - Carnegie Mellon University School of Computer Science" name="description"/>
+		<meta content="Carnegie Mellon University School of Computer Science" name="author"/>
+		<meta content="Mailing Lists: Mailman Reference Guide - SCS Computing Facilities - Carnegie Mellon University" property="og:title"/>    
+    <meta content="Mailing Lists, Settings, Mailing, Mailman, Email, Mail, Client," property="og:description"/>
+    <meta content="Mailing Lists: Mailman Reference Guide - Carnegie Mellon University School of Computer Science" property="og:description"/>
+    <meta content="website" property="og:type"/>
+<meta content="http://computing.cs.cmu.edu/comm-collab/mailman-reference.html" property="og:url"/> 
+
+<meta content="1ebf3274ac1e007405a99c5bc424a604" name="id"/>
+<!-- Path is https://computing.cs.cmu.edu -->
+		<link href="../css/main-legacy.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/magnific-popup.css" rel="stylesheet" type="text/css"/>
+		<link href="../site-images/favicon.ico" rel="icon"/>
+		<link href="../site-images/favicon-152.png" rel="apple-touch-icon-precomposed"/>
+		<meta content="#9f0000" name="msapplication-TileColor"/>
+		<meta content="/site-images/favicon-144.png" name="msapplication-TileImage"/>
+		    
+    
+		
+
+<!-- Google Analytics GA4 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HMNJ98RBTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HMNJ98RBTS');
+</script>
+<!-- End Google Analytics GA4 -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33466045-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-33466045-4', { 'anonymize_ip': true, 'cookie_domain': 'computing.cs.cmu.edu', 'cookie_expires': 0 });
+</script>
+<!-- End Global site tag (gtag.js) - Google Analytics -->
+
+
+	</head>
+	<body class="no-js">
+	    
+
+<script>
+    if ( window.location.hostname == "computing-test.cs.cmu.edu" || window.location.hostname == "www.computing-test.cs.cmu.edu" || window.location.hostname == "computing-preview.cs.cmu.edu" || window.location.hostname == "www.computing-preview.cs.cmu.edu" ) {
+        document.write('<style>#internal-banner {z-index: 200; height: 57px; width: 100%; background: #FFFF55; position: fixed; top: 0; padding: 0em; box-sizing: border-box;box-shadow: 0px 2px 10px rgba(0,0,0,0.5);overflow: hidden;} #internal-banner p {display: inline-block; height: 57px; line-height: 57px; padding-left: 1em; padding-right: 1em; padding-bottom: 0; padding-top: 0;} #container {margin-top: 57px;} .roof {top: 57px;} nav.tree {top: 57px !important} .menu-on .menu-btn {top: 57px !important}</style>');
+        document.write('<div id="internal-banner"><p><strong>This is the Computing Preview site!</strong> It may not contain fully vetted or accurate information.</p> <p><a href="https://computing.cs.cmu.edu/comm-collab/mailman-reference.html">Visit on the live site</a></p></div>');
+    }if ( window.location.hostname == "computing-webdev.cs.cmu.edu" || window.location.hostname == "www.computing-webdev.cs.cmu.edu" ) {
+        document.write('<style>#internal-banner {z-index: 200; height: 57px; width: 100%; background: #FF5555; position: fixed; top: 0; padding: 0em; box-sizing: border-box;box-shadow: 0px 2px 10px rgba(0,0,0,0.5);overflow: hidden;} #internal-banner p {display: inline-block; height: 57px; line-height: 57px; padding-left: 1em; padding-right: 1em; padding-bottom: 0; padding-top: 0;} #container {margin-top: 57px;} .roof {top: 57px;} nav.tree {top: 57px !important} .menu-on .menu-btn {top: 57px !important}</style>');
+        document.write('<div id="internal-banner"><p><strong>This is a development testbed.</strong> You might be lost...</p> <p><a href="https://computing.cs.cmu.edu">Visit the live site</a></p></div>');
+    }
+</script>
+
+		<div id="container">
+			
+
+
+
+
+
+<div class="roof darkgrey invert">
+    <div>
+        <a class="wordmark" href="https://cs.cmu.edu/">Carnegie Mellon University School of Computer Science</a>
+        <a aria-label="Jump to navigation" class="menu-btn" href="#nav"><b>—</b><b>—</b><b>—</b></a>
+        
+        
+                        <form action="https://search.cmu.edu" class="search" method="get">
+            <label>
+                <span>Search</span>
+                <input aria-label="Search" name="q" placeholder="Search"/>
+                <input id="site" name="siteSearch" type="hidden" value="https://computing.cs.cmu.edu"/>
+            </label>
+            <input id="id_ie" name="ie" type="hidden" value="UTF-8"/>
+            <button title="Submit" type="submit">Search</button>
+        </form>
+        
+        
+                						<div class="quicklinks">	
+			<span>Quick Links:</span>
+						<a href="../landing/student">Students</a><a href="../landing/faculty">Faculty</a><a href="../landing/staff">Staff</a><a class="helpbutton" href="../gethelp">Submit a Ticket</a>
+		</div>
+    </div>
+</div>
+
+			<header>
+				  
+       
+
+            <div id="sitename">
+                                    <h1><a href="../index">SCS Computing Facilities</a></h1>                                             </div>    
+    
+                 
+				        
+    <div class="breadcrumbs">
+                                <a href="../index">~help</a>
+        
+                                      /  <a href="index">Communication and Collaboration</a>
+                                                  /              Mailing Lists: Mailman Reference Guide
+                            </div>
+
+			</header>
+			<div id="content">
+				    
+
+
+
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <div class="content" id="Intro">
+                        <div class="content-body">                             <h1 id="top_of_contents">Mailman Reference Guide</h1>
+<p>The SCS Help Desk team are site administrator's for SCS mailman. You should <a href="../forms/submit-ticket">submit a ticket</a>&#160;when you want to:</p>
+<ul>
+<li>create a mailing list</li>
+<li>delete a mailing list</li>
+<li>change the administrator of a mailing list</li>
+<li>migrate a mailing list</li>
+<li>report something doesn't seem to be working right with the system</li>
+<li>suggest how things could be made better</li>
+</ul>
+<h2><span>Using Mailman</span></h2>
+                                                <h2 class="collapsed" id="list-admin">As a List Administrator</h2>
+                        <div>
+                <h3><strong>List administrators</strong></h3>
+<p>These are the individuals that control each mailing list. They control membership management, list posting rules, list visibility, and other list-specific behaviors. Contact the list administrator when you want to:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>get more information about the list</li>
+<li>be subscribed to a mailing list (if you are not freely able to)</li>
+<li>unsubscribe from a mailing list (if you are not freely able to)</li>
+<li>report problems with receipt or submission of list postings</li>
+<li>The mail address of the list administrator can be found at the bottom of all pages associated to the mailing list.&#160;</li>
+</ul>
+</li>
+</ul>
+<h4>Accessing the List's Administrator Page</h4>
+<p>Point your web browser to:<span>&#160;</span><kbd>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;</span></p>
+<p>Authenticate to WebISO with your SCS Kerberos principal username and password.&#160; If you have forgotten your password, please <a href="../forms/submit-ticket" rel="noopener" target="_blank">submit a ticket</a>.</p>
+<p>A common error that new list administrators may make is authenticating with the wrong SCS Kerberos principal (e.g. one's Andrew principal instead of their SCS principal). If this is done, mailman will bring up a screen that asks for the list's administrator password. You must either enter the administrator password, or go back to the WebISO login page at<span>&#160;</span><a href="https://webiso.cs.cmu.edu/" rel="noopener" target="_blank">https://webiso.andrew.CMU.edu</a><span>&#160;</span>to re-authenticate to the correct SCS principal.</p>
+<h4>Setting the administrator password</h4>
+<p><i>Although Mailman has been set up to use WebISO for authentication, there may be times when you would like to allow another person access the list's administrator page without adding them to the list of administrators. To do this, you must set the list's administrator password.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Login to&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>At the top of the page, under "Configuration Categories", select the link "Passwords".</li>
+<li>Next to the label "Enter new administrator password:", enter a password and confirm it by typing it a second time below.</li>
+<li>Scroll down to the bottom of the page, and click the button labeled "submit your changes".</li>
+</ol>
+<h4>Making a List Visible to the Public</h4>
+<p><i>By default, a newly created mailing lists are hidden from view, and users are required to know the exact name of the mailing list before they are able to subscribe to it.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>At the top of the page, under "Configuration Categories", select the link "Privacy Options".</li>
+<li>Under the heading "Subscribing", on the row with the description, "Advertise this list when people ask what lists are on this machine?", select the radio button next to "yes".</li>
+<li>Scroll down to the bottom of the page, and click the button labeled "submit your changes".</li>
+</ol>
+<h5>On Including Sublists</h5>
+<p><i>This step is optional, as it only applies to people who want to create a super-list (a.k.a. "umbrella list") to which other mailing lists are subscribed to. Please note that if you do this, it is imperative to subscribe<span>&#160;</span><strong>only other mailing lists</strong><span>&#160;</span>to the list. If you would like to add regular users, you must create a sublist that is subscribed to your list that contains those users.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Next to the setting 'Send password reminders to eg "-owner" address...', select the "yes" radio button.</li>
+<li>Scroll to the bottom of the page, and click the "submit your changes" button.</li>
+</ol>
+<h4>Configuring Member Posting Policy</h4>
+<p><i>The list administrator can make it so that all list members' posts are held for moderation. This is useful in the case that the administrator and moderators would like to have complete control over the list content when even the members are not trusted.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Under the heading "Configuration Categories", select the link "Membership Management"</li>
+<li>Toward the bottom of the page, there should be a heading, "Additional Member Tasks". If you would like to make it so that all list members' posts are held for moderation, under the text "Set everyone's moderation bit, including those members not currently visible", select the radio button next to "On".</li>
+<li>Scroll to the bottom of the page and click the button labeled "Submit Your Changes"</li>
+</ol>
+<h4>Adding Members</h4>
+<p><i>In addition to users being able to subscribe themselves to a mailing list, the list owners also have the ability to add members to their lists.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>At the top of the page, under "Configuration Categories", select the link "Membership Management..."</li>
+<li>A new page will load, and under the Membership Management link you just clicked, there should be a link "Mass Subscription". Click it.</li>
+<li>In the first text field on the page, enter the email addresses of each subscriber, one per line.</li>
+<li>When you are done adding members, scroll to the bottom of the page, and click the button labeled "Submit Your Changes".</li>
+</ol>
+<h4>Setting The Moderator Password</h4>
+<p><i>A moderator password must be set for the list so that the moderators can have access to the pages that are used to approve or deny list postings that are held for moderation.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>At the top of the page, under "Configuration Categories", select the link "Passwords".</li>
+<li>Scroll down, and enter and confirm the list moderator password.</li>
+<li>Scroll to the bottom of the page and click the button labeled "Submit Your Changes".</li>
+<li>If desired, you may now assign list moderators.</li>
+</ol>
+<h4>Assigning Moderators</h4>
+<p><i>List moderators act as content filters, who have the authority to approve or deny post submissions when the appropriate settings are made.&#160;</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span><span>&#160;</span></li>
+<li>Next to the section labeled "The list moderator email addresses...", add the email addresses of all the people that you would like to delegate as list moderators.</li>
+<li>Scroll to the bottom of the page and click the button labeled "Submit Your Changes"</li>
+</ol>
+<h4>Configuring Whitelists And Blacklists</h4>
+<p><i>Whitelists and blacklists allow the list administrator to specify sender email addresses and regular expressions that are applied to sender email addresses which determine certain behaviors when messages from those addresses get posted to the mailing list. Setting up whitelists and blacklists may require you to use "Perl-Compatible" regular expressions.&#160;</i></p>
+<p><i>If you decide to use regular expression matching in any of the fields, you must prefix the line with the regular expression string with an upcaret (</i>'^'<i>, shift-6)</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Under the heading "Configuration Categories", select the link "Privacy Options"</li>
+<li>At the same location, there should now be a heading "Privacy Options". Select the link "Sender Filters".</li>
+<li>Halfway down the page, there should be a heading, "Non-member filters". Next to the row with the description, "List of non member addresses who postings should be automatically accepted", enter email addresses, or regular expressions to use, for which all matching posts' senders will be automatically accepted.</li>
+<li>The next row down, with the description, "List of... immediately held for moderation.", enter enter email addresses, or regular expressions to use, for which all matching posts' senders will be automatically held for moderation.</li>
+<li>The next row down, with the description, "List of... automatically rejected.", enter enter email addresses, or regular expressions to use, for which all matching posts' senders will be automatically sent back to the poster with a rejection notice.</li>
+<li>The next row down, with the description, "List of... automatically discarded.", enter enter email addresses, or regular expressions to use, for which all matching posts' senders will be automatically deleted and no other action taken.</li>
+<li>if you would like to make the list an open-posting list, in the row with the description "Action to take for postings from non-members for which no explicit action is defined", select the radio button next to the word, "Accept".</li>
+<li>When you are finished, scroll to the bottom of the page and click the button labeled "Submit Your Changes".</li>
+</ol>
+<h4>Blocking messages that have been tagged as spam</h4>
+<p><i>All mail that goes through the mail transport system at SCS is tagged for spam. It is possible to use the mail headers that are added in this tagging process to your advantage when you would like to eliminate posts that have been identified as spam.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Under the heading "Configuration Categories", select the link "Privacy Options"</li>
+<li>At the same location, there should now be a heading "Privacy Options". Select the link "Spam Filters".</li>
+<li>After the page reloads, look for a heading "Filter rules to match against the headers of a message.". Next to it is a text field. Because all messages that are tagged as spam contain the header<span>&#160;</span><tt>X-Spam-Warning</tt>, add the text<span>&#160;</span><kbd>X-Spam-Warning:</kbd><span>&#160;</span>to the text field.</li>
+<li>Next, choose the action that you would like mailman to take when it receives a message that matches the rule you just added. The recommended action is<span>&#160;</span><tt>hold</tt>, which tells mailman to hold the message for moderation.</li>
+<li>When you are finished, scroll to the bottom of the page and click the button labeled "Submit Your Changes".</li>
+</ol>
+<h5>Overview of Perl Compatible Regular Expressions</h5>
+<ul>
+<li>Matching all email addresses that end in CMU.edu: (e.g. anyone@anything.CMU.edu)<span>&#160;</span><kbd>^.*CMU\.edu$</kbd></li>
+<li>Matching all email addresses in RI that have a submailbox:<br/>(e.g. anyone+anymbox@anything.ri.CMU.edu)<span>&#160;</span><kbd>^\w+[+|=]\w+@.*\.ri\.CMU\.edu$</kbd></li>
+</ul>
+<h4>Attending to Moderation Requests as a List Admin</h4>
+<p><i>Although specially designated list moderators are often the ones who handle moderation requests, list administrators are still the primary contact for moderation. Messages are held for moderation most often when a non-member attempts to post to a mailing list, but more or less restrictive behavior can be specified as well.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>At the top of the page, under the heading "Other Administrative Activities", access the link "Tend to pending moderator requests"</li>
+<li>Select and perform the appropriate actions to take on the held messages</li>
+</ol>
+<h4>Adding additional list administrators</h4>
+<p><i>It is possible to add Kerberos principals and AFS PTS groups to the list of administrators to give somebody, or groups of people, access to the administrative interface for your mailing list</i></p>
+<p><i>Note that if you take your own principal off the list of administrators, you cannot access the administrator page unless you use the administrator password.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Log in at&#160;</span>https://mailman.srv.cs.CMU.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Next to the heading "Kerberos principals for the list administrators, or pts groups containing them.", add the Kerberos principal of the person you would like to give access. Note that it<span>&#160;</span><strong>must</strong><span>&#160;</span>be formatted<span>&#160;</span><tt>principal@REALM</tt>. Alternatively, you can add an AFS PTS group, formatted<span>&#160;</span><tt>userid:group.name</tt>.</li>
+<li>If you would like this person to receive informational messages that get sent out to list administrators, add the person's email address in the field labeled "The list administrator email addresses. Multiple administrator addresses, each on separate line is okay."</li>
+<li>When you are finished, scroll to the bottom of the page and click the button labeled "Submit Your Changes".</li>
+</ol>
+<p>&#160;</p>
+            </div>
+                                    <h2 class="collapsed" id="list-moderators">As a List Moderator</h2>
+                        <div>
+                <h3>List moderators</h3>
+<p>List moderator act as content filters for list postings when the list administrator(s) are unavailable to perform those duties. If list moderators have been appointed, they will receive an email each time the list receives a post that needs moderation.&#160; List moderators are appointed by the list administrator.</p>
+<h4>Attending to Moderation Requests as a Moderator</h4>
+<p><i>As a list moderator, you are responsible for approving content that is posted to the mailing list. When a message is received for which it is decided to be held for moderation, the list moderators and the list administrator are notified and told to visit the list moderation page.</i></p>
+<ol>
+<li><kbd><span color="#000000" face="Open Sans, Helvetica, sans-serif" style="color: #000000; font-family: 'Open Sans', Helvetica, sans-serif;">Login to&#160;</span>https://mailman.srv.cs.cmu.edu/mailman/admin/&lt;listname&gt;</kbd><span>&#160;page</span></li>
+<li>Enter the list's moderator password<br/><i>If you don't know this, you must contact the list administrator to send this to you.</i></li>
+<li>Select and perform the appropriate actions to take on the held messages</li>
+</ol>
+            </div>
+                                    <h2 class="collapsed" id="list-subscriber">As a List Subscriber</h2>
+                        <div>
+                <h3>List subscribers</h3>
+<p>List subscribers are the general users of the system, who submit and receive list postings.</p>
+<h4>Subscribing to a List</h4>
+<h3><i>In addition to the methods described below, you may also contact the list owner directly and have yourself added without needing to subscribe via the methods described below.</i></h3>
+<ul>
+<li>If the list is a publicly advertised list:
+<ol>
+<li><span>Visit&#160;</span><kbd>https://mailman.srv.cs.cmu.edu/mailman/listinfo/&lt;list_name&gt;</kbd></li>
+<li>Locate the mailing list in the list displayed, and click the link associated with it.</li>
+<li>Under the heading, "Subscribing to &lt;list_name&gt;", enter the email address that you would like to receive list postings at, and the rest of the requested information.</li>
+<li>Click the button labeled "Subscribe" below.</li>
+<li>After clicking the button, you should receive shortly an email with your subscription confirmation. Follow the directions outlined in the email.</li>
+</ol>
+</li>
+<li>If the list is not publicly advertised:
+<ol>
+<li>Contact the owner to obtain the exact name of the mailing list.</li>
+<li><span>Visit&#160;</span><kbd>https://mailman.srv.cs.cmu.edu/mailman/listinfo/&lt;list_name&gt;</kbd></li>
+<li>Under the heading, "Subscribing to &lt;list_name&gt;," enter the email address that you would like to receive list postings at, and the rest of the requested information.</li>
+<li>Click the button labeled "Subscribe" below.</li>
+<li>After clicking the button, you should receive shortly an email with your subscription confirmation. Follow the directions outlined in the email.</li>
+</ol>
+</li>
+</ul>
+<p>After you have subscribed to your first mailing list, it is strongly recommended that you consider <a href="https://mailman.srv.cs.cmu.edu/mailman/listinfo/scs-mailman-announce">subscribing to the SCS-Mailman-Announce mailing list</a>.</p>
+<h4>Setting Up Your Preferences as a List Subscriber, Unsubscribing, and Retrieving a Lost Password</h4>
+<ol>
+<li>Visit<span>&#160;</span><kbd>https://mailman.srv.cs.cmu.edu/mailman/listinfo/&lt;list_name&gt;</kbd></li>
+<li>Under the heading "&lt;list_name&gt; subscribers", enter the email address that you receive mailing list posts at, next to the button labeled, "Unsubscribe or Edit Options". Note if you have forgotten the email address at which you receive list posts, contact the mailing list owner.</li>
+<li>click the button labeled "Unsubscribe or Edit Options".</li>
+<li>in the next screen you will be prompted for a password. In this screen, you will also be able to unsubscribe, or retrieve your password in this screen.</li>
+<li>If you have chosen to log in to your preferences page, you will be brought to a page where you can set your preferences.</li>
+</ol>
+<p>The SCS Help Desk can unsubscribe you from SCS mailing lists at your request. To be unsubscribed please <a href="../forms/submit-ticket" rel="noopener" target="_blank">submit a ticket</a> with the name of the mailing list(s) you would like to be unsusbscribed from.</p>
+            </div>
+                                    <h2 class="collapsed" id="list-poster">As a List Poster</h2>
+                        <div>
+                <h3>Posting to an Existing Mailing List</h3>
+<p>Posting to a list is rather straightforward, the only thing that must be done is to send mail to &lt;listname&gt;@cs.cmu.edu. If you are a subscriber of the list, more often than not, the post will be accepted. The other subscribers will then receive the post. If the list is configured to do so, you will also receive a copy of your post.</p>
+<p>If you are<span>&#160;</span><strong>not</strong><span>&#160;</span>a subscriber of the list, one of a few things could happen:</p>
+<ul>
+<li>The mail will be held for moderation, and a moderator will determine whether your post is relevant to the discussion in the list. If the post is accepted, you will receive an email saying so, but you will not receive a copy of the post.</li>
+<li>The mail will be rejected, and you will be notified.</li>
+<li>The mail will be dropped, and you will not be notified</li>
+</ul>
+            </div>
+                                                    </div><div class="sidebar">                                                         <div class="list  teal invert">
+                            <h1>Need a Mailing List?</h1>
+                            <ul>
+                                                                                                                                    <li><a href="forms/list-request" target="_blank">Mailing List Request Form</a></li>
+            </ul>
+        	</div>
+                                                        <div class="list  grey">
+                            <ul>
+                                                                                                                                    <li><a href="email-mailman" target="_blank">SCS Mailing Lists</a></li>
+                                                                                                                                    <li><a href="email-mailman-faq" target="_blank">FAQ: SCS Mailing Lists</a></li>
+                                                                                                                                    <li><a href="email-mailman-settings" target="_blank">Mailman Settings</a></li>
+            </ul>
+        	</div>
+                                                        
+		<div class="list  darkgrey invert">
+			<h1>Need Help?</h1>
+		
+				<ul>
+			   																		        	        	        			<li><a href="../forms/submit-ticket" target="_blank">Submit a Ticket</a></li>
+												<li><a href="tel:4122684231" target="_self">Call 412-268-4231</a></li>
+			   																		        	        	        			<li><a href="../help-support/location-map" target="_blank">Visit GHC 4203</a></li>
+		</ul>
+	</div>                             </div>                          </div>                     
+				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="feedback-section grid column2 red invert nav">
+	<div class="feedback-instructions">
+		<h2 class="para-5"><span class="font-48">Was this page helpful?</span></h2>
+		<p>Use this box to give us feedback on this webpage and its content. If you need a response, please include your Andrew ID.</p>
+		<p>Need technical support?  <a href="../forms/submit-ticket">Submit a ticket</a></p>
+	</div>
+	<div class="feedback-goes-here">
+		<input aria-hidden="true" class="hidden" id="show-feedback" type="checkbox"/>
+		<label aria-hidden="true" class="feedback-button" for="show-feedback">Give us Feedback!</label>
+		<iframe allowtransparency="true" frameborder="0" height="235" id="feedback-form" scrolling="no" src="https://cmu-scs.forms-db.com/embed.php?id=20031&amp;element_3=/comm-collab/mailman-reference%20Mailing+Lists%3A+Mailman+Reference+Guide" style="width: 100%; border: none;" title="Website Feedback" width="300">
+        <a href="https://cmu-scs.forms-db.com/view.php?id=20031&amp;element_3=/comm-collab/mailman-reference%20Mailing+Lists%3A+Mailman+Reference+Guide" title="Website Feedback">Website Feedback</a></iframe>
+
+	</div>
+</div>
+
+
+				<footer class="grid invert">
+					<div class="contactscs">
+	<section>
+		<h2>SCS Help Desk</h2>
+		<description>Computing support and general advice
+		</description>
+		<p>GHC 4203</p>
+		<p>help@cs.cmu.edu</p>
+		<p><a href="tel:4122684231">412-268-4231</a></p>
+		<p>Monday—Friday, 9am—5pm</p>
+		<!--<p class="specialhours">Special Hours:<br/>Friday March 30, 9 AM - Noon</p>-->
+	</section>
+
+	<section>
+		<h2>SCS Operations</h2>
+		<description>Machine rooms, SCS printers, Audio-Visual, 
+			<br/>after-hours support
+		</description>
+		<p><a href="tel:4122682608">412-268-2608</a></p>
+		<p>24/7 machine room operations</p>
+	</section>
+
+
+
+	<a class="university-wordmark" href="https://cmu.edu">
+		<img alt="Carnegie Mellon University Logo" src="../site-images/cmu/cmu-wordmark-white-small.png"/>
+	</a>
+</div>
+					
+
+
+<div>
+   <nav id="nav">
+
+     
+         
+         
+         
+         
+         
+    
+                    <ul>
+                                        <li>                              <a href="../index" target="_self">         
+                Homepage
+    </a>
+    </li>
+                 
+            
+                            <li class="">                              <a href="../accounts-access/index" target="_self">          
+                Accounts and Access
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../accounts-access/access-mgmt" target="_self">         
+                Access Managment
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../accounts-access/transition-student-services" target="_self">         
+                Transition Student Services
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="../accounts-access/transition-services" target="_self">         
+                Transition Faculty and Staff Services
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../business/index" target="_self">          
+                Business
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../business/support-charges" target="_self">         
+                Support Charges
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/purchasing" target="_self">         
+                Purchasing and Technical Procurement
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/receiving" target="_self">         
+                Receiving
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../business/support-hardware" target="_self">         
+                Hardware Support
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../business/support-software" target="_self">         
+                Software Support
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="index" target="_self">          
+                Communication and Collaboration
+    </a>
+             
+                              
+                                                 
+                                                                     
+                                                                     
+                                                                     
+    
+                    <ul>
+                                        <li>                              <a href="email" target="_self">         
+                Email
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="email-mailman-faq" target="_self">         
+                FAQ: Mailing Lists
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="email-mailman-restrict" target="_self">         
+                Mailing Lists: Restrict Posting to a Privileged Group
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="email-mailman" target="_self">         
+                Mailing Lists: Mailman
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="email-clients" target="_self">         
+                Email Client Configuration
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                                                 
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="av-guidelines" target="_self">         
+                Audio-Visual Room Guidelines
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="email-mailman-settings" target="_self">         
+                Mailing Lists: Mailman Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li class="active">                              <a href="mailman-reference" target="_self">         
+                Mailing Lists: Mailman Reference Guide
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../desktop/index" target="_self">          
+                Desktop Computing
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../desktop/supported-hardware" target="_self">         
+                Supported Computer Hardware
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/os-software" target="_self">         
+                Operating Systems and Software
+    </a>
+    </li>
+                                                                                                         
+                                                                     
+    
+                            <li>                              <a href="../desktop/support-mac" target="_self">         
+                macOS Support
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/support-linux" target="_self">         
+                Linux Support
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-unsupportedsca" target="_self">         
+                Linux Service Configuration Add-Ons
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-openvm" target="_self">         
+                Launching an SCS Virtual Machine
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/os-linuxgp" target="_self">         
+                Linux GP: General Purpose Linux Hosts
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/recom-configs" target="_self">         
+                Recommended Computers and Configurations
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/recom-other" target="_self">         
+                Recommended Accessories
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-scspublic" target="_self">         
+                One-Time SCS Printing Enrollment Procedure
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/printing" target="_self">         
+                Printing in SCS
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/printing-posters" target="_self">         
+                Poster Printing
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/network" target="_self">         
+                Networking
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/os-lifecycle" target="_self">         
+                Operating System Support Lifecycle
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../desktop/ntp-settings" target="_self">         
+                Networking: Check NTP Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/ip-renew" target="_self">         
+                Networking: Release and Renew IP Address
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/check-dns-settings" target="_self">         
+                Networking: Check DNS Settings
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-linux-private" target="_self">         
+                Printing on Unsupported Linux Computers
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/printing-windows-private" target="_self">         
+                Printing on Unsupported Windows Computers
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                            <li>                              <a class="external" href="https://computing.cs.cmu.edu/desktop/recom-dell.html#desktops" target="_blank">         
+                Recommended Dell Desktops for Linux
+    </a>
+    </li>
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/anyconnect-sbl" target="_self">         
+                anyconnect-sbl
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../desktop/remotemacsetup" target="_self">         
+                Remote Apple Mac Setup
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../desktop/afs-cellservdb" target="_self">         
+                AFS CellServDB
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../server/index" target="_self">          
+                Server Computing
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../server/project-servers" target="_self">         
+                Project Server Consulting
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../server/server-cert-ts" target="_self">         
+                Web Server Certificate Troubleshooting
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../server/server-certs" target="_self">         
+                Web Server Certificates
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../research/index" target="_self">          
+                Research Computing
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../research/hpc" target="_self">         
+                High Performance Computing (HPC)
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../help-support/index" target="_self">          
+                Help and Support
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../help-support/afs-user-vol" target="_self">         
+                AFS User Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-backup-restore" target="_self">         
+                AFS Backup and Restore
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-project-vol" target="_self">         
+                AFS Project Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-academic-vol" target="_self">         
+                AFS Academic Volumes
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/mysql-backup" target="_self">         
+                Linux MySQL Backup
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/kerberos" target="_self">         
+                Kerberos
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-quota" target="_self">         
+                AFS Quotas
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/instance-manager" target="_self">         
+                Kerberos Instance Manager
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../help-support/web-publishing" target="_self">         
+                Web Publishing: Personal or Project Websites
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/laptop-loan" target="_self">         
+                Laptop Lending
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../help-support/equip-registration" target="_self">         
+                Equipment Registration and Management
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/using-htaccess" target="_self">         
+                Using .htaccess files in AFS
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-acls" target="_self">         
+                AFS Permissions (Access Control Lists)
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-auth" target="_self">         
+                AFS Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-cache" target="_self">         
+                AFS Cache Manager and Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-cells" target="_self">         
+                AFS Cells and Cross-Realm Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-crossplatform" target="_self">         
+                AFS Cross-Plat  Directories
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-auth-daemons" target="_self">         
+                AFS Daemon Authentication
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../help-support/afs-using" target="_self">         
+                AFS in SCS
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="../help-support/afs-groups" target="_self">         
+                AFS Groups
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../help-support/afs-troubleshooting" target="_self">         
+                AFS Troubleshooting
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+    
+                            <li>                              <a href="../help-support/location-map" target="_self">         
+                Help Desk Location
+    </a>
+    </li>
+                                                                             
+                                                                     
+                                                                     
+                            <li>                              <a class="external" href="https://computing.cs.cmu.edu/desktop/microsoft-updates.html" target="_self">         
+                Microsoft Updates
+    </a>
+    </li>
+                                                                     
+                                                        </ul>
+                            </li>
+                     
+         
+         
+         
+            
+                            <li class="">                              <a href="../backup/index" target="_self">          
+                Backup
+    </a>
+             
+                              
+                                                                             
+    
+                    <ul>
+                                        <li>                              <a href="../backup/faq-archivalbackup" target="_self">         
+                Frequently Asked Questions: Archival Backup Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/faq-datarecovery" target="_self">         
+                Frequently Asked Questions: Data Protection Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/data-protection" target="_self">         
+                Data Protection Service
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../backup/archival-backups" target="_self">         
+                Archival Backup Service
+    </a>
+    </li>
+                                                                             
+                                                        </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../security/index" target="_self">          
+                Security and Computing
+    </a>
+             
+                              
+                                                 
+    
+                    <ul>
+                                        <li>                              <a href="../security/security-ssh" target="_self">         
+                Secure Shell (SSH)
+    </a>
+    </li>
+                                                                                                         
+    
+                            <li>                              <a href="../security/security-linux" target="_self">         
+                Security: Linux
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../security/security-firewall" target="_self">         
+                Security: Firewalls and SCS
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../security/security-xserver" target="_self">         
+                Security: X Server
+    </a>
+    </li>
+                                                                             
+                                                                     
+    
+                            <li>                              <a href="../security/security-password" target="_self">         
+                Security: Passwords
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../security/security-phishing" target="_self">         
+                Security: Phishing, Hoaxes &amp; Scams
+    </a>
+    </li>
+                                                                             
+    
+                            <li>                              <a href="../security/security-windows" target="_self">         
+                Security: Windows
+    </a>
+    </li>
+                                                                </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../news/index" target="_self">          
+                News Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+            
+                    <ul>
+                                        <li class="">                              <a href="../news/2018/index" target="_self">          
+                2018 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2019/index" target="_self">          
+                2019 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2020/index" target="_self">          
+                2020 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2021/index" target="_self">          
+                2021 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2022/index" target="_self">          
+                2022 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../news/2023/index" target="_self">          
+                2023 Archive
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                    </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../people/index" target="_self">          
+                People
+    </a>
+             
+                              
+                                                 
+                                                                                                 
+            
+                    <ul>
+                                        <li class="">                              <a href="../people/bussvcs/index" target="_self">          
+                Business Services People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/hd/index" target="_self">          
+                Help Desk People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/ops/index" target="_self">          
+                Computer Operations People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/pc/index" target="_self">          
+                PC Engineering People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/pm/index" target="_self">          
+                Project Management People
+    </a>
+             
+                              
+                                                                    </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/tcp/index" target="_self">          
+                Technical Communication Platforms People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+            
+                            <li class="">                              <a href="../people/unix/index" target="_self">          
+                Unix Engineering People
+    </a>
+             
+                              
+                                                                             
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                                                                                 
+                                                                     
+                                                                     
+            
+                            <li class="">                              <a href="../people/webapps/index" target="_self">          
+                Web Application Services People
+    </a>
+             
+                              
+                                                 
+                                                                     
+                                                                                        </li>
+                                                                    </ul>
+                            </li>
+                     
+            
+                            <li class="">                              <a href="../dashboard/index" target="_self">          
+                Dashboard Events Archive
+    </a>
+             
+                              
+                                                 
+                                                                                                 
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                            </li>
+                     
+         
+         
+    
+                            <li>                              <a href="../sitemap" target="_self">         
+                Site Map
+    </a>
+    </li>
+                 
+         
+         
+         
+         
+         
+         
+         
+         
+         
+                                                                                                                                                    </ul>
+    </nav>
+</div>
+
+
+
+					<div class="legal">
+						<a href="https://www.cmu.edu/legal/">Legal Info</a>
+						<a href="../people/index">People</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+		
+
+<script src="../js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="../js/main-legacy.js" type="text/javascript"></script>
+<script src="../js/magnific.js" type="text/javascript"></script>
+
+
+		 
+                
+
+        
+		    
+    
+		
+		
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- MOVED TO HEAD -->
+<!-- UA-33466045-4 - computing.cs.cmu.edu -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33466045-4"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-33466045-4', { 'anonymize_ip': true, 'cookie_domain': 'computing.cs.cmu.edu', 'cookie_expires': 0 });
+</script>-->
+
+<!-- Google Analytics, but ONLY for custom events -->
+<!-- Regular page views are handled by gtag.js in the head (in /_cms/blocks/analytis - head - scs-cf) -->
+<!-- UA-33466045-4 - computing.cs.cmu.edu -->
+
+<script>
+    /* <![CDATA[ */
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-33466045-4', 'auto');
+		var dimensionValue = 'Cascade';
+		ga('set', 'dimension1', dimensionValue); // siteVersion
+		
+		// Do NOT send a pageview here, because that is taken care of in gtag.js in the head
+		// ga('send', 'pageview'); 
+    /* ]]> */
+</script>
+
+
+<!-- Google Analytis for custom events - custom code -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    // Custom tracking, as per updated on CS.CMU.EDU
+    
+    	let googleAnalytics = {
+    		"settings": {
+    			"googleanalytics": {
+    				"trackOutbound": 1,
+    				"trackMailto": 1,
+    				"trackDownload": 1,
+    				"trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip",
+    				"trackNewsletterUrl": 1
+    				
+    			}
+    		},
+    		"googleanalytics": {
+    
+    		}
+    	};
+    
+    
+    	var dimensionValue = 'Cascade, pre-Redscale';
+    	ga('set', 'dimension1', dimensionValue); // siteVersion
+    
+    
+    
+    	(function ($) {
+    
+    
+    
+    	$(document).ready(function() {
+    	
+    	// Track links from the Loopback newsletter
+    	if (googleAnalytics.settings.googleanalytics.trackNewsletterUrl && window.location.hash && googleAnalytics.googleanalytics.isNewsletterUrl(window.location.hash)) {
+	    	// Google Drive event is clicked
+			console.log("SENDING event Pageview from Loopback Newsletter");
+			ga("send", {
+				"hitType": "event",
+				"eventCategory": "Pageview from Loopback Newsletter",
+				"eventAction": window.location.hash,
+				"eventLabel": window.location.href,
+				"transport": "beacon", 
+				'dimension1': dimensionValue // siteVersion
+			});
+			// Unset the tracking hash appended by the newsletter
+			window.location.hash = "";
+    	}
+    
+    	// Attach mousedown, keyup, touchstart events to document only and catch
+    	// clicks on all elements.
+    	$(document.body).bind("mousedown keyup touchstart", function(event) {
+    
+    		// Catch the closest surrounding link of a clicked element.
+    		$(event.target).closest("a,area").each(function() {
+    
+    		// Is the clicked URL internal?
+    		if (googleAnalytics.googleanalytics.isInternal(this.href)) {
+    			// Skip 'click' tracking, if custom tracking events are bound.
+    			if ($(this).is('.colorbox') && (googleAnalytics.settings.googleanalytics.trackColorbox)) {
+    			// Do nothing here. The custom event will handle all tracking.
+    			//console.info("Click on .colorbox item has been detected.");
+    			}
+    			// Is download tracking activated and the file extension configured for download tracking?
+    			else if (googleAnalytics.settings.googleanalytics.trackDownload && googleAnalytics.googleanalytics.isDownload(this.href)) {
+    			// Download link clicked.
+    			console.log("SENDING event Downloads");
+    			ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Downloads",
+    				"eventAction": googleAnalytics.googleanalytics.getDownloadExtension(this.href).toUpperCase(),
+    				"eventLabel": googleAnalytics.googleanalytics.getPageUrl(this.href),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			// Google Analytics (1 of 2)
+    			if (googleAnalytics.googleanalytics.isGoogleDrive(this.href)) {
+    				// Google Drive event is clicked
+    				console.log("SENDING event Google Drive");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Google Drive",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			}
+    			else if (googleAnalytics.googleanalytics.isInternalSpecial(this.href)) {
+    			// Keep the internal URL for Google Analytics website overlay intact.
+    			console.log("SENDING special pageview");
+    			ga("send", {
+    				"hitType": "pageview",
+    				"page": googleAnalytics.googleanalytics.getPageUrl(this.href),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			}
+    		}
+    		else {
+    			if (googleAnalytics.settings.googleanalytics.trackMailto && $(this).is("a[href^='mailto:'],area[href^='mailto:']")) {
+    			// Mailto link clicked.
+    			console.log("SENDING Mailto link");
+    			ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Mails",
+    				"eventAction": "Click",
+    				"eventLabel": this.href.substring(7),
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    			});
+    			}
+    			else if (googleAnalytics.settings.googleanalytics.trackOutbound && this.href.match(/^\w+:\/\//i)) {
+    			if (googleAnalytics.settings.googleanalytics.trackDomainMode !== 2 || (googleAnalytics.settings.googleanalytics.trackDomainMode === 2 && !googleAnalytics.googleanalytics.isCrossDomain(this.hostname, googleAnalytics.settings.googleanalytics.trackCrossDomains))) {
+    				// External link clicked / No top-level cross domain clicked.
+    				console.log("SENDING event outbound links");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Outbound links",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			// Google Analytics (2 of 2)
+    			if (googleAnalytics.googleanalytics.isGoogleDrive(this.href)) {
+    				// Google Drive event is clicked
+    				console.log("SENDING event Google Drive");
+    				ga("send", {
+    				"hitType": "event",
+    				"eventCategory": "Google Drive",
+    				"eventAction": "Click",
+    				"eventLabel": this.href,
+    				"transport": "beacon",
+    				'dimension1': dimensionValue // siteVersion
+    				});
+    			}
+    			}
+    		}
+    		});
+    	});
+    
+    	// Track hash changes as unique pageviews, if this option has been enabled.
+    	if (googleAnalytics.settings.googleanalytics.trackUrlFragments) {
+    		window.onhashchange = function() {
+    		console.log("SENDING onhashchange");
+    		ga("send", {
+    			"hitType": "pageview",
+    			"page": location.pathname + location.search + location.hash,
+    			'dimension1': dimensionValue // siteVersion
+    		});
+    		};
+    	}
+    
+    	// Colorbox: This event triggers when the transition has completed and the
+    	// newly loaded content has been revealed.
+    	if (googleAnalytics.settings.googleanalytics.trackColorbox) {
+    		$(document).bind("cbox_complete", function () {
+    		var href = $.colorbox.element().attr("href");
+    		if (href) {
+    			console.log("SENDING colorbox pageview");
+    			ga("send", {
+    			"hitType": "pageview",
+    			"page": googleAnalytics.googleanalytics.getPageUrl(href),
+    			'dimension1': dimensionValue // siteVersion
+    			});
+    		}
+    		});
+    	}
+    
+    	});
+    
+    	/**
+    	* Check whether the hostname is part of the cross domains or not.
+    	*
+    	* @param string hostname
+    	*   The hostname of the clicked URL.
+    	* @param array crossDomains
+    	*   All cross domain hostnames as JS array.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isCrossDomain = function (hostname, crossDomains) {
+    	/**
+    	* jQuery < 1.6.3 bug: $.inArray crushes IE6 and Chrome if second argument is
+    	* `null` or `undefined`, https://bugs.jquery.com/ticket/10076,
+    	* https://github.com/jquery/jquery/commit/a839af034db2bd934e4d4fa6758a3fed8de74174
+    	*
+    	* @todo: Remove/Refactor in D8
+    	*/
+    	if (!crossDomains) {
+    		return false;
+    	}
+    	else {
+    		return $.inArray(hostname, crossDomains) > -1 ? true : false;
+    	}
+    	};
+    
+    	/**
+    	* Check whether this is a download URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isDownload = function (url) {
+    	var isDownload = new RegExp("\\.(" + googleAnalytics.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+    	return isDownload.test(url);
+    	};
+    
+    	/**
+    	* Check whether this is an absolute internal URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isInternal = function (url) {
+    	var isInternal = new RegExp("^(https?):\/\/" + window.location.host, "i");
+    	return isInternal.test(url);
+    	};
+    
+    	/**
+    	* Check whether this is a special URL or not.
+    	*
+    	* URL types:
+    	*  - gotwo.module /go/* links.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isInternalSpecial = function (url) {
+    	var isInternalSpecial = new RegExp("(\/go\/.*)$", "i");
+    	return isInternalSpecial.test(url);
+    	};
+    
+    	/**
+    	* Extract the relative internal URL from an absolute internal URL.
+    	*
+    	* Examples:
+    	* - https://mydomain.com/node/1 -> /node/1
+    	* - https://example.com/foo/bar -> https://example.com/foo/bar
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return string
+    	*   Internal website URL
+    	*/
+    	googleAnalytics.googleanalytics.getPageUrl = function (url) {
+    	var extractInternalUrl = new RegExp("^(https?):\/\/" + window.location.host, "i");
+    	return url.replace(extractInternalUrl, '');
+    	};
+    
+    	/**
+    	* Extract the download file extension from the URL.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return string
+    	*   The file extension of the passed url. e.g. "zip", "txt"
+    	*/
+    	googleAnalytics.googleanalytics.getDownloadExtension = function (url) {
+    	var extractDownloadextension = new RegExp("\\.(" + googleAnalytics.settings.googleanalytics.trackDownloadExtensions + ")([\?#].*)?$", "i");
+    	var extension = extractDownloadextension.exec(url);
+    	return (extension === null) ? '' : extension[1];
+    	};
+    
+    
+    
+    	/**
+    	* Check whether this is a Google Drive URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isGoogleDrive = function (url) {
+    		var isGoogleDrive = new RegExp("^(https?):\/\/" + "drive.google.com", "i");
+    		return isGoogleDrive.test(url);
+    	}
+    	
+    	/**
+    	* Check whether this is a tracked newsletter URL or not.
+    	*
+    	* @param string url
+    	*   The web url to check.
+    	*
+    	* @return boolean
+    	*/
+    	googleAnalytics.googleanalytics.isNewsletterUrl = function (url) {
+    		var isNewsletterUrl = new RegExp("^#loopback", "i");
+    		return isNewsletterUrl.test(url);
+    	}
+    
+    	})(jQuery);
+    	;
+    /* ]]> */
+</script>
+
+
+<!-- SiteImprove //www.cmu.edu/__utm.js" type="text/javascript"></script>--><!-- SiteImprove -->
+<script type="text/javascript">
+    /*<![CDATA[*/
+    (function() {
+    	var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+    	sz.src = '//siteimproveanalytics.com/js/siteanalyze_18633.js';
+    	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+    })();
+    /*]]>*/
+</script>
+
+<!-- Cascade Live -->
+<script async="async" src="https://live.clive.cloud/page-views/track/58"></script>
+		<!-- MagnificPopup Lightbox stuff -->
+		<script type="text/javascript">
+                //<![CDATA[     /* Grr XHTML */
+                        $(document).ready(function() {
+                                $('.videothumbnail').magnificPopup({
+                                        disableOn: 750,
+                                        type: 'iframe',
+                                        disableOn: function() {         /* Disable on small (most phones) or really wide-short (iPhone X) screens */
+                                                if( $(window).width() < 750 || $(window).height() < 500) {
+                                                        return false;
+                                                }       
+                                                return true;
+                                        }
+                                });
+                        });
+                //]]>
+		</script>
+	</body>
+</html>

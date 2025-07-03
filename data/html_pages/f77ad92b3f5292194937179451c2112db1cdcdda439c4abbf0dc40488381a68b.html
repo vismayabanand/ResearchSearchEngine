@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Site description">
+  <meta name="author" content="Your Name">
+  <link rel="canonical" href="https://pal.cs.ucr.edu//">
+
+  <title>UCR PAL</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom fonts for this template -->
+  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this theme -->
+  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  <link href="/assets/css/agency.css" rel="stylesheet" />
+
+  <!-- Page container change top padding when nav shrinks -->
+  
+  <style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:80px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: #2578FF;
+    border-radius: 20%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+	
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+</head>
+
+
+  <body id="page-top">
+
+        <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="">
+      <div class="container">
+	  <a class="navbar-brand js-scroll-trigger" href="/">UCR PAL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/publications.html">Papers</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/people.html">People</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#project">Projects</a>
+			  <!--<a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/index.html#project">Projects</a>--></li>
+        
+          <li class="nav-item"><div class="nav-link">
+				<a>Resources</a>
+				<div class="di">
+					<ul>
+					
+						<li> <a href="/courses.html"> 
+						Courses
+						</a></li>
+					
+						<li> <a href="/students.html"> 
+						Recruiting
+						</a></li>
+					
+						<li> <a href="/resource.html"> 
+						Useful Resources
+						</a></li>
+					
+					</ul>
+				</div>
+				</div>
+			    </div></li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- End Navigation -->
+  
+
+  
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text"><div class="intro-lead-in">
+		<p>UC Riverside Parallel Algorithm Lab</p>
+ 
+		</div><div class="intro-heading text-uppercase"><p>Welcome to UCR PAL!</p>
+</div></div>
+    </div>
+  </header>
+  <!-- End Header -->
+  
+
+
+<!-- About -->
+<!-- text-uppercase-->
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">About Us</h2>
+        <h3 class="section-subheading text-muted">UCR Parallel Algorithm Lab</h3>
+      </div>
+    </div>
+
+    <div class="about">
+	  <p><p>We are a group of people at UCR working on parallel algorithms, data structures, systems and applications. We design parallel algorithms that have strong theoretical guarantee and high performance. <br /> We are actively recruiting self-motivated Ph.D. students. You can find more details <a href="/student.html">here</a>.<br /> If you are UCR students interested in parallelism and/or algorithms, here are the <a href="courses/">courses</a> we teach.<br /> <br /> View our papers <a href="https://pal.cs.ucr.edu/publications.html">here</a>!</p>
+</p>
+	</div>
+	</div>
+	
+</section>
+<!-- End About -->
+<!-- Portfolio Grid -->
+<section class="bg-light page-section" id="project">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Projects</h2>
+        <h3 class="section-subheading text-muted">Join us and be part of these exciting projects!</h3>
+      </div>
+    </div>
+    <div class="row">
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p1">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/data-structure.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Data Structures</h4>
+          <p class="text-muted">Parallel and Concurrent Data Structures</p>
+        </div>
+      </div>
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p2">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/graph.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Graphs</h4>
+          <p class="text-muted">Sequential and Parallel Graph Algorithms</p>
+        </div>
+      </div>
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p3">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/geometry.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Geometry</h4>
+          <p class="text-muted">Algorithms for Computational Geometry</p>
+        </div>
+      </div>
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p4">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/database.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Database and <br>Data Science</h4>
+          <p class="text-muted">Database and Data Science Algorithms</p>
+        </div>
+      </div>
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p5">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/architecture.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Architecture-Friendly Algorithms</h4>
+          <p class="text-muted">Algorithms for Special Architecture</p>
+        </div>
+      </div>
+	
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <a class="portfolio-link" data-toggle="modal" href="#p6">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="images/incremental.png" alt="">
+        </a>
+        <div class="portfolio-caption">
+          <h4>Parallelism in Sequential Algorithms</h4>
+          <p class="text-muted">Parallelizing Sequential Iterative Algorithms</p>
+        </div>
+      </div>
+	
+    </div>
+  </div>
+</section>
+<!-- Portfolio Modals -->
+
+<div
+  class="portfolio-modal modal fade"
+  id="p1"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Data Structures</h2>
+              <p class="item-intro text-muted">Parallel and Concurrent Data Structures</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/data-structure.png"
+                alt="Parallel data structures"
+              /><p><p>We work on algorithms for parallel/concurrent data structures. Our work involves (but is not limited to) <a href="">parallel search trees for collection data types</a> (sequences, sets, maps, augmented maps), <a href="">geometric data structures</a> (range trees, segment trees, interval trees, priority search trees, k-d trees, oct/quad trees, BVH, etc), <a href="">data structures with compression</a>, <a href="">current data structures</a>, <a href="">data structures for databases and data science</a>, and other specific data structures including parallel winning trees, heaps, hash tables/hash bags, cover trees, etc.</p>
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pkdtree">
+            Pkd-tree: Parallel kd-tree with Batch Updates (To Appear).
+        </a><br>Ziyang Men,&nbsp;Zheqi Shen,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2025<br><div class = "categorynote">parallel kdtree</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#im">
+            Fast and Space-Efficient Parallel Algorithms for Influence Maximization.
+        </a><br>Letong Wang,&nbsp;Xiangyun Ding,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2024<br><div class = "categorynote">Parallel data structures for CELF</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#lis-veb">
+            Parallel Longest Increasing Subsequence and van Emde Boas Trees.
+        </a><br>Yan Gu,&nbsp;Ziyang Men,&nbsp;Zheqi Shen,&nbsp;Yihan Sun,&nbsp;and Zijin Wan. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2023<br><div class = "categorynote">Parallel van Emde Boas Tree</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#scc">
+            Parallel Strong Connectivity Based on Faster Reachability.
+        </a><br>Letong Wang,&nbsp;Xiaojun Dong,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2023<br><div class = "categorynote">Hash bag data structure</div><li>
+			    <div class = "confbutton">SSDBM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#bidirectional">
+            Bi-directional Log-Structured Merge Tree.
+        </a><br>Xin Zhang,&nbsp;Qizhong Mao,&nbsp;Ahmed Eldawy,&nbsp;Vagelis Hristidis,&nbsp;and Yihan Sun. &nbsp;
+			International Conference on Scientific and Statistical Database Management (SSDBM), 2022<br><div class = "categorynote">LSM tree</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#covertree">
+            Parallel Cover Trees and Applications.
+        </a><br>Yan Gu,&nbsp;Zachary Napier,&nbsp;Yihan Sun,&nbsp;and Letong Wang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">Parallel cover tree.</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#iterative">
+            Many Sequential Iterative Algorithms Can Be Parallel and (Nearly) Work-efficient.
+        </a><br>Zheqi Shen,&nbsp;Zijin Wan,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">Using BST and TAS tree data structures to support work-efficiency.</div><li>
+			    <div class = "confbutton">PLDI</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pactree">
+            PaC-trees: Supporting Parallel and Compressed Purely-Functional Collections.
+        </a><br>Laxman Dhulipala,&nbsp;Guy Blelloch,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Conference on Programming Language Design and Implementation (PLDI), 2022<br><div class = "categorynote">Compressed functional search trees called PaC-trees for supporting collection data types</div><li>
+			    <div class = "confbutton">TOPC</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#joinable">
+            Joinable Parallel Balanced Binary Trees.
+        </a><br>Guy E. Blelloch,&nbsp;Daniel Ferizovic,&nbsp;and Yihan Sun. &nbsp;
+			ACM Transactions on Parallel Computing (TOPC), 2022<br><div class = "categorynote">Join-based trees for multiple balancing schemes</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pbbsv2">
+            POSTER: The Problem-Based Benchmark Suite (PBBS), V2.
+        </a><br>Daniel Anderson,&nbsp;Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Magdalen Dobson,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2022<br><div class = "categorynote">join-based trees, suffix arrays</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pim">
+            The Processing-in-Memory Model.
+        </a><br>Hongbo Kang,&nbsp;Phillip B. Gibbons,&nbsp;Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;and Charles McGuffey. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021<br><div class = "categorynote">skiplist</div><li>
+			    <div class = "confbutton">DISC</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#mvgc">
+            Space and Time Bounded Multiversion Garbage Collection.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Panagiota Fatourou,&nbsp;Eric Ruppert,&nbsp;Yihan Sun,&nbsp;and Yuanhao Wei. &nbsp;
+			International Symposium on Distributed Computing (DISC), 2021<br><div class = "categorynote">Garbage collection for concurrent multi-versioned data structures</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#stepping">
+            Efficient Stepping Algorithms and Implementations for Parallel Shortest Paths.
+        </a><br>Xiaojun Dong,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Yunming Zhang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021<br><div class = "categorynote">parallel priority queues based on arrays and tournament trees</div><li>
+			    <div class = "confbutton">SoCG</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#closestpair">
+            An Experimental Study of a New Parallel Batch-Dynamic Closest Pair Data Structure.
+        </a><br>Wang Yiqiu,&nbsp;Shangdi Yu,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Computational Geometry (SoCG), 2021<br><div class = "categorynote">parallel binary heap</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#vcas">
+            Constant-Time Snapshots with Applications to Concurrent Data Structures.
+        </a><br>Yuanhao Wei,&nbsp;Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Panagiota Fatourou,&nbsp;Eric Ruppert,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2021<br><div class = "categorynote">Take snapshots on concurrent data structures</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#binaryforking">
+            Optimal (Randomized) Parallel Algorithms in the Binary-Forking Model.
+        </a><br>Guy E. Blelloch,&nbsp;Jeremy Fineman,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2020<br><div class = "categorynote">Parallel set operations with optimal work and span using BST</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Sage: Parallel Semi-Asymmetric Graph Algorithms for NVRAMs.
+        </a><br>Laxman Dhulipala,&nbsp;Charles McGuffey,&nbsp;Hongbo Kang,&nbsp;Yan Gu,&nbsp;Guy E. Blelloch,&nbsp;Phillip B. Gibbons,&nbsp;and Julian Shun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2020<br><div class = "categorynote">filtering structure</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam-snapshot">
+            On Supporting Efficient Snapshot Isolation for Hybrid Workloads with Multi-Versioned Indexes.
+        </a><br>Yihan Sun,&nbsp;Guy E. Blelloch,&nbsp;Wan Shen Lim,&nbsp;and Andrew Pavlo. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2019<br><div class = "categorynote">Supporting snapshot isolation and MVCC in databases using P-trees in PAM</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#single-writer">
+            Multiversion Concurrency with Bounded Delay and Precise Garbage Collection.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Yihan Sun,&nbsp;and Yuanhao Wei. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2019<br><div class = "categorynote">Garbage collection of multi-versioned P-tree-like structures (path-copying data structures)</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#ppopp-tutorial">
+            Implementing Parallel and Concurrent Tree Structures.
+        </a><br>Yihan Sun,&nbsp;and Guy E. Blelloch. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2019<br><div class = "categorynote">Tutorial about P-trees and the PAM library</div><li>
+			    <div class = "confbutton">ALENEX</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam-geometry">
+            Parallel Range, Segment and Rectangle Queries with Augmented Maps.
+        </a><br>Yihan Sun,&nbsp;and Guy E. Blelloch. &nbsp;
+			Algorithm Engineering and Experiments (ALENEX), 2019<br><div class = "categorynote">Using P-trees and PAM to solve range, segment and rectangle queries in parallel</div><li>
+			    <div class = "confbutton">ESA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-exp">
+            Algorithmic Building Blocks for Asymmetric Memories.
+        </a><br>Yan Gu,&nbsp;Yihan Sun,&nbsp;and Guy E. Blelloch. &nbsp;
+			European Symposium on Algorithms (ESA), 2018<br><div class = "categorynote">write-efficient join-based tree algorithms and hash table</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-geo">
+            Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018<br><div class = "categorynote">Parallel write-efficient algorithms on interval tree, priority search tree, range tree</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam">
+            PAM: Parallel Augmented Maps.
+        </a><br>Yihan Sun,&nbsp;Daniel Ferizovic,&nbsp;and Guy E. Blelloch. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2018<br><div class = "categorynote">Introducing P-tree and the PAM library</div><li>
+			    <div class = "confbutton">ICALP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#frt">
+            Efficient Construction of Probabilistic Tree Embeddings.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			International Colloquium on Automata, Languages, and Programming (ICALP), 2017<br><div class = "categorynote">FRT trees</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#join">
+            Just Join for Parallel Ordered Sets.
+        </a><br>Guy E. Blelloch,&nbsp;Daniel Ferizovic,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">algorithms on P-trees</div><li>
+			    <div class = "confbutton">PG</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Ray Specialized BVH Contraction.
+        </a><br>Yan Gu,&nbsp;Yong He,&nbsp;and Guy E. Blelloch. &nbsp;
+			Pacific Graphics. Computer Graphics Forum (PG), 2015<br><div class = "categorynote">bounding volume hierarchy (BVH)</div><li>
+			    <div class = "confbutton">HPG</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Efficient BVH Construction via Approximate Agglomerative Clustering.
+        </a><br>Yan Gu,&nbsp;Yong He,&nbsp;Kayvon Fatahalian,&nbsp;and Guy E. Blelloch. &nbsp;
+			High Performance Graphics (HPG), 2013<br><div class = "categorynote">bounding volume hierarchy (BVH)</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="portfolio-modal modal fade"
+  id="p2"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Graph Algorithms</h2>
+              <p class="item-intro text-muted">Sequential and Parallel Graph Algorithms</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/graph.png"
+                alt="Parallel Graph Algorithms"
+              /><p><p>We work on graph algorithms, both sequentially and in parallel. Our work includes (but not limited to) SSSP algorithms, connectivity, bi-connectivity, strong connectivity algorithms, graph streaming, LE-lists, graph/tree embedding, geometric graphs, biology graph matching, social graph mining, etc.</p>
+
+<!--{:.list-inline}
+- Date: January 2017
+- Client: Threads
+- Category: Illustration
+-->
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">ALENEX</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#cluster-bfs">
+            Parallel Cluster-BFS and Applications to Shortest Paths.
+        </a><br>Letong Wang,&nbsp;Guy Blelloch,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			Algorithm Engineering and Experiments (ALENEX), 2025<br><div class = "categorynote">efficient implementation for parallel cluster BFS</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pasgal">
+            Brief Announcement: PASGAL: Parallel And Scalable Graph Algorithm Library.
+        </a><br>Xiaojun Dong,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Letong Wang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2024<br><div class = "categorynote">graph algorithms for strongly connected components (SCC), biconnected components (BCC), single-source shortest paths (SSSP), breadth first search (BFS)</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#ann">
+            ParlayANN: Scalable and Deterministic Parallel Graph-Based Algorithms for Approximate Nearest Neighbor Search.
+        </a><br>Magdalen Dobson,&nbsp;Zheqi Shen,&nbsp;Guy Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;Harsha Simhadri,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2024<br><div class = "categorynote">graph-based ANNS</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#scc">
+            Parallel Strong Connectivity Based on Faster Reachability.
+        </a><br>Letong Wang,&nbsp;Xiaojun Dong,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2023<br><div class = "categorynote">High-performance implementation of parallel SCC</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#bcc">
+            Provably Fast and Space-Efficient Parallel Biconnectivity.
+        </a><br>Xiaojun Dong,&nbsp;Letong Wang,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2023<br><div class = "categorynote">Work-, span- and space-efficient algorithm and implementation of parallel biconnected components</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#iterative">
+            Many Sequential Iterative Algorithms Can Be Parallel and (Nearly) Work-efficient.
+        </a><br>Zheqi Shen,&nbsp;Zijin Wan,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">Implementation of delta-stepping, maximal independent set, graph coloring.</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pbbsv2">
+            POSTER: The Problem-Based Benchmark Suite (PBBS), V2.
+        </a><br>Daniel Anderson,&nbsp;Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Magdalen Dobson,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2022<br><div class = "categorynote">BFS (breadth-first-search), MIS (maximal independent set), MM (maximal matching), spanning tree, minimum spanning tree</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#stepping">
+            Efficient Stepping Algorithms and Implementations for Parallel Shortest Paths.
+        </a><br>Xiaojun Dong,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Yunming Zhang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021<br><div class = "categorynote">Parallel SSSP</div><li>
+			    <div class = "confbutton">SIGOPS-OSR</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#geograph">
+            GeoGraph: A Framework for Graph Processing on Geometric Data.
+        </a><br>Yiqiu Wang,&nbsp;Shangdi Yu,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM SIGOPS Operating Systems Review (SIGOPS-OSR), 2021<br><div class = "categorynote">Enable parallel graph processing for geometric data</div><li>
+			    <div class = "confbutton">APOCS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            The Read-Only Semi-External Model.
+        </a><br>Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2021<br><div class = "categorynote">Traingle counting, SCC, FRT trees from graphs</div><li>
+			    <div class = "confbutton">JACM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental-jacm">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			Journal of the ACM (JACM), 2020<br><div class = "categorynote">Parallel SCC, LE list</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Sage: Parallel Semi-Asymmetric Graph Algorithms for NVRAMs.
+        </a><br>Laxman Dhulipala,&nbsp;Charles McGuffey,&nbsp;Hongbo Kang,&nbsp;Yan Gu,&nbsp;Guy E. Blelloch,&nbsp;Phillip B. Gibbons,&nbsp;and Julian Shun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2020<br><div class = "categorynote">19 commonly used graph algorithms</div><li>
+			    <div class = "confbutton">IPDPS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#decomposition">
+            Implicit Decomposition for Write-Efficient Connectivity Algorithms.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			IEEE International Parallel & Distributed Processing Symposium (IPDPS), 2018<br><div class = "categorynote">Graph connectivity and biconnectivity</div><li>
+			    <div class = "confbutton">ICALP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#frt">
+            Efficient Construction of Probabilistic Tree Embeddings.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			International Colloquium on Automata, Languages, and Programming (ICALP), 2017<br><div class = "categorynote">approximate SSSP, distance oracle</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#radius-stepping">
+            Parallel Shortest-paths Using Radius Stepping.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Kanat Tangwongsan. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">Parallel SSSP</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">Parallel SCC, LE list</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Parallel Algorithms with Asymmetric Read and Write Costs.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">BFS</div><li>
+			    <div class = "confbutton">ESA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Efficient Algorithms with Asymmetric Read and Write Costs.
+        </a><br>Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			European Symposium on Algorithms (ESA), 2016<br><div class = "categorynote">SSSP, MST</div><li>
+			    <div class = "confbutton">WABI</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#wave">
+            Simultaneous Optimization of Both Node and Edge Conservation in Network Alignment via WAVE.
+        </a><br>Yihan Sun,&nbsp;Joseph Crawford,&nbsp;Jie Tang,&nbsp;and Tijana Milenkovic. &nbsp;
+			Workshop on Algorithms in Bioinformatics (WABI), 2015<br><div class = "categorynote">Graph alignment algorithm for PPI network aligning</div><li>
+			    <div class = "confbutton">AMB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#ppi-exp">
+            Fair Evaluation of Global Network Aligners.
+        </a><br>Joseph Crawford,&nbsp;Yihan Sun,&nbsp;and Tijana Milenkovic. &nbsp;
+			Algorithms for Molecular Biology (AMB), 2014<br><div class = "categorynote">Comparing graph alignment algorithms for PPI network aligning</div><li>
+			    <div class = "confbutton">ICDM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#dynamicinf">
+            Influence Maximization in Dynamic Social Networks.
+        </a><br>Honglei Zhuang,&nbsp;Yihan Sun,&nbsp;Jie Tang,&nbsp; Zhang Jialin,&nbsp;and Xiaoming Sun. &nbsp;
+			IEEE International Conference on Data Mining (ICDM), 2013<br><div class = "categorynote">Influence maximization on social networks</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="portfolio-modal modal fade"
+  id="p3"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Geometric Algorithms</h2>
+              <p class="item-intro text-muted">Algorithms for Computational Geometry</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/geometry.png"
+                alt="Parallel Geometric Algorithms"
+              /><p><p>We work on algorithms for computational geometry, most of them parallel. Our work includes (but is not limited to) geometry data structures (e.g., range trees, segment trees, kd-trees, priority search trees), convex hull algorithms, Delaunay Triangulation algorithms, computer graphics, nearest neighbor search, low-dimensional range-based search, etc.</p>
+
+<!--{:.list-inline}
+- Date: January 2017
+- Client: Threads
+- Category: Illustration
+-->
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pkdtree">
+            Pkd-tree: Parallel kd-tree with Batch Updates (To Appear).
+        </a><br>Ziyang Men,&nbsp;Zheqi Shen,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2025<br><div class = "categorynote">parallel kdtree for range search and kNN search</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#covertree">
+            Parallel Cover Trees and Applications.
+        </a><br>Yan Gu,&nbsp;Zachary Napier,&nbsp;Yihan Sun,&nbsp;and Letong Wang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">K-nearest neighbor, parallel cover tree</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pbbsv2">
+            POSTER: The Problem-Based Benchmark Suite (PBBS), V2.
+        </a><br>Daniel Anderson,&nbsp;Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Magdalen Dobson,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2022<br><div class = "categorynote">2D convex hull, 2D Delaunay triangulation, 2D Delaunay refinement, kNN (k nearest neighbors), 2D triangle-ray intersection, 2D rectangle counting query</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#parchain">
+            ParChain: A Framework for Parallel Hierarchical Agglomerative Clustering using Nearest-Neighbor Chain.
+        </a><br>Shangdi Yu,&nbsp;Yiqiu Wang,&nbsp;Yan Gu,&nbsp;Laxman Dhulipala,&nbsp;and Julian Shun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2021<br><div class = "categorynote">hierarchical agglomerative clustering</div><li>
+			    <div class = "confbutton">SIGOPS-OSR</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#geograph">
+            GeoGraph: A Framework for Graph Processing on Geometric Data.
+        </a><br>Yiqiu Wang,&nbsp;Shangdi Yu,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM SIGOPS Operating Systems Review (SIGOPS-OSR), 2021<br><div class = "categorynote">Enable parallel graph processing for geometric data</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#emst">
+            Fast Parallel Algorithms for Euclidean Minimum Spanning Tree and Hierarchical Spatial Clustering.
+        </a><br>Yiqiu Wang,&nbsp;Shangdi Yu,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2021<br><div class = "categorynote">Euclidean MST and spatial clustering</div><li>
+			    <div class = "confbutton">SoCG</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#closestpair">
+            An Experimental Study of a New Parallel Batch-Dynamic Closest Pair Data Structure.
+        </a><br>Wang Yiqiu,&nbsp;Shangdi Yu,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Computational Geometry (SoCG), 2021<br><div class = "categorynote">Closest pair</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#convexhull">
+            Randomized Incremental Convex Hull is Highly Parallel.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2020<br><div class = "categorynote">Parallel convex hull</div><li>
+			    <div class = "confbutton">JACM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental-jacm">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			Journal of the ACM (JACM), 2020<br><div class = "categorynote">Parallel Delaunay triangulation, closest pair, smallest enclosing disk</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Theoretically-Efficient and Practical Parallel DBSCAN.
+        </a><br>Yiqiu Wang,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2020<br><div class = "categorynote">spatial clustering</div><li>
+			    <div class = "confbutton">ALENEX</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam-geometry">
+            Parallel Range, Segment and Rectangle Queries with Augmented Maps.
+        </a><br>Yihan Sun,&nbsp;and Guy E. Blelloch. &nbsp;
+			Algorithm Engineering and Experiments (ALENEX), 2019<br><div class = "categorynote">Parallel range, segment and rectangle queries</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-geo">
+            Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018<br><div class = "categorynote">Parallel write-efficient algorithms on Delaunay triangulation, k-d trees, interval tree, priority search tree, range tree</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam">
+            PAM: Parallel Augmented Maps.
+        </a><br>Yihan Sun,&nbsp;Daniel Ferizovic,&nbsp;and Guy E. Blelloch. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2018<br><div class = "categorynote">Parallel range tree using P-trees</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">Parallel Delaunay triangulation, closet pair, smallest enclosing disk</div><li>
+			    <div class = "confbutton">SWAT</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Algorithms on Minimizing the Maximum Sensor Movement for Barrier Coverage of a Linear Domain.
+        </a><br>Danny Z. Chen,&nbsp;Yan Gu,&nbsp;Jian Li,&nbsp;and Haitao Wang. &nbsp;
+			SWAT. Discrete & Computational Geometry (SWAT), 2013<br><div class = "categorynote">Interval cover on 1D</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="portfolio-modal modal fade"
+  id="p4"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Database and <br>Data Science</h2>
+              <p class="item-intro text-muted">Database and Data Science Algorithms</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/database.png"
+                alt="Parallel Graph Algorithms"
+              /><p><p>We work on algorithms for database and data science, both sequentially and in parallel. Our work includes (but is not limited to) efficient indexes for in-memory databases, social network mining, clustering, nearest neighbor search, HTAP database systems, etc.</p>
+
+<!--{:.list-inline}
+- Date: January 2017
+- Client: Threads
+- Category: Illustration
+-->
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pkdtree">
+            Pkd-tree: Parallel kd-tree with Batch Updates (To Appear).
+        </a><br>Ziyang Men,&nbsp;Zheqi Shen,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2025<br><div class = "categorynote">parallel kdtree for kNN search</div><li>
+			    <div class = "confbutton">PPoPP</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#ann">
+            ParlayANN: Scalable and Deterministic Parallel Graph-Based Algorithms for Approximate Nearest Neighbor Search.
+        </a><br>Magdalen Dobson,&nbsp;Zheqi Shen,&nbsp;Guy Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;Harsha Simhadri,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2024<br><div class = "categorynote">efficient approximate nearest neighbor search</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#im">
+            Fast and Space-Efficient Parallel Algorithms for Influence Maximization.
+        </a><br>Letong Wang,&nbsp;Xiangyun Ding,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2024<br><div class = "categorynote">influence maximization</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#scc">
+            Parallel Strong Connectivity Based on Faster Reachability.
+        </a><br>Letong Wang,&nbsp;Xiaojun Dong,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2023<br><div class = "categorynote">efficient SCC</div><li>
+			    <div class = "confbutton">SSDBM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#bidirectional">
+            Bi-directional Log-Structured Merge Tree.
+        </a><br>Xin Zhang,&nbsp;Qizhong Mao,&nbsp;Ahmed Eldawy,&nbsp;Vagelis Hristidis,&nbsp;and Yihan Sun. &nbsp;
+			International Conference on Scientific and Statistical Database Management (SSDBM), 2022<br><div class = "categorynote">LSM tree</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#covertree">
+            Parallel Cover Trees and Applications.
+        </a><br>Yan Gu,&nbsp;Zachary Napier,&nbsp;Yihan Sun,&nbsp;and Letong Wang. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">K-nearest neighbor, agglomerative clustering using parallel cover trees</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#parchain">
+            ParChain: A Framework for Parallel Hierarchical Agglomerative Clustering using Nearest-Neighbor Chain.
+        </a><br>Shangdi Yu,&nbsp;Yiqiu Wang,&nbsp;Yan Gu,&nbsp;Laxman Dhulipala,&nbsp;and Julian Shun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2021<br><div class = "categorynote">hierarchical agglomerative clustering</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#emst">
+            Fast Parallel Algorithms for Euclidean Minimum Spanning Tree and Hierarchical Spatial Clustering.
+        </a><br>Yiqiu Wang,&nbsp;Shangdi Yu,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2021<br><div class = "categorynote">Euclidean MST and hierarchical clustering</div><li>
+			    <div class = "confbutton">SIGMOD</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Theoretically-Efficient and Practical Parallel DBSCAN.
+        </a><br>Yiqiu Wang,&nbsp;Yan Gu,&nbsp;and Julian Shun. &nbsp;
+			ACM Special Interest Group on Management of Data (SIGMOD), 2020<br><div class = "categorynote">Density-based clustering</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pam-snapshot">
+            On Supporting Efficient Snapshot Isolation for Hybrid Workloads with Multi-Versioned Indexes.
+        </a><br>Yihan Sun,&nbsp;Guy E. Blelloch,&nbsp;Wan Shen Lim,&nbsp;and Andrew Pavlo. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2019<br><div class = "categorynote">Using P-trees for in-memory database systems</div><li>
+			    <div class = "confbutton">ICDM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#dynamicinf">
+            Influence Maximization in Dynamic Social Networks.
+        </a><br>Honglei Zhuang,&nbsp;Yihan Sun,&nbsp;Jie Tang,&nbsp; Zhang Jialin,&nbsp;and Xiaoming Sun. &nbsp;
+			IEEE International Conference on Data Mining (ICDM), 2013<br><div class = "categorynote">Influence maximization on social networks</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="portfolio-modal modal fade"
+  id="p5"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Architecture-Friendly Algorithms</h2>
+              <p class="item-intro text-muted">Algorithms for Special Architecture</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/architecture.png"
+                alt="Parallel Graph Algorithms"
+              /><p><p>We work on architecture-friendly algorithms. Our work includes (but is not limited to) write-efficient algorithms for NVRAMs, fault-tolerant algorithms for NVRAMs, space-efficient algorithms for in-memory processing, algorithms for near-data-processing (i.e., processing-in-memory, PIM), etc.</p>
+
+<!--{:.list-inline}
+- Date: January 2017
+- Client: Threads
+- Category: Illustration
+-->
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#pim">
+            The Processing-in-Memory Model.
+        </a><br>Hongbo Kang,&nbsp;Phillip B. Gibbons,&nbsp;Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Yan Gu,&nbsp;and Charles McGuffey. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021<br><div class = "categorynote">algorithms for the Processing-in-Memory (PIM) architecture</div><li>
+			    <div class = "confbutton">APOCS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Parallel In-Place Algorithms: Theory and Practice.
+        </a><br>Yan Gu,&nbsp;Omar Obeya,&nbsp;and Julian Shun. &nbsp;
+			ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2021<br><div class = "categorynote">Modern computers with limited-size fast memory</div><li>
+			    <div class = "confbutton">APOCS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            The Read-Only Semi-External Model.
+        </a><br>Guy E. Blelloch,&nbsp;Laxman Dhulipala,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2021<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">VLDB</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Sage: Parallel Semi-Asymmetric Graph Algorithms for NVRAMs.
+        </a><br>Laxman Dhulipala,&nbsp;Charles McGuffey,&nbsp;Hongbo Kang,&nbsp;Yan Gu,&nbsp;Guy E. Blelloch,&nbsp;Phillip B. Gibbons,&nbsp;and Julian Shun. &nbsp;
+			Proceedings of the VLDB Endowment (VLDB), 2020<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">APOCS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Improved Parallel Cache-Oblivious Algorithms for Dynamic Programming.
+        </a><br>Yan Gu,&nbsp;and Guy E. Blelloch. &nbsp;
+			ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2020<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">ESA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-exp">
+            Algorithmic Building Blocks for Asymmetric Memories.
+        </a><br>Yan Gu,&nbsp;Yihan Sun,&nbsp;and Guy E. Blelloch. &nbsp;
+			European Symposium on Algorithms (ESA), 2018<br><div class = "categorynote">Experiments of write-efficient algorithms for NVRAMs</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#PPM">
+            The Parallel Persistent Memory Model.
+        </a><br>Guy E. Blelloch,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">IPDPS</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#decomposition">
+            Implicit Decomposition for Write-Efficient Connectivity Algorithms.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			IEEE International Parallel & Distributed Processing Symposium (IPDPS), 2018<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-geo">
+            Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018<br><div class = "categorynote">write-efficient geometry algorithms for NVRAMs</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Parallel Algorithms with Asymmetric Read and Write Costs.
+        </a><br>Naama Ben-David,&nbsp;Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">ESA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Efficient Algorithms with Asymmetric Read and Write Costs.
+        </a><br>Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			European Symposium on Algorithms (ESA), 2016<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Sorting with Asymmetric Read and Write Costs.
+        </a><br>Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;Phillip B. Gibbons,&nbsp;Yan Gu,&nbsp;Charles McGuffey,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2015<br><div class = "categorynote">Non-volatile main memory (NVRAM)</div><li>
+			    <div class = "confbutton">SIGGRAPH</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Extending the Graphics Pipeline with Adaptive, Multi-Rate Shading.
+        </a><br>Yong He,&nbsp;Yan Gu,&nbsp;and Kayvon Fatahalian. &nbsp;
+			ACM Transactions on Graphics (SIGGRAPH), 2014<br><div class = "categorynote">Future-generation GPUs</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="portfolio-modal modal fade"
+  id="p6"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="modal-body">
+              <!-- Project Details Go Here -->
+              <h2 class="text-uppercase">Parallelism in Sequential Algorithms</h2>
+              <p class="item-intro text-muted">Parallelizing Sequential Iterative Algorithms</p><img
+                class="img-fluid d-block mx-auto"
+                src="images/incremental.png"
+                alt="Parallel Graph Algorithms"
+              /><p><p>We work on efficiently parallelizing sequential iterative algorithms. The goal is to design simple and intuitive algorithms based on their sequential versions, and achieve work-efficiency and high parallelism. Our work includes (but is not limited to) parallel permutaion, list/tree contraction, LIS, Huffman tree, SSSP, MIS, parallel randomized incremental algorithms for convex hull, Delaunay triangulation, 2D LP, closest pair, SCC, LE-list, etc.</p>
+
+<!--{:.list-inline}
+- Date: January 2017
+- Client: Threads
+- Category: Illustration
+-->
+
+</p>
+			  <ul><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#dp">
+            Parallel and (Nearly) Work-Efficient Dynamic Programming.
+        </a><br>Xiangyun Ding,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2024<br><div class = "categorynote">parallelize iterative DP algorithms</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#lis-veb">
+            Parallel Longest Increasing Subsequence and van Emde Boas Trees.
+        </a><br>Yan Gu,&nbsp;Ziyang Men,&nbsp;Zheqi Shen,&nbsp;Yihan Sun,&nbsp;and Zijin Wan. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2023<br><div class = "categorynote">Parallelizing sequential algorithms for LIS</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#iterative">
+            Many Sequential Iterative Algorithms Can Be Parallel and (Nearly) Work-efficient.
+        </a><br>Zheqi Shen,&nbsp;Zijin Wan,&nbsp;Yan Gu,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022<br><div class = "categorynote">Parallelizing sequential algorithms for LIS, activity selection, Huffman tree, MIS, and Dijkstra's algorithm.</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#convexhull">
+            Randomized Incremental Convex Hull is Highly Parallel.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2020<br><div class = "categorynote">Parallel incremental algorithm for convex hull</div><li>
+			    <div class = "confbutton">JACM</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental-jacm">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			Journal of the ACM (JACM), 2020<br><div class = "categorynote">Parallel incremental algorithms for sorting, Delaunay triangulation, closest pair, smallest enclosing disk, SCC, LE list</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#we-geo">
+            Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Yihan Sun,&nbsp;and Julian Shun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018<br><div class = "categorynote">Parallel randomized incremental algorithm on Delaunay triangulation</div><li>
+			    <div class = "confbutton">SPAA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#incremental">
+            Parallelism in Randomized Incremental Algorithms.
+        </a><br>Guy E. Blelloch,&nbsp;Yan Gu,&nbsp;Julian Shun,&nbsp;and Yihan Sun. &nbsp;
+			ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016<br><div class = "categorynote">Parallel randomized incremental algorithms for sorting, Delaunay triangulation, closest pair, smallest enclosing disk, SCC, LE list</div><li>
+			    <div class = "confbutton">SODA</div>	&nbsp; <a class="paper-title" href="https://pal.cs.ucr.edupublications.html#">
+            Sequential Random Permutation, List Contraction and Tree Contraction are Highly Parallel.
+        </a><br>Julian Shun,&nbsp;Yan Gu,&nbsp;Guy E. Blelloch,&nbsp;Jeremy T. Fineman,&nbsp;and Phillip B. Gibbons. &nbsp;
+			ACM-SIAM Symposium on Discrete Algorithms (SODA), 2015<br><div class = "categorynote">Work-efficient polylog-span algorithms for random permutation, list/tree contraction</div>
+		</ul>
+              <button
+                class="btn btn-primary"
+                data-dismiss="modal"
+                type="button"
+              >
+                <i class="fas fa-times"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Portfolio Modals -->
+
+
+
+
+
+
+
+
+
+	  <!-- Footer -->
+<footer class="footer" id="footer" style="background-color: white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <span class="copyright">Copyright &copy; UCR PAL 2024</span><br>
+		<span class="copyright">Website generated with <a href="http://jekyllthemes.org/themes/agency/">Jekyll agency theme</a> </span>
+      </div>
+      <!-- Social Media -->
+	  <!--
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          
+          <li class="list-inline-item">
+            
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://facebook.com">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://github.com/raviriley/agency-jekyll-theme">
+              <i class="fab fa-github"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://instagram.com">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+          </li>
+          
+        </ul>
+      </div>
+	  -->
+      <!-- Legal -->
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+		    <span>Last updated: November 26, 2024</span><br>
+            <a href="">BACK TO TOP</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- End Footer -->
+
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jqBootstrapValidation.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/agency.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/copyCode.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/clipboard.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/codeselect.js"></script>
+
+
+  </body>
+</html>
+

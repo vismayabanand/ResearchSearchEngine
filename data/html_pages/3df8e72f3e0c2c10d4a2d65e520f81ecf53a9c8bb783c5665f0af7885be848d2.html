@@ -1,0 +1,731 @@
+
+<!doctype html>
+<html>
+<head>
+
+
+
+<!--<link rel="icon" href="<?=base_url()?>assets/images/favicon/dragon.png" type="image/png"> -->
+<?php
+   $page_title = $page_name;
+   if (strlen($page_name) == 0)
+       $page_title = $course_name;
+   else
+       $page_title = $page_name . ' : ' . $course_name; 
+?>
+<title></title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  skipStartupTypeset: true,
+  showProcessingMessages: false,
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<!-- NOTE(kayvonf): place at end to override 3rd party tools -->
+<link rel="stylesheet" type="text/css" href="/cs248a/winter23content/static/css/main.css">
+
+</head>
+<body>
+
+<div id="modal_overlay"></div>
+
+<div class="main_container">
+
+<div class="topbar">
+<div class="topbar_left"><a href="/cs248a/winter23/">[Home]</a></div>
+<div class="topbar_left"><a href="/cs248a/winter23/newsfeed">[Feed]</a></div>
+<div class="topbar_left"><a href="/cs248a/winter23/courseinfo">[Course Info]</a></div>
+<div class="topbar_left"><a href="/cs248a/winter23/lecture/">[Lectures/Readings]</a></div>
+
+
+
+
+<div class="topbar_right">
+
+
+<a href="/cs248a/winter23/students/login">[Login]</a>
+
+
+</div>
+
+</div>
+
+<div class="content_container">
+
+<!-- end of header -->
+
+
+
+
+<div class="home_container">
+
+  <div style="font-size: 12pt; padding: 10px 0px 0px 0px;" class="home_title">Stanford CS248A, Winter 2023</div>
+  <div style="padding-top: 0px; padding-bottom: 5px;" class="home_title">
+    <div style="font-size: 44pt">Computer Graphics:</div>
+    <div style="font-size: 24pt">Rendering, Geometry, and Image Manipulation</div>
+  </div>
+
+<p style="padding-bottom: .15em">
+
+<div>
+<img style="padding-bottom: 5px;" src="/cs248a/winter23content/static/images/teaser.jpg" width="800" height="125"></a>
+</div>
+
+<p style="padding-bottom: .15em">
+This course provides a comprehensive introduction to computer
+graphics, focusing on fundamental concepts and techniques, as well as
+their cross-cutting relationship to multiple problem domains in
+interactive graphics (such as rendering, geometry, image
+processing). Topics include: 2D and 3D drawing, sampling,
+interpolation, rasterization, image compositing, the GPU graphics
+pipeline (and parallel rendering), geometric transformations, curves
+and surfaces, geometric data structures, subdivision, meshing, spatial
+hierarchies, image processing, and image compression.
+</p>
+
+
+<div class="overview_main_item overview_ruled_element">Basic Info</div>
+
+<div style="padding-bottom: 15px;">
+  <div>Time: Tues/Thurs 1:30-2:50am</div>
+  <div>Location: Gates B1</div>
+<div>Instructor: <a href="http://graphics.stanford.edu/~kayvonf">Kayvon Fatahalian</a></div>
+
+<div style="padding-top:1em;">See the <a href="/cs248a/winter23/courseinfo">course info</a> page for more info on policies and logistics.</div>
+
+</div>
+
+<div class="overview_main_item overview_ruled_element">Winter 2023 Schedule</div>
+
+<table>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 10
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/introduction/">
+              <span class="bold_text">Course Introduction + Basics of Drawing</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> A look at the breadth of graphics applications, simple drawing of lines </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 12
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/drawtriangle/">
+              <span class="bold_text">Drawing a Triangle + Sampling Basics</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Drawing a triangle via point sampling, point-in-triangle testing, aliasing, Fourier interpretation of aliasing, anti-aliasing </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 17
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/transforms/">
+              <span class="bold_text">Coordinate Spaces and Transformations</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Definition of linear transforms, basic geometric transforms, homogeneous coordinates, transform hierarchies, perspective projection </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 19
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/texture/">
+              <span class="bold_text">Texture Mapping</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Texture coordinate space, bilinear/trilinear interpolation, how aliasing arises during texture sampling, pre-filtering as an anti-aliasing technique </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 24
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/pipeline/">
+              <span class="bold_text">The Rasterization Pipeline</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Z-buffer algorithm, image compositing, end-to-end 3D graphics pipeline as implemented by modern GPUs </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 26
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/geometry/">
+              <span class="bold_text">Introduction to Geometry</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Properties of surfaces (manifold, normal, curvature), implicit vs. explicit representations, basic representations such as triangle meshes, bezier curves and patches </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Jan 31
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/geometryprocessing/">
+              <span class="bold_text">Mesh Representations and Geometry Processing</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Half-edge mesh structures, mesh operations such as tessellation and simplification </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 02
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/geometricqueries/">
+              <span class="bold_text">Geometric Queries</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Closest point, ray-triangle intersection, ray-mesh intersection, the relationship between rasterization and ray tracing </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 07
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/accelstructure/">
+              <span class="bold_text">Accelerating Geometric Queries</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Acceleration structures such as bounding volume hierarchies, K-D trees, uniform grids </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 09
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/radiometryreflection/">
+              <span class="bold_text">Radiometry, BRDFs, and the Reflection Equation</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Definition of radiometric quantities, the light field, BRDFs, light transport via reflection, integrating energy reflecting from surfaces </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 14
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/numericalintegration/">
+              <span class="bold_text">Numerical Integration + Monte Carlo Ray Tracing I</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Numerical estimation of illumination, Monte Carlo integration and its application to ray tracing </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 16
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/montecarlort/">
+              <span class="bold_text">Monte Carlo Ray Tracing II</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Estimating direct lighting due to various types of light sources and BRDFs </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 21
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/pathtracing/">
+              <span class="bold_text">Global Illumination and Path Tracing</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Brute force path tracing, Russian roulette, challenges of variance </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 23
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/realtimerendering/">
+              <span class="bold_text">Modern Real-Time Rendering Techniques</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Shadow mapping, reflections, ambient occlusion, precomputed lighting, deferred shading, real-time raytracing trends and innovations </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Feb 28
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/color/">
+              <span class="bold_text">Theory of Color</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> How the eye works, representing color, brightness, and chromaticity </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Mar 02
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/imageprocessing/">
+              <span class="bold_text">Image Compression</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> non-linear encodings, chroma subsampling, JPG image compression </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Mar 07
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/imageprocessing2/">
+              <span class="bold_text">Image Processing Basics</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> image filtering via convolution (sharpening/blurring), data-dependent filters, Gaussian and Laplacian pyramids </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Mar 09
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/vrrendering/">
+              <span class="bold_text">Rendering for Virtual and Augmented Reality</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> VR Headset hardware, how head-mounted displays cause challenges for renderers, resolution and latency requirements, judder, foveated rendering </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Mar 14
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/gpuhardware/">
+              <span class="bold_text">GPU Hardware and Parallel Rasterization</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Design of modern GPUs, how rendering is parallelized onto GPUs </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td class="schedule_date">
+     Mar 16
+</td>
+
+<td class="schedule_lecture">
+     <div>
+        <td class="schedule_lecture">
+          <div>
+            
+            <a href="/cs248a/winter23/lecture/summary/">
+              <span class="bold_text">Course Summary + Current Graphics Research</span>
+            </a>
+            
+          </div>
+          <div class="small_text colored_text"> Course wrap up, discussion of ongoing graphics research at Stanford </div>
+        </td>
+     </div>
+</td>
+
+</tr>
+
+
+
+</table>
+
+<div class="overview_main_item overview_ruled_element">Programming Assignments</div>
+<table>
+<tbody><tr>
+<td class="schedule_date">Jan 26</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs248/draw-svg">Assignment 1: Write Your own SVG Renderer</a>
+</td>
+</tr>
+
+<tr>
+<td class="schedule_date">Feb 10</td><td class="schedule_lecture">
+<a href="https://github.com/stanford-cs248/Cardinal3D/blob/master/MeshEditHandout.md">Assignment 2: MeshEdit: A Mini 3D Triangle Mesh Editor</a>
+</td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 27</td><td class="schedule_lecture">
+<span class="bold_text"><a href="https://github.com/stanford-cs248/Cardinal3D/blob/master/PathTracerHandout.md">Assignment 3: Path Tracer</a> or <a href="https://github.com/stanford-cs248/shading">Lighting and Materials In GLSL</a> (student choice)</span>
+ </td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Mar 21</td><td class="schedule_lecture">
+ <a href="https://github.com/stanford-cs248/project">Self-selected Final Project</a>
+ </td>
+</tr>
+
+</tbody></table>
+
+<div class="overview_main_item overview_ruled_element">Practice Exercises</div>
+
+<div style="padding-bottom: 1em">One written practice exercise per week, graded on a credit/no credit basis.</div>
+
+<table>
+<tbody>
+ 
+<tr>
+<td class="schedule_date">Jan 18</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise1.pdf">
+  Practice Exercise 1
+</a>
+</td>
+</tr>
+
+<tr> 
+<td class="schedule_date">Jan 25</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise2.pdf">Practice Exercise 2</a>
+</td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 1</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise3.pdf">Practice Exercise 3</a>
+ </td>
+</tr>
+
+<tr>
+ <td class="schedule_date">Feb 8</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise4.pdf">Practice Exercise 4</a>
+ </td>
+</tr>
+
+<tr>
+  <td class="schedule_date">Feb 15</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise5.pdf">Practice Exercise 5</a>
+ </td>
+</tr>
+
+<tr>
+  <td class="schedule_date">Feb 22</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise6.pdf">Practice Exercise 6</a>
+ </td>
+</tr>
+
+<tr>
+  <td class="schedule_date">Mar 1</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise7.pdf">Practice Exercise 7</a>
+ </td>
+</tr>
+
+<tr>
+  <td class="schedule_date">&nbsp;</td><td class="schedule_lecture">
+<a href="/cs248a/winter23content/static/pdfs/exercise8.pdf">Practice Exercise 8</a>
+ </td>
+</tr>
+
+
+</tbody></table>
+
+
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+
+</div>  <!-- end of home_container -->
+
+
+
+<hr size="1">
+
+<div class="footer">
+     Copyright 2023 Stanford University
+</div>
+
+
+
+</div>  <!-- end of content_container (defined in header.html) -->
+</div>  <!-- end main_container (defined in header.html) -->
+
+
+
+</body>
+</html>
+
+

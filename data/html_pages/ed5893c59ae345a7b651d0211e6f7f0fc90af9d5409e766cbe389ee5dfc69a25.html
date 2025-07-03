@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  lang="en">
+	  
+  <head>
+    <meta name="description" content="My UC Application"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Security-Policy"
+        content="
+			default-src &#39;self&#39; &#39;unsafe-inline&#39;;
+			style-src &#39;self&#39; &#39;unsafe-inline&#39;;        	
+        	script-src &#39;self&#39; &#39;unsafe-inline&#39; www.googletagmanager.com/gtag/js;
+         	connect-src &#39;self&#39; www.google-analytics.com;
+    		report-to /my-application/cspReport;
+    		frame-ancestors &#39;none&#39;;
+    		"
+     /> 
+
+    
+	<link rel="shortcut icon" href="/my-application/img/icons/favicon.ico" type="image/x-icon">  	  
+	<link rel="stylesheet" href="/my-application/css/bootstrap.min.css" />
+   	<link rel="stylesheet" href="/my-application/css/styles.css" />
+   	<link rel="stylesheet" href="/my-application/css/override.css" />
+   	<link rel="stylesheet" href="/my-application/css/mobile.css" />
+	
+<!--     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> -->
+    
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVHDFJRF5M"></script>
+	<script>
+	  var streamId = "G-FVHDFJRF5M";
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', streamId);
+	</script>
+	<!-- End of Google tag  -->
+	
+	<title>UC application</title>
+  </head>
+  <body class="bg-light home">
+<a href="#main" id="skiplink" ><span>Skip to Main Content</span></a>
+    <div class="relative-content">
+	
+	
+		 <header class="secondary">
+						<div class="header-left">
+							<h1>
+								<span class="logo-main" aria-label="University of California">
+									University of California	
+								</span>				
+							</h1>
+						</div>
+						<div class="header-right">
+							<span class="font-size-md">
+								Already have an account? 
+							</span>
+							<button class="v6 sign-in-switch" >
+								Sign in
+							</button>
+						</div>
+</header>
+	</div>
+     <div class="main-container-wrapper">
+     <!-- Modal content -->
+     </div>
+    <div class="main-container-wrapper">
+    	<div id="sign-in-modal" class="popup-wrapper sign-in hidden">
+ <div class="container">
+     <div class="row">
+         <section  aria-labelledby="loginTitle">
+             <form id="loginForm" class="form-wrapper" action="/my-application/login" method="post">
+                 <div class="popup login col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" role="dialog">
+                     
+                    
+                     
+                     <h2 class="title" id="loginTitle">
+                         Sign in to your account
+                     </h2>
+                     <fieldset>
+                         <legend class="hide"></legend>
+                         <div class="field-wrapper margin-bottom-20">
+                             <label for="email" class="standard">Email address *</label>
+                             <input type="text" maxlength="50" name="email"  id="email" value="" class="col-xs-12" />
+							 <p id="email-error" class="required">
+								
+							 </p>
+                         </div>
+                     </fieldset>
+
+                     <fieldset class="password ">
+                         <legend class="hide"></legend>
+                         <div class="field-wrapper padding-bottom-20">
+                             <label for="password" class="standard w70">Password *</label>
+                             <input type="password" maxlength="30" name="password" id="password" class="col-xs-12"/>
+                             <p class="required" id="password-error">
+                             </p>
+                         </div>
+                         <a href="JavaScript:Void(0);" class="over-password">
+                             Show password
+                         </a>
+                     </fieldset>
+                     
+                     <fieldset class="button-wrapper">
+                         <legend class="hide">Sign in</legend>
+                         <button id="signIn" class="button standard  col-xs-5" >
+                             Sign in
+                         </button>
+                         <a href="/my-application/resetPassword" class="col-xs-7 inline-button">
+                             Forgot your password?
+                         </a>
+                     </fieldset>
+                     <a class="close-layer" role="button"  aria-label="close" href="JavaScript:Void(0);" >
+                         close
+                     </a>
+                 </div>
+                 <input type="hidden" id="showSignIn" name="showSignIn" value=""/>
+<!--                  <input type="hidden" id="signInCcgiToken" class="hide" th:field="*{ccgiToken}"/> -->
+             </form>
+         </section>
+     </div>
+ </div>    
+
+ <div class="cover"></div>
+ <!-- string used in Ajax -->
+ <span class="hide">loginPage2019Redesign</span>
+ 
+
+</div>
+	
+		
+		<!-- nested includes here: home-slider->welcome-module->sign-up form -->
+		
+		<div class="fullscreen-carrousel-wrapper" >  
+			<div  id="fullscreen-carrousel-wrapper">						<div id="home_preload" class="preload_screen">
+                            		<div class="vignette vigtop"></div>
+                                    <p class="preload_text">
+                                        Nine campuses. One application.
+                                    </p>
+                                    <div class="vignette vigbottom"></div>
+  						</div>
+                        <div class="fullscreen-carrousel-wrapper" id="fullscreen-carrousel-wrapper">
+                             <ul class="gradienph">
+                            
+                           <li class="active">
+                            		<img src="/docs/img/temp/slide1.jpg" alt="First image slide for desktop" class="desktop"/>	
+                            	</li>                           
+                            	<li>
+                            		<img src="/docs/img/temp/slide3.jpg" alt="Second image slide for desktop" class="desktop" />
+                            	</li>
+                            	<li>
+                            		<img src="/docs/img/temp/slide4.jpg" alt="Third image slide for desktop" class="desktop" />
+                            	</li>
+                            	<li>
+                            		<img src="/docs/img/temp/slide5.jpg" alt="Fourth image slide for desktop" class="desktop" />                                  
+                            	</li>
+                            </ul> 
+                           
+                        </div>
+                         <div class="container-wrapper  left home-intro-wrapper" id="gradientH">
+                                <div class="container">
+                                    <div class="row">
+                                        <section>
+                                        	                        <div class="home-intro v1 align-center col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8" id="main">
+                        	<div class="content-wrapper">
+	                            <h1 class="hide">
+	                            	University of California's application for undergraduate admissions and scholarships
+	                            </h1>
+	                            <p class="description">
+	                                Welcome to the University of California's application for undergraduate admissions and scholarships. By starting 
+	                                your application, you're taking your first step toward the best public university system in the world.
+	                            </p>
+	                            <a  class="open-overlay" attr="Overlay">
+	                            <button class="button v2 create-account-switch createbutton" >
+	                                Create an account
+	                            </button>
+	                            <img src="/my-application/img/svg-badges/apply-arrow.svg" alt="" class="apply-arrow-home" />
+	                            </a>
+                            </div>
+                        </div>
+                                        </section>
+                                    </div>
+                                </div>    
+                            </div>
+
+</div>    	
+		</div>
+		
+<!--  		<div class="fullscreen-carrousel-wrapper" id="fullscreen-carrousel-wrapper" th:insert="~{includes/home/home-slider-countdown}">&nbsp;</div> -->
+		
+        <div class="container-wrapper wrap1">
+            <div class="container">
+                <div class="row">
+                    <section>
+                    	<div>                        <main class="homecontainer_main">
+                        	<div class="homefirstcontainer_left">
+	                         <div class="box_bya">
+	                        	<div class="content-wrapper" >
+		                            <h2 class="text-headline-lg" style="color:white; font-size:18px; padding:15px 0">
+		                                Before you apply
+		                            </h2>
+		                            <p class="description padding-top-10">
+		                            	To get ready for the application, you should visit our <a href="http://admission.universityofcalifornia.edu/" target="_blank">admissions website.</a> 
+		                            	There you'll find everything you need to know about applying to UC, including:
+		                            </p>
+		                            <ul class="bld">
+		                            	<li>
+		                            		<a href="https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-freshman/" target="_blank">
+			                            		First-year admissions <span class="sr_hide">opens in new tab</span>
+			                        		</a>
+			                    		</li>
+										<li>
+											<a href="https://admission.universityofcalifornia.edu/how-to-apply/applying-as-a-transfer/" target="_blank">
+												Transfer admissions <span class="sr_hide">opens in new tab</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://admission.universityofcalifornia.edu/admission-requirements/international-applicants/" target="_blank">
+												Applying as an international student <span class="sr_hide">opens in new tab</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://admission.universityofcalifornia.edu/tuition-financial-aid/apply-for-financial-aid/" target="_blank">
+												How to apply for financial aid <span class="sr_hide">opens in new tab</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://admission.universityofcalifornia.edu/campuses-majors/" target="_blank">
+												Campus programs and contact information <span class="sr_hide">opens in new tab</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://admission.universityofcalifornia.edu/apply-now.html" target="_blank">
+												Application tips, guides and worksheets <span class="sr_hide">opens in new tab</span>
+											</a>
+										</li>
+										
+		                            </ul>
+	                            </div>
+	                        </div>
+
+	                        <div class="box_gh">
+	                        	<div class="content-wrapper">
+		                            <h2 class="text-headline-lg" style="color:white; font-size:18px; padding:15px 0">
+		                                Getting help
+		                            </h2>
+		                            <p class="description padding-top-10">
+		                            	If you have questions, please contact the application helpdesk:<br/>
+		                            	<a class="bld padding-top-20 inlblk" href="mailto:ucinfo@applyucsupport.net" >
+			                            		ucinfo@applyucsupport.net
+			                        	</a>
+		                            </p>
+		                            <!-- <button class="button standard margin-bottom-15" >
+		                                View help section
+		                            </button> -->
+		                            <h3 class="padding-bottom-5 padding-top-10">Or call the UC Application Center:</h3>
+		                            <ul>
+		                          		<li>
+											Within the U.S.: (800) 207-1710
+										</li>
+										<li>
+											Outside the U.S.: (925) 298-6856
+										</li>
+		                            </ul>
+		                
+		                            <h3 class="padding-bottom-5 padding-top-20">Helpdesk hours:</h3>
+		                            <ul>
+		                          		<li>
+											Monday &ndash; Friday: 10 a.m. &ndash; 6 p.m. PST
+										</li>
+										<li>
+											Saturday &amp; Sunday: Closed
+										</li>
+		                            </ul>
+		                            
+
+		                             <h3 class="padding-bottom-5 padding-top-20">November &amp; December hours:</h3>
+		                            <ul>
+		                          		<li>
+											November 1&ndash;15: Monday &ndash; Friday, 8 a.m. &ndash; 6 p.m. PST
+										</li>
+										<li>
+											November 18&ndash;22: Monday &ndash; Friday, 8 a.m. &ndash; 8 p.m. PST
+										</li>
+										<li>
+											November 23&ndash;24: Saturday &ndash; Sunday, 8 a.m. &ndash; 10 p.m. PST
+										</li>
+										<li>
+											November 25&ndash;27: Monday &ndash; Wednesday, 8 a.m. &ndash; 10 p.m. PST
+										</li>
+										<li>
+											November 28: Thursday &ndash; closed
+										</li>
+										<li>
+											November 29&ndash;30: Friday &ndash; Saturday, 7 a.m. &ndash; 11 p.m. PST
+										</li>
+										<li>
+											December 1&ndash;2: Sunday &ndash; Monday, 7 a.m. &ndash; midnight PST
+										</li>
+										<li>
+											December 3: Tuesday 8 a.m. &ndash; 6 p.m. PST
+										</li>
+		                            </ul>
+		                            
+		                             <h3 class="padding-bottom-5 padding-top-20">Closed on the following holidays:</h3>
+		                            <ul>
+		                          		<li>
+											November 28, December 25 &amp; January 1
+										</li>
+		                            </ul>
+	                            </div>
+	                        </div>
+	                       </div>
+	                       <div class="homefirstcontainer_right"> 
+   							 <div class="box_nu">
+	                        	
+	                        </div>
+	                        <div class="box_sc">
+	                        	<div class="content-wrapper">
+		                            <h2 class="text-headline-lg" style="color:white; font-size:18px; padding:15px 0">
+		                                Stay connected
+		                            </h2>
+		                            <p class="description padding-top-10">
+		                            	 Follow <a href="https://twitter.com/uc_apply" target="_blank">@UC_Apply<span class="sr_hide">opens in new tab</span></a> on X, and keep up to date with the latest application tips, reminders and deadlines.
+		                            </p>
+<!-- 		                            <p class="description"> -->
+<!-- 		                            	If you haven't gone on a campus tour yet, now's a good time! They're free & can help you figure out which campus is right for you. <a href="JavaScript:Void(0);" target="_blank" >http://bit.ly/2uO8ws5</a> -->
+		                            
+<!-- 		                            <span class="margin-top-10 blk">11:30 AM - 20 Aug 2018</span> -->
+<!-- 		                            </p> -->
+		                            <br/>
+		                            <!--a href="https://twitter.com/uc_apply" class="btnHome_twitter standard margin-bottom-15 margin-top-15" target=newtab>
+		                                follow  @UC_Apply
+		                            </a-->
+                            	</div>
+	                        </div>
+						</div>
+	                    
+
+                        </main>
+</div>
+                    </section>
+                </div>
+            </div>    
+        </div>
+        <div class="container-wrapper wrap2 bg-dark-light neg-margin-top-45">
+            <div class="container middle">
+                <div class="row">
+                    <section>
+                    		<div>                        <main class="padding-bottom-0">
+	                        <div class="w45 fl margin-right-40 margin-bottom-20 mobile-sap">
+	                        	<div class="content-wrapper">
+	                        	<h2 class="home_Sec_title">
+		                                Statement of application integrity
+		                            </h2>
+		                       		<p class="description padding-right-30">
+		                       			We want all applicants to present themselves in the best possible light on their application, and we encourage applicants to seek help from friends, parents, counselors and teachers. However, UC expects all applicants to complete their own application material and ensure all information in the application is complete, accurate and truthful.
+										
+			                        </p>
+										<a href="/docs/StatementOfIntegrity.pdf" target="_blank">
+											Statement of integrity PDF <span class="sr_hide">opens in new tab</span>
+										</a>
+		                        </div>
+	                        </div>
+
+	                       <div class="w40 fl margin-bottom-40  mobile-uir">
+	                       		<div class="content-wrapper">
+	                       		<h2 class="home_Sec_title">
+		                                UC immunization requirements
+		                            </h2>
+		                       		<p class="description">
+			                        The UC Immunization Policy requires incoming students to obtain certain vaccinations and screenings recommended for colleges and universities by the California Department of Public Health.
+									</br></br>
+									The required vaccines currently include: Measles, Mumps and Rubella; Varicella (chickenpox) (VZV), tetanus, diphtheria and pertussis (Tdap) and the COVID-19 vaccine. Students 21 and younger are required to receive the meningococcal conjugate vaccine (MenACWY), and all incoming students must also complete an online screening questionnaire for tuberculosis (TB), based upon CDPH guidance.
+									</br></br>
+									Please note: UC may stipulate additional vaccination requirements based on recommendations from the CDPH.
+			                        </p>
+									
+		                        </div>
+	                        </div>
+	                        </main>
+	                        </div>
+	                        </section>
+	                        </div>
+	                        </div>
+	                        <hr class="home">
+	                        <div class="w98">
+	                        <div class="row ph_mr_0">
+	                        <main class="padding-bottom-0">
+	                         <section>
+	                        <div>
+	                         <div class="container middle">
+	                        	<div class="content-wrapper neg-margin-top-20">
+	                        	<h2 class="home_Sec_title">
+		                                System Requirements
+		                            </h2>
+			                        <ul class="margin-bottom-30 fl w30 mobile_sb">
+			                        	Supported browsers:
+										<li>
+											Chrome 125 or newer
+										</li>
+										<li>
+											Edge 125 or newer
+										</li>
+										<li>
+											Firefox 126 or newer
+										</li>
+										<li>
+											Safari 16 or newer
+										</li>
+										
+			                        </ul>
+			                        <ul class="margin-bottom-15 fl w50 mobile_bs">
+			                        	Browser settings:
+										<li>
+											JavaScript and Cookies must be enabled 
+										</li>
+			                        </ul>
+			                        
+		                        </div>
+	                        </div>
+	                        
+                       </main></div>
+                    </section>
+					
+                </div>
+                <hr class="home" /> 
+                <footer>
+						<div class="container">
+        	<div class="row">
+        		<div>
+        			<nav>
+                        <ul class="hcampuses">
+                            <li>
+                                <span >Berkeley</span>
+                            </li>
+                            <li>
+                                <span >Davis</span>
+                            </li>
+                            <li>
+                                <span >Irvine</span>
+                            </li>
+                            <li>
+                               <span >UCLA</span>
+                            </li>
+                            <li>
+                                <span >Merced</span>
+                            </li>
+                            <li>
+                                <span >Riverside</span>
+                            </li>
+                            <li>
+                                <span >San Diego</span>
+                            </li>
+                            <li>
+                                <span >Santa Barbara</span>
+                            </li>
+                            <li>
+                                <span >Santa Cruz</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+                    </div>
+                    </div> <!-- Close container from higher level for divider -->
+					<hr class="home" />
+		<div class="container homesecfooter">			
+			<div class="row">
+        		<div>		
+        			<p>
+        				Pursuant to section 502 of the California Penal Code, unauthorized access to applicant information will be prosecuted to the full extent of the law.
+        			</p>
+        			<p class="padding-top-15">
+        				&copy; The Regents of the University of California <span class="padding-right-5 padding-left-5">| &nbsp;<a href="/docs/StatementOfPrivacy.pdf" target="_blank">Privacy Policy<span class="sr_hide">opens in new tab</span></a> |&nbsp;</span><a href="/my-application/termsofuse" target="_blank">Terms of use<span class="sr_hide">opens in new tab</span></a>
+        			</p>
+        		</div>
+        	</div>
+</div>
+			    </footer> 
+            </div>    
+        </div>
+        
+        <div>
+			<div>
+<div class="container hide" id="createAccModal" >
+	<div class="row">
+		 <section class="overlay">
+			<form id="signUpForm" class="form-wrapper"
+				action="/my-application/creatAccount" method="post">
+				<div
+					class="popup sign-up col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" role="dialog">
+					 
+					
+					
+					<h2 class="title">Create an account</h2>
+						<a class="close-layer" role="button" tabindex="0" aria-label="close" attr="btncloseOverlay" > close </a>
+						<div class="field-wrapper">
+							<label for="signUpEmail" class="standard">Email address *</label> 
+							<input type="text" placeholder="Email address *" id="signUpEmail" class="col-xs-12" maxlength="50" autocomplete="off" name="email" value="" />
+							<p id="signUpEmail-error" class="required">
+<!-- 								<span th:errors="*{email}"></span> -->
+									
+							</p>
+						</div>
+						<div class="field-wrapper margin-bottom-0">
+							<label for="verifyEmail" class="standard">Confirm email address *</label> 
+							<input type="text" placeholder="Confirm email address *" id="verifyEmail" class="col-xs-12" maxlength="50" autocomplete="off" />
+							<p id="verifyEmail-error" class="required">
+									<span >
+										<span id="verifyEmailError"></span>
+									</span>
+							</p>
+						</div>
+						
+						<div class="field-wrapper">
+							<a href="JavaScript:Void(0);" class="over-password" > Show password </a>
+							<label for="signUpPassword" class="standard w70">Password *</label> 
+							<input type="password" placeholder="Password *" id="signUpPassword" class="col-xs-12" maxlength="30" autocomplete="off" name="password" value="" />
+							<p class="required" id="signUpPassword-error" style="display: block;">
+								
+							</p>
+							
+							<div class="password-specs-wrapper neg-margin-bottom-10">
+								<p id="successMsgPlacement" class="italic">Your password must contain:</p>
+								<ul class="firstreq">
+									<li class="nchar">- 8 to 30 characters</li>
+								</ul>
+								<p class="italic" id="meet3">And meet at least three of the following requirements:</p>
+								<ul class="secondreq">	
+									<li class="elc">- An English lowercase letter (a-z)</li>
+									<li class="eup">- An English uppercase letter (A-Z)</li>
+									<li class="numb">- A number between 0-9</li>
+									<li class="symb">- A special character:
+										!@#$%^&amp;*+&lt;&gt;?.-</li>
+								</ul>
+							</div>
+							
+						</div>
+						<hr />
+			<div class="field-wrapper padding-top-10" id="termsOfUseSection">
+			
+ 			 
+			
+			<p>The University of California uses the information requested on the application to process your application for admission, scholarships, and statistical analysis and reporting.  Please see our <a href="/docs/StatementOfPrivacy.pdf" target="_blank">Privacy Policy <span class="sr_hide">opens in new tab</span></a>for more details. </p>
+				<label class="opt-wrapper block no-margin-right padding-bottom-20" for="termsOfUse">
+					<input type="checkbox" id="termsOfUse" value="Y" name="termsOfUse">
+					<span class="fix_wrap">		
+					By checking this box, you are confirming that you agree to the <a href="/my-application/termsofuse" target="_blank">Terms of Use<span class="sr_hide">opens in new tab</span></a> and the disclosure of applicant information as described in the Privacy Policy.											
+					</span>
+				</label>
+				<p id="termsOfUse-error" class="required"></p>
+			</div>			
+				<button id="signUpButton" class="button standard col-xs-6 col-sm-7 col-md-8" >Create account</button>
+				</div>
+<!-- 				<input type="hidden" class="hide" th:field="*{ccgiToken}"/> -->
+			</form>
+</section>
+	</div>
+</div>
+
+
+</div>   
+		</div>  
+        
+    </div>
+    <footer>
+			<!-- Page Footer -->
+    </footer>
+    
+    <script type="text/javascript" src="/my-application/js/jquery.js" integrity="sha384-NB84j1EpN8o9Tbd4aSmtXLYy7Yp7GDaABlnMa4+De6jHgSLOZhB4Ji6JCiNn45xR" crossorigin="anonymous"></script>
+    <script src="/my-application/js/jquery.validate.js" integrity="sha384-aEDtD4n2FLrMdE9psop0SHdNyy/W9cBjH22rSRp+3wPHd62Y32uijc0H2eLmgaSn" crossorigin="anonymous"></script>
+    <script src="/my-application/js/validationUtils.js" integrity="sha384-vT7N2idSoJ1HfWsySdUzqO1O1s3khJTDbbcNzrVJI382UVThHDChHqvG1UG/SJ2y" crossorigin="anonymous"></script>
+    <script src="/my-application/js/device.js" integrity="sha384-kz/s6V5jbF9Qha1Oomn4e6juMJcNwRpo/F3AQRddSxmlWHxRNKqdDdXJ+1YwDyj8" crossorigin="anonymous"></script>
+	<script src="/my-application/js/jquery.jscrollpane.js" integrity="sha384-UTn7UFJa0oNFeYdDctoMKPjFDEv11HLfzsSZWDzGmjIR/5IXZ3a9mHOu+yRV172Q" crossorigin="anonymous"></script>
+	<script src="/my-application/js/popper.js" integrity="sha384-ni5V3/kVksBE+v0mExzANVowYFUq83+4Vi9byXxeIqTKfiTk2fdA2rrXh42IinUz" crossorigin="anonymous"></script>
+	<script src="/my-application/js/bootstrap.js" integrity="sha384-rNaSL4Yn4BSH8zLoJTb+Tdo4Q1VGCArecb8ZjJc2pST/nT3xV+fTwHLQpWulXJNs" crossorigin="anonymous"></script>
+	<script src="/my-application/js/areyousure/jquery.are-you-sure.js" integrity="sha384-bTWaE81syN4XgFO4oiNCzmZ5grSO2WzO3kgmirViVekQE8NyjZhwqK6NIr5WfWOm" crossorigin="anonymous"></script>
+	<script src="/my-application/js/jquery.inputmask.bundle.min.js" integrity="sha384-YaU5rZ6crjOodEwUkwoH8gxJRJa0yWO5BUjDwRcKH8OGLYAkkVgwd2zQhn4j2ubo" crossorigin="anonymous"></script>
+	<script src="/my-application/js/app.min2.js" integrity="sha384-q/aIhHD597O2igUjSpJ0g2w5r3U+UEEEY14afxhqRm2720VXntnixvl6jb+dA1ty" crossorigin="anonymous"></script>    
+
+    <script type="text/javascript">
+		$(window).on('load', function() {
+	    	jQuery(".alert.v2 .close-layer").on("click", function() {
+	    	    jQuery(".alert.v2").slideUp(function() {
+	    	        jQuery(this).hide();
+	    	    });	    	    
+	    	});
+
+         })
+         /*function check for server validation error inside modal and sset modal to display or not*/
+		$(document).ready(function() {
+			if($.trim( $('#signUpEmailError').html() ).length > 0  || $.trim( $('#signUpPassword-error').html() ).length > 0) {
+				var checkStr = $.trim( $('#signUpEmail-error').html());
+	 	        $("#createAccModal").removeClass("hide").fadeTo(400, 1, function() {
+ 	            	jQuery('.popup.sign-up input[type="text"]').eq(0).focus();
+ 	            }).focus();
+
+			}	
+
+			if($.trim( $('#email-error').html() ).length > 0  ) {
+				var checkStr = $.trim( $('#email-error').html());
+	 	        $(".popup-wrapper.sign-in").removeClass("hidden").hide().fadeTo(400, 1, function() {
+ 	            	jQuery('.popup.login input[type="text"]').eq(0).focus();
+ 	            }).focus();
+
+			}
+
+			/*Checks SignIn form and sumbit if there are no errors.*/
+        	$("#signIn").click(function(e) {
+        		e.preventDefault();
+
+        		//automatically remove trailing and leading spaces
+				var email = $("#email").val();
+				$("#email").val($.trim(email))
+        		
+        	   	if ($("#loginForm").valid()) {
+        	   		$("#loginForm").submit();
+                } 
+           	});
+
+        	$("#signInLink").click(function(e) {
+        		e.preventDefault();
+        		$("#create-account-modal").addClass("hidden");
+        		$("#sign-in-modal").removeClass("hidden");
+           	});
+        	
+        	/*Checks SignUp form and sumbit if there are no errors.*/
+        	$("#signUpButton").click(function(e) {
+        		e.preventDefault();
+
+        		//automatically remove trailing and leading spaces
+				var email = $("#signUpEmail").val();
+				$("#signUpEmail").val($.trim(email))
+        		
+        		var confirmEmail = $("#verifyEmail").val();
+				$("#verifyEmail").val($.trim(confirmEmail))
+        		
+        		
+        	   	if ($("#signUpForm").valid()) {
+        	   		$("#signUpForm").submit();
+        	   		$("#signUpButton").attr("disabled","disabled");
+                } 
+        	 // highlight the missing requirement when error is triggered
+        		if($('#signUpPassword-error.error')){
+					$(".secondreq, .firstreq").find("li:not(:has(.ok))").css('color', '#ef7e35');	
+    		    }
+				
+    		                    
+           	});
+
+        	// reset requirement highlight to inherit class
+           	$('.create-account-switch').bind("keypress click", function(){
+           		$(".secondreq, .firstreq").find("li:not(:has(.ok))").css('color', 'inherit');	
+             });
+
+      
+        	/*Validation rules*/
+        	/*loginForm and signUpForm has different rules*/
+   		    $("#loginForm #email").rules("add", {
+   		    	required:true,
+   		    	maxlength: 50,  		    	
+                messages: {
+                	required: "Please enter an email address.",                	
+                }		   		 	
+	   		});
+
+   		    $("#signUpForm #email").rules("add", {
+   		    	required:true,
+   		    	minlength: 6,
+   		    	maxlength: 50,
+   		    	email:true,
+                messages: {
+                	required: "Please enter an email address.",
+                	email: "This is an invalid email address. Please check for typos and try again."
+                }		   		 	
+	   		});
+   		 $("#signUpForm #verifyEmail").rules("add", {
+				required:true,
+				minlength: 6,
+		    	maxlength: 50,
+		    	matchesEmail: true,
+				messages: {
+          		required: 'You must confirm your email.',
+          		matchesEmail: 'The email addresses you&apos;ve entered do not match.'
+				}
+		 	});
+
+	   		 $.validator.addMethod("matchesEmail", function(){
+	   			var emailAdd1 = $("#signUpEmail").val().toLowerCase();
+				var emailAddConf = $("#verifyEmail").val().toLowerCase();
+					if((emailAdd1 !== emailAddConf)||(emailAddConf === "")){
+						return false;
+					}else{
+						return true;
+					}    
+	 		}, 
+				"The email addresses you&apos;ve entered do not match."
+			);
+
+   		 	$("#signUpForm #termsOfUse").rules("add", {
+				required:true,
+				messages: {
+                	required: 'You must read and agree to our Terms of Use in order for UC to process your application.',
+				}
+   		 	});
+	   		
+   		    $("#loginForm #password").rules("add", {
+   		    	required:true,  		    	
+   		    	maxlength: 30,  		    	
+                messages: {
+                	required: "Please enter your password.",               	
+                }		   		 	
+	   		});
+	   		
+   		    $("#signUpForm #password").rules("add", {
+   		    	required:true,
+   		    	minlength: 8,
+   		    	maxlength: 30,
+   		    	passwordFormat: true,
+                messages: {
+                	required: "Please enter your password.",
+                	passwordFormat : "Your password does not meet UC's standard for password strength."
+                	
+                }		   		 	
+	   		});
+
+	   		/*Create Account email and password.*/
+   		    $("#signUpEmail").rules("add", {
+   		    	required:true,
+   		    	minlength: 6,
+   		    	maxlength: 50,
+   		    	email:true,
+                messages: {
+                	required: "Please enter an email address.",
+                	email: "This is an invalid email address. Please check for typos and try again."
+                }		   		 	
+	   		});
+	   		
+   		    $("#signUpPassword").rules("add", {
+   		    	required:true,
+   		    	minlength: 8,
+   		    	maxlength: 30,
+   		    	passwordFormat: true,
+   		    	passwordHasSpecChars: true,
+                messages: {
+                	required: "Please enter your password.",
+                	passwordFormat : "Your password does not meet UC's standard for password strength.",
+                	passwordHasSpecChars: 'Password cannot contain any other special characters'
+                }		   		 	
+	   		});
+
+			if($("#showSignIn").val() == 'Y')
+	   			$("#sign-in-modal").removeClass("hidden");
+
+   		    /*create and account password*/	    
+ 	    	  $('#signUpPassword').keyup(function(){
+				   var countValid = 0;
+				   var lengthValid = 0;
+ 	 	    	  
+ 	    		   var pwdVal= $('#signUpPassword').val();
+ 	    		   var regEigthTw = /^.{8,30}$/;
+ 	    		   if(regEigthTw.test(pwdVal)){
+ 	        		   $('.nchar').addClass('ok');
+ 	        		  	lengthValid ++;
+ 	        	   }else{
+ 	        		   $('.nchar').removeClass('ok');
+ 	        	   }
+ 	    		   var regLow = /[a-z]/;
+ 	    		   if(regLow.test(pwdVal)){
+ 	        		   $('.elc').addClass('ok');
+ 	        		  countValid ++;
+ 	        	   }else{
+ 	        		   $('.elc').removeClass('ok');
+ 	        	   }
+ 	    		   var regUp = /[A-Z]/;
+ 	    		   if(regUp.test(pwdVal)){
+ 	        		   $('.eup').addClass('ok');
+ 	        		  countValid ++;
+ 	        	   }else{
+ 	        		   $('.eup').removeClass('ok');
+ 	        	   }
+ 	    		   var regNum = /[0-9]/;
+ 	    		   if(regNum.test(pwdVal)){
+ 	        		   $('.numb').addClass('ok');
+ 	        		  countValid ++;
+ 	        	   }else{
+ 	        		   $('.numb').removeClass('ok');
+ 	        	   }
+
+
+ 	    		   var regSpecC =/[-!@#%&\*<>\$\^\(\)\+\.\?]/;
+ 	    		   if(regSpecC.test(pwdVal)){
+ 	        		   $('.symb').addClass('ok');
+ 	        		  countValid ++;
+ 	        	   }else{
+ 	        		   $('.symb').removeClass('ok');
+ 	        	   }
+ 	    		   if(lengthValid >=1 && countValid >= 3) {
+	    			   $(".popup.sign-up .password-specs-wrapper p").text("");
+	    			   $("#successMsgPlacement").addClass("ok").text("Nice job! Your password is good to go.");
+	    			   $(".popup.sign-up .password-specs-wrapper ul").css({
+	    				    'visibility': 'hidden', 
+	    				    'display': 'none'
+	    				});
+ 	 	    	   } else {
+  	    			  $(".popup.sign-up .password-specs-wrapper p").removeClass("ok");
+  	    			  $("#meet3").removeClass("ok").text("And meet at least three of the following requirements:");
+  	    		   	  $("#successMsgPlacement").removeClass("ok").text("Your password must contain:");
+ 	    			  $(".popup.sign-up .password-specs-wrapper ul").css({
+	    				    'visibility': 'visible', 
+	    				    'display': 'block'
+	    				});
+ 	 	 	       }
+ 	 	 	       
+ 	    		});
+
+	    
+ 	    		
+   			   /*function to check if all requirements are valid*/
+ 	    	 /*click close layer hides popup wrapper, clean up error message*/
+ 	    	jQuery("#loginForm .popup .close-layer").on("click", function() {
+ 		    	 $("#email-error").find("span").html("");
+ 		    	 $("#password-error").find("span").html("");
+ 		    	 $("#email").removeClass('required');
+ 		    	 $("#password").removeClass('required');
+ 	 	     	 jQuery(".popup-wrapper").addClass("hidden");
+ 	 	 	});	
+  	 	 	/*when click on blank place also close the popup window and clean up error message*/
+ 	        jQuery(".popup-wrapper.sign-in").on("click", function() {
+ 	        	$("#email-error").find("span").html("");
+ 	        	$("#password-error").find("span").html("");
+ 	        	$("#email").removeClass('required');
+ 		    	$("#password").removeClass('required');
+ 	            jQuery(this).addClass("hidden");
+ 	       });
+
+			/*when hit close on create an account popup, clear email address data, it's error messages, password, it's error message*/
+	    	jQuery("#loginForm .fixed-popup-wrapper, .popup-wrapper").on("click", function() {
+              	 $("#loginForm").validate().cancelSubmit=true;
+            	 $("#loginForm").validate().resetForm();
+					
+				 //reset form	
+            	 $("#loginForm").trigger("reset");
+            	 //reset password validation messages
+            	 $('#loginForm').trigger("keyup");
+                	 
+		    	 $("#email-error").find("span").html("");
+		    	 $("#email").html("");
+		    	 $("#email").val("");
+		    	 $("#email").removeClass('required');		    	 
+		    	 
+	 	     	 jQuery(".popup-wrapper").addClass("hidden");
+	 	 	});	
+	 	 	
+			/*when hit close on create an account popup, clear email address data, it's error messages, password, it's error message*/
+	    	jQuery("#signUpForm .popup .close-layer,.overlay").on("click", function() {
+              	 $("#signUpForm").validate().cancelSubmit=true;
+            	 $("#signUpForm").validate().resetForm();
+					
+				 //reset form	
+            	 $("#signUpForm").trigger("reset");
+            	 //reset password validation messages
+            	 $('#signUpPassword').trigger("keyup");
+                	 
+		    	 $("#signUpEmail-error").find("span").html("");
+		    	 $("#signUpEmail").html("");
+		    	 $("#signUpEmail").val("");
+		    	 $("#signUpEmail").removeClass('required');		    	 
+		    	 
+	 	     	 jQuery(".popup-wrapper").addClass("hidden");
+	 	 	});	
+
+	    	
+	 	 	
+	 	 	/*when click on blank place also close the popup window and clean up error message*/
+	        jQuery(".popup-wrapper.create-account").on("click", function() {
+	           	$("#signUpForm").validate().cancelSubmit=true;
+            	$("#signUpForm").validate().resetForm();
+             	 
+	        	$("#signUpEmail-error").find("span").html("");
+	        	$("#signUpEmail").html("");
+	        	$("#signUpEmail").val("");
+	        	$("#signUpEmail").removeClass('required');
+
+	        	 $("#signUpPassword-error").find("span").html("");
+		    	 $("#signUpPassword").html("");
+		    	 $("#signUpPassword").val("");
+		    	 $("#signUpPassword").removeClass('required');
+
+		    	 $(".firstreq").children('li').removeClass('ok');
+		    	 $(".secondreq").children('li').removeClass('ok');
+		    	 
+	            jQuery(this).addClass("hidden");
+	       }); 	 
+		       
+	    	$(":input").on("click", function() {	    		    		
+	    		$(this).parents('div').first().children('p').children('span').html("")
+	      	  	$(this).removeClass('required');
+	      	}); 
+
+	    	$(":input").on("keypress", function() {
+	    		//this.removeAttribute('readonly');	    		
+	    		$(this).parents('div').first().children('p').children('span').html("")
+	      	  	$(this).removeClass('required');
+	      	}); 
+		        
+	    } ); //end of document.ready
+	    /*carrousel method*/
+	    var FullscreenCarrousel = function(options) {
+	        if (options) {
+	            this.options = {};
+	            this.options.idWrapper = options.idWrapper != undefined ? options.idWrapper : false;
+	            this.options.interval = options.interval != undefined ? options.interval : 1e4;
+	            if (this.options.idWrapper) {
+	                this.$wrapper = jQuery("#" + this.options.idWrapper);
+	                this.setup();
+	            }
+	        }
+	    };
+
+	    FullscreenCarrousel.prototype.initHandlers = function() {
+	        var that = this;
+	        jQuery(window).on("resize", function() {
+	            that.setSizes();
+	        });
+	    };
+
+	    FullscreenCarrousel.prototype.setup = function() {
+	        var totalImages = 0, that = this;
+	        this.$wrapper.find("li").each(function(i) {
+	            var $li = jQuery(this), $images = $li.find("img");
+	            totalImages += $images.length;
+	            $images.each(function() {
+	                var $img = jQuery(this);
+	                jQuery("<img />").attr({
+	                    src: $img.attr("src")
+	                }).on('load', function(i){
+	                    if ($img.hasClass("desktop")) {
+	                        $li.attr({
+	                            "data-imaged-ratio": this.width / this.height
+	                        });
+	                    } else {
+	                        $li.attr({
+	                            "data-imagem-ratio": this.width / this.height
+	                        });
+	                    }
+	                    totalImages--;
+	                    if (totalImages == 0) {
+	                        that.setSizes();
+	                        that.initHandlers();
+	                        that.startCarrousel();
+	                    }
+	                });
+	            });
+	        });
+	    };
+
+	    FullscreenCarrousel.prototype.setSizes = function() {
+	        var $window = jQuery(window), $intro = this.$wrapper.find(".home-intro-wrapper"), $imageRef = this.$wrapper.find("img:visible").eq(0), carruselHeight = $window.height() - $intro.height();
+	       var Devicejs;
+	        if (Devicejs && Devicejs.mobile()) {
+	            carruselHeight = $window.width() / parseFloat(this.$wrapper.find("li:visible").eq(0).attr("data-imagem-ratio"), 10);
+	        }
+	       // this.$wrapper.height(carruselHeight + $intro.height());
+	        this.$wrapper.find("ul").height(carruselHeight);
+	        this.$wrapper.find("li").each(function(i) {
+	            var $li = jQuery(this);
+	            $li.css({
+	                "float": "none",
+	                position: "absolute",
+	                top: 0
+	            }).width("100%").height("100%");
+	        });
+	        this.setupSlides();
+	    };
+
+	    FullscreenCarrousel.prototype.setupSlides = function() {
+	        var $slides = this.$wrapper.find("li");
+	        $slides.each(function(i) {
+	            var $this = jQuery(this), $imaged = $this.find("img.desktop"), $imagem = $this.find("img.mobile"), srcd = $imaged.length ? $imaged.attr("src") : false, srcm = $imagem.length ? $imagem.attr("src") : false;
+	            if (srcd) {
+	                $this.removeClass("active").css({
+	                    "background-image": "url(" + srcd + ")",
+	                    "background-position": "center center",
+	                    "background-size": "cover"
+	                }).attr({
+	                    "data-imaged": srcd,
+	                    "data-imagem": srcm
+	                });
+	            }
+	            if (srcm) {
+	                if (jQuery(window).width() <= 480) {
+	                    $this.removeClass("active").css({
+	                        "background-image": "url(" + srcm + ")",
+	                        "background-position": "center center",
+	                        "background-size": "cover"
+	                    }).attr({
+	                        "data-imaged": srcd,
+	                        "data-imagem": srcm
+	                    });
+	                }
+	            }
+	        });
+	        $slides.eq(0).addClass("active");
+	    };
+
+
+	    FullscreenCarrousel.prototype.next = function() {
+	        var $slides = this.$wrapper.find("li"), $active, $next;
+	        if ($slides.length) {
+	            $active = $slides.filter(".active");
+	            $next = $active.next().length ? $active.next() : $slides.eq(0);
+	            $active.fadeTo(500, 0).removeClass("active");
+	            $next.fadeTo(500, 1).addClass("active");
+	            setTimeout(function() {}, 500);
+	        }
+	    };
+
+	    FullscreenCarrousel.prototype.startCarrousel = function() {
+	        var that = this;
+	        if (this.$wrapper.find("li").length) {
+	            this.$wrapper.find("li.active").fadeTo(500, 1);
+	            setInterval(function() {
+	                that.next();
+	            }, this.options.interval);
+	        }
+	    };
+ 
+	    var carrousel = new FullscreenCarrousel({
+	        idWrapper: "fullscreen-carrousel-wrapper"
+	    });
+
+		function openSignInModal() {
+
+         	 $("#signUpForm").validate().cancelSubmit=true;
+        	 $("#signUpForm").validate().resetForm();
+				
+			 //reset form	
+        	 $("#signUpForm").trigger("reset");
+        	 //reset password validation messages
+        	 $('#signUpPassword').trigger("keyup");
+            	 
+	    	 $("#signUpEmail-error").find("span").html("");
+	    	 $("#signUpEmail").html("");
+	    	 $("#signUpEmail").val("");
+	    	 $("#signUpEmail").removeClass('required');		    	 
+	    	 
+ 	     	 jQuery(".popup-wrapper").addClass("hidden");
+ 	     	 
+            jQuery("body").removeClass( "noscroll" );
+            jQuery('#createAccModal').addClass("hide");
+
+            jQuery(".popup-wrapper.sign-in").removeClass("hidden").hide().fadeTo(400, 1, function() {
+                jQuery('.popup.login input[type="text"]').eq(0).focus();
+            }).focus();
+                
+
+		}
+
+		window.name = 'applyUCtab';	
+		var localStorageTabKey = 'test-application-browser-tab';
+		var sessionStorageGuidKey = 'browser-tab-guid';
+		
+		sessionStorage.removeItem(sessionStorageGuidKey);
+		localStorage.removeItem(localStorageTabKey);
+	</script> 
+   
+  </body>
+    
+</html>

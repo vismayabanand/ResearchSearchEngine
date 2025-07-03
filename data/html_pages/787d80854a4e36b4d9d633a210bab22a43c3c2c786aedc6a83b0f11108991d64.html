@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="en">
+<!--
+
+Page    : index / safety
+Version : 1.0
+Author  : Gleb Shevchuk
+URI     : tbd
+
+ -->
+
+<!-- This is used to define the email contact form -->
+ <!-- We use this instead of direct email to reduce email scraping -->
+<style type="text/css">
+    .e-mail:before {
+        content: attr(data-website) "\0040" attr(data-user);
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+</style>
+
+<head>
+    <title>Stanford AI Safety</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Stanford Center for AI Safety">
+    <meta name="keywords" content="safety, center, ai, stanford, responsive">
+
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Font -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
+
+    <div class="su-brand-bar su-brand-bar--white">
+        <div class="su-brand-bar__container" , style="position:relative; z-index:2000">
+            <a class="su-brand-bar__logo" href="https://stanford.edu" , style="text-decoration: none">
+                Stanford University
+                <!-- <span class="su-brand-bar__link--a11y">(link is external)</span> -->
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <!-- Nav Menu -->
+
+    <div class="nav-menu fixed-top">
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="images/SU-CAIS.png" ,
+                                width=100%><!--<h3>AI Safety @ Stanford</h3>--></a> <button class="navbar-toggler"
+                            type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+                            aria-expanded="false" aria-label="Toggle navigation"> <span
+                                class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span
+                                            class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#mission">MISSION</a> </li>
+                                <!--<li class="nav-item"> <a class="nav-link" href="#research">RESEARCH</a> </li>-->
+                                <li class="nav-item"> <a class="nav-link" href="#flagship">PROJECTS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#research">RESEARCH</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#events">EVENTS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#courses">COURSES</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#people">PEOPLE</a> </li>
+                                <!--<li class="nav-item"> <a class="nav-link" href="#papers">PAPERS</a> </li>-->
+                                <li class="nav-item"> <a class="nav-link" href="#members">MEMBERSHIP</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#mailinglist">MAILING&nbspLIST</a> </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <header id="home" class="bg-gradient">
+        <div class="container mt-5">
+            <div class="row tree-holder">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <br><br><br><br><br><br>
+                    <img src="images/icons/SU_Safe-AI_Gray-Dark_RGB.png">
+                    <div class="pop"> Stanford Center for AI Safety </div>
+                    <br><br><br><br><br><br><br><br>
+
+
+                    <br><br><br><br><br><br>
+
+                </div>
+
+                <div class="col-md-2"></div>
+
+            </div>
+        </div>
+
+    </header>
+    <!-- <div class="section" id="mission" align="center">
+        <div class="section-title", style="margin-bottom:1rem">
+            Join us for an AI Safety summer course!
+        </div>
+        <div class="col-md-6 mission">
+        <a href="https://online.stanford.edu/courses/xaa101-designing-reliable-and-robust-ai-systems">Designing Reliable and Robust AI Systems</a> (July 24 - July 28)
+        </div>
+    </div> -->
+    <div class="section" id="mission" align="center">
+
+        <div class="container">
+            <div class="row justify-content-center" align="center">
+                <div class="col-md-6 text-center ">
+                    <div class="img-fluid"><br><br><br><br><br><br><br><img src="images/icons/SU_Safe-AI_Green_RGB.png"
+                            , width="50%"><br><br><br><img src="images/graphic-1.png" width="30%"></div>
+                </div>
+                <div class="col-md-6 mission">
+                    <br><br><br>
+                    <h4>The mission of the Stanford Center for AI Safety is to develop rigorous techniques for building
+                        safe and trustworthy AI systems and establishing confidence in their behavior and robustness,
+                        thereby facilitating their successful adoption in society.</h4>
+
+                    <a class="missionmore" href="whitepaper.pdf">
+                        <h2><b> Read more in the white paper </b></h2>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // end .section -->
+    <!-- <div class="section" id="news" align="center">
+
+        <div class="container">
+		<div class="section-title">
+              		ANNOUNCEMENTS	
+		</div>
+                <div class="row justify-content-center ">
+			<h2> The Stanford Computer Forum and CS Industry Affiliates Annual Meeting </h2>
+			<h2> will be held virtually August 11 – 13, 2020. </h2>
+		</div>
+                <div class="col-md-4 justify-content-center ">
+		</div>
+                <div class="col-md-8 justify-content-center ">
+                         This Annual Meeting will be co-hosted by SDSI, AI Safety, SAIL, and the Stanford Computer Forum. The three-day event will
+			 present opportunities for our industrial partners to hear about latest developments in timely and critical areas of technology.
+			 As in previous years, we look forward to sharing new faculty research and advances in big data, machine learning, reinforcement 
+			 learning and natural language processing. 
+			 <br>
+			 <br>
+			 To register please click <a href="https://forum.stanford.edu/events/annualmeeting.php">here </a> and use the registration password: signmeup2020
+		</div>
+       	</div>
+   </div> -->
+    <!-- // end .section -->
+    <div class="section" id="flagship">
+        <div class="container">
+            <div class="section-title">
+                FLAGSHIP PROJECTS
+            </div>
+            <div class="row justify-content-center flagship">
+                <a class="col-md-3" href="#" data-toggle="modal" data-target="#flagship-1">
+                    <div class="card text-center greenbg img-fluid">
+                        <div class="card-title">
+                            <br>
+                            <h3 class="flagship-title">Responsible AI Assessment</h3>
+                            <p class="flagship-text">We aim to develop a Responsible AI (RAI) assessment framework consisting of evaluation metrics and mitigation strategies. 
+                                This research aims to combine industry and academic perspectives to create a comprehensive guide for building RAI. 
+                                ... (click for more)</p>
+                        </div>
+                    </div>
+                </a>
+                <br>
+                <div class="col-md-1"></div>
+                <a class="col-md-3" href="#" data-toggle="modal" data-target="#flagship-2">
+                    <div class="card text-center greenbg img-fluid">
+                        <div class="card-title">
+                            <br>
+                            <h3 class="flagship-title">Error Pocket Retrieval in Computer Vision from Unlabeled Data</h3>
+                            <p class="flagship-text">AI practitioners often need to perform model comparison to select the most suitable models for integration into larger pipelines, 
+                                or to cross-check fine-tuned models against their predecessors for desired improvements. ... (click for more) </p>
+                        </div>
+                    </div>
+                </a>
+                <br>
+                
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- Second row -->
+            <div class="row justify-content-center flagship">
+                <a class="col-md-3" href="#" data-toggle="modal" data-target="#flagship-3">
+                    <div class="card text-center greenbg img-fluid">
+                        <div class="card-title">
+                            <br>
+                            <h3 class="flagship-title">Verifying Learning-Based Controllers using Neural Lyapunov Barrier Certificates</h3>
+                            <p class="flagship-text">Deep reinforcement learning (DRL) is a powerful machine learning paradigm for generating agents that control autonomous systems. 
+                                However, the black-box nature of DRL agents limits their deployment in real-world safety-critical applications. A promising approach ... (click for more) </p>
+                        </div>
+                    </div>
+                </a>
+                <br>
+                <div class="col-md-1"></div>
+                <a class="col-md-3" href="#" data-toggle="modal" data-target="#flagship-4">
+                    <div class="card text-center greenbg img-fluid">
+                        <div class="card-title">
+                            <br>
+                            <h3 class="flagship-title">Safe Navigation with Learned Environment Maps</h3>
+                            <p class="flagship-text">Recently, 3D neural maps learned from sensor data have shown astounding results 
+                                in visual realism and detail, as well as more compactness and efficiency compared to traditional 
+                                map representations. However, despite their strengths over traditional map representations, 
+                                neural maps are still limited by ...gi (click for more) </p>
+                        </div>
+                    </div>
+                </a>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div id="flagship-1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <br>
+                    <p>
+                        We aim to develop a Responsible AI (RAI) assessment framework consisting of evaluation metrics and mitigation strategies. 
+                        This research aims to combine industry and academic perspectives to create a comprehensive guide for building RAI. 
+                        As AI technology advances, governments are introducing requirements for transparency, accountability, and data protection. 
+                        Compliance with these regulations is essential to avoid substantial fines and penalties. 
+                        The absence of clear metrics and key performance indicators (KPIs) poses a challenge to assessing RAI, 
+                        but companies can develop and apply relevant metrics within a robust framework. 
+                        Regular assessments offer valuable insights into AI systems' current states, highlighting areas of excellence and needed improvements, 
+                        allowing for targeted actions to enhance AI governance. Identifying RAI weaknesses can also help secure funding for necessary initiatives. 
+                        Mitigating risks such as bias, discrimination, and privacy violations is paramount, and rigorous 
+                        RAI assessments enable proactive risk management, reducing potential harm to individuals and society. 
+                        The proposed RAI assessment supports regulatory compliance, risk mitigation, and continuous 
+                        improvement in AI governance and ethical responsibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flagship-2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <br>
+                    <p>
+                        AI practitioners often need to perform model comparison to select 
+                        the most suitable models for integration into larger pipelines, or to cross-check 
+                        fine-tuned models against their predecessors for desired improvements. Our goal 
+                        is to enhance the current model comparison pipeline in computer vision by eliminating 
+                        the need for exhaustive image annotation to collect validation sets, and by providing 
+                        more informative and actionable insights than conventional accuracy metrics. We are 
+                        developing a tool that leverages model disagreement signals as a search mechanism on 
+                        large, unlabeled data sources, thereby bypassing the need for human annotations. Our 
+                        tool identifies and produces "Error Pockets"—thematic groups of images where two 
+                        models disagree, which can be coherently described by humans. These error pockets 
+                        allow practitioners to examine the systematic strengths and weaknesses of any model 
+                        in the context of their specific application. This approach provides a deeper audit 
+                        beyond the simplistic analysis afforded by numerical metrics and offers prescriptive 
+                        data for model improvement with human-understandable explanations. By incorporating 
+                        sparse feedback from practitioners, our tool aligns error pocket searches with human 
+                        preferences. Our experiments demonstrate that training models on their identified 
+                        error pockets significantly improves performance on those specific error modes. We 
+                        are currently validating the effectiveness, understandability, and actionability of 
+                        error pockets through user studies with real AI practitioners who have various model comparison needs.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flagship-3" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <br>
+                    <p>
+                        Deep reinforcement learning (DRL) is a powerful machine learning paradigm for generating 
+                        agents that control autonomous systems. However, the black-box nature of DRL agents limits 
+                        their deployment in real-world safety-critical applications. A promising approach for providing 
+                        strong guarantees on an agent's behavior is to use Neural Lyapunov Barrier (NLB) certificates, 
+                        which are learned functions over the system whose properties indirectly imply that an agent 
+                        behaves as desired. In this project, we explore the joint training of neural controllers and
+                         NLB certificates. We use a formal neural network verification tool (Marabou) to check the certificate 
+                         and provide counterexample-guided feedback to the training. We also explore techniques for improving scalability 
+                         and compositionality and showcase our techniques on autonomous vehicle case studies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="flagship-4" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <br>
+                    <p>
+                        Recently, 3D neural maps learned from sensor data have shown astounding results 
+                        in visual realism and detail, as well as more compactness and efficiency compared to traditional 
+                        map representations. However, despite their strengths over traditional map representations, 
+                        neural maps are still limited by incompletely observable and highly dynamic environments, 
+                        rendering their use in safety-critical systems challenging. We aim to leverage advancements in 
+                        neural scene reconstruction to develop high-quality neural mapping for environments ranging from 
+                        dense cities to extraterrestrial terrain. We are working to develop safe methods for downstream 
+                        navigation applications (localization, error forecasting, and path-planning) that are robust to 
+                        diverse sources of map errors. Additionally, we are working on methods to quantify and mitigate 
+                        uncertainty in map regions, provide bounds on localization error, and ensure safety guarantees for trajectory planning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="research">
+        <div class="container">
+            <div class="section-title">
+                OUR FOCUS
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 card text-center"><br><br>
+                    <br>
+                    <h3 class="lead">FORMAL METHODS</h3><br>
+                    <p> Using precise mathematical modeling to ensure the safety, security, and robustness of
+                        conventional software and hardware systems.</p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3 card text-center"><br><br>
+                    <br>
+                    <h3 class="lead">LEARNING AND CONTROL</h3><br>
+                    <p> Designing systems that intelligently balance learning under uncertainty and acting safety.</p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-3 card text-center"><br><br>
+                    <br>
+                    <h3 class="lead">TRANSPARENCY</h3><br>
+
+                    <p>Understanding safety in the context of fairness, accountability, and explainability for
+                        autonomous and intelligent systems.</p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- // end .section -->
+
+    <div class="section" id="events">
+
+        <div class="container">
+            <div class="section-title">
+                EVENTS
+            </div>
+
+            <div class="row justify-content-center">
+
+                <a class="class-link col-md-3" href="https://cs521.stanford.edu/">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">AI Safety Seminar Series</h3>
+
+                        <br>
+                        <p>Spring 2025</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="row justify-content-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eFOIuiF4Hfg?si=pgRHcQygPbXZ4LSv"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen></iframe>
+            </div>
+            <br>
+
+            <div class="row justify-content-center">
+
+                <a class="class-link col-md-3"
+                    href="https://www.cs.stanford.edu/events/affiliates-events/stanford-center-ai-safety-annual-meeting-2024">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">AI Safety Annual Meeting</h3>
+                        <p>Summer 2024</p>
+                    </div>
+                </a>
+                <a class="class-link col-md-3"
+                    href="https://www.cs.stanford.edu/events/affiliates-events/stanford-center-ai-safety-annual-meeting">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">AI Safety Annual Meeting</h3>
+                        <br>
+                        <p>Summer 2023</p>
+                    </div>
+                </a>
+                <a class="class-link col-md-3"
+                    href="https://www.youtube.com/playlist?list=PLoROMvodv4rPh6wa6PGcHH6vMG9sEIPxL">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">Explainability Workshop</h3>
+                        <br>
+                        <p>Summer 2022</p>
+                    </div>
+                </a>
+                <a class="class-link col-md-3"
+                    href="https://datascience.stanford.edu/events/affiliate-program-event/day-1-ai-safety-workshop">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">AI Safety Annual Meeting</h3>
+                        <br>
+                        <p>Summer 2022</p>
+                    </div>
+                </a>
+                
+            </div>
+
+            <div class="row justify-content-center">
+                <a class="class-link col-md-3" href="https://cs521.stanford.edu/speaker-schedule/">
+                    <div class="card class text-center"><br><br>
+                        <h3 class="class-name">AI Safety Seminar Series</h3>
+
+                        <br>
+                        <p>Spring 2022</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="section" id="courses">
+
+            <div class="container">
+                <div class="section-title">
+                    COURSES
+                </div>
+
+                <div class="row justify-content-center">
+                    <a class="class-link col-md-3" href="https://www.stanfordbrainstorm.com/courses">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">PSYC 248: AI's Psyche and Psych: Mental Health in the Age of AI</h3>
+
+                            <br>
+                            <p>Nina Vasan <br> Winter 2026</p>
+                        </div>
+                    </a> 
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://aa228v.stanford.edu/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA228V/CS238V - Validation of Safety Critical Systems</h3>
+
+                            <br>
+                            <p>Sydney Katz <br> Winter 2025</p>
+                        </div>
+                    </a>    
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://web.stanford.edu/class/sts14/index.html">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS34 - Introduction to AI Governance</h3>
+
+                            <br>
+                            <p>Max Lamparth <br> WInter 2025</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row justify-content-center">
+                    <a class="class-link col-md-3" href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=AA%20275:%20Navigation%20for%20Autonomous%20Systems&academicYear=20202021">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA275 - Navigation for Autonomous Systems</h3>
+
+                            <br>
+                            <p>Grace Gao <br> Winter 2025</p>
+                        </div>
+                    </a>   
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://web.stanford.edu/class/sts14/index.html">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA275 - Navigation for Autonomous Systems</h3>
+
+                            <br>
+                            <p>Grace Gao <br> Winter 2025</p>
+                        </div>
+                    </a>    
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://web.stanford.edu/class/cs120/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS120 - Introduction to AI Safety</h3>
+
+                            <br>
+                            <p>Max Lamparth <br> Fall 2024</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row justify-content-center">
+                    <a class="class-link col-md-3" href="https://stanfordaiethics.github.io/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS281 - Ethics of Artificial Intelligence</h3>
+
+                            <br>
+                            <p>Carlos Guestrin <br> Spring 2024</p>
+                        </div>
+                    </a>
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://stanford-cs221.github.io/spring2024/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS221 - Artificial Intelligence</h3>
+
+                            <br>
+                            <p>Sanmi Koyejo <br> Spring 2024</p>
+                        </div>
+                    </a>
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=AA%20273:%20State%20Estimation%20and%20Filtering%20for%20Aerospace%20Systems&academicYear=20182019">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA 273 - State Estimation and Filtering for Robotic Perception</h3>
+
+                            <br>
+                            <p>Mac Schwager <br> Srping 2024</p>
+                        </div>
+                    </a>        
+                </div>
+
+                <div class="row justify-content-center">
+                    <a class="class-link col-md-3" href="https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&page=0&catalog=&q=AA+212%3A+Advanced+Feedback+Control+Design&collapse=">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA 212 - Advanced Feedback Control Design</h3>
+
+                            <br>
+                            <p>Mac Schwager <br> Winter 2023</p>
+                        </div>
+                    </a>
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="http://web.stanford.edu/class/cs237b/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA 274B/CS 237B/EE 260B - Principles of Robot Autonomy II</h3>
+
+                            <br>
+                            <p>Dorsa Sadigh & Marco Pavone <br> Winter 2023</p>
+                        </div>
+                    </a>
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://aa228.stanford.edu/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA228/CS238 - Decision Making under Uncertainty</h3>
+
+                            <br>
+                            <p>Mykel J. Kochenderfer <br> Fall 2023</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="row justify-content-center">  
+                    <a class="class-link col-md-3" href="https://stanfordasl.github.io//PoRA-I/aa274a_aut2324/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">AA 274A/CS 237A/EE 260A - Principles of Robot Autonomy I</h3>
+
+                            <br>
+                            <p>Mac Schwager <br> Fall 2023</p>
+                        </div>
+                    </a>         
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://dorsa.fyi/cs333/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS 333 - Safe and Interactive Robotics</h3>
+
+                            <br>
+                            <p>Dorsa Sadigh <br> Winter 2022</p>
+                        </div>
+                    </a>
+                    <div class="col-md-1"></div>
+                    <a class="class-link col-md-3" href="https://cs521.stanford.edu/">
+                        <div class="card class text-center"><br><br>
+                            <h3 class="class-name">CS 521 - Seminar On AI Safety</h3>
+
+                            <br>
+                            <p>Anthony Corso <br> Spring 2022</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- // end .section -->
+
+        <div class="section" id="papers">
+
+            <div class="container">
+                <div class="section-title">
+                    FEATURED PUBLICATIONS
+                </div>
+                <div class="row selected-pubs">
+                    <script
+                        src="https://bibbase.org/show?bib=aisafety.stanford.edu%2Fbib%2Fselected-pubs.bib&jsonp=1"></script>
+                </div>
+            </div>
+            <br>
+            <div class="container justify-content-center">
+                <div class="row justify-content-center">
+                    <a class="btn btn-primary" href="all-publications.html">
+                        Show all publications
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--End section-->
+
+        <div class="section" id="people">
+
+            <div class="container">
+                <div class="section-title">
+                    PEOPLE
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="https://smlbansal.github.io/">
+                            <img src="images/bansal_somil.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Somil Bansal</p>
+                        <p class="name-description">Assistant Professor of Aeronautics and Astronautics</p>
+                    </div>                    
+                    <div class="col-md-4 text-center">
+                        <a href="http://theory.stanford.edu/~barrett/">
+                            <img src="images/clark.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Clark Barrett</p>
+                        <p class="name-description">Professor (Research) of Computer Science, &nbsp; Co-Director</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://cs.stanford.edu/people/ebrun/">
+                            <img src="images/ebrun.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Emma Brunskill</p>
+                        <p class="name-description">Associate Professor of Computer Science</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-4 text-center">
+                        <a href="https://profiles.stanford.edu/david-dill">
+                            <img src="images/david.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">David Dill</p>
+                        <p class="name-description">Donald E. Knuth Professor in the School of Engineering, Emeritus</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://profiles.stanford.edu/charles-eesley">
+                            <img src="images/eesley.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Charles Eesley</p>
+                        <p class="name-description">Associate Professor and W.M. Keck Foundation Faculty Scholar in the Department of Management Science and Engineering </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://cisac.fsi.stanford.edu/people/paul-n-edwards">
+                            <img src="images/paul_edwards.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Paul Edwards</p>
+                        <p class="name-description">Director, Program on Science, Technology & Society, Co-Director,
+                            Stanford Existential Risks Initiative, Professor of Information and History (Emeritus),
+                            University of Michigan </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-4 text-center">
+                        <a href="http://web.stanford.edu/~gracegao/">
+                            <img src="images/grace.png" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Grace X. Gao</p>
+                        <p class="name-description">Assistant Professor of Aeronautics and Astronautics, and by
+                            courtesy, Electrical Engineering, Co-Director </p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <a href="https://guestrin.su.domains/">
+                            <img src="images/carlos_guestrin.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Carlos Guestrin</p>
+                        <p class="name-description">Associate Professor of Computer Science</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <a href="http://mykel.kochenderfer.com/">
+                            <img src="images/mykel.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Mykel Kochenderfer</p>
+                        <p class="name-description">Associate Professor of Aeronautics and Astronautics and, by
+                            courtesy, Computer Science, Co-Director</p>
+                    </div>
+
+                </div>
+                <div class="row justify-content-center">
+
+                    <div class="col-md-4 text-center">
+                        <a href="https://cs.stanford.edu/~sanmi/">
+                            <img src="images/sanmi_koyejo.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Sanmi Koyejo</p>
+                        <p class="name-description">Assistant Professor of Computer Science</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <a href="https://profiles.stanford.edu/stephen-luby">
+                            <img src="images/steve_luby.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Steve Luby</p>
+                        <p class="name-description">Professor of Medicine (Infectious Diseases & Geographic Medicine),
+                            Co-Director, Stanford Existential Risks Initiative</p>
+                    </div>
+                    
+                    <div class="col-md-4 text-center">
+                        <a href="http://azaliamirhoseini.com/">
+                            <img src="images/azalia.jpeg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Azalia Mirhoseini</p>
+                        <p class="name-description">Assistant Professor of Computer Science</p>
+                    </div>
+                   
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="h://web.stanford.edu/~pavone/">
+                            <img src="images/mpovone.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Marco Pavone</p>
+                        <p class="name-description">Associate Professor of Aeronautics and Astronautics and, by
+                            courtesy, of Electrical Engineering, of Computational and Mathematical Engineering, and of
+                            Information Systems</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://dorsa.fyi">
+                            <img src="images/dorsa.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Dorsa Sadigh</p>
+                        <p class="name-description">Assistant Professor of Computer Science and of Electrical
+                            Engineering</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://web.stanford.edu/~schwager">
+                            <img src="images/Schwager.png" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Mac Schwager</p>
+                        <p class="name-description">Assistant Professor of Aeronautics and Astronautics, Director of the
+                            Multi-robot Systems Lab</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="https://www.stanfordbrainstorm.com/nina-vasan">
+                            <img src="images/vasan_nina.png"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Nina Vasan</p>
+                        <p class="name-description">Clinical Assistant Professor of Psychiatry</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://cs.stanford.edu/~diyiy/research.html">
+                            <img src="images/Diyi_Yang.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Diyi Yang</p>
+                        <p class="name-description">Assistant Professor of Computer Science</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://biox.stanford.edu/people/james-zou">
+                            <img src="images/james_zou.png" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">James Zou</p>
+                        <p class="name-description">Assistant Professor of Biomedical Data Science and, by courtesy, of
+                            Computer Science and of Electrical Engineering</p>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <a href="https://mansurarief.github.io/">
+                            <img src="images/mansur_arief.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Mansur Arief</p>
+                        <p class="name-description">Executive Director</p>
+                        <p class="name-workson">AI for safety and sustainability</p>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="section-title">
+                    POSTDOCTORAL SCHOLARS AND RESEARCH FELLOWS
+                </div>
+                <!-- <div class="col-md-2 text-center"> </div> -->
+                <!-- <div class="col-md-3 text-center">
+						</div> -->
+
+
+                <div class="row justify-content-center"> <!-- Postdoc row 1 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="https://duncaneddy.com">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/duncan-eddy-2.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Duncan Eddy</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">Learning-based failure testing of cyberphysical systems</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/Pei Huang.jpeg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Pei Huang</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">Automated reasoning and trustworthy AI</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/kiana_jafari.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Kiana Jafari</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">Human-centric artificial intelligence</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/sydney-katz.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Sydney Katz</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">Verification of autonomous systems</p>
+                    </div>
+
+
+                </div> <!-- end Postdoc row 1 -->
+
+                <div class="row justify-content-center"> <!-- Postdoc row 1 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/max_lamparth.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Max Lamparth</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">Interpretability, robustness and safety of language models</p>
+                    </div>
+                    
+                    <div class="col-md-3 text-center">
+                        <a href="https://profiles.stanford.edu/276567">
+                            <img src="images/min_wu.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Min Wu</p>
+                        <p class="name-description">Postdoctoral Scholar</p>
+                        <p class="name-workson">AI safety: robustness, explainability, and fairness</p>
+                    </div>
+
+                </div> <!-- end Postdoc row 2 -->
+                <br>
+
+                <div class="section-title">
+                    GRADUATE STUDENTS
+                </div>
+                <div class="row justify-content-center"> <!-- grad student  row 1 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://stanfordasl.github.io//img/people/ChrisAgia.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Chris Agia</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Robot learning, integrated task & motion planning</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://digitaleconomy.stanford.edu/wp-content/uploads/2021/04/Wajeeha-Ahmad.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Wajeeha Ahmad</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Impact of AI on misinformation and web content quality</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/SamuelAkinwande-7.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Samuel Akinwande</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Formal verification of nonlinear systems</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://iliad.stanford.edu/images/people/suneel.png" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Suneel Belkhale</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Robot perception and decision making</p>
+                    </div>
+
+                </div> <!-- end row 1 -->
+
+                <div class="row justify-content-center"> <!-- grad student row 2 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/polo_contreras.jpeg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Polo Contreras</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Multi-robot systems</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/tim_chen.jpeg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Tim Chen</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Safety in Learned Environments</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/medium/public/media/image/kaila_1.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Kaila Coimbra</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Lunar surface rover positioning</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/medium/public/media/image/marta_0.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Marta Cortinovis</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Lunar navigation ephemeris modeling</p>
+                    </div>
+
+                </div><!-- end row 2 -->
+
+                <div class="row justify-content-center"> <!-- grad student row 3 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/adamdai_0.webp?itok=5gQghdgN"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Adam Dai</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Provably safe trajectory planning under uncertainty</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/harrison_delecki.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Harrison Delecki</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Autonomous subterranean exploration</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://stanfordasl.github.io//img/people/AmineElhafsi.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Amine Elhafsi</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Planning and control for safe robotic navigation
+
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/aaron_feldman.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Aaron Feldman</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Statistical performance guarantees</p>
+                    </div>
+
+                </div> <!-- end row 3 -->
+
+                <div class="row justify-content-center"> <!-- grad student row 4 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/zeyuan_feng.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Zeyuan Feng</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Formal safety for machine learning in robotics</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://stanfordasl.github.io//img/people/mfoutter.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Matt Foutter</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Safe and reliable autonomy</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/aryaman_gupta.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Aryaman Gupta</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Safe and robust learning-based control</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2023/10/Amelia-Hardy.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Amelia Hardy</p>
+                        <p class="name-description">M.S. Candidate</p>
+                        <p class="name-workson">Constrained decision problems</p>
+                    </div>
+
+                </div> <!-- end row 3 -->
+
+                <div class="row justify-content-center"> <!-- grad student row 4 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/medium/public/media/image/keidai_0.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Keidai Iiyama</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Navigation for the Moon</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/liam_kruse.jpg" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Liam Kruse</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Probabilistic safe sets</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/bernardlange.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Bernard Lange</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Deep learning for automotive perception</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/lin_albert.png"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Albert Lin</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Machine learning for robot control and safety</p>
+                    </div>
+
+                </div> <!-- end row 3 -->
+
+
+                <div class="row justify-content-center"> <!-- grad student row 4 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/Udayan.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Udayan Mandal</p>
+                        <p class="name-description">M.S. Canditate</p>
+                        <p class="name-workson">Formal verification</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://web.stanford.edu/~mossr/images/robert-moss-stanford.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Robert J. Moss</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Risk assessment of autonomous systems</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/danielneamati_0.webp?itok=pjxoVgp7"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Daniel Neamati</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Urban GNSS-based navigation using environmental features</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/mira_0.webp?itok=XRmx05OD"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Mira Partha</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Neural Radiance Field (NeRF) maps of urban Environments</p>
+                    </div>
+
+                </div> <!-- end row 5 -->
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/ann-katrin_reuel.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Ann-Katrin Reuel</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Ethics of automated driving</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/marc_schlichting.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Marc Schlichting</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Machine learning for safety validation</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://stanfordasl.github.io//img/people/rohan-sinha-picture.png" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Rohan Sinha</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Trustworthy autonomy and out-of-distribution generalization</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://iliad.stanford.edu/images/people/megha.png" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Megha Srivastava</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Reliability, security, and robustness through the lens of human-AI
+                            interaction and collaboration</p>
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/jiankai_sun.png" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Jiankai Sun</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Reliable and efficient AI systems</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://sisl.stanford.edu/wp-content/uploads/2015/07/romeo-valentin.jpg"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Romeo Valentin</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Uncertainty calibration of neural networks</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/gulliem2_1.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Guillem Casadesus Vila</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Lunar positioning, navigation, and timing</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/joe_vincent.jpeg" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Joe Vincent</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Analysis of learned systems in AI and control theory applications</p>
+                    </div>
+
+                </div>
+
+
+                <div class="row justify-content-center"> <!-- grad student row 7 -->
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/scott_viteri.jpg" alt="person"
+                                class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Scott Viteri</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">AI alignment via ontology maps</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/astawu_0.webp?itok=ZM1fsw9G"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Asta Wu</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">GNSS-based relative localization for cars</p>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/haoze.jpg" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Haoze Wu</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">Formal verification</p>
+                    </div>
+                    
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="https://navlab.stanford.edu/sites/g/files/sbiybj21336/files/styles/responsive_large/public/media/image/alanwang_0.webp?itok=I8tWB1kr"
+                                alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Alan Yang</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">GNSS code design using AI and machine learning</p>
+                    </div>
+
+                </div> <!-- end row 7 -->
+
+                <div class="row justify-content-center"> 
+
+                    <div class="col-md-3 text-center">
+                        <a href="#">
+                            <img src="images/yibo.png" alt="person" class="person-img">
+                        </a>
+                        <br><br>
+                        <p class="name-title">Yibo Zhang</p>
+                        <p class="name-description">Ph.D. Candidate</p>
+                        <p class="name-workson">AI safety from a fundamental perspective</p>
+                    </div>
+
+                </div>
+                <!-- <div class="row justify-content-center">
+            
+        </div> -->
+            </div>
+        </div>
+
+        <div class="section" id="members">
+
+            <div class="container">
+                <div class="section-title">
+                    MEMBERSHIP
+                </div>
+                <div class="row text-center">
+                    <p>Our corporate members are a vital and integral part of the Center for AI Safety. They provide
+                        insight on real-world use cases, valuable financial support for research, and a path to
+                        large-scale impact.</p>
+                </div>
+                <br><br>
+                <div class="row justify-content-center">
+
+                    <table class="table">
+                        <th>Benefits</th>
+                        <th>Core</th>
+                        <th>Associate</th>
+
+                        <tr>
+                            <th>Sponsorship level per year</th>
+                            <td>300k</td>
+                            <td>100k</td>
+                        </tr>
+
+                        <tr>
+                            <th>Commitment</th>
+                            <td>yearly<sup style="font-size: .7em">*</sup></td>
+                            <td>yearly</td>
+                        </tr>
+
+                        <tr>
+                            <th>Sponsorship of a single research project collaboratively-defined with a Center researchers</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <th>Access to student recruiting opportunities</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <th>Annual research symposium invitations</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <th>Research seminar participation</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <th>Discounted employee enrollments in select <a href=https://online.stanford.edu/professional-education>professional and technical courses</a> from the Stanford Engineering Center for Global and Online Education</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+
+                        <tr>
+                            <th>Visiting scholar positions<sup style="font-size: .7em">**</sup></th>
+                            <td>Yes</td>
+                            <td>Additional fee</td>
+                        </tr>
+
+                        <tr>
+                            <th>Opportunity to contribute to the definition of a <br>flagship research project involving
+                                multiple faculty and students</th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+
+                        <tr>
+                            <th>Faculty visits<sup style="font-size: .7em">***</sup></th>
+                            <td>Yes</td>
+                            <td>No</td>
+                        </tr>
+                        
+                        <!-- <tr>
+                            <th>Slack channel invitation</th>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr> -->
+                    </table>
+
+                </div>
+
+                <br><br>
+
+                <div class="row text-center">
+                    <p class="text-center">The Stanford Center for AI Safety researchers will use and develop open-source software, and it is the intention of all Center for AI Safety 
+                        researchers that any software released will be released under an open source model.</p>
+
+                    <p class="text-center">Affiliate Program members may provide additional funding. All research results arising from the use of the
+                        additional funding will be shared with all program members and the general public. Affiliate Program
+                        members may request the additional funding be used to support a particular area of program research
+                        identified on the program’s website, or the program research of a named faculty member, as long as the
+                        faculty is identified on the program website as participating in the Affiliate Program. In either instance, the
+                        director of the Affiliate Program will determine how the additional funding will be used in the program’s
+                        research.</p>
+                    <p> * The desired commitment is for 3 years to ensure continuity of funding and successful completion of research. Membership is renewed annually.</p>
+                    <p> ** For additional information please see the <a href="https://doresearch.stanford.edu/policies/research-policy-handbook/non-faculty-research-appointments/visiting-scholars">Visiting Scholar Policy</a></p>
+                    <p> *** The site presentations and all information, data and results arising from such visitation interactions will be shared with all members and the public. </p>
+                </div>
+                <br>
+                <div class="row text-center">
+                    <div class="col-md-12 text-center">
+                        <p>For more information, please view our <a href="membershipdoc2024.pdf">Corporate Membership
+                                Document</a> <br><br>
+
+                            To view Stanford policies, please see <a
+                                href="https://doresearch.stanford.edu/policies/research-policy-handbook/definitions-and-types-agreements/establishment-industrial-affiliates-and-related-membership-supported-programs">Stanford
+                                University Policies for Industrial Affiliate Programs</a></p>
+                        <br>
+                        <img src="images/icons/SU_Safe-AI_Green_RGB.png" , width="20%" , class="img-fluid sponsor">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- // end .section -->
+
+        <div class="section" id="contact">
+
+            <div class="container">
+                <div class="section-title">
+                    CONTACT
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 text-center card">
+                        <p><br></p>
+                        <p>Mansur Arief</p>
+                        <p>Executive Director - Center for AI Safety</p>
+                        
+                        <!-- 
+                        This is a hack to prevent email scraping
+                        You type in your email alias backwards and it displays in the
+                        correct order, but bots can't parse it effectively. -->
+                        <span class="e-mail" data-user="mfeira" data-website="ude.drofnats"></span>
+                    </div>
+
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="mailinglist">
+
+            <div class="container">
+                <div class="section-title">
+                    MAILING LIST
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center card">
+
+                        <div id="mc_embed_signup" style="background:#fff;clear:left;font:14px Helvetica,Arial,sans-serif;">
+                            <form action="https://stanford.us21.list-manage.com/subscribe/post?u=2ae6092e57ebc2c42434250e8&amp;id=95d39a64be&amp;f_id=001fffe6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="display:block;position:relative;text-align:left;margin:20px;">
+                                <div id="mc_embed_signup_scroll">
+                                    <h2 style="font-weight:bold;padding:0;margin:15px 0;font-size:1.4em;">Subscribe to Stanford Center for AI Safety Newsletter and Announcements</h2>
+                                    <div class="indicates-required" style="text-align:right;font-size:11px;margin-right:4%;"><span class="asterisk" style="color:#e85c41;font-size:150%;font-weight:normal;position:relative;top:5px;">*</span> indicates required</div>
+                                    <div class="mc-field-group" style="clear:left;position:relative;width:96%;padding-bottom:3%;min-height:50px;display:grid;">
+                                        <label for="mce-EMAIL" style="display:block;margin-bottom:3px;">Email Address <span class="asterisk" style="color:#e85c41;font-size:150%;font-weight:normal;position:relative;top:5px;">*</span></label>
+                                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" style="display:block;width:100%;padding:8px 0;text-indent:2%;border:1px solid #ABB0B2;border-radius:3px;">
+                                    </div>
+                                    <div class="mc-field-group" style="clear:left;position:relative;width:96%;padding-bottom:3%;min-height:50px;display:grid;">
+                                        <label for="mce-FNAME" style="display:block;margin-bottom:3px;">First Name <span class="asterisk" style="color:#e85c41;font-size:150%;font-weight:normal;position:relative;top:5px;">*</span></label>
+                                        <input type="text" name="FNAME" class="required text" id="mce-FNAME" required value="" style="display:block;width:100%;padding:8px 0;text-indent:2%;border:1px solid #ABB0B2;border-radius:3px;">
+                                    </div>
+                                    <div class="mc-field-group" style="clear:left;position:relative;width:96%;padding-bottom:3%;min-height:50px;display:grid;">
+                                        <label for="mce-LNAME" style="display:block;margin-bottom:3px;">Last Name <span class="asterisk" style="color:#e85c41;font-size:150%;font-weight:normal;position:relative;top:5px;">*</span></label>
+                                        <input type="text" name="LNAME" class="required text" id="mce-LNAME" required value="" style="display:block;width:100%;padding:8px 0;text-indent:2%;border:1px solid #ABB0B2;border-radius:3px;">
+                                    </div>
+                                    <div class="mc-field-group" style="clear:left;position:relative;width:96%;padding-bottom:3%;min-height:50px;display:grid;">
+                                        <label for="mce-COMPANY" style="display:block;margin-bottom:3px;">Company <span class="asterisk" style="color:#e85c41;font-size:150%;font-weight:normal;position:relative;top:5px;">*</span></label>
+                                        <input type="text" name="COMPANY" class="required text" id="mce-COMPANY" required value="" style="display:block;width:100%;padding:8px 0;text-indent:2%;border:1px solid #ABB0B2;border-radius:3px;">
+                                        <span id="mce-COMPANY-HELPERTEXT" class="helper_text" style="color:#8d8985;margin-top:2px;display:inline-block;padding:3px;background-color:rgba(255,255,255,0.85);border-radius:3px;font-size:14px;font-weight:normal;z-index:1;">If no company association put N/A</span>
+                                    </div>
+                                    <p><a href="https://us21.campaign-archive.com/home/?u=2ae6092e57ebc2c42434250e8&amp;id=95d39a64be" style="font-size:11px;">View previous newsletters</a></p>
+                                    <div id="mce-responses" class="clear" style="float:left;top:-1.4em;padding:0 .5em;width:90%;margin:0 5%;clear:both;">
+                                        <div class="response" id="mce-error-response" style="margin:1em 0;padding:1em .5em .5em 0;font-weight:bold;float:left;top:-1.5em;z-index:1;width:80%;display:none;"></div>
+                                        <div class="response" id="mce-success-response" style="color:#529214;display:none;margin:1em 0;padding:1em .5em .5em 0;font-weight:bold;float:left;top:-1.5em;z-index:1;width:80%;"></div>
+                                    </div>
+                                    <div aria-hidden="true" style="position:absolute;left:-5000px;">
+                                        <input type="text" name="b_2ae6092e57ebc2c42434250e8_95d39a64be" tabindex="-1" value="">
+                                    </div>
+                                    <div class="clear" style="clear:both;">
+                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" style="clear:both;width:auto;display:block;margin:1em 0 1em 5%;background-color:#111;border:0 none;border-radius:4px;transition:all 0.23s ease-in-out;color:#FFFFFF;cursor:pointer;font-size:15px;font-weight:normal;height:32px;line-height:32px;margin:0 5px 10px 0;padding:0 22px;text-align:center;text-decoration:none;vertical-align:top;white-space:nowrap;width:fit-content;">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                        <script type="text/javascript">
+                            (function($) {
+                                window.fnames = new Array();
+                                window.ftypes = new Array();
+                                fnames[0] = 'EMAIL';
+                                ftypes[0] = 'email';
+                                fnames[1] = 'FNAME';
+                                ftypes[1] = 'text';
+                                fnames[2] = 'LNAME';
+                                ftypes[2] = 'text';
+                                fnames[3] = 'COMPANY';
+                                ftypes[3] = 'text';
+                            }(jQuery));
+                            var $mcj = jQuery.noConflict(true);
+                        </script>
+                    </div>
+
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row justify-content-center text-center">
+
+            <div class="col-md-12">
+
+
+                We are grateful to our affiliates program members for their generous support:<br><br>
+
+                <b>Core Members:</b><br><br>
+                <img src="images/torc_robotics.webp" alt="group" width="140px" margin="100px" class="img-fluid sponsor">
+                <img src="images/accenture.png" alt="group" width="140px" margin="100px" class="img-fluid sponsor">
+                <br><br>
+                <!--<img src="images/intel.png" alt="group" width="50px" class="img-fluid sponsor">-->
+                <!--<img src="images/siemens.png" alt="group" width="50px" class="img-fluid sponsor">-->
+                <!--Associate:<br><br>-->
+
+
+                <!-- We are grateful to the following organizations for their generous support:<br><br> -->
+                <b>Associate Members:</b><br><br>
+
+                <img src="images/nri_brand_mark.svg" alt="group" width="270px" class="img-fluid sponsor">
+                <br><br>
+                <b>Federal Sponsors:</b><br>
+                <img src="images/darpa.png" alt="group" width="150px" margin="100px" class="img-fluid sponsor">
+                <img src="images/nsf.png" alt="group" width="120px" margin="100px" class="img-fluid sponsor">
+                <br><br>
+                <b>Additional Sponsors:</b><br>
+                <img src="images/ford.jpg" alt="group" width="150px" class="img-fluid sponsor">
+                <img src="images/futureoflife.png" alt="group" width="100px" class="img-fluid sponsor">
+                <img src="images/siemens.png" alt="group" width="100px" class="img-fluid sponsor">
+                <img src="images/open_philanthropy.png" alt="group" width="100px" class="img-fluid sponsor">
+                <img src="images/ge_global_research.png" alt="group" width="100px" class="img-fluid sponsor">
+                <img src="images/ibm.png" alt="group" width="100px" class="img-fluid sponsor">
+                <br><br>
+                <b>Affiliated Organizations:</b><br><br><br>
+                <div style="height: 100px; display: inline-block; margin-right:80px"><a
+                        href="https://hai.stanford.edu/"><img src="images/hai.png" , href="https://hai.stanford.edu/" ,
+                            style="height:50px; margin-top:-10px; " alt="group" class="img-fluid sponsor"></a></div>
+                <div style="font-size:1.2em; height: 100px; display: inline-block; font-family:Stanford,\" Source Serif
+                    Pro\",Georgia,Times,Times New Roman,serif"><a style="color:black" ,
+                        href="https://cisac.fsi.stanford.edu/stanford-existential-risks-initiative/content/stanford-existential-risks-initiative">Stanford
+                        Existential<br> Risks Initiative (SERI)</a></div>
+                <br><br>
+            </div>
+
+        </div>
+
+
+        <footer class="my-5 text-center">
+            <div class="su-global-footer su-global-footer--dark" , style="text-align:left">
+                <div class="su-global-footer__container" title="Common Stanford resources">
+                    <div class="su-global-footer__brand">
+                        <a class="su-logo su-global-footer--dark" href="https://www.stanford.edu" ,
+                            style="line-height:0.5;font-family:Stanford,\" Source Serif Pro\",Georgia,Times,Times New
+                            Roman,serif">
+                            <span style="font-size:2.4rem">Stanford</span>
+                            <br />
+                            <span style="font-size:1.4rem">University</span>
+                        </a>
+                    </div>
+                    <div class="su-global-footer__content" , style="line-height:.75">
+                        <nav aria-label="global footer menu">
+                            <ul class="su-global-footer__menu su-global-footer__menu--global">
+                                <li>
+                                    <a href="https://www.stanford.edu" , style="font-family:Rubik;font-size:1rem">
+                                        <b>Stanford Home</b>
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://visit.stanford.edu/plan/" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        <b>Maps &amp; Directions</b>
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.stanford.edu/search/" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        <b>Search Stanford</b>
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://emergency.stanford.edu" , style="font-family:Rubik;font-size:1rem">
+                                        <b>Emergency Info</b>
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="su-global-footer__menu su-global-footer__menu--policy">
+                                <li>
+                                    <a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        Terms of Use
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        Privacy
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://uit.stanford.edu/security/copyright-infringement"
+                                        title="Report alleged copyright infringement" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        Copyright
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4"
+                                        title="Ownership and use of Stanford trademarks and images" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        Trademarks
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/"
+                                        title="Non-discrimination policy" , style="font-family:Rubik;font-size:1rem">
+                                        Non-Discrimination
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.stanford.edu/site/accessibility"
+                                        title="Report web accessibility issues" ,
+                                        style="font-family:Rubik;font-size:1rem">
+                                        Accessibility
+                                        <span class="su-global-footer__link-a11y">(link is external)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="su-global-footer__copyright" , style="font-family:Rubik;font-size:.8rem">
+                            <span>&copy; Stanford University.</span>
+                            <span>&nbsp; Stanford, California 94305.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright removal is not prohibited! -->
+            <!-- <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED.</a></small></p> -->
+        </footer>
+
+        <!-- jQuery and Bootstrap -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- Plugins JS -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/script.js"></script>
+
+</body>
+
+</html>

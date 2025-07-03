@@ -1,0 +1,236 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+        <title> - Ask A Question</title>
+    <link rel="shortcut icon" href="/MessageCenter/iwe/img/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="nofollow">
+    
+    
+    <!--[if lte IE 9]>
+        <link href="/MessageCenter/bundles/uicss?v=dJV2iyZ7nk6-sI_JDF1zV1x_rHrm13jtP376T8Y1qcM1" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/pluginscss?v=TUGpxdouEAzBFbSwFx5Z_fdCXlg5SBOkZRHIicMNY401" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/iwecss3?v=a30_sq-gLed2RtTvnbHWsC0W8glT4bumUULTngcQZ3U1" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/iwecss2?v=aUEM_8BvU9MaBKjWuhiR-IkX33VVHKn4VtOtdmBmLnI1" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/iwecss1?v=nyNwFTydNpnKSpPaRmnQ9hwKbO_juj-ujzcpYC0OPCo1" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/iwecss4?v=cU639Sz0vheb0pf8W-L-HZUmGl-QFcvJwVAJwNgWrIU1" rel="stylesheet"/>
+
+        <link href="/MessageCenter/bundles/iwecss5?v=IQIuGVJ_AkCd8kDl0aL6_GqmHsyWMcR5q5JEvngY1I01" rel="stylesheet"/>
+
+    <![endif]-->
+    <link href="/MessageCenter/bundles/iwecssAll?v=dLyx0_93IHCXscHt0l-cwiUrO35wHjUVP4Zlk8bWMtk1" rel="stylesheet"/>
+
+    <link href="/MessageCenter/bundles/CommCentercssAll?v=pMshrN-smr0b57_HIahcxY28SaNlCYbtJCv2zAFcTsw1" rel="stylesheet"/>
+
+    
+
+
+    
+    <script src="/MessageCenter/bundles/angularJSAll?v=b_ok654F0De-OWe8dOfZ9ntgDCfzyfxm2zP35S8ZZnY1"></script>
+
+    <script src="/MessageCenter/bundles/iwejsAll?v=rpsoXN2CLGNbV7LLOEJa7ODpAvedExSxS4T0hWXXFaU1"></script>
+
+    <script src="/MessageCenter/Scripts/TinyMCE/tinymce.js"></script>
+    <script src="/MessageCenter/Scripts/TinyMCE/tinymce.min.js"></script>
+
+    
+
+    <script type="text/javascript">
+        // Get the webconfig entries
+        PageConfig.ContactUSURL = "https://be.my.ucla.edu/feedback.aspx";
+        PageConfig.AppRoot = "https://sa.ucla.edu/MessageCenter";
+        ApplicationSettings.init(PageConfig.AppRoot);
+    </script>
+</head>
+
+<body class="ajax-none">
+    <div id="page-wrap">
+        <div data-ng-app="CommunicationCenterApp">
+            <div data-ng-controller="publiccontroller">
+                <div class="hide-medium-small">
+                    <ul class="hide">
+    <li><a href="#audience-nav">Skip to Audience Navigation</a></li>
+    <li><a href="#main-nav">Skip to Main Menu</a></li>
+    <li><a href="#searchform">Skip to Search</a></li>
+    <li><a href="#main-content">Skip to Main Content</a></li>
+</ul>
+
+<div id="top-bar" role="navigation">
+    <div id="top-bar-content" class="container">
+        <a href="{{orgURL}}" id="edu-link">Home Page</a>
+        <ul id="audience-nav" class="float-right">
+        </ul>
+    </div>
+</div>
+
+                </div>
+                <span id="print-logo">
+                    <img src="/MessageCenter/iwe/img/logo-print.gif" alt="UCLA Logo" width="80" height="25" />
+                </span>
+                
+
+
+<div id="header" role="banner">
+    <div id="header-content" class="container" ng-class="GetOrgNameClass()" data-ng-cloak>
+        <h1 id="logo">
+            <a href="http://my.ucla.edu">UCLA</a>
+        </h1>
+        <h2 id="subhead-logotype">
+            <a href="{{orgURL}}">{{orgName}}</a>
+        </h2>
+        <div id="header-nav">
+            <div id="main-nav-wrapper" role="navigation">
+                <div id="dropdown-spacer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(".popover-bottom").clickover({ placement: 'bottom', title: '', html: true });
+</script>
+
+            </div>
+            <div id="container" class="container">
+                <div class="col-1" id="content-section-wrapper">
+                    <div id="page_header_section">
+                        <h2 id="interior-split-page-header-full">
+                            Ask A Question
+                        </h2>
+                        
+                    </div>
+                    <div id="main-content" role="main" class="cf">
+                        
+
+
+<div ng-controller="WinterBreakController as Ctrl" ng-cloak>
+    <div data-ng-show="Ctrl.betweenDates" class="message warning" ng-bind-html="Ctrl.WebContent">
+        
+    </div>
+</div>
+
+
+<div class="message info">
+    <p>
+        This Message Center is monitored during normal business hours, Monday-Friday (8:00 am to 5:00 pm), excluding University holidays,
+        and it may take several days to receive a response.
+    </p>
+    <br />
+    <p>
+        Cases that present an immediate threat to self, others, or property are considered an emergency and you should call 911.
+    </p>
+</div>
+<div data-ng-controller="postquestioncontroller" ng-cloak>
+    <div data-ng-show="error" class="message error">
+        <ul>
+            <li data-ng-repeat="message in errorMessage" data-ng-bind="message" class="list-default"></li>
+        </ul>
+    </div>
+    <div data-ng-show="submittedSuccess" class="message success">
+        Thank you for submitting your question.  We will be responding to you shortly.
+    </div>
+    <div id="divPublicQuestion" data-ng-show="!submittedSuccess">
+        <div class="marginbottom15">
+            If you are a UCLA student, faculty, or staff or someone who has been been granted third party access, please sign in to <a class="rulecolor" href="http://my.ucla.edu">MyUCLA</a> to send your question.
+        </div>
+        <div class="width300">
+            <div class="question-block">
+                <input id="inputTopic" type="radio" hidden data-ng-model="rdQueue" value="topic" ng-checked="true" />
+                <label for="inputTopic" class="display-inline-block">Topic:* </label>
+                <div>
+                    <div class="display-inline-block">
+                        <angucomplete-alt id="publicTopicsAutocomplete"
+                                          placeholder="Type a keyword and select a topic"
+                                          pause="400"
+                                          type="search"
+                                          selected-object="selectedTopic"
+                                          local-data="autocompleteTopicData"
+                                          initial-value="selectedTopicObject"
+                                          search-fields="Keyword,Tags"
+                                          title-field="Keyword"
+                                          match-class="highlight" />
+                    </div>
+                    <div data-ng-show="error" class="red newcase-validation left-padder-small" data-ng-if="topicInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+                <div>
+                    <label>First name & Last name:* </label>
+                    <input id="inputName" type="text" data-ng-model="name" data-ng-change="NameChange()" ng-class="{'ng-invalid' : nameInvalid }" maxlength="150"/>
+                    <div data-ng-show="error" class="red newcase-validation left-padder-small" data-ng-if="nameInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+                <div>
+                    <label>Email Address:* </label>
+                    <input id="inputEmailAddress" type="text" data-ng-model="email" data-ng-change="EmailChange()" ng-class="{'ng-invalid' : emailInvalid }" maxlength="150"/>
+                    <div data-ng-show="error" class="red newcase-validation left-padder-small" data-ng-if="emailInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+                <div>
+                    <label>Confirm Email Address:* </label>
+                    <input id="inputConfirmEmailAddress" type="text" data-ng-model="confirmEmail" ng-class="{'ng-invalid' : confirmEmailInvalid }" maxlength="150" />
+                    <div data-ng-show="error" class="red newcase-validation left-padder-small" data-ng-if="confirmEmailInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+            </div>
+            <div class="input-block">
+                <p class="font-weight-bold mc-marginbot10">Enter your question below.</p>
+                <div>
+                    <label>Subject:* </label>
+                    <input id="inputSubject" type="text" placeholder="Example: Problem with logon" data-ng-model="subject" data-ng-change="SubjectChange()" ng-class="{'ng-invalid' :subjectInvalid }" maxlength="200"/>
+                    <div data-ng-show="error" class="red newcase-validation left-padder-small" data-ng-if="subjectInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+                <div>
+                    <label>Message:* </label>
+                    <div id="newCaseInputBody">
+                        <textarea ui-tinymce="tinymceOptions" data-ng-model="messageBody" placeholder="Type in your message or question here." data-ng-change="MessageChange()" ng-class="{'ng-invalid' : messageInvalid }"></textarea>
+                    </div>
+                    <div data-ng-show="error" class="red" data-ng-if="messageInvalid"><i class="fa fa-exclamation-circle red spacer"></i>Required Field</div>
+                </div>
+            </div>
+
+            <div class="button-block">
+                <button class="button primary" data-ng-click="SubmitPublicCase()">Send</button>
+                <button class="button" data-ng-click="goBackFromBrowser()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>    
+            </div>
+            <div id="footer-push">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    <div id="footer-content" class="container">
+		<ul id="footer-nav">
+            <li><a href="http://www.ucla.edu/">UCLA Home</a></li>               
+            <li><a href="http://www.ucla.edu/maps-directions-parking/">Maps, Directions, Parking</a></li>
+            <li><a href="http://www.directory.ucla.edu">Directory</a></li>
+            <li><a href="http://www.registrar.ucla.edu/calendar/">Academic Calendar</a></li>
+			<li><a href="https://hr.mycareer.ucla.edu/applicants/jsp/shared/frameset/Frameset.jsp?time=1332455457640">Careers</a></li>
+			<li><a href="http://welcome.diversity.ucla.edu/">Diversity</a></li>
+            <li><a href="http://www.universityofcalifornia.edu/">University of California</a></li>
+			<li><a href="http://www.ucla.edu/terms-of-use/">Terms of Use</a></li>
+        </ul>
+        <div id="social-media">
+            <a href="http://www.facebook.com/uclabruins" title="UCLA on Facebook" class="facebook">UCLA on Facebook</a>
+            <a href="http://twitter.com/ucla" title="UCLA on Twitter" class="twitter">UCLA on Twitter</a>
+            <a href="https://foursquare.com/ucla" title="UCLA on Foursquare" class="foursquare">UCLA on Foursquare</a>
+            <a href="http://youtube.ucla.edu" title="UCLA on YouTube" class="youtube">UCLA on YouTube</a>
+            <a href="http://itunes.ucla.edu/" title="UCLA on iTunes" class="itunes">UCLA on iTunes</a>
+        </div>    
+    </div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head dir="ltr">
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />  <meta http-equiv="Pragma" content="no-cache" />  <meta http-equiv="Expires" content="0" />  <link rel="icon" href="https://eecsis.mit.edu/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="https://eecsis.mit.edu/images/favicon-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://eecsis.mit.edu/images/favicon-180x180.png" />
+  <meta name="msapplication-TileImage" content="https://eecsis.mit.edu/images/favicon-270x270.png" />   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <title>Research Interests</title>
+  <style>
+body {
+  font-family: 'IBM Plex Sans',arial,helvetica,sans-serif;
+}
+textarea {
+  font-family: inherit;
+}
+textarea:invalid {
+  background-color: #FDD;
+}
+select {
+  font-family: inherit;
+}
+select:invalid {
+  background-color: #FDD;
+}
+input {
+  font-family: inherit;
+}
+input:invalid {
+  background-color: #FDD;
+}
+.spinner {
+  display: inline-block;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 16px; height: 16px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.annotated { position: relative; }
+.annotated  .annotation {
+     display: inline-block;
+     text-align: left;
+     white-space: nowrap;
+     visibility: hidden;
+     background-color: #EEE;
+     color: black;
+     padding: 10px;
+     border-radius: 6px;
+     position: absolute;
+     z-index: 1;
+     left: 100%;
+     top: 100%;
+}
+.annotated:hover .annotation { visibility: visible; }
+a.external-link:after {
+  content: "⎋";
+  margin-left: .25rem;
+  text-decoration: none;
+  display: inline-block;
+  transform: rotate(90deg);
+}
+#banner {
+  margin: 0 0 0.5em 0;
+  padding: 1em;
+  text-align: center;
+  border-radius: .25rem;
+  position: relative;
+}
+#site-logo {
+  float: left;
+  width: 40px;
+  margin-top: -8px;
+}
+#site-name {
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 0.2em;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+.btn-sm {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+}
+.btn-tiny {
+  padding: .15rem .3rem;
+  font-size: .7rem;
+  line-height: 1;
+  border-radius: .2rem;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-secondary {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.btn-purple {
+  color: #fff;
+  background-color: #808;
+  border-color: #808;
+}
+.btn-warning {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.btn-light {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+.btn-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+old {
+  vertical-align: sub;
+  font-size: smaller;
+  margin-left: 0.2em;
+}
+old::before {
+  content: "[";
+}
+old::after {
+  content: "]";
+}
+.break-before { page-break-before: always; }
+@media print {
+  body { font-size: 10pt; }
+  #banner { display: none; }
+  .break-before { page-break-before: always; }
+}
+</style>
+</head>
+<body>
+
+<div style="display: inline-block; margin: 0 auto; width:700px;">
+<div id="banner" style="background-color: #EEE;">  <img id="site-logo" src="https://eecsis.mit.edu/images/isolatedlogo.svg" alt="MIT EECS Logo"/>  <div id="site-name">MIT EECS</div>   <div style="float:right; font-size: 10pt; font-weight: normal;">    <a href="mailto:eecsis@mit.edu?subject=Problem with EECSIS Research Interests page">Report a problem</a><br/>    <a href="https://accessibility.mit.edu">Accessibility</a>  </div>  <span style="font-size: 1.5em; margin-left: 1em; margin-right: 1em;"><b>Research Interests</b></span></div>
+<p><a href="research_interests.pcgi?pdf=true" target="_blank">PDF</a></p>
+
+<script>
+function filter_blurbs() {
+  // selected years
+  let areas = [];
+  for (let a of document.getElementsByClassName('area-checkbox')) {
+    if (a.checked) areas.push(a.getAttribute('id'));
+  }
+
+  // adjust resume row visibily based on years and areas
+  for (let row of document.getElementsByClassName('blurb-block')) {
+    let show_row = false;
+    let rclass = Array.from(row.classList);
+
+    // does row's year match a selection?
+    for (let a of areas) if (rclass.indexOf(a) !== -1) {
+      show_row = true;
+      break;
+    }
+
+    // set visibility for this row
+    row.style.display = show_row ? 'table' : 'none';
+  }
+}
+</script>
+<p>Filter:
+<input class="area-checkbox" id="AI+D" type="checkbox" checked onchange="filter_blurbs();">
+<label for="AI+D">AI+D</label>
+<input class="area-checkbox" id="CS" type="checkbox" checked onchange="filter_blurbs();">
+<label for="CS">CS</label>
+<input class="area-checkbox" id="EE" type="checkbox" checked onchange="filter_blurbs();">
+<label for="EE">EE</label>
+
+
+<style>
+  #interest-list .blurb { white-space: pre-line; margin-left: 1em; margin-top: 0.3em;}
+  #interest-list .blurb-block { margin-top: 0.5em; }
+  table, tr, td, th, tbody, thead, tfoot {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+<div id="interest-list">
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Abelson, Hal</b>
+        [CS, AI+D]
+        (hal@mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [MAS] Class of 1922 Professor
+        </div>
+        <div class="blurb">Artificial intelligence, educational computing, machine learning and education, Internet policy.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Adalsteinsson, Elfar</b>
+        [EE, AI+D]
+        (elfar@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Eaton-Peabody Professor
+        </div>
+        <div class="blurb">Medical imaging with MRI. Computation in imaging for data acquisition, image reconstruction and image analysis for quantification of markers of health and disease. Methods for existing MRI platforms and for novel hardware. Applications in neuroimaging and imaging in pregnancy. Collaborations with Massachusetts General Hospital Martinos Center and Boston Children&#39;s Hospital.</div>
+      </td></tr></table>
+      <table class="blurb-block CS EE AI+D" border="0"><tr><td>
+        <b>Adib, Fadel</b>
+        [CS, EE, AI+D]
+        (fadel@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Wireless, sensing, Internet-of-Things (IoT), communications, computer networks, software-hardware systems, mobile computing, signal processing, low-power &amp; battery-free computing, RF, acoustics, robotics, augmented reality, oceans, edge AI/ML, climate, underwater imaging.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Agrawal, Pulkit</b>
+        [AI+D, CS]
+        (pulkitag@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Learning for Decision Making from raw sensory observations such as vision, haptics and audio (i.e., sensorimotor learning); special impetus on robot learning; deep reinforcement learning; deep learning; object manipulation; robotic locomotion; navigation; model- based control; imitation learning; inverse reinforcement learning; design of robotic hands; soft robotics; integrating common sense knowledge into machine learning systems using natural language; self-supervised learning; computer vision; multimodal representation learning from vision, touch and audio; understanding human activities; human-robot interaction; applications of machine learning in healthcare; human cognition; computational neuroscience. The overall research goal is to build mechanisms that allow agents/robots to continuously keep learning about their world by exploring and conducting experiments. One application area is robots in households, but not limited to it.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Akinwande, Akintunde Ibitayo</b>
+        [EE]
+        (akinwand@mtl.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Thomas and Gerd Perkins Professor of EECS
+        </div>
+        <div class="blurb">Display devices, vacuum microelectronics, devices based on nano- scale charged particle beams. Applications to nano-fabrication, imaging, sensors &amp; actuators, and harsh environments.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Alizadeh, Mohammad</b>
+        [CS, AI+D]
+        (alizadeh@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Computer networks and systems, programmable networks, learning- based networked systems, datacenter networks, cloud computing, modeling and analysis of computer systems.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Amarasinghe, Saman</b>
+        [CS]
+        (samana@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Domain specific languages, program analysis and optimizing compilers. Performance engineering and high-performance computing. Machine learning for compilers and compilers for machine learning. Computer architecture.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Andreas, Jacob</b>
+        [AI+D]
+        (jda@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Language and machine learning: language as a supervisory signal and explanatory tool across application domains; sample-efficient language learning; computational models of semantics and pragmatics.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Balakrishnan, Hari</b>
+        [CS, AI+D]
+        (hari@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Fujitsu Professor in EECS
+        </div>
+        <div class="blurb">Networked systems: mobile and sensor computing, network architecture and protocols, scalable distributed systems, data management.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Baldo, Marc</b>
+        [EE]
+        (baldo@mit.edu)
+        <div style="font-size:small;">
+          [VPRES_DEPTHD] Dugald C. Jackson Professor
+        </div>
+        <div class="blurb">Molecular electronics and spintronics.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Barzilay, Regina</b>
+        [AI+D]
+        (regina@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] SoE Distingushed Professor of AI and Health
+        </div>
+        <div class="blurb">ML for drug discovery and clinical AI.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Bates, Stephen</b>
+        [AI+D]
+        (stephenbates@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Statistical inference, uncertainty quantification for AI systems, inference and decision-making with strategic agents, distribution shift, and applications in life science and sustainability.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Beery, Sara</b>
+        [AI+D]
+        (beery@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Computer Vision for the Environment, Biodiversity, Conservation, and Sustainability. Methods for heterogeneously sampled spatiotemporal and multimodal environmental monitoring (visual, acoustic, sonar, lidar, hyperspectral, time-series, text, museum collections, community science, environmental covariates). Deployable, reliable computer vision under domain shift, including verification and participatory systems for efficient use of human expertise out of distribution. Distributed sensing with limited bandwidth including efficient and edge-based computer vision. Incorporating structure and knowledge from scientific domains into computer vision and machine learning methods. Collaborative development of equitable tools that empower NGOs, governmental agencies, and local communities to make data-centric, informed decisions on conservation policy. International fieldwork to test our methods on the ground in diverse ecosystems.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Belay, Adam M</b>
+        [CS]
+        (abelay@mit.edu)
+        [<i>on leave Spring 2025, Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Operating systems, networking, cloud computing, and performance engineering.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Berggren, Karl</b>
+        [EE]
+        (berggren@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Electrical Engineering Faculty Head
+        </div>
+        <div class="blurb">Methods and materials for nanofabrication. Superconductive electronics and detectors. Optics, nano-optics, and electron optics. Quantum-information-based systems.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Bertsekas, Dimitri</b>
+        [EE]
+        (dimitrib@mit.edu)
+        <div style="font-size:small;">
+          [EECS] McAfee Professor of Electrical Engineering
+        </div>
+        <div class="blurb">Analytical and computational methods of deterministic and stochastic optimization, large scale systems, data networks. (Post- Tenure)</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Berwick, Robert</b>
+        [AI+D, CS]
+        (berwick@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Natural language processing: computer models of language acquisition and parsing. Computational biology and evolutionary theory including evolution of language. Artificial intelligence: formal models of learning, including inductive inference and computational complexity analysis of language. Cognitive science: word learning, semantics of natural languages.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Bhatia, Sangeeta</b>
+        [EE, AI+D]
+        (sbhatia@mit.edu)
+        <div style="font-size:small;">
+          [EECS] John and Dorthy Wilson Professor
+        </div>
+        <div class="blurb">Applications of miniaturization technologies in medicine. Specific interests include using microfabrication, synthetic biology; 3D printing and nanotechnology to regenerate human livers and diagnose and treat cancer.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Bodner, Abigail</b>
+        [EE]
+        (abodner@mit.edu)
+        <div style="font-size:small;">
+          [EAPS] Assistant Professor
+        </div>
+        <div class="blurb">Analytical and computational methods for climate model development. Numerical simulations of ocean and climate. Machine learning applied to geophysical fluid dynamics and turbulence. [*]</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Boning, Duane S</b>
+        [EE, AI+D]
+        (boning@mit.edu)
+        <div style="font-size:small;">
+          [PROVOST] Vice Provost, Intl Activities/Prof, EECS
+        </div>
+        <div class="blurb">Semiconductor and photonics manufacturing. Modeling, optimization, and control of IC, photonic, and MEMS processes, devices and circuits using statistical and machine learning methods. Computer aided design (CAD) tools and systems. Design for manufacturability (DFM).</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Bresler, Guy</b>
+        [AI+D]
+        (guy@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Statistics and computation, theoretical machine learning and applied probability. Algorithms and performance limits for statistical inference and decision-making in large-scale systems.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Broderick, Tamara</b>
+        [AI+D]
+        (tamarab@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Statistics and machine learning; uncertainty and robustness quantification; Bayesian methods; nonparametric, unsupervised, scalable learning; approximation methods including variational inference and Markov chain Monte Carlo; exchangeability; approximations to cross validation, the bootstrap, and other reweighting schemes.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Bulovic, Vladimir</b>
+        [EE]
+        (bulovic@mit.edu)
+        <div style="font-size:small;">
+          [VPRES_DEPTHD] Director of MIT.nano
+        </div>
+        <div class="blurb">Physical properties of nano-structured thin films, structures, and devices as applied to the development of optoelectronic, electronic, photonic, and mechanical active surfaces of nano-scale thickness, including LEDs, lasers, solar cells, photodetectors, transistors, actuators, sensors, and encompassing flexible, lightweight, and transparent formats for imperceptibly integrated technologies.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Carbin, Michael</b>
+        [CS, AI+D]
+        (mcarbin@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Design and implementation of programming systems, including languages, program logics, program analysis/verification systems, and runtime systems. Particular interest in programming systems for emerging probabilistic and approximate computing fabrics.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE" border="0"><tr><td>
+        <b>Chan, Vincent</b>
+        [AI+D, EE]
+        (chan@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Joan & Irwin M Jacobs Prof of Elec Eng and A&A
+        </div>
+        <div class="blurb">Optical, wireless and space communications and networks. Architecture, technology, system designs, and testbed implementations. New communication and network technologies, architectures and applications.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS" border="0"><tr><td>
+        <b>Chandrakasan, Anantha</b>
+        [EE, CS]
+        (anantha@mit.edu)
+        <div style="font-size:small;">
+          [DOE] Dean of Engineering & Vannevar Bush Prof of EECS
+        </div>
+        <div class="blurb">Design of energy-efficient integrated circuits and systems. Energy efficient implementation of signal processing, communication, security, machine learning, and medical electronics. Circuit design with emerging technologies.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Cheema, Suraj</b>
+        [EE]
+        (sscheema@mit.edu)
+        <div style="font-size:small;">
+          [DMSE] Assistant Professor
+        </div>
+        <div class="blurb">Electronic materials and devices for microelectronics to address energy consumption, storage, and generation challenges. Atomic engineering of electronic phenomena (e.g. ferroelectricity, negative capacitance) for energy-efficient computing (logic transistors, nonvolatile memory, AI hardware, superconducting electronics) and energy technologies (energy storage and power delivery, energy harvesting and thermal management). [*]</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Chen, Kevin</b>
+        [EE, AI+D]
+        (yufengc@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Microscale robotics, aerial robotics, bio-mimetic and bio-inspired design, and dynamics and control; soft robotics and soft actuation resembling artificial muscles; intermediate Reynolds number aerodynamics, fluid structure interaction, and interfacial effects.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Chlipala, Adam</b>
+        [CS]
+        (adamc@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Formal methods. Programming languages and compilers. Computer systems, especially including computer architecture, databases, and security.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE CS" border="0"><tr><td>
+        <b>Chuang, Isaac</b>
+        [AI+D, EE, CS]
+        (ichuang@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Prof of EECS; Sr Assoc Dean of Digital Learning
+        </div>
+        <div class="blurb">Quantum information science, quantum physics, computation and physics.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Clark, David</b>
+        [CS]
+        (ddc@csail.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Senior Research Scientist
+        </div>
+        <div class="blurb">Computer networks: Internet engineering; hardware and protocols for high-speed large-scale network communications. Real-time services over networks. Policy and economic issues; pricing. Computer/communication security.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Coday, Sam</b>
+        [EE]
+        (coday@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Power electronics and energy conversion; circuit design, control and optimization; device characterization and modeling; applications to future electric aircraft, space exploration and renewable energy systems.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Coley, Connor Wilson</b>
+        [AI+D]
+        (ccoley@mit.edu)
+        <div style="font-size:small;">
+          [CHEME] Associate Professor
+        </div>
+        <div class="blurb">Molecular design, chemistry-informed neural networks, drug discovery, Bayesian optimization, experimental design, and laboratory automation. (Has shared appointment in Chemical Engineering.)</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Corrigan-Gibbs, Henry</b>
+        [CS]
+        (henrycg@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Computer security, cryptography, computer systems, privacy.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE" border="0"><tr><td>
+        <b>Dahleh, Munther A</b>
+        [AI+D, EE]
+        (dahleh@mit.edu)
+        <div style="font-size:small;">
+          [EECS] William A. Coolidge Professor
+        </div>
+        <div class="blurb">Networked systems with applications to social and economic networks, transportation networks, financial networks and the power grid. Specific focus on the development of foundational theory necessary to understand, monitor, and control systemic risk in interconnected systems. Statistical learning of controlled systems and its relations to model reduction of stochastic systems. The economics of data and the design of real-time markets for data and digital goods. The interface between system theory and neuroscience with application to motor control.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Dalca, Adrian</b>
+        [AI+D]
+        (adalca@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Research Scientist-Computational
+        </div>
+        <div class="blurb">Machine learning and graphical models, especially applied to computer vision, biomedical image analysis, and healthcare.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Daniel, Luca</b>
+        [EE, AI+D]
+        (luca@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">We develop numerical techniques related to uncertainty quantification, inverse problems, assessment and improvement of robustness. Currently we are applying those techniques to: nano- devices, magnetic resonance imaging scanners, electrical energy networks, virtual spaces and enhanced environments, lack of robustness in deep neural networks.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Daskalakis, Konstantinos</b>
+        [AI+D, CS]
+        (costis@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Theory of Computation, Game Theory, Machine Learning, Probability Theory, Statistics.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Davis, Randall</b>
+        [AI+D]
+        (davis@csail.mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Artificial intelligence; intelligent multimodal interfaces; novel interfaces for evaluating cognition; AI and ethics; intellectual property issues in software.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>del Alamo, Jesus A.</b>
+        [EE]
+        (alamo@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Donner Professor, Mac Vicar Faculty Fellow
+        </div>
+        <div class="blurb">Nanometer-scale III-V compound semiconductor transistors for future digital, power, RF, microwave and millimeter wave applications. Reliability of compound semiconductor transistors. Diamond transistors. Ionic and ferroelectric non-volatile programmable synaptic devices for memory and artificial intelligence applications.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Delimitrou, Christina</b>
+        [CS]
+        (cdel@mit.edu)
+        [<i>on leave Spring 2025, Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Computer architecture, cloud computing, machine learning for systems. Hardware acceleration for cloud systems, cluster management and scheduling, cloud programming frameworks, cloud-edge environments, cloud security.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Demaine, Erik</b>
+        [CS]
+        (edemaine@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Algorithms and data structures. Discrete and computational geometry, particularly folding. Graph algorithms and graph minors. Combinatorial games, puzzles, and magic. Art.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Dennis, Jack</b>
+        [CS]
+        (dennis@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor Emeritus
+        </div>
+        <div class="blurb">Parallel computer system design to support functional languages and advanced environments for modular programming. Study of architecture, performance and reliability issues. (Emeritus)</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Devadas, Srinivas</b>
+        [CS]
+        (devadas@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Edwin Sibley Webster Professor of EECS
+        </div>
+        <div class="blurb">Computer-aided design. Computer security and	applied cryptography. Computer architecture.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>DeWitt, David J</b>
+        [CS]
+        (dewitt@cs.wisc.edu)
+        <div style="font-size:small;">
+          [EECS] Adjunct Professor
+        </div>
+        <div class="blurb">Database systems, parallel query processing and optimization; scalable data warehouse, big data. (Adjunct)</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Donti, Priya</b>
+        [EE, AI+D]
+        (donti@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Machine learning methods (robust, physics-informed, and/or engineering-constrained), optimization, control, power and energy systems, climate change mitigation and adaptation.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Durand (he/him/his), Fredo</b>
+        [AI+D, CS]
+        (fredo@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Amar Bose Professor of Computing
+        </div>
+        <div class="blurb">Computer graphics; computational photography; structural analysis of masonry, content creation for online education. Lighting simulation, Fourier analysis, light fields. Computational optics, blur removal, revealing the invisible, video magnification. Systems for computational imaging, compilers. Video lecture authoring and editing.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Emer, Joel</b>
+        [CS]
+        (emer@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor of the Practice
+        </div>
+        <div class="blurb">Architectures for machine learning, spatial computing architectures, performance/energy modeling, parallel and multi-threaded processor architecture, cache and memory hierarchy design, processor reliability analysis.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Englund, Dirk R</b>
+        [EE, AI+D]
+        (englund@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Understand and bridge gaps between today&#39;s technology and the theoretical limits given by quantum mechanics and information theory. Key focus on theory and proof-of-principle demonstrations working at the discreteness (&#39;graininess&#39;) of quantum mechanics and information theory: [Quantum Computing] - Development of large, programmable quantum systems combining individual-qubit control and large numbers of qubits to solve bottlenecks in large-scale quantum control (see DARPA ONISQ, DOE QSA, MITRE MOONSHOT, etc.). [Quantum Networks] - Constructing the &#39;quantum information&#39; layer on the internet by new quantum control and noise mitigation methods for large-scale utility (viz. NSF Center for Quantum Networks). [Machine Learning] - Explore the complexity frontier of ML by new algorithms, architectures, and coherent physical systems including photonic, quantum, and mixed-signal CMOS systems with world-leading foundries.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Farina, Gabriele</b>
+        [AI+D]
+        (gfarina@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Optimization and computational game theory, multi-agent systems and reinforcement learning, decision-making under uncertainty, machine learning, online allocation.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Flanigan, Bailey</b>
+        [CS]
+        (baileyf@mit.edu)
+        [<i>starting Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS, PolySci] Assistant Professor
+        </div>
+        <div class="blurb">Democratic and political scientific applications of computer science methods, often in collaboration with practitioners. From computer science, methods include social choice theory, game theory/mechanism design, algorithms, and some statistics/machine learning. Democratic applications include deliberative and participatory democratic processes, notions of representation, voting systems, political behavior, and various topics in political methodology.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS AI+D" border="0"><tr><td>
+        <b>Fletcher, Richard Ribon</b>
+        [EE, CS, AI+D]
+        (fletcher@media.mit.edu)
+        <div style="font-size:small;">
+          [MECHE] Research Scientist 3
+        </div>
+        <div class="blurb">Biomedical devices; signal processing and machine learning for clinical diagnosis; wearable sensors; antenna design and electromagnetic propagation; wireless sensors and RFID; application to psychiatry (psychophysiology, mediation, mental health) and behavior medicine (drug addiction, substance abuse, depression).</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Freeman, Dennis</b>
+        [EE, AI+D]
+        (freeman@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Theoretical and experimental studies of hearing. Development of optical methods to measure nanometer motions of biological structures at audio frequencies. Measurement of sound-induced motions of inner ear structures.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Freeman, William</b>
+        [AI+D]
+        (billf@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Thomas and Gerd Perkins Prof. of Elec. Engineering
+        </div>
+        <div class="blurb">Machine learning applied to computer vision and computer graphics. Computational photography. Bayesian models of visual perception. </div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Fujimoto, James</b>
+        [EE]
+        (jgfuji@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Elihu Thomson Professor in Electrical Engineering
+        </div>
+        <div class="blurb">Biomedical optical imaging, new imaging technology and methods, clinical applications. Optical coherence tomography (OCT) and nonlinear microscopy. Advanced photonics. Medical imaging devices. Image analysis. Applications in ophthalmology, endoscopy, pathology and cancer surgery. Technology development and clinical studies for age related macular degeneration and diabetic retinopathy, leading causes of blindness. Imaging technologies for gastrointestinal cancer detection. Advanced microscopy for real-time pathology and intraoperative assessment. Surgical guidance in breast cancer lumpectomy to reduce repeat surgeries and radical prostatectomy to reduce incontinence and impotence. Collaborations with teaching hospitals.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Ghaffari, Mohsen</b>
+        [CS]
+        (ghaffari@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Algorithms, theory of computing, distributed &amp; parallel algorithms, randomized algorithms, graph algorithms.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Ghassemi, Marzyeh</b>
+        [CS, AI+D]
+        (mghassem@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Machine learning for healthcare, ethical machine learning, robustness, fairness, privacy, policies for technology in human/health deployments.</div>
+      </td></tr></table>
+      <table class="blurb-block CS EE AI+D" border="0"><tr><td>
+        <b>Ghobadi, Manya</b>
+        [CS, EE, AI+D]
+        (ghobadi@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Systems for machine learning, high-performance cloud infrastructure, hardware-software co-design, data center networks, network optimization, and optical networks.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Gifford, David K</b>
+        [AI+D, CS]
+        (gifford@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Machine learning methods and algorithms for therapeutic design, genomics, genetics, and experimental design. Machine learning. Systems biology.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Glass, James R</b>
+        [AI+D]
+        (glass@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Senior Research Scientist
+        </div>
+        <div class="blurb">Speech and natural language processing including robust speech recognition, multilingual speech processing, health-related biomarkers in speech, multimodal audio-visual processing, language understanding and generation, and conversational systems.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Goldwasser, Shafi</b>
+        [CS]
+        (shafi@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] RSA Professor of Computer Science and Engineering
+        </div>
+        <div class="blurb">Cryptography, complexity theory, computational number theory, randomized algorithms. </div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Golland, Polina</b>
+        [AI+D]
+        (polina@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Sunlin (1966) and Priscilla Chou Professor
+        </div>
+        <div class="blurb">Image analysis and understanding. Statistical inference and machine learning for medical image computing.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Gordon, Mitchell</b>
+        [CS]
+        (mlgordon@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Visiting Scientist
+        </div>
+        <div class="blurb">Human-computer interaction, human-AI interaction, social computing, design and creativity tools, machine learning evaluation and interpretability, large language models</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Gray, Martha L</b>
+        [EE]
+        (mgray@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Biomedical imaging. Needs-driven biomedical technology innovation. Wearable and point-of-care devices. Imaging biomarkers.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Guttag, John</b>
+        [CS, AI+D]
+        (guttag@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Dugald C. Jackson Prof of Computer Science & Eng
+        </div>
+        <div class="blurb">Application of machine learning and data mining techniques to large data sets, especially medical data sets. Application of computer vision to medicine. Sports analytics.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Hadfield-Menell, Dylan</b>
+        [AI+D]
+        (dylanhm@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Human-robot interaction, inverse reinforcement learning, multi- agent and multi-stakeholder systems, AI policy + regulation, preference elicitation, AI safety, sequential decision making, robotics, recommender systems.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Hagelstein, Peter</b>
+        [EE]
+        (plh@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Theoretical studies of anomalies in metal deuterides, excitation transfer, and anomalous energy exchange between disparate quantum systems, and thermal to electric conversion.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Han, Jongyoon</b>
+        [EE]
+        (jyhan@mit.edu)
+        [<i>on leave Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Micro-nanofluidic systems, biological MEMS. nanofluidics, electrokinetics, biosample preparation, bioprocessing engineering, stem cell engineering, water purification, desalination, electrochemical devices.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Han, Ruonan</b>
+        [EE]
+        (ruonan@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Design of high-speed (millimeter-wave and terahertz) integrated circuits using CMOS and emerging technologies. Microsystems for high-precision spectroscopy, time-keeping, imaging and communications. AI-assisted design methodologies for analog/RF integrated circuits.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS" border="0"><tr><td>
+        <b>Han, Song</b>
+        [EE, CS]
+        (songhan@mit.edu)
+        [<i>on leave Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Efficient AI on edge devices, TinyML, MLSys, large language model, long context LLM, visual language model, image/video generation, model compression, pruning, quantization, neural architecture search, efficient training and inference.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Harrell, D. Fox</b>
+        [AI+D, CS]
+        (kitsune@mit.edu)
+        <div style="font-size:small;">
+          [CMS] Prof of DgtMedia,Computing,AI;CSAIL,IDSS
+        </div>
+        <div class="blurb">Virtuality (VR, AR, MR, etc.), interactive narrative, cognitive science (cognitive semantics), artificial intelligence (AI) and the arts. Game studies and game engineering, serious impact games. (CSAIL/CMS/IDSS Faculty)</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>He, Kaiming</b>
+        [AI+D]
+        (kaiming@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Computer vision, visual perception, machine learning, deep learning, with emphasis on representation learning and generative learning.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Hedden, Brian</b>
+        [AI+D]
+        (Brian.Hedden@anu.edu.au)
+        [<i>starting July 2025</i>]
+        <div style="font-size:small;">
+          [EECS, Ling&Phil] Assistant Professor
+        </div>
+        <div class="blurb">Algorithmic fairness and bias, societal impacts of AI, decision theory, probabilistic reasoning, social choice theory.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Heldt, Thomas</b>
+        [EE, AI+D]
+        (thomas@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Signal processing, modeling, estimation and identification of physiological systems; computational physiology; computational medicine; clinical inference. Application of machine learning and data mining to medicine.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Hopkins, Sam</b>
+        [CS, AI+D]
+        (samhop@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Algorithms, high-dimensional statistics. theoretical machine learning, convex programming, information-computation tradeoffs, sum of squares method</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Horn, Berthold Klaus Paul</b>
+        [AI+D, CS]
+        (bkph@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor Emeritus
+        </div>
+        <div class="blurb">Computational imaging, machine vision. Representation of objects and space. X-ray phase imaging. Traffic flow instability suppression. Indoor navigation. </div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Hu, Qing</b>
+        [EE]
+        (qhu@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Distinguished Professor in Elec Eng & Comp Sci
+        </div>
+        <div class="blurb">Terahertz and infrared quantum cascade lasers, frequency combs and amplifiers; and imaging and sensing applications using those devices.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Huang, Anna</b>
+        [CS, AI+D]
+        (huangcza@mit.edu)
+        <div style="font-size:small;">
+          [MTA] Associate Professor (wot)
+        </div>
+        <div class="blurb">Generative AI for Human-AI Collaboration: (1) Generative modeling, learning from human feedback, preference elicitation and learning, creative practice, participatory design, tools for artists. (2) Music theories and music cognition of neural networks (NNs) and for NNs, music cognition and perception, interpretability, explainability, interactive systems and visualizations. (3) Multi-agent reinforcement learning and efficient AI for interactive and real-time jamming, improvisation, composition, performance, music education, and game design.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Huttenlocher, Daniel</b>
+        [CS, AI+D]
+        (huttenlocher@mit.edu)
+        <div style="font-size:small;">
+          [DEANCOMP] Dean, Schwarzman College/HE Warren Professor, EECS
+        </div>
+        <div class="blurb">Computer vision, social and information systems and networks, social responsibilities of computing.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Ilic, Marija</b>
+        [EE]
+        (ilic@mit.edu)
+        <div style="font-size:small;">
+          [LIDS] Senior Research Scientist
+        </div>
+        <div class="blurb">Large-scale systems modeling and simulation; power systems control and pricing algorithms; critical infrastructures and interdependencies; smart grids; micro-grids; computing for energy systems.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Indyk, Piotr</b>
+        [CS, AI+D]
+        (indyk@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Thomas D. and Virginia W. Cabot Professor
+        </div>
+        <div class="blurb">Computational geometry, especially in high-dimensional spaces; databases and information retrieval; streaming and sketching algorithms; sparse recovery and sparse Fourier transform; learning- augmented algorithms.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Isola, Phillip</b>
+        [AI+D]
+        (phillipi@mit.edu)
+        [<i>on leave Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Computer vision and graphics, machine learning, artificial intelligence, robotics and embodied cognition, models of human and biological perception, learning and evolution.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Jaakkola, Tommi S</b>
+        [AI+D]
+        (jaakkola@mit.edu)
+        [<i>on leave Spring 2025, Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Thomas M. Siebel Distinguish Professor
+        </div>
+        <div class="blurb">Statistical inference and machine learning. Applications to molecular design, therapeutics, and computational chemistry. Artificial Intelligence.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Jackson, Daniel</b>
+        [CS]
+        (dnj@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Software design for usability, security and dependability; critical systems; design languages, methods and tools; new programming paradigms.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Jaillet, Patrick</b>
+        [AI+D]
+        (jaillet@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Dugald C. Jackson Professorship
+        </div>
+        <div class="blurb">Online optimization and learning; machine learning; decision-making under uncertainty.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Jegelka, Stefanie</b>
+        [AI+D]
+        (stefje@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Machine learning; optimization; discrete and combinatorial optimization; submodular functions; discrete probability; applications in materials science, computational biology and other areas.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Jossou, Ericmoore</b>
+        [AI+D]
+        (ejossou@mit.edu)
+        <div style="font-size:small;">
+          [NUCENG] Assistant Professor
+        </div>
+        <div class="blurb">Rational materials design for energy applications using advanced characterization tools coupled with multiscale simulations and physics-based machine learning models.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Kaashoek, M.</b>
+        [CS]
+        (kaashoek@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Computer systems: operating systems, networking, programming languages, compilers, and computer architecture for distributed systems, mobile systems and parallel systems.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Kaelbling, Leslie</b>
+        [AI+D]
+        (lpk@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Panasonic Professor
+        </div>
+        <div class="blurb">Planning and learning with applications to robotics, with special interest in: decision-theoretic planning, integrating geometry and probability, integrating logic and probability, and connections to cognitive science.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Kagal, Lalana</b>
+        [AI+D]
+        (lkagal@csail.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Principal Research Scientist
+        </div>
+        <div class="blurb">ML systems; knowledge representation and reasoning; private, fair and trustworthy systems; policy frameworks.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Kalai, Yael T</b>
+        [CS]
+        (tauman@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Cryptography, complexity theory, interactive coding, computer security, and distributed algorithms. (Adjunct)</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Karger, David</b>
+        [CS]
+        (karger@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor of Electrical Engineering
+        </div>
+        <div class="blurb">Systems that help people (mainly non-programmers) manage information more effectively. User interfaces for databases that regular people can use. Frameworks to let non-programmers create interactive web applications. Personal information management. Improving online discussion and collaboration tools such as wikis and social media.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Katabi, Dina</b>
+        [AI+D, CS]
+        (dina@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Thuan (1990) and Nicole Pham Professor
+        </div>
+        <div class="blurb">Digital health, machine learning and computer vision models for medicine and healthcare, and mobile computing and Internet of Things (IoT).</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Katz, Boris</b>
+        [CS]
+        (boris@ai.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Principal Research Scientist
+        </div>
+        <div class="blurb">Natural language understanding and generation, human computer interaction, artificial intelligence, and integration of language, vision and robotics.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Keathley, Phillip Donald</b>
+        [EE]
+        (pdkeat2@mit.edu)
+        <div style="font-size:small;">
+          [RLE] Principal Research Scientist
+        </div>
+        <div class="blurb">Ultrafast optics, nanophotonics, nanoelectronics, nano-vacuum devices, nonlinear optics, light-matter interaction, quantum metrology, free-electron devices.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Kellis, Manolis</b>
+        [AI+D, CS]
+        (manoli@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">AI for Science, Machine Learning, Computational Biology, Genomics, Therapeutics, Personalized Medicine, Cognitive Cartography.
+(1) Genomes, their programming language, circuitry, epigenomics, dynamics, single-cell, multi-omics.
+(2) Disease mechanism, genetic variation, patient subtyping, personalized medicine, electronic health records.
+(3) Neuroscience, Alzheimer&#39;s, schizophrenia, cardiovascular disease, obesity, cancer, evolution.
+(4) Therapeutic design, drug repurposing, high-throughput experiments, drug screening, genome circuitry manipulation, disease reversal.
+(5) Statistical genetics, causal inference, geometric deep learning, joint embeddings, contrastive learning, computational chemistry, therapeutic design.
+(6) Cognitive Cartography, embedding spaces, idea representations, visualization, and navigation for learning, discovery, invention, and collaboration.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Khattab, Omar</b>
+        [AI+D, CS]
+        (okhattab@stanford.edu)
+        [<i>starting July 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Natural language processing (NLP), Information Retrieval (IR), and Machine Learning Systems (ML Systems). Language models, retrieval models, NLP programming abstractions, ML data systems, prompt optimization and Reinforcement Learning (RL) in NLP, and benchmarking and automatic evaluation in IR &amp; NLP.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Kim, Yoon</b>
+        [AI+D, CS]
+        (yoonhkim@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Natural language processing; machine learning; deep learning; approximate inference.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Konakovic Lukovic, Mina</b>
+        [AI+D]
+        (minakl@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Computer graphics, computational fabrication, 3D geometry processing and machine learning, including architectural geometry and design of smart materials.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Kong, Jing</b>
+        [EE, AI+D]
+        (jingkong@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Synthesis, characterization and applications of nanomaterials, including graphene and other two-dimensional materials, nanotubes, and inorganic nanowires.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Kraska, Tim</b>
+        [CS, AI+D]
+        (kraska@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Generative AI Assistants for data problems, NL2SQL, Generative AI for System Development, Systems for machine learning/machine learning for systems, interactive data science tools, systems for visual data exploration, risk-aware data analysis, database systems, transactions processing, and adaptive system design.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Lampson, Butler</b>
+        [CS]
+        (b@lampsons.us)
+        <div style="font-size:small;">
+          [EECS] Adjunct Professor Emeritus
+        </div>
+        <div class="blurb">Computer science. Hardware design and machine architecture through distributed systems and programming languages to user interfaces and office automation. (Adjunct)</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Lang, Jeffrey</b>
+        [EE]
+        (lang@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Vitesse Professor
+        </div>
+        <div class="blurb">Analysis, design and control of electromechanical motion control and energy conversion systems with an emphasis on: traditional rotating and linear machinery; micro/nano-scale (MEMS/NEMS) sensors, actuators, and energy converters; energy harvesters; flexible electromechanical structures; and the dual use of electromechanics for motion actuation and sensing.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Lee, Hae-Seung</b>
+        [EE]
+        (hslee@mtl.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Advanced Television & Signal Processing Professor
+        </div>
+        <div class="blurb">Analog and mixed signal integrated circuits with the emphasis on low power consumption. Applications include communication, hardware security, signal processing, automotive, and medical electronic devices.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS" border="0"><tr><td>
+        <b>Leeb, Steven</b>
+        [EE, CS]
+        (sbleeb@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Emanuel E. Landsman (1958) Professor
+        </div>
+        <div class="blurb">Energy conversion systems, circuit design, power electronics, and embedded control. Applications to power systems, power system monitoring, energy scorekeeping, and fault detection and diagnostics for critical systems. Construction of combined electrical and mechanical systems with applications to wireless power transfer, solar power, electric utility, electric drives for propulsion systems, power supplies and dc-dc converter systems, and electromagnetic power harvesting.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Leiserson, Charles E.</b>
+        [CS]
+        (cel@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Edwin Sibley Webster Professor
+        </div>
+        <div class="blurb">Algorithms, caching, cloud computing, computer architecture, concurrency, fast AI, fast code, multicore systems, multithreading, parallel computing, performance engineering, theory.</div>
+      </td></tr></table>
+      <table class="blurb-block " border="0"><tr><td>
+        <b>Leiserson, William</b>
+        (willtor@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Lecturer
+        </div>
+        <div class="blurb"></div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Lewis, Laura D.</b>
+        [EE, AI+D]
+        (ldlewis@mit.edu)
+        [<i>on leave Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Athinoula A. Martinos Associate Professor
+        </div>
+        <div class="blurb">Human brain imaging technologies (MRI, PET, EEG); biomedical image and signal processing; computational neuroscience; machine learning for neural data; imaging and modeling physiological fluid dynamics; applications to neurological and psychiatric disorders and the neuroscience of sleep.</div>
+      </td></tr></table>
+      <table class="blurb-block AI" border="0"><tr><td>
+        <b>Liang, Paul</b>
+        [AI]
+        (ppliang@mit.edu)
+        <div style="font-size:small;">
+          [MAS] Assistant Professor
+        </div>
+        <div class="blurb">multimodal machine learning, multisensory artificial intelligence, natural language processing, deep learning, human-AI interaction, human computer interaction, computer vision, AI for health and wellbeing, AI for human sensory experiences</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Lim, Jae S</b>
+        [EE, AI+D]
+        (jslim@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Signal processing, image/video processing, speech processing. </div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Liskov, Barbara</b>
+        [CS]
+        (liskov@csail.mit.edu)
+        <div style="font-size:small;">
+          [INST_PROF] Institute Professor
+        </div>
+        <div class="blurb">Parallel and distributed systems including blockchains, programming languages, programming methodology. </div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Liu, Kuikui</b>
+        [CS]
+        (liukui@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb"></div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Liu, Luqiao</b>
+        [EE]
+        (luqiao@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Spintronics; spin-based non-volatile logic and memory devices; magnetic material for information storage and microwave applications; generation and manipulation of spin in systems such as low dimensional material, high spin orbit coupling metals and semiconductors; novel spin-related phenomena in superconductors; sensing and imaging techniques for magnetic materials.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Lozano-Perez, Tomas</b>
+        [AI+D]
+        (tlp@mit.edu)
+        <div style="font-size:small;">
+          [EECS] School of Eng Professor in Teaching Excellence
+        </div>
+        <div class="blurb">Robotics and artificial intelligence. Emphasis on developing planning and learning methods for robots operating in complex and uncertain environments.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Lynch, Nancy</b>
+        [CS]
+        (nlynch@mit.edu)
+        <div style="font-size:small;">
+          [EECS] NEC Professor of Software Science & Engineering
+        </div>
+        <div class="blurb">Theory of distributed computing: models, algorithms, proofs, analysis, and lower bounds. Algorithms for fixed and mobile networks for problems of communication, building network structures, data management. Hybrid (continuous/discrete) distributed systems. Biological distributed algorithms, including insect colony algorithms and brain network algorithms. (Post- Tenure)</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Madden, Samuel</b>
+        [CS, AI+D]
+        (madden@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Head of the Faculty of Computer Science
+        </div>
+        <div class="blurb">Databases and computer systems; query processing, distributed systems, analytics and applied machine learning over massive scale data.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Madry, Aleksander</b>
+        [AI+D, CS]
+        (madry@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Cadence Design Systems Professor
+        </div>
+        <div class="blurb">Deployable machine learning. Algorithms and optimization.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Mark, Roger Greenwood</b>
+        [EE]
+        (rgmark@mit.edu)
+        <div style="font-size:small;">
+          [DOE] Distinguished Professor in Health Sci & Technology
+        </div>
+        <div class="blurb">Improve health care through the generation of new knowledge, monitoring technology and clinical decision support through the application of physiological signal processing, data science and machine learning technology to large collections of critical care data.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Matusik, Wojciech</b>
+        [CS, AI+D]
+        (wojciech@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Joan and Irwin M. (1957) Jacobs Professor
+        </div>
+        <div class="blurb">Computer graphics. Additive manufacturing (3D printing). Computer- aided design. Compilers. Robotics. Computational imaging. Optics. Display devices.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D EE" border="0"><tr><td>
+        <b>Medard, Muriel</b>
+        [CS, AI+D, EE]
+        (medard@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] NEC Professor of Software Science and Engineering
+        </div>
+        <div class="blurb">Communications and networking. Low latency, security and reliability. Network coding. Universal decoding. Computation in networks.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Megretski, Alexandre</b>
+        [EE, AI+D]
+        (ameg@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Theory and algorithms of analysis and design of hybrid systems, nonlinear and robust control, non-convex and convex optimization, formalization of knowledge in education, functional analysis and operator theory.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Miller, Robert C</b>
+        [CS]
+        (rcm@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Co-Education Officer, Professor
+        </div>
+        <div class="blurb">Human-computer interaction, online education, programming systems, software engineering.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Morris, Robert</b>
+        [CS]
+        (rtm@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">The design of an easy-to-control data networking infrastructure designed to bring about a new level of flexibility to network configuration. The Resilient Overlay Networks Project. Grid routing protocols.</div>
+      </td></tr></table>
+      <table class="blurb-block CS EE" border="0"><tr><td>
+        <b>Mueller, Stefanie</b>
+        [CS, EE]
+        (stefmue@mit.edu)
+        [<i>on leave Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Human-computer interaction, 3D printing, computer aided design, creativity tools, prototyping, robotics, computer graphics, materials.</div>
+      </td></tr></table>
+      <table class="blurb-block " border="0"><tr><td>
+        <b>Mullainathan, Sendhil</b>
+        (sendhil@mit.edu)
+        <div style="font-size:small;">
+          [ECO] Professor, Economics & EECS
+        </div>
+        <div class="blurb">Combining machine learning with behavioral science to build algorithms that (1) better understand people; (2) address consequential problems in decision systems. Accomplishing this requires us to build new ML for science tools and procedures for incorporating structured understanding of the world into algorithms.  Other application areas of interest include medicine and other complex sciences.
+</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Natarajan, Anand</b>
+        [CS]
+        (anandn@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Quantum information theory, focusing on quantum complexity theory. Also interested in quantum cryptography, quantum algorithms, and connections with classical CS theory, and to physics.</div>
+      </td></tr></table>
+      <table class="blurb-block " border="0"><tr><td>
+        <b>Nigam, Rachit</b>
+        (rnigam@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Visiting Scientist
+        </div>
+        <div class="blurb"></div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Nigam, Rachit</b>
+        [CS]
+        (rachit.nigam12@gmail.com)
+        [<i>starting Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Programming Languages, Compilers, Computer Architecture. In particular, designing programming systems for generating correct, efficient, and optimized specialized accelerators from high-level descriptions and mapping them to FPGAs and ASICs.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Niroui, Farnaz</b>
+        [EE]
+        (fniroui@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Active engineering of light-matter interactions, electronic transport and exciton dynamics at extreme nanoscale dimensions. Design and development of nanoscale devices and systems for applications including plasmonics, molecular electronics and quantum technologies.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Notaros, Jelena</b>
+        [EE]
+        (notaros@mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Integrated photonics platforms, devices, and systems for applications including augmented-reality displays, LiDAR sensing for autonomous vehicles, free-space optical communications, trapped-ion quantum engineering, and biophotonics.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS" border="0"><tr><td>
+        <b>O'Brien, Kevin P</b>
+        [EE, CS]
+        (kpobrien@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Quantum metamaterials, quantum optics, and experimental quantum computing with superconducting circuits and circuit quantum electrodynamics (cQED). Near quantum limited amplifiers and quantum measurement. Making noisy intermediate-scale quantum (NISQ) technology less noisy.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>O'Reilly, Una-May</b>
+        [CS, AI+D]
+        (unamay@csail.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Principal Research Scientist
+        </div>
+        <div class="blurb">Artificial adversarial intelligence: data-driven ML, symbolic AI, and mod-sim approaches to intelligent behavior in adversarial domains, e.g., cyber security, disinformation.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Oliva, Aude</b>
+        [AI+D]
+        (oliva@mit.edu)
+        <div style="font-size:small;">
+          [DEANCOMP] Director of Strategic Industry Engagement
+        </div>
+        <div class="blurb">Human perception and cognition; computer vision; human neuroscience; computational neuroscience; face, object, scene and place recognition by human and artificial systems; big data for visual recognition; modeling human perceptual, cognitive and memory capabilities.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Oliver, William</b>
+        [EE, AI+D]
+        (william.oliver@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Quantum computing with multi-qubit superconducting circuits and high-performance cryogenic classical computing. High-coherence materials, fabrication, and 3D integration; circuit design; quantum algorithms and benchmarking; noise spectroscopy and error mitigation; quantum-limited amplification and precision measurements; quantum optics with microwave photons.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS" border="0"><tr><td>
+        <b>Oppenheim, Alan</b>
+        [EE, CS]
+        (avo@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Signal processing theory, applications and algorithms.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Orlando, Terry</b>
+        [EE]
+        (orlando@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Quantum	computing	with	superconducting	devices. Superconducting devices. </div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE CS" border="0"><tr><td>
+        <b>Ozdaglar, Asu</b>
+        [AI+D, EE, CS]
+        (asuman@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Deputy Dean of Academics and EECS Dept. Head
+        </div>
+        <div class="blurb">Optimization theory and algorithms with focus on algorithms for machine learning and large-scale data processing and distributed and parallel computation. Game theory and mechanism design. Modeling, analysis and optimization of multi-agent networked systems, with applications in infrastructure systems (communication networks, traffic networks and power grid) and social, economic and financial systems.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Palacios, Tomas</b>
+        [EE]
+        (tpalacios@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] MTL Director/Professor
+        </div>
+        <div class="blurb">Novel electronic devices and systems in wide bandgap semiconductors and two-dimensional materials, such as graphene; polarization and bandgap engineering; transistors for sub-mm wave power and digital applications; new concepts for power conversion, generation and storage, interaction of biological systems with semiconductor materials and devices.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Parrilo, Pablo</b>
+        [AI+D]
+        (parrilo@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Joseph F & Nancy P. Keithley Professor of EE
+        </div>
+        <div class="blurb">Control and identification of uncertain complex systems, robustness analysis and synthesis, and the development and application of computational tools based on convex optimization and algorithmic algebra to practically relevant problems in engineering, economics and physics.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Perreault, David J</b>
+        [EE]
+        (djperrea@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Ford Professor of Engineering
+        </div>
+        <div class="blurb">Power electronics and energy conversion; renewable energy systems; efficient generation and application of electrical energy; circuit design and control; applications to industrial, commercial, scientific, transportation and biomedical systems.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE" border="0"><tr><td>
+        <b>Polyanskiy, Yury</b>
+        [AI+D, EE]
+        (ypol@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Information theory, statistics, theoretical machine learning and transformers.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Popescu, Mariana</b>
+        [CS, AI+D]
+        (M.A.Popescu@tudelft.nl)
+        [<i>starting July 2025</i>]
+        <div style="font-size:small;">
+          [EECS, ARCH] Assistant Professor
+        </div>
+        <div class="blurb">Computational design including architectural geometry, form finding, structurally informed design and smart materials. Computational/digital fabrication techniques for materialising intelligent structures and meta-materials - with a special interest for 3D knitting and flexible/deployable architectural systems.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Quatieri, Thomas</b>
+        [EE]
+        (quatieri@ll.mit.edu)
+        <div style="font-size:small;">
+          [LINCOLN] LL - Senior Staff
+        </div>
+        <div class="blurb">Biologically-inspired signal processing; modeling speech production, auditory processing, and their coupling. Application to early detection of neurological, cognitive, and auditory disorders.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Ragan-Kelley, Jonathan</b>
+        [CS, AI+D]
+        (jrk@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">High-performance visual computing, computer graphics, domain- specific languages, programming languages, differentiable programming, compilers, GPUs, computer architecture.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Raghavan, Manish</b>
+        [CS]
+        (mragh@mit.edu)
+        <div style="font-size:small;">
+          [SLOAN] Assistant Professor
+        </div>
+        <div class="blurb">Algorithmic fairness, machine learning, behavioral economics, technology policy, algorithmic game theory, mechanism design, algorithmic hiring, applied modeling, technology and society, theory.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Ram, Rajeev</b>
+        [EE, AI+D]
+        (rajeev@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assoc Director, RLE/Professor/MacVicar Fellow
+        </div>
+        <div class="blurb">Applied physics with an emphasis on photonics and analysis for applications ranging from advanced computing, medicine to environmental science.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Reiskarimian, Negar</b>
+        [EE]
+        (negarr@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Radio-frequency and millimeter-wave integrated circuits and systems design inspired by applied electromagnetics and photonics. Analysis, design, and implementation of integrated microsystems and metamaterials based on new physical phenomena. Applications span communication, Internet of Things (IoT), sensing, imaging, and optoelectronics.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Rinard, Martin</b>
+        [CS, AI+D]
+        (rinard@csail.mit.edu)
+        [<i>on leave Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Computer systems, compilers, programming languages, software engineering, program analysis, program verification, real-time systems, embedded systems, distributed systems, parallel systems.</div>
+      </td></tr></table>
+      <table class="blurb-block " border="0"><tr><td>
+        <b>Rives, Alexander</b>
+        (arives@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb"></div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Rivest, Ronald</b>
+        [CS]
+        (rivest@mit.edu)
+        <div style="font-size:small;">
+          [INST_PROF] Institute Professor
+        </div>
+        <div class="blurb">Climate	change.	Election	security.	Exposure	notification. Cryptography. Note: not currently looking for students.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Rosenholtz, Ruth</b>
+        [CS]
+        (rruth@mit.edu)
+        <div style="font-size:small;">
+          [] None
+        </div>
+        <div class="blurb">Computational modeling of human vision, attention, and capacity limits. Application of understanding of human vision to design of user interfaces and information visualizations. Perceptual and attentional aspects of distracted driving.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Rubinfeld, Ronitt</b>
+        [CS, AI+D]
+        (ronitt@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Edwin Sibley Webster Professor
+        </div>
+        <div class="blurb">Theory of computation: sublinear time algorithms, property testing, testing and learning discrete distributions over large domains, randomized algorithms.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Rus, Daniela</b>
+        [AI+D, CS]
+        (rus@csail.mit.edu)
+        <div style="font-size:small;">
+          [DEANCOMP] Director, CSAIL/Viterbi
+        </div>
+        <div class="blurb">Robotics, machine learning, AI.</div>
+      </td></tr></table>
+      <table class="blurb-block CS EE" border="0"><tr><td>
+        <b>Sanchez, Daniel</b>
+        [CS, EE]
+        (sanchez@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Computer architecture. In particular, striving to improve the performance, efficiency and scalability of future parallel and heterogeneous systems, and to enable programmers to leverage their full capabilities easily. Current projects focus on scalable and efficient memory hierarchies, architectures with quality-of-service guarantees, scalable dynamic fine-grained runtimes and schedulers, and hardware support for scheduling.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Satyanarayan, Arvind</b>
+        [CS]
+        (arvindsatya@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Accessibility, Data visualization and analysis, human-computer interaction, design and creativity tools, end-user programming, machine learning interpretability.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Schindall, Joel</b>
+        [EE]
+        (joels@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Gordon Prod Dev Chair Prof of Practice, Emeritus
+        </div>
+        <div class="blurb">Automotive applications of electronics: energy storage using nanotube-enhanced ultra-capacitors, reliability enhancement of complex system architectures, industry-related research and product development, novel time-domain processing methods, satellite communication architectures. (Available for discussion, but no longer taking on students.)</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Seethapathi, Nidhi</b>
+        [AI+D]
+        (nidhise@mit.edu)
+        <div style="font-size:small;">
+          [B&CS] Middleton CD Assistant Professor of Neuroscience
+        </div>
+        <div class="blurb">Computational modeling of biological motor control, nonlinear dynamics and control, embodied reinforcement learning, control and adaptation of wearable robots, computer vision for human pose estimation, computer-aided rehabilitation, machine learning for diagnostics</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Seneff, Stephanie</b>
+        [CS]
+        (seneff@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Senior Research Scientist
+        </div>
+        <div class="blurb">Investigating the role of toxic chemicals and nutritional deficiencies in chronic disease through biomedical data mining.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Shah, Devavrat</b>
+        [AI+D]
+        (devavrat@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Andrew (1956) and Erna Viterbi Professor
+        </div>
+        <div class="blurb">Graphical models, social data processing, time-series analysis, causal inference, reinforcement learning and stochastic networks.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Shavit, Nir N.</b>
+        [CS]
+        (shanir@csail.mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Computational connectomics: understanding how neural tissue computes through the mapping of brain connectivity and applying this knowledge to machine learning and the programming multiprocessor machines.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Shrobe, Howard</b>
+        [CS]
+        (hes@csail.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Principal Research Scientist
+        </div>
+        <div class="blurb">Hardware and software architectures for secure computing, hardware and software architectures for secure and resilient computations, use of natural interfaces (speech, gestures) in the design and synthesis of software.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Shun, Julian</b>
+        [CS]
+        (jshun@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Parallel computing, algorithms, data structures, programming frameworks, concurrency, performance engineering, graph analytics, geometric data processing, text processing.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Sitzmann, Vincent</b>
+        [AI+D]
+        (sitzmann@mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Computer vision, vision for robotics, learning word models, self-supervised symmetry discovery (e.g. discovering that the world is three-dimensional only from interacting with it or learning an intuitive physics engine, both without hand-crafted inductive biases), representation learning, geometric deep learning for perception.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Smidt, Tess</b>
+        [EE, AI+D]
+        (tsmidt@mit.edu)
+        [<i>on leave Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Machine learning (ML) from first-principles for scientific data. Symmetry equivariant neural networks. Representation learning for 3D geometry. Computational science and ML surrogate models. Design and property prediction of atomic systems (e.g. molecules, materials, proteins, etc.).</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Sodini, Charles</b>
+        [EE]
+        (sodini@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Clarence J. LeBel Professor
+        </div>
+        <div class="blurb">Design of technology-intensive microsystems, emphasizing integrated circuit and system design, for medical electronic devices. These devices include wearable and minimally invasive monitoring and imaging.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Solar Lezama, Armando</b>
+        [CS, AI+D]
+        (asolar@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Distinguished Professor of Computing
+        </div>
+        <div class="blurb">Programming systems with a focus on software synthesis. Programming tools for parallel and high-performance computing.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Sollins, Karen</b>
+        [CS]
+        (sollins@csail.mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Principal Research Scientist
+        </div>
+        <div class="blurb">Computer networks, internet protocols, network security and privacy, identity, denial of service, Internet of Things.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Solomon, Justin</b>
+        [AI+D, CS]
+        (jsolomon@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Geometry (shape analysis, correspondence, synthesis, meshing, machine learning), computer graphics, optimization/numerical methods, optimal transport, simulation, medical imaging, 3D vision, geometric approaches to machine learning.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Sontag, David</b>
+        [AI+D]
+        (dsontag@mit.edu)
+        [<i>on leave Spring 2025, Fall 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Machine learning and artificial intelligence; graphical models; unsupervised learning and topic modeling; variational inference and linear programming relaxations; causality and counterfactual inference; deep learning; natural language processing. Applications to health care: electronic phenotyping, precision medicine, disease progression modeling.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Sra, Suvrit</b>
+        [AI+D]
+        (suvrit@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Machine learning and artificial intelligence, especially from an optimization and mathematical perspective. Fundamental theoretical and algorithmic questions in these areas, as well as their application to data driven science (physics, chemistry, biology) and engineering. Optimization for machine learning, especially non-convex optimization, differential geometric optimization, theory of deep learning, discrete probability, optimal transport, convex geometry, polynomials, and more broadly, bridging different areas of math with optimization and machine learning.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Stonebraker, Michael</b>
+        [CS]
+        (stonebraker@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Adjunct Professor Emeritus
+        </div>
+        <div class="blurb">Database systems, query processing, data warehouses, federated databases, data visualization. (Adjunct)</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE" border="0"><tr><td>
+        <b>Stultz, Collin M</b>
+        [AI+D, EE]
+        (cmstultz@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Machine Learning (ML) for healthcare, Explainable ML in cardiovascular disease, clinically useful AI tools</div>
+      </td></tr></table>
+      <table class="blurb-block CS EE AI+D" border="0"><tr><td>
+        <b>Sussman, Gerald Jay</b>
+        [CS, EE, AI+D]
+        (gjs@mit.edu)
+        [<i>on leave Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Panasonic Professor
+        </div>
+        <div class="blurb">Artificial intelligence: learning, problem solving and programming. Computational performance models for intelligent behavior, especially modeling the behavior of engineers. Numerical models of physical systems.</div>
+      </td></tr></table>
+      <table class="blurb-block EE CS AI+D" border="0"><tr><td>
+        <b>Sze, Vivienne</b>
+        [EE, CS, AI+D]
+        (sze@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Design of signal processing algorithms, computer hardware architectures (e.g., domain-specific accelerators), and VLSI circuit design for energy-efficient systems. Applications include high-performance computing (e.g., deep neural networks, sparse tensor algebra), autonomous robot navigation (e.g., depth sensing and perception, motion planning, localization and mapping, exploration), video compression, image processing, computer vision, and digital health.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D CS" border="0"><tr><td>
+        <b>Szolovits, Peter</b>
+        [AI+D, CS]
+        (psz@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor of EECS & HST
+        </div>
+        <div class="blurb">Application of artificial intelligence techniques to medical decision making, including machine learning approaches to natural language processing on clinical notes, predictive modeling based on clinical data including images, and discovery of relationships between disease phenotypes and genetics. Effective representation of knowledge, personal health information systems, medical confidentiality.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Tedrake, Russell Louis</b>
+        [AI+D]
+        (russt@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Toyota Professor
+        </div>
+        <div class="blurb">Robotics, nonlinear control, and machine learning. Robot manipulation with continued emphasis on rigorous optimization- based approaches to feedback control (which is so far largely absent in manipulation) and the connections between perception and control.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Tidor, Bruce</b>
+        [AI+D]
+        (tidor@mit.edu)
+        <div style="font-size:small;">
+          [PROVOST] Director and CEO/SMART (Interim) & Prof. BE/EECS
+        </div>
+        <div class="blurb">Modeling of protein-protein interactions, focusing on electrostatic effects and structure-based drug design. Systems-level biology including biological network modeling and information theory applied to data analysis.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Torralba, Antonio</b>
+        [AI+D]
+        (torralba@csail.mit.edu)
+        <div style="font-size:small;">
+          [EECS] Faculty Head, AI+D; Delta Electronics Professor
+        </div>
+        <div class="blurb">Computer vision, machine learning and human perception; development of computer vision systems and solving real world recognition tasks; modeling human perceptual and cognitive capabilities; object recognition, classification of whole scenes; visual recognition and classification of places and objects.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Uhler, Caroline</b>
+        [AI+D]
+        (cuhler@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Machine learning and statistics (causal inference, graphical models, autoencoders, generative modeling, self-supervised learning, algebraic statistics, multivariate analysis); data science; mathematical and computational biology (genome packing models, inference of gene regulatory networks); convex optimization; applied algebraic geometry;</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Vaikuntanathan, Vinod</b>
+        [CS, AI+D]
+        (vinodv@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Cryptography, quantum cryptography, security and privacy in machine learning, computational complexity.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Veeramachaneni, Kalyan</b>
+        [CS]
+        (kalyan@csail.mit.edu)
+        <div style="font-size:small;">
+          [LIDS] Principal Research Scientist
+        </div>
+        <div class="blurb">Machine learning, data science, software and systems for data science, fairness and accountability in machine learning, AI for cybersecurity, artificial intelligence applications, automated machine learning, data science automation.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Velasquez-Garcia, Luis Fernando</b>
+        [EE, AI+D]
+        (lfvelasq@mit.edu)
+        <div style="font-size:small;">
+          [MTL] Principal Research Scientist
+        </div>
+        <div class="blurb">Micro- and nano-enabled, multiplexed, scaled-down systems that exploit high electric field phenomena (e.g., electrospray, electrospinning, field emission, field ionization, plasmas, x-rays) for space, energy, healthcare, manufacturing and analytical applications. Additively manufactured micro/nanoelectromechanical systems (MEMS/NEMS) with emphasis on microfluidics, sensors, and actuators. Artificial Intelligence (AI) applied to additively manufactured MEMS/NEMS.</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>Verghese, George</b>
+        [EE, AI+D]
+        (verghese@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Signal processing, estimation, identification, modeling, structured reduction and control for systems arising in biomedicine and other applications; computational physiology, bedside informatics and clinical inference.</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Voldman, Joel</b>
+        [EE]
+        (voldman@mit.edu)
+        <div style="font-size:small;">
+          [EECS] William R. Brody (1965) Professor
+        </div>
+        <div class="blurb">Biological applications of microtechnology, especially to cell biology; bio-MEMS; electrostatics at the microscale.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Wainwright, Martin</b>
+        [AI+D]
+        (mjwain@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Statistical machine learning; High-dimensional statistics; Reinforcement learning and stochastic control; Graphical models; Causal inference; Semi-parametric statistics; Algorithms and optimization</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>Warde, Cardinal</b>
+        [EE]
+        (warde@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Investigation of optoelectronic materials and devices for neuromorphic systems. Design, fabrication and testing of the Compact Optoelectronic Integrated Neural (COIN) co-processor system. Novel algorithms and approaches for training the COIN hardware.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Weitzner, Daniel J</b>
+        [CS]
+        (weitzner@mit.edu)
+        <div style="font-size:small;">
+          [CSAIL] Senior Research Scientist
+        </div>
+        <div class="blurb">Privacy, Cybersecurity, Accountable Systems, Internet public policy, Surveillance law and technology, Encryption policy</div>
+      </td></tr></table>
+      <table class="blurb-block EE AI+D" border="0"><tr><td>
+        <b>White, Jacob</b>
+        [EE, AI+D]
+        (white@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Cecil H Green Professor
+        </div>
+        <div class="blurb">Numerical simulation, optimization, and machine learning algorithms applied to medical imaging, nano-photonics, terahertz integrated circuits, and microfluidic devices. Design-based pedagogical strategies for teaching electromagnetics, feedback control, and machine learning.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Williams, Ryan</b>
+        [CS, AI+D]
+        (rrw@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Computational complexity, the design and analysis of algorithms, and their interactions: circuit complexity and circuit-analysis algorithms, graph algorithms, parameterized algorithms and complexity, meta-complexity, fine-grained algorithms and complexity.</div>
+      </td></tr></table>
+      <table class="blurb-block CS AI+D" border="0"><tr><td>
+        <b>Williams, Virginia Vassilevska</b>
+        [CS, AI+D]
+        (virgi@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Algorithms and complexity: fine-grained complexity and algorithms, graph and matrix algorithms, dynamic algorithms and data structures, distance compression, computational social choice.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Wilson, Ashia</b>
+        [AI+D]
+        (ashia07@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Optimization theory; Statistics and machine learning; uncertainty and robustness quantification; AI for society.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D" border="0"><tr><td>
+        <b>Wornell, Gregory</b>
+        [AI+D]
+        (gww@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Signal processing, information theory, statistical inference, artificial intelligence, and information security. Applications including architectures for sensing, learning, computing, communication, and storage; systems for computational imaging, vision, and perception; aspects of computational biology and neuroscience; digitally- enhanced nanoscale systems and devices, and design of wireless networks.</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Yan, Mengjia</b>
+        [CS]
+        (mengjiay@mit.edu)
+        <div style="font-size:small;">
+          [EECS] Associate Professor
+        </div>
+        <div class="blurb">Computer architecture and hardware security</div>
+      </td></tr></table>
+      <table class="blurb-block EE" border="0"><tr><td>
+        <b>You, Sixian</b>
+        [EE]
+        (sixian@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Assistant Professor
+        </div>
+        <div class="blurb">Optics and algorithms to improve human health. Our current research focus includes nonlinear microscopy and spectroscopy (label-free imaging, multiphoton microscopy), light source engineering (fiber sources, wavefront shaping, spectral shaping), computational optics/imaging (3D holography, hyperspectral imaging, AI-assisted augmented microscopy).</div>
+      </td></tr></table>
+      <table class="blurb-block CS" border="0"><tr><td>
+        <b>Zeldovich, Nickolai</b>
+        [CS]
+        (nickolai@mit.edu)
+        [<i>on leave Spring 2025</i>]
+        <div style="font-size:small;">
+          [EECS] Joan and Irwin M. (1957) Jacobs Professor
+        </div>
+        <div class="blurb">Building practical secure systems. Operating systems, hardware design, networking, and distributing systems. Programming languages and tools, security analysis and verification.</div>
+      </td></tr></table>
+      <table class="blurb-block AI+D EE" border="0"><tr><td>
+        <b>Zheng, Lizhong</b>
+        [AI+D, EE]
+        (lizhong@mit.edu)
+        [<i>on leave Fall 2025, Spring 2026</i>]
+        <div style="font-size:small;">
+          [EECS] Professor
+        </div>
+        <div class="blurb">Wireless communications, physical layer designs, wireless networks; space-time processing, digital communications, multi-user detection algorithms, information theory, stochastic signal processing, optical communications.</div>
+      </td></tr></table>
+</div>
+
+</div</body>
+</html>
+

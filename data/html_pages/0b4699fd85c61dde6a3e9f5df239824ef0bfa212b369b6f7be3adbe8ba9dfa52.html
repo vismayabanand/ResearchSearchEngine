@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/security/bug-bounty" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Stanford Bug Bounty Program | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_pJ8q_0fmfLjOvdBhHmt2B8wMnfnDIaHY-NMbsKbjtIE.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkJB-zIIRjmrpjgwU4aXc_UedRNe38WIJzMBc0I4fMF5pddJrNxojMpJBQP8EzOyhVWbEEfHWb7sI7YNkJtpzoP5hrU1kJTvlK9lZy5JNogtgXiNLZb7CPLIo1RBE3V2wQUTXLtBSJWAbzW8m8vPJKZriQwXbed4dZlKZZahMm9v3kgz8Mlbh_a0l7wzLiBa-hoeIeoJ3tt_3ojJ1bjyXbmVL4C9-zT4_f58TP6JD7iZl0nQkM2eDjgH6KYS-C3cypThGNwppps-n-jlVSL_QFjNe_DA" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/26809","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJx1kF2OwyAMhC9EwsNKex3LJC4lBYxsSNrbL1pVW-VnXxAz32CZQVWqEPJCU2Wxk-roMGcSmFEeUEOuIJR4xWjwnC3SA1dAQyXYwkz_wZCK8EpwC0_Sy1DFfGOZwTUPjluuL-hPvGA6xperkY65ahUs4FAksL1xrriRciL4PmMf2WEctL5iyP7Mu_u4mJpIFT0pbPe-wpkrN5kIFLPCl5lYyE6cCmfKtXd9iA9DotyMZ_aRoKK3vh9HPeKCz72ZTEHBXk65q52lFYzjxxlbLs3FoHeazV-xLVT7WWCa8x7t-9qhQ1c7tv_wHr3F0IXRl1ZK1qGS6RqUUKa7_Vzfrqyhj8NIUtWeLVjUrIE2tb_nmHhukX4Artcgyg","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-26809 path-security-bug-bounty path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          <nav class="navbar navbar-expand-lg bg-lagunita-dark navbar-dark navbar-expand-lg" id="navbar-main">
+                        <div class="container">
+                          
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar2" aria-controls="CollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Topic Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar2">
+                                              
+<nav role="navigation" aria-labelledby="secondary-menu-title" id="block-stanford-uit-informationsecurity" region="secondary_menu" class="block block-menu navigation menu--menu-security-category">
+    
+  
+    <h2 id="secondary-menu-title" ><a href="/security" class="menu-item--active-trail" data-drupal-link-system-path="node/24784">Information Security</a></h2>
+    
+
+        
+              <ul region="secondary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/organization/information-security-office" class="menu-node-unpublished nav-link dropdown-toggle menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished nav-link--organization-information-security-office" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/26784">About Us</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-cat-itemsys-idf7ae081a13bce2008a9175c36144b0ad">Contact Us</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/team#section_3753" class="nav-link-https--uitstanfordedu-security-teamsection-3753">View all ISO services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/getting-started" class="nav-link dropdown-toggle nav-link--security-getting-started" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24802">Guides</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <span class="nav-link-">Data Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/copyright-infringement" class="nav-link--security-copyright-infringement" data-drupal-link-system-path="node/24892">Copyright infringement</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/crashplan" class="nav-link--service-crashplan" data-drupal-link-system-path="node/24150">File and data backup</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/secureemail" class="nav-link--service-secureemail" data-drupal-link-system-path="node/45">High risk data in email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/identity-theft" class="nav-link--security-identity-theft" data-drupal-link-system-path="node/25023">Identity theft</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/travel" class="nav-link--security-travel" data-drupal-link-system-path="node/29188">International travel</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sysadmin" class="nav-link--security-sysadmin" data-drupal-link-system-path="node/24803">IT system administrator guidance</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/password-manager" class="nav-link--service-password-manager" data-drupal-link-system-path="node/24793">Password manager</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/stay-safe-from-phishing" class="nav-link--security-stay-safe-from-phishing" data-drupal-link-system-path="node/29214">Phishing awareness</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/positionpapers" class="nav-link--security-positionpapers" data-drupal-link-system-path="node/26869">Position papers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sensitivedata" class="nav-link--security-sensitivedata" data-drupal-link-system-path="node/29291">Protecting sensitive data</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/responsibleai" class="nav-link--security-responsibleai" data-drupal-link-system-path="node/29327">Responsible AI at Stanford</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/asp" class="nav-link--security-asp" data-drupal-link-system-path="node/24804">Third party security requirements</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/resources" class="nav-link--security-resources" data-drupal-link-system-path="node/24795">Other Stanford security resources</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Device Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/exception" class="nav-link--security-exception" data-drupal-link-system-path="node/24786">Compliance exception</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/encrypt/config" class="nav-link--guide-encrypt-config" data-drupal-link-system-path="node/24863">Encrypt your device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Mobile device security</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mydevices" class="nav-link--service-mydevices" data-drupal-link-system-path="node/24569">View your Stanford-registered devices</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/guide/riskclassifications" class="nav-link dropdown-toggle nav-link--guide-riskclassifications" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24632">Policies</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/guide/securitystandards" class="nav-link--guide-securitystandards" data-drupal-link-system-path="node/24600">Minimum Security Standards</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://pcicompliance.stanford.edu/" class="nav-link-https--pcicompliancestanfordedu-">Payment Card Industry (PCI)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/riskclassifications" class="nav-link--guide-riskclassifications" data-drupal-link-system-path="node/24632">Risk Classifications</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">Risk Classifications: Approved Services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/dra" class="nav-link dropdown-toggle nav-link--security-dra" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/29582">Privacy</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/security/dra" class="nav-link--security-dra" data-drupal-link-system-path="node/29582">Data Risk Assessment (DRA)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/hipaa" class="nav-link--security-hipaa" data-drupal-link-system-path="node/24924">HIPAA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/FERPA-Policy" class="nav-link--ferpa-policy" data-drupal-link-system-path="node/27245">FERPA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://privacy.stanford.edu" class="nav-link-https--privacystanfordedu">University Privacy Office</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="/security/internship" class="nav-link active dropdown-toggle nav-link--security-internship" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/25934">Programs</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/service/phishingawareness" class="nav-link--service-phishingawareness" data-drupal-link-system-path="node/28814">Phishing Awareness Program</a>
+              </li>
+                <li class="dropdown-item active">
+                          <a href="/security/bug-bounty" class="active nav-link--security-bug-bounty is-active" data-drupal-link-system-path="node/26809" aria-current="page">Bug Bounty Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/vulnerability-disclosure" class="nav-link--security-vulnerability-disclosure" data-drupal-link-system-path="node/29897">Vulnerability Disclosure Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/cyberfest/2024" class="nav-link--security-cyberfest-2024" data-drupal-link-system-path="node/29733">Cybersecurity and Privacy Festival</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link dropdown-toggle nav-link-https--wwwcisagov-news-events-cybersecurity-advisories" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Security Alerts</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link-https--wwwcisagov-news-events-cybersecurity-advisories">Cybersecurity alerts and advisories</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/sunset-schedule" class="nav-link--guide-sunset-schedule" data-drupal-link-system-path="node/26942">Service and Software Sunset Schedule</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                                    </div>
+                                                    </div>
+                      </nav>
+                  </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/Bug-Bounty-Header_SimpleLight-Purple_0.png?itok=4-ymSltg); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Stanford Bug Bounty Program</span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p><img alt="" src="/sites/default/files/images/2022/10/25/Tree_2.png" style="width: 400px;" /></p>
+
+<p>Securing Stanford Together</p>
+</div>
+      
+				<div class="hero-link">
+    <ul class="list-inline"><li class="list-inline-item py-2 px-4 mb-1"><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=973505bc1bcd801094c0fee58d4bcb30">Submit a Vulnerability</a></li></ul>
+</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-8f5f8b276bf5a61def8786bbbb8e08fcf9ab7900b4bc3425f6d618ed7c3ffab3">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    <div class="item-list"><ul class="list-group"><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_292">Scope</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_293">Rules</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_294">Rewards</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_295">Safe Harbor</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_296">Get Started</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_2604">Timeline for Submissions</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_547">Bug Bounty Stats</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/security/bug-bounty#section_548">Leaderboard</a></li></ul></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_288" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--288 section--default">
+		<div class="container">
+						<div id="section_content_288" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p>The Stanford Bug Bounty program is an experiment in improving the university’s cybersecurity posture through formalized community involvement. Subject to the terms below, the <a href="https://security.stanford.edu">Information Security Office</a> is&nbsp;offering rewards for the responsible discovery and disclosure of system vulnerabilities.</p>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_292" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--292 section--default">
+		<div class="container">
+							<div id="section_title_292" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Scope
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_292" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" height="130" src="/sites/default/files/images/2022/10/25/Scope%20Rules_Purple.png" style="width: 200px; padding-bottom: 20px;" /><br />
+Scope</h2>
+
+<div class="accordion" id="accordion1a">
+<div class="accordion-group">
+<h3 class="accordion-heading" id="panel1-1" style="font-size:16px"><a class="accordion-toggle" data-parent="#accordion1a" data-toggle="collapse" href="#panel1a-content"><font color="850000">Only the following domains are in-scope:</font></a></h3>
+
+<div class="accordion-body collapse in" id="panel1a-content">
+<div class="accordion-inner">
+<ul>
+	<li>bi.stanford.edu</li>
+	<li>accessories.stanford.edu</li>
+	<li><a href="/service/activedirectory">Active Directory</a>
+	<ul>
+		<li>win.stanford.edu</li>
+	</ul>
+	</li>
+	<li><a href="/service/cardinal-print">Cardinal Print</a>
+	<ul>
+		<li>cardinalprintcenter.stanford.edu</li>
+		<li>printer interface</li>
+	</ul>
+	</li>
+	<li>*.sahr.stanford.edu</li>
+	<li>ecm.stanford.edu</li>
+	<li>fasa.stanford.edu</li>
+	<li>secureportal.stanford.edu</li>
+	<li>regadmin.stanford.edu</li>
+	<li>ice.stanford.edu</li>
+	<li>iron.stanford.edu</li>
+	<li>campusmap.stanford.edu</li>
+	<li>code.stanford.edu</li>
+	<li>accounts.stanford.edu</li>
+	<li>authority.stanford.edu</li>
+	<li>idp.stanford.edu</li>
+	<li>login.stanford.edu</li>
+	<li>mydevices.stanford.edu</li>
+	<li>spdb.stanford.edu</li>
+	<li>sponsorship.stanford.edu</li>
+	<li>stanfordwho.stanford.edu</li>
+	<li>stanfordyou.stanford.edu</li>
+	<li>vault.stanford.edu (new)</li>
+	<li>who.stanford.edu</li>
+	<li>workgroup.stanford.edu</li>
+	<li>Kerberos authentication</li>
+	<li>Stanford VPN</li>
+	<li>Stanford LDAP</li>
+	<li>Stanford Network Access Control (SUNAC)</li>
+	<li>netdb.stanford.edu</li>
+	<li>mailman.stanford.edu</li>
+	<li>gsb.stanford.edu(new)</li>
+	<li>gsbapexuat2.stanford.edu(new)</li>
+	<li>GSBgo(Mobile App)</li>
+	<li>stanfordmag.org</li>
+	<li>covidsupport.stanford.edu</li>
+	<li>covidstudentsupport.stanford.edu</li>
+	<li>Card Services sites</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_290"  class="paragraph paragraph--card paragraph-id--290 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2022/10/25/In-Scope.png" style="width: 100px; height: 100px;" />​<br />
+Examples of in-scope vulnerabilities:</h2>
+
+<ul>
+	<li>Remote Code Execution (RCE)</li>
+	<li>SQL injection</li>
+	<li>XML External Entity Injection (XXE)</li>
+	<li>Authorization bypass/escalation</li>
+	<li>Sensitive information leaks</li>
+	<li>Cross-site scripting (XSS)</li>
+	<li>Cross-site request forgery (CSRF)</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_291"  class="paragraph paragraph--card paragraph-id--291 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2022/10/25/Out-Scope.png" style="width: 100px; height: 100px;" />​<br />
+Out-of-scope vulnerabilities:</h2>
+
+<ul>
+	<li>Any bug that does not pose a substantial or demonstrable security risk</li>
+	<li>Clickjacking, open redirects, or lack of security headers</li>
+	<li>Denial of service&nbsp;(DOS)</li>
+	<li>Social engineering</li>
+	<li>Physical exploits of our servers or network</li>
+	<li>Local network-based exploits such as DNS poisoning or ARP spoofing</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_293" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--293 section--default">
+		<div class="container">
+							<div id="section_title_293" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Rules
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_293" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" height="130" src="/sites/default/files/images/2022/10/25/Book2.png" style="width: 200px; padding-bottom: 20px;" /><br />
+Rules</h2>
+
+<ul class="linebreak">
+	<li>In order to take part in this program, you must be a Stanford student (undergraduate/graduate), postdoc, or full-time benefits eligible employee.</li>
+	<li>For employees, participation in the bug bounty program must&nbsp;not interfere with job responsibilities and should be conducted&nbsp;outside of work hours.</li>
+	<li>Any involvement you have with an in-scope domain&nbsp;that could create a conflict of interest renders&nbsp;that domain out-of-scope for you.</li>
+	<li>Do not publicly disclose any vulnerabilities without explicit written permission from the <a href="https://security.stanford.edu">Information Security Office at Stanford University</a>.</li>
+	<li>Do not perform any tests that will disrupt services&nbsp;or impair others' ability to use them.</li>
+	<li>Do not use automated scanners.</li>
+	<li>To be eligible for bounty, all testing must be performed within the scope described above. Out-of-scope submissions will be accepted and acted upon, but&nbsp;are not&nbsp;eligible for bounty.</li>
+	<li>If you become aware of a vulnerability involving an out-of-scope domain, it is still appropriate&nbsp;to&nbsp;report the vulnerability&nbsp;via this program, and the same safe harbor provisions apply to protect those who responsibly report.</li>
+	<li><span style="letter-spacing: 0.01em;">Access does not equate to authorization. If a vulnerability provides unintended access to data, do not access the data beyond the minimum extent necessary to effectively demonstrate the presence of a vulnerability. If you encounter any</span><a href="https://dataclass.stanford.edu" style="letter-spacing: 0.01em;">&nbsp;Moderate or High Risk data</a><span style="letter-spacing: 0.01em;"> during testing (such as Personally Identifiable Information (PII), Protected Health Information (PHI), credit card data, or other confidential information), cease testing and submit a report immediately.</span></li>
+	<li>Testing must not violate the&nbsp;<a href="https://communitystandards.stanford.edu/policies-and-guidance/honor-code">Stanford Honor Code</a>,&nbsp;<a href="https://communitystandards.stanford.edu/policies-and-guidance/fundamental-standard">Fundamental Standard,</a>&nbsp;<a href="https://adminguide.stanford.edu/chapter-6/subchapter-2/policy-6-2-1">Admin Guide Chapter 6.2.1</a>, or any applicable laws.</li>
+	<li>To the furthest extent possible, only interact with test accounts you own or accounts with explicit permission from the account owner.</li>
+</ul>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_294" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--294 section--default">
+		<div class="container">
+							<div id="section_title_294" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Rewards
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_294" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" height="130" src="/sites/default/files/images/2022/10/25/Reward_Purple.png" style="width: 200px; padding-bottom: 20px;" /><br />
+Rewards</h2>
+
+<p>Stanford reserves the right to not reward any submission if we so choose, and we will not provide compensation for time spent researching.</p>
+
+<p>Bounties are awarded only to the first unique report of a previously unidentified vulnerability. Subsequent reports will be closed as duplicates and not eligible for a bounty.</p>
+
+<p>Vulnerability severities and reward amounts are determined at the discretion of the Information Security Office. For instance, a cross-site scripting vulnerability on a static, unauthenticated website may be classified as less severe compared to a cross-site scripting vulnerability that has the potential to compromise user accounts.</p>
+
+<p>Cumulative rewards in excess of $50 are taxable, and you must report it as income on your tax returns.</p>
+
+<p>Reward amounts and vulnerability severity classifications are subject to change at any time.</p>
+
+<dl class="faq faq-lagunita">
+	<dt>Severity | Reward Amount (in USD)</dt>
+	<dd>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th>Severity</th>
+				<th>Reward Amount (in USD)</th>
+			</tr>
+			<tr>
+				<td>Critical</td>
+				<td>$500-$1,000</td>
+			</tr>
+			<tr>
+				<td>
+				<p>High</p>
+				</td>
+				<td>$500-$800</td>
+			</tr>
+			<tr>
+				<td>Medium</td>
+				<td>$50-$100</td>
+			</tr>
+			<tr>
+				<td>Low</td>
+				<td>$50</td>
+			</tr>
+			<tr>
+				<td>Accepted Risk or Informational</td>
+				<td>$0</td>
+			</tr>
+		</tbody>
+	</table>
+	</dd>
+</dl>
+
+<dl class="faq faq-lagunita">
+	<dt>Vulnerability | Severity Range | Points</dt>
+	<dd>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th>Vulnerability</th>
+				<th>Severity Range</th>
+				<th>Points</th>
+			</tr>
+			<tr>
+				<td>Remote Code Execution</td>
+				<td>Critical</td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<td>SQL Injection</td>
+				<td>High - Critical</td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<td>XXE</td>
+				<td>High - Critical</td>
+				<td>500</td>
+			</tr>
+			<tr>
+				<td>XSS</td>
+				<td>Medium - Critical</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Server-Side Request Forgery</td>
+				<td>Low - Critical</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Directory Traversal - Local File Inclusion</td>
+				<td>Medium - High</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Authentication/Authorization Bypass (Broken Access Control)</td>
+				<td>Medium - High</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Privilege Escalation</td>
+				<td>Medium - High</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Insecure Direct Object Reference</td>
+				<td>Medium - Critical</td>
+				<td>300</td>
+			</tr>
+			<tr>
+				<td>Misconfiguration</td>
+				<td>Low - High</td>
+				<td>200</td>
+			</tr>
+			<tr>
+				<td>Web Cache Deception</td>
+				<td>Low - Medium</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>CORS Misconfiguration</td>
+				<td>Low - Medium</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>CRLF Injection</td>
+				<td>Low - Medium</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>Cross Site Request Forgery</td>
+				<td>Low - Medium</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>Open Redirect</td>
+				<td>Low - Medium</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Information Disclosure</td>
+				<td>Low - Medium</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Request smuggling</td>
+				<td>Low - Medium</td>
+				<td>50</td>
+			</tr>
+		</tbody>
+	</table>
+	</dd>
+</dl>
+
+<dl class="faq faq-lagunita">
+	<dt>Bonus Points</dt>
+	<dd>
+	<p>In addition to being eligible for the Bug Hunter Wizard tier of badges, reports that are received with a clear impact statement and detailed remediation recommendations will receive 100 bonus points for their submissions.</p>
+	</dd>
+</dl>
+
+<dl class="faq faq-lagunita">
+	<dt>Risk Class</dt>
+	<dd>
+	<p>Reports on systems classified as High Risk will receive the highest bounty for the vulnerabilities’ severity range.</p>
+	</dd>
+</dl>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_295" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--295 section--default">
+		<div class="container">
+							<div id="section_title_295" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Safe Harbor
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_295" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" height="130" src="/sites/default/files/images/2022/10/25/Safe-Harbor_Purple.png" style="width: 200px; padding-bottom: 20px;" /><br />
+Safe Harbor</h2>
+
+<p>When conducting vulnerability research within the terms of this program, we consider such research to be:</p>
+
+<ul>
+	<li>Authorized in accordance with the Computer Fraud and Abuse Act (CFAA) (and/or similar state laws), and we will not initiate legal or disciplinary action against you;</li>
+	<li>Exempt from the Digital Millennium Copyright Act (DMCA), and we will not bring a claim against you for circumvention of technology controls;</li>
+	<li>Exempt from restrictions in the Stanford Administrative Guide 6.2.1 that would otherwise prohibit conducting such security research, and we waive those restrictions on a limited basis for research performed pursuant to this program; and</li>
+	<li>Lawful, helpful to Stanford's cybersecurity posture, and conducted in good faith.</li>
+</ul>
+
+<p>You are expected, as always, to comply with all applicable laws. Any unauthorized activity outside the terms of this program will be subject to disciplinary and/or legal action pursuant to applicable laws and Stanford policies.</p>
+
+<p>If at any time you have concerns or are uncertain whether your security research is consistent with the terms of this program, please submit your question via the vulnerability submission form.</p>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_296" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--296 section--default">
+		<div class="container">
+							<div id="section_title_296" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Get Started
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_296" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" height="130" src="/sites/default/files/images/2022/10/25/Get-Started_Purple.png" style="width: 200px; padding-bottom: 20px;" /><br />
+Get Started</h2>
+
+<p>Out-of-scope submissions will be accepted and acted upon, but are not eligible for bounty.&nbsp; If you become aware of a vulnerability involving an out-of-scope domain, it is still appropriate to report the vulnerability via this program, and the same safe harbor provisions apply to protect those who responsibly report.</p>
+
+    </div></div>
+				
+				<p class="text-center section-url"><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=973505bc1bcd801094c0fee58d4bcb30">Submit a Vulnerability</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2604" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2604 section--default">
+		<div class="container">
+							<div id="section_title_2604" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Timeline
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2604" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2022/10/25/Timeline_2.png" style="width: 202px; height: 32px;" /><br />
+​<br />
+Timeline for Submissions</h2>
+
+<ul>
+	<li>Reports received will be reviewed once a week on Fridays</li>
+	<li>Once the report is accepted a ticket is created to pay the security researcher and will be processed by the following Friday</li>
+	<li>The leaderboard will be updated on the day the submission is triaged and accepted</li>
+</ul>
+
+<p>​<img alt="" height="1145" src="/sites/default/files/images/2022/10/25/2.png" width="2048" /></p>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_547" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--547 section--default">
+		<div class="container">
+							<div id="section_title_547" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Bug Bounty Stats
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_547" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <div class="row-fluid">
+<div class="span5 offset1 center"><i class="fa fa-bug fa-4x" aria-hidden="true"></i>
+<h2 style="color: #000; font-size: 24px; font-weight: 300;">109 submissions</h2>
+</div>
+
+<div class="span5 center"><i class="fa fa-usd fa-4x" aria-hidden="true"></i>
+<h2 style="color: #000; font-size: 24px; font-weight: 300;">$13,835 total rewards</h2>
+</div>
+</div>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_548" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--548 section--default">
+		<div class="container">
+							<div id="section_title_548" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Leaderboard
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_548" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center">Last updated May&nbsp;2024</p>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col" style="width: 50%; text-align: center; vertical-align: middle;"><font color="#2e2d29"><span style="font-size: 16px; text-transform: none;">Username</span></font></th>
+			<th scope="col" style="width: 50%; text-align: center; vertical-align: middle;"><font color="#2e2d29"><span style="font-size: 16px; text-transform: none;">Reputation Points</span></font></th>
+			<th scope="col" style="width: 50%; text-align: center; vertical-align: middle;"><font color="#2e2d29"><span style="font-size: 16px; text-transform: none;">Number of Submissions</span></font></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>hawklin</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>450</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>2</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>mccain</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>400</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>&nbsp; &nbsp; &nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>saligrama</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>400</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>zstjohn</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>400</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>&nbsp; &nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>mavlevin</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>300</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>&nbsp; &nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>akshay01</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>300</p>
+			</td>
+			<td style="text-align: center; vertical-align: middle;">
+			<p>1</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;"><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp; &nbsp;&nbsp;</span><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" />&nbsp;&nbsp;<span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">ghusman</span></td>
+			<td style="text-align: center; vertical-align: middle;">100</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;</span>&nbsp;rlama22</td>
+			<td style="text-align: center; vertical-align: middle;">50</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">&nbsp; &nbsp;&nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;</span>&nbsp;brianamb</td>
+			<td style="text-align: center; vertical-align: middle;">50</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+		</tr>
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">&nbsp; &nbsp;&nbsp;<img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="letter-spacing: 0.16px; text-align: center; width: 30px; height: 35px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;</span>&nbsp;sheamck</td>
+			<td style="text-align: center; vertical-align: middle;">50</td>
+			<td style="text-align: center; vertical-align: middle;">1</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align: center; vertical-align: middle;">&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<dl class="faq faq-lagunita">
+	<dt>Badges and What They Mean</dt>
+	<dd>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th style="width: 50%; text-align: center; vertical-align: middle;">Cardinal Tree Tier</th>
+				<th style="width: 50%; text-align: center; vertical-align: middle;">Description</th>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%201.png" style="width: 75px; height: 87px;" />&nbsp;&nbsp;<span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Cardinal Tree Tier 1</span></td>
+				<td style="width: 50%; vertical-align: middle;">This icon is given to security researchers on their first submission</td>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%202.png" style="width: 75px; height: 87px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>Cardinal Tree Tier 2</td>
+				<td style="width: 50%; vertical-align: middle;">Awarded to security researchers who submit 5+ reports</td>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Tree%20Icon%202.png" style="width: 75px; height: 87px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span><span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Cardinal Tree Tier 3</span></td>
+				<td style="width: 50%; vertical-align: middle;">Awarded to security researchers who submit 10+ reports</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th style="width: 50%; text-align: center; vertical-align: middle;">Bug Hunter Wizard Tier</th>
+				<th style="width: 50%; text-align: center; vertical-align: middle;">Description</th>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Wizard%20Icon.png" style="width: 75px; height: 88px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>Bug Wizard <span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Tier 1</span>​</td>
+				<td style="width: 50%; vertical-align: middle;">Awarded to security researchers who submit 20+ reports and provide clear impact statements with detailed remediation recommendations</td>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Wizard%20Icon_2.png" style="width: 75px; height: 87px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span>Bug Wizard Tier 2</td>
+				<td style="width: 50%; vertical-align: middle;">Awarded to security researchers who submit 30+ reports and provide clear impact statements with detailed remediation recommendations</td>
+			</tr>
+			<tr>
+				<td style="width: 50%; text-align: center; vertical-align: middle;"><img alt="" src="/sites/default/files/images/2022/10/25/Wizard%20Icon_3.png" style="width: 75px; height: 87px;" /><span style="letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">&nbsp;&nbsp;</span><span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Bug Wizard&nbsp;</span><span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Tier 3</span></td>
+				<td style="width: 50%; vertical-align: middle;">Awarded to security researchers who submit 40+ reports and provide clear impact statements with detailed remediation recommendations</td>
+			</tr>
+		</tbody>
+	</table>
+	</dd>
+</dl>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/security/bug-bounty" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

@@ -1,0 +1,264 @@
+<HTML>
+<HEAD>
+   <TITLE>Murphy Lab | Software | OMERO.searcher</TITLE>
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<META NAME="KEYWORDS" CONTENT="Robert F. Murphy, biology, biological
+sciences, Carnegie Mellon University, computational biology, bioinformatics,
+protein localization, pattern recognition, image classification, image 
+interpretation, image understanding, subcellular location, subcellular 
+location features, SLF, fluorescence microscopy, confocal microscopy, 
+endocytosis, flow cytometry, typical image, representative image, 
+image database, image similarity">
+
+[an error occurred while processing this directive]
+<META NAME="robots" CONTENT="noindex,nofollow">
+
+
+
+  <style type="text/css">
+EM { color:green; font-size:16pt; font-style:italic}
+  </style>
+</HEAD>
+
+<!--include virtual="/includes/internaltest.html" -->
+
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#118811" VLINK="#FF0000" ALINK="#0077FF">
+
+<!-- MurphyLab begin_page_table -->
+<table cellspacing=0 border=0 cellpadding=0>
+
+<!-- MurphyLab begin_top_row -->
+<tr>
+
+<!-- MurphyLab begin_spacer_column_1_top -->
+
+<td valign=top width=1 bgcolor="#000000"><br></td>
+<td width=10 bgcolor="#CCFFFF" nowrap><br></td>
+
+<!-- MurphyLab end_spacer_column_1_top -->
+
+<!-- MurphyLab begin_index_column_top -->
+
+<td valign=top width=130 nowrap bgcolor="#CCFFFF">
+<FONT face="helvetica, arial" size=-1>
+<h1>Murphy Lab</h1>
+<b><a href="http://murphylab.web.cmu.edu">Home</a></b><br>
+<b>Information</b><br>
+&nbsp;<a href="/murphylab_info.html#people">People</a><br>
+&nbsp;<a href="/murphylab_info.html#address">Addresses</a><br>
+&nbsp;<a href="/CDW/">Cytometry Development Workshop</a><br>
+&nbsp;<a href="/FCSAPI/">FCS API</a><br> 
+<p>
+<b>Research</b><br>
+&nbsp;<a href="/projects/murphylab_research.html">Projects</a><br>
+&nbsp;<a href="/murphylab_pubs.html">Publications</a><br>
+&nbsp;<a href="/software/">Software</a><br>
+&nbsp;<a href="/presentations/">Presentations</a><br>
+&nbsp;<a href="/murphylab_flow.html">Flow Cytometry</a><br>
+
+<p>
+<b>Data</b><br>
+&nbsp;<a href="/data/">Download</a><br>
+<p>
+<b>Affiliations</b><br>
+&nbsp;<a href="http://www.cmu.edu">Carnegie Mellon University</a><br>
+&nbsp;<a href="http://cbd.cmu.edu">Computational Biology Department</a><br>
+&nbsp;<a href="http://www.cbi.cmu.edu">Center for Bioimage Informatics</a><br>
+&nbsp;<a href="http://www.cmu.edu/bio">Biological Sciences Department</a><br>
+&nbsp;<a href="http://www.bme.cmu.edu">Biomedical Engineering Department</a><br>
+&nbsp;<a href="http://www.ml.cmu.edu/">Machine Learning Department</a><br>
+&nbsp;<a href="http://www.mbic.cmu.edu">MBIC</a><br>
+<p><br>
+
+[an error occurred while processing this directive]
+<hr size=1 width="70%" align="left">
+<h2>Internal</h2>
+
+<b>Information</b><br>
+&nbsp;<a href="/Internal/labfaq.html">Lab FAQ</a><br>
+&nbsp;<a href="/Internal/labtopics.html">Lab Research Topics</a><br>
+<p>
+
+<b>Services</b><br>
+&nbsp;<a href="/services/TypIX/jg_typix.html">TypIX</a><br>
+<p>
+
+<b>Web Pages</b><br>
+&nbsp;<a href="/Internal/murphylab_template.txt">Web Page
+Template</a><br>
+&nbsp;<a href="/Internal/wwwstats.html">Visitation Statistics</a><br>
+&nbsp;<a href="/Internal/links.html">Important Links</a><br>
+<p>
+
+<b>Software and Documentation</b><br>
+&nbsp;<a href="/matlab">Matlab Docs</a><br>
+&nbsp;<a href="http://remap.stc.cmu.edu/khoros">Khoros Docs</a><br>
+&nbsp;<a href="http://remap.stc.cmu.edu/tnimage">TN-Image Docs</a><br>
+&nbsp;<a href="http://murphylab.web.cmu.edu/publications/boland/index.html">Michael Boland's thesis</a><br>
+<p><br>
+<p><br>
+
+
+
+
+</font>
+</td>
+
+<!-- MurphyLab end_index_column_top -->
+
+<!-- MurphyLab begin_spacer_column_2_top -->
+
+<td width=10 bgcolor="#CCFFFF" nowrap><br></td>
+<td valign=top width=1 bgcolor="#000000"><br></td>
+<td width=10 nowrap><br></td>
+
+<!-- MurphyLab end_spacer_column_2_top -->
+
+<!-- MurphyLab begin_content_column_top -->
+
+<td valign="TOP">
+
+
+ 
+
+<!-- MurphyLab begin_content --> 
+
+<hr size=1 width="90%">
+<font face="helvetica, arial">
+<H1>Murphy Lab - Software - OMERO.searcher</H1>
+</font>
+<hr size=1 width="90%">
+<table>
+<tr>
+<td><img src="OMEROsearcherLogo.jpg" width=400></td>
+<td>   </td>
+<td><font color="red">New Local Client features!</font><br>
+<ul><li><font color="red">(1.3) Able to search multiple databases with the same feature set simultaneously
+<li>(1.3) Can match query image(s) to images at different resolutions
+<li>(1.2) Can search against your own content database using your own feature calculation code
+</ul>
+<font color="red">New Content Databases available!
+<ul>
+<li>The Cell Library 
+<li>Human Protein Atlas
+</ul>
+</font>
+</td>
+</table>
+There are two ways in which you can use <EM>OMERO.searcher</EM>.
+<table border>
+<!--<tr valign="top"><td width=34%>You can use the <EM>OMERO.searcher</EM> <B>External Search</b> page of one or more OMERO 
+databases that allow external searches, using images from your local computer 
+(the local images do not have to be in any OMERO database or in any special 
+format).  The database that you search within must have <EM>OMERO.searcher</EM> 
+installed and have enabled an External Search page (see item 3b below).  
+The only requirement is that you have a compatible web browser (all major 
+browsers are compatible) on your local computer.
+<p>The first public, externally searchable database that has been created 
+is for demonstration and testing purposes associated with a Nature Methods 
+manuscript describing <EM>OMERO.searcher</EM>.  The database contains a subset of 
+images from the RandTag project 
+(<a href="http://murphylab.cbi.cmu.edu/publications/136-garciaosuna2007.pdf">Garcia Osuna et al, 2007</a>). 
+<p>The search page is <A href="http://omepslid2.compbio.cs.cmu.edu/content_search">http://omepslid2.compbio.cs.cmu.edu/content_search</A>-->
+<td width=33%>You can run the <EM>OMERO.searcher</EM> <B>Local Client</b> on your local computer to 
+search through any OMERO database for which you have access privileges 
+(including the public externally searchable databases described above).  
+This requires that your local computer have python and various python 
+packages installed (see installation instructions for the Local Client).  
+Due to issues with python configuration, this approach is far easier to use 
+on Linux or Unix computers than on Mac OS or Windows computers.
+<dir><a href="omero.searcher.client-v1.3.tgz">Download OMERO.searcher 
+<B>Local Client</B> v1.3</a></dir>
+<dir><a href="GettingStartedWithOMEROsearcherLocalClient1.3.pdf">View the Getting Started document (PDF, 9.6MB)</a></dir>
+<dir><A href="MacOS-Installation-LocalClient-v1.3.pdf">Instructions</a> for installing necessary python packages to run <B>Local Client</b> under Mac OS.</dir>
+<P>
+<B>Local Client</B> will check for any updates to itself or to the selected content database each time it runs.  
+<P>Currently available databases are
+<ul>
+<li><B>PSLID RandTag Release 2</b> (GFP-tagged NIH 3T3 cell clones) (server name: <a href="http://lanec1web1.compbio.cs.cmu.edu/RandTag2">lanec1web1.compbio.cs.cmu.edu</a>)
+<li><B>Human Protein Atlas</B> Confocal Immunofluorescence Image (server name: <A href="http://proteinatlas.org">proteinatlas.org</a>)
+<li><B>The Cell Library</B> fluorescence microscopy images (server name: <a href="http://celllibrary.org">celllibrary.org</a>)
+<li>Images used in the <B>OMERO.searcher Nature Methods</B> article (server name: omesplid2.compbio.cs.cmu.edu)
+</ul>
+<td width=33%>You (or your system administrator) can install <EM>OMERO.searcher</EM> 
+<B>Server</B> on your local OMERO 
+database server.  This will permit you to be able to search within your 
+database.
+<dir><a href="./omero.searcher-v1.1.2.tgz">Download OMERO.searcher <B>Server</B> v1.1.2</a></dir>
+<ul>
+<li>Unzip software and follow instructions in the README file.  This will install the searcher on top of a previously installed database running OMERO 4.3.3.
+<li>You will need to ensure that the version of OMERO that you are running matches the version of <EM>OMERO.searcher</EM>.
+<li>You will have the option of setting up an External search page that will allow you (or others, if you permit) to search through your database for images that are similar to query images on their own computer (see item 1 above).
+</ul>
+</table>
+
+<h2>Archive of previous versions</h2>
+<P><a href="./omero.searcher-v1.0.zip">Download OMERO.searcher v1.0</a>
+
+<h2>Acknowledgments</h2>
+Development of <EM>OMERO.searcher</EM> has been supported by US National 
+Institutes of Health grants GM075205 (R.F. Murphy, PI), 
+EB008516 (K.W. Eliceiri, PI), and 
+GM092708 (C.M. Kane, PI), 
+and by grant 095931 from the Wellcome Trust (Jason Swedlow, PI).
+
+<!-- MurphyLab end_content -->
+
+
+</td>
+<!-- MurphyLab end_content_column_top -->
+
+</tr>
+<!-- Murphylab end_top_row -->
+
+<!-- MurphyLab begin_bottom_row -->
+<tr>
+
+<!-- MurphyLab begin_spacer_column_1_bottom -->
+
+<td valign=top width=1 bgcolor="#000000"><br></td>
+<td width=10 bgcolor="#CCFFFF" nowrap><br></td>
+
+<!-- MurphyLab end_spacer_column_1_bottom -->
+
+<!-- MurphyLab begin_index_column_bottom -->
+
+<td valign=bottom width=130 nowrap bgcolor="#CCFFFF">
+<FONT face="helvetica, arial" size=-1>
+<p>
+<p><i>Last Updated: 
+
+06 Oct 2020
+</i>
+</font>
+</td>
+
+<!-- MurphyLab end_index_column_bottom -->
+
+<!-- MurphyLab begin_spacer_column_2_bottom -->
+
+<td width=10 bgcolor="#CCFFFF" nowrap><br></td>
+<td valign=top width=1 bgcolor="#000000"><br></td>
+<td width=10 nowrap><br></td>
+
+<!-- MurphyLab end_spacer_column_2_bottom -->
+
+<!-- MurphyLab begin_content_column_bottom -->
+<td>
+<p align=right>Copyright &copy; 1996-2019 by the Murphy Lab, Computational Biology Department at Carnegie Mellon University
+</td>
+<!-- MurphyLab end_content_column_bottom -->
+
+</tr>
+<!-- MurphyLab end_bottom_row -->
+
+</table>
+<!-- MurphyLab end_page_table -->
+
+</BODY>
+
+ 
+
+</HTML>

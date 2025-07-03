@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh_tw" class="orbit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" media="all" href="/assets/frontend_extend-05005b039652ef8b79a11146fb58cd4d348a241d041509cf9c3bcf8b957ee046.css">
+<link rel="stylesheet" media="all" href="/assets/front_end-c68018fd9a6aceb4059c7815e101465ef23be8c2adce9cace6aefc2882108744.css">
+<meta property="og:title" content="國立臺灣大學資訊工程學系">
+<meta property="og:site_name" content="國立臺灣大學資訊工程學系">
+<meta property="og:url" content="/">
+  <script type="text/javascript">
+    if (self != top){
+        try{
+            if(self.location.origin != top.location.origin){
+                top.location=self.location;
+            }
+        }catch(e){
+            console.log("Cannot fetch location!")
+        }
+    }
+</script>
+<script src="/assets/jquery-2a83d06853bd343c7bfc2e5d4539814cfa934676e2948ed348311435eca862f5.js"></script>
+<script src="/assets/jquery_prefix-d998d6d813f370db2cb633a35dff1836f74b55118ee2696d247b553e90e18217.js"></script>
+<script src="/assets/jquery_ujs_custom-a76b6cd8d652c18d24ed38d1f7a4d18f51d1f594a88a0f2ade82afec33966e2b.js"></script>
+<script src="/assets/jquery.cycle2.min-ec60b272289a05b845d7613d074237d008c08a069dc283c2e4c62dfc513242db.js"></script>
+<script src="/assets/jquery.cycle2.carousel.min-3d226d0713bcf58909be7c7e753fa1eef4409eee278299adfe70ff4ea646d65f.js"></script>
+<script src="/assets/jquery.cycle2.scrollVert.min-ce8da4c3f5e336753d998c9f02e64cc8b7e3977f5f6988133faf24a44c90b427.js"></script>
+<script src="/assets/jquery.cycle2.tile.min-83b4b0c4c2604b9c9acb20199a740f4b9e83c227ae46c1a430aa67bf97ff5457.js"></script>
+<link rel="stylesheet" media="all" href="/assets/datatables.min-7446416dca719e42fb55ff5fbf69879ccebe1ab56c6bb6833e2db781eccfddf9.css">
+<script src="/assets/datatables.min-598993c579b423583458a17773ed1e86103dc54e60eae7ab6c27b426af16df6f.js"></script>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="G1wcSD0KpDT+Hj9QtEcMFSPxgxODx+WHZAYpjL7io6XmvEBc3PtDXXEwYmK3Zx81GqIFEThyL4GT52/cWdvObQ==">
+<script>
+    $.fn.dataTable.defaults.initComplete = function(settings) {
+        $(this).find('td:first-child').trigger('click');
+    };
+</script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/site/favicon/5febfa8502dcf0444e000020/logo.png">
+  <title>國立臺灣大學資訊工程學系</title>
+  <link rel="stylesheet" media="all" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="all" href="/assets/bootstrap/bootstrap.min-ec1064aba4e5b70ccf14aaae8ac59d0229fb0d95ed466a293c2f5dd994dbfd1c.css">
+  <link rel="stylesheet" media="all" href="/assets/template/template-b03f90dd187683a6c50a932433f586abde96c51bf1102aec0bb259bff424a0d9.css">
+  <link rel="stylesheet" media="all" href="/assets/template/jquery.scrolling-tabs.min-0aaa5bfc7b51e5bacb1b208e1bc8d8cf1b8daba5c234626bc7fda4be4effb5df.css">
+  <link rel="stylesheet" media="print" type="text/css" href="/assets/template/print.css">
+  <script src="/assets/plugin/modernizr-d5770395993b83f1cd01c625a62f0cc2a8f2536f7288ef3a45f2863f2e20a9c1.js"></script>
+  <script src="/assets/plugin/picturefill.min-1e1f7d4e867ad1ec3d5886ad5e69512b6692509c939a89634ffcf63ba17b6b7d.js"></script>
+  <script src="/assets/plugin/jquery.mobile.custom.min-94832de9dd3faaf354dabd20e980b49bfe549a3750d73e5855bc4104b53afe9d.js"></script>
+  <script src="/assets/bootstrap.min-18024db0d6a0bc75ca740863a3b491b7f9b9cbd080ba3ee25e22265801d0b0c9.js"></script>
+  
+  
+  <script src="/assets/plugin/jquery.cycle2.video.min-384b34504c43f5962ffa3295b0b28947fd8a4498968853be0477a5dc664bd9b9.js"></script>
+  <script src="/assets/plugin/jquery-bullseye-min-8149d6adb748bd9561e9f1fd822e59337a75d065e017c7891699d50d69414bc2.js"></script>
+  <script src="/assets/plugin/jquery.scrolling-tabs.min-2ca04680a371ceee7710b234d1e8795bf3d4247da7327300094cf74ed64829fa.js"></script>
+
+  <script src="/assets/plugin/owl.carousel.min-ec9585fb4e14679aaa65e0d62fac99d496ce23ea8052fc718d5b3fbc84525e61.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/template/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/template/owl.theme.default.min.css">
+  
+  <script src="/assets/app-cff2d877ce1819ea34d9450de6f32521dac08611133ae2210e282f8ebf6d09f1.js"></script>
+  <script src="/assets/frontend-121b87925d20c2b21764d1c5053c911976bcf14ba23128fed1904f6b7a19033d.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+<script src="/assets/frontend_extend-b857ec6a98fc62af78b47bb8860d09e02a530d88e9e4eee986b912831f676daa.js"></script>
+</head>
+<body class="page-home banner_height_setting_0 no_orbit_bar" data-module="home">
+  <link rel="stylesheet" media="all" href="/assets/fontawesome-6.2.1.min-8aec0118643d34254cb9f5c27b931239c9de8008c849c9800d8651a5da1abcb2.css">
+<link rel="stylesheet" media="all" href="/assets/fontawesome-6.2.1-fix.min-a85d2f928ef91b80968519d9fd352220353e6db2bd1a8f61f2f1c4377323c59d.css">
+<link rel="stylesheet" media="all" href="/assets/lib/jquery-ui-1.13.2/jquery-ui.min-d386f691bb1ec7d5e9b9fedde76ad61c907afdd12df63120c5e20f37164a6176.css">
+<link rel="stylesheet" media="all" href="/assets/jquery-ui-timepicker-addon-ee91708eac547223792975e0d9a9aae62127da4b28a58d40c0634927f19665f0.css">
+  <script src="/assets/lib/jquery-ui-1.13.2/jquery-ui.min-b88d0b98b7b90a20cae0fc32eaf0845ac1ffdc0e4b3176c501e353d45c975064.js"></script>
+  <script src="/assets/jquery.ui.datepicker.monthyearpicker-6126b863aa1c4b399bf657869bbc51389d83ff5101b069ff7e1d0b02793c67e1.js"></script>
+<script type="text/javascript">
+  var I18n = {};
+  Object.defineProperty(I18n,"locale",{
+    value: "zh_tw"
+  });
+  Object.defineProperty(I18n,"validLocales",{
+    value: ["zh_tw","en"]
+  });
+</script>
+  <div class="background" data-pp="100"></div>
+  
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="mobile-menu">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#layout-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar icon-bar-top"></span>
+        <span class="icon-bar icon-bar-middle"></span>
+        <span class="icon-bar icon-bar-bottom"></span>
+  </button>
+  <div class="cover"></div>
+</div>
+<header class="navbar layout-header no-print" role="navigation">
+  <div class="container">
+    <div class="header-nav">
+    <a id="accesskey_top" accesskey="U" title="accesskey top" href="#">:::</a>
+      <div id="corner2" style="color:rgb(39, 39, 39);font-family:arial;font-size:11px;text-align:right;">
+<a href="https://www.csie.ntu.edu.tw//?locale=zh_tw" title="在本視窗開啟 回首頁">回首頁</a> <span style="padding:0px 3px 2px;">|</span> <a href="http://www.ntu.edu.tw/" rel="noopener noreferrer" style="color:rgb(39, 39, 39);text-decoration-line:none;z-index:5;" target="_blank">臺灣大學 </a><span style="padding:0px 3px 2px;">|</span> <a href="https://csie.ntu.edu.tw/zh_tw/sitemap" style="color:rgb(39, 39, 39);text-decoration-line:none;z-index:5;" title="在本視窗開啟 網站導覽">網站導覽</a> <span style="padding:0px 3px 2px;">| <a href="https://www.csie.ntu.edu.tw//?locale=en" title="在本視窗開啟 ENGLISH">ENGLISH</a></span>
+</div>
+
+    </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#layout-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar icon-bar-top"></span>
+        <span class="icon-bar icon-bar-middle"></span>
+        <span class="icon-bar icon-bar-bottom"></span>
+      </button>
+	  
+	  <script>$(document).ready(function(){var url =$('.site-logo').eq(0).attr('src');if(url == "/assets/default-site-logo.png"){$('.navbar-brand').eq(0).remove();};if($('.navbar-brand').length == 2){$('.site-logo').css('height','auto')};$('.site-logo').eq(0).css('margin-right',0);$('.navbar-brand').css('padding-right',0)})</script>
+      <a title="主頁" class="navbar-brand" href="/"><h1 class="default_site_h1">
+<img class="site-logo" src="/uploads/site/site_logo/5febfa8502dcf0444e000020/%E6%88%AA%E5%9C%96_2021-02-04_%E4%B8%8B%E5%8D%885.34.40.png" alt="國立臺灣大學資訊工程學系的Logo"> <span style="display: none;">國立臺灣大學資訊工程學系</span>
+</h1></a>
+    </div>
+    <section class="header-banner" data-pp="1000"></section>
+    <div class="collapse navbar-collapse modules-menu" id="layout-navigation">
+    <a id="accesskey_menu" title="accesskey menu" accesskey="M" href="#">:::</a>
+      <ul id="main-nav" class="navbar-right navbar-nav modules-menu-level-0 nav-level-0 no-print" data-menu-level="0">
+<li>
+    <a href="/zh_tw/AboutUs/intro_0" title="關於本系" data-menu-link="true" class="dropdown-toggle" target="_self">關於本系</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/AboutUs/intro_0" title="系所簡介" data-menu-link="true" target="_self">系所簡介</a>
+        <ul class="modules-menu-level-2 nav-level-2" data-menu-level="2">
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_0" title="概況" data-menu-link="true" target="_self">概況</a>
+          </li>
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_1" title="本系宗旨" data-menu-link="true" target="_self">本系宗旨</a>
+          </li>
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_2" title="教育目標" data-menu-link="true" target="_self">教育目標</a>
+          </li>
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_3" title="核心能力" data-menu-link="true" target="_self">核心能力</a>
+          </li>
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_4" title="系史" data-menu-link="true" target="_self">系史</a>
+          </li>
+<li>
+            <a href="/zh_tw/AboutUs/About_Us/intro_5" title="重要紀事" data-menu-link="true" target="_self">重要紀事</a>
+          </li>
+</ul>
+      </li>
+<li>
+        <a href="/zh_tw/AboutUs/Honor" title="榮譽榜" data-menu-link="true" target="_self">榮譽榜</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/AboutUs/Facilities" title="系館與設備" data-menu-link="true" target="_self">系館與設備</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/AboutUs/intro3" title="聯絡資訊" data-menu-link="true" target="_self">聯絡資訊</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/AboutUs/intro4" title="交通資訊" data-menu-link="true" target="_self">交通資訊</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/AboutUs/donate1" title="捐資興學" data-menu-link="true" target="_self">捐資興學</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/lab1" title="研究發展" data-menu-link="true" class="dropdown-toggle" target="_self">研究發展</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/Research/lab1" title="研究概況與成果" data-menu-link="true" target="_self">研究概況與成果</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Research/ResearchLab" title="公用實驗室" data-menu-link="true" target="_self">公用實驗室</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Research/TeachingLab" title="研究實驗室" data-menu-link="true" target="_self">研究實驗室</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Research/donate2" title="捐資興學" data-menu-link="true" target="_self">捐資興學</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/member/Faculty" title="系所成員" data-menu-link="true" class="dropdown-toggle" target="_self">系所成員</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/member/Faculty" title="專任師資" data-menu-link="true" target="_self">專任師資</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/%E5%B0%88%E6%A1%88%E8%A8%88%E7%95%AB%E5%8A%A9%E7%90%86%E6%95%99%E6%8E%88" title="專案計畫師資" data-menu-link="true" target="_self">專案計畫師資</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/%E8%AC%9B%E5%BA%A7%E6%95%99%E6%8E%88%E3%80%81%E4%B8%AD%E7%A0%94%E9%99%A2%E9%99%A2%E5%A3%AB" title="講座教授、中研院院士" data-menu-link="true" target="_self">講座教授、中研院院士</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/%E5%AE%A2%E5%BA%A7%E6%95%99%E6%8E%88" title="客座師資" data-menu-link="true" target="_self">客座師資</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/%E5%85%BC%E4%BB%BB%E5%B8%AB%E8%B3%87" title="兼任師資" data-menu-link="true" target="_self">兼任師資</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/RetiredProfessors" title="退休教師" data-menu-link="true" target="_self">退休教師</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/member/Staff" title="行政人員" data-menu-link="true" target="_self">行政人員</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/Education/University" title="學生事務" data-menu-link="true" class="dropdown-toggle" target="_self">學生事務</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/Education/University" title="大學部" data-menu-link="true" target="_self">大學部</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Education/Announcement1" title="碩士班" data-menu-link="true" target="_self">碩士班</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Education/Announcement2" title="博士班" data-menu-link="true" target="_self">博士班</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Education/stucourse" title="課程資訊" data-menu-link="true" target="_self">課程資訊</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Education/Link2" title="常用資源連結" data-menu-link="true" target="_self">常用資源連結</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Education/donate3" title="捐資興學" data-menu-link="true" target="_self">捐資興學</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/Announcements/AllAnnouncement" title="系所公告" data-menu-link="true" class="dropdown-toggle" target="_self">系所公告</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/Announcements/AllAnnouncement" title="全系所公告" data-menu-link="true" target="_self">全系所公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement3" title="教務公告" data-menu-link="true" target="_self">教務公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Admission_News" title="招生公告" data-menu-link="true" target="_self">招生公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement5" title="聘任公告" data-menu-link="true" target="_self">聘任公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement4" title="行政公告(教職員工)" data-menu-link="true" target="_self">行政公告(教職員工)</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement6" title="行政公告(學生)" data-menu-link="true" target="_self">行政公告(學生)</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement7" title="專題討論演講公告" data-menu-link="true" target="_self">專題討論演講公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement9" title="活動訊息" data-menu-link="true" target="_self">活動訊息</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/Announcement10" title="企業徵才" data-menu-link="true" target="_self">企業徵才</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Announcements/11" title="獎學金" data-menu-link="true" target="_self">獎學金</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/Announcements/Announcement11" title="招生資訊" data-menu-link="true" class="dropdown-toggle" target="_self">招生資訊</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/Admission/Announcement11" title="招生公告" data-menu-link="true" target="_self">招生公告</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Admission/highschool" title="高中生專區" data-menu-link="true" target="_self">高中生專區</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Admission/Announcement12" title="大學部招生" data-menu-link="true" target="_self">大學部招生</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Admission/Announcement13" title="碩士班招生" data-menu-link="true" target="_self">碩士班招生</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Admission/Announcement14" title="博士班招生" data-menu-link="true" target="_self">博士班招生</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Admission/admiss1" title="訓練班" data-menu-link="true" target="_self">訓練班</a>
+        
+      </li>
+</ul>
+  </li>
+<li>
+    <a href="/zh_tw/Alumni/Alumni2" title="系友專區" data-menu-link="true" class="dropdown-toggle" target="_self">系友專區</a>
+    <ul class="modules-menu-level-1 nav-level-1" data-menu-level="1">
+<li>
+        <a href="/zh_tw/Alumni/Alumni2" title="系友會公告" data-menu-link="true" target="_self">系友會公告</a>
+        
+      </li>
+<li>
+        <a href="https://www.facebook.com/groups/NTU.CSIE.AlumniClub/" title="系友會粉絲頁" data-menu-link="true" target="_blank">系友會粉絲頁</a>
+        
+      </li>
+<li>
+        <a href="/zh_tw/Alumni/donate4" title="捐資興學" data-menu-link="true" target="_self">捐資興學</a>
+        
+      </li>
+</ul>
+  </li>
+</ul>
+    </div>
+  </div>
+</header>
+
+
+  <section class="layout-slide no-print single-child-datapp" data-pp="300"></section>
+  <div class="layout-content">
+  <a id="accesskey_content" accesskey="C" href="/zh_tw/accesskey" title="Content">:::</a>
+    <div class="layout-content-inner container">
+      <section class="body-banner" data-pp="6"><div class="w-ba-banner ba-banner-widget-3" data-subpart-id="6036107402dcf005be000d04">
+  <div class="w-ba-banner__wrap  cycle-slideshow" data-list="images" data-level="0" data-cycle-slides=".w-ba-banner__slide" data-cycle-log="false" data-cycle-auto-height="0" data-cycle-speed="500" data-cycle-timeout="5000" data-cycle-fx="fade" data-cycle-pager=".banner_caption_6036107402dcf005be000d04" data-pager-template="&lt;li&gt;&lt;a&gt;&lt;/a&gt;&lt;/li&gt;" data-pager-active-class="active-slide" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz">
+    <div class="w-ba-banner__slide active" data-link="" data-cycle-title="" data-cycle-desc="" data-overlay-template="&lt;h3&gt;&lt;/h3&gt;" data-target="" data-category="" data-tags="">
+          <a href="" target="" title="Banner image">
+              <img class="w-ba-banner__image banner-responsive" src="/uploads/banner_image/file/6036104102dcf005be000cfe/logo2.jpg" alt="Banner image">
+          </a>
+    </div>
+  </div>
+  <ul class="w-ba-banner__pager-3 banner-pager banner_caption_6036107402dcf005be000d04"></ul>
+	<ul class="controlplay">
+<a class="resume-slide" title="繼續播放"><i></i></a><a class="pause-slide" title="暫停播放"><i></i></a>
+</ul>
+	<ul class="button-mid">
+		<button class="prev-button" title="上一張"></button>
+		<button class="next-button" title="下一張"></button>
+	</ul>
+</div>
+<script>
+	var flag = 1;
+	$('.pause-slide').click(function(){
+		$(this).parent("ul").parent('.w-ba-banner').find(".cycle-slideshow").cycle('pause');
+	});
+	$('.resume-slide').click(function(){
+		$(this).parent("ul").parent('.w-ba-banner').find(".cycle-slideshow").cycle('resume');
+	});
+	$('.next-button').off('click').on('click',function(){
+		$(this).parent("ul").parent('.w-ba-banner').find(".cycle-slideshow").cycle("next");
+		
+	})
+	$('.prev-button').off('click').on('click',function(){
+		$(this).parent("ul").parent('.w-ba-banner').find(".cycle-slideshow").cycle("prev");
+	})
+</script><div data-subpart-id="640615ce08911a50d7b8c15f">
+<div style="height:1.5em;"> </div>
+</div></section>
+      <div class="row">
+      <section class="layout-content-box col-sm-8" data-pp="7"></section>
+      <section class="layout-content-box col-sm-4" data-pp="2"></section>
+      </div>
+      <div class="row">
+      <section class="layout-content-box col-sm-4" data-pp="4"></section>
+      <section class="layout-content-box col-sm-8" data-pp="3"></section>
+      </div>
+      <div class="column row">
+      <div class="two-column col-sm-6" data-pp="11"></div>
+      <div class="two-column col-sm-6" data-pp="12"></div>
+      <div class="three-column col-sm-4" data-pp="14"><div data-subpart-id="641bbdbf08911ae2974439e9">
+<h3>
+<strong><span style="font-size:0.750em;"><span style="font-family:微軟正黑體;">   歡迎光臨 臺大資訊系暨研究所</span></span></strong><br>
+<br>
+<img alt="臺灣大學資訊系" height="147" src="/uploads/asset/data/6426969408911aa4553bc4fe/1_6cf97d47.jpg" title="臺灣大學資訊系" width="283">
+</h3>
+<span style="font-size:0.750em;"><a href="https://www.inm.ntu.edu.tw" title="在本視窗開啟 臺灣大學資訊網路與多媒體研究所">臺灣大學資訊網路與多媒體研究所</a><br>
+<br>
+<a href="https://youtu.be/Mv3PCCLQmT8" title="在本視窗開啟 臺灣大學電機資訊學院簡介影片">臺灣大學電機資訊學院簡介影片</a><br>
+<br>
+<a href="https://train.csie.ntu.edu.tw/train/" title="在本視窗開啟 資訊系統訓練班">資訊系統訓練班</a><br>
+<br>
+<a href="https://www.csie.ntu.edu.tw/zh_tw/faculty_recruiting" title="在本視窗開啟 資訊系統訓練班">【專任教師徵聘</a> <span style="font-size:0.750em;"><span style="font-size:0.750em;"><a href="https://www.csie.ntu.edu.tw/zh_tw/faculty_recruiting" title="在本視窗開啟 資訊系統訓練班">(2025)</a></span></span><a href="https://www.csie.ntu.edu.tw/zh_tw/faculty_recruiting" title="在本視窗開啟 資訊系統訓練班">】</a><br>
+<br>
+ </span>
+</div></div>
+      <div class="three-column col-sm-4" data-pp="15">
+        <script style="display:none">
+          $(document).ready(function(){
+            $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] .w-annc__more").text("更多→");
+          })
+        </script>
+      
+        <script style="display:none">
+          $(document).ready(function(){
+            var read_more_position = 5;
+            var read_more_block = $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] .w-annc__more");
+            if(read_more_position == 5){
+              read_more_block.css('display', 'none');
+            }else{
+              if(read_more_position == 1 || read_more_position == 2){
+                read_more_block.addClass("pull-left");
+              }else{
+                read_more_block.addClass("pull-right");
+              }
+              if(read_more_position == 1 || read_more_position == 3){
+                var first_element = $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] > *:eq(0)");
+                var div_clearfix = $('<div class="clearfix"></div>')
+                if(first_element.height() == 0){
+                  read_more_block.appendTo(div_clearfix);
+                }else{
+                  div_clearfix = read_more_block;
+                }
+                first_element.before(div_clearfix);
+                var annc_title = $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] .w-annc__widget-title").eq(0);
+                if(annc_title.length != 0){
+                  read_more_block.appendTo("[data-subpart-id=\"60360ef702dcf005be000ce7\"] .w-annc__widget-title:eq(0)");
+                }
+              }else{
+                var div_clearfix = $('<div class="clearfix"></div>');
+                read_more_block.appendTo(div_clearfix);
+                $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] > *:eq(-1)").after(div_clearfix);
+              }
+            }
+          })
+        </script>
+      <div class="w-annc  widget-announcement-11" data-subpart-id="60360ef702dcf005be000ce7">
+  <h3 class="w-annc__widget-title">
+    <span>最新消息</span>
+  </h3>
+  <ul class="w-annc__list" data-level="0" data-list="announcements">
+    <li class="w-annc__item  row" data-category="招生公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-29</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/114%E5%AD%B8%E5%B9%B4%E5%BA%A6%E5%8D%9A%E5%A3%AB%E7%8F%AD%E5%85%A5%E5%AD%B8%E8%80%83%E5%8F%A3%E8%A9%A6%E5%90%8D%E5%96%AE%E6%9A%A8%E6%99%82%E9%96%93%E8%A1%A8-%5B%E6%9C%AC%E6%A2%AF%E6%AC%A1%E9%80%95%E5%8D%9A%E7%94%B3%E8%AB%8B%E4%B8%8D%E5%A2%9E%E5%8A%A0%E5%8F%A3%E8%A9%A6%5D-27410273" title="114學年度博士班入學考口試名單暨時間表 [本梯次逕博申請不增加口試]">114學年度博士班入學考口試名單暨時間表 [本梯次逕博申請不增加口試]</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="招生公告" data-tags="['65e66e5e08911a0875b76293']">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-25</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/-%E5%AD%B8%E5%A3%AB%E7%8F%AD-114%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%87%BA%E7%81%A3%E5%A4%A7%E5%AD%B8%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E5%AD%B8%E7%B3%BB%E5%AD%B8%E5%A3%AB%E7%8F%AD%E7%94%B3%E8%AB%8B%E5%85%A5%E5%AD%B8%E7%AC%AC%E4%BA%8C%E9%9A%8E%E6%AE%B5%E9%87%8D%E8%A6%81%E4%BA%8B%E9%A0%85-%E5%90%AB%E5%80%8B%E4%BA%BA%E8%B3%87%E6%96%99%E8%A1%A8%E9%80%A3%E7%B5%90-67946121" title="【學士班】114學年度臺灣大學資訊工程學系學士班申請入學第二階段重要事項(含個人資料表連結)">【學士班】114學年度臺灣大學資訊工程學系學士班申請入學第二階段重要事項(含個人資料表連結)</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="全系所公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-24</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/-%E7%A0%94%E7%A9%B6%E6%89%80-113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC2%E5%AD%B8%E6%9C%9F%E5%AD%B8%E4%BD%8D%E8%80%83%E8%A9%A6%E7%94%B3%E8%AB%8B%E6%9B%B8-myNTU-%E8%AB%8B%E6%96%BC4-30%E5%89%8D%E6%8F%90%E4%BA%A4-47900776" title="【研究所】113學年度第2學期學位考試申請書(myNTU)請於4/30前提交">【研究所】113學年度第2學期學位考試申請書(myNTU)請於4/30前提交</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="行政公告(學生)" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-08</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/113%E5%AD%B8%E5%B9%B4%E5%BA%A6-%E8%B3%87%E8%A8%8A%E5%AD%B8%E7%BE%A4%E7%95%A2%E6%A5%AD%E5%85%B8%E7%A6%AE-%E5%AD%B8%E7%94%9F%E5%87%BA%E5%B8%AD%E8%AA%BF%E6%9F%A5-%E5%8D%B3%E6%97%A5%E8%B5%B7%E8%87%B34-25-8866879" title="113學年度 資訊學群畢業典禮 學生出席調查(即日起至4/25)"><span style="font-family:新細明體,serif"><span style='font-family:"Times New Roman",serif'>113</span>學年度 資訊學群畢業典禮 學生出席調查</span><span style="font-family:Times New Roman,serif">(即日起至4/25)</span><span style="font-family:微軟正黑體,sans-serif"><span style="font-family:新細明體,serif"><span style='font-family:"微軟正黑體",sans-serif'></span></span></span></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="全系所公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-03-31</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E9%9B%BB%E6%A9%9F%E8%B3%87%E8%A8%8A%E5%AD%B8%E9%99%A2%E8%B3%87%E8%A8%8A%E5%AD%B8%E7%BE%A4%E7%95%A2%E6%A5%AD%E5%85%B8%E7%A6%AE%E9%82%80%E8%AB%8B%E5%87%BD-69802327" title="113學年度電機資訊學院資訊學群畢業典禮邀請函">113學年度電機資訊學院資訊學群畢業典禮邀請函</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="行政公告(學生)" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-02-21</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          
+            <span class="w-annc__status label status status-hot">熱門</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%95%A2%E6%A5%AD%E7%94%9F%E5%80%9F%E7%94%A8%E5%AD%B8%E4%BD%8D%E6%9C%8D%E4%BA%8B%E5%AE%9C-64506427" title="113學年度畢業生借用學位服事宜">113學年度畢業生借用學位服事宜</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="行政公告(學生)" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2024-08-28</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/-%E7%A0%94%E7%A9%B6%E6%89%80-113-2%E5%AD%B8%E6%9C%9F-%E7%A2%A9%E5%A3%AB%E7%8F%AD%E9%9D%9E%E6%9C%AC%E7%A7%91%E7%B3%BB%E8%A3%9C%E4%BF%AE%E5%AD%B8%E7%A7%91-%E5%AF%A9%E6%A0%B8%E7%94%B3%E8%AB%8B-%E5%8D%B3%E6%97%A5%E8%B5%B7%E8%87%B32-20%E6%AD%A2-82605715" title="【研究所】113-2學期 碩士班非本科系補修學科 審核申請 (即日起至2/20止)">【研究所】113-2學期 碩士班非本科系補修學科 審核申請 (即日起至2/20止)</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="行政公告(學生)" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2022-08-16</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/more_announcement/-%E7%A0%94%E7%A9%B6%E6%89%80-%E9%87%8D%E8%A4%87%E4%BF%AE%E7%BF%92%E5%90%8D%E7%A8%B1%E7%9B%B8%E5%90%8C%E4%B9%8B%E7%A7%91%E7%9B%AE%E4%BE%9D%E5%AD%B8%E5%89%87%E4%B8%8D%E8%A8%88%E5%85%A5%E7%95%A2%E6%A5%AD%E5%AD%B8%E5%88%86-16252367" title="【研究所】重複修習名稱相同之科目依學則不計入畢業學分">【研究所】重複修習名稱相同之科目依學則不計入畢業學分</a>
+        </h4>
+    </li>
+  </ul>
+  <div class="w-annc__more-wrap clearfix">
+    <a class="w-annc__more btn btn-primary pull-right" href="/zh_tw/more_announcement?category%5B%5D=601bbf0802dcf0360b000001&amp;category%5B%5D=601bbf0802dcf0360b000002&amp;category%5B%5D=601bbf0802dcf0360b000003&amp;category%5B%5D=601bbf0902dcf0360b000005&amp;category%5B%5D=601bbf0902dcf0360b000009&amp;category%5B%5D=601bbf0902dcf0360b00000a&amp;category%5B%5D=601bbf0902dcf0360b00000b&amp;tags%5B%5D=6063371402dcf02e67000001&amp;tags%5B%5D=60634fab02dcf02eee0000bc">MORE</a>
+  </div>
+</div>
+
+      <script style="display:none">
+        $("[data-subpart-id=\"60360ef702dcf005be000ce7\"] .w-annc__more").attr("href","/zh_tw/more_announcement?category%5B%5D=601bbf0802dcf0360b000001&category%5B%5D=601bbf0802dcf0360b000002&category%5B%5D=601bbf0802dcf0360b000003&category%5B%5D=601bbf0902dcf0360b000005&category%5B%5D=601bbf0902dcf0360b000009&category%5B%5D=601bbf0902dcf0360b00000a&category%5B%5D=601bbf0902dcf0360b00000b&tags%5B%5D=6063371402dcf02e67000001&tags%5B%5D=60634fab02dcf02eee0000bc");
+      </script>
+      <div data-subpart-id="641d4cf908911a15fc312746">
+<div class="w-annc__more-wrap clearfix"><a class="w-annc__more btn btn-primary pull-right" href="https://csie.ntu.edu.tw/zh_tw/Announcements/AllAnnouncement" title="MORE(在本視窗開啟)">更多</a></div>
+</div>
+</div>
+      <div class="three-column col-sm-4" data-pp="13">
+        <script style="display:none">
+          $(document).ready(function(){
+            $("[data-subpart-id=\"60360f5602dcf005be000cee\"] .w-annc__more").text("更多→");
+          })
+        </script>
+      
+        <script style="display:none">
+          $(document).ready(function(){
+            var read_more_position = 5;
+            var read_more_block = $("[data-subpart-id=\"60360f5602dcf005be000cee\"] .w-annc__more");
+            if(read_more_position == 5){
+              read_more_block.css('display', 'none');
+            }else{
+              if(read_more_position == 1 || read_more_position == 2){
+                read_more_block.addClass("pull-left");
+              }else{
+                read_more_block.addClass("pull-right");
+              }
+              if(read_more_position == 1 || read_more_position == 3){
+                var first_element = $("[data-subpart-id=\"60360f5602dcf005be000cee\"] > *:eq(0)");
+                var div_clearfix = $('<div class="clearfix"></div>')
+                if(first_element.height() == 0){
+                  read_more_block.appendTo(div_clearfix);
+                }else{
+                  div_clearfix = read_more_block;
+                }
+                first_element.before(div_clearfix);
+                var annc_title = $("[data-subpart-id=\"60360f5602dcf005be000cee\"] .w-annc__widget-title").eq(0);
+                if(annc_title.length != 0){
+                  read_more_block.appendTo("[data-subpart-id=\"60360f5602dcf005be000cee\"] .w-annc__widget-title:eq(0)");
+                }
+              }else{
+                var div_clearfix = $('<div class="clearfix"></div>');
+                read_more_block.appendTo(div_clearfix);
+                $("[data-subpart-id=\"60360f5602dcf005be000cee\"] > *:eq(-1)").after(div_clearfix);
+              }
+            }
+          })
+        </script>
+      <div class="w-annc  widget-announcement-11" data-subpart-id="60360f5602dcf005be000cee">
+  <h3 class="w-annc__widget-title">
+    <span>演講公告（含專題及非專題演講）</span>
+  </h3>
+  <ul class="w-annc__list" data-level="0" data-list="announcements">
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-02-21</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/113%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC2%E5%AD%B8%E6%9C%9F-%5B%E5%B0%88%E9%A1%8C%E8%A8%8E%E8%AB%96%5D-%E8%AA%B2%E7%A8%8B%E5%85%AC%E5%91%8A%EF%BC%88Seminar-Info%EF%BC%89-15981087" title="113學年度第2學期 [專題討論] 課程公告（Seminar Info）"><strong>113學年度第2學期 [專題討論] 課程公告（Seminar Info）</strong></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2023-03-31</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1">
+            <span class="w-annc__status label status status-top">重要</span>
+          </span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/%E2%98%85Graduate-Seminars-Calendar-45509131" title="★Graduate Seminars Calendar">★Graduate Seminars Calendar</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-29</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-05-16-%E8%81%AF%E7%99%BC%E7%A7%91%E6%8A%80-X-Hahow-%E5%A5%BD%E5%AD%B8%E6%A0%A1-%E5%A4%9A%E5%85%83%E8%B7%A8%E5%9F%9F%E6%A0%A1%E5%9C%92%E8%AC%9B%E5%BA%A7-%C2%A0%E7%8D%A8%E8%87%AA%E5%8D%87%E7%B4%9A%E7%9A%84-S-%E7%B4%9A%E6%95%99%E6%8E%88%EF%BD%9C%E5%BE%9E%E8%AA%B2%E5%A0%82%E5%88%B0%E4%B8%96%E7%95%8C%E8%88%9E%E5%8F%B0%E7%9A%84%E4%BA%BA%E7%94%9F%E5%9C%B0%E5%9C%96-6034113" title="【2025-05-16】【聯發科技 X Hahow 好學校】多元跨域校園講座 / 獨自升級的 S 級教授｜從課堂到世界舞台的人生地圖"><span style="font-family:Times New Roman"><strong>【2025-05-16】</strong><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style='font-family:"微軟正黑體",sans-serif'><span style="color:#222222">【聯發科技 X Hahow 好學校】多元跨域校園講座 / <span style="font-family:Calibri,sans-serif"><span style='font-family:"微軟正黑體",sans-serif'>獨自升級的</span><span style='font-family:"Times New Roman",serif'> S </span><span style='font-family:"微軟正黑體",sans-serif'>級教授｜從課堂到世界舞台的人生地圖</span></span></span></span></span></span></span></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-29</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-05-02-%E9%AB%98%E4%BD%A9%E7%8F%8A%E6%95%99%E6%8E%88-%E4%B8%AD%E5%A4%AE%E8%AD%A6%E5%AF%9F%E5%A4%A7%E5%AD%B8-%E6%AD%90%E7%9B%9F%E7%A7%91%E6%8A%80%E7%99%BC%E5%B1%95%E6%88%B0%E7%95%A5%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%B3%95%E6%A1%88-31126106" title="【2025-05-02】高佩珊教授/ 中央警察大學 / 歐盟科技發展戰略與人工智慧法案"><span style="font-family:Times New Roman"><strong>【2025-05-02】</strong></span>高佩珊教授/ 中央警察大學 / 歐盟科技發展戰略與人工智慧法案</a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="非專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-25</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-04-29-Prof-Younghyun-Kim-Purdue-University-%C2%A0Beyond-Approximate-Computing-Quality-Scalability-for-Low-Power-Embedded-Systems-and-Machine-Learning-3857554" title="【2025-04-29】Prof. Younghyun Kim / Purdue University / Beyond Approximate Computing: Quality-Scalability for Low-Power Embedded Systems and Machine Learning"><span style="font-family:Times New Roman"><strong>【2025-04-29】</strong></span><span style="font-family:Times New Roman">Prof. Younghyun Kim / Purdue University / Beyond Approximate Computing: Quality-Scalability for Low-Power Embedded Systems and Machine Learning</span></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-24</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-05-02-%E5%AE%8B%E6%8C%AF%E8%8F%AF%E5%8D%9A%E5%A3%AB-%E5%BB%A3%E9%81%94%E9%9B%BB%E8%85%A6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E8%88%87%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81%E7%A0%94%E7%99%BC%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB-94018396" title="【2025-05-02】宋振華博士 / 廣達電腦 / 人工智慧與醫療產品研發經驗分享"><span style="font-family:Times New Roman"><strong>【2025-05-02】</strong></span><span style="font-family:微軟正黑體">宋振華博士 / 廣達電腦 / 人工智慧與醫療產品研發經驗分享</span></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-21</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-05-09-Prof-Paul-Taele-UAAT-Designing-Pen-based-Intelligent-Tutoring-Systems-for-Character-Writing-Mastery-in-Mandarin-Chinese-Foreign-Language-Study-35548095" title="【2025-05-09】Prof. Paul Taele / UAAT / Designing Pen-based Intelligent Tutoring Systems for Character Writing Mastery in Mandarin Chinese Foreign Language Study"><span style="font-family:Times New Roman"><strong>【2025-05-09】</strong></span><span style="font-family:Times New Roman">Prof. Paul Taele / UAAT / Designing Pen-based Intelligent Tutoring Systems for Character Writing Mastery in Mandarin Chinese Foreign Language Study</span></a>
+        </h4>
+    </li>
+  
+    <li class="w-annc__item  row" data-category="專題討論演講公告" data-tags="[]">
+        <span class="w-annc__postdate-wrap" date-format="%Y-%m-%d">
+           
+          <span class="w-annc__postdate"> 2025-04-16</span>
+        </span>
+        <h4 class="w-annc__entry-title">
+          <span class="w-annc__status-wrap" data-list="statuses" data-level="1"></span>
+          <a class="w-annc__title" href="/zh_tw/Announcements/AllAnnouncement/-2025-04-21-Prof-Hussam-Amrouch-%C2%A0-%C2%A0TUM-Journey-with-Brain-inspired-Hyperdimensional-In-Memory-Computing-98572537" title="【2025-04-21】Prof. Hussam Amrouch  /  TUM / Journey with Brain-inspired Hyperdimensional In-Memory Computing"><span style="font-family:Times New Roman"><strong>【2025-04-21】</strong></span><span style="font-family:Times New Roman">Prof. Hussam Amrouch  /  TUM / Journey with Brain-inspired Hyperdimensional In-Memory Computing</span></a>
+        </h4>
+    </li>
+  </ul>
+  <div class="w-annc__more-wrap clearfix">
+    <a class="w-annc__more btn btn-primary pull-right" href="/zh_tw/Announcements/AllAnnouncement?category%5B%5D=601bbf0902dcf0360b000006&amp;category%5B%5D=601bbf0902dcf0360b000007&amp;tags%5B%5D=all">MORE</a>
+  </div>
+</div>
+
+      <script style="display:none">
+        $("[data-subpart-id=\"60360f5602dcf005be000cee\"] .w-annc__more").attr("href","/zh_tw/Announcements/AllAnnouncement?category%5B%5D=601bbf0902dcf0360b000006&category%5B%5D=601bbf0902dcf0360b000007&tags%5B%5D=all");
+      </script>
+      <div data-subpart-id="641d4cd408911a15fc31273d">
+<div class="w-annc__more-wrap clearfix"><a class="w-annc__more btn btn-primary pull-right" href="https://csie.ntu.edu.tw/zh_tw/Announcements/Announcement7" title="MORE(在本視窗開啟)">更多</a></div>
+</div>
+</div>
+      </div>
+      <section class="extra-box col-sm-12" data-pp="5"></section>
+    </div>
+  
+    <div class="layout-content-box2 container">
+    <section class="body-banner" data-pp="8"></section>
+    <div class="row">
+      <section class="layout-content-box col-sm-8" data-pp="9"></section>
+      <section class="layout-content-box col-sm-4" data-pp="10"></section>
+    </div>
+    <div class="row">
+      <section class="layout-content-box col-sm-4" data-pp="16"></section>
+      <section class="layout-content-box col-sm-8" data-pp="17"></section>
+    </div>
+    <div class="column row">
+    <div class="two-column col-sm-6" data-pp="18"></div>
+    <div class="two-column col-sm-6" data-pp="19"></div>
+    <div class="three-column col-sm-4" data-pp="20"></div>
+    <div class="three-column col-sm-4" data-pp="21"></div>
+    <div class="three-column col-sm-4" data-pp="22"></div>
+    </div>
+    <section class="extra-box col-sm-12" data-pp="23"></section>
+    </div>
+  </div>
+  
+<footer class="layout-footer no-print">
+  <div class="container layout-footer-inner">
+      <div class="layout-footer-content">
+<p style="text-align: center;"><br>
+本網站著作權屬於國立臺灣大學 資訊工程學系 | 電話：886-2-33664888 | 傳真：886-2-23628167。</p>
+
+<p style="text-align: center;">地址：106319 臺北市大安區羅斯福路四段一號 資訊工程德田館 | E-Mail：<a href="mailto:contact@csie.ntu.edu.tw">contact@csie.ntu.edu.tw</a></p>
+</div>
+      <div class="footer-counter">
+<a href="https://ruling.digital/"><img src="/assets/ruling_logo.png" alt="奧博科技"></a>造訪人次 : 21383668</div>
+      <div class="footer-updated-date">最後更新日期 : <span class="last-updated-date" date-format="%Y-%m-%d %H:%M"> 2025-05-05 15:20</span>
+</div>
+  </div>
+</footer>
+
+</body>
+</html>

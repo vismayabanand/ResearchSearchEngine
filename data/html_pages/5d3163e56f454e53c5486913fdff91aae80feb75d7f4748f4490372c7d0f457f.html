@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/service/phishingawareness" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Phishing Awareness Program | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xKroXt1_E9JqHuY-bQMoAn2rt14MHBu295U_c41vhNk.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/28814","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJx1kFGOwyAMRC9EwsdKex3kEJeQBYxs07S3X7SqVJF0fyxm3mhkDCKoLpYdvRJbLzJXjkUNXIFERXfEFf-DMVemO7pbfKCcQ_unzEKkogzVLcAcyd6oKBwolNF9X3FItECaRJ8plnDl3f350JpRBAKKO7a-wpULNfboBIq4L-OJ0XrKlQoWlfkcn6aMpZlAFBI6hWBDH2c9ww6P0cymAkPoTZvYlVuFNL-duZXalhRlw9WIQrkRr65Fte8F_FpGNN5rQKdbDWz88IheYurCyFMUs11A0HTtBIH9Zt_Pl8v32OsgIavYq-V2MfeIh9i_OWdaW8JfPYX8Hg","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-28814 path-service-phishingawareness path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/Phishing-Awareness-Program-Banner-v4.jpg?itok=3hkZM4Jw); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Phishing Awareness Program</span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p>Learn to recognize malicious emails</p>
+</div>
+      
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-0a3f991b03ad0965c8c5b75aed3eb879b09377e929b2cf8c0ec0cf1772bbdeb6">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_2999" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2999 section--default">
+		<div class="container">
+						<div id="section_content_2999" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <div style="max-width: 900px; margin: 0 auto -6rem auto;">
+<p class="center" style="font-size: 1.2rem;">The Phishing Awareness Program promotes awareness, education, and safety concerning phishing attacks. The goal of the program&nbsp;is&nbsp;to help our Stanford community protect themselves and the university by learning to recognize malicious emails.&nbsp;</p>
+</div>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2035" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2035 section--default">
+		<div class="container">
+							<div id="section_title_2035" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	How the program works
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2035" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center"><span style="letter-spacing: 0.16px; text-align: center;">The Phishing Awareness Program has&nbsp;three main aspects: phishing simulation emails, awareness communications, and training opportunities.</span></p>
+
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2032"  class="paragraph paragraph--card paragraph-id--2032 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-envelope fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Phishing simulation emails</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>The program periodically sends an email to participating audiences&nbsp;that resembles a phishing message.</p>
+
+<p>This method is designed to create a safe, educational environment for a recipient to practice phishing email identification with no penalty to them if a link is clicked.&nbsp;<span style="letter-spacing: 0.01em;">Individual results will never be reported.</span></p>
+
+<p>&nbsp;</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2033"  class="paragraph paragraph--card paragraph-id--2033 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-info-circle fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Awareness communications</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>Ongoing awareness resources and communications by the Phishing Awareness Program are designed to keep you in the know.</p>
+
+<ul dir="ltr">
+	<li><a href="/guide/stay-safe-from-phishing">Stay Stay Safe From Phishing Scams</a></li>
+	<li><a href="/emailcalendar/phishing">Anatomy of a Phishing Email</a></li>
+	<li><a href="/phishing">Recent Examples of Phishing</a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2034"  class="paragraph paragraph--card paragraph-id--2034 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-book fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item"> Training opportunities</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>A variety of training courses offer&nbsp;you opportunities to learn more.</p>
+
+<ul>
+	<li><a href="http://starsexpress.stanford.edu/index.html?ref=LM_SS_LEARNING.LM_BROWSE_LEARNER.GBL&amp;type=COURSE&amp;code=ISO-3000">Advanced Spear Phishing (ISO-3000)</a></li>
+	<li><a href="http://starsexpress.stanford.edu/index.html?ref=LM_SS_LEARNING.LM_BROWSE_LEARNER.GBL&amp;type=COURSE&amp;code=ISO-3001">Business Email Compromise Scams (ISO-3001)</a></li>
+	<li><a href="http://starsexpress.stanford.edu/index.html?ref=LM_SS_LEARNING.LM_BROWSE_LEARNER.GBL&amp;type=COURSE&amp;code=ISO-3015">Spear Phishing (ISO-3015) </a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3000" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--3000 section--default">
+		<div class="container">
+							<div id="section_title_3000" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Use the infographic for quick guidance
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_3000" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center">Bookmark, download, or print this infographic for an easy reminder on why and how to stay safe:</p>
+
+<figure style="text-align: center;"><a href="/service/phishingawareness/infographic" style="border: none;"><img alt="phishing infographic - details below" src="/sites/default/files/images/2024/03/15/Phishing-Infographic-rev03-15-24.png" style="width: 250px;" /></a> <figcaption class="sr-only">
+<h2>Phishing: what you need to know.</h2>
+
+<h3>Scammers are after your:</h3>
+
+<ul>
+	<li>Passwords</li>
+	<li>Financial info</li>
+	<li>Identity</li>
+	<li>Money</li>
+</ul>
+
+<h3>Why do we fall for these scams?</h3>
+
+<ul>
+	<li>Urgency</li>
+	<li>Desire to please</li>
+	<li>Greed</li>
+	<li>Curiosity</li>
+	<li>Complacency</li>
+	<li>Fear</li>
+</ul>
+
+<h3>Probability that a phishing message succeeds: 1 out of 10!</h3>
+
+<h3>Watch out for:</h3>
+
+<ul>
+	<li>Spelling and grammar errors</li>
+	<li>Sender address</li>
+	<li>Things that sound too good to be true</li>
+</ul>
+
+<h3>Beware of unsolicited messages:</h3>
+
+<ul>
+	<li>Attachments</li>
+	<li>Links</li>
+	<li>Login pages</li>
+</ul>
+
+<h3>If you see something, say something!</h3>
+</figcaption><br />
+<span class="caption">Click the image to see full-size version</span></figure>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2036" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--2036 section--default">
+		<div class="container">
+							<div id="section_title_2036" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	What to expect with the program emails
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2036" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p style="text-align:center;">Below are the types of emails you can expect us to send or not to send through the Phishing Awareness Program.</p>
+
+<table class="table table-striped" style="letter-spacing: 0.01em;">
+	<tbody>
+		<tr>
+			<th style="width: 70%;"><span style="font-size: 16px;">Email themes</span></th>
+			<th style="width: 30%;"><span style="font-size: 16px;">Phishing awareness program​</span></th>
+		</tr>
+		<tr>
+			<td>​<span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">Holiday and calendar events (Halloween, tax day, etc.)</span></td>
+			<td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td>
+		</tr>
+		<tr>
+			<td>Usage of the Stanford name and references</td>
+			<td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td>
+		</tr>
+		<tr>
+			<td>Delivery services&nbsp;</td>
+			<td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td>
+		</tr>
+		<tr>
+			<td>Public safety and pandemic awareness</td>
+			<td class="center"><span class="element-invisible">Not Supported</span><i class="fa fa-times-circle fa-2x"></i></td>
+		</tr>
+		<tr>
+			<td>Environmental disasters</td>
+			<td class="center"><span class="element-invisible">Not Supported</span><i class="fa fa-times-circle fa-2x"></i></td>
+		</tr>
+		<tr>
+			<td>Actual Stanford organizations, departments, and people</td>
+			<td class="center"><span class="element-invisible">Not Supported</span><i class="fa fa-times-circle fa-2x"></i></td>
+		</tr>
+	</tbody>
+</table>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2039" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2039 section--default">
+		<div class="container">
+							<div id="section_title_2039" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Take action
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2039" class="primary-section-content  ">
+				
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_2038"  class="paragraph paragraph--card paragraph-id--2038 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-comments fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Get help</div>
+      </h2>
+                                        
+            
+        </div>
+                	<div class="card-footer pb-4 border-0 text-center">
+        		<a class="btn btn-secondary mx-1 mt-2" href="https://stanford.service-now.com/services?id=get_help&amp;cmdb_ci=8ec5076413d96200e71d3d576144b0e9">Submit a Help ticket »</a>
+                                                                        	</div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_2037"  class="paragraph paragraph--card paragraph-id--2037 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-bullhorn fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Report a phish</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>The best way to report is to use the <a href="https://uit.stanford.edu/security/phish-reporter/how-to-use-phish-reporter">Phish Reporter Button</a>, but you can also forward the suspicious emails to phishing@stanford.edu if you cannot use the Phish Reporter Button.</p>
+</div>
+      
+            
+        </div>
+                	<div class="card-footer pb-4 border-0 text-center">
+        		<a class="btn btn-secondary mx-1 mt-2" href="/news/how-do-i-report-suspected-phishing-email-scam">More details on how to report »</a>
+                                                                        	</div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/service/phishingawareness" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="On this page: Policy Data Sanitization Guidelines Validate Document Data sanitization is the process of irreversibly removing or destroying data stored on a memory device (hard drives, flash memory / SSDs, mobile devices, CDs, and DVDs, etc.) or in hard copy form. It is important to use the proper technique to ensure that all data is purged. Our guidance below is derived from" />
+<link rel="canonical" href="https://uit.stanford.edu/security/data-sanitization" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Data Sanitization | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_M5qLXIWvM6sBVaqIJY1k5JHdttWdwSOyAzVrhd0zwLQ.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_O2uKCmXQWdlOa3s2WWVBP7HXMuGOET-oTGioTfORQ9w.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_B9hIoG6yFLmV2pjUSTLgzR15TnQI0OWWApz_hNhzOSc.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJyNj9FqwzAMRX8oiR_2QUK21cytLQVJTtq_X-gGpckGexFczpHERTNyKHyl5KIhmU0RmUkho97ACzsoNVmxDnh2F92F34AVJ9hKpr9gaYvKSnApd7Ihiri54gIRVYuEuUrEOpo_auH5zBuZ4UwG2-d-7MxZ9tdJlEKStggT-97sYI1jVMKctLf4D7kR928ta1-wTnjF-2COfBHN0IuH11LK_I4Ojd6YSddEYMgGHwf0E8Y9DPYwpxYiGg1roc3Cc05Ncq_0BcEvtjY" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/24824","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJyNkF2KwzAMhC-U1A8Lex2h2Irr1LaCpCTt7dcshZKfhX0RnvkGIQ-qkkGqE3ljcV71NmCtJBBQHmCpGggVXjF3eM7O0gJXQJMRbCnQXzCVWXglGNOT9BiarjIDs6kJzjCgSGI3cjXcSLkQfJ9xzDxg7tVeOdV45s19XGwtpIqRFLZ7O-HMK4cLV3kRT6BYFb46z0LOc5m5UrVW6SHe94MQBi9LGf4RLlSXLjLHTGAYXWzjqG844XNvlk4N68gSYEnmPnt9qHu0b3KHDi3u2P7Te_QWfROdvtSouAGVuqZBCcXf3ef5dmVNbR1mElN3tmDSbk20qfudt8JhyfQDkWEX9A","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-one-sidebar layout-sidebar-second page-node-24824 path-security-data-sanitization path-node node--type-service-information">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          <nav class="navbar navbar-expand-lg bg-lagunita-dark navbar-dark navbar-expand-lg" id="navbar-main">
+                        <div class="container">
+                          
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar2" aria-controls="CollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Topic Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar2">
+                                              
+<nav role="navigation" aria-labelledby="secondary-menu-title" id="block-stanford-uit-informationsecurity" region="secondary_menu" class="block block-menu navigation menu--menu-security-category">
+    
+  
+    <h2 id="secondary-menu-title" ><a href="/security" class="menu-item--active-trail" data-drupal-link-system-path="node/24784">Information Security</a></h2>
+    
+
+        
+              <ul region="secondary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/organization/information-security-office" class="menu-node-unpublished nav-link dropdown-toggle menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished nav-link--organization-information-security-office" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/26784">About Us</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-cat-itemsys-idf7ae081a13bce2008a9175c36144b0ad">Contact Us</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/team#section_3753" class="nav-link-https--uitstanfordedu-security-teamsection-3753">View all ISO services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/getting-started" class="nav-link dropdown-toggle nav-link--security-getting-started" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24802">Guides</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <span class="nav-link-">Data Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/copyright-infringement" class="nav-link--security-copyright-infringement" data-drupal-link-system-path="node/24892">Copyright infringement</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/crashplan" class="nav-link--service-crashplan" data-drupal-link-system-path="node/24150">File and data backup</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/secureemail" class="nav-link--service-secureemail" data-drupal-link-system-path="node/45">High risk data in email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/identity-theft" class="nav-link--security-identity-theft" data-drupal-link-system-path="node/25023">Identity theft</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/travel" class="nav-link--security-travel" data-drupal-link-system-path="node/29188">International travel</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sysadmin" class="nav-link--security-sysadmin" data-drupal-link-system-path="node/24803">IT system administrator guidance</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/password-manager" class="nav-link--service-password-manager" data-drupal-link-system-path="node/24793">Password manager</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/stay-safe-from-phishing" class="nav-link--security-stay-safe-from-phishing" data-drupal-link-system-path="node/29214">Phishing awareness</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/positionpapers" class="nav-link--security-positionpapers" data-drupal-link-system-path="node/26869">Position papers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sensitivedata" class="nav-link--security-sensitivedata" data-drupal-link-system-path="node/29291">Protecting sensitive data</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/responsibleai" class="nav-link--security-responsibleai" data-drupal-link-system-path="node/29327">Responsible AI at Stanford</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/asp" class="nav-link--security-asp" data-drupal-link-system-path="node/24804">Third party security requirements</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/resources" class="nav-link--security-resources" data-drupal-link-system-path="node/24795">Other Stanford security resources</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Device Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/exception" class="nav-link--security-exception" data-drupal-link-system-path="node/24786">Compliance exception</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/encrypt/config" class="nav-link--guide-encrypt-config" data-drupal-link-system-path="node/24863">Encrypt your device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Mobile device security</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mydevices" class="nav-link--service-mydevices" data-drupal-link-system-path="node/24569">View your Stanford-registered devices</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="/guide/riskclassifications" class="nav-link active dropdown-toggle nav-link--guide-riskclassifications" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24632">Policies</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/guide/securitystandards" class="nav-link--guide-securitystandards" data-drupal-link-system-path="node/24600">Minimum Security Standards</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://pcicompliance.stanford.edu/" class="nav-link-https--pcicompliancestanfordedu-">Payment Card Industry (PCI)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/riskclassifications" class="nav-link--guide-riskclassifications" data-drupal-link-system-path="node/24632">Risk Classifications</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">Risk Classifications: Approved Services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/dra" class="nav-link dropdown-toggle nav-link--security-dra" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/29582">Privacy</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/security/dra" class="nav-link--security-dra" data-drupal-link-system-path="node/29582">Data Risk Assessment (DRA)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/hipaa" class="nav-link--security-hipaa" data-drupal-link-system-path="node/24924">HIPAA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/FERPA-Policy" class="nav-link--ferpa-policy" data-drupal-link-system-path="node/27245">FERPA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://privacy.stanford.edu" class="nav-link-https--privacystanfordedu">University Privacy Office</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/internship" class="nav-link dropdown-toggle nav-link--security-internship" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/25934">Programs</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/service/phishingawareness" class="nav-link--service-phishingawareness" data-drupal-link-system-path="node/28814">Phishing Awareness Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/bug-bounty" class="nav-link--security-bug-bounty" data-drupal-link-system-path="node/26809">Bug Bounty Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/vulnerability-disclosure" class="nav-link--security-vulnerability-disclosure" data-drupal-link-system-path="node/29897">Vulnerability Disclosure Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/cyberfest/2024" class="nav-link--security-cyberfest-2024" data-drupal-link-system-path="node/29733">Cybersecurity and Privacy Festival</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link dropdown-toggle nav-link-https--wwwcisagov-news-events-cybersecurity-advisories" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Security Alerts</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link-https--wwwcisagov-news-events-cybersecurity-advisories">Cybersecurity alerts and advisories</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/sunset-schedule" class="nav-link--guide-sunset-schedule" data-drupal-link-system-path="node/26942">Service and Software Sunset Schedule</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                                    </div>
+                                                    </div>
+                      </nav>
+                  </header>
+    <main class="page-content" id="page-content">
+            <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                    <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+              
+                  <div id="block-stanford-uit-breadcrumbs" region="breadcrumb" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+  <nav role="navigation" aria-label="breadcrumb" style="">
+  <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+                <li class="breadcrumb-item">
+        <a href="/security">Information Security</a>
+      </li>
+        </ol>
+</nav>
+
+
+    </div>
+  </div>
+
+
+                                    <div class="content-top">
+                        <div id="block-stanford-uit-page-title" region="content_top" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+  <h1 class="title"><span class="field field--name-title field--type-string field--label-hidden">Data Sanitization</span>
+</h1>
+
+
+    </div>
+  </div>
+
+
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article class="node node--type-service-information node--view-mode-full clearfix">
+  <header>
+    
+        
+      </header>
+  <div class="node__content clearfix">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div id="onthispage">
+<h2>On this page:</h2>
+
+<ul>
+	<li><a href="#policy">Policy</a></li>
+	<li><a href="#data sanitization guidelines">Data Sanitization Guidelines</a></li>
+	<li><a href="#validate">Validate</a></li>
+	<li><a href="#document">Document</a></li>
+</ul>
+</div>
+
+<p>Data sanitization is the process of irreversibly removing or destroying data stored on a memory device (hard drives, flash memory / SSDs, mobile devices, CDs, and DVDs, etc.) or in hard copy form.&nbsp;It is important to use the proper technique to ensure that all data is purged.&nbsp;Our guidance below is derived from <a href="https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=917935">NIST SP 800-88 Rev. 1 (PDF)</a><a href="http://ws680.nist.gov/publication/get_pdf.cfm?pub_id=917935">: Guidelines for Media Sanitization</a>.</p>
+
+<h2 id="policy">Policy</h2>
+
+<p>The policies below define baseline controls for the sanitization and disposal of university data:</p>
+
+<dl class="faq faq-stone">
+	<dt>Device Transfer Within Stanford</dt>
+	<dd>
+	<p><img alt="Device Transfer Between Organizations" height="398" src="/sites/default/files/images/2024/06/05/between-orgs_cropped.png" width="997" />​</p>
+
+	<p>All <a href="/guide/riskclassifications">Low, Moderate, High Risk Data</a> stored on the device must be sanitized when a device is transferred between organizations. Please follow the <a href="/security/data-sanitization#data%20sanitization%20guidelines">Data Sanitization Guidelines</a> below.</p>
+	</dd>
+	<dt>Device Disposal or Device Transfer Off-Campus</dt>
+	<dd>
+	<p><img alt="Device Disposal or Device Transfer Off-Campus" height="398" src="/sites/default/files/images/2024/06/05/device-disposal_cropped.png" width="997" />​</p>
+
+	<p>If a device is to be disposed of or transferred to a party outside of the University, the device owner or local property administrator must sanitize or remove and physically destroy all device storage regardless if the device is known to contain any <a href="/guide/riskclassifications">High, Moderate, or Low Risk Data</a>. Local property administrators should be prepared to either sanitize or destroy the disk themselves according to the <a href="/security/data-sanitization#data%20sanitization%20guidelines">Data Sanitization Guidelines</a> below (and <a href="/security/data-sanitization#document">keep a record</a> of the activity) or contact the Information Security Office for assistance.</p>
+	</dd>
+	<dt>Personally Owned Devices Leaving the University</dt>
+	<dd>
+	<p><img alt="Personally Owned Devices Leaving the University" height="398" src="/sites/default/files/images/2024/06/05/personally-owned_cropped.png" width="997" />​</p>
+
+	<p>All <a href="/guide/riskclassifications">High, Moderate, or Low Risk Data</a> stored on the device must be sanitized according to the <a href="/security/data-sanitization#data%20sanitization%20guidelines">Data Sanitization Guidelines</a> below.</p>
+	</dd>
+</dl>
+
+<h2 id="data sanitization guidelines">Data Sanitization Guidelines</h2>
+
+<div>
+<div>
+<h3><strong>Mobile Devices</strong></h3>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>iOS: Apple iPhone and iPad</strong></td>
+			<td style="width: 80%">
+			<ul>
+				<li>Select 'Settings &gt; General &gt; Reset &gt; Erase All Content and Settings' menu.
+				<ul>
+					<li>“Erase all content and settings” option in Settings destroys all of the encryption keys in Effaceable Storage, thereby rendering all user data on the device cryptographically inaccessible.&nbsp;</li>
+					<li>Important: Do not use the “Erase all content and settings” option until the device has been backed up, as there is no way to recover the erased data.</li>
+				</ul>
+				</li>
+				<li>
+				<div data-canvas-width="252.43499999999995">Refer to <a href="https://www.apple.com/business/docs/iOS_Security_Guide.pdf" target="_blank">Apple's iOS Security Guide</a> for more detailed information.</div>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Android OS</strong></td>
+			<td>
+			<ul>
+				<li>Perform a factory reset through the device's settings menu.&nbsp;
+				<ul>
+					<li>For example, on Samsung Galaxy S5 running Android 4.4.2, select settings, then under User and Backup, select Backup and reset, then select Factory data reset.&nbsp;</li>
+				</ul>
+				</li>
+				<li>Refer to <a href="https://support.google.com/android-one/answer/6088915?hl=en" target="_blank">Google's Android documentation</a>&nbsp;for more detailed information.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Windows Phone OSA7.1/8/8.x</strong></td>
+			<td>
+			<ul>
+				<li>
+				<p>In the App list, tap Settings (<img alt="gear icon" src="https://lh3.googleusercontent.com/TC0dCEK-qfw9KznZ2E5UyPHW_-Ujw5izdOztEy_ei2xKfCNrybt8KEtrAOuOWPtsd0-GyWeK_E5rW9c0noeSmwdj01NkHlQpASEA3W15s5nt5QfwUyngFMnpxkrsq_vXRqVATkrs" style="width: 28px; height: 28px;" />)</p>
+
+				<ul>
+					<li>
+					<p>Tap <strong>About</strong>, and then tap <strong>Reset your phone</strong>.</p>
+					</li>
+					<li>
+					<p>You'll receive two warnings. If you're absolutely sure you want to restore your phone to its factory settings, tap <strong>Yes</strong>, and then tap <strong>Yes </strong>again.</p>
+					</li>
+					<li>
+					<p>It might take a little while for the process to complete.</p>
+					</li>
+				</ul>
+				</li>
+				<li>
+				<p><span style="letter-spacing: 0.01em;">Please note that after the process is completed, all of your personal content will disappear.</span></p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Other devices</strong></td>
+			<td>
+			<ul>
+				<li>Manually delete all information, then perform a full manufacturer's reset to reset the mobile device to factory state.&nbsp;</li>
+				<li>Refer to device manual for more detailed instructions.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="rteindent1">&nbsp;</p>
+</div>
+
+<h3><strong>Individual File*</strong></h3>
+
+<p>* See Flash Memory section below for special requirements pertaining to solid state memory / SSD.</p>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>Mac OS X</strong></td>
+			<td style="width: 80%">
+			<ul>
+				<li>On Mac OS X prior to version 10.11: Use <strong>Secure Empty Trash</strong>.</li>
+				<li>On 10.11+: Secure Empty Trash has been deprecated due to the increased prevalence of SSDs on Macs (see below). There is no replacement equivalent functionality. Make sure your Mac is whole disk encrypted.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Windows</strong></td>
+			<td>
+			<ul>
+				<li>Use <strong>SDelete</strong>:&nbsp;<a href="https://technet.microsoft.com/en-us/sysinternals/bb897443.aspx">https://technet.microsoft.com/en-us/sysinternals/bb897443.aspx</a></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Linux</strong></td>
+			<td>
+			<ul>
+				<li>Use <strong>Shred</strong>:&nbsp;<a href="https://linux.die.net/man/1/shred">https://linux.die.net/man/1/shred</a></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="rteindent1">&nbsp;</p>
+
+<h3><strong>Flash Memory</strong></h3>
+
+<p>Flash memory-based storage devices, or Solid State Drives (SSDs), have become prevalent due to falling costs, higher performance, and shock resistance. Because flash memory operates fundamentally differently from magnetic media, overwriting does not necessarily clear all of the data. For the proper sanitization of flash memory, invoking special data purge commands built into the SSD hardware is the best approach.</p>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>ATA Solid State Drives (SSDs)</strong><br />
+			(including PATA, SATA, eSATA, and SCSI)</td>
+			<td style="width: 80%">
+			<ul>
+				<li>Ensure that TRIM is enabled on the drive and in the operating system, then delete all files and folders:
+				<ul>
+					<li><strong>Mac OS X:&nbsp;</strong><a href="http://www.mactrast.com/2013/11/enable-trim-ssds-os-x-mavericks/">http://www.mactrast.com/2013/11/enable-trim-ssds-os-x-mavericks</a></li>
+					<li><strong>Windows:&nbsp;</strong>Open a command prompt and run the following command: “fsutil behavior query disabledeletenotify”
+					<ul>
+						<li>“DisableDeleteNotify = 0” means that Windows TRIM commands are enabled.</li>
+						<li>“DisableDeleteNotify = 1” means that Windows TRIM commands are disabled. To enable, run: "fsutil behavior set disabledeletenotify 0"</li>
+					</ul>
+					</li>
+					<li>For more information on TRIM, see <a href="http://articles.forensicfocus.com/2014/09/23/recovering-evidence-from-ssd-drives-in-2014-understanding-trim-garbage-collection-and-exclusions/">http://articles.forensicfocus.com/2014/09/23/recovering-evidence-from-ssd-drives-in-2014-understanding-trim-garbage-collection-and-exclusions/​</a></li>
+				</ul>
+				</li>
+			</ul>
+
+			<p class="rteindent1"><strong>AND</strong></p>
+
+			<ul>
+				<li>Overwrite the full drive with at least two write passes to include a pattern in the first pass and its complement in the second pass. Verify that the data was overwritten. Recommended product: <a href="http://download.cnet.com/BCWipe/3000-2144_4-10009333.html" target="_blank">BCWipe</a></li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>Physically shred the drive such that the resulting particles have a maximum edge length of 2 mm and a maximum surface area of 4 mm<sup>2</sup>.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>USB Removable Media and Memory Cards</strong></td>
+			<td>
+			<ul>
+				<li>Overwrite the full drive/card with at least two write passes to include a pattern in the first pass and its complement in the second pass. Verify that the data was overwritten. Recommended product:&nbsp;<a href="http://download.cnet.com/BCWipe/3000-2144_4-10009333.html" target="_blank">BCWipe</a><br />
+				&nbsp;</li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>Physically shred the drive such that the resulting particles have a maximum edge length of 2 mm and a maximum surface area of 4 mm<sup>2</sup>.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><strong>Magnetic Media</strong></h3>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>Magnetic disks</strong> (including floppy disks, ATA and SCSI hard disk drives)</td>
+			<td style="width: 80%">
+			<ul>
+				<li>Overwrite the full drive with at least a single write pass using a fixed data value (such as all zeros). Multiple write passes and more complex values may optionally be used. Verify that the data was overwritten. Recommended product: <a href="http://download.cnet.com/BCWipe/3000-2144_4-10009333.html" target="_blank">BCWipe</a></li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>Degauss with a <a href="https://www.nsa.gov/Portals/70/documents/resources/everyone/media-destruction/degausser-epl.pdf" target="_blank">National Security Agency (NSA) approved degausser</a>. Note that degaussing magnetic disks renders them permanently unusable.</li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>Physically shred the disk platters such that the resulting particles have a maximum edge length of 20 mm and a maximum surface area of 400 mm<sup>2</sup>.</li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>Incinerate the disk platters by burning in a licensed incinerator.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+&nbsp;
+
+<h3><strong>Optical Media</strong></h3>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>CD, DVD, Blu-ray Disc</strong></td>
+			<td style="width: 80%">
+			<ul>
+				<li>
+				<p>Physically shred the optical media such that the resulting particles have a maximum edge length of 0.5 mm and a maximum surface area of 0.25 mm<sup>2</sup>.</p>
+				</li>
+			</ul>
+
+			<p>and/or</p>
+
+			<ul>
+				<li>
+				<p>Incinerate the optical media (i.e., reduce to ash) using a licensed facility.</p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="rteindent1">&nbsp;</p>
+
+<h3><strong>Hard Copy Storage</strong></h3>
+
+<table class="table table-striped">
+	<tbody>
+		<tr>
+			<td style="width: 20%"><strong>Paper</strong></td>
+			<td style="width: 80%">
+			<ul>
+				<li>Shred paper documents using a cross cut shredder that produces particles no larger than 1 mm x 5 mm.</li>
+			</ul>
+
+			<p>or</p>
+
+			<ul>
+				<li>Pulverize/disintegrate paper documents using a disintegrator device equipped with a 2.4 mm (or smaller) security screen.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="rteindent1">&nbsp;</p>
+
+<p>For guidance on&nbsp;other media not listed above, please refer to&nbsp;<a href="http://ws680.nist.gov/publication/get_pdf.cfm?pub_id=917935" target="_blank">NIST SP 800-88 Rev. 1</a>&nbsp;("Guidelines for Media Sanitization") and the manufacturer manuals for appropriate data sanitation techniques, commands, and tools.</p>
+
+<h2 id="validate">Validate</h2>
+
+<p dir="ltr">The validation step in the data sanitization process involves testing the device/media to ensure the information cannot be read.</p>
+
+<h2 id="document">Document</h2>
+
+<p>During the data sanitization process, be sure to document the following information for your own records.</p>
+
+<ul>
+	<li>Manufacturer</li>
+	<li>Model</li>
+	<li>Serial Number</li>
+	<li>Property Number</li>
+	<li>Media Type</li>
+	<li>Media Source</li>
+	<li>Pre-sanitization confidentiality categorization</li>
+	<li>Sanitization description</li>
+	<li>Method used</li>
+	<li>Tool used</li>
+	<li>Verification</li>
+	<li>Method</li>
+	<li>Post-sanitization destination</li>
+	<li>Name of Person, Date, Location, Contact Information, Signature</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+</div>
+      
+
+
+  </div>
+</article>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockupdated-date-block" id="block-views-block-updated-date-block" region="content">
+  
+    
+      <div class="content">
+      <div region="content"><div class="view view-updated-date view-id-updated_date view-display-id-block js-view-dom-id-cf9418d1aa0daa5df50a6aa9260e5a3c8045dbf6a571ed61c649a3a0cc3f5968">
+  
+    
+      
+      <div class="view-content row">
+          <div class="views-row">
+    <div class="views-field views-field-field-modified-date"><div class="field-content">Last modified <time datetime="2024-06-05T08:37:11-07:00" class="datetime">June 5, 2024</time>
+ </div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                        <div class="sidebar col-12 col-lg-4 col-md-5">
+                      <aside class="section" role="complementary">
+                          <section class="ps-md-4 region region-sidebar-second">
+      
+<nav role="navigation" aria-labelledby="block-servicemenublock-menu" id="block-servicemenublock" region="sidebar_second" class="block block-menu navigation menu--menu-security">
+          
+  
+    
+
+        
+                  <ul region="sidebar_second" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item menu-item--expanded active">
+                <a href="/security" title="" class="nav-link active nav-link--security" data-drupal-link-system-path="node/24784">Information Security</a>
+                                    <ul class="menu">
+                    <li class="nav-item">
+                <a href="/security/LSD" class="nav-link nav-link--security-lsd" data-drupal-link-system-path="node/29798">Take Action for Lost or Stolen Devices</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=1ecf90ff1bf0409094c0fee58d4bcb3e" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-cat-itemsys-id1ecf90ff1bf0409094c0fee58d4bcb3e">Report a Lost or Stolen Device</a>
+              </li>
+                <li class="nav-item">
+                <a href="/software" class="menu-node-unpublished nav-link nav-link--software" data-drupal-link-system-path="node/25348">Protect Your Computer From Viruses</a>
+              </li>
+                <li class="nav-item menu-item--collapsed">
+                <a href="/security/copyright-infringement" class="nav-link nav-link--security-copyright-infringement" data-drupal-link-system-path="node/24892">Report Alleged Copyright Infringement</a>
+              </li>
+                <li class="nav-item">
+                <a href="/node/24785" class="nav-link nav-link--node-24785" data-drupal-link-system-path="node/24785">Data Risk Assessment</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/exception" class="nav-link nav-link--security-exception" data-drupal-link-system-path="node/24786">Request a Compliance Exception</a>
+              </li>
+                <li class="nav-item menu-item--collapsed">
+                <a href="/security/report-incident" class="nav-link nav-link--security-report-incident" data-drupal-link-system-path="node/24788">Report an Incident</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/travel" class="nav-link nav-link--security-travel" data-drupal-link-system-path="node/29188">International Travel</a>
+              </li>
+                <li class="nav-item">
+                <a href="/service/password-manager" class="nav-link nav-link--service-password-manager" data-drupal-link-system-path="node/24793">Use a Password Manager</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/equipment-transfer-disposal" class="nav-link nav-link--security-equipment-transfer-disposal" data-drupal-link-system-path="node/24794">Computer Equipment Transfer and Disposal</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/asp" class="nav-link nav-link--security-asp" data-drupal-link-system-path="node/24804">Third Party Security Requirements</a>
+              </li>
+                <li class="nav-item active">
+                <a href="/security/data-sanitization" class="nav-link active nav-link--security-data-sanitization is-active" data-drupal-link-system-path="node/24824" aria-current="page">Data Sanitization</a>
+              </li>
+                <li class="nav-item menu-item--collapsed">
+                <a href="/security/hipaa" class="nav-link nav-link--security-hipaa" data-drupal-link-system-path="node/24924">HIPAA Security and Privacy Policies</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/identity-theft" class="nav-link nav-link--security-identity-theft" data-drupal-link-system-path="node/25023">Avoid Identity Theft</a>
+              </li>
+                <li class="nav-item">
+                <a href="/security/resources" class="nav-link nav-link--security-resources" data-drupal-link-system-path="node/24795">Other Stanford Security Resources</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+  </section>
+
+                      </aside>
+                    </div>
+                                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                    </main>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/security/data-sanitization" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

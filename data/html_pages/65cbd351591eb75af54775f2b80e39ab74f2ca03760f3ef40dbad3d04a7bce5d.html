@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GRASP</title>
+<meta name="description" content="GRASP">
+<meta name="keywords" content="GRASP, Graph, CuSha, ASPIRE, DiskGrapher, DSM, RCP, Distributed, Parallel, GPU, UCR">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+
+<link rel="stylesheet" type="text/css" href="./contents/style.css" title="wsite-theme-css">
+<link rel="icon" type="image/png" href="./contents/grasp.png"/>
+
+<style type="text/css"></style></head>
+<body class="no-header-page  wsite-theme-light wsite-page-index">
+<div id="total-wrapper">
+	<div id="nav-wrap">
+		<div class="container header-align-outer bkgdiv">
+			<div class="header-align-mid">
+				<div class="header-align-inner">
+					<div id="logo">
+						<a href="index.html"><span id="wsite-title">GRASP</span></a>
+					</div>		
+					<div id="sublogo">
+					<span class="tdboldcolor">GR</span>aph <span class="tdboldcolor">A</span>nalytics with <span class="tdboldcolor">S</span>calibility & <span class="tdboldcolor">P</span>erformance
+					</div>
+					<div class="nav-container">
+						<ul>
+							<li><img src="https://www.cs.ucr.edu/~gupta/Gifs/ucr.jpg" width="20"> </li>
+							<li id="active" style="position: relative;"><a href="index.html" style="position: relative;">Home</a></li>
+							<!-- <li style="position: relative;"><a href="projects.htm" style="position: relative;">Projects</a></li> -->
+							<li style="position: relative;"><a href="publications.htm" style="position: relative;">Publications</a></li>
+							<li style="position: relative;"><a href="people.htm" style="position: relative;">People</a></li>
+							<li style="position: relative;"><a href="funding.htm" style="position: relative;">Funding</a></li>
+							<li><img src="https://www.cs.ucr.edu/~gupta/Gifs/ucr.jpg" width="20"> </li>
+						</ul>
+					</div>
+				</div><!-- end header align inner -->
+			</div><!-- end header align mid -->
+	  </div><!-- end container -->
+	</div><!-- end nav-wrap -->
+	<div id="main-wrap">
+	  <div class="container">
+		<div id="wsite-content">
+<div class="paragraph" style="text-align:justify;">
+
+<table>
+<tbody><tr>
+	<td class="tdvspaced" style="width:63%;padding:0px 15px 0px 0px">
+
+<!--
+-->
+<span class="tdboldcolor">GRASP</span> is aimed at developing scalable high-performance solutions for graph processing employing resources available on a heterogeneous computing cluster. The key goal of this work is to develop easy to use programming frameworks with sophisticated runtimes that handle diverse and emerging scenarios. To date <span class="tdboldcolor">GRASP</span> has achieved the following:<br>
+
+<div id="aspire" class="pagesubheader" style="text-align: center">MULTIQUERY & BATCHING SCENARIOS</div>
+We have developed the distributed <span class="tdboldcolor">MultiLyra</span> <a href="https://ieeexplore.ieee.org/document/9006359">[BigData'19]</a> system whose scalablity via overhead amortization enables simultaneous evaluation of <em>batches</em> of hundreds of iterative graph queries. <span class="tdboldcolor">BEAD</span> <a href="https://ieeexplore.ieee.org/document/9378211">[BigData'20]</a>  extends <span class="tdboldcolor">MultiLyra</span> to consider scenarios in which a batch of queries needs to be continuously reevaluated due to changes to the graph. For the shared-memory setting, we have developed <span class="tdboldcolor">VRGQ</span> <a href="https://dl.acm.org/doi/10.1145/3469379.3469382">[SIGOPS'21]</a> that employs <em>value reuse</em> to speedup evaluation of future graph queries using results of prior queries. <span class="tdboldcolor">SimGQ</span> <a href="https://ieeexplore.ieee.org/document/9406766">[HiPC'20]</a> is an online system that combines value reuse with batching. It optimizes evaluation of a batch of queries by reusing results of common subcomputations. <span class="tdboldcolor">SimGQ+</span> <a href="https://www.sciencedirect.com/science/article/pii/S0743731522000120?via%3Dihub">[JPDC'22]</a> extends this batched system to evaluate <em>point-to-point</em> queries. It is based upon the <span class="tdboldcolor">PnP</span> <a href="https://dl.acm.org/citation.cfm?doid=3297858.3304012">[ASPLOS'19]</a> system that efficiently evaluates point-to-point graph queries. The distinctive feature of PnP is its bidirectional phase followed by a unidirectional phase based upon dynamic direction selection. Our most recent work on <span class="tdboldcolor">Glign</span> <a href="">[ASPLOS'23a]</a> develops a set of techniques that improve the efficiency with which a batch of queries is evaluted by aligning their associated graph traversals. Our recent work shows the use of batched-PnP solver in designing the <span class="tdboldcolor">P4</span><a href="https://ieeexplore.ieee.org/abstract/document/10802763">[IROS'24]</a> Multi Agent Path Finding algorithm that scales to several hundred agents.
+
+
+<div id="aspire" class="pagesubheader" style="text-align: center">STREAMING & EVOLVING GRAPHS</div>
+To process graphs that change over time, <span class="tdboldcolor">EvoG</span> <a href="http://dl.acm.org/citation.cfm?id=2992784">[TACO'16]</a> incorporates optimizations for incrementally processing multiple graph snapshots in a pipelined fashion. We have developed <span class="tdboldcolor">BEAD</span> <a href="https://ieeexplore.ieee.org/document/9378211">[BigData'20]</a> to consider the scenario in which graph is allowed to change requiring simultaneous evaluation of a batch of queries to be continuously repeated. For the streaming graphs scenario we have developed <span class="tdboldcolor">KickStarter</span> <a href="https://dl.acm.org/doi/10.1145/3093337.3037748">[ASPLOS'17b]</a> is a <em>dynamic dependence tracking</em> based technique to correctly and efficiently reevaluating an installed query in presence of edge additions and deletions. We developed an improvement <span class="tdboldcolor">IncBoost</span> <a href="">[SoCC'24]</a> that provides greater scalability and incrementally handles updates to edge weights.  Our <span class="tdboldcolor">Tripoline</span> <a href="https://dl.acm.org/doi/proceedings/10.1145/3447786">[EuroSys'21]</a> system generalizes the streaming model to support incremental evaluation of arbitrary queries from results of fixed set of (different) installed queries. It essentially employs value reuse by using the results of installed queries to incrementally evaluate other user queries. Finally, our work on <span class="tdboldcolor">CommonGraph</span> <a href="https://dl.acm.org/doi/10.1145/3597635.3598022">[ASPLOS'23b]</a> develops a technique for efficiently supporting deletions of edges in an evolving graph and eliminating computational redundancy that enables scaling parallel evaluation of a query on large number of snapshots. In recent work we have developed <span class="tdboldcolor">PANNS</span> <a href="">[PPoPP'25]</a>, a new approximate nearest neighbor search algorithm that considers temporal dimension in evaluating a query.
+
+<div id="aspire" class="pagesubheader" style="text-align: center">CUSTOM ACCELERATORS & GPUs FOR <br> GRAPH PROCESSING</div>
+In collaboration with <a href="https://www.cs.ucr.edu/~nael/">Dr. Abu-Ghazaleh's</a> group we have designed the <span class="tdboldcolor">GraphPulse</span> <a href="https://ieeexplore.ieee.org/document/9251946">[MICRO'20]</a> custom accelerator for Graph processing that implements an asynchronous event-driven model of computation directly in hardware. GraphPulse eliminates a number of inefficiencies associated with BSP-based Push and Pull models. We have further generalized the above accelerator to allow for incremental reevaluation of graph queries following graph updates that take the form of edge additions and deletions. The <span class="tdboldcolor">JetStream</span> <a href="https://dl.acm.org/doi/10.1145/3466752.3480126">[MICRO'21]</a> accelerator is the first accelerator for graph queries that handles the streaming graph scenario. We have recently developed the <span class="tdboldcolor">MEGA</span> <a href="https://dl.acm.org/doi/10.1145/3613424.3614260">[MICRO'23]</a> accelerator that simultaneously process multiple snapshots of an evolving graph.
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="tdboldcolor">CuSha</span> <a href="http://doi.acm.org/10.1145/2600212.2600227">[HPDC'14]</a> is a CUDA-based graph processing framework that uses two novel graph representations, <em>G-Shards</em> and <em>Concatenated Windows</em> to allow coalesced memory access and overcome GPU under-utilization. <span class="tdboldcolor">WS-VR</span> <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7429293&filter%3DAND%28p_IS_Number%3A7429279%29">[PACT’15]</a> is a multi-GPU graph processing framework that delivers high SIMD-efficiency and inter-GPU communication efficiency. Solutions to branch divergence and load balancing can be found in <span class="tdboldcolor">CCC</span> <a href="https://dl.acm.org/doi/10.1145/2830772.2830796">[MICRO'15]</a> and <span class="tdboldcolor">CTE</span> <a href="https://ieeexplore.ieee.org/document/7516049?arnumber=7516049">[IPDPS'16]</a>. In recent work we present <span class="tdboldcolor">G-Morph</span> that uses a GPU to accelerate the subgraph isomorphism problem <a href="https://doi.org/10.1007/978-3-030-85665-6_25">[Euro-Par'21]</a>. We are also developing techniques for efficiently processing large graphs that cannot fit in GPU memory. In work led by <a href="https://www.cs.ucr.edu/~zhijia/">Dr. Zhao's</a> group, we presented <span class="tdboldcolor">Subway</span> <a href="https://dl.acm.org/doi/abs/10.1145/3342195.3387537">[EuroSys'20]</a> a partition-based graph processing framework that minimizes the overhead of transferring subgraphs between host and GPU memory.
+
+<div id="aspire" class="pagesubheader" style="text-align: center">LIMITED MEMORY SINGLE-MACHINE GRAPH GENERATION, PARTITIONING &  PROCESSING</div>
+<!--
+-->
+While today's machines are well equipped with multiple cores and large main memories, the ever growing graph sizes pose a memory scalability challenge in processing real world graphs on single machines. 
+For in-memory scaling, our <span class="tdboldcolor">Core Graph</span> <a href="https://dl.acm.org/doi/10.1145/3627703.3629571">[EuroSys'24]</a> work identifies a proxy graph of a power law graph that contains roughly 10% of edges and yet produces precise results for over 95% of vertices across random queries. 
+Also our <span class="tdboldcolor">Input Reduction</span> <a href="http://dl.acm.org/citation.cfm?id=2907312&CFID=625466749&CFTOKEN=90710728">[HPDC'16]</a> based processing trasforms the original graph to a smaller graph which is used to calculate intermediate approximation that is usable for incremental processing over the original graph. 
+For out-of-core graph processing, <span class="tdboldcolor">Dynamic Partitions</span> <a href="https://www.usenix.org/conference/atc16/technical-sessions/presentation/vora">[USENIX ATC'16]</a> truly capture the dynamic nature of graph computation by adapting the set of edges that are held in memory during runtime. This approach greatly reduces IO in out-of-core graph processing. We have als exploited similar approch for distrubuted systems via <span class="tdboldcolor">ExpressWay</span> <a href="">[BigGraph'23]</a>.
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;
+We have also developed graph generation and graph partitioning algorithms under limited memory constraint.  <span class="tdboldcolor">PaRMAT</span> <a href="https://github.com/farkhor/PaRMAT">[GitHuB]</a> is a tool designed to create very large RMAT graphs on machines with limited amount of memory. It provides various options for the RMAT graph: being directed or non-directed, disallowing duplicate edges, etc.  <span class="tdboldcolor">InfiniMem</span> <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-29778-1_1">[LCPC'15]</a> enables generation and processing of large graphs that do not fit in memory by having them reside on disk and allows the programmer to code the applications in a size oblivious fashion.  Our <span class="tdboldcolor">GO</span> <a href="https://www.cs.ucr.edu/~gupta/research/Publications/Comp/NAS2021.pdf">[NAS'21]</a> out-of-core system performs Graph Partitioning on large input data sets that do not fit in the memory. Finally, we have developed <span class="tdboldcolor">OMR</span> <a href="https://dl.acm.org/doi/10.1145/3299706.3210568">[ISMM'18]</a> out-of-core system for MapReduce computations on a single machine with limited memory. We have built upon this system and developed <span class="tdboldcolor">OMRGx</span> that transparently performs out-of-core partitioning and partition-based graph processing on a single machine <a href="https://dl.acm.org/doi/10.1145/3591195.3595268">[ISMM'23]</a>.
+<!-- 
+-->
+
+<div id="aspire" class="pagesubheader" style="text-align: center">ASYNCHRONOUS DISTRIBUTED PROCESSING</div>
+The long communication latencies involved in cluster based processing heavily impact the performance of graph processing frameworks. While the communication cannot be completely eliminated, the inherent asynchrony involved in graph algorithms allow tolerating the inter-node latency by using stale vertex values.  <span class="tdboldcolor">ASPIRE</span> <a href="http://dl.acm.org/citation.cfm?doid=2660193.2660227">[OOPSLA'14]</a> introduces a novel <em>relaxed memory consistency model & protocol</em> that simultaneously tolerate communication latency and minimize the use of stale values. <span class="tdboldcolor">CoRAL</span> <a href="https://dl.acm.org/doi/10.1145/3093337.3037747">[ASPLOS'17a]</a> is the first fault-tolerance protocol for distributed asynchronous graph processing. It uses local snapshots, avoids rollback, and leverages the algorithmic asynchrony to progress the global execution state to a resumable state from which forward progress produces accurate results. 
+
+	</td>
+	<td style="width:37%;padding:0px 0px 0px 5px;" valign="top">
+
+	<div class="tdbigger tdboldcolor" style="text-align:center;">PAPERS ACCEPTED</div>
+
+	<div class="paragraph" style="text-align:left;">
+	
+	<table class="newstab">
+		<tbody>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Graph Diffusion</span> paper accepted in <a href="">COLING 2025!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">PANNS</span> paper accepted in <a href="">PPoPP 2025!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">IncBoost</span> paper accepted in <a href="https://dl.acm.org/doi/10.1145/3698038.3698524">SoCC 2024!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">P4</span> paper accepted in <a href="https://ieeexplore.ieee.org/abstract/document/10802763">IROS 2024!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Core Graph</span> paper accepted <br>in <a href="https://dl.acm.org/doi/10.1145/3627703.3629571">EuroSys 2024!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">MEGA</span> evolving graph accelerator<br> accepted in <a href="https://dl.acm.org/doi/10.1145/3613424.3614260">MICRO 2023!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">OMRGx</span> paper accepted in <a href="https://dl.acm.org/doi/10.1145/3591195.3595268">ISMM 2023!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Glign</span> paper accepted in <a href="https://dl.acm.org/doi/10.1145/3567955.3567963">ASPLOS 2023!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CommonGraph</span> paper accepted in <a href="https://dl.acm.org/doi/10.1145/3597635.3598022">ASPLOS 2023!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">SimGQ+</span> batched query evaluation paper accepted in <a href="https://www.sciencedirect.com/science/article/pii/S0743731522000120?via%3Dihub">JPDC 2022!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">JetStream</span> streaming graph accelerator paper accepted in <a href="https://dl.acm.org/doi/10.1145/3466752.3480126">MICRO'21!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">GO</span> paper on out-of-core partitionng of large graphs accepted in <a href="https://www.cs.ucr.edu/~gupta/research/Publications/Comp/NAS2021.pdf">NAS'21!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">G-Morph & DSGEN</span> papers on GPUs accepted in <a href="https://doi.org/10.1007/978-3-030-85665-6_25">Euro-Par'21</a> and <a href="">ICS'21!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">VRGQ</span> paper invited to <a href="https://dl.acm.org/doi/10.1145/3469379.3469382">SIGOPS'21</a></span> special issue on Graph Computing!
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Tripoline</span> paper on streaming graphs accepted in <a href="https://dl.acm.org/doi/10.1145/3447786.3456226">EuroSys'21!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">SimGQ & BEAD</span> papers accepted in <a href="https://ieeexplore.ieee.org/document/9406766">HiPC'20</a> and <a href="https://ieeexplore.ieee.org/document/9378211">IEEE BigData'20!</a> Also <span class="tdboldcolor">SimGQ</span> received a Best Paper Award.</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">GraphPulse & Subway</span>, first joint papers with Prof. Abu-Ghazaleh and Prof. Zhao accepted in <a href="https://ieeexplore.ieee.org/document/9251946">MICRO'20</a> and <a href="https://dl.acm.org/doi/abs/10.1145/3342195.3387537">EuroSys'20!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">MultiLyra</span> paper on evaluating batches of queries accepted in <a href="https://ieeexplore.ieee.org/document/9006359">IEEE BigData'19!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">PnP</span> paper on point-to-point graph queries accepted in <a href="https://dl.acm.org/doi/10.1145/3297858.3304012">ASPLOS'19!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">OMR</span> paper on an Out-of-core MapReduce system accepted in <a href="https://dl.acm.org/doi/10.1145/3299706.3210568">ISMM'18!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CoRAL</span> paper on recovery for asynchronous graph processing accepted in <a href="https://dl.acm.org/doi/10.1145/3093337.3037747">ASPLOS'17a!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">KickStarter</span> paper on streaming graphs accepted in <a href="https://dl.acm.org/doi/10.1145/3093337.3037748">ASPLOS'17b!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Evolving</span> graph paper accepted in<br> <a href="https://dl.acm.org/doi/10.1145/2992784">TACO'16!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Dynamic Shards</span> paper accepted in <a href="https://www.usenix.org/conference/atc16/technical-sessions/presentation/vora">USENIX ATC'16!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Graph Reduction</span> paper accepted in <a href="https://dl.acm.org/doi/10.1145/2907294.2907312">HPDC'16!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CTE</span> paper on intra-warp load balancing in GPUs accepted in <a href="https://ieeexplore.ieee.org/document/7516049?arnumber=7516049">IPDPS'16!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CCC</span> paper on tolerating divergence in GPUs accepted in <a href="https://dl.acm.org/doi/10.1145/2830772.2830796">MICRO'15!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">InfiniMem</span> paper on size oblivious programming accepted in <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-29778-1_1">LCPC'15!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">WS&VR</span> paper on scalable graph processing using GPUs accepted in <a href="https://ieeexplore.ieee.org/document/7429293?arnumber=7429293&filter%3DAND(p_IS_Number:7429279)=">PACT'15!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Stash</span> paper on scalable hashing for GPUs accepted in <a href="https://ieeexplore.ieee.org/document/7429295?arnumber=7429295&filter%3DAND(p_IS_Number:7429279)=">PACT'15!</a></span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">05/24/2014:</td> -->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">ASPIRE</span> paper on DSM based graph processing accepted in <a href="https://dl.acm.org/doi/10.1145/2714064.2660227">OOPSLA'14!</a></span>
+				
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CuSha</span> paper on processing graphs using GPU accepted in <a href="https://dl.acm.org/doi/10.1145/2600212.2600227">HPDC'14!</a></span>
+<!--
+				<span class="goright tdoffcolor tdtiny">2014</span>
+-->
+			</td>
+		</tr>
+	</tbody>
+	</table>
+
+        <P>
+	<P>
+
+	<div class="tdbigger tdboldcolor" style="text-align:center;">SOFTWARE</div>
+
+	<div class="paragraph" style="text-align:left;">
+	
+	<table class="newstab" width="100%">
+		<tbody>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">Glign</span> is available <a href="https://doi.org/10.5281/zenodo.7173860" target="blank">here</a><br> for download!</span>
+				<span class="goright tdoffcolor tdtiny">12/19/2022</span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">OMR</span> is available on <a href="https://github.com/kevalvora/omr" target="blank">GitHub</a><br> for download!</span>
+				<span class="goright tdoffcolor tdtiny">10/21/2019</span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">KickStarter</span> is available on <a href="https://github.com/pdclab/graphbolt" target="blank">GitHub</a><br> for download!</span>
+				<span class="goright tdoffcolor tdtiny">10/21/2019</span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">WS&VR</span> is available on <a href="http://github.com/farkhor/WS-VR/" target="blank">GitHub</a><br> for download!</span>
+				<span class="goright tdoffcolor tdtiny">09/29/2015</span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">PaRMAT</span> is now available on <a href="http://github.com/farkhor/PaRMAT/" target="blank">GitHub</a><br>for download!</span>
+				<span class="goright tdoffcolor tdtiny">10/29/2014</span>
+			</td>
+		</tr>
+		<tr>
+			<!--<td class="newsbox tdcolor tdualign">03/25/2014:</td>-->
+			<td class="newsbox">
+				<span class="goleft"><span class="tdboldcolor">CuSha</span> is now available on <a href="http://farkhor.github.io/CuSha/" target="blank">GitHub</a><br>for download!</span>
+				<span class="goright tdoffcolor tdtiny">04/08/2014</span>
+			</td>
+		</tr>
+        </tbody>
+        </table>
+	</div>
+
+	</td>
+</tr>
+</tbody></table>
+
+</div>
+</div>
+
+	  </div><!-- end container -->
+	</div><!-- end main-wrap -->
+</div>
+	<!--<div id="footer"/>-->
+
+</body></html>

@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://web.stanford.edu/class/cs124/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CS124 - From Languages to Information (Winter  2025)</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="./css/index3.css" rel="stylesheet" media="screen" type="text/css">
+
+    <!-- Us -->
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body style="">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="https://www.stanford.edu/class/cs124/#">CS 124: From Languages to Information</a>
+          <div id="navbar" class="nav-collapse collapse">
+            <ul class="nav">
+
+              <li><a href="https://web.stanford.edu/class/cs124/#schedule">Schedule</a></li>
+<!--
+              <li><a href="https://web.stanford.edu/class/cs124/#information">Course Information</a></li>
+              <li><a href="https://edstem.org/us/courses/49715/discussion/">Discussion (Ed)</a>
+-->
+
+            </li></ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-unit hidden-phone">
+      <div class="container">
+        <h1>CS 124: From Languages to Information</h1>
+        <a href="https://www.stanford.edu/~jurafsky/"><b>Dan Jurafsky</b></a></h2><br>
+    <b>Winter 2025, Tu/Th 3:00-4:20 in Hewlett 200</b>
+        <div class="row">
+        <p class="span8">
+        The online world has a vast array of unstructured information in the form of language and social networks. Learn how to make sense of it using 
+large language models (LLMs) and other machine learning tools, and how
+to build systems that interact with people via language, from answering questions to giving advice, from regular expressions to information retrieval to transformer-based LLMs!  This class is the broad undergrad intro to numerous grad classes like  cs224N/S/U/C/V, cs246, cs276, cs336, and cs329R/X.
+        </p>
+        </div>
+        <p>
+          <a class="btn btn-primary btn-large" href="https://web.stanford.edu/class/cs124/#schedule">Schedule</a>
+          <a class="btn btn-primary btn-large" href="https://edstem.org/us/courses/69732/discussion/">Ed Discussion</a>
+<!--
+          <a class="btn btn-primary btn-large" href="https://canvas.stanford.edu/courses/203819">Canvas Material</a>
+-->
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <section id="online">
+      <ul>
+          <h3>Welcome to CS124!! Some FAQ</h3>
+
+  <ol>
+      <p>
+  <li>
+    <b>When do I need to come to class? 
+        </b>
+
+          <br>
+          <br>
+<font color="blue"><b>TL;DR:  Tuesdays! All 10 Tuesdays we have one of the 5 live lectures or 5 labs!</b></font>
+          <br>
+          <br>
+          <b>More nuanced answer</b>: CS124 is a flipped class. This means there are mainly recorded lectures and we mostly do labs in class!  Note that the 5 live lectures and the 5 labs are <b>not recorded</b>.
+          <ul>
+              <li> <b>Required attendence in Hewlett 200:</b>  <b>6 days</b>: 
+4 of the 5 live lectures (Tuesday of weeks 1, 4, 6, 10);  not the Transformer lecture in week 7.
+Lab #1 (week 2), and Lab #5 (Week 8).  These lectures and labs will not be recorded and the  material is fair game for the quizzes.
+                  <li> <b>Recommended attendence in Hewlett 200 (and required completion):</b>
+Lab #2, Lab #3, Lab #4, and the Transformers Lecture.  Attendence at these (non-recorded) labs gives you <b>extra credit</b> but if you want you can skip the extra credit and do them yourself at home.  
+<li> <b>Completely optional attendence in Hewlett 200</b>:
+<ul>
+<li> The 2 Thursday <b>tutorial</b> sessions on Jupyter and Numpy. No extra credit, but you should come if you want help with getting set up with PA0 and getting a refresher on jupyter and numpy.
+    <li> Special office hours in Hewlett 200 all the other Thursdays!
+</ul>
+        <li>There is no final exam and (new for this year!) <b>no</b> midterm. We will not use the scheduled final exam  time at all.  The last class requirement is the final programming assignment which is due Wednesday March 12 at 5pm.  The last time you have to come to class in person is Tuesday Mar 11 for my last lecture.
+          <p> <li>
+    <b>Should I come to class if I am sick?</b>
+          Goodness no, of course not! Stay home and get better and don't make everyone else sick!  Mail the staff in advance (see the email below) and they will note that you are sick and give you advice about how to keep up.
+          </ul>
+
+          <p>
+  <li>
+    <b>Can I take this class asynchronously, i.e., if i have another class at the same time?</b>
+    <p> <b>No.</b> The class <b>must be taken synchronously</b>, so that you have the ability to come to all the 12 in-person class sessions; 
+we have found over the years that the labs are necessary and result in everyone learning more.  
+<b>However</b>, if you have a medical reason why you cannot take the class synchronously,
+or because you are required to take another class at the same time and you need the classes
+or else <b>you cannot graduate this quarter,</b>
+you can ask Dan for explicit permission to take the class asynchronously.
+The in-person material is not recorded, so if you are taking the class asynchronously, 
+you must do the labs yourself at home, but won't get the extra credit that the folks who come in person will get. Note: this is only for people with medical or must-graduate-this-quarter excuses.
+<p>
+Another exception: since the required events are <b>all on Tuesdays</b>, if you have a class at this time that happens to meet <b>only on Thursdays</b>, that's ok!
+  <li>
+    <b>Can I audit this class?</b> <p> <b>No and yes.</b> No because the TAs are very hard-working and their workload helping the almost 400 students each year is assigned by the University
+based on enrollment,  so auditors are asking the TAs to work for free, which isn't reasonable or sustainable.   Yes because all the course material is public, and we encourage anyone who wants to learn the material to go through it on their own, as long as they don't ask the TAs to work for them! So that means if you're not in the class we encourage you to watch the videos on YouTube, and do the programming homeworks, but don't submit homeworks or quizzes to be graded, and don't ask questions on Ed that the TAs will need to spend time answering.
+
+          <p> <li>
+          <b>
+              What are the prereqs?
+
+              Prerequisites: CS106B, Python (at the level of CS106A), CS109 (or equivalent background in probability), and programming maturity and knowledge of UNIX equivalent to CS107 (or taking CS107 or CS1U concurrently).
+          </b>
+          In some previous years CS107 and CS109 were optional. Many students advised us that it would have been helpful to have 107 and 109 first.  So now both are required.  You may take them concurrently, and if you have equivalent knowledge that's fine.  It's also useful to have had Math 51, but not required; we'll try to give you pointers to places to make up missing background.  Note:  Because this class often functions as an introduce to text data science for PhD students in other areas, we will definitely  make exceptions for PhD students in other departments who haven't taken 107 and 109, just talk to us! 
+          <p> <li>
+          <b>Can I take this course as a  PhD student in a department that isn't CS?</b>:
+          Yes, we'd love to have non-CS PhDs!  This course is not appropriate for CS grad students (because there are CS graduate versions of all the material in this course, i.e. CS224N, 224U, 224V, 224W, 224C, CS246, CS276), but it's very commonly taken by PhD students in the social sciences or humanities who plan to use text processing methods in their research.  Feel free to contact us if you're worried whether you have the right background as a PhD student from another department.
+          <p> <li>
+          <b>If I have permission to take the course despite not having CS107 (for example because I am a PhD student in another department), what should I do to catch up with the UNIX background I've missed</b>:  Watch some of the "getting start with UNIX" mini-videos from 
+<a href="https://web.stanford.edu/class/archive/cs/cs107/cs107.1186/unixref/">this old cs107 archive</a>:  (1) The "Logging in" videos that are relevant for whatever computer you are using (mac/windows/linux), (2) the first 7 "File System" videos, (3) the first 7 "Useful Commands" videos,  (4) the first 3 "Shell/Productivity" videos, and (5) the "Vim" section from "Editors".
+          <p> <li>
+          <b>More details? <a href="https://web.stanford.edu/class/cs124/#information">below</a></b>.  You are responsible for <b>reading this entire syllabus before the 2nd day of
+              class, January 9</b>!  The <b>textbook is free online pdfs mostly <a href="https://web.stanford.edu/~jurafsky/slp3/">here</a></b>
+          <p> <li>
+          <b>Who do I email if I have questions about personal issues or missing class?</b>
+          For personal issues or extenuating circumnstances, mail
+          <a href="mailto:cs124_requests@lists.stanford.edu">cs124_requests@lists.stanford.edu</a>.  
+This address will be read by Dan and the head TA and the course manager and coordinator to get you answers about missing classes, or about personal issues like OAE.  If you have questions that are in any way technical in nature post them on Ed.
+  <p><li> <b>Most important</b>: Have fun and learn lots!!!!
+  </ol>
+      </ul>
+      <section id="team">
+        <h2> Course Staff </h2>
+        <div class="row">
+          <ul>
+            <div class="instructor">
+              <img src="./images/jurafskysquare.jpeg" style="text-align:center; height:100px">
+              <div style="text-align:center;font-size: 110%"> Dan Jurafsky </div>
+              <div style="text-align:center;font-size: 110%"> Professor </div>
+            </div>
+            <div class="instructor">
+              <img  src="./images/priti124.jpeg" style="text-align:center;height:100px">
+              <div style="text-align:center;font-size: 110%"> Priti Rangnekar </div>
+              <div style="text-align:center;font-size: 110%"> Head TA </div>
+            </div>
+            <div class="instructor">
+              <img src="./images/rivera_headshot.jpg" style="text-align:center;height:100px">
+              <div style="text-align:center;font-size: 110%"> Veronica Rivera </div>
+              <div style="text-align:center;font-size: 110%"> Ethics Postdoc</div>
+            </div>
+          <div class="instructor">
+            <img src="./images/xuheng.png" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Xuheng Cai</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img src="./images/adam_headshot-min.jpg" style="text-align:center;height:100px;">
+            <div style="text-align:center;font-size: 110%">Adam Chun</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/gabriela_headshot.jpeg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Gabriela Cortes Arias</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/katesquare.png" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Kate Eselius</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/daniel_headshot.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Daniel Guo</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/Sri.png" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Sri Jaladi</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/jonathan_lee_headshot" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Jonathan Lee</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/kaseyluo_headshot.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Kasey Luo</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/gabe_pfp.JPG" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Gabe Magaña</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/Elena_headshot_small.jpeg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Elena Recaldini</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/jeong-mini.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Jeong Shin</div>
+              <div style="text-align:center;font-size: 110%"> Ethics TA</div>
+          </div>
+          <div class="instructor">
+            <img  src="./images/savitha_compressed.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Savitha Srinivasan</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+          <div class="instructor">
+            <img src="./images/rachelwang_small.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Rachel Yixing Wang</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+
+          <div class="instructor">
+            <img src="./images/pannisy_headshot_compressed.jpg" style="text-align:center;height:100px">
+            <div style="text-align:center;font-size: 110%">Pannisy Zhao</div>
+              <div style="text-align:center;font-size: 110%"> TA</div>
+          </div>
+      </section>
+
+
+    
+      <section id="schedule">
+        <h2> Schedule </h2>
+        <table class="table table-striped no-more-tables">
+          <thead>
+            <tr>
+              <th>Week
+              </th><th>Date
+              </th><th>Homework
+              </th><th>Quiz
+              </th><th>In-class
+              </th><th>Video Lectures and Readings (to be done by the Monday of the week unless I specify another date)
+          </th></tr></thead>
+          <tbody>
+            <tr id="week1">
+              <td data-title="Week">1
+              </td><td data-title="Date">Jan 7, 9
+              </td><td data-title="Homework">
+                <p> PA 0: <em> Setup and Tutorial </em> 
+                  <br>
+		<small>
+            [<a href="https://github.com/cs124/pa0-jupyter-tutorial">starter code</a>]
+		</small>
+		</p>
+                <p> Due Fri Jan 10, 5:00pm (We'll also go over this in Thursday Jan 9's in-person tutorial )</p>
+
+              </td><td data-title="Quiz"> -
+              </td><td data-title="In-class">
+                <ul class="unstyled">
+                    <li> <b><font color="blue">Tue Jan 7: Dan in-person Lecture: Intro (not recorded) </font></b> 
+                    <p>
+                    <small>
+                    [<a href="https://web.stanford.edu/class/cs124/lec/intro25upload1.pptx">slides pptx</a>
+                    <a href="https://web.stanford.edu/class/cs124/lec/intro25upload1.pdf">slides pdf</a>]
+                    </small>
+
+                  </p></li>
+                    <li> <b><font color="blue">
+                  </font></b></li><li><b><font color="blue"> 
+					  Thurs Jan 9: In-person tutorial:  Jupyter notebooks and PA0  (Optional!)
+                      </font>
+                </li></ul>
+              </td><td data-title="Material">
+
+Watch before Thursday:
+<ul>
+<li><a href="https://canvas.stanford.edu/courses/203819/modules/items/2052894">PA 0 Windows Setup Video</a>
+<li><a href="https://canvas.stanford.edu/courses/203819/modules/items/2052895">PA 0 Mac Setup Video</a>
+</ul>
+
+
+                <ul class="unstyled">
+            </td></tr>
+
+
+            <tr id="week2">
+              <td data-title="Week"> 2
+              </td><td data-title="Date"> Jan 14 and 16
+              </td><td data-title="Homework">
+                <p> PA 1: <em> Regular Expressions </em> 
+                <br>
+		<small>
+            [<a href="https://github.com/cs124/pa1-regular-expressions/">starter code</a>]
+	    <!--[<a href="https://github.com/cs124/pa1-regular-expressions/blob/main/pa1.ipynb">starter code</a>]-->
+		</small>
+		</p>
+                <p> Due Fri Jan 17, 5:00pm </p>
+                </td><td data-title="Quiz">
+                <p> Quiz 1: <em> Text Processing/Edit Distance</em> 
+		<small>
+            [<a href="https://www.gradescope.com/courses/923557/assignments/5541640">quiz 1 on gradescope</a>]
+	    
+		</small>
+		</p>
+                <p> Due Tue Jan 14, 11:59pm </p>
+
+              </td><td data-title="In-class">
+                <ul class="unstyled">
+                  <b><font color="blue"> 
+                      Tue Jan 14: Lab #1: Text Processing with Unix tools
+                            </font></b> 
+                            <small>
+                                (Slides: Solutions are generally on the following slide; don't look at each solution til you've done the problem:)<br>
+				[<a href="https://www.stanford.edu/class/cs124/lec/Lab1_UnixText_2025_upload.pptx">Lab 1 pptx</a>]<br>
+				[<a href="https://www.stanford.edu/class/cs124/lec/Lab1_UnixText_2025_upload.pdf">Lab 1 pdf</a>]<br>
+				[<a href="https://www.stanford.edu/class/cs124/lec/UnixForPoets-toolsReference1.pdf">Lab 1 quick command ref</a>]<br>
+				[<a href="https://www.stanford.edu/class/cs124/inclass_activity_solutions/activity1_solutions_v3.txt">Lab 1 solutions w/numbers</a>]<br>
+                                [<a href="https://www.stanford.edu/class/cs124/lec/secret_ec.txt">secret_ec.txt</a>]
+                            </small>
+                </ul>
+                <ul class="unstyled">
+                  <b><font color="blue"> 
+                    Thur Jan 16: In-person Tutorial: NumPy (Optional)
+                      </font></b>
+                      <small>
+                      [<a href="https://www.stanford.edu/class/cs124/lec//numpy_tutorial.ipynb ">numpy tutorial</a>]
+                      </small>
+              </ul></td><td data-title="Material">
+                    <h5>Basic Text Processing Canvas Videos
+                  <small>
+                  (watch videos before Mon Jan 13)
+                      [<a href="https://www.stanford.edu/class/cs124/lec/TextProc_Dec_2023.pptx">canvas slides pptx</a>]
+                   [<a href="https://www.stanford.edu/class/cs124/lec/TextProc_Dec_2023.pdf"> canvas slides pdf</a>]
+                  </small>
+</h5>
+                </li></ul>
+                <ul class="xunstyled">
+                    <li><a href="https://web.stanford.edu/~jurafsky/slp3/2.pdf">J+M 3rd Chapter 2 "Regular Expressions, Text Normalization, Edit Distance", pages 1-21</a></li>
+
+                </ul>
+                <h5>
+                  Edit Distance Canvas Videos (watch videos before Mon Jan 13)
+                  <small>
+                       [<a href="https://www.stanford.edu/class/cs124/lec/med25.pptx">canvas slides pptx</a>]
+                       [<a href="https://www.stanford.edu/class/cs124/lec/med25.pdf">canvas slides pdf</a>]
+                  </small>
+                </h5>
+
+                <ul class="xunstyled">
+                    <li><a href="https://web.stanford.edu/~jurafsky/slp3/2.pdf">J+M New Chapter 2 "Regular Expressions, Text Normalization, Edit Distance"</a>, pages 22-26
+
+                </li></ul>
+                <ul class="unstyled">
+                  <li>Just for historical reference: Ken Church's original tutorial <a href="https://www.stanford.edu/class/cs124/kwc-unix-for-poets.pdf">Unix for Poets</a>, slides/pages 1-19
+                </li></ul>
+
+            </td></tr>
+            <tr id="week3">
+              <td data-title="Week"> 3
+              </td><td data-title="Date"> Jan 21 and 23
+              </td><td data-title="Homework">
+                <p> PA 2: <em>Naive Bayes and Sentiment Analysis</em>!
+                  <br>
+		<small>
+            [<a href="https://github.com/cs124/pa2-naive-bayes/tree/main">starter code</a>]	
+                </small>
+		</p>
+		<p> Due Fri Jan 24, 5:00pm</p>
+              </td><td data-title="Quiz">
+                <p> Quiz 2: <em>Language Modeling/Naive Bayes</em>
+		<small>
+            [<a href="https://www.gradescope.com/courses/923557/assignments/5568326">gradescope</a>]
+		</small>
+		</p>
+                <p> Due Tuesday Jan 21, 11:59pm</p>
+              </td><td data-title="In-class">
+                <ul class="unstyled">
+                  <b><font color="blue"> 
+                          Tue Jan 21: Lab #2: Naive Bayes and Classification and its harms</a></font></b>
+                      <br>
+                   <small>
+                       (watch NB videos beforehand) <br>
+                       (don't look at the solution until you've completed all the questions!) <br>
+                       [<a href="https://github.com/cs124/labs/blob/main/Lab2_NaiveBayes.md">Lab 2</a>]
+                       [<a href="https://github.com/cs124/labs/blob/main/Lab2_NaiveBayes_Solutions.md">Lab 2 Solutions</a>]
+                   </small>
+                  </b>
+		  <small>
+		  </small>      <br><br>
+                </ul>
+                <ul class="unstyled">
+                    Thu Jan 23: No class: extra in-person TA office hours during class time in classroom
+                  </ul>
+                        <br><br>
+              </ul></td><td data-title="Material">
+                <h5>
+                Language Modeling Canvas Videos (watch before Monday Jan 20)
+                  <small>
+                    [<a href="https://www.stanford.edu/class/cs124/lec/lm_jan25.pptx">canvas slides pptx</a>]
+                    [<a href="https://www.stanford.edu/class/cs124/lec/lm_jan25.pdf">canvas slides pdf</a>]
+                  </small>
+                </h5>
+
+                <ul class="unstyled">
+                    <li> <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">J+M (3ed)  Chapter 3, "Language Modeling with N-grams"</a> pages 1-16 (plus section 3.7, "The Web and Stupid Backoff").
+                </li></ul>
+
+                <h5>
+                Naive Bayes and Text Classification Canvas Videos (watch before Monday  Jan 20)
+                  <small>
+                        [<a href="https://www.stanford.edu/class/cs124/lec/nb_jan25.pptx">canvas slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/nb_jan25.pdf">canvas slides pdf</a>]
+                  </small>
+                </h5>
+                </li></ul>
+                    <li> <a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf">J+M (3ed) Chapter 4, "Naive Bayes and Sentiment Classification"</a> pages 1-14 plus page 18, sections 4.1 through 4.8 and 4.10.
+                        <ul>
+                <li><b> Optional</b>:  Bo Pang, Lillian Lee, and Shivakumar Vaithyanathan. 2002. <a href="https://www.cs.cornell.edu/home/llee/papers/sentiment.pdf">Thumbs up? Sentiment Classification using Machine Learning Techniques.</a> EMNLP 2002, pages 79--86
+                    </ul>
+                </li></ul>
+
+              </td></tr>
+
+
+            <tr id="week3">
+              <td data-title="Week"> 4
+              </td><td data-title="Date"> Jan 28 and Jan 30
+              </td><td data-title="Homework">
+                <p> PA 3: <em>Logistic Regression</em>!
+                  <br>
+		<small>
+            [<a href="https://github.com/cs124/pa3-logistic-regression">starter code</a>]
+                </small>
+		</p>
+		<p> Due Fri Jan 31, 5:00pm</p>
+              </td><td data-title="Quiz">
+                <p> Quiz 3: <em>Logistic Regression</em>
+		<small>
+            [<a href="https://www.gradescope.com/courses/923557/assignments/5633302">gradescope</a>]
+		</small>
+		</p>
+                <p> Due Tuesday Jan 28, 11:59pm</p>
+              </td><td data-title="In-class">
+                <ul class="unstyled">
+                  <b><font color="blue"> 
+                          Tuesday: Dan in-person Lecture (required and not recorded): "Social NLP/ NLP for Computational Social Science"
+                  </b></font>
+                  <small>
+                        [<a href="https://www.stanford.edu/class/cs124/restricted/cs124_css_25.pdf">slides pdf</a>]
+                  </small>
+                      <br>
+		        <br><br>
+                </ul>
+                <ul class="unstyled">
+                    Thursday: No class: extra in-person TA office hours during class time in Hewlett 200
+                  </ul>
+                        <br><br>
+              </ul></td><td data-title="Material">
+                <ul class="unstyled">
+                    <b>Logistic Regression Canvas Videos</b> (watch/read before Mon Jan 28)
+                  <small>
+                        [<a href="https://www.stanford.edu/class/cs124/lec/logreg.pptx">canvas slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/logreg.pdf">canvas slides pdf</a>]
+                  </small>
+                </ul>
+                <ul class="xunstyled">
+                  <li> <a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf">J+M (3ed) Chapter 5, "Logistic Regression"</a> pages 1-17.  Page 18 and 21 may also be useful! 
+
+
+            </li></ul>
+              </td></tr>
+
+
+            <tr id="week4">
+              <td data-title="Week"> 5
+              </td><td data-title="Date"> Feb 4 and 6
+              </td><td data-title="Homework">
+                <p> PA 4: <em>Information Retrieval</em>
+                  <br>
+                <small>
+                    [<a href="https://github.com/cs124/pa4-information-retrieval">starter code</a>]
+    </small></p>
+                <p> Due Fri Feb 7, 5:00pm </p>
+              </td><td data-title="Quiz">
+                  <p> Quiz 4: <em>Information Retrieval</em> 
+                  <small>
+                      [<a href="https://www.gradescope.com/courses/923557/assignments/5674082/">gradescope</a>]
+              </small></p>
+                <p> Due Tuesday Feb 4, 11:59pm</p>
+              </td><td data-title="In-class">
+                <ul class="unstyled">
+                    <li>
+                  <b><font color="blue"> 
+              Tuesday: Lab #3: Information Retrieval
+                  </b></font>
+                  <br>
+                  <small>
+                  [<a href="https://github.com/cs124/labs/blob/main/Lab3_InformationRetrieval.md">lab 3</a>]
+                  [<a href="https://github.com/cs124/labs/blob/main/Lab3_InformationRetrieval_Solutions.md">solutions</a>]
+		  </small>
+                <br>
+                <br>
+                <ul class="unstyled">
+                    <li>
+                    Thursday: No class: extra in-person TA office hours during class time in Hewlett 200
+
+                    </li></ul>
+              </td><td data-title="Material">
+                  <b>Chris Manning Canvas Video: Information Retrieval (I) </b> (watch/read before Monday Feb 3)
+                  <small>
+                        [<a href="https://www.stanford.edu/class/cs124/lec/ir-1.pptx">canvas slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/ir-1.pdf">canvas slides pdf</a>]
+                  </small>
+                 </h5>
+
+                <ul class="xunstyled">
+                    <li>
+                  <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">MR+S</a>
+                    Chapter 1: Boolean Retrieval (pages  1-17)
+                    </li><li>
+                  <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">MR+S</a>
+                    Chapter 2: Term vocabulary and postings lists (only pages  33-42)
+                </li></ul>
+
+                  <b>Chris Manning Canvas Video: Information Retrieval (II) </b> (watch/read before Monday Feb 3)
+                  <small>
+                        [<a href="https://www.stanford.edu/class/cs124/lec/ir-2.pptx">canvas slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/ir-2.pdf">canvas slides pdf</a>]
+                  </small>
+                 </h5>
+                <ul class="xunstyled">
+                    <li>
+                  <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf">J+M (3ed) Chapter 14, "QA and IR", just pages 1-6</a>
+                </li><li>
+                  <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">MR+S</a> Chapter 6: Scoring, term weighting, and the vector space model, (only pages 100 and 107-116)
+                </li><li>
+                  <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">MR+S</a>
+                Chapter 8: Evaluation in Information Retrieval (only pages 139-149)
+            </li></ul>
+
+            </td></tr>
+
+
+            <tr id="week5">
+              <td data-title="Week"> 6
+              </td><td data-title="Date">Feb 11 and 13
+              </td><td data-title="Homework">
+                <p> PA 5: <em>Embeddings and Vector Semantics</em> 
+                  <small>
+                      [<a href="https://github.com/cs124/pa5-embeddings">starter code</a>]
+                  </small>
+                </p>
+                <p> Due <b>Fri Feb 14, 5:00pm.</b> </p>
+              </td><td data-title="Quiz">
+                <p> Quiz 5: <em>Embeddings and Vector Semantics</em> 
+                  <small>
+                      [<a href="https://www.gradescope.com/courses/923557/assignments/5733070/">gradescope</a>]
+                  </small>
+                </p>
+                <p> Due Tue Feb 11, 11:59pm</p>
+              </td><td data-title="In-class">
+              <!-- In-class material here -->
+
+                  <b><font color="blue"> 
+                          Tuesday: Guest Lecture (required and not recorded): <a href="https://www.dorademszky.com/">Dora Demszky, Graduate School of Education</a>: "Empowering educators via language technology" (plus Dan mini-lecture on contextual embeddings)
+                  </b></font>
+                    <br>
+                    <small>
+                    [<a href="https://www.stanford.edu/class/cs124/restricted/demszky25.pdf">Demszky slides pdf</a>]
+                    [<a href="https://www.stanford.edu/class/cs124/lec/ContextualEmbeddings25.pdf">Dan embeddings slides pdf</a>]
+                    </small>
+              </p><p>
+                    Thursday: No class: extra in-person TA office hours during class time in Hewlett 200
+
+              </p>
+<br><br><br>
+              </td><td data-title="Material">
+                <ul class="unstyled">
+                    <li><b>Vector Semantics and Embeddings Canvas Videos</b>
+                    <small>
+                    [<a href="https://www.stanford.edu/class/cs124/lec/vectorsemantics2024.pptx">slides pptx</a>]
+                    [<a href="https://www.stanford.edu/class/cs124/lec/vectorsemantics2024.pdf">slides pdf</a>]
+                    </small>
+                </li></ul>
+                <ul class="xunstyled">
+                        <li><a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf"> J+M (3ed) Chapter 6: Vector Semantics, 1-7, 17-26, and review 7-16 (should already be familiar)</a>
+                </li></ul>
+<!-- COMMENTED OUT FOR NOW
+                <ul class="unstyled">
+                    <li><b>Parts of Speech and Named Entities Canvas Videos</b>
+                        <small>
+                        [<a href="https://www.stanford.edu/class/cs124/lec/8_POSNER_intro_May_6_2021.pptx">slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/4_pos_ner.pdf">slides pdf</a>]
+                    </small>
+                </li></ul>
+                <ul class="styled">
+                    <li><a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf"> J+M (3ed) Chapter 8: Sequence Labeling for Part of Speech and Named Entities, just pages 1-8 <b>only</b></a>
+                </li></ul>
+-->
+
+            </td></tr>
+
+            <tr id="week6">
+              <td data-title="Week"> 7
+              </td><td data-title="Date"> Feb 18 and 20
+              </td><td data-title="Homework">
+		 <p> PA 6: <em>Neural Networks</em>
+		    <small>
+                 [<a href="https://github.com/cs124/pa6-neural-networks">starter code</a>]
+		    </small>
+		</p>
+        <p> Due <b> Fri Feb 21</b>, <b>5:00pm </b></p>
+              </td><td data-title="Quiz">
+                <p> Quiz 6: <em>Neural Networks</em> 
+                    <small>
+                        [<a href="https://www.gradescope.com/courses/923557/assignments/5733073">gradescope</a>]
+                    </small>
+                </p>
+                <p> Due <b>Tue Feb 18, 11:59pm.</b></p>
+              </td><td data-title="In-class">
+              <!-- In-class material here -->
+              <p>
+                  <font color="blue"><b>Tuesday: Dan live Lecture (optional but strongly recommended, not recorded): "LLMs and Transformers!  (Plus more  on backprop if we have time)"</b></font> 
+                    <small>
+                    [<a href="https://www.stanford.edu/class/cs124/lec/LLM_cs124_week7_2025.pptx">slides pptx</a>]
+                    [<a href="https://www.stanford.edu/class/cs124/lec/LLM_cs124_week7_2025.pdf">slides pdf</a>]
+		    </small>
+                    <br>
+
+              <p>
+                    Thursday:  No class: extra in-person TA office hours during class time in Hewlett 200
+                  <br>
+                  <br>
+
+                    </font></b>
+                      </font>
+                  </small>
+                  <br>
+
+              </p>
+
+              
+              </p></td><td data-title="Material">
+                <ul class="unstyled">
+                    <li><b>Neural Networks Video </b>
+                    <small>
+                    [<a href="https://www.stanford.edu/class/cs124/lec/7_NN.pptx">slides pptx</a>]
+                    [<a href="https://www.stanford.edu/class/cs124/lec/7_NN.pdf">slides pdf</a>]
+                    </small>
+                </li></ul>
+                <ul class="xunstyled">
+                        <li><a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf"> J+M (3ed) Chapter 7: Neural Networks</a> (skip section 7.7 on Training Neural Language Models).
+                </li></ul>
+                
+
+            <tr id="week7">
+              <td data-title="Week"> 8
+              </td><td data-title="Date"> Feb 25 and Feb 27
+              </td><td data-title="Homework">  
+              </td><td data-title="Quiz">
+                <p> Quiz 7: <em>Transformers</em> 
+                    <small>
+                        [<a href="https://www.gradescope.com/courses/923557/assignments/5800530/">gradescope</a>]
+                        
+                    </small>
+                </p>
+                <p> Due <b>Tue Feb 25, 11:59pm.</b></p>
+                </p>
+
+                </td><td data-title="In-class">
+
+                <p>
+                  <b><font color="blue"> 
+                Tuesday: Lab #5: PA7 and Git 
+                  </b></font>
+                    <small>
+
+                  	[<a href="https://github.com/cs124/labs/blob/main/Lab5_Chatbots.md">Lab  5</a>]
+                  	[<a href="https://github.com/cs124/labs/blob/main/Lab5_Chatbots_Solutions.md">Lab  5 Solutions</a>]
+                  </small>
+                    <small>
+                  </small>
+
+                </p><p>
+                  Thursday:  No class: extra in-person TA office hours during class time in Hewlett 200
+
+              </p></td><td data-title="Material">
+
+                <ul class="unstyled">
+			<li>The lecture material is the <b>LLM/Transformer lecture that I gave live on Feb 18</b>. There is no recording,  but the slides are listed above in week 7 and the reading (which is similar to the lecture) is:
+                        <li><a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf"> J+M (3ed) Chapter 9: The Transformer</a>.
+                        <li><a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf"> J+M (3ed) Chapter 10: Large Language Models (only pages 1-11 and page 17</a>.
+                </li></ul>
+                
+                <br>
+</li></ul>
+
+            </td></tr>
+
+            <tr id="week8">
+              <td data-title="Week"> 9
+              </td><td data-title="Date"> Mar 4 and 6
+              </td><td data-title="Homework">
+		<p> PA 7: <em>Chatbot</em>
+		    <small>
+                [<a href="https://github.com/cs124/pa7-chatbot">starter code</a>]
+		    </small>
+		</p>
+		<p> Due <b>Wed Mar 12</b>, <b>5:00pm</b> </p> 
+              </td><td data-title="Quiz">
+                <p><em>Quiz 8: Recommendation Systems</em>
+                <small>
+<!-- COMMENTED OUT FOR NOW
+                    [<a href="https://www.gradescope.com/courses/674714/assignments/4162018">gradescope</a>]
+-->
+                </small>
+                </p>
+
+                <p> Due Tues Mar 4</b>, 11:59pm</p> 
+              </td><td data-title="In-class">
+              <!-- In-class material here -->
+                  <b><font color="blue"> 
+                Tuesday Lab #4: Collaborative Filtering and Ethical Use of LLMs in the Classroom
+                  </b></font>
+                  <br>
+                  <small>
+                  [<a href="https://github.com/cs124/labs/blob/main/Lab4_LargeLanguageModels.md">Lab 4</a>]
+                  [<a href="https://github.com/cs124/labs/blob/main/Lab4_LargeLanguageModels_Solutions.md">Lab 4 solutions</a>]
+                  </small>
+                  <br>
+
+                <br>
+                  Thursday:  No class: extra in-person TA office hours during class time in Hewlett 200
+                  <small>
+                  </small>
+              </p></td><td data-title="Material">
+                <ul class="unstyled">
+                    <li><b>Chat Bot Videos (watch by Monday Mar 3)</b>
+                    <small>
+    [<a href="https://www.stanford.edu/class/cs124/lec/Dialogue_2024.pptx">slides pptx</a>]
+                        [<a href="https://www.stanford.edu/class/cs124/lec/Dialogue_2024.pdf">slides pdf</a>]
+                    </small>
+                    </small>
+                </li></ul>
+
+                <ul class="xunstyled">
+                    <p>
+                    </p><li> <a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf">J+M (3ed) Chapter 15: Chatbots and Dialogue Systems</a>
+                </li></ul>
+
+                </blockquote>
+
+                <h5>
+                Recommender systems and Collaborative Filtering Canvas videos  (watch by Monday Mar 3)
+                  <small>
+    [<a href="https://web.stanford.edu/class/cs124/lec/collaborativefiltering21.pptx">slides pptx</a>]
+                        [<a href="https://web.stanford.edu/class/cs124/lec/collaborativefiltering21.pdf">slides pdf</a>]
+                  </small>
+              </h5>
+                <ul class="unstyled">
+                  <li> Jure Leskovec, Anand Rajaraman, Jeff Ullman. 2014.
+<a href="http://infolab.stanford.edu/~ullman/mmds/ch9.pdf"> Mining of Massive Datasets. Chapter 9</a> 3rd edition. pages 319-339 (sections 9.1, 9.2, 9.3; you can skip 9.2.7).
+              </li></ul>
+                <ul class="unstyled">
+                    <li>
+                </li></ul>
+            </td></tr>
+
+            <tr id="week9">
+              <td data-title="Week"> 10
+              </td><td data-title="Date"> Mar 11 and 13
+              </td><td data-title="Homework">
+                <p> Reminder: PA 7: <em>Chatbot</em>
+                due <b>Wed Mar 12</b>, 5:00pm </p> 
+              </td><td data-title="Quiz">
+                <p> Quiz 9: <em>Pagerank and Networks</em> 
+		  <small>
+		  </small>
+		</p>
+                <p> Due Tues Mar 11, 11:59pm</p>
+              </td><td data-title="In-class">
+                <!-- In-class material here -->
+                  <b><font color="blue"> 
+                  </b></font>
+                  <font color="blue"><b>Tuesday: Dan Live Lecture (required and not recorded): "Large Language Models Continued"</b></font> <br>
+                  <small>
+                      [<a href="https://www.stanford.edu/class/cs124/lec/finallecture_cs124_2025.pdf">slides pdf</a>]
+                      [<a href="https://www.stanford.edu/class/cs124//lec/finallecture_cs124_2025.pptx">slides pptx</a>]
+                   </small>
+                  <br>
+                <br>
+                <br>
+                  Thursday: No class <b>(but no extra office hours)</b>
+              </td><td data-title="Material">
+                <h5>
+                Web graphs, Links, and PageRank (watch by Mon Mar 10)
+                  <small>
+                    [<a href="https://spark-public.s3.amazonaws.com/cs124/slides/web.pptx">slides pptx</a>]
+                      [<a href="https://spark-public.s3.amazonaws.com/cs124/slides/web.pdf">slides pdf</a>]
+                  </small>
+                </h5>
+                <ul class="unstyled">
+                    <li> <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">MR+S</a>
+                    Chapter 21: Link Analysis, just pages 421-433 (Skip section 21.3 and 21.4)
+                    </li>
+                </ul>
+                <h5>
+                  Social Networks Canvas Videos  (watch by Mon Mar 10)
+                  <small>
+                    [<a href="https://www.stanford.edu/class/cs124/lec/socialnetworks21.pptx">slides pptx</a>]
+                      [<a href="https://www.stanford.edu/class/cs124/lec/socialnetworks21.pdf">slides pdf</a>]
+                  </small>
+                </h5>
+                <ul class="xunstyled">
+                  <li>
+                  David Easley and Jon Kleinberg. 2010.
+                  <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/"> Networks, Crowds, and Markets: Reasoning About a Highly Connected World</a>.
+                  Chapter 2, Sections 3.1-3.3 and Secs 18.1-18.5.
+                  Cambridge</li>
+                </ul>
+                <small>
+                </small>
+                <h5>
+
+                  <small>
+                  </small>
+              </h5>
+            </td></tr>
+
+          </tbody>
+        </table>
+      </section>
+
+        <p></p><ul>
+      </ul></section>
+
+      <section id="information">
+        <h3> Logistics </h3>
+        <dl class="dl-horizontal">
+          <dt> Instructor </dt>
+          <dd>
+            <address>
+              <strong>Dan Jurafsky</strong> (jurafsky@stanford.edu) <br>
+              Office: Margaret Jacks 117  <br>
+	      Office Hours: Book an appointment for Thursdays 3-4:20 (except week 2, in which case they are Tues Jan 14, 4:30-5:40). <br>
+	      (instructions for booking are  <a href="https://canvas.stanford.edu/courses/203819/pages/cs124-office-hours">here</a>)
+
+<!--
+Tuesdays 4:30-5:50 after class except Jan 7.  I'm going to 
+              try an experiment with individual one-at-a-time in-person office hours, where we have a 10 minute slot and possibly even take a walk outside. We can walk over from class together or you can just come to 
+              my office, which is Margaret Jacks 117! -->
+            </address>
+          </dd>
+
+<p>
+</p>
+          </dd>
+
+	  <dt> TA Office Hours</dt>
+	  <dd>(see more details <a href="https://canvas.stanford.edu/courses/203819/pages/cs124-office-hours">here</a> including the virtual queue and the zoom link)</dt>
+
+          <dd>
+            <ul class="unstyled"> 
+		    <li>Monday 3:30 PM - 6:30 PM - GESB 150 (Green Earth Sciences B 150)
+		    <li>Tuesday 5 PM - 8 PM - virtual
+			    <li>Wednesday 3:30 PM - 6:30 PM - 260-003, Pigott Hall, Main Quad
+				    <li>Thursday
+					    <ul>
+						    <li>3 - 4:20 PM in Hewlett 200
+							    <li>4:30 - 7:30 PM week 2 / 4:30 - 6 PM week 3 onwards - 540-108, Bldg.540, Blume Earthquake Center
+								    </ul>
+								    <li>Friday 12:30 - 3:30 PM - 100-101K, Bldg.100, Main Quad
+									    <li>Saturday 9:30 AM - 12:30 AM - virtual
+										    <ul>
+
+<!--
+<li>[Office hours begin on Saturday Jan 13]
+<li> Mondays: 7:00-9:45pm at Lathrop 299 (except not MLK Day or President's Day)
+<li> Tuesdays: 6:00-8:45pm virtual (details <a href="https://edstem.org/us/courses/49715/discussion/4102521">here</a>)
+<li> Wednesdays: 4:30-7:15pm in McMurtry Building ART350
+<li> Thursdays: <ul>
+<li>Weeks 3,5,6,9: 3:00-5:45pm Hewlett 200 
+<li> Weeks 4,7: 3:00-4:30pm Hewlett 200  + 4:30-5:45pm Hewlett 103
+<li> Weeks 2,10: 4:30-7:15pm Hewlett 200
+<li> Week 8: No regular office hours
+</ul>
+<li> Fridays: 9:00am-11:45am at Gates B12 (except none Week 8)
+<li> Saturdays: 1:00-3:45pm virtual (details <a href="https://edstem.org/us/courses/49715/discussion/4102521">here</a>)
+-->
+            </ul>
+          </dd>
+
+          <dt> Class Time </dt>
+          <dd>
+          <p>
+          Tuesday and Thursday 3:00-4:20
+          </p>
+          </dd>
+          <dt> Attendance </dt>
+          <dd>
+          <p>
+          We require you come to 6 classes: 4 of the 5 live lectures (except Transformers) and lab #1  and lab #5 and strongly strongly recommend the other lecture, 3 labs and 2 tutorials, you will learn more from doing them with other people (I won't require attendance at labs 2/3/4 but I will give extra credit for attending labs 2/3/4).
+          For any lab you miss,  you must still do them at home yourself.
+          The course can be taken asynchronously only if you have permission from Dan due to a required conflict or medical issue.    
+          Also: different people learn better from different combinations
+                  of videos/lectures, reading the chapters, coming to the labs,
+                  and coming to office hours.
+                  But I will say that students who do all four tend to do the best on 
+                  quizzes and in the course in general.
+          </p>
+          </dd>
+
+
+          <dt> Email </dt>
+          <dd>
+          <p>
+          <b>Alas, we can't reply to email sent to individual staff members.</b>
+          If you have a question that is not confidential or personal,
+          post it on the <a href="">Ed Discussion forum</a>!
+          Responses are quicker and you'll also be helping others with the same question!
+          To contact the teaching staff directly,
+           come see us in office hours! 
+           <p>
+           If that is not possible, you can also email (non-technical questions) to the course staff list,
+          <a href="mailto:cs124_requests@lists.stanford.edu">cs124_requests@lists.stanford.edu</a>.
+          For urgent requests: We check the staff email list very frequently, but please don't worry if you don't hear from us right away. We will do our best to get back to you within a day or so. Just make sure to send an email as soon as you have the request so it's timestamped!
+          <p>
+          If you have a matter to be discussed privately, come to office hours
+          or use 
+          <a href="mailto:cs124_requests@lists.stanford.edu">cs124_requests@lists.stanford.edu</a>
+          to make an appointment.
+          For grading questions, please talk to us after class or during office hours.
+          </p>
+
+          <p>
+          Class announcements will be on Ed Discussion (although we will
+          occasionally try Canvas and  mailing lists). We will assume that everyone reads all announcements.
+          </p>
+
+          </dd>
+          <dt> Honor Code </dt>
+          <dd>
+          <p>
+          Since we occasionally reuse homeworks from previous years,
+           we expect students not to copy, refer to, or look at the solutions in preparing their answers. It is an honor code violation to intentionally refer to a previous year's solutions. This applies both to the official solutions and to solutions that you or someone else may have written up in a previous year. It is also an honor code violation to find some way to look at the test set, or to  interfere in any way with programming assignment scoring or tampering with the submit script. It's also an honor code violation to use ChatGPT or any automatic coding system to  write your code for you.
+
+          </p>
+	  <p>
+Unlike prior years, students <b>are</b> allowed to collaborate on quizzes. However, you must each do your own work and only discuss after; each person will be uploading their own work in addition to the answers.
+</p>
+
+<p>
+CS124 follows the general Stanford policy on generative AI which is that "use of or consultation with generative AI shall be treated analogously to assistance from another person. In particular, using generative AI tools to substantially complete an assignment or quiz (e.g. by entering quiz or assignment questions) is not permitted", just as having someone do your homework or quizzes for you is not permitted. 
+
+
+          </dd><dt> Textbooks </dt>
+          <dd>
+            <ul class="unstyled">
+              <li>
+                  There is no required textbook, but I'll expect you to know the textbook/reading material listed above, and will test it on the quizzes.
+              <ul>
+                  <li>Online new chapters from <a href="https://web.stanford.edu/~jurafsky/slp3/">Jurafsky and Martin. third edition August 20, 2024 release. <em>Speech and Language Processing</em>.</a>
+                  </li><li>Chapters from Manning, Raghavan, and Schutze. 2008. <em>Introduction to Information Retrieval</em>.  Cambridge University Press.
+                  You can buy the book, get it from the library, or it's also
+                  available online <a href="https://site.ebrary.com/lib/stanford/docDetail.action?docID=10240274">*HERE*</a>.
+              </li></ul>
+            <p></p>
+          </li></ul></dd>
+
+        <dt>Course Description</dt>
+        <dd>
+        <p>
+        Extracting meaning, information, and structure from human language text, speech, web pages, social networks. Introducing methods (string algorithms, edit distance, language modeling, machine learning, logistic regression, neural networks, neural embeddings, inverted indices, collaborative filtering, PageRank), applications (chatbots, sentiment analysis, information retrieval, text classification, social networks, recommender systems), and ethical issues.
+        </p>
+        </dd>
+        <dt>Prerequisites</dt>
+        <dd>
+        <p>
+              CS106B, Python (at the level of CS106A), CS109 (or equivalent background in probability), and programming maturity and knowledge of UNIX equivalent to CS107 (or taking CS107 or CS1U concurrently).
+        </p>
+        </dd>
+
+      </dl>
+
+      <h3> Required Work </h3>
+
+      <i>From Languages to Information</i> is a <b>flipped class</b> with  much of the material online.  All the lectures (except 5 live lectures) have been prerecorded, and you can watch them at home.
+        The weekly quizzes and programming homeworks will be automatically uploaded and graded.
+        Lectures are available in the Modules section on <a href="https://canvas.stanford.edu/courses/186110">Canvas</a>.  Quizzes and homeworks are on Gradescope and github, but you can find them all on this webpage!!
+
+      <dl>
+        <dt>Prerecorded Video Lectures</dt>
+        <dd><p>
+        Most weeks, we will ask you to watch a set of video lectures (2 to
+        2.5 hours total). Most videos will have some in-video questions embedded
+        in them, which you should answer. You are required to watch the videos 
+        but the embedded quizzes are not counted toward the final grade.
+        </p></dd>
+
+        <dt>In-class Lectures</dt>
+        <dd><p>
+    5 lectures will be live, and are required (except Week 7 Transformers lecture is only Strongly Recommended).  For all 5 the material will be on the quizzes.
+        </p></dd>
+
+        <dt>Labs</dt>
+        <dd><p>
+ There are 5 in-class labs are in which we do group problem-solving activities.
+ The labs are <b>required</b> and will be tested on the quizzes, meaning that if you can't make a particular in-person lab, you must still do the  exercises at home instead.  But  Lab 1 and Lab 5 are required to be attended in-class; the other 3 you can do at home.
+ </p></dd>
+
+        <dt>Automated Review Quizzes</dt>
+        <dd><p>
+        After watching a week's video lectures, we will ask you to answer
+        an open-notes, open-book review quiz (about 5-6 questions) on the content
+        that you just learned.  These quizzes are <b>not timed</b>, they are <b>open book</b>, and they
+        may be attempted an <b>infinite</b> number of times. The questions, as
+        well as the options for each question, may change and be randomly selected from a
+        larger pool each time you take a quiz. 
+        You will not see your quiz grade/correct answers until after the due date,
+        but the system will take the the score from the <b>last submission</b> of  all your infinitely-allowed submissions for 
+        the quiz.  So if you worry you might have got something wrong, just submit another one!
+        Review Quizzes for each week are due 11:59pm Tuesday
+        of the following week  <b>There are no late days for review quizzes.</b>  Because of the strict no-late-day policy, we will drop your lowest scoring quiz (i.e. we will only count your best 8 of the 9 quizzes in your final grade).
+        </p>
+<p>
+<b>Can I work with my friends on the quiz?</b> Yes, you can work with your pair programming partner.  But you must each do the problem yourselves, and only then discuss with your partner, and you each submit separately (and you will have to show your own work in the "show your work" section when you upload the quiz answers).
+        </p>
+</dd>
+
+
+        <dt>Class Participation</dt>
+        <dd><p>
+        You have to watch all lectures, and attendance
+        for the 5 live lectures is required (except for the Transformer lecture, which is only Strongly Recommended). The labs are <b>required</b> and we will test material from them on the quizzes, and labs 1 and 5 must be attended in person.  However, <b>attendance</b> for labs 2,3,4 is only strongly recommended; you may do them yourself at home if you really cannot come to class.
+        <b>You can get extra credit for class participation and other things by:</b>
+	Coming to labs 2/3/4 in person; particularly answers on the class Ed forum, helping out other students in office hours or labs, being the first person to find typos in the textbook (not counting bugs in figure or chapter numbering), speaking up in the labs.  Plus there will be extra credit problems on some of the labs and possibly PAs.
+        </p></dd>
+
+        <dt>Programming Assignments</dt>
+        <dd><p>7 Python programming assignments. All are due Fridays at 5pm.
+        <p>
+        <b>Programming Assignment Collaboration for PA 1-6:</b> You may talk to anybody you want about
+        the assignments and bounce ideas off each other.  And if you want, you can also choose a partner and do pair programming for PA 1-6.  Pair programming has many advantages for learning!!!  You and your pair-partner can discuss code, 
+        but it's important that each of you work on each part of the assignment so that you're comfortable with the whole assignment, since assignments build on each other (and we will test concepts from the assignments on the quizzes).
+        If you choose to pair-program, you should specify in the submission who your partner is.
+        We will use the normal  automatic checks for overlap between your code and other students' code who are not your pair partner.  You must describe in your writeup exactly who did what in your code.
+
+        <p>
+        <b>Programming Assignment Collaboration for PA 7:</b> PA7 is a group homework that must be done in groups.  You will  work together with your group, and write code together.  Groups must be of size 3 or 4.  To work in a group of size 2, you must get special permission from the staff.  You cannot work by yourself on PA 7, because part of the goal of this homework is to learn to work on group projects.  You must describe in your writeup in detail exactly who in your group did what, and who worked on which parts of the assignment/code.
+        </p>
+        </dd>
+
+        <dt>Late homeworks</dt>
+        <dd><p>You have a total of 4 free late (calendar) days to use on programming assignments 1-6.  If you are pair programming, late days are still individual (i.e if one of you has used up late days, and one has not, and you submit a homework late one day, only the student without remaining late days will be penalized).
+        <b>You cannot use late days on PA 7.</b>
+        Once late days are exhausted, any PA turned in late will be penalized
+        20% per late day. Each 24 hours or part thereof that a homework is late
+        uses up one full late day.   However, no assignment will be accepted
+        more than four days after its due date.
+        </p></dd>
+
+        <dt>Readings</dt>
+        <dd><p>This class has a significant amount of textbook reading.  Most weeks have around 25 textbook pages.
+        The homeworks and quizzes are based heavily on the readings.
+        </p></dd>
+
+              
+
+        <p></p>
+
+        <dt>Final grade computation</dt>
+        <dd>
+          <ul class="unstyled">
+            <li> 73% homeworks (PAs 1-6 are each worth the same, 9% (ignore the different point values for each homework). PA7 is worth  18%, double the others, PA0 is worth 1%.)
+            </li><li> 27% weekly review quizzes, each identically worth 27%/8, because the lowest quiz is dropped)
+          </li></ul>
+        <dt>Final letter grades</dt>
+<br>
+                    (the numerator will include your extra credit, the denominator does not include possible extra credit (otherwise it wouldn't be extra credit))
+        <dd>
+          <ul class="unstyled">
+            </li><li> A+: 102.000% and above strictly no rounding (i.e., not 101.99% or below)
+            <li> A: 93% and above of the total points  
+            <li> A-:  90% and above of the total points  
+            <li> B+:  87% and above of the total points  
+            <li> B:  83% and above of the total points  
+            <li> B-:  80% and above of the total points  
+            <li> C+:  77% and above of the total points  
+            <li> etc.
+            </li><li> 
+          </li></ul>
+
+        </dd>
+      </dl>
+
+      </section>
+
+      <hr>
+      <footer>
+      </footer>
+
+    </div>
+
+
+
+        
+        
+        <p></p>
+</body></html>

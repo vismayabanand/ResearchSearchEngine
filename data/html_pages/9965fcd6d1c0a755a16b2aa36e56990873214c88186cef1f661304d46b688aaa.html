@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <http-equiv="pragma" content="no-cache">
+    <title>WebAuth Login</title>
+    <link href='https://cs.stanford.edu/style.css' rel='stylesheet' type='text/css'>
+  </head>
+
+  
+
+  <body onload="document.login.username.focus();">
+    
+
+    
+
+    <div class="loginbox" align="center">
+        <br />
+	<tr>
+          <img alt="Login" src="/images/CS.gif">
+            <br />
+            <br />
+            <div class="loginform" align=center>
+              <form name="login"
+                    action="/login"
+                    method="post" autocomplete="OFF"
+                    enctype="application/x-www-form-urlencoded">
+                <input type="hidden" name="rm" value="index">
+                <input type="hidden" name="RT"
+                       value="aBlatU/HNRoFgtxwkSHUdCx0CapQPy8ST2ReBIy9uWr0wsMHlBpq8GAmxjq2y8aOGhYXF4dYy+PAvIOfn2DbPBYU3Mrl6J75s7LN0Au2tbGkgmQDcmcGgS7gfMFy6QI+djdBoNV8qVmAnni0sRL7iEuNq91ei0VaGPd5Db3CQcZ6u1DPsl6Gnqt17zhJ5MPOVA+hDp2Fku1XVqG5eRvyofhYcZ7xV35DZRGF7nnA2nVcp0TEV+PGl7/V/Gzu6me7xorHQg==">
+                <input type="hidden" name="ST"
+                       value="aBiUT8Oiz4fEB/WNJfO24Xk4yurlVrFmqpe7jJlMOv1nKIqdSun/UTdIDav4hHQpG6FTsZ+94prd472bhuIZfxHQgQpTdGaylsu2T1yijDsQSJ3cfJeHyy7hPut7lSEVK9/Va5iROTKnARWIIZREiUDcGQDhFVw/jEWnzS/Fu5zkq/5GjwEdzdIkYydh79/HGitbrw==">
+                <input type="hidden" name="login" value="yes">
+                <table>
+                  <tr>
+                    <td align=right>Username:</td>
+                    <td><input name="username" type="text"
+                               value=""
+                               size="18"><br/></td>
+                  </tr>
+                  <tr>
+                    <td align=right>Password:</td>
+                    <td><input name="password" type="password" size="18"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2" align="right">
+
+  
+                      <input type="checkbox" name="remember_login" value="yes"
+                             checked="checked">
+  
+
+                      <font size="2">I use this machine regularly.</font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="right">
+                      <input type="submit" name="Submit" value="Login">
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+            <div class="loginlinks">
+              <a href="https://cs.stanford.edu/computing-guide/access/csid">WebAuth Help</a>
+              
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    
+
+    <div class="trailer">
+      <p align="center"><b>Caution:</b> 
+      Never enter your CSID WebAuth username and password on a web page
+      unless the page is a page directly served by the login
+      server cs.stanford.edu.</p>
+    </div>
+  </body>
+</html>

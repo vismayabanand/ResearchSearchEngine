@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Data Analysis Projects -     Machine Learning - CMU - Carnegie Mellon University</title>    
+    <meta content="Data Analysis Projects" name="description"/>
+    <meta content="Carnegie Mellon University" name="author"/>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                	            	            	            	            
+                        
+              
+    
+        
+        
+            
+
+<meta content="Data Analysis Projects - Machine Learning - CMU - Carnegie Mellon University" property="og:title"/>    
+    <meta content="Data Analysis Projects" property="og:description"/>
+    <meta content="website" property="og:type"/>
+<meta content="https://www.ml.cmu.edu//research/data-analysis-projects.html" property="og:url"/> 
+    <meta content="https://www.ml.cmu.edu//og-img.jpg" property="og:image"/>
+<meta data-siteId="cs-machine-learning-2" id="siteId"/>
+<!-- Page ID for Siteimprove deep linking. -->
+<meta content="1e27712d800269db5200e9c0807d73f2" name="id"/>
+
+    
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//www.cmu.edu/common/standard-v6/css/main.6.7.min.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="//www.cmu.edu/common/standard-v6/css/print.min.css" media="print" rel="stylesheet" type="text/css"/>
+    
+    <link href="//www.cmu.edu/favicon.ico" rel="icon"/>
+    <link href="//www.cmu.edu/favicon-152.png" rel="apple-touch-icon-precomposed"/>
+    <meta content="#9f0000" name="msapplication-TileColor"/>
+    <meta content="//www.cmu.edu/favicon-144.png" name="msapplication-TileImage"/>
+    
+    <script>var dataLayer=window.dataLayer=window.dataLayer||[];</script>
+<script>
+  var siteId = document.getElementById('siteId').getAttribute('data-siteId');
+  var siteName = siteId.replace(/\-\d{1,2}$/, '');
+  dataLayer.push({
+    'siteId': siteId,
+    'siteName': siteName,
+    'cms': 'cascade'
+  });
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5Q36JQ');</script>
+
+    
+    
+                                                            <meta content="Machine learning, artificial intelligence, deep learning, natural language processing, automated machine learning, big data, data science, neural network, ethics and ai, computer science" name="Keywords"/>
+<meta content="The Machine Learning Department at Carnegie Mellon University is ranked as #1 in the world for AI and Machine Learning, we offer Undergraduate, Masters and PhD programs. Our faculty are world renowned in the field, and are constantly recognized for their contributions to Machine Learning and AI." name="Description"/>
+<meta content="Carnegie Mellon University" name="author"/> 
+<meta content="Machine Learning | Carnegie Mellon University" property="og:site_name"/>  
+<meta content="623120331377752" property="fb:app_id"/>
+<meta content="1950839991861836" property="fb:pages"/>
+<meta content="654417927" property="fb:admins"/>
+<meta content="654417927" property="fb:profile_id"/>
+<meta content="@mldcmu" name="twitter:site"/>
+<meta concent="@carnegiemellon" name="twitter:creator"/>    
+<meta content="summary" name="twitter:card"/>
+<meta content="noarchive" name="robots"/>
+<meta content="noarchive" name="googlebot"/>
+<meta content="#cc0000" name="theme-color"/>
+<meta content="#9f0000" name="msapplication-TileColor"/>
+<meta content="//mldcmu.ai/images/icons/favicon.png" name="msapplication-TileImage"/>
+<link href="../manifest.json" rel="manifest"/>
+<link href="//mldcmu.ai/images/icons/favicon.ico" rel="icon"/>
+<link href="//mldcmu.ai/images/icons/favicon.png" rel="apple-touch-icon-precomposed"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/></noscript>
+<link href="//mldcmu.ai/css/custom.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//mldcmu.ai/css/custom.css" rel="stylesheet"/></noscript>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet"/></noscript>
+                                                                                    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-114918459-1" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-114918459-1');
+// ]]></script>
+                                                            
+    
+</head>
+<body class="no-js">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5Q36JQ" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+
+
+<div id="container">
+
+            <header>
+        <div class="roof ">
+    <div>
+        <a class="wordmark" href="//www.cmu.edu/">Carnegie Mellon University</a>
+        <button aria-label="toggle menu" aria-pressed="false" class="menu-btn" href="#nav"><b>&#8212;</b><b>&#8212;</b><b>&#8212;</b></button>
+        <form action="https://search.cmu.edu" class="search search-form" method="get" name="customForm">
+            <input id="id_form_id" name="form_id" type="hidden" value="basic-form"/>
+            <input id="site" name="site" type="hidden" value=""/>
+            <input id="id_ie" name="ie" type="hidden" value="UTF-8"/>
+            <label><span>Search</span>
+                <input aria-label="Search" id="id_q" name="q" placeholder="Search"/>
+            </label>              <button title="Submit" type="submit">Search</button>
+                                                                                                                <label class="searchSite"> <span>Search this site only</span>                 <input checked="checked" name="site" type="checkbox" value="cs-machine-learning-2"/>
+            </label>
+
+                    </form>
+    </div>
+</div>       
+
+            <div id="sitename">
+                                        <div>
+                        <span class="sitetitle"><a href="/index">Machine Learning - CMU</a></span>                                                                                                                                                                            </div><a href="../index.html" target="_self"><img alt="Machine Learning Department | Carnegie Mellon University" src="../images/logo-mld.svg"/></a> 
+                        
+        </div>    
+    
+</header>
+    
+    <div id="content" tabindex="0">
+        
+    	    
+
+
+
+    	        
+    <div class="breadcrumbs">
+                                <a href="/index">Machine Learning - CMU</a>
+                                     &#160;&#8250;&#160; <a href="index.html">            Research
+    </a>
+                                                 &#160;&#8250;&#160;             Data Analysis Projects
+                            </div>
+    
+    	
+    	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+        <script type="text/javascript">
+                    function addLoadEvent(func) {
+                        var oldonload = window.onload;
+                        if (typeof window.onload != 'function') {
+                            window.onload = func;
+                        } else {
+                            window.onload = function() {
+                            if (oldonload) {
+                                oldonload();
+                            }
+                            func();
+                            }
+                          }
+                        }
+                        </script>
+      
+    
+                                                <div class="content">
+                        <div>                             <img alt="Data Analysis Projects" class="header-photo" src="../images/Machine-Learning_01.jpg" width="100%"/>
+<h1>Student Data Analysis Projects</h1>
+<p class="clear">Students are required to demonstrate their grasp of fundamental data analysis and machine learning concepts and techniques in the context of a focused project. The project should focus on a substantive problem involving the analysis of one or more data sets and the application of state-of-the art machine learning and data mining methods, or on suitable simulations where this is deemed appropriate. Or, the project may focus on machine learning methodology and demonstrate its applicability to substantial examples from the relevant literature. The project may involve the development of new methodology or extensions to existing methodology.</p>
+<p class="clear"><a href="dap-papers/f18/dap-kaack-lynn.pdf" rel="noopener" target="_blank">Truck Traffic Monitoring with Satellite Images [.pdf]</a> - Lynn H. Kaack, 11/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-konomis-dimitris.pdf" rel="noopener" target="_blank">Empirical Performance of Approximate Algorithms for Low Rank Approximation [.pdf]</a> - Dimitris Konomis, 8/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-kumar-sumeet.pdf" rel="noopener" target="_blank">Weakly Supervised Stance Learning Using Social-Media Hashtags [.pdf]</a> - Sumeet Kumar, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-lee-lisa.pdf" rel="noopener" target="_blank">Deep Variation-Structured Reinforcement Learning for Visual Relationship and Attribute Detection [.pdf]</a> - Lisa Lee, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-li-jiayi.pdf" rel="noopener" target="_blank">Estimating Latent Structure of Acquisitions from Text [.pdf]</a> - Jiayi Li, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-li-nuoyu.pdf" rel="noopener" target="_blank">Quantile Regression for Final Hospitalization Rate Prediction [.pdf]</a> - Nuoyu Li, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-liu-yu-elaine.pdf" rel="noopener" target="_blank">Generating Activity Schedules for Human Agents Used in Simulations [.pdf]</a> - Yu Liu, 11/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-martin-daniel.pdf" rel="noopener" target="_blank">Machine Learning-Aided Modeling of Fixed Income Instruments [.pdf]</a> - Daniel Martin, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-shajarisales-naji.pdf" rel="noopener" target="_blank">Exploiting Labeling Bias in Learning from Positive and Unlabeled Data [.pdf]</a> - Naji Shajarisales, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-sun-xiaoting.pdf" rel="noopener" target="_blank">Consumer Heterogeneity Modeling by Hierarchical Gaussian Process [.pdf]</a> - Xiaoting Sun, 12/18</p>
+<p class="clear"><a href="dap-papers/f18/dap-zhang-hongyang.pdf" rel="noopener" target="_blank">Medical Missing Data Imputation by Stackelberg GAN [.pdf]</a> - Hongyang Zhang, 12/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-cai-ermao.pdf" rel="noopener" target="_blank">Learning-based Power and Runtime Modeling for Convolutional Neural Networks [.pdf]</a> - Ermao Cai, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-chen-edgar.pdf" rel="noopener" target="_blank">Semi-Supervised Code Generation by Editing Intents [.pdf]</a> - Edgar Chen, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-chen-rulin.pdf" rel="noopener" target="_blank">Optimization Improving Tomography Compared with HEDM Image Using Data Mining Methods [.pdf]</a> - Rulin Chen, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-de-la-maza-cristobal.pdf" rel="noopener" target="_blank">A Graph-Based Model to Discover Preference Structure from Choice Data [.pdf]</a> - Crist&#243;bal De La Maza, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-goel-karan.pdf" rel="noopener" target="_blank">Unsupervised Learning of Procedures from Task Videos [.pdf]</a> - Karan Goel, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-kirov-slav.pdf" rel="noopener" target="_blank">Recovering Developmental Dynamics from Single-Cell Data via Penalized Principal Curves [.pdf]</a> - Slav Kirov, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-li-haichen.pdf" rel="noopener" target="_blank">Tuning the Molecular Weight Distribution from Atom Transfer Radical Polymerization Using Actor Critic Methods [.pdf]</a> - Haichen Li, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-liang-paul-pu.pdf" rel="noopener" target="_blank">Computational Modeling of Human Multimodal Language: The MOSEI Dataset and Interpretable Dynamic Fusion [.pdf]</a> - Paul Pu Liang, 5/18</p>
+<p class="clear"><a href="dap-papers/S18/dap-liu-mao-sheng.pdf" rel="noopener" target="_blank">Likelihood-free Inference of Fornax Dark Matter Density Profile [.pdf]</a> - Mao-Sheng Liu, 5/18</p>
+<div class="page" title="Page 1">
+<div class="layoutArea">
+<div class="column">
+<p><a href="dap-papers/S18/dap-loewi-alexander.pdf" rel="noopener" target="_blank">Hierarchical Latent Space Models for Multiplex Social Network Analysis [.pdf]</a>&#160;- Alexander Martin Loewi, 4/18</p>
+<p><a href="dap-papers/S18/dap-malik-momin.pdf" rel="noopener" target="_blank">Detecting Friendship with Smartphone Co-Location Data [.pdf]</a> - Momin M. Malik, 5/18</p>
+<p><a href="dap-papers/S18/dap-marino-kenneth.pdf" rel="noopener" target="_blank">Using Knowledge Graphs for Image Classification [.pdf]</a> - Kenneth Marino, 5/18</p>
+<p><a href="dap-papers/S18/dap-parisotto-emilio.pdf" rel="noopener" target="_blank">An Empirical Evaluation of Sequence-Based Deep Learning Architectures for Visual Odometry [.pdf]</a> - Emilio Parisotto, 5/18</p>
+<p><a href="dap-papers/S18/dap-shih-chia-yin.pdf" rel="noopener" target="_blank">Learning One-shot Strategic Interactions Among Humans and Robots [.pdf]</a> - Chia-Yin Shih, 5/18</p>
+<p><a href="dap-papers/S18/dap-song-hyun-ah.pdf" rel="noopener" target="_blank">A Fast and Effective Gray-Box Reconstruction of Cascade Time-Series [.pdf]</a> - Hyun Ah Song, 5/18</p>
+<p><a href="dap-papers/S18/dap-toneva-mariya.pdf" rel="noopener" target="_blank">Word Length Processing via Region-to-Region Connectivity [.pdf]</a> - Mariya Toneva, 5/18</p>
+<p><a href="dap-papers/S18/dap-zhu-hongyu.pdf" rel="noopener" target="_blank">Adversarial Generation of Acoustic Waves with Pair Supervision [.pdf]</a> - Hongyu Zhu, 5/18</p>
+</div>
+</div>
+</div>
+<p class="clear"><a href="dap-papers/F17/dap-ali-alnur.pdf" rel="noopener" target="_blank">Segmenting the Brain via Sparse Inverse Covariance Estimation and Graph-Based Clustering on High-Dimensional fMRI data [.pdf]</a> - Alnur Ali, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-dann-christoph.pdf" rel="noopener" target="_blank">Estimating Heterogeneous Treatment Effects of a Fractions Tutor [.pdf]</a>&#160;&#160;- Christoph Dann, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-dilipkumar-deepak.pdf" rel="noopener" target="_blank">Generative Adversarial Image Refinement for Handwriting Recognition [.pdf]</a> - Deepak Dilipkumar, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-du-simon.pdf" rel="noopener" target="_blank">Automated Phenotyping System for Energy Crops [.pdf]</a> - Simon Shaolei Du, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-gao-lisheng.pdf" rel="noopener" target="_blank">Ongoing Influenza Activity Inference with Real-time Digital Surveillance Data [.pdf]</a> - Lisheng Gao, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-gitman-igor.pdf" rel="noopener" target="_blank">Canonical Least Squares Clustering on Sparse Medical Data [.pdf]</a> - Igor Gitman, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-hu-hengyuan.pdf" rel="noopener" target="_blank">Learning Deep Generative Models With Discrete Latent Variables [.pdf]</a> - Hengyuan Hu, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-huang-liang-kang.pdf" rel="noopener" target="_blank">Learning Object States from Videos [.pdf]</a> - Liang-Kang Huang, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-jiang-fan.pdf" rel="noopener" target="_blank">Bus Transit Time Prediction using GPS Data with Artificial Neural Networks [.pdf]</a> - Fan Jiang, 11/17</p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{">Prediction of Viral Symptoms Through Temporal Data - Mu-Chu Lee, 12/17</span></p>
+<p class="clear"><a href="dap-papers/F17/dap-li-chun-liang.pdf" rel="noopener" target="_blank">MMD GAN: Towards Deeper Understanding of Moment Matching Network [.pdf]</a> - Chun-Liang Li, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-li-jun.pdf" rel="noopener" target="_blank">Feature Selection for Real-time Estimates of Influenza-like Illness [.pdf]</a> - Jun Li, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-liu-yuan.pdf" rel="noopener" target="_blank">DAP: LSTM-CRF Auto-encoder [.pdf]</a> - Yuan Liu, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-lu-yangyi.pdf" rel="noopener" target="_blank">Neuron Session Alignment in Calcium Imaging Data [.pdf]</a> - Yangyi Lu, 11/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-ma-quanbin.pdf" rel="noopener" target="_blank">Dimensionality Reduction of Astronomical Spectroscopic Data using Autoencoders [.pdf]</a> - Quanbin Ma, 12/17</p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{">Understanding Cell Reprogramming Through Changes in Gene Expression Networks - Vivek Nangia, 12/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-parr-ben.pdf" rel="noopener" target="_blank">FarmView: Regression Analysis of 2016 Sorghum Composition [.pdf]</a> - Ben Parr, 12/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-peng-rui.pdf" rel="noopener" target="_blank">Predicting High-order Chromatin Interactions from Human Genomic Sequence using Deep Neural Networks [.pdf]</a> - Rui Peng, 12/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-qin-jining.pdf" rel="noopener" target="_blank">Thinking Outside the Bins: Evolution of Galaxy Morphology Over Cosmic Time [.pdf]</a> - Jining Qin, 4/16 ADA paper</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-sadhanala-veeranjaneyulu.pdf" rel="noopener" target="_blank">Wireless Mesh Network design by Optimization of Spectral Properties and Max-k-Cut [.pdf]</a> - Veeranjaneyulu Sadhanala, 11/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-stretcu-otilia.pdf" rel="noopener" target="_blank">Understanding the Neural Basis of Speech Production using Machine Learning [.pdf]</a> - Otilia Stretcu, 11/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-wang-yijie.pdf" rel="noopener" target="_blank">Spontaneously Emerging Object Part Segmentation [.pdf]</a> - Yijie Wang, 12/17</span></p>
+<p class="clear"><span data-sheets-userformat="{" data-sheets-value="{"><a href="dap-papers/F17/dap-wang-yining.pdf" rel="noopener" target="_blank">Experimental Design Approaches to Maximum Stress Prediction for Lightweight Structure Designs [.pdf]</a> - Yining Wang, 12/17</span></p>
+<p class="clear"><a href="dap-papers/F17/dap-winston-ezra.pdf" rel="noopener" target="_blank">CASE-QA: Context and Syntax Embeddings for Question Answering on Stack Overflow [.pdf]</a> - Ezra Winston, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-xie-pengtao.pdf" rel="noopener" target="_blank">Medical&#160;Diagnosis from Laboratory Tests by Combining Generative and Discriminative Learning [.pdf]</a> - Pengtao Xie, 12/17</p>
+<p class="clear"><a href="dap-papers/F17/dap-zhu-lingxue.pdf" rel="noopener" target="_blank">On the Prediction of Risk for Autism from Common Variants [.pdf]</a> - Lingxue Zhu, 9/15 ADA paper</p>
+<p class="clear"><a href="dap-papers/S17/dap-joshi-varun.pdf" rel="noopener" target="_blank">Greedy Algorithms for Sparse Dictionary Learning [.pdf]</a>&#160;- Varun Joshi, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-lei-eric.pdf" rel="noopener" target="_blank">Robust Detection of Radiation Threat [.pdf]</a>&#160;- Eric Lei, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-lin-chieh.pdf" rel="noopener" target="_blank">Using Neural Networks to Improve Single Cell RNA-Seq Data Analysis [.pdf]</a>&#160;- Chieh Lin, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-liu-zongge.pdf" rel="noopener" target="_blank">Efficient Fusion of Aggregated Historical Data [.pdf]</a> - Zongge Liu, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-luse-hayden.pdf" rel="noopener" target="_blank">A Co-Evolving Correlated Dynamic Topic Model for Time Series Clickstream and Purchase Data [.pdf]</a> - Hayden Luse, 5/17</p>
+<p class="clear">Characterization of Crowd Behavior in Institutional and Industrial Settings - Michael Muehl, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-prasad-adarsh.pdf" rel="noopener" target="_blank">Differential Parameter Learning [.pdf]</a> - Adarsh Prasad, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-saparov-abulhair.pdf" rel="noopener" target="_blank">A Probabilistic Generative Grammar for Semantic Parsing [.pdf]</a> - Abu Saparov, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-sherwin-evan.pdf" rel="noopener" target="_blank">Identifying Air Conditioners Using Monthly Household Electricity Consumption [.pdf]</a>&#160;- Evan Sherwin, 5/17 (revised 6/19)</p>
+<p class="clear"><a href="dap-papers/S17/dap-suggala-arun-sai.pdf" rel="noopener" target="_blank">Ordinal Data Analysis via Graphical Models [.pdf]</a> - Arun Sai Suggala, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-xu-felix-juefei.pdf" rel="noopener" target="_blank">Design of Weight-Learning Efficient Convolutional Modules in Deep Convolutional Neural Networks and its Application to</a></p>
+<p class="clear"><a href="dap-papers/S17/dap-xu-felix-juefei.pdf" rel="noopener" target="_blank">Large-Scale Visual Recognition Tasks [.pdf]</a> - Felix Juefei Xu, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-ying-chris.pdf" rel="noopener" target="_blank">Adaptive Depth Computational Policies for Efficient Visual Tracking [.pdf]</a> - Chris Ying, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-yu-adams-wei.pdf" rel="noopener" target="_blank">Learning to Skim Text [.pdf]</a> - Adams Wei Yu, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-zhang-chiqun.pdf" rel="noopener" target="_blank">Expert-Guided Machine Learning for Synthesizing Ti0<sub>2</sub> Polymorphs [.pdf]</a> - Chiqun Zhang, 5/17</p>
+<p class="clear"><a href="dap-papers/S17/dap-zhao-han.pdf" rel="noopener" target="_blank">Domain Adaptation with Adversarial Neural Networks and Auto-Encoders [.pdf]</a> - Han Zhao, 5/17</p>
+<p class="clear"><a href="dap-papers/F16/dap_bauer_jakob.pdf" rel="noopener" target="_blank">Word Sense Disambiguation Using Semi-Supervised Naive Bayes with Ontological Constraints [.pdf]</a> - Jakob Bauer, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_zhang_yuxing.pdf" rel="noopener" target="_blank">Recurrent Neural Network Embedding for Knowledge-base Completion [.pdf]</a> - Yuxing Zhang, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_wei_yi.pdf" rel="noopener" target="_blank">Matching Multifrequency Clinical Time Series [.pdf]</a> - Yi Wei, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_mu_lidan.pdf" rel="noopener" target="_blank">Predicting the Onset of Tachycadia for Patients in Intensive Care Units [.pdf]</a> - Lidan Mu, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_brodie_adam.pdf" rel="noopener" target="_blank">The Influence of the Sinking Strike Zone on Major League Baseball's Strikeout Epidemic [.pdf]</a> - Adam Brodie, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_marchetti-bowick_micol.pdf" rel="noopener" target="_blank">A Penalized Regression Model for the Joint Estimation of eQTL Associations and Gene Network Structure [.pdf]</a> - Micol Marchetti-Bowick, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_kandasamy_kirthevasan.pdf" rel="noopener" target="_blank">Batch Policy Gradient Methods for Improving Seq2Seq Conversion Models [.pdf]</a> - Kirthevasan Kandasamy, 12/16</p>
+<p class="clear"><a href="dap-papers/F16/dap_silver_elizabeth.pdf" rel="noopener" target="_blank">Nonparanormal Distributions &amp; Causal Inference with Single-Cell RNA-Seq Data [.pdf]</a> - Elizabeth Silver, 12/16</p>
+<p class="clear"><a href="dap-papers/DAP_Rafidi.pdf" rel="noopener" target="_blank">The Role of Syntax in Semantic Processing: a Study of Active and Passive Voicings [.pdf]</a> - Nicole Rafidi, 4/16</p>
+<p class="clear">Noise-Robust Spectral Clustering - Carlton Downey, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_herlands.pdf" rel="noopener" target="_blank">Scalable Gaussian Processes for Characterizing Multidimensonal Change Surfaces [.pdf]</a> - William Herlands, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_De Arteaga.pdf" rel="noopener" target="_blank">Canonical Autocorrelation Analysis for Radiation Threat Detection [.pdf]</a> - Maria De Arteaga, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Zhou_Pengcheng.pdf" rel="noopener" target="_blank">Establishing a Statistical Link Between Network Oscillations and Neural Synchrony [.pdf]</a> - Pengcheng Zhou, 4/16</p>
+<p class="clear">Point Type Inference in Heating, Ventilation and Air Conditioning Systems - Jingkun Gao, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Deng.pdf" rel="noopener" target="_blank">Source Identification in H1N1 Flu Infection [.pdf]</a>- Bin Deng, 4/16</p>
+<p class="clear">Informative Student Models for Personalized Education - Joseph Runde, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Gao_lili.pdf" rel="noopener" target="_blank">Investment Manager Discussions and Stock Returns: a Word Embedding Approach [.pdf]</a> - Lili Gao, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Zhou_Su.pdf" rel="noopener" target="_blank">Exploring consumer spending behavior for prepaid cards using latent topic models and dynamical systems [.pdf]</a> - Su Zhou, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Oliva_Junier.pdf" rel="noopener" target="_blank">Functional Linear Models for Brain Data [.pdf]</a> - Junier Oliva, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP-He_Yilin.pdf" rel="noopener" target="_blank">Identifying Influential Users in Social Network with Review Data [.pdf]</a> - Yilin He, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Zheng_Xun.pdf" rel="noopener" target="_blank">Linear Time Samplers for Supervised Topic Models using Compostional Proposals [.pdf]</a> - Xun Zheng, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Dai_Wei.pdf" rel="noopener" target="_blank">Acoustic Scene Recognition with Deep Learning [.pdf]</a> - Wei Dai, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Zhang_Ying.pdf" rel="noopener" target="_blank">Influenza Trend Prediction using Kalman Filters and Particle Filters [.pdf]</a> - Ying Zhang, 4/16</p>
+<p class="clear"><a href="dap-papers/DAP_Jakkam_Reddi.pdf" rel="noopener" target="_blank">Understanding the relationship between Functional and Structural Connectivity of Brain Networks [.pdf]</a> - Sashank Jakkam Reddi, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_Early.pdf" rel="noopener" target="_blank">Cost-Effective Feature Selection and Ordering for Personalized Energy Estimates [.pdf]</a> - Kirstin Early, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_Card.pdf" rel="noopener" target="_blank">Automated Coding of Open-Ended Survey Responses [.pdf]</a> - Dallas Card, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_Duyck_James.pdf" rel="noopener" target="_blank">Predicting Structure in Handwritten Algebra Data from Low Level Features [.pdf]</a> - James Duyck, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_Lee_MinHyung.pdf" rel="noopener" target="_blank">Sample Efficient Learning to Make Decisions with a Focus on Education [.pdf]</a> - Min Hyung Lee, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_ Xia_Yan.pdf" rel="noopener" target="_blank">Target Predictions of Small Molecules using LINCS Data [.pdf]</a> - Yan Xia, 11/15</p>
+<p class="clear"><a href="dap-papers/DAP_Chemali_Jessica.pdf" rel="noopener" target="_blank">Local analysis of traveling waves in the monkey primary motor cortex [.pdf]</a> - Jessica Chemali, 5/15</p>
+<p class="clear"><a href="dap-papers/dap_report_qingao_final.pdf" rel="noopener" target="_blank">Machine Learning Methods for Interatomic Potentials: Application to Boron Carbide [.pdf]</a> - Qin Gao, 4/15</p>
+<p class="clear">Spectral Method for Topic Modeling with Hierarchical Structure - Hsiao-Yu Tung, 4/15</p>
+<p class="clear"><a href="dap-papers/dap_yang_ying.pdf" rel="noopener" target="_blank">Exploring Spatio-temporal Neural Correlates of Face Learning [.pdf]</a> - Ying Yang, 4/15</p>
+<p class="clear"><a href="dap-papers/dap-wu_chaoyuan.pdf" rel="noopener" target="_blank">Jointly Modeling Aspects, Ratings and Sentiments for Movie Recommendation [.pdf]</a> - Chao-Yuan Wu, 4/15</p>
+<p class="clear"><a href="dap-papers/dap_hefny.pdf" rel="noopener" target="_blank">A New View of Predictive State Methods for Dynamical System Learning [.pdf]</a> - Ahmed Hefny, 4/15</p>
+<p class="clear"><a href="dap-papers/dap_platanios.pdf" rel="noopener" target="_blank">Estimating Accuracy from Unlabeled Data [.pdf]</a> - Anthony Platanios, 4/15</p>
+<p class="clear"><a href="dap-papers/dap_montanez.pdf" rel="noopener" target="_blank">An Analysis of Cross-Device Search [.pdf]</a> - George Monta&#241;ez, 3/15</p>
+<p class="clear"><a href="dap-papers/dap-paper_somanchi.pdf" rel="noopener" target="_blank">Graph Structure Learning from Unlabeled Data for Event Detection [.pdf]</a> - Sriram Somanchi, 3/15</p>
+<p class="clear"><a href="dap-papers/dap-paper-lu_xie.pdf" rel="noopener" target="_blank">Tumor phylogenetic lineage separation by medoidshift clustering with non-postitive kernel [.pdf]</a> - Lu Xie, 3/15</p>
+<p class="clear"><a href="dap-papers/dap-qiong_zhang.pdf" rel="noopener" target="_blank">Consistency in Extending Problem-solving Procedures Indicates Expertise [.pdf]</a> - Qiong Zhang, 11/14</p>
+<p class="clear"><a href="dap-papers/dap_flaxman.pdf" rel="noopener" target="_blank">A General Approach to Prediction and Forecasting Crime Rates with Gaussian Processes [.pdf]</a> -Seth Flaxman, 5/14</p>
+<p class="clear"><a href="dap-papers/dap-wytock.pdf" rel="noopener" target="_blank">Time-varying Linear Regression with Total Variation Regularization [.pdf]</a> - Matthew Wytock, 5/14</p>
+<p class="clear"><a href="dap-papers/dap_xiang.pdf" rel="noopener" target="_blank">An integrated approach to validating ChIP-Seq using A* Lasso for Sparse Bayesian Network Learning [.pdf]</a> - Jing Xiang, 4/14</p>
+<p class="clear"><a href="dap-papers/dap_weng.pdf" rel="noopener" target="_blank">Robust Data-Driven State Estimation for Smart Grid [.pdf]</a> - Yang Weng, 3/14</p>
+<p class="clear"><a href="dap-papers/tang.pdf" rel="noopener" target="_blank">Prioritizing Malware Analysis [.pdf]</a> - Zhen Tang, 2/14</p>
+<p class="clear"><a href="dap-papers/dap_mcfowland.pdf" rel="noopener" target="_blank">Automated Discovery of Novel Anomalous Patterns [.pdf]</a> - Edward McFowland III, 12/13</p>
+<p class="clear"><a href="dap-papers/dap_speakman.pdf" rel="noopener" target="_blank">Dynamic Pattern Detection with Temporal Consistency and Connectivity Constraints [.pdf]</a> - Skyler Speakman, 11/13</p>
+<p class="clear"><a href="dap-papers/dap_ma.pdf" rel="noopener" target="_blank">Sigma-Optimality for Active Learning on Gaussian Random Fields [.pdf]</a> -Yifei Ma, 11/13</p>
+<p class="clear"><a href="dap-papers/dacheng_dap_final.pdf" rel="noopener" target="_blank">Beyond Poisson: Modeling Inter-Arrival Times of Requests in a Datacenter [.pdf]</a> - Da-Cheng Juan, 11/13</p>
+<p class="clear"><a href="dap-papers/dap_azizyan.pdf" rel="noopener" target="_blank">Experimental Evaluation of Feature Selection Methods for Clustering [.pdf]</a> -Martin Azizyan, 10/13</p>
+<p class="clear"><a href="dap-papers/dap_gu.pdf" rel="noopener" target="_blank">Latent Session Model for Web User Clustering: A case study on modeling users of an online real estate website [.pdf]</a> - Haijie Gu, 8/13</p>
+<p class="clear"><a href="dap-papers/dap_chunlei_liu.pdf" rel="noopener" target="_blank">Semi-supervised Data Clustering with Coupled Non-negative Matrix Factorization: Sub-category Discovery of Noun Phrases in NELL's Knowledge Base [.pdf]</a> - Chunlei Liu, 8/13</p>
+<p class="clear"><a href="dap-papers/dap_ramdas.pdf" rel="noopener" target="_blank">Analysis of Crime in Pittsburgh [.pdf]</a> - Aaditya Ramdas, 5/13</p>
+<p class="clear"><a href="dap-papers/dap_xia.pdf" rel="noopener" target="_blank">Fast and Effective Similarity Searching in Large&#160;MIDI databases [.pdf]</a> - Guangyu Xia, 5/13</p>
+<p class="clear"><a href="dap-papers/dap_doersch.pdf" rel="noopener" target="_blank">What Makes Paris Look Like Paris? [.pdf]</a> - Carl Doersch, 5/13</p>
+<p class="clear"><a href="dap-papers/dap-juarez.pdf" rel="noopener" target="_blank">Semi-supervised context-aware discovery of unknown audio concepts [.pdf]</a> - Antonio Juarez, 3/13</p>
+<p class="clear"><a href="dap-papers/dap_bishop.pdf" rel="noopener" target="_blank">Semi-Supervised Classification for Intracortical Brain-Computer Interfaces [.pdf]</a> - Will Bishop, 12/12</p>
+<p class="clear"><a href="dap-papers/dap_oconnor.pdf" rel="noopener" target="_blank">Learning Frames from Text with an Unsupervised Latent Variable Model [.pdf]</a> - Brendan O'Connor, 10/12</p>
+<p class="clear"><a href="dap-papers/dap_parikh.pdf" rel="noopener" target="_blank">TREEGL: Reverse Engineering Tree-Evolving Gene Networks Underlying Developing Biological Lineages [.pdf]</a> - Ankur Parikh, 10/12</p>
+<p class="clear"><a href="dap-papers/dap-paper-jieyue_li.pdf" rel="noopener" target="_blank">Automated Learning of Subcellular Location Patterns in Confocal Fluorescence Images from Human Protein Atlas [.pdf]</a> - Jieyue Li, 10/12</p>
+<p class="clear"><a href="dap-papers/dap_xu_min.pdf" rel="noopener" target="_blank">Conditional Sparse Coding and Multiple Regression for Grouped Data [.pdf]</a> - Min Xu, 5/12</p>
+<p class="clear"><a href="dap-papers/dap_fisher.pdf" rel="noopener" target="_blank">Active, semi-supervised learning to utilize human oracles [.pdf]</a> - Robert Fisher, 5/12</p>
+<p class="clear"><a href="dap-papers/dap_fyshe.pdf" rel="noopener" target="_blank">Decoding Word Semantics from Magnetocencephalography Time Series Transformations [.pdf]</a> - Alona Fyshe, 5/12</p>
+<p class="clear"><a href="dap-papers/dap_reddy.pdf" rel="noopener" target="_blank">Layered Timeseries Analysis for Smart Grid Agents [.pdf]</a> - Prashant Reddy, 5/12</p>
+<p class="clear"><a href="dap-papers/dap_lee_w.pdf" rel="noopener" target="_blank">Learning Global Properties of Scene Images Based on Their Correlational Structures [.pdf]</a> - Wooyoung Lee, 5/12</p>
+<p class="clear"><a href="dap-papers/dap_ho.pdf" rel="noopener" target="_blank">Understanding the Interaction between Interests, Conversations and Friendships in Facebook [.pdf]</a> - Qirong Ho, 4/12</p>
+<p class="clear"><a href="dap-papers/dap_fiterau.pdf" rel="noopener" target="_blank">Trade-offs in Explanatory Model Learning [.pdf]</a> - Madalina Fiterau, 3/12</p>
+<p class="clear"><a href="dap-papers/dap_xu_yang.pdf">Dynamics of Visual Category Learning with Magnetoencephalography [.pdf]</a> - Yang Xu, 12/11</p>
+<p class="clear"><a href="dap-papers/dap_zhao.pdf">Online Detection of Unusual Events in Videos via Dynamic Sparse Coding [.pdf]</a> - Bin Zhao, 11/11</p>
+<p class="clear"><a href="dap-papers/dap_hall.pdf">Valid Statistical Inference on Automatically Matched Files [.pdf]</a> - Rob Hall, 11/11</p>
+<p class="clear"><a href="dap-papers/dap_liyema_final.pdf" rel="noopener" target="_blank">Modeling Correlated Purchase Behavior in Large-Scale Networks:A Markov Random Field (MRF)&#160;Approach [.pdf]</a> - Liye Ma, 4/11</p>
+<p class="clear"><a href="dap-papers/dap_park_sungwon.pdf" rel="noopener" target="_blank">Multi-factor Analysis for Classifying fMRI Brain Images [.pdf]</a> - Sung Won Park, 4/11</p>
+<p class="clear"><a href="dap-papers/dap-paper-shao.pdf" rel="noopener" target="_blank">Learning the Sparsity Parameter in a Generalized Fast Subset Sums Framework for Bayesian Event Detection [.pdf]</a> - Kan Shao, 4/11</p>
+<p class="clear"><a href="dap-papers/dap-guang-xiang.pdf" rel="noopener" target="_blank">CANTINA+: A Feature-rich Machine Learning Framework for Detecting Phishing Web Sites [.pdf]</a> - Guang Xiang, 4/11</p>
+<p class="clear"><a href="dap-papers/dap-diliu.pdf" rel="noopener" target="_blank">Comparing Data Sources in High Dimensions [.pdf]</a> - Di Liu, 3/11</p>
+<p class="clear"><a href="dap-papers/dap_le.pdf" rel="noopener" target="_blank">Cross-Species Queries of Large Gene Expression Databases [.pdf]</a> - Hai-Son Le, 3/11</p>
+<p class="clear"><a href="dap-papers/dap-awasthi.pdf" rel="noopener" target="_blank">Clustering Under Natural Stability Assumptions [.pdf]</a> - Pranjal Awasthi, 3/11</p>
+<p class="clear"><a href="dap-papers/dap-paper-tpeng.pdf" rel="noopener" target="_blank">Automated Unmixing of Complex Protein Subcellular Location Patterns [.pdf]</a> - Tao Peng, 2/11</p>
+<p class="clear"><a href="dap-papers/dap_bzhang.pdf" rel="noopener" target="_blank">Extracting Subpopulations from Large Social Networks [.pdf]</a> - Bin Zhang, 2/11</p>
+<p class="clear">Inferring Rates of Domain Shuffling Using a Birth-Death and Gain Model - Maureen Stolzer, 1/11</p>
+<p class="clear"><a href="dap-papers/dap-xiong.pdf" rel="noopener" target="_blank">Anomaly Detection for Astronomical Data [.pdf]</a> - Liang Xiong, 12/10</p>
+<p class="clear"><a href="dap-papers/dap_chen.pdf" rel="noopener" target="_blank">An Efficient Proximal Gradient Method for General Structured Sparse Learning [.pdf]</a> - Xi Chen, 11/10</p>
+<p class="clear"><a href="dap-papers/dap_huang.pdf" rel="noopener" target="_blank">Learning Dynamic Models from Non-sequenced Data [.pdf]</a> - Tzu-Kuo Huang, 11/10</p>
+<p class="clear"><a href="dap-papers/dap_low.pdf" rel="noopener" target="_blank">Multiple Domain User Personalization [.pdf]</a> - Yucheng Low, 11/10</p>
+<p class="clear"><a href="dap-papers/dap_trevizan.pdf" rel="noopener" target="_blank">Learning Opponent's Strategies In the RoboCup Small Size League [.pdf]</a> - Felipe Trevizan, 10/10</p>
+<p class="clear"><a href="dap-papers/dap-gonzalez.pdf" rel="noopener" target="_blank">Parallel Splash Belief Propagation [.pdf]</a> - Joseph Gonzalez, 5/10</p>
+<p class="clear">Trends and Differences in Industrial Safety Perception survey results: Subset Selection and Minimax Bound based Hypothesis Testing - Liu Yang, 5/10</p>
+<p class="clear"><a href="dap-papers/dap_law.pdf" rel="noopener" target="_blank">Learning to Tag using Noisy Labels [.pdf]</a> - Edith Law, 4/10</p>
+<p class="clear"><a href="dap-papers/dap-chau.pdf">Polonium: Tera-Scale Graph Mining for Malware Detection [.pdf]</a> - Duen Horng Chau, 4/10</p>
+<p class="clear"><a href="dap-papers/tsourakakisdap.pdf" rel="noopener" target="_blank">Data Mining with MapReduce: Graph and Tensor Algorithms with Applications [.pdf]</a> - Charalampos Tsourakakis, 4/10</p>
+<p class="clear"><a href="dap-papers/tillman_dap.pdf" rel="noopener" target="_blank">Learning Directed Graphical Models from Nonlinear and Non-Gaussian Data [.pdf]</a> - Robert Tillman, 3/10</p>
+<p class="clear"><a href="dap-papers/dap_kolar.pdf" rel="noopener" target="_blank">Semi-parametric Methods for Estimating Time-varying Graph Structure [.pdf]</a> - Mladen Kolar, 2/10</p>
+<p class="clear"><a href="dap-papers/dap_shringarpure.pdf" rel="noopener" target="_blank">Genetic Population Structure in Pacific Islanders [.pdf]</a> - Suyash Shringarpure, 2/10</p>
+<p class="clear"><a href="dap-papers/dap_shih.pdf" rel="noopener" target="_blank">Discovery of Student Strategies using Hidden Markov Model Clustering [.pdf]</a> - Benjamin Shih, 1/10</p>
+<p class="clear"><a href="dap-papers/dap-castellanos.pdf" rel="noopener" target="_blank">Grasping in Primates: Mechanics and Neural Basis [.pdf]</a> - Lucia Castellanos, 12/09</p>
+<p class="clear"><a href="dap-papers/dap_mcdonald.pdf" rel="noopener" target="_blank">Parallel WalkSAT with Clause Learning [.pdf]</a> - Austin McDonald, 12/09</p>
+<p class="clear"><a href="dap-papers/sophiewangdap.pdf" rel="noopener" target="_blank">Semi-Supervised Discovery of Named Entities and Relations from the Web [.pdf]</a> - Sophie Wang, 11/09</p>
+<p class="clear"><a href="dap-papers/dap_boots.pdf" rel="noopener" target="_blank">Learning Stable Linear Dynamical Systems [.pdf]</a> - Byron Boots, 6/09</p>
+<p class="clear"><a href="dap-papers/cmu-ml-09-105-ahmed.pdf" rel="noopener" target="_blank">Structured Correspondence Topic Models for Mining Captioned Figures in Biological Literature [.pdf]</a> - Amr Ahmed, 5/09</p>
+<p class="clear"><a href="dap-papers/dap_bradley.pdf" rel="noopener" target="_blank">FilterBoost: Regression and Classification on Large Datasets [.pdf]</a> - Joseph Bradley, 5/09</p>
+<p class="clear"><a href="dap-papers/dap_zhang.pdf" rel="noopener" target="_blank">Learning Compressible Models [.pdf]</a> - Yi Zhang, 5/09</p>
+<p class="clear"><a href="dap-papers/dap-tong-v3.pdf" rel="noopener" target="_blank">Center-Piece Subgraphs: Problem Definition and Fast Solutions [.pdf]</a> - Hanghang Tong, 8/08</p>
+<p class="clear"><a href="dap-papers/dap_hejingrui.pdf" rel="noopener" target="_blank">Graph-Based Semi-Supervised Learning as a Generative Model [.pdf]</a> - Jingrui He, 8/08</p>
+<p class="clear"><a href="dap-papers/mcglohonkdd.pdf" rel="noopener" target="_blank">Information Propagation on the Web: Patterns and a Model [.pdf]</a> - Mary McGlohon, 11/07</p>
+<p class="clear"><a href="dap-papers/yizhou-kdd.pdf" rel="noopener" target="_blank">Maximum Likelihood Estimation in Latent Class Models for Contingency Table Data [.pdf]</a> - Yi Zhou, 11/07</p>
+<p class="clear"><a href="dap-papers/aarnold_kdd_2007.pdf" rel="noopener" target="_blank">A Comparison of Methods for Transductive Transfer Learning [.pdf]</a> - Andrew Arnold, 5/07</p>
+<p class="clear"><a href="dap-papers/cen_kddpaper2.pdf" rel="noopener" target="_blank">Learning Factors Analysis - A General Method for Cognitive Model Evaluation and Improvement [.pdf]</a> - Hao Cen, 5/07</p>
+<p class="clear"><a href="dap-papers/hanneke-kdd-project.pdf" rel="noopener" target="_blank">The Complexity of Interactive Machine Learning [.pdf]</a> - Stephen Hanneke, 5/07</p>
+<p class="clear"><a href="dap-papers/sabhnani_kdd.pdf" rel="noopener" target="_blank">T-cube: Fast Extraction of Time Series from Large Datasets [.pdf]</a> - Maheshkumar Sabhnani, 5/07</p>
+<p class="clear"><a href="dap-papers/ziebart-kdd.pdf" rel="noopener" target="_blank">Learning Selectively conditioned Forest Structures with Applications to DBNs and Classification [.pdf]</a> - Brian Ziebart, 5/07</p>
+<p class="clear"><a href="dap-papers/hua-kdd-project.pdf" rel="noopener" target="_blank">Large-Scale Automated Analysis of Location Patterns in Randomly-Tagged 3T3 Cells [.pdf]</a> - Juchang Hua, 4/07</p>
+<p class="clear"><a href="dap-papers/shi_yanxin_kddprojectpaper.pdf" rel="noopener" target="_blank">Continuous Hidden Process Model for Time Series [.pdf]</a> - Yanxin Shi, 4/07</p>
+<p class="clear"><a href="dap-papers/leskovec_kdd.pdf" rel="noopener" target="_blank">Modeling Networks Using Kronecker Multiplication [.pdf]</a> - Jurij Leskovec, 4/07</p>
+<p class="clear"><a href="dap-papers/song.kdd.pdf" rel="noopener" target="_blank">Gene Family Classification using a Semi-Supervised Learning Method [.pdf]</a> - Nan Song, 1/07</p>
+<p class="clear"><a href="dap-papers/huang_kai.pdf" rel="noopener" target="_blank">Feature Reduction for Improved Recognition of Subcellular Location Patterns in Fluorescence Microspoe Images [.pdf]</a> - Kai Huang, 11/06</p>
+<p class="clear"><a href="dap-papers/singhvi-kdd-project.pdf" rel="noopener" target="_blank">Intelligent Light Control using Sensor Networks [.pdf]</a> - Vipul Singhvi, 9/06</p>
+<p class="clear"><a href="dap-papers/sahoo_kdd_project.pdf" rel="noopener" target="_blank">Incremental Hierarchical Clustering of Text Documents [.pdf]</a> - Nachiketa Sahoo, 5/06</p>
+<p class="clear"><a href="dap-papers/altintas_kdd_project.pdf" rel="noopener" target="_blank">Using Customer's Reported Forecasts to Predict Future Sales [.pdf]</a> - Nihat Altintas, 5/06</p>
+<p class="clear"><a href="dap-papers/chen_kdd_project.pdf" rel="noopener" target="_blank">Data Mining in Macroeconomic Data Sets [.pdf]</a> - Ping Chen, 4/06</p>
+<p class="clear"><a href="dap-papers/sarkar-kdd_project.pdf" rel="noopener" target="_blank">Dynamic Social Network Analysis using Latent Space Models [.pdf]</a> - Purnamrita Sarkar, 4/06</p>
+<p class="clear"><a href="dap-papers/bryan_kdd_project.pdf" rel="noopener" target="_blank">Active Learning for Identifying Function Threshold Boundaries [.pdf]</a> - Brent Bryan, 4/06</p>
+<p class="clear"><a href="dap-papers/das_kdd2.pdf" rel="noopener" target="_blank">Anomoly Detection in Multivariate Time Series [.pdf]</a> - Kustav Das, 3/06</p>
+<p class="clear"><a href="dap-papers/eberhardt_kdd_project1.pdf" rel="noopener" target="_blank">On the Number of Experiments Sufficient and in the Worst Case Necessary to Identify All Causal Relations Among N Variables [.pdf]</a> - Frederick Eberhardt, 9/05</p>
+<p class="clear"><a href="dap-papers/eberhardt_kdd_project.pdf" rel="noopener" target="_blank">N-1 Experiments Suffice to Determine the Causal Relations Among N Variables [.pdf]</a> - Frederick Eberhardt, 9/05</p>
+<p class="clear"><a href="dap-papers/rojas.pdf" rel="noopener" target="_blank">Conditional Density Estimation using Finite Mixture Models with an Application to Astrophysics [.pdf]</a> - Alex Rojas-Pena, 7/05</p>
+<p class="clear"><a href="dap-papers/xiang_chen_project.pdf" rel="noopener" target="_blank">Location proteomics - Building subcellular location trees from high resolution 3D fluorescence microsope images of randomly-tagged proteins [.pdf]</a> - Xiang Chen, 5/05</p>
+<p class="clear"><a href="dap-papers/cmu-cald-05-101-bai.pdf" rel="noopener" target="_blank">Tabu Search Enhanced Markov Blanket Classifier for High Dimensional Data Sets [.pdf]</a> - Xue Bai, 1/05</p>
+<p class="clear"><a href="dap-papers/ernst04.pdf" rel="noopener" target="_blank">Clustering Short Time Series Gene Expression Data [.pdf]</a> - Jason Ernst, 11/04</p>
+<p class="clear"><a href="dap-papers/ravikumar_kdd_project.pdf" rel="noopener" target="_blank">A Hierarchical Graphical Model for Record Linkage [.pdf]</a> - Pradeep Ravikumar, 5/04</p>
+<p class="clear"><a href="dap-papers/li_kdd_project.pdf" rel="noopener" target="_blank">Learning Robust Rules from Data: The GenTree Algorithm [.pdf]</a> - Yiheng Li, 4/04</p>
+<p class="clear"><a href="dap-papers/airoldi.kdd.final.correct.pdf" rel="noopener" target="_blank">Advances in Network Tomography [.pdf]</a> - Edoardo Airoldi, 10/03</p>
+<p class="clear"><a href="dap-papers/huang_kai.pdf" rel="noopener" target="_blank">Improved Recognition of Protein Subcellular Location Patterns via Feature Selection and Classifier Ensembles [.pdf]</a> - Kai Huang, 8/03</p>
+<p class="clear"><a href="dap-papers/skkumar_kdd_project.pdf" rel="noopener" target="_blank">Fractal Dimension for Data Mining [.pdf]</a> - Sree Krishna Kumaraswamy, 7/03</p>
+<p class="clear"><a href="dap-papers/zhan_project.pdf" rel="noopener" target="_blank">Tools for Graph Mining [.pdf]</a> - Yiping Zhan, 6/03</p>
+<p class="clear"><a href="dap-papers/xuerui_wang.pdf" rel="noopener" target="_blank">Using Machine Learning to Detect Cognitive States across Multiple Subjects [.pdf]</a> - Xuerui Wang, 5/03</p>
+<p class="clear"><a href="dap-papers/wilson_daniel.pdf" rel="noopener" target="_blank">People Tracking Using Many Simple Sensors [.pdf]</a> - Daniel Wilson, 5/03</p>
+<p class="clear"><a href="dap-papers/liu-icra.pdf" rel="noopener" target="_blank">Simultaneous Localization and Mapping using Sparse Extended Iinformation Filters [.pdf]</a> - Yufeng Liu, 4/03</p>
+<p class="clear"><a href="dap-papers/huang_pu.pdf" rel="noopener" target="_blank">Multi-agent Learning in Extensive Games with Complete Information [.pdf]</a> - Pu Huang, 1/03</p>
+<p class="clear"><a href="dap-papers/cmu-cald-02-108-malin.pdf" rel="noopener" target="_blank">Compromising Privacy with Trail Re-Identification: The REIDIT Algorithms [.pdf]</a> - Bradley Malin, 12/02</p>
+<p class="clear"><a href="dap-papers/pengjia.pdf" rel="noopener" target="_blank">Mining Computer Tutor-Student Interaction Data to Assess Students Reading and Predict Future Behavior [.pdf]</a> - Peng Jia, 10/02</p>
+<p class="clear"><a href="dap-papers/cmu-cald-02-104-fasnacht.pdf" rel="noopener" target="_blank">A Method for Automatically Finding Interpretations of Reduced Dimension Representations [.pdf]</a> - Marc Fasnacht, 9/02</p>
+<p class="clear"><a href="dap-papers/cmu-cald-02-105-fasnacht.pdf" rel="noopener" target="_blank">A Method for Automatically Finding Structural Motifs in Proteins [.pdf]</a> - Marc Fasnacht, 9/02</p>
+<p class="clear"><a href="dap-papers/matteucci-cmu-cald-02-103.pdf" rel="noopener" target="_blank">Learning Rich Neural Network Topologies [.pdf]</a> - Matteo Matteucci, 7/02</p>
+<p class="clear"><a href="dap-papers/silva-cmu-cald-02-102.pdf" rel="noopener" target="_blank">The Structure of the Unobserved [.pdf]</a> - Ricardo Silva, 6/02</p>
+<p class="clear"><a href="dap-papers/cmu-cald-02-107-zhu.pdf" rel="noopener" target="_blank">Learning from Labeled and Unlabeled Data with Label Propagation [.pdf]</a> - Xiaojin Zhu, 6/02</p>
+<p class="clear"><a href="dap-papers/bi_project.pdf" rel="noopener" target="_blank">The "DGX" Distribution for Mining Massive, Skewed Data [.pdf]</a> - Zhiqiang Bi, 5/02</p>
+<p class="clear"><a href="dap-papers/kondor-diffusion-kernels.pdf" rel="noopener" target="_blank">Diffusion Kernels on Graphs and Other Discrete Input Spaces [.pdf]</a> - Risi Imre Kondor, 4/02</p>
+<p class="clear"><a href="dap-papers/cmu-cald-02-101-chakrabarti.pdf" rel="noopener" target="_blank">Large-scale Automated Forecasting using Fractals [.pdf]</a> - Deepayan Chakrabarti, 4/02</p>
+<p class="clear"><a href="dap-papers/schulte_project.pdf" rel="noopener" target="_blank">Planning for Single and Multiple Actors in Markov Decision Processes with Deterministic Hidden State [.pdf]</a> - Jamie Schulte, 12/01</p>
+<p class="clear"><a href="dap-papers/lebanon_cmu-cs-01-144.pdf" rel="noopener" target="_blank">Boosting and Maximum Likelihood for Expontial Models [.pdf]</a> - Guy Lebanon, 9/01</p>
+<p class="clear"><a href="dap-papers/goldenberg_technical_report.pdf" rel="noopener" target="_blank">Framework for using grocery data for early detection of Bio-terrorism attacks [.pdf]</a> - Anna Goldenberg, 9/01</p>
+<p class="clear"><a href="dap-papers/chu_gamcond.pdf" rel="noopener" target="_blank">Causal Inference [.pdf]</a> and <a href="dap-papers/chu_v.pdf" rel="noopener" target="_blank">Additive Models[.pdf]</a> - Tianjiao Chu, 5/01</p>
+<p class="clear"><a href="dap-papers/ghani_ecoc-report.pdf" rel="noopener" target="_blank">Using Error-Correcting Codes for Efficient Text Categorization with a Large Number of Categories [.pdf]</a> - Rayid Ghani, 5/01</p>
+<p class="clear"><a href="dap-papers/myers_project.pdf" rel="noopener" target="_blank">A Boosting Approach to Topic Spotting on Subdialogues [.pdf]</a> - Kary Myers, 2000</p>
+                                                    </div>                          </div>                     
+        
+        
+
+
+        
+        <footer class="grid column3 invert">
+            
+<div>
+<p>
+            Machine Learning - CMU<br/>
+                    5000 Forbes Avenue<br/>Gates Hillman Center, 8th Floor<br/>Pittsburgh, PA 15213<br/>mldwebmaster@cs.cmu.edu<br/>                 <a href="../about/contact-us.html">Contact Us</a>
+</p>
+<ul>
+    <li><a href="//www.cmu.edu/legal/" target="_blank">Legal Info</a></li>
+    <li><a href="//www.cmu.edu/">www.cmu.edu</a></li>
+</ul>
+<ul><li>&#169; <span id="js-current-year">2025</span> Carnegie Mellon University</li>
+</ul>  
+</div>
+            
+<div>
+    
+
+    <ul class="social third">
+    <li>
+                            <a class="facebook" href="https://www.facebook.com/mldcmu" target="_blank">CMU on Facebook</a>
+        </li><li>
+                            <a class="twitter" href="https://twitter.com/mldcmu" target="_blank">CMU on Twitter</a>
+        </li><li>
+                            <a class="linkedin" href="https://www.linkedin.com/company/mldcmu" target="_blank">CMU on LinkedIn</a>
+        </li><li>
+                                                                                                                            <a class="more" href="https://github.com/organizations/mldcmu/" target="_blank" title="More Social Networks">CMU Social Media Directory</a>
+                    </li>    </ul>
+
+
+</div>
+            
+
+
+<div>
+   <nav id="nav">
+
+                                                                                                                                                                                
+                            <ul>
+                                                        <li class="">                              <a href="../about/index.html" target="_self">                     About
+    </a>
+                        
+                                          
+                                                                                                                                                     <ul>
+                                                        <li>                              <a href="../about/contact-us.html" target="_self">                     Contact Us
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../about/what-is-machine-learning-a-message-from-manuela-veloso-regarding-machine-learning-ml.html" target="_self">                     What is Machine Learning?
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../academics/index.html" target="_self">                     Academics
+    </a>
+                        
+                                          
+                                                                                                                   
+                            <ul>
+                                                        <li class="">                              <a href="../academics/rankings/index.html" target="_self">                     Machine Learning Graduate Programs Rankings
+    </a>
+                        
+                                          
+                                                                                                                                                                                 </li>
+            	                                                                                                                                                                                                                                                                                      <li>                              <a href="../academics/machine-learning-phd.html" target="_self">                     Machine Learning (ML) PhD
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/joint-ml-phd.html" target="_self">                     Joint Machine Learning PhD Degrees
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/primary-ms-machine-learning-masters.html" target="_self">                     MS in Machine Learning
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/5th-year-ms.html" target="_self">                     5th-Year Master's in Machine Learning
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <li>                              <a href="../academics/ml-intro-classes.html" target="_self">                     ML Intro Classes
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <li>                              <a href="../academics/primary-ms-machine-learning-applied-study-masters.html" target="_self">                     MS in Machine Learning - Applied Study
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/joint-phd-ahdm.html" target="_self">                     Joint PhD ML/AHDM
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="index.html" target="_self">                     Research
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul>
+                                                        <li>                              <a href="phd-dissertations.html" target="_self">                     PhD Dissertations
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li class="active">                              <a href="data-analysis-projects.html" target="_self">                     Data Analysis Projects
+    </a>
+    </li>
+                                                                                                                                                                                                                                                              <li>                              <a href="technical-reports.html" target="_self">                     Technical Reports
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../people/index.html" target="_self">                     People
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <ul>
+                                                        <li>                              <a href="../people/core-faculty.html" target="_self">                     Core Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/adjunct-faculty.html" target="_self">                     Adjunct &amp; Visiting Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/affiliated-faculty.html" target="_self">                     Affiliated Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/related-faculty.html" target="_self">                     Related Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/staff.html" target="_self">                     Staff
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/postdocs-project-scientists.html" target="_self">                     Postdocs &amp; Project Scientists
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/visitors.html" target="_self">                     Visitors &amp; Interns
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/phd-students.html" target="_self">                     PhD Students
+    </a>
+    </li>
+                                                                                                                                                                                                                                                              <li>                              <a href="../people/alumni-phd.html" target="_self">                     PhD Alumni
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../honors-and-awards/index.html" target="_self">                     Honors and Awards
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                           <ul>
+                                                        <li>                              <a href="../honors-and-awards/best-paper-awards.html" target="_self">                     Best Paper Awards
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/faculty-awards1.html" target="_self">                     Faculty Awards
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/faculty-honors.html" target="_self">                     Faculty Honors
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/student-awards.html" target="_self">                     Student Awards
+    </a>
+    </li>
+                                                                                                                                                                                                                     </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../resources/index.html" target="_self">                     Resources
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                           </li>
+            	                                                                                
+                                        <li class="">                              <a href="../join-us/index.html" target="_self">                     Join Us
+    </a>
+                        
+                                          
+                                                                                                                                                                                 </li>
+            	                                                                                                                                                                                                                                                                                                                                                                                    <li>                              <a class="external" href="https://mld.ai/give" target="_blank">                     Give
+    </a>
+    </li>
+                                                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                                                                               
+                                        <li class="secondary">                              <a href="../calendar/index.html" target="_self">                     Calendar
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                           </li>
+            	                                                                                   
+                                        <li class="secondary">                              <a href="../current-students/index.html" target="_self">                     Info for Current Students
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <ul>
+                                                        <li>                              <a href="../current-students/phd-peers.html" target="_self">                     PhD Peers
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../current-students/phd-committees.html" target="_self">                     PhD Committees
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                        <li class="">                              <a href="../current-students/student-orientation/index.html" target="_self">                     MLD Virtual Graduate Student Orientation
+    </a>
+                        
+                                          
+                                                                                            </li>
+            	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li>                              <a href="../current-students/phd-courses-and-milestones.html" target="_self">                     PhD Courses &amp; Milestones
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li>                              <a href="../current-students/phd-ms-research.html" target="_self">                     MS Research on the way to a PhD
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                                   
+                                        <li class="secondary">                              <a href="../wellness-network/index.html" target="_self">                     Wellness Network
+    </a>
+                        
+                                          
+                                                                                                                 <ul>
+                                                        <li>                              <a href="../wellness-network/wellness-network-confidentiality-details.html" target="_self">                     MLD Wellness Network Confidentiality
+    </a>
+    </li>
+                                                                                                                                                                                                             <li>                              <a href="../wellness-network/wellness-network-members.html" target="_self">                     Wellness Network Members
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../wellness-network/university-resources.html" target="_self">                     University Resources
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                             
+                                                 <li class="secondary">                              <a class="external" href="https://blog.ml.cmu.edu" target="_blank">                     ML@CMU Blog
+    </a>
+    </li>
+                     
+                         
+                         
+                </ul>
+    </nav>
+</div>
+
+
+
+
+        </footer>
+    </div>
+
+</div>
+
+ <script src="//www.cmu.edu/common/standard-v6/js/list.min.js" type="text/javascript"></script>
+ <script src="//www.cmu.edu/common/standard-v6/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+ <script src="//www.cmu.edu/common/standard-v6/js/main.6.7.min.js" type="text/javascript"></script>
+
+ 
+
+    
+    
+            
+    
+        
+    
+    
+
+
+
+
+       
+                
+
+
+        
+
+    
+                                                                                                    <div class="hidden" id="microformats">
+<p class="vcard"><span class="org fn"> <span class="organization-unit">Machine Learning Department</span> <span class="organization-name">Carnegie Mellon University</span> </span> <span class="adr"> <span class="street-address">5000 Forbes Avenue,<br/>Gates Hillman Center,<br/>8th Floor</span> <span class="locality">Pittsburgh</span>, <span class="region">Pennsylvania</span> <span class="postal-code">15213</span>. <span class="photo"><img src="https://mldcmu.ai/images/og-img.jpg"/></span> <span class="pricerange">N/A</span> <span class="tel">(412) 268-2000</span> </span></p>
+</div>
+<a class="back-to-top" href="#" role="button" title="Back to Top Button"><span class="button-to-top fa fa-chevron-up"></span></a> <!-- Footer Mod -->
+<script id="modFooter" type="text/javascript">// <![CDATA[
+var replacetext = {
+                "Machine Learning - CMU": "<a title=\"Machine Learning | Carnegie Mellon University\" href=\"https://www.ml.cmu.edu\">Machine Learning Department</a><br/><a title=\"School of Computer Science | Carnegie Mellon University\" href=\"https://cs.cmu.edu\" target=\"_blank\" rel=\"noopener\">School of Computer Science</a>",
+                "mldwebmaster@cs.cmu.edu": "Questions?: <a title=\"Main Contacts | Machine Learning | Carnegie Mellon University\" href=\"https://www.ml.cmu.edu/about/contact-us.html\">Contact us</a>",
+                "Contact Us": "<a href=\"//www.mldcmu.ai/directions\" rel=\"noopener\" target=\"_blank\" title=\"Get One Click Directions on Google Maps for the Machine Learning Department at Carnegie Mellon University\">Get Directions</a>",
+                "social third": "social-icons",
+                "<a class=\"facebook\" href=\"https://www.facebook.com/mldcmu\" target=\"_blank\">CMU on Facebook</a>": "<a alt=\"Machine Learning at CMU on Facebook\" class=\"social-icon fa fa-facebook\" href=\"https://www.facebook.com/mldcmu/\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Facebook\"></a>",
+                "<a class=\"twitter\" href=\"https://twitter.com/mldcmu\" target=\"_blank\">CMU on Twitter</a>": "<a alt=\"Machine Learning at CMU on Twitter\" class=\"social-icon fa fa-twitter\" href=\"https://twitter.com/mldcmu?lang=en\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Twitter\"></a>",
+                "<a class=\"linkedin\" href=\"https://www.linkedin.com/company/mldcmu\" target=\"_blank\">CMU on LinkedIn</a>": "<a alt=\"Machine Learning at CMU on LinkedIn\" class=\"social-icon fa fa-linkedin\" href=\"https://www.linkedin.com/school/mldcmu/\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on LinkedIn\"></a>",
+                "<a class=\"more\" href=\"https://github.com/organizations/mldcmu/\" target=\"_blank\" title=\"More Social Networks\">CMU Social Media Directory</a>": "<li><a alt=\"Machine Learning at CMU on YouTube\" class=\"social-icon fa fa-youtube\" href=\"https://www.youtube.com/channel/UCBK21NDSe0ZghSRnfmDvaEg\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on YouTube\"></a></li><li><a alt=\"Machine Learning at CMU on Medium\" class=\"social-icon fa fa-medium\" href=\"https://medium.com/mldcmu\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Medium\"></a></li><li><a alt=\"Machine Learning at CMU News - RSS Feed\" class=\"social-icon fa fa-rss\" href=\"https://www.ml.cmu.edu/cmsint/mldcmu.rss\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU News - RSS Feed\"></a></li>",
+                "CMU on Facebook": "",
+                "CMU on Twitter": "",
+                "CMU on LinkedIn": "",
+                "CMU Social Media Directory": "",
+                "class=\"grid column3 invert\"": "class=\"grid2 column3 invert\" id=\"seal\"",
+            };
+
+            $.each(replacetext, function(txtorig, txtnew) {
+                var text = $('footer.grid').html();
+                $('footer.grid').html(text.replace(txtorig, txtnew));
+                $('footer.grid').attr('id', 'seal');
+            });
+
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = "footer.grid { display: block !important} footer.grid2 { display: none !important} .social-icons a { line-height: 1; padding-bottom: 10px !important} .social-icon.fa.fa-youtube,.social-icon.fa.fa-medium {margin-right: 6px}";
+            document.body.appendChild(css);
+
+            document.getElementById("js-current-year").textContent = (new Date().getFullYear());
+
+            /* Biases Mod */
+
+            // This code regulates randomization for main short bio pages
+            $(".content.stacked.grey").removeClass("grey");
+            $(".list.darkgrey.invert").removeClass("invert");
+            $(".list.darkgrey").toggleClass("darkgrey grey");
+            var cards = $(".content.stacked");
+            for(var i = 0; i < cards.length; i++){
+                var target = Math.floor(Math.random() * cards.length -1) + 1;
+                var target2 = Math.floor(Math.random() * cards.length -1) +1;
+                cards.eq(target).before(cards.eq(target2));
+            }
+
+            // The following piece control randomization for grid bio pages
+            var cards1 = $(".grid.column3.boxes div");
+            for(var i = 0; i < cards1.length; i++){
+                var target = Math.floor(Math.random() * cards1.length -1) + 1;
+                var target2 = Math.floor(Math.random() * cards1.length -1) +1;
+                cards1.eq(target).before(cards1.eq(target2));
+            }
+            /* /Biases Mod */
+// ]]></script>
+<!-- /Footer Mod -->
+                                        
+
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    
+
+      <title>CMU CSD PhD Blog</title>
+
+      
+          
+          <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.cs.cmu.edu/~csd-phd-blog/rss.xml">
+          
+      
+
+      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+              onload="renderMathInElement(document.body);"></script>
+
+
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+          <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/mathtex-script-type.min.js" integrity="sha384-OGHJvxKrLNowXjZcg7A8ziPZctl4h7FncefPoKSuxgVXFxeM87GCKFJvOaTeBB9q" crossorigin="anonymous"></script>
+          
+              <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+              onload="renderMathInElement(document.body);"></script>
+              
+          
+      
+
+      
+          <link rel="stylesheet" href="https://www.cs.cmu.edu/~csd-phd-blog/site.css">
+          
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+          
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div id="mobile-navbar" class="mobile-navbar">
+              <div class="mobile-header-logo">
+                <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog" class="logo">CSD PhD Blog</a>
+              </div>
+              <div class="mobile-navbar-icon icon-out">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <nav id="mobile-menu" class="mobile-menu slideout-menu slideout-menu-left">
+              <ul class="mobile-menu-list">
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;">
+                            Home
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;areas">
+                            Areas
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;tags">
+                            Tags
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;rss.xml">
+                            RSS
+                        </a>
+                    </li>
+                
+                    <li class="mobile-menu-item">
+                        <a href="https:&#x2F;&#x2F;csd.cmu.edu">
+                            CSD
+                        </a>
+                    </li>
+                
+              </ul>
+            </nav>
+
+            <header id="header">
+                <div class="logo">
+                    <img src="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog/csd.svg" alt="CSD Logo">
+                    <div class="logo-text">
+                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog">CSD PhD Blog</a>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        
+                            <li>
+                                
+                                    <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;">
+                                        Home
+                                    </a>
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;areas">
+                                        Areas
+                                    </a>
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;tags">
+                                        Tags
+                                    </a>
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;rss.xml">
+                                        RSS
+                                    </a>
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="https:&#x2F;&#x2F;csd.cmu.edu" target="_blank">CSD</a>
+                                
+                            </li>
+                        
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <div class="content" id="mobile-panel">
+                    
+                        <div class="posts">
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;atp-itp-connection&#x2F;">Connecting Automatic and Interactive Theorem Proving</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-05-02</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;joshclune.github.io&#x2F;" target=_blank>
+  Joshua Clune
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        The field of formal verification is all about using mathematically rigorous techniques and tools to prove properties about systems. The applications of formal verification vary widely. There are computer-checked correctness proofs for critical pieces of software such as compilers…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;atp-itp-connection&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;fair-allocation-nash-welfare&#x2F;">Fair allocations and Nash social welfare</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-05-02</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;mathrulestheworld.github.io" target=_blank>
+  Madhusudhan Reddy Pittu
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        
+How do we allocate items among individuals with different preferences in a way that is both fair and efficient?
+
+
+Striking this balance is a fundamental challenge in economics and game theory, with implications ranging from inheritance division and divorce settlements to resourc…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;fair-allocation-nash-welfare&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;symmetries-in-games&#x2F;">Leveraging Symmetries in Strategic Games</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-05-02</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;emanueltewolde.com&#x2F;" target=_blank>
+  Emanuel Tewolde
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        The content of this blog post is derived from the research paper Computing Game Symmetries and Equilibria That Respect Them, published at AAAI-25, and authored by Emanuel Tewolde, Brian Hu Zhang, Caspar Oesterheld, Tuomas Sandholm, and Vincent Conitzer.
+TL;DR: We discuss the impl…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;symmetries-in-games&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;learningmodulo&#x2F;">Grounding Neural Inference with Satisfiability Modulo Theories: Leveraging Theory Solvers for Machine Learning</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-04-28</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="cs.cmu.edu~&#x2F;saranya" target=_blank>
+  Saranya Vijayakumar
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        
+Modern AI excels at pattern recognition but suffers when faced with logical reasoning tasks. What happens when we ask a neural network to solve a Sudoku puzzle from an image, verify a mathematical proof, or diagnose a medical condition based on a set of symptoms and rules? These…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;learningmodulo&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;pac-bayes-foundation-models&#x2F;">Classical generalization theory is more predictive in foundation models than in conventional deep networks</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-04-28</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;home.victorakinwande.com" target=_blank>
+  Victor Akinwande
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        Key takeaway: When learning over discrete prompts used in modern vision-language models, classical PAC-Bayes bounds turn out to be remarkably tight — significantly tighter than prior PAC-Bayes results on deep networks.
+If you have ever tinkered with a large vision-language model …
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;pac-bayes-foundation-models&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;winding-numbers&#x2F;">Winding numbers: a topological tool for geometry processing</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-03-26</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;nzfeng.github.io" target=_blank>
+  Nicole Feng
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        
+This post explains the key findings and algorithm of our 2023 SIGGRAPH paper “Winding Numbers on Discrete Surfaces”.
+
+For a given point on a surface, we would like to know whether it is inside or outside a given curve.
+For example, coloring points on this cow according to inside…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;winding-numbers&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;compiler-analysis-malloc&#x2F;">Compiler-Assisted Malloc for Automatically Reducing Data Movement</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-03-18</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;nicebowlofsoup.com" target=_blank>
+  Valerie Choung
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        In this post, I’ll be discussing my part of my work on how to use compiler
+analysis to aid in optimizing memory allocation.
+I will begin with some background and motivation, and then introduce my
+proposed workflow as well as some interesting
+challenges that this work involves.
+
+C…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;compiler-analysis-malloc&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;llm-checklist-assistant&#x2F;">Usefulness of LLMs as an Author Checklist Assistant for Scientific Papers: NeurIPS&#x27;24 Experiment</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2025-01-21</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;akgoldberg.github.io&#x2F;" target=_blank>
+  Alexander Goldberg
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        Large language models (LLMs) represent a promising but controversial assistant in the process of preparing and reviewing scientific papers. They may serve as useful analytical tools to scrutinize manuscripts and identify possible weaknesses or inaccuracies that need addressing. H…
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2025&#x2F;llm-checklist-assistant&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2024&#x2F;atlas&#x2F;">Atlas: Hierarchical Partitioning for Quantum Circuit Simulation on GPUs</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2024-12-19</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;mingkuan.taichi.graphics" target=_blank>
+  Mingkuan Xu
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        
+
+The workload of state-vector quantum circuit simulation is massively parallel. Most quantum gates multiply one small matrix to many vectors, and the workload is balanced.
+Challenge: the state vector is too large to be stored on one GPU, and the communication cost is very high. …
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2024&#x2F;atlas&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                                <article class="post">
+                                    
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2024&#x2F;udf-outlining&#x2F;">The Key to Effective UDF Optimization: Before Inlining, First Perform Outlining</a>
+        </h1>
+        <div class="post__meta">
+            <span class="post__time">2024-12-12</span> |
+            <span class="post__author">
+              
+
+
+
+  
+  
+
+
+<a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~sarch&#x2F;" target=_blank>
+  Sam Arch
+</a>
+
+            </span>
+            
+        </div>
+    </header>
+    
+      
+    
+    
+
+                                    <div class="post__summary">
+                                        
+                                        
+SQL is the de facto query language used to interact with databases. Since SQL is declarative, users express the intended result of their query rather than the concrete procedural steps to produce the answer. Database management systems (DBMSs) find fast execution strategies for …
+                                    </div>
+                                    <div class="read-more">
+                                        <a href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;2024&#x2F;udf-outlining&#x2F;">Read more...</a>
+                                    </div>
+                                </article>
+                            
+                        </div>
+                        <nav class="pagination">
+                            
+                            
+                                <a class="next" href="https:&#x2F;&#x2F;www.cs.cmu.edu&#x2F;~csd-phd-blog&#x2F;page&#x2F;2&#x2F;">Next ›</a>
+                            
+                        </nav>
+                    
+                </div>
+            </main>
+
+            
+            
+        </div>
+
+      
+          <script type="text/javascript" src="https://www.cs.cmu.edu/~csd-phd-blog/even.js" ></script>
+      
+    </body>
+
+</html>

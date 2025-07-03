@@ -1,0 +1,1045 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="" xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head id="Head1"><title>
+	Giving to UCLA
+</title><meta name="viewport" content="width=device-width, user-scalable=no" /><meta http-equiv="x-ua-compatible" content="IE=9" /><link rel="shortcut icon" href="/images/favicon.ico" /><link id="bootstrapCSS" rel="stylesheet" href="assets/css/ucla-bootstrap.css" type="text/css" media="all" /><link id="donationFlowCSS" rel="stylesheet" href="assets/css/donationFlow.css" type="text/css" media="all" /><link id="Link1" rel="stylesheet" href="assets/css/mods.css" type="text/css" media="all" />
+    <!-- <script type="text/javascript" src="Scripts/jquery.js?ver=3.8.1"></script> -->
+    <script type="text/javascript">
+        function InIEvent() {
+            //    alert('test');
+        }
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+    </script>
+    <script type="text/javascript">
+        var recaptchaIsValid = false;
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1076586549149439');
+        if (getUrlParameter("sitenum") == "3417")
+            fbq('init', '827712468546975');
+        fbq('track', 'PageView');
+    </script>
+    <!-- Global site tag (gtag.js) - DoubleClick -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=DC-4393665"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'DC-4393665');
+    </script>
+    <script type="text/javascript">
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            createCookie(name, "", -1);
+        }
+        function OpenCIDM(action) {
+            try {
+                if (action == "signin" || action == "profile") {
+                    var popup_url = "";
+                    if ($('#hCIDMURL').val() != "") {
+                        popup_url = Clean($('#hCIDMURL').val());
+                    }
+                    else {
+                        popup_url = "https://account.giving.ucla.edu/signin";
+                    }
+                    if (action == "profile") 
+                        popup_url = popup_url.replace(/signin/gi, 'Profile');
+                    const popup = window.open(popup_url);
+                    if (!popup || popup.closed || typeof popup.closed == 'undefined') {
+                        //POPUP BLOCKED
+                        alert("Pop-up Blocker is enabled! Please add this site to your exception list.");
+                        return false;
+                    }
+                    const pollTimer = window.setInterval(function () {
+                        if (popup.closed !== false) { // !== is required for compatibility with Opera
+                            window.clearInterval(pollTimer);
+                            IsCIDMClosed(action);
+                        }
+                    }, 1000);
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+            catch (err) {
+                return false;
+            }
+        };
+
+        function IsCIDMClosed(argument) {
+            const token = getCookie('.UCLAEAIDMID');
+            // user is logged in
+            if (token) {
+                $('#processing').show();
+                __doPostBack('lnkBtnLogin', argument);
+            }
+        }
+        function SetFMVPremium() {
+            if (document.getElementById('cbFMV').checked) 
+            {
+                var xAmt = document.getElementById('hTotalAmount').value;
+                if (xAmt >= 10 && xAmt < 25) {
+                    document.getElementById('hPremiumAmount').value = 1.5;
+                }
+                else if (xAmt >= 25) {
+                    document.getElementById('hPremiumAmount').value = 3.2;
+                }
+                else
+                {
+                    document.getElementById('hPremiumAmount').value = 0;
+                }
+            }
+            else
+            {
+                document.getElementById('hPremiumAmount').value = 0;
+            }
+        }
+    </script>
+</head>
+<body id="bdy" class="page page-template ucla donationFlow review-gifts your-information">
+    <form name="form1" method="post" action="./Donate.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/Campaign/WebResource.axd?d=pynGkmcFUV0446zVx5oTpfRmBPTnnN1UfZKJQVfowNOFnPTqm3ybrIPXnNk1&amp;t=638627972627334853" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var isPostBack = true;//]]>
+</script>
+<script type="text/javascript">
+function getXMLHTTP()
+{var A=null;try{A=new ActiveXObject('Msxml2.XMLHTTP');}
+catch(e){try{A=new ActiveXObject('Microsoft.XMLHTTP');}catch(oc){A=null;}}
+if(!A&&typeof XMLHttpRequest!='undefined'){A=new XMLHttpRequest();}
+return A;}
+function DynamicDropDownController(controlClientId,lookupName,baseUrl){var self=this;this.controlClientId=controlClientId;this.hiddenId='__'+self.controlClientId;this.lookupName=lookupName;this.baseUrl=baseUrl;this.delimiter='|';var xmlHttp;var observers=[];this.getSource=getSource;this.addObserver=addObserver;this.notify=notify;this.load=load;this.init=init;this.persist=persist;function getSource(filter)
+{var requestUrl=baseUrl+'&id='+self.lookupName;if(filter!=undefined&&filter!='')
+{requestUrl+='&filter='+filter;}
+xmlHttp=getXMLHTTP();if(xmlHttp)
+{xmlHttp.onreadystatechange=doReadyStateChange;xmlHttp.open('GET',requestUrl,true);xmlHttp.send(null);}}
+function doReadyStateChange()
+{if(xmlHttp.readyState==4)
+{if(xmlHttp.status==200)
+{
+if((xmlHttp.responseText!=null) && (xmlHttp.responseText.length > 0))
+{eval('var d='+xmlHttp.responseText);
+populateList(d);}
+}
+else
+{alert('There was a problem retrieving the data:\n'+xmlHttp.statusText);}}}
+function populateList(namevalue)
+{if(oSelect=document.getElementById(self.controlClientId))
+{var content='';for(var i=oSelect.length-1;i>=0;i--)
+{oSelect.options[i]=null;}
+for(var i=0;i<namevalue.length;i++)
+{if(namevalue[i].value==undefined)
+{oSelect.options[oSelect.length]=new Option(namevalue[i].name);content+=namevalue[i].name+self.delimiter+namevalue[i].name+self.delimiter;}
+else
+{opt=new Option(namevalue[i].name,namevalue[i].value);oSelect.options[oSelect.length]=opt;content+=namevalue[i].name+self.delimiter+namevalue[i].value+self.delimiter;}}
+if (oSelect.options.length > 0)
+{
+oSelect.options[0].selected = true;
+oSelect.selectedIndex = 0;
+//alert(oSelect.previousSibling.tagName);
+}
+if(content.substr(content.length-1,1)==self.delimiter)
+{content=content.substr(0,content.length-1);}
+if(oHidden=document.getElementById(self.hiddenId))
+{oHidden.value=content;}
+
+if(oSelect.selectedIndex>-1){if(oSelect.fireEvent)
+{oSelect.fireEvent('onchange');}
+else if(oSelect.dispatchEvent)
+{var oEvent=document.createEvent('HTMLEvents');oEvent.initEvent('change',true,true);oSelect.dispatchEvent(oEvent);}}}}
+function addObserver(obj)
+{var length=observers.length;var found=false;for(var i=0;i<length;i++)
+{if(observers[i]==obj)
+{found=true;break;}}
+if(!found)
+{observers[observers.length]=obj;}}
+function notify()
+{var filter='';var oSelect=document.getElementById(self.controlClientId);if(oSelect!=null&&oSelect.selectedIndex!=-1)
+{filter=self.lookupName+','+oSelect.options[oSelect.selectedIndex].value;}
+for(i=0;i<observers.length;i++)
+{eval(observers[i]+'.load(filter);');
+
+}}
+function load(filter)
+{this.getSource(filter);
+childSelect=document.getElementById(this.controlClientId);
+try {
+if (childSelect.options.length > 0)
+{
+childSelect.options[0].selected = true;
+childSelect.selectedIndex = 0;
+}
+if (childSelect.previousSibling.tagName == 'P')
+{
+childSelect.previousSibling.innerHTML = childSelect.options[0].text;
+}
+}
+catch(err) {}
+}
+function init()
+{if((oSelect=document.getElementById(self.controlClientId)))
+{if(!(hidden=document.getElementById(self.hiddenId)))
+{hidden=document.createElement('input');hidden.id=self.hiddenId;hidden.name=self.hiddenId;hidden.type='hidden';oSelect.form.appendChild(hidden);}
+if(oSelect.options.length==0)
+{this.load();}
+else
+{this.persist(oSelect);}
+if(oSelect.attachEvent)
+{oSelect.attachEvent('onchange',notify);}
+else if(oSelect.addEventListener)
+{oSelect.addEventListener('change',notify,false);}
+else
+{oSelect.onchange=notify;}}}
+function persist(oSelect)
+{var content='';for(var i=0;i<oSelect.options.length;i++)
+{content+=oSelect.options[i].text+self.delimiter+oSelect.options[i].value+self.delimiter;}
+if(content.substr(content.length-1,1)==self.delimiter)
+{content=content.substr(0,content.length-1);}
+if((hidden=document.getElementById(self.hiddenId)))
+{hidden.value=content;}}}</script>
+
+<script src="/Campaign/ScriptResource.axd?d=NJmAwtEo3IqriRSaEAlmOKpYe-Ra20nyXBwoZfmFos_lyHSdo0FN8hXCYtSnEbCUm9CEBIVlVrnYRJ-q7GQYNu70eIUaF2YshjQVEki8IyU37j1bIGvo1wEE2oytmM9rNO6o1w2&amp;t=b990ecd" type="text/javascript"></script>
+<script src="/Campaign/ScriptResource.axd?d=dwY9oWetJoJTo_z87KZyclOpQp_QU4kMN8Qih7ilz5cqELRzb5vX8jJLXDt5eajr_P3yBxnCwOap6ZRrIMFTYBuWLmSl-mCkGqCWYZXGc9nCSd_V0X2o11uabzamQq-ooM71fZQicbE7kNYr0&amp;t=b990ecd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+
+                $('#ddlState').removeAttr('disabled');
+                $('#ddlCountry').removeAttr('disabled');
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="11BC9DDC" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tudpSearch',''], [], [], 90, '');
+//]]>
+</script>
+
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(InIEvent);
+        </script>
+        <div id="header">
+            <nav id="navMain" role="navigation">
+                <div id="navLogo">
+                    Give To UCLA
+                </div>
+                
+            </nav>
+        </div>
+        <div class="page-donation-flow">
+            <input type="hidden" name="hReadOnly" id="hReadOnly" value="0" />
+            <input type="hidden" name="hKeyAttributes" id="hKeyAttributes" value="RefreshFieldList^N^subject^UCLA Online Giving Confirmation^AutoGenerate^true^ChargeCC^true^PayPage^Y^Test^^Site_Num^690^FormUrl^https://giving.ucla.edu/Campaign^Campaign^Y^ConfirmationTextSource^DB^HeaderImageUrl^https://giving.ucla.edu/images/LowerThird.jpg^From^gifts@support.ucla.edu^To^gifts@support.ucla.edu" />
+            <input type="hidden" name="hSiteNum" id="hSiteNum" value="690" />
+            <input type="hidden" name="hTesting" id="hTesting" />
+            <input type="hidden" name="hAdvanceID" id="hAdvanceID" />
+            <input type="hidden" name="hMG" id="hMG" />
+            <input type="hidden" name="hAppealCode" id="hAppealCode" value="M-19318" />
+            <input type="hidden" name="hUseFundAppealCode" id="hUseFundAppealCode" value="N" />
+            <input type="hidden" name="hSelectedOrgType" id="hSelectedOrgType" value="S" />
+            <input type="hidden" name="hSelectedOrg" id="hSelectedOrg" />
+            <input type="hidden" name="hSelectedFund" id="hSelectedFund" />
+            <input type="hidden" name="hSelectedFundName" id="hSelectedFundName" />
+            <input type="hidden" name="hSelectedSearchFund" id="hSelectedSearchFund" value="N" />
+            <input type="hidden" name="hFundList" id="hFundList" />
+            <input type="hidden" name="hAmount" id="hAmount" />
+            <input type="hidden" name="hTotalAmount" id="hTotalAmount" />
+            <input type="hidden" name="hPremiumAmount" id="hPremiumAmount" />
+            <input type="hidden" name="hSelectedPaymentType" id="hSelectedPaymentType" />
+            <input type="hidden" name="hPaymentSpec" id="hPaymentSpec" />
+            <input type="hidden" name="hPaymentSchedule" id="hPaymentSchedule" />
+            <input type="hidden" name="hPledgeSchedule" id="hPledgeSchedule" />
+            <input type="hidden" name="hDeductionEmails" id="hDeductionEmails" value="carolp@support.ucla.edu;jmutia@support.ucla.edu" />
+            <input type="hidden" name="hDeductionStartMonth" id="hDeductionStartMonth" value="July 2025" />
+            <input type="hidden" name="hDeductionStartMonthYYYYMM" id="hDeductionStartMonthYYYYMM" value="202507" />
+            <input type="hidden" name="hDeductionDescription" id="hDeductionDescription" />
+            <input type="hidden" name="hTribute" id="hTribute" />
+            <input type="hidden" name="hTributePersonOrOccasion" id="hTributePersonOrOccasion" />
+            <input type="hidden" name="hCFTributeType" id="hCFTributeType" />
+            <input type="hidden" name="hCFTributePersonOrOccasion" id="hCFTributePersonOrOccasion" />
+            <input type="hidden" name="hTributeEmail" id="hTributeEmail" />
+            <input type="hidden" name="hNotify" id="hNotify" />
+            <input type="hidden" name="hNotifyTitle" id="hNotifyTitle" />
+            <input type="hidden" name="hNotifyFirstName" id="hNotifyFirstName" />
+            <input type="hidden" name="hNotifyLastName" id="hNotifyLastName" />
+            <input type="hidden" name="hNotifyStreet" id="hNotifyStreet" />
+            <input type="hidden" name="hNotifyStreet2" id="hNotifyStreet2" />
+            <input type="hidden" name="hNotifyCity" id="hNotifyCity" />
+            <input type="hidden" name="hNotifyZip" id="hNotifyZip" />
+            <input type="hidden" name="hNotifyState" id="hNotifyState" />
+            <input type="hidden" name="hNotifyCountry" id="hNotifyCountry" />
+            <input type="hidden" name="hNotifyNote" id="hNotifyNote" />
+            <input type="hidden" name="hInternational" id="hInternational" value="False" />
+            <input type="hidden" name="hFundSelectionCode" id="hFundSelectionCode" value="G" />
+            <input type="hidden" name="hSearch" id="hSearch" />
+            <input type="hidden" name="hPledgePayment" id="hPledgePayment" />
+            <input type="hidden" name="hMaskZip" id="hMaskZip" />
+            <input type="hidden" name="hMaskPhone" id="hMaskPhone" />
+            <input type="hidden" name="hMaskEmail" id="hMaskEmail" />
+            <input type="hidden" name="hCIDMURL" id="hCIDMURL" value="https://account.giving.ucla.edu/signin" />
+            <input type="hidden" name="hHasID" id="hHasID" value="false" />
+            <!-- <input type="hidden" name="hRefDP" id="hRefDP" value="false" /> -->
+            <input name="inpAmountRev" type="hidden" id="inpAmountRev" class="value" data-token="amount" />
+            <!-- <div id="divbreadcrumbs" class="breadcrumbs"> -->
+            <header class="breadcrumbs">
+                <ul class="steps centered-content">
+                    <li id="liGift" class="first"><span><strong>
+                        <a id="lnkBtnGift" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkBtnGift&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">1. Giving Details</a></strong></span>
+                    </li>
+                    <!-- Add a class of "past" to anything to the previous step, and "current" to the current step. -->
+                    <!-- "first" and "last" must remain on the first and last <li> elements -->
+                    <li id="liReview" class=""><span><strong>
+                        <a id="lnkBtnReview" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkBtnReview&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">2. Gift Review</a></strong></span>
+                    </li>
+                    <li id="liBio" class=""><span><strong>
+                        <a id="lnkBtnBio" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkBtnBio&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">3. Your Information</a></strong></span>
+                    </li>
+                    <li class="last"><span><strong>4. Payment</strong></span> </li>
+                </ul>
+                <!-- </div> -->
+                <div id="divLogin" style="width: 80%; margin: auto; text-align: right;">
+                    <!--Opens a popup for login in a seperate tab  -->
+                    
+                    &nbsp;
+                    <a onclick="return OpenCIDM(&#39;signin&#39;);" id="lnkBtnLogin" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkBtnLogin&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Sign in</a>
+                    
+                </div>
+            </header>
+            <div class="content-wrapper centered-content">
+                
+                <!--Not you button to clear all the contents on the page  -->
+                &nbsp;
+                
+                <p class="error">
+                    
+                </p>
+                <span class="your-gifts" id="your-gifts"><span>Your Gifts</span> <i id="iYourGifts" class="your-gifts-icon">0</i> </span>
+                <div id="intro" class="page-donation-flow">
+                    <div class="content-wrapper centered-content" style="padding-bottom: 5px;">
+                        
+                        
+                    </div>
+                </div>
+                <section id="sectionGift">
+                    <h1 id="h1PageTitle" class="pagetitle">Giving Details</h1>
+                    <div class="fields-wrapper">
+                        <div id="divOrgType" class="field-wrapper">
+                            <label id="lblIWouldLikeToGiveTo">
+                                I would like to give to</label>
+                            
+                            <div id="divCategoryTypes" class="control-group-choice choice-3" data-token="designation">
+                                <a href="#" id="school" onclick="SetOrgs(&#39;S&#39;,&#39;ddlOrganization&#39;,&#39;hOrgs&#39;,&#39;ddlFund&#39;); return false;" data-group="give-to" data-value="school" class="selected">A School</a> <a href="#" id="campus" onclick="SetOrgs(&#39;M&#39;,&#39;ddlOrganization&#39;,&#39;hOrgs&#39;,&#39;ddlFund&#39;); return false;" data-group="give-to" data-value="campus">The Campus</a> <a href="#" id="cause" onclick="SetOrgs(&#39;C&#39;,&#39;ddlOrganization&#39;,&#39;hOrgs&#39;,&#39;ddlFund&#39;); return false;" data-group="give-to" data-value="cause">A Cause</a>
+                                <input name="hdGiveTo" type="hidden" id="hdGiveTo" />
+                            </div>
+                        </div>
+                        <div class="group-wrapper" data-group="give-to">
+                            <div id="divWhichOrg" class="field-wrapper" style="display:block;">
+                                <label id="lblWhich">Which School Are You Giving To?</label>
+                                <input type="hidden" name="hOrgs" id="hOrgs" value="S|0|General;S|50|Campus Wide Support;S|100|Anderson School of Management (UCLA Anderson);S|300|David Geffen School of Medicine;S|400|Fielding School of Public Health (Fielding School);S|500|School of Education &amp; Information Studies (Ed&amp;IS)                               ;S|700|Henry Samueli School of Engineering and Applied Science (UCLA Samueli);S|750|Herb Alpert School of Music;S|800|Luskin School of Public Affairs (UCLA Luskin);S|900|School of Dentistry;S|1000|School of Law (UCLA Law);S|1100|School of Nursing;S|1200|School of the Arts and Architecture (UCLA Arts);S|1300|Theater, Film and Television (TFT);S|1400|UCLA College of Letters and Science;M|4900|Campus Wide Support;M|4950|UCLA Alumni;M|5000|Athletics;M|5100|Centers &amp; Institutes;M|5200|Division of Graduate Education                                                  ;M|5250|Health Sciences (UCLA Health);M|5300|Libraries;M|5400|Museums;M|5500|Scholarships;M|5600|Student Affairs;M|5700|UCLA Extension;M|5800|Grand Challenges;C|10000|Campus Wide Support;C|10100|Arts;C|10200|Athletics;C|10300|Business;C|10400|Community;C|10500|Environment;C|10600|Faculty Support;C|10700|Global Impact;C|10800|Health;C|10900|Humanities;C|11000|Law;C|11100|Research;C|11200|Sciences;C|11300|Student Support;C|11400|Technology;C|11500|Club Sports                                                                     ;" />
+                                <select name="ddlOrganization" id="ddlOrganization" class="control-select">
+	<option selected="selected" value="">--- Select ---</option>
+	<option value="0">General</option>
+	<option value="50">Campus Wide Support</option>
+	<option value="100">Anderson School of Management (UCLA Anderson)</option>
+	<option value="300">David Geffen School of Medicine</option>
+	<option value="400">Fielding School of Public Health (Fielding School)</option>
+	<option value="500">School of Education &amp; Information Studies (Ed&amp;IS)                               </option>
+	<option value="700">Henry Samueli School of Engineering and Applied Science (UCLA Samueli)</option>
+	<option value="750">Herb Alpert School of Music</option>
+	<option value="800">Luskin School of Public Affairs (UCLA Luskin)</option>
+	<option value="900">School of Dentistry</option>
+	<option value="1000">School of Law (UCLA Law)</option>
+	<option value="1100">School of Nursing</option>
+	<option value="1200">School of the Arts and Architecture (UCLA Arts)</option>
+	<option value="1300">Theater, Film and Television (TFT)</option>
+	<option value="1400">UCLA College of Letters and Science</option>
+
+</select>
+                            </div>
+                            <div id="divWhichFund" class="field-wrapper">
+                                <label id="lblWhichFund">
+                                    Which Fund Would You Like To Support?</label>
+                                
+                                <p class="error">
+                                    Please designate a fund.
+                                </p>
+                                <div class="control-select">
+                                    <select name="ddlFund" id="ddlFund" class="control-select" data-validate="fund">
+	<option selected="selected" value="">--- Select ---</option>
+	<option value="64656C">HOOLIGAN Theatre Company</option>
+	<option value="10141C">James L. Easton Memorial Fund</option>
+	<option value="13821E">Joel A. Feuer Scholarship in Business Law</option>
+	<option value="63682C">Pourdavoud Institute Discretionary Fund</option>
+	<option value="60713C">Technology Development Group:: UCLA Venture Capital Fund</option>
+	<option value="15051C">UNEX Writer&#39;s Program Discretionary Fund</option>
+	<option value="10041C">Zoie&#39;s Award Stipend for UCLA Financial Wellness</option>
+	<option value="11041C">Zoie&#39;s Award Stipend for UCLA First-Generation Graduate Student Council</option>
+
+</select>
+                                </div>
+                            </div>
+                            <!-- BEGIN SEARCH MARKUP -->
+                            <div id="udpSearch">
+	
+                                    <div id="divSearch" class="fund-search-box">
+		
+                                        <div class="search-separator">
+                                            OR
+                                        </div>
+                                        
+                                        <div class="search-fund">
+                                            <label id="lblSearchFunds">
+                                                Search Funds...</label>
+                                            <input name="txtSearch" type="text" id="txtSearch" class="search-input" />
+                                            <input type="image" name="btnSearch" id="btnSearch" class="icon-search-fund" Text="Search" src="assets/img/icon-search-fund.png" style="border-width:0px;" />
+                                        </div>
+                                        <p id="search_results_error" class="error">
+                                            Sorry, your search turned up no results
+                                        </p>
+                                    
+	</div>
+                                
+</div>
+                            <!-- END SEARCH MARKUP -->
+                            <div class="field-wrapper">
+                                
+                                <div class="control-amount-selection control-data-tab is-visible" data-validate="amountSelection"
+                                    data-tab-group="tabs-amount" data-tab-value="amounts">
+                                    <p class="error">
+                                        Please select an amount.
+                                    </p>
+                                    <div class="amounts">
+                                        <a href="#" id="aAmt1" data-value="50">$50</a> <a href="#" id="aAmt2" data-value="75">$75</a> <a href="#" id="aAmt3" data-value="100">$100</a> <a href="#" id="aAmt4" data-value="250">$250</a>
+                                        <a href="#" id="aAmt5" data-value="500">$500</a> <a href="#" id="aAmt6" data-value="1000">$1,000</a> <a href="#" id="aAmt7" data-value="2500">$2,500</a> <a href="#" id="aAmt8" data-value="5000">$5,000</a>
+                                        <div class="other">
+                                            <!-- data-max attribute refers to the maximum amount a user can input -->
+                                            $
+                                        <p>
+                                            <span id="spOtherAmount">Other</span><input name="inpOtherAmount" type="text" id="inpOtherAmount" class="other" maxlength="8" data-max="200000" />
+                                        </p>
+                                        </div>
+                                        <!-- Do not change the data-token attribute, it must be present -->
+                                        <input name="inpAmount" type="hidden" id="inpAmount" class="value" data-token="amount" />
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <div class="field-wrapper submit-wrapper">
+                            <input type="submit" name="btnGivingDetailsSubmit" value="Next: Review" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnGivingDetailsSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btnGivingDetailsSubmit" class="btnSubmit" />
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+                
+            </div>
+            <div id="processing"></div>
+            <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
+            <input name="hdDataCaptureUrl" type="hidden" id="hdDataCaptureUrl" value="https://giving.ucla.edu/DataCapture2/DataCapture.aspx" />
+        </div>
+        <footer>
+            <div class="footer-links-container">
+                <ul>
+                    
+                    <li><a href="http://www.ucla.edu/" target="_blank">UCLA.edu</a> </li>
+                    <li><a href="https://externalaffairs.ucla.edu/development/" target="_blank">UCLA
+                    Development</a> </li>
+                    <li><a href="https://www.uclafoundation.org/" target="_blank">UCLA Foundation</a>
+                    </li>
+                    <li><a href="https://www.uclafoundation.org/Resources/Disclosures" target="_blank">Privacy Policy and Disclosures</a> </li>
+                    <li>&copy;
+                    2025
+                    UCLA </li>
+                </ul>
+            </div>
+        </footer>
+    
+<script language="javascript">
+var ddlOrganization = new DynamicDropDownController('ddlOrganization','','https://giving.ucla.edu/Campaign/GetLookUpData.ashx?SiteNum=690&Test=&ProdSite=&ShowUCLAFund=N&SessionStartID=&TopN=0');
+ddlOrganization.addObserver('ddlFund');
+ddlOrganization.init()
+</script>
+<script language="javascript">
+var ddlFund = new DynamicDropDownController('ddlFund','Funds','https://giving.ucla.edu/Campaign/GetLookUpData.ashx?SiteNum=690&Test=&ProdSite=&ShowUCLAFund=N&SessionStartID=&TopN=0');
+ddlFund.init()
+</script>
+</form>
+    <!-- Following scripts are required for donation flow -->
+    <script data-main="assets/js/main" src="assets/js/vendor.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/donationFlowMod.js?ver=1"></script> -->
+    <!-- GOOGLE ANALYTICS -->
+    <script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-9067969-1', 'auto');ga('require', 'displayfeatures');ga('require', 'ecommerce', 'ecommerce.js');ga('require', 'linker');ga('linker:autoLink', ['ipay.com', 'giveto.ucla.edu', 'giving.ucla.edu']);ga('set', 'dimension2', 'logged-out');ga('set', 'dimension3', 'logged-out');ga('send', 'pageview', 'Giving Checkout - Step 1');ga('send', 'event', 'Giving Checkout', 'checkout', 'Giving Checkout - Step 1 - Giving Details');ga('create', 'UA-35157935-1', 'auto', 'marketing');ga('marketing.require', 'displayfeatures');ga('marketing.require', 'ecommerce', 'ecommerce.js');ga('marketing.require', 'linker');ga('marketing.linker:autoLink', ['ipay.com', 'giveto.ucla.edu', 'giving.ucla.edu']);ga('marketing.set', 'dimension2', 'logged-out');ga('marketing.set', 'dimension3', 'logged-out');ga('marketing.send', 'pageview', 'Giving Checkout - Step 1');ga('marketing.send', 'event', 'Giving Checkout', 'checkout', 'Giving Checkout - Step 1 - Giving Details');</script><script type="text/javascript">fbq('track', 'Giving Checkout - Step 1 - Giving Details');</script>
+                                <script>
+                                    gtag('event', 'conversion', {
+                                         'allow_custom_scripts': true,
+                                         'send_to': 'DC-4393665/Landi0/dgcco0+standard'
+                                    });
+                                </script>
+                                <noscript>
+                                    <img src='https://ad.doubleclick.net/ddm/activity/src=4393665;type=Landi0;cat=dgcco0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?' width='1' height='1' alt='' />
+                                </ noscript >
+    <!-- Linked In -->
+    <script type="text/javascript">
+        _linkedin_data_partner_id = "339628";
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=339628&fmt=gif" />
+    </noscript>
+</body>
+<script type="text/javascript">
+    function SubmitDisableEnable(arg) {
+        var btn;
+        btn = document.getElementById('btnPayPal');
+        if (btn != null)
+            arg ? btn.setAttribute('disabled', 'disabled') : btn.removeAttribute('disabled');
+        btn = document.getElementById('btnSubmitCC');
+        if (btn != null)
+            arg ? btn.setAttribute('disabled', 'disabled') : btn.removeAttribute('disabled');
+        btn = document.getElementById('inpSubmitPRD');
+        if (btn != null)
+            arg ? btn.setAttribute('disabled', 'disabled') : btn.removeAttribute('disabled');
+    }
+    function GetWord(aString, delimit, wordNum) {
+        var dl = delimit.length
+        var pos = 0
+        var tempstr = ""
+        var nextpos = 0
+
+        if (wordNum <= 0) {
+            return aString
+        }
+        else {
+            tempstr = aString
+
+            for (var i = 1; i < wordNum; i++) {
+                pos = tempstr.indexOf(delimit) + dl
+                if (pos < dl) {
+                    return ""
+                } else {
+                    tempstr = tempstr.substring(pos)
+                }
+            }
+
+            nextPos = tempstr.indexOf(delimit)
+
+            if (nextPos == -1) {
+                return tempstr
+            } else {
+                return tempstr.substring(0, nextPos)
+            }
+        }
+    }
+
+    function SetOrgs(sType, sDDLID, sOrgListID, sFundListID) {
+        var ddl = document.getElementById(sDDLID);
+        var ddlHidden = document.getElementById("__" + sDDLID);
+        var inp = document.getElementById(sOrgListID);
+        var hSelectedOrgType = document.getElementById('hSelectedOrgType');
+        hSelectedOrgType.value = sType;
+
+        var sp = document.getElementById('lblWhich');
+        if (sp != null) {
+            if (sType == "S") {
+                sp.innerHTML = "Which School Are You Giving To?";
+            }
+            else if (sType == "M") {
+                sp.innerHTML = "Which Campus Area Are You Giving To?";
+            }
+            else if (sType == "C") {
+                sp.innerHTML = "Which Cause Are You Giving To?";
+            }
+        }
+
+        try {
+            if (isPostBack) {
+                sFundListID = 'xxyyzz';
+                ddl = null;
+            }
+        }
+        catch (err) { }
+        var i = 0;
+        var option;
+        try {
+            if (ddl != null && inp != null) {
+                for (var option in ddl) {
+                    ddl.remove(option);
+                }
+                option = document.createElement('option');
+                option.value = "0";
+                option.text = "--- Select ---";
+                ddl.add(option);
+                ddl.selectedIndex = 0;
+
+                if (ddlHidden != null) {
+                    ddlHidden.value = "--- Select ---|0|";
+                }
+
+                var ddlFund = document.getElementById(sFundListID);
+                if (ddlFund != null) {
+                    for (var fund in ddlFund) {
+                        ddlFund.remove(fund);
+                    }
+                    option = document.createElement('option');
+                    option.value = "";
+                    option.text = "--- Select ---";
+                    ddlFund.add(option);
+                    ddlFund.selectedIndex = 0;
+                }
+                var sOrgList = inp.value;
+                var sThisOrg = " ";
+                var sThisCat;
+                var iNumOrgs = 0;
+                while (sThisOrg != "") {
+                    i = i + 1;
+                    sThisOrg = GetWord(sOrgList, ";", i);
+                    sThisCat = GetWord(sThisOrg, "|", 1);
+                    if (sThisCat == sType) {
+                        iNumOrgs++;
+                        option = document.createElement('option');
+                        option.value = GetWord(sThisOrg, "|", 2);
+                        option.text = GetWord(sThisOrg, "|", 3);
+                        ddl.add(option);
+                        if (ddlHidden != null) {
+                            ddlHidden.value += option.text + "|" + option.value + "|";
+                        }
+                    }
+                }
+                var divWhichOrg = document.getElementById('divWhichOrg');
+                if (iNumOrgs == 1) {
+                    if (ddl.fireEvent) {
+                        ddl.selectedIndex = 1;
+                        divWhichOrg.style.display = "none";
+                        ddl.fireEvent('onchange');
+                    }
+                    else if (ddl.dispatchEvent) {
+                        ddl.selectedIndex = 1;
+                        divWhichOrg.style.display = "none";
+                        var oEvent = document.createEvent('HTMLEvents'); oEvent.initEvent('change', true, true); ddl.dispatchEvent(oEvent);
+                    }
+                    else
+                        divWhichOrg.style.display = "block";
+                }
+                else {
+                    divWhichOrg.style.display = "block";
+                }
+                if (!isPostBack) {
+                    ddl.previousSibling.innerHTML = ddl.options[ddl.selectedIndex].text;
+                    ddlFund.previousSibling.innerHTML = ddlFund.options[ddlFund.selectedIndex].text;
+                }
+            }
+        }
+        catch (err) { }
+    }
+
+    function SetPaymentType(sType) {
+        var hSelectedPaymentType = document.getElementById('hSelectedPaymentType');
+        if (hSelectedPaymentType != null) {
+            hSelectedPaymentType.value = sType;
+        }
+        if (getUrlParameter("ogf") == "1")
+            $("#aRecurring").off('click');
+        return false;
+    }
+
+    function decodeHTML(html) {
+        var txt = document.createElement('textarea');
+        txt.innerHTML = html;
+        return txt.value;
+    };
+
+    function Validate(bPayPal) {
+        SubmitDisableEnable(true);
+        setTimeout(function () { SubmitDisableEnable(false) }, 10000);
+
+        $('.field-error').removeClass('field-error');
+        //alert("in validate function");
+        var keyVal = new Array();
+        var sTmp;
+
+        var kv = decodeHTML($('#hKeyAttributes').val()).split("^");
+        for (var i = 0; i < kv.length; i = i + 2) {
+            keyVal[kv[i]] = kv[i + 1];
+        }
+
+        //Fund
+        // keyVal['Fund_List'] = GetWord($('#hSelectedFund').val(), "-", 1) + "|" + $('#hAmount').val() + "|" + $('#hSelectedFundName').val() + "|||";
+        keyVal['Fund_List'] = $('#hFundList').val();
+
+        var sAppealCode = $('#hAppealCode').val();
+        if ($('#hUseFundAppealCode').val() == "Y" && GetWord($('#hSelectedFund').val(), "-", 2) != "") {
+            sAppealCode = (GetWord($('#hSelectedFund').val(), "-", 2))
+        }
+        keyVal['appeal_code'] = sAppealCode;
+        //Amount
+        keyVal['txt__Amount_Charged'] = $('#hTotalAmount').val();
+
+        keyVal['txt__Member_ID'] = $('#hAdvanceID').val();
+        //keyVal['txt__MG_GUID'] = $('#hMGGuid').val();
+        //alert("in validate function hAdvanceID " + $('#hAdvanceID').val());
+        //alert("in validate function txt__Member_ID " + keyVal['txt__Member_ID']);
+        keyVal['txt__First_Name'] = Clean($('#txtFirstName').val());
+        keyVal['txt__Last_Name'] = Clean($('#txtLastName').val());
+        if (Clean($('#txtBirthDate').val()) != "") {
+            keyVal['txt__Birth_Date'] = Clean($('#txtBirthDate').val());
+        }
+        if (Clean($('#txtGradYearSearch').val()) != "") {
+            keyVal['txt__UCLA_Graduation_Year'] = Clean($('#txtGradYearSearch').val());
+        }
+        if ($('#cbCorporateGift').prop('checked')) {
+            sTmp = $.trim(Clean($('#txtCorporateName').val()));
+            if (sTmp != null && sTmp.length > 0) {
+                keyVal['txt__Corporate_Name'] = sTmp;
+            }
+        }
+
+        sTmp = "";
+        if ($('#ddlJointGift').val() == "N")
+            keyVal['txt__Joint_Gift'] = "N";
+        else if ($('#ddlJointGift').val() == "Y") {
+            keyVal['txt__Joint_Gift'] = "Y";
+            sTmp = $.trim(Clean($('#txtSpouse').val()));
+        }
+        if (sTmp != null && sTmp.length > 0) {
+            keyVal['txt__Spouse'] = sTmp;
+            keyVal['txt__Spouse_UCLA_Graduation_Year'] = Clean($('#txtSpouseGradYear').val());
+        }
+        if ($('#cbMatchingGift').prop('checked')) {
+            keyVal['txt__Matching_Gifts'] = "Will Mail";
+            keyVal['txt__Matching_Company'] = Clean($('#txtEmployer').val());
+            if ($('#rbSpousesEmployer').prop('checked')) {
+                keyVal['txt__Matching_Company_Is'] = "Spouse's employer";
+            }
+            else {
+                keyVal['txt__Matching_Company_Is'] = "My employer";
+            }
+            keyVal['txt__Send_Matching_Gift_To'] = "UCLA External Affairs, Attn: Matching Gift Services, 10889 Wilshire Boulevard, Suite 1000, Los Angeles, CA. 90095-1603";
+        }
+        //Address
+        var raVal = $('#cbAddressBusiness').prop('checked');
+        if (raVal)
+            keyVal['txt__Address_Type'] = "B";
+        else
+            keyVal['txt__Address_Type'] = "H";
+
+        var intl = $('#hInternational').val();
+        if (intl == "True") {
+            keyVal['txt__Street'] = Clean($('#txtStreetIntl').val());
+            if (Clean($('#txtStreet2Intl').val()).length > 0)
+                keyVal['txt__Street2'] = Clean($('#txtStreet2Intl').val());
+            keyVal['txt__City'] = Clean($('#txtCityPostalCodeIntl').val());
+            keyVal['txt__Country'] = $('#ddlCountry').val();
+
+            if ($('#ddlCountry').val() == "CANADA" && $('#cbCanadian').prop('checked')) {
+                var Canadian = document.getElementById("spCanadian");
+                if (Canadian != null) {
+                    var sCanadianText = Canadian.innerText;
+                    keyVal['txtarea__Comments'] = "--- " + sCanadianText + " ---";
+                }
+            }
+        }
+        else {
+            keyVal['txt__Street'] = Clean($('#txtStreet').val());
+            if (Clean($('#txtStreet2').val()).length > 0)
+                keyVal['txt__Street2'] = Clean($('#txtStreet2').val());
+            keyVal['txt__City'] = Clean($('#txtCity').val());
+            keyVal['txt__State'] = $('#ddlState').val();
+            keyVal['txt__Zip'] = Clean($('#txtZip').val());
+        }
+        var rpVal = $('#cbPhoneBusiness').prop('checked');
+        if (rpVal)
+            keyVal['txt__Business_Phone'] = Clean($('#txtPhone').val());
+        else
+            keyVal['txt__Home_Phone'] = Clean($('#txtPhone').val());
+        var reVal = $('#cbEmailBusiness').prop('checked');
+        if (reVal)
+            keyVal['txt__Email_Type'] = "B";
+        else
+            keyVal['txt__Email_Type'] = "H";
+        keyVal['txt__Email'] = Clean($('#txtEmail').val());
+
+        keyVal['Bio_Update_Code'] = "0";
+
+        if ($('#cbIsParent').prop('checked')) {
+            keyVal['txt__Parent'] = "Y";
+        }
+
+        if ($('#cbEmailUpdates').prop('checked')) {
+            keyVal['EmailUpdatesText'] = $('#hValEmailUpdatesText').val();
+            keyVal['txt__Email_Updates'] = "Y";
+        }
+
+        if ($('#cbAnonymous').prop('checked')) {
+            keyVal['txt__Anonymous'] = "Y";
+        }
+
+        if ($('#cbSaveCCInfo').prop('checked')) {
+            keyVal['SaveAccountInfo'] = "Y";
+        }
+
+        var paymentType = $('#hSelectedPaymentType').val();
+        if (paymentType == "R") {
+            keyVal['txt__Recurring_Payment_Method'] = "O";
+            keyVal['txt__Pledge_Payment_Interval'] = $('#hPaymentSpec').val();
+        }
+        else if (paymentType == "P") {
+            keyVal['txt__Total_Pledge_Amount_Including_This_Payment'] = keyVal['txt__Amount_Charged'];
+            keyVal['txt__Amount_Charged'] = GetWord($('#hPaymentSpec').val(), ";", 3);
+            keyVal['txt__Recurring_Payment_Method'] = "Automatic - your account will be charged on the 15th of the month due.";
+            keyVal['txt__Pledge_Payment_Interval'] = GetWord($('#hPaymentSpec').val(), ";", 1);
+            keyVal['txtarea__Payment_Schedule'] = $('#hPaymentSchedule').val();
+            keyVal['PledgeSchedule'] = $('#hPledgeSchedule').val();
+        }
+        else if (paymentType == "D") {
+            keyVal['Num_Deductions'] = $('#hPaymentSpec').val();
+            if (keyVal['Num_Deductions'] > 0) {
+                keyVal['txtarea__Payment_Schedule'] = $('#hPaymentSchedule').val();
+                if (keyVal['Num_Deductions'] > 1) {
+                    keyVal['txt__Total_Pledge_Amount_Including_This_Payment'] = keyVal['txt__Amount_Charged'] * keyVal['Num_Deductions'];
+                }
+            }
+            keyVal['txt__Pledge_Payment_Interval'] = "1";
+            keyVal['Source'] = "OLPRD";
+            keyVal['Start_Month'] = $('#hDeductionStartMonthYYYYMM').val();
+            keyVal['PledgeSchedule'] = $('#hDeductionDescription').val();
+            keyVal['Bcc'] = $('#hDeductionEmails').val();
+        }
+
+        // Potentially reset premium after setting txt__Amount_Charged:
+        if ($('#hPremiumAmount').val() == "A") {
+            keyVal['Premium_Amount'] = keyVal['txt__Amount_Charged'];
+        }
+        else {
+            keyVal['Premium_Amount'] = $('#hPremiumAmount').val();
+        }
+
+        if (bPayPal)
+            keyVal['PPPayPage'] = "Y";
+
+        if ($('#hTribute').val() != "") {
+            keyVal['txt__Tribute_Type'] = Clean($('#hTribute').val());
+            keyVal['txtarea__Tribute_Person_Occasion'] = Clean($('#hTributePersonOrOccasion').val());
+            if ($('#hNotify').val() == "Y") {
+                keyVal['txt__Honor_Title'] = Clean($('#hNotifyTitle').val());
+                keyVal['txt__Honor_First_Name'] = Clean($('#hNotifyFirstName').val());
+                keyVal['txt__Honor_Last_Name'] = Clean($('#hNotifyLastName').val());
+                keyVal['txt__Honor_Home_Street1'] = Clean($('#hNotifyStreet').val());
+                keyVal['txt__Honor_Home_Street2'] = Clean($('#hNotifyStreet2').val());
+                keyVal['txt__Honor_Home_City'] = Clean($('#hNotifyCity').val());
+                keyVal['txt__Honor_Home_State_Code'] = Clean($('#hNotifyState').val());
+                keyVal['txt__Honor_Home_Country'] = Clean($('#hNotifyCountry').val());
+                if (Clean($('#hNotifyCountry').val()) == '' || Clean($('#hNotifyCountry').val()) == 'UNITED STATES') {
+                    keyVal['txt__Honor_Home_Zip_Code'] = Clean($('#hNotifyZip').val());
+                }
+                else {
+                    keyVal['txt__Honor_Home_Intl_City_Postal_Code'] = Clean($('#hNotifyZip').val());
+                }
+                keyVal['txt__Honor_Home_Email'] = Clean($('#hTributeEmail').val());
+                keyVal['txtarea__Honor_Signature'] = Clean($('#hNotifyNote').val());
+            }
+        }
+
+        //keyVal['txt__Tribute_Type'] = Clean($('#hTributeType').val());
+        //keyVal['txtarea__Tribute_Person_Occasion'] = Clean($('#hTributePersonOrOccasion').val());
+
+        //Ravi: Added code for Crowdfunding details
+        if ($('#hCFTributeType').val() != "") {
+            keyVal['txt__Tribute_Type'] = Clean($('#hCFTributeType').val());
+            keyVal['txtarea__Tribute_Person_Occasion'] = Clean($('#hCFTributePersonOrOccasion').val());
+        }
+
+        if ($('#hPledgePayment').val() == "Y") {
+            keyVal['PledgePayment'] = "C";
+        }
+
+        //        for (var index in keyVal) {
+        //                        alert(index + " : " + keyVal[index]);
+        //        }
+        //validateCaptcha();
+        //if (recaptchaIsValid) {
+        setTimeout(function () {
+            if ($('.field-error').length == 0)
+                submitValues($('#hdDataCaptureUrl').val(), keyVal);
+        }, 500)
+        //}
+        //else {
+        //    SubmitDisableEnable(true);
+        //    alert('Error! The security token has expired or you are a bot.');
+        //}
+
+        //SetDataCapturePage($('#hdDataCaptureUrl').val());
+
+        return false;
+    }
+
+    function Clean(s) {
+        //  var newString = escape(s);
+        var newString = "";
+        if (s != null) {
+            var sUpper = s.toUpperCase();
+            if (sUpper.indexOf("JAVASCRIPT") != -1 || sUpper.indexOf("JQUERY") != -1 || sUpper.indexOf("JSCRIPT") != -1) {
+                newString = "";
+            }
+            else {
+                newString = s.replace("<", "").replace(">", "");
+            }
+        }
+        return newString;
+    }
+
+    function GetWord(aString, delimit, wordNum) {
+
+        var dl = delimit.length
+        var pos = 0
+        var tempstr = ""
+        var nextpos = 0
+
+        if (wordNum <= 0) {
+            return aString
+        }
+        else {
+            tempstr = aString
+
+            for (var i = 1; i < wordNum; i++) {
+                pos = tempstr.indexOf(delimit) + dl
+                if (pos < dl) {
+                    return ""
+                } else {
+                    tempstr = tempstr.substring(pos)
+                }
+            }
+
+            nextPos = tempstr.indexOf(delimit)
+
+            if (nextPos == -1) {
+                return tempstr
+            } else {
+                return tempstr.substring(0, nextPos)
+            }
+        }
+    }
+
+    function submitValues(url, params) {
+        $('#processing').show();
+        var form = ['<form method="POST" action="', url, '">'];
+
+        for (var key in params)
+            form.push('<input type="hidden" id="', key, '" name="', key, '" value="', params[key], '"/>');
+
+        form.push('</form>');
+
+        jQuery(form.join('')).appendTo('body')[0].submit();
+    }
+
+    function ddlJointGiftChanged(ctl) {
+        var checked = false;
+        var revealHideClass = ctl.getAttribute("hide-class");
+        $revealWrapper = $('#' + ctl.getAttribute("data-reveal-id"));
+        if (ctl.value == "Y") {
+            $('.' + revealHideClass).show();
+            checked = true;
+        }
+        else {
+            $('.' + revealHideClass).hide();
+            $('.' + revealHideClass + 'wrap').addClass("hidden");
+            $('.' + revealHideClass).find('.control-checkbox').removeClass('focus checked');
+        }
+        $revealWrapper
+            .toggleClass('hidden', !checked)
+            .find('[data-validate]:visible')
+            .toggleClass('skip-validation', !checked)
+            .end()
+            .find('[data-validate]:hidden')
+            .addClass('skip-validation');
+    }
+
+    function validateCaptcha() {
+        // Individual string variables storing captcha values
+        var rToken = $("input#recaptchaToken").val();
+
+        // Ajax post to page web method that will do server-side captcha validation
+        $.ajax({
+            type: "POST",
+            url: "validate.ashx",
+            data: "recaptchaToken=" + rToken,
+            async: false,
+            success: function (msg) {
+                recaptchaIsValid = (msg === 'true');
+            },
+            error: function () { alert('error'); }
+        });
+    }
+</script>
+</html>

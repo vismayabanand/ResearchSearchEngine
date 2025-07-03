@@ -1,0 +1,781 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Technical Reports - Computer Science - Research Guides at UCLA Library</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noarchive" /><link data-n-head="ssr" rel="icon" type="image/x-icon" href="https://www.library.ucla.edu/favicon.ico"><!-- public_metadata.twig -->
+
+    <!-- auto generated dublin core metadata -->
+    <meta name="DC.Title" content="Research Guides: Computer Science: Technical Reports"/>
+    <meta name="DC.Creator" content="Shelby Hallman"/>
+    <meta name="DC.Subject" content="Engineering & Computer Science"/>
+    <meta name="DC.Description" content="Your guide to Computer Science research at UCLA."/>
+    <meta name="DC.Publishers" content="UCLA Library"/>
+    <meta name="DC.Rights" content="Copyright UCLA Library 2025"/>
+    <meta name="DC.Language" content="en"/>
+    <meta name="DC.Identifier" content="https://guides.library.ucla.edu/cs/technical-reports"/>
+    <meta name="DC.Date.Created" content="Sep 22, 2009"/>
+    <meta name="DC.Date.Modified" content="Apr 23, 2025"/>
+    <meta property="og:title" content="Research Guides: Computer Science: Technical Reports">
+<meta property="og:description" content="Your guide to Computer Science research at UCLA.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guides.library.ucla.edu/cs/technical-reports">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" /><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick.css"><link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick-theme.css"><link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.17.2/lg-public.min.css" /><script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script><script>
+                    jQuery(document).ready(function () {
+                     jQuery(".dropdown-toggle").on("click",function(e){
+                        jQuery(this).siblings("ul.s-lg-subtab-ul.dropdown-menu").toggle();
+                       })
+                     });
+             </script>    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.17.2/lg-public.min.js"></script><style>/** bootstrap_tab_css.twig **/
+#s-lg-tabs-container .nav-tabs > li > a,
+#s-lg-tabs-container .nav-tabs > li > button,
+#s-lg-tabs-container .nav-pills > li > a,
+#s-lg-tabs-container .nav-pills > li > button {
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    background-color: #eff3f4;
+    color: #0b6ab7;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .nav-tabs {
+    border-bottom: 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li#s-lg-admin-tab-add > a {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-tabs > li > button:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > button:hover {
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    background-color: #ffd100;
+    color: #2d2f35;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > button,
+#s-lg-tabs-container .nav-pills > .active > a,
+#s-lg-tabs-container .nav-pills > .active > button {
+    color: #2d2f35;
+    cursor: default;
+    background-color: #ffd100;
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > button {
+    color: #2d2f35;
+    cursor: default;
+    background-color: #ffd100;
+    border-bottom-color: transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover,
+#s-lg-tabs-container .nav-pills > .active > a:hover,
+#s-lg-tabs-container .nav-tabs > .active > button:hover,
+#s-lg-tabs-container .nav-pills > .active > button:hover {
+    color: #2d2f35;
+    cursor: pointer;
+    background-color: #ffd100;
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: #e1e1e1;
+}
+
+#s-lg-tabs-container .nav-tabs button.dropdown-toggle .caret {
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 6px 4px 3px;
+    border-left: 1px solid transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 6px 0px 3px;
+    border-left: 1px solid transparent;
+    margin-right: 2px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 4px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 0px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link:hover {
+    border-radius: 0;
+    font-weight: bold;
+    padding: 4px 5px 4px 10px;
+}
+
+.nav-tabs > li > a.s-lg-tab-top-link,
+.nav-tabs > li > button.s-lg-tab-top-link {
+    margin-right: 0px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 8px 4px 8px;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 8px 4px 8px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link:hover {
+    width: 100%;
+    float: left;
+    border-radius: 0;
+    font-weight: bold;
+    padding: 4px 15px 4px 15px;
+}
+
+/** !bootstrap_tab_css.twig **/
+ .s-lib-box {border-color: #0b6ab7;
+                border-width: 1px;
+                box-shadow: 0 8px 6px -6px #AAAAAA;
+                border-radius: 0;
+                background-color: #ffffff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #0b6ab7; background-image: none;color: #ffffff;
+                border-bottom: 1px solid #0b6ab7;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #0b6ab7; background-image: none;color: #ffffff;
+                border-bottom: 1px solid #0b6ab7;
+                border-radius: 0;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0;
+            }</style><style type="text/css">
+header {
+    background-color: #0B6AB7;
+    margin: 0 auto 16px;
+    padding: 12px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.logo {
+    align-self: center;
+}
+
+.logo a {
+    display: flex;
+}
+
+.logo .logo-ucla {
+    align-self: stretch;
+} 
+
+.links {
+    flex: 1;
+}
+
+.links ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.links li {
+    padding: 4px 16px;
+}
+
+.links a {
+    color: white;
+    font-size: 16px;
+}
+
+.links a:hover,
+.links a:focus {
+    color: white;
+}
+
+/* A-Z Databases */
+#s-lg-az-results .s-lg-az-result-title {
+    font-size: 16px;
+}
+
+.s-lg-az-result-description {
+    font-size: 14px;
+}
+
+.s-lib-box,
+.s-lib-profile-image img { 
+    box-shadow: none !important; 
+}
+</style>
+
+
+
+<link rel="shortcut icon" href="https://libapps.s3.amazonaws.com/customers/694/images/favicon.ico" />
+
+<style type="text/css">
+@font-face {
+    font-family: 'ProximaNova';src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Light.eot');src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Light.woff') format('woff'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Regular.eot');src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Regular.woff') format('woff'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Semibold.eot');src: url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Semibold.woff') format('woff'),url('//s3.amazonaws.com/libapps/sites/705/include/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+figure {
+    display: inline-block;
+    border: 1px dotted gray;
+    margin: 20px; /* adjust as needed */
+}
+figure img {
+    vertical-align: top;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    text-align: center;
+}
+
+</style>
+
+
+
+<!--  OLD
+<style type="text/css">
+@font-face{font-family:'AkzidenzGrotesk';src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdreg_0-webfont.eot);src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdreg_0-webfont.eot?#iefix) format('embedded-opentype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdreg_0-webfont.woff) format('woff'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdreg_0-webfont.ttf) format('truetype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdreg_0-webfont.svg#akzidenz-grotesk_stdregular) format('svg');font-weight:400;font-style:normal;}
+@font-face{font-family:'AkzidenzGrotesk';src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdmed_0-webfont.eot);src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdmed_0-webfont.eot?#iefix) format('embedded-opentype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdmed_0-webfont.woff) format('woff'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdmed_0-webfont.ttf) format('truetype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdmed_0-webfont.svg#akzidenz-grotesk_stdmedium) format('svg');font-weight:700;font-style:normal;}
+@font-face{font-family:'AkzidenzGrotesk';src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdlig_0-webfont.eot);src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdlig_0-webfont.eot?#iefix) format('embedded-opentype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdlig_0-webfont.woff) format('woff'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdlig_0-webfont.ttf) format('truetype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdlig_0-webfont.svg#akzidenz-grotesk_stdlight) format('svg');font-weight:100;font-style:normal;}
+@font-face{font-family:'AkzidenzGrotesk';src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdbol_0-webfont.eot);src:url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdbol_0-webfont.eot?#iefix) format('embedded-opentype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdbol_0-webfont.woff) format('woff'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdbol_0-webfont.ttf) format('truetype'),url(//s3.amazonaws.com/libapps/sites/705/include/akzidgrostdbol_0-webfont.svg#akzidenz-grotesk_stdbold) format('svg');font-weight:900;font-style:normal;}
+</style>
+-->
+
+
+<style type="text/css">
+/*! selected css from http://www.library.ucla.edu/sites/all/themes/uclalib_omega/css/uclalib-omega.normalize.css */
+body { margin: 0; font-family: "ProximaNova",sans-serif; font-size: 14px; color: #666; line-height: initial; }
+a { background: transparent; }
+a:active, a:hover { outline: 0; }
+a:focus, a:hover { color: #0B6AB7 }
+.menu a:focus, .menu a:hover { color: #FFFFFF; }
+h1 { font-size: 2em; margin: 0.67em 0; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+/*! manually added by SM */
+body { line-height: 1.5; }
+#s-lg-guide-tabs-title-bar { border-top: 1px solid #0B6AB7; }
+a { font-weight: 700; }
+.s-lg-book-props a { font-weight: 400; }
+.s-lg-book-title a { font-weight: 700; }
+.s-lg-book-prop-isbn { display: none; }
+.s-lg-guide-info-account a { font-weight: 400; }
+h3 { font-size: 16px; color: #666; font-weight: bold; margin-top: 10px; margin-bottom: 5px; }
+table th { font-size: 16px; color: #ffffff; font-weight: normal; }
+.top-head { margin-top: 0; }
+.s-lib-box .s-lib-box-title { font-size: 19px; font-weight: 100;}
+ul,ol { padding-left: 10px; margin-left: 10px; }
+.s-lg-link-list, .s-lg-system-list, .s-lg-rss-list { padding-left: 10px; }
+ul ul, ol ul, ul ol, ol ol { margin-bottom: 0px; margin-left: 20px; }
+.nav-tabs, .nav-pills a { font-size: 15px; font-weight: bold; }
+#s-lg-guide-name, #s-lib-public-header-title { font-size: 22px; color: #666666; font-weight: 700; }
+#s-lg-hp-nav { background: #eff3f4; }
+#s-lg-general-accordion { font-size: 14px; }
+.btn-info, .btn-info:hover, .btn-info:focus, .btn-info:active { background-color: #0B6AB7; border-color: #0B6AB7; }
+.label-info { color: #FFFFFF; background-color: #0B6AB7; font-size: 1.1em !important; }
+.l-colophon-wrapper { padding: 20px 0; }
+.page_title { color: #0B6AB7; font-size: 80%; display: none; }
+ul.s-lg-link-list {margin-bottom: 0px; }
+table th + th, table td + td { text-align: initial; }
+table th, table td { vertical-align: top; }
+blockquote { font-size: 15px; }
+</style>
+
+<style type="text/css">
+/*! hide subjects in profile boxes */
+.s-lib-profile-subjects { display: none; }
+/*! following statement intended to hide more info link on Databases, but not Links */
+[id^="s-lg-database-more-"], [id*=" s-lg-database-more-"] { display: none !important; }
+.s-lg-az-result .s-lg-label-moreinfo { display: none; }
+.s-lg-database-desc + .s-lg-label-moreinfo { display: none; }
+/*! make LibGuides footer same width and color as UCLA footer */
+#s-lib-footer-public { width: 100%; 
+//background: #ECECEC; 
+background: #ffffff;
+}
+</style>
+
+<!-- Add molecule background, gray header, breadcrumb style -->
+<style>
+.s-lg-guide-body, .s-lib-public-body { 
+//background: url("//www.library.ucla.edu/sites/all/themes/uclalib_omega/images/mol-bg.jpg") repeat scroll 0px 0px transparent; 
+margin: 0px; padding-left: 0px; padding-right: 0px; }
+.s-lib-header { padding-left: 10px; padding-right: 10px; 
+//background: #EFF3F4; 
+}
+#s-lg-guide-main, #s-lib-public-main, #s-lg-tabs-container { padding-left: 10px; padding-right: 10px; background: #FFFFFF; }
+.breadcrumb > li + li::before { color: #666; content: "» "; }
+#s-lib-admin-bc .breadcrumb li, #s-lib-bc .breadcrumb li { font-weight: 400; color: #666; font-size: 14px; }
+#s-lib-admin-bc .breadcrumb a, #s-lib-bc .breadcrumb a { font-weight: 400; }
+#s-lg-guide-desc-container { margin-bottom: 10px; padding-top: 0px; }
+#s-lg-guide-description { font-size: 14px; }
+</style>
+
+<style>
+/*! removes mouseover drop-down menus in the side navigation bar */
+.nav-pills .s-lg-subtab-ul.dropdown-menu li { display: none; visibility: hidden; }
+.nav-pills .s-lg-subtab-ul.dropdown-menu { display: none; visibility: hidden; }
+/*! remove update and views from subject and profile pages, but leave visible in popover */
+div#s-lg-profile-cols .s-lg-gmeta { display: none; visibility: hidden; }
+div#s-lg-sb-content-guides .s-lg-gmeta { display: none; visibility: hidden; }
+/*! change color of number badges in menu, make boxes and margins a bit smaller */
+.panel-default { border-color: #869FC1; }
+.panel-default > .panel-heading .badge { background-color: #0B6AB7; color: #FFFFFF; }
+div#s-lg-index-cols .panel-heading { background-color: #EFF3F4; font-size: 15px; padding: 8px 8px; font-weight: 700; }
+div#s-lg-index-cols .col-md-4 { padding-left 6px; padding-right: 6px; }
+.s-lg-gtitle a.bold { font-size: 14px; font-weight: 400; }
+div#s-lg-index-cols .alert-info a { font-size: 14px; font-weight: 400; }
+div#s-lg-index-cols ul.s-lg-guide-list { margin-left: 0px; padding-left: 10px; }
+.alert-info { color: #0B6AB7; }
+</style>
+
+<style>
+/* DEFAULT & INACTIVE TAB STYLES */
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+/* DEFAULT HOVER & FOCUS STYLES */
+.nav-tabs>li>a:hover {
+    border-color: #8bb8e8;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #8bb8e8;
+}
+
+/* EXAMPLE: Change tab font size & weight; make borders light gray. */
+.s-lib-jqtabs .nav-tabs > li > a {
+    font-size: 16px;
+    font-weight: bold;
+ background-color: #c3d7ee;
+    border: 1px solid #005587;
+}
+
+/* EXAMPLE: Change the tab hover color to light blue */
+.s-lib-jqtabs .nav-tabs>li>a:hover {
+    background-color: #ffd100;
+}
+/* DEFAULT ACTIVE TAB STYLES */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #ffd100;
+    border: 1px solid #fffd100;
+    border-bottom-color: transparent;
+}
+
+/* EXAMPLE: Change the tab font and background colors. */
+.s-lib-jqtabs .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #005587;
+    background-color: #ffd100;
+    border-color: #ffd100;
+}
+</style>
+
+<style type="text/css">
+/*! supports flex-columns */
+@media (min-width: 768px) {
+.flex-row {display: flex; flex-direction: row;}
+.s-lg-flex-col-side-nav {flex-basis: 25%; min-width: 25%; max-width: 25%;}
+.flex-grow-col {flex-grow: 6; flex-basis: 42%; width: auto; padding-left: 15px; padding-right: 15px;}
+.flex-shrink-col {width: auto; max-width: 33%; padding-left: 15px; padding-right: 15px;}
+}
+div:empty {display: none;}
+</style>
+
+<style>
+/*! support "CSS Tricks" */
+@media (min-width: 640px) { .box-in-box { width: 50%; float: right; margin-left: 15px; } }
+.box-in-box { border: 0px solid #BCCADC; padding: 10px 10px 0px 10px; margin-bottom: 5px; background-color: #FFFFFF; }
+div.box-in-box h3:first-child { margin-top: 0; }
+@media (min-width: 640px) { .widget-in-box { width: 50%; float: right; margin-left: 15px; } }
+.highlight-box { border: 2px solid #0B6AB7; background-color: #C3d7ee !important; }
+.highlight-box h2.s-lib-box-title { background-color: #0B6AB7; color: #FFFFFF; font-weight: 100; }
+.highlight-box .s-lib-box-content { font-weight: 700; font-size: 110%; }
+.highlight { border: 2px solid #0B6AB7; background-color: #C3d7ee !important; padding: 10px; font-weight: 700; color: #222222; }
+div.highlight { border: 2px solid #0B6AB7; background-color: #C3d7ee !important; font-weight: 700; color: #222222; }
+ul.highlight { border: 2px solid #0B6AB7; background-color: #C3d7ee !important; font-weight: 700; color: #222222; }
+/*!   OLD VERSION  div.highlight { background: #D7D9DA; padding: 10px; }
+ul.highlight { background: #D7D9DA; padding: 4px; } */
+</style>
+
+<style>
+/*! extra padding for table heads */
+table th { padding: 5px 7px; }
+/*! suppress the placeholder profile image */
+.s-lib-profile-div img[src="//s3.amazonaws.com/libapps/apps/common/images/profile.jpg"] { display: none; }
+/*! change color of info icon */
+.fa-info-circle { color: #0B6AB7; }
+/*! Hide box-level navigation for solo boxes */
+.s-lg-boxnav li.list-group-item:only-child { display: none; }
+/*! Add faint gray border to book covers, hopefully unnoticed on most, but visible on white books */
+.s-lg-book-cover img { border: 1px solid #EEEEEE ; }
+/* Hide group link in breadcrumbs */
+#s-lib-bc-group { display: none; }
+/*! hide new window icon */
+.fa-external-link { display: none; }
+</style>
+
+<style>
+/*! center gallery images */
+.carousel-inner img { margin-left: auto; margin-right: auto; }
+/*! color of lines */
+hr { border-top: 1px solid #adcde5; }
+/*! delete share link on A-Z list */
+[id^="s-lg-az-share-btn-"] { display: none; }
+/*! hide alternate names on A-Z list */
+.s-lg-az-result-keywords { display: none; }
+</style>
+
+<style>
+/*! new codes to match new accessibility upgrades Feb 2017 */
+.nav .s-lg-index-nav-btn > button { color: #0B6AB7; }
+.nav-pills > li.active > button, .nav-pills > li.active > button:focus, .nav-pills > li.active > button:hover { background-color: #0B6AB7; }
+.list-group-item { border-color: #BCCADC; }
+#s-lg-tabs-container .nav-tabs > li > a, #s-lg-tabs-container .nav-tabs > li > button, #s-lg-tabs-container .nav-pills > li > a, #s-lg-tabs-container .nav-pills > li > button { border: 1px solid #869FC1; background-color: #C3d7ee; }
+.btn-link { color: #0B6AB7; }
+.s-lg-az-trials-div h2 { color: #FFFFFF !important; }
+#s-lg-tabs-container .nav .dropdown-toggle .caret { border-top-color: #0B6AB7; }
+th h3 { color: #FFFFFF; }
+</style>
+
+<style>
+/*! Responsive design fixes */
+@media (max-width: 480px) {
+#s-lg-guide-name { clear: right; }
+}
+@media (max-width: 768px) {
+#s-lg-col-1, #s-lg-col-2 { padding-left: 0px; padding-right: 0px; }
+ul { margin-left: 0px; }
+}
+div.right { width: 45%; margin-left: 20px; float: right; }
+@media (max-width: 768px) {
+  div.right { width: 100%; margin-left: initial; float: none; }
+  }
+div.left { width: 45%;;}
+@media (max-width: 768px) {
+  div.left { width: 100%; }
+  }
+</style>
+<script src="https://ucla.libanswers.com/load_chat.php?hash=5a44dfe7cc29aaee5bba635ab13fa753"></script>
+
+<style>
+@font-face { font-family: 'icomoon'; src:  url('//s3.amazonaws.com/libapps/sites/705/include/icomoon.eot'); src:  url('//s3.amazonaws.com/libapps/sites/705/include/icomoon.eot#iefix') format('embedded-opentype'), url('//s3.amazonaws.com/libapps/sites/705/include/icomoon.ttf') format('truetype'), url('//s3.amazonaws.com/libapps/sites/705/include/icomoon.woff') format('woff'), url('//s3.amazonaws.com/libapps/sites/705/include/icomoon.svg#icomoon') format('svg'); font-weight: normal; font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-help:before {
+  content: "\e607";
+}
+</style>
+
+<!-- Control colors on LibCal MyScheduler widgets -->
+<style>
+[id^=mySched] { color: #FFFFFF !important; background-color: #0B6AB7 !important; border: none !important; }
+</style><script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 705,
+        tracking_parameters: {"_st_guide_id":180263,"_st_page_id":1190796,"_st_site_id":705},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+<script>
+			springSpace.Common = springSpace.Common || { };
+			springSpace.Common.constant = {
+					PROCESSING: {
+						ACTION_DISPLAY_POLL: 159
+					}
+			};
+			springSpace.Common.baseURL = "https://guides.library.ucla.edu/";
+			
+			handleScroll=function() {
+                if (false) {
+					var target_elt = "#s-lg-page-section-1190796";
+					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
+					if (jQuery(this).scrollTop() > 220) {
+						jQuery("#s-lib-scroll-top").fadeIn(750);
+					}
+				}
+			}
+	   </script>
+        <script>
+            // Enable tooltips.
+            jQuery(function () {
+                try {
+                    springSpace.UI.initPopOvers();
+                    jQuery(".az-bs-tooltip").tooltip();
+                } catch (e) { }
+            });
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '1',_st_guide_id: '180263',_st_page_id: '1190796'});
+        });
+            jQuery(document).ready(function() {
+                handleScroll();
+            });
+        </script><!-- BEGIN: Analytics code --><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2SXV2');</script><!-- End Google Tag Manager --><!-- Library Cost Survey --><script defer src="https://librarystudy.library.ucla.edu/gsurvey.js"></script> <!-- End Library Cost Survey --><!-- END: Analytics code --></head><!-- SIDE NAV -->
+	<body class="s-lg-guide-body">
+		<a id="s-lg-public-skiplink" class="alert-info" href="#s-lg-guide-main">Skip to Main Content</a>
+        
+        <!-- BEGIN: Page Header -->
+        <header>
+    <div class="header-container">
+        <div data-v-01ae1c36="" class="logo"><a data-v-f725762c="" data-v-01ae1c36="" href="https://www.library.ucla.edu" aria-current="page" class="smart-link is-router-link nuxt-link-exact-active nuxt-link-active" aria-label="UCLA Library home page"><svg data-v-01ae1c36="" width="115" height="22" viewBox="0 0 115 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg__logo-library svg logo-ucla" alt="UCLA Library logo blue"><path d="M64.223 6.914h2.43v9.954h5.63v2.028h-8.06V6.914zM73.14 6.914h2.281V8.96h-2.28V6.914zm0 3.387h2.281v8.595h-2.28V10.3zM79.076 17.824h-.033v1.072h-2.198V6.914h2.281v4.424h.051a2.685 2.685 0 012.396-1.273c2.162 0 3.704 1.859 3.704 4.54 0 2.782-1.475 4.542-3.636 4.542a2.86 2.86 0 01-2.565-1.324zm3.888-3.219c0-1.59-.637-2.695-1.91-2.695-1.442 0-1.978 1.156-1.978 2.747 0 1.576.788 2.582 2.061 2.582 1.175 0 1.827-.973 1.827-2.631M88.555 11.675h.05c.52-.972 1.106-1.476 2.112-1.476.181-.01.363.014.536.07v1.994h-.05c-1.492-.151-2.565.637-2.565 2.447v4.189h-2.28V10.3h2.195l.002 1.374zM97.145 17.944h-.033c-.436.653-1.056 1.156-2.53 1.156-1.76 0-3-.922-3-2.632 0-1.893 1.542-2.496 3.455-2.764 1.424-.201 2.079-.318 2.079-.972 0-.622-.484-1.022-1.441-1.022-1.073 0-1.59.385-1.66 1.206h-2.027c.07-1.508 1.19-2.834 3.703-2.834 2.582 0 3.62 1.157 3.62 3.168v4.373c0 .654.1 1.037.302 1.19v.084h-2.195a2.337 2.337 0 01-.268-.955l-.005.002zm.021-2.08v-1.29a6.317 6.317 0 01-1.59.503c-1.189.268-1.776.537-1.776 1.341 0 .804.536 1.09 1.34 1.09 1.308 0 2.028-.805 2.028-1.643M102.914 11.675h.051c.519-.972 1.106-1.476 2.111-1.476.182-.01.363.014.536.07v1.994h-.05c-1.491-.151-2.564.637-2.564 2.447v4.189h-2.281V10.3h2.195l.002 1.374zM106.914 19.92h.805c.905 0 1.273-.47 1.273-1.175a7.42 7.42 0 00-.653-2.33l-2.313-6.117h2.397l1.273 3.87c.268.788.553 1.877.553 1.877h.034s.234-1.09.503-1.877l1.206-3.87h2.296l-3 8.815c-.653 1.91-1.29 2.598-3.033 2.598h-1.341V19.92z" fill="#FFFFFF" class="svg__fill--black"></path><path d="M.667 13.818a16.432 16.432 0 01-.041-1.944L1.55 1.362h3.442L4.05 11.966c-.202 2.295.698 3.931 2.989 3.931 2.34 0 3.579-1.664 3.783-3.7l.976-10.835h3.44l-.95 10.7c-.385 4.118-3.118 7.203-7.535 7.203-3.445 0-5.667-2.227-6.082-5.447M16.029 10.258c.449-5.046 3.853-9.229 9.733-9.229a8.063 8.063 0 014.518 1.308l-.394 4.168a5.084 5.084 0 00-4.454-2.074c-3.66 0-5.668 2.54-5.953 5.758-.277 3.133 1.34 5.68 4.884 5.68a6.577 6.577 0 004.907-2.164l-.385 4.28a9.884 9.884 0 01-4.795 1.32c-5.82 0-8.484-4.322-8.066-9.047M33.028 1.362h3.431l-1.253 14.273h4.918c.345 0 1.52-.018 1.836-.037-.018.173-.313 3.298-.313 3.298H31.471l1.557-17.534zM50.903 7.909c.108-.237.193-.483.254-.736a.378.378 0 01.055 0c.02.25.065.499.131.741.187.8 1.521 5.239 1.521 5.239h-4.329s2.322-5.128 2.368-5.241v-.003zm.88-7.348h-.237l-9.397 18.336h3.647l1.32-2.784h6.62l.83 2.78h3.638L51.784.562z" fill="#FFFFFF" class="svg__fill--primary-blue-03"></path></svg></a></div>
+        <div class="links">
+            <ul>
+                <li><a href="https://www.library.ucla.edu/visit/locations">Locations and Hours</a></li>
+                <li><a href="https://www.library.ucla.edu/help/services-resources/ask-us">Ask Us</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+        <!-- END: Page Header -->
+        <!-- BEGIN: Guide Header -->
+  		<div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+            <div id="s-lib-bc">
+                <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="http://www.library.ucla.edu">UCLA Library</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://guides.library.ucla.edu/">Research Guides</a></li><li id="s-lib-bc-guide" class="breadcrumb-item"><a href="https://guides.library.ucla.edu/cs">Computer Science</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Technical Reports</li></ol>
+            </div>
+			<div class="pull-right">
+				<div id="s-lg-guide-header-search">
+					<div id="s-lg-guide-search-box">
+                    <form role="search" id="s-lg-guide-search-form" action="https://guides.library.ucla.edu/srch.php"
+                    method="GET">
+                        <div class="input-group input-group-sm">
+                            <input type="text" id="s-lg-guide-search-terms" name="q" class="form-control" 
+                            maxlength="260" placeholder="Search this Guide">
+                            <label class="sr-only" for="s-lg-guide-search-terms">Search this Guide</label><input type="hidden" name="guide_id" value="180263" /><span class="input-group-btn"><button class="btn btn-default" type="submit">Search</button></span></div></form></div>				</div>
+				
+			</div>
+            <div id="s-lg-guide-header-info">
+                <h1 id="s-lg-guide-name">Computer Science</h1>
+                <div id="s-lg-guide-desc-container" class="pad-top-med">
+                    <span id="s-lg-guide-description">Your guide to Computer Science research at UCLA.</span>
+                </div>
+            </div>
+        </div>
+        <!-- END: Guide Header -->
+        <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+        <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+            <div id="s-lg-guide-tabs">
+                <div class="row">
+                    <div class="col-md-3 s-lg-tabs-side pad-bottom-med">
+                        <ul class="nav nav-pills nav-stacked"><li class="dropdown clearfix"><a title="" class="s-lg-tab-top-link" href="https://guides.library.ucla.edu/c.php?g=180263&p=1189737" ><span>Home</span></a><a class="s-lg-tab-drop dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" aria-haspopup="true" aria-expanded="false"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></a><ul class="s-lg-subtab-ul dropdown-menu"><li class=""><a title="" href="https://www.library.ucla.edu/visit/locations/science-engineering-library/" style="" target="_blank" onclick="SpringTrack.tracking_parameters._st_sid = 1191088; return SpringTrack.trackPageRedirect({ st_type: TRACKING_TYPE_PAGE, mode: TRACKING_MODE_ONCLICK, href: 'https://www.library.ucla.edu/visit/locations/science-engineering-library/', target : 1 });">Science and Engineering Library  <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i></a></li><li class=""><a title="" href="https://guides.library.ucla.edu/c.php?g=180263&p=1191087" style="" >Graduate Orientation Presentation </a></li></ul></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/books" ><span>Books</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/articles" ><span>Articles</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/dissertations" ><span>Dissertations</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/patents" ><span>Patents</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/safety" ><span>Safety/MSDS Sources</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/standards" ><span>Standards</span></a></li><li class="active"><a title="" class="active" href="https://guides.library.ucla.edu/cs/technical-reports" ><span>Technical Reports</span></a><ul class="list-group s-lg-boxnav"><li class="list-group-item"><a href="#s-lg-box-3586498">About Technical Reports</a></li><li class="list-group-item"><a href="#s-lg-box-3586500">Technical Reports Databases</a></li><li class="list-group-item"><a href="#s-lg-box-3586499">Technical Reports held at UCLA (Print and Microfiche)</a></li></ul></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/websites" ><span>Websites</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/cs/data" ><span>Data Management</span></a></li><li class=""><a title="" class="" href="https://guides.library.ucla.edu/c.php?g=180263&p=9003480" ><span>Diverse Voices</span></a></li>
+</ul>
+                        <div class="s-lg-row margin-top-med"><div id="s-lg-col-0"><div class="s-lg-col-boxes"></div></div></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="s-lg-tab-content">
+                            <div id="s-lg-guide-main" class="tab-pane active">
+                                
+                                <div class="row s-lg-row"><div id="s-lg-col-1" class="col-md-12"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-4224574" class="s-lg-box-wrapper-4224574"><div id="s-lg-box-3586498-container" class="s-lib-box-container">
+						<div id="s-lg-box-3586498" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">About Technical Reports</h2><div id="s-lg-box-collapse-3586498" >
+								<div class="s-lib-box-content">
+									
+			<div id="s-lg-content-6769442" class="  clearfix">
+				<h3 class="top-head">General Description of Technical Reports</h3>
+
+<p>Technical reports are documents that generally contain results of research and development supported by government grants or contracts.&nbsp;They can also come from private and corporate sponsored research. Although they are not usually formally refereed, they are an important form of scientific and technical information and communication.They are published by noncommercial publishers and are usually part of a numbered series.</p>
+
+<p>For a detailed description of technical report literature see <a href="https://search.library.ucla.edu/permalink/01UCS_LAL/17p22dp/alma9931322713606533">Subramanyam, Krishna. Scientific and Technical Information Resources</a>.</p>
+
+<h3>How to Identify a Technical Report</h3>
+
+<p>Several characteristics of most reports will help track down the location of a report. These include: personal author(s), corporate author(s), issuing agency, title, publication date, contract or grant number, report number(s), order or accession number, number of pages, releasing agency, and distribution limitations, if any. The report number is the most important identification feature of a report. Report numbers usually consist of alphanumeric characters that designate some or all of the following: originating or contracting agency, series, accession number, subject classifications, form, date, and security classification. Reports often are assigned more than one report number. <strong>e.g., ADA-88-1098: AD=Dept of Def; A=Unclassified, Unlimited; 88=1988; 1098=the 1098th in a series.</strong></p>
+
+		   </div>
+								</div>
+								
+							</div>
+						</div>
+					</div></div><div id="s-lg-box-wrapper-4224575" class="s-lg-box-wrapper-4224575"><div id="s-lg-box-3586500-container" class="s-lib-box-container">
+						<div id="s-lg-box-3586500" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Technical Reports Databases</h2><div id="s-lg-box-collapse-3586500" >
+								<div class="s-lib-box-content">
+									
+			<div id="s-lg-content-6769444" class="  clearfix">
+				<p><span style="line-height: 15.6px;">Note that some of these databases are entirely full text, others only&nbsp;</span><i style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15.600000381469727px;">index or abstract&nbsp;</i><span style="line-height: 15.6px;">technical reports, and some are mix of full text and abstracts.&nbsp;</span></p>
+
+<h3>Start with these databases</h3>
+
+		   </div><div class=""><ul id="s-lg-link-list-81626677" class="s-lg-link-list s-lg-link-list-10"><li class=""><div id="s-lg-content-5618220" class=""><a href="https://ntrl.ntis.gov/NTRL/"  target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '5618220',_st_inc_return: this});">NTRL: National Technical Reports Library from the National Technical Information Service</a>  <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i><div class="s-lg-icons pad-left-sm"><ul class=""><li><a href="https://guides.library.ucla.edu/free-resources/home" target="_blank"><img loading="lazy" alt="Open Access" class="s-lg-icon" src="//d2jv02qf7xgjwx.cloudfront.net/sites/705/icons/33899/32px-Lock-orange-alt-4.svg.png" title="Open Access &nbsp;"/><i class="fa fa-fw fa-external-link" title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i></a> </li></ul></div><div id="s-lg-database-desc-5618220" class="s-lg-database-desc">Provides indexing and open access to a collection of more than two million historical and current government technical reports archived by the National Technical Information Service (NTIS). Over 500,000 documents are available in full-text format.</div></div></li></ul></div><div class=""><ul id="s-lg-link-list-7640237" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-6800904" class=""><span><a href="http://www.science.gov/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800904',_st_inc_return: this});">Science.gov</a></span><div id="s-lg-link-desc-6800904" class="s-lg-link-desc">Science.gov searches over 60 databases and over 2200 selected websites from 15 federal agencies. Broadest federated search for government technical reports.</div></div></li><li class=""><div id="s-lg-content-6800914" class=""><span><a href="http://www.technicalreports.org/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800914',_st_inc_return: this});">Technical Report Archive and Image Library (TRAIL) 19xx-1975</a></span><div id="s-lg-link-desc-6800914" class="s-lg-link-desc">Search U.S. government technical reports issued primarily prior to 1976</div></div></li><li class=""><div id="s-lg-content-6785871" class=""><span><a href="https://discover.dtic.mil/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6785871',_st_inc_return: this});">Defense Technical Information Center (DTIC)</a></span><div id="s-lg-link-desc-6785871" class="s-lg-link-desc">More than 1 million final reports on Defense funded research, development, test and evaluation activities.</div></div></li></ul></div>
+			<div id="s-lg-content-50361749" class="  clearfix">
+				<h3>Other databases</h3>
+		   </div><div class=""><ul id="s-lg-link-list-53142009" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-50361764" class=""><span><a href="https://reports.aerade.cranfield.ac.uk/handle/1826.2/1" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '50361764',_st_inc_return: this});">Aeronautical Research Council (ARC) Technical Reports</a></span></div></li><li class=""><div id="s-lg-content-32362160" class=""><span><a href="https://www.library.ca.gov/government-publications/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '32362160',_st_inc_return: this});">California State Library — Government Publications Section</a></span><div id="s-lg-link-desc-32362160" class="s-lg-link-desc">The California State Library offers free scanning services for shorter reports owned in paper or fiche in their collection, including uncataloged fiche of the PB and AD series from NTIS, among others. Requests can be submitted using their Ask Government Publications a Question form or emailing cslgps@library.ca.gov</div></div></li><li class=""><div id="s-lg-content-6800907" class=""><span><a href="http://uclibs.org/PID/20306" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800907',_st_inc_return: this});">GPO (U.S. government publications) 1976+</a></span></div></li><li class=""><div id="s-lg-content-6800908" class=""><span><a href="http://www.greynet.org/greysourceindex.html" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800908',_st_inc_return: this});">GreyNet's GreySource</a></span></div></li></ul></div><div class=""><ul id="s-lg-link-list-53142030" class="s-lg-link-list s-lg-link-list-10"><li class=""><div id="s-lg-content-16350367" class=""><a href="https://www.hathitrust.org/"  target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '16350367',_st_inc_return: this});">HathiTrust Digital Library</a>  <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i><div class="s-lg-icons pad-left-sm"><ul class=""><li><a href="http://www.library.ucla.edu/service/campus-access" target="_blank"><img loading="lazy" alt="Requires UCLA authentication" class="s-lg-icon" src="//d2jv02qf7xgjwx.cloudfront.net/sites/705/icons/983/key-newblue-transp.gif" title="Requires UCLA authentication &nbsp;"/><i class="fa fa-fw fa-external-link" title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i></a> </li></ul></div><div id="s-lg-database-desc-16350367" class="s-lg-database-desc">Selected government documents are freely available.</div></div></li></ul></div><div class=""><ul id="s-lg-link-list-7640242" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-6800909" class=""><span><a href="http://www.hpl.hp.com/techreports/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800909',_st_inc_return: this});">HP Labs Technical Reports</a></span><div id="s-lg-link-desc-6800909" class="s-lg-link-desc">Note: the site is currently under construction and may not be accessible</div></div></li><li class=""><div id="s-lg-content-6800910" class=""><span><a href="http://inis.iaea.org/search/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800910',_st_inc_return: this});">International Nuclear Information System (INIS) 1970+</a></span></div></li><li class=""><div id="s-lg-content-6800911" class=""><span><a href="http://naca.central.cranfield.ac.uk/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800911',_st_inc_return: this});">NACA Archive (UK Mirror) 1917-1958</a></span></div></li><li class=""><div id="s-lg-content-6800912" class=""><span><a href="http://adswww.harvard.edu/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800912',_st_inc_return: this});">The NASA Astrophysics Data System ADS</a></span></div></li><li class=""><div id="s-lg-content-6800913" class=""><span><a href="https://ntrs.nasa.gov/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800913',_st_inc_return: this});">NASA Technical Report Server (NTRS) 1915+</a></span></div></li></ul></div><div class=""><ul id="s-lg-link-list-7640247" class="s-lg-link-list s-lg-link-list-10"><li class=""><div id="s-lg-content-5618389" class=""><a href="http://www.rand.org/pubs.html"  target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '5618389',_st_inc_return: this});">RAND Publications</a>  <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i><div class="s-lg-icons pad-left-sm"><ul class=""><li><a href="https://guides.library.ucla.edu/free-resources/home" target="_blank"><img loading="lazy" alt="Open Access" class="s-lg-icon" src="//d2jv02qf7xgjwx.cloudfront.net/sites/705/icons/33899/32px-Lock-orange-alt-4.svg.png" title="Open Access &nbsp;"/><i class="fa fa-fw fa-external-link" title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i></a> </li></ul></div><div id="s-lg-database-desc-5618389" class="s-lg-database-desc">Search the archive of over 17,000 RAND documents dating back to 1948.</div></div></li></ul></div><div class=""><ul id="s-lg-link-list-7643702" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-6802784" class=""><span><a href="http://fmdb.cs.ucla.edu/tech_reports/default.lasso" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6802784',_st_inc_return: this});">UCLA Computer Science Technical Reports Database</a></span></div></li></ul></div><div class=""><ul id="s-lg-link-list-51000180" class="s-lg-link-list s-lg-link-list-10"><li class=""><div id="s-lg-content-5617646" class=""><a href="https://go.gale.com/ps/start.do?p=USDD&u=uclosangeles"  target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '5617646',_st_inc_return: this});">U.S. Declassified Documents (Gale Primary Sources)</a>  <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i><div class="s-lg-icons pad-left-sm"><ul class=""><li><a href="http://www.library.ucla.edu/service/campus-access" target="_blank"><img loading="lazy" alt="Requires UCLA authentication" class="s-lg-icon" src="//d2jv02qf7xgjwx.cloudfront.net/sites/705/icons/983/key-newblue-transp.gif" title="Requires UCLA authentication &nbsp;"/><i class="fa fa-fw fa-external-link" title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i></a> </li></ul></div><div id="s-lg-database-desc-5617646" class="s-lg-database-desc">Collection of over 70,000 primary source government documents, from the post-WWII period through the 1970's. Contains declassified documents from presidential libraries, the CIA, the FBI and a host of other agencies concerning major domestic and international events of the post-World War II era. Formerly known as Declassified Documents Reference System (DDRS).</div></div></li></ul></div><div class=""><ul id="s-lg-link-list-7640249" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-6800915" class=""><span><a href="http://worldwidescience.org/" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800915',_st_inc_return: this});">WorldWideScience.org</a></span></div></li></ul></div>
+								</div>
+								
+							</div>
+						</div>
+					</div></div><div id="s-lg-box-wrapper-4224576" class="s-lg-box-wrapper-4224576"><div id="s-lg-box-3586499-container" class="s-lib-box-container">
+						<div id="s-lg-box-3586499" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Technical Reports held at UCLA (Print and Microfiche)</h2><div id="s-lg-box-collapse-3586499" >
+								<div class="s-lib-box-content">
+									
+			<div id="s-lg-content-6769443" class="  clearfix">
+				<p>To find additional technical reports, please search in the&nbsp;<a href="http://catalog.library.ucla.edu/" target="_blank">UCLA Library Catalog</a><a href="https://search.library.ucla.edu/discovery/search?tab=LibraryCatalog&amp;search_scope=MyInstitution&amp;vid=01UCS_LAL:UCLA&amp;lang=en&amp;mode=advanced" target="_blank">&nbsp;</a>by series title or individual report title or a combination of both.</p>
+
+		   </div><div class=""><ul id="s-lg-link-list-7640198" class="s-lg-link-list s-lg-link-list-2"><li class=""><div id="s-lg-content-6800865" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9937678823606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800865',_st_inc_return: this});">AD</a></span><div id="s-lg-link-desc-6800865" class="s-lg-link-desc">The Armed Services Technical Information Agency (ASTIA), predecessor to the Defense Documentation Center (DDC) and the Defense Technical Information Center (DTIC). Coverage: 1943 - January 1, 1975</div></div></li><li class=""><div id="s-lg-content-6800867" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939745523606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800867',_st_inc_return: this});">AEC research and development report (see LA)</a></span><div id="s-lg-link-desc-6800867" class="s-lg-link-desc">The Atomic Energy Commission.</div></div></li><li class=""><div id="s-lg-content-6800869" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=4230649" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800869',_st_inc_return: this});">CONF</a></span><div id="s-lg-link-desc-6800869" class="s-lg-link-desc">United States Atomic Energy Commission, Division of Technical Information. Acronym: Department of Energy (CONF)erence Reports.</div></div></li><li class=""><div id="s-lg-content-6800870" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma99485343606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800870',_st_inc_return: this});">CSD (series)</a></span><div id="s-lg-link-desc-6800870" class="s-lg-link-desc">University of California, Los Angeles, Computer Science Department, continued from Report. Acronym: (C)omputer (S)cience (D)epartment.</div><div class="s-lg-label-moreinfo"><a class="s-lg-label-more" id="s-lg-content-more-6800870" href="javascript:void(0);" style="display:block; font-style:italic;" onclick="
+                var $parent = jQuery(this).closest('#s-lg-content-6800870');
+                $parent.find('#s-lg-content-moreinfo-6800870').toggle();
+                $parent.find('#s-lg-content-less-6800870').toggle();
+                $parent.find('#s-lg-content-more-6800870').toggle();
+            ">more...</a><a class="s-lg-label-less" id="s-lg-content-less-6800870" href="javascript:void(0);" style="display:none; font-style:italic;" onclick="
+                var $parent = jQuery(this).closest('#s-lg-content-6800870');
+                $parent.find('#s-lg-content-moreinfo-6800870').toggle();
+                $parent.find('#s-lg-content-less-6800870').toggle();
+                $parent.find('#s-lg-content-more-6800870').toggle();
+            ">less...</a></div><div id="s-lg-content-moreinfo-6800870" class="s-lg-content-moreinfo" style="display:none;"><a href="http://fmdb.cs.ucla.edu/tech_reports/default.lasso"target="_blank">UCLA Computer Science Technical Reports Database </a>  contains reports from 1980 to present in PDF format.</div></div></li><li class=""><div id="s-lg-content-6800871" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939724023606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800871',_st_inc_return: this});">CULADE</a></span><div id="s-lg-link-desc-6800871" class="s-lg-link-desc">University of California, Los Angeles. Dept. of Engineering.Report, continued by University of California, Los Angeles. School of Engineering and Applied Science. Report. Acronym: (C)alifornia (U)niversity (LA) (D)epartment of (E)ngineering.</div></div></li><li class=""><div id="s-lg-content-6800873" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3811731" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800873',_st_inc_return: this});">DE (series)</a></span><div id="s-lg-link-desc-6800873" class="s-lg-link-desc">United States Department of Energy. Acronym: (D)epartment of (E)nergy.</div></div></li><li class=""><div id="s-lg-content-6800874" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9912286219006531" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800874',_st_inc_return: this});">LA</a></span><div id="s-lg-link-desc-6800874" class="s-lg-link-desc">Los Alamos National Laboratory. Acronym: (L)os (A)lamos.</div></div></li><li class=""><div id="s-lg-content-6800875" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9912306974806531" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800875',_st_inc_return: this});">LBL</a></span><div id="s-lg-link-desc-6800875" class="s-lg-link-desc">United States Department of Energy Office of Science. Acronym: (L)awrence (B)erkeley (L)aboratory.</div></div></li><li class=""><div id="s-lg-content-6800876" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma99481823606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800876',_st_inc_return: this});">N (microform)</a></span><div id="s-lg-link-desc-6800876" class="s-lg-link-desc">National Aeronautics and Space Administration (NASA)</div></div></li><li class=""><div id="s-lg-content-6800877" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9914270739406531" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800877',_st_inc_return: this});">NACA RM</a></span><div id="s-lg-link-desc-6800877" class="s-lg-link-desc">National Advisory Committee for Aeronautics, predecessor to the National Aeronautics and Space Administration (NASA). Acronym: (N)ational (A)dvisory (C)ommittee for (A)eronautics (R)esearch (M)emorandum.</div></div></li><li class=""><div id="s-lg-content-6800878" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=title,exact,National%20Advisory%20Committee%20for%20Aeronautics.%20Technical%20Note%20,AND&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=advanced&offset=0&browseQuery=National%20Advisory%20Committee%20for%20Aeronautics&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=1&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22national%20advisory%20committee%20for%20aeronautics%20technical%20note%22,%22numberOfResults%22:%221%22,%22displayValue%22:%22National%20Advisory%20Committee%20for%20Aeronautics.%20Technical%20Note%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:null,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:null,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800878',_st_inc_return: this});">NACA Technical Notes</a></span><div id="s-lg-link-desc-6800878" class="s-lg-link-desc">National Advisory Committee for Aeronautics, predecessor to the National Aeronautics and Space Administration (NASA), continued by NACA TN. Acronym: (N)ational (A)dvisory (C)ommittee for (A)eronautics Technical Notes.</div></div></li><li class=""><div id="s-lg-content-6800879" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3961956" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800879',_st_inc_return: this});">NACA TN (Technical Note) No. 1-930</a></span><div id="s-lg-link-desc-6800879" class="s-lg-link-desc">National Advisory Committee for Aeronautics, predecessor to the National Aeronautics and Space Administration (NASA).</div></div></li><li class=""><div id="s-lg-content-6800880" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3961949" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800880',_st_inc_return: this});">NACA TN (Technical Note) No. 931-4410</a></span><div id="s-lg-link-desc-6800880" class="s-lg-link-desc">National Advisory Committee for Aeronautics, predecessor to the National Aeronautics and Space Administration (NASA).</div></div></li><li class=""><div id="s-lg-content-6800881" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma99336983606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800881',_st_inc_return: this});">NASA CP (Conference Proceedings)</a></span><div id="s-lg-link-desc-6800881" class="s-lg-link-desc">National Aeronautics and Space Administration.</div></div></li><li class=""><div id="s-lg-content-6800882" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20NASA%20contractor%20report%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=NASA%20contractor%20report&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=20&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22nasa%20contractor%20report%22,%22numberOfResults%22:%2220%2B%22,%22displayValue%22:%22NASA%20contractor%20report%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:%22LIBRARY_OF_CONGRESS%22,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:%22n%20%2083825229%22,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800882',_st_inc_return: this});">NASA CR (NASA Contractor Report)</a></span><div id="s-lg-link-desc-6800882" class="s-lg-link-desc">National Aeronautics and Space Administration.</div></div></li><li class=""><div id="s-lg-content-6800883" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3870820" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800883',_st_inc_return: this});">NASA memorandum</a></span><div id="s-lg-link-desc-6800883" class="s-lg-link-desc">National Aeronautics and Space Administration.</div></div></li><li class=""><div id="s-lg-content-6800884" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20NASA%20technical%20memorandum%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=NASA%20technical%20memorandum&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=20&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22nasa%20technical%20memorandum%22,%22numberOfResults%22:%2220%2B%22,%22displayValue%22:%22NASA%20technical%20memorandum%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:null,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:null,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800884',_st_inc_return: this});">NASA TM (Technical Memorandum)</a></span><div id="s-lg-link-desc-6800884" class="s-lg-link-desc">National Aeronautics and Space Administration.</div></div></li><li class=""><div id="s-lg-content-6800885" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20NUREG%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=NUREG&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=20&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22nureg%22,%22numberOfResults%22:%2220%2B%22,%22displayValue%22:%22NUREG%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:%22LIBRARY_OF_CONGRESS%22,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:%22n%20%2083733366%22,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800885',_st_inc_return: this});">NUREG series</a></span><div id="s-lg-link-desc-6800885" class="s-lg-link-desc">United Stated Nuclear Regulatory Commission (USNRC). Acronym: (NU)clear (REG)ulation.</div></div></li><li class=""><div id="s-lg-content-6800886" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=35637" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800886',_st_inc_return: this});">NUREG/CR</a></span><div id="s-lg-link-desc-6800886" class="s-lg-link-desc">United Stated Nuclear Regulatory Commission (USNRC). Acronym: (NU)clear (REG)ulation (C)ommission (R)eport.</div></div></li><li class=""><div id="s-lg-content-6800887" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=35638" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800887',_st_inc_return: this});">NUREG/IA</a></span><div id="s-lg-link-desc-6800887" class="s-lg-link-desc">United Stated Nuclear Regulatory Commission (USNRC). Acronym: (NU)clear (REG)ulation (I)nternational (A)greements.</div></div></li><li class=""><div id="s-lg-content-6800888" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3922929" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800888',_st_inc_return: this});">NUREG/TR</a></span><div id="s-lg-link-desc-6800888" class="s-lg-link-desc">United Stated Nuclear Regulatory Commission (USNRC). Acronym: (NU)clear (REG)ulation (TR)anslation series.</div></div></li><li class=""><div id="s-lg-content-6800889" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939261983606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800889',_st_inc_return: this});">ORNL (series)</a></span><div id="s-lg-link-desc-6800889" class="s-lg-link-desc">United States Atomic Energy Commission from the Oak Ridge National Laboratory. Acronym: (O)ak (R)idge (N)ational (L)aboratory.</div></div></li><li class=""><div id="s-lg-content-6800890" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939261963606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800890',_st_inc_return: this});">ORNL-NSIC</a></span><div id="s-lg-link-desc-6800890" class="s-lg-link-desc">United States Atomic Energy Commission from the Oak Ridge National Laboratory.<br />
+Acronym: (O)ak (R)idge (N)ational (L)aboratory (N)uclear (S)afety (I)nformation (C)enter.</div></div></li><li class=""><div id="s-lg-content-6800891" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3926197" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800891',_st_inc_return: this});">ORNL-RSIC</a></span><div id="s-lg-link-desc-6800891" class="s-lg-link-desc">United States Atomic Energy Commission from the Oak Ridge National Laboratory.<br/>Acronym: (O)ak (R)idge (N)ational (L)aboratory (R)adiation (S)hielding (I)nformation (C)enter.</div></div></li><li class=""><div id="s-lg-content-6800892" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9912289245906531" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800892',_st_inc_return: this});">ORNL-TM</a></span><div id="s-lg-link-desc-6800892" class="s-lg-link-desc">United States Atomic Energy Commission from the Oak Ridge National Laboratory.<br />
+Acronym: (O)ak (R)idge (N)ational (L)aboratory (T)echnical (M)emo.</div></div></li><li class=""><div id="s-lg-content-6800893" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20PB%20(Series)%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=PB%20reports&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=2&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22pb%20series%22,%22numberOfResults%22:%222%22,%22displayValue%22:%22PB%20(Series)%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:null,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:null,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800893',_st_inc_return: this});">PB (series)</a></span><div id="s-lg-link-desc-6800893" class="s-lg-link-desc">Department of Commerce, predecessor to the National Technical Information Service (NTIS). Acronym: (P)ublication (B)oard.</div></div></li><li class=""><div id="s-lg-content-6800894" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20Rand%20note%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=RAND%20Note&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=20&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22rand%20note%22,%22numberOfResults%22:%2220%2B%22,%22displayValue%22:%22Rand%20note%20;%22,%22sourceCode%22:%22UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:null,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:null,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800894',_st_inc_return: this});">RAND Note</a></span><div id="s-lg-link-desc-6800894" class="s-lg-link-desc">RAND Corporation. Acronym: (R(esearch (AND D)evelopment (Note).</div></div></li><li class=""><div id="s-lg-content-6800895" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3940001" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800895',_st_inc_return: this});">Report (series)</a></span><div id="s-lg-link-desc-6800895" class="s-lg-link-desc">University of California, Los Angeles Computer Science Dept, continued by CSD.</div><div class="s-lg-label-moreinfo"><a class="s-lg-label-more" id="s-lg-content-more-6800895" href="javascript:void(0);" style="display:block; font-style:italic;" onclick="
+                var $parent = jQuery(this).closest('#s-lg-content-6800895');
+                $parent.find('#s-lg-content-moreinfo-6800895').toggle();
+                $parent.find('#s-lg-content-less-6800895').toggle();
+                $parent.find('#s-lg-content-more-6800895').toggle();
+            ">more...</a><a class="s-lg-label-less" id="s-lg-content-less-6800895" href="javascript:void(0);" style="display:none; font-style:italic;" onclick="
+                var $parent = jQuery(this).closest('#s-lg-content-6800895');
+                $parent.find('#s-lg-content-moreinfo-6800895').toggle();
+                $parent.find('#s-lg-content-less-6800895').toggle();
+                $parent.find('#s-lg-content-more-6800895').toggle();
+            ">less...</a></div><div id="s-lg-content-moreinfo-6800895" class="s-lg-content-moreinfo" style="display:none;"><a href="http://fmdb.cs.ucla.edu/tech_reports/default.lasso"target="_blank">UCLA Computer Science Technical Reports Database </a>  contains reports from 1980 to present in PDF format.</div></div></li><li class=""><div id="s-lg-content-6800896" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9912288352806531" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800896',_st_inc_return: this});">SAND</a></span><div id="s-lg-link-desc-6800896" class="s-lg-link-desc">Sandia National Laboratories, contractor for the United States Department of Energy's National Nuclear Security Administration (NNSA). Acronym: (SAND)ia National Laboratories.</div></div></li><li class=""><div id="s-lg-content-6800897" class=""><span><a href="https://search.library.ucla.edu/discovery/search?query=Browse:%20United%20States.%20Atomic%20Energy%20Commission.%20TID%20;&sortby=title&vid=01UCS_LAL:UCLA&lang=en&mode=browse&browseQuery=United%20States%20Atomic%20Energy%20Commission%20TID&browseScope=series&innerPnxIndex=-1&fn=BrowseSearch&docCount=11&browseParams=%7B%22headingType%22:%22SERIES%22,%22vocabularyCode%22:%22LCNAMES%22,%22normalizedValue%22:%22united%20states%20atomic%20energy%20commission%20tid%22,%22numberOfResults%22:%2211%22,%22displayValue%22:%22United%20States.%20Atomic%20Energy%20Commission.%20TID%20;%22,%22sourceCode%22:%22CORPORATE_NAME,UNIFORM_TITLE%22,%22isPrefered%22:false,%22originatingSystem%22:null,%22browseType%22:%22SERIES%22,%22isGlobal%22:true,%22originatingSystemId%22:null,%22family%22:%22MARC21%22,%22recordProvenance%22:%22INSTITUTION%22%7D" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800897',_st_inc_return: this});">TID</a></span><div id="s-lg-link-desc-6800897" class="s-lg-link-desc">United States Atomic Energy Commission. Acronym: (T)echnical (I)nformation (D)ivision.</div></div></li><li class=""><div id="s-lg-content-6800898" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939666793606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800898',_st_inc_return: this});">UCLA-ENG</a></span><div id="s-lg-link-desc-6800898" class="s-lg-link-desc">The University of California, Los Angeles, Engineering.</div></div></li><li class=""><div id="s-lg-content-6800899" class=""><span><a href="https://search.library.ucla.edu/vwebv/holdingsInfo?bibId=3966750" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800899',_st_inc_return: this});">UCRL</a></span><div id="s-lg-link-desc-6800899" class="s-lg-link-desc">University of California Radiation Laboratory.</div></div></li><li class=""><div id="s-lg-content-6800900" class=""><span><a href="https://search.library.ucla.edu/permalink/01UCS_LAL/c4mqs/alma9939666793606533" target="_blank"  onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '2',_st_content_id: '6800900',_st_inc_return: this});">University of California, Los Angeles. Dept. of Engineering. Report</a></span><div id="s-lg-link-desc-6800900" class="s-lg-link-desc">The University of California, Los Angeles, continued by University of California, Los Angeles, School of Engineering and Applied Science, Report.</div></div></li></ul></div>
+								</div>
+								
+							</div>
+						</div>
+					</div></div></div></div></div>
+                            </div>
+                        </div>
+            			<ul id="s-lg-page-prevnext" class="pager s-lib-hide"><li class="previous"><a href="https://guides.library.ucla.edu/cs/standards">&lt;&lt; <strong>Previous:</strong> Standards</a></li><li class="next"><a href="https://guides.library.ucla.edu/cs/websites"><strong>Next:</strong> Websites &gt;&gt;</a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- BEGIN: Custom Footer -->
+                
+
+
+		<!-- END: Custom Footer -->
+        <!-- BEGIN: Page Footer -->
+        <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+            <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+                <ul id="s-lg-guide-header-attributes" class="">
+                    <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">Last Updated:</span> <span class="s-lg-text-greyout">Apr 23, 2025 3:22 PM</span>                    </li>
+                    <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">URL:</span> <span class="s-lg-text-greyout">https://guides.library.ucla.edu/cs</span>
+                    </li>
+                    <li id="s-lg-guide-print-url">
+                    	<a href="javascript: window.print();"><i class="fa fa-print" aria-hidden="true" title="Print Page"></i> Print Page</a>
+                    </li>	
+                    </ul>
+                <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+                    <a href="https://ucla.libapps.com/libapps/login.php?site_id=705&target64=L2xpYmd1aWRlcy9hZG1pbl9jLnBocD9nPTE4MDI2MyZwPTExOTA3OTY=">Login to LibApps</a>                </div>
+            </div>
+            <div class="pad-bottom-sm clearfix">
+                <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+                    <a href="mailto:libapps@library.ucla.edu">Report a problem</a>. 
+                </div>
+                <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+                    <span class="s-lg-guide-label">Subjects: </span><span class="s-lg-small bold"><a href="https://guides.library.ucla.edu/sb.php?subject_id=38455">Engineering & Computer Science</a></span>
+                </div>
+                <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- END: Page Footer -->
+        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+			</div>        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+	</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2SXV2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></html>

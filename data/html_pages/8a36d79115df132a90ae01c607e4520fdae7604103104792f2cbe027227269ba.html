@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Site description">
+  <meta name="author" content="Your Name">
+  <link rel="canonical" href="https://pal.cs.ucr.edu//publications.html">
+
+  <title>publications | UCR PAL</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom fonts for this template -->
+  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this theme -->
+  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  <link href="/assets/css/agency.css" rel="stylesheet" />
+
+  <!-- Page container change top padding when nav shrinks -->
+  
+  <style>
+    #pagecontainer {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer {
+        padding-top: 100px;
+      }
+    }
+  </style>
+  
+  <style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:80px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: #2578FF;
+    border-radius: 20%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+	
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+</head>
+
+
+  <body id="page-top">
+
+      <script>
+function navCheck(checkid, textid) {
+	  // Get the checkbox
+	  var checkBox = document.getElementById(checkid);
+	  // Get the output text
+	  var text = document.getElementById(textid);
+
+	  // If the checkbox is checked, display the output text
+	  if (checkBox.checked == true){
+		text.style.display = "block";
+	  } else {
+		text.style.display = "none";
+	  }
+	}
+</script>
+
+  <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#003EA5">
+      <div class="container">
+	  <a class="navbar-brand js-scroll-trigger" href="/">UCR PAL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/publications.html">Papers</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/people.html">People</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#project">Projects</a>
+			  <!--<a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/index.html#project">Projects</a>--></li>
+        
+          <li class="nav-item"><div class="nav-link">
+				<a>Resources</a>
+				<div class="di">
+					<ul>
+					
+						<li> <a href="/courses.html"> 
+						Courses
+						</a></li>
+					
+						<li> <a href="/students.html"> 
+						Recruiting
+						</a></li>
+					
+						<li> <a href="/resource.html"> 
+						Useful Resources
+						</a></li>
+					
+					</ul>
+				</div>
+				</div>
+			    </div></li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- End Navigation -->
+  
+
+<div class="maincontainer" id="pagecontainer">
+
+<!--
+
+	<label for="pub-checkbox-year">XXXX<br></label>
+    <input id="pub-checkbox-year" type="checkbox" name="" value="">
+    <div class="tag-list-year">
+    <ul>
+      <li><a href="#">2021</a> <br></li>
+      <li><a href="#">2020</a> <br></li>
+      <li><a href="#">2019</a> <br></li>
+    </ul>
+    </div>
+	
+	<br>
+
+    <label for="pub-checkbox-area">XXXX<br></label>
+    <input id="pub-checkbox-area" type="checkbox" name="" value="">
+    <div class="tag-list-area">
+    <ul>
+      <li><a href="#">2021</a> <br></li>
+      <li><a href="#">2020</a> <br></li>
+      <li><a href="#">2019</a> <br></li>
+    </ul>
+    </div>
+
+-->
+
+<div class="control">
+	
+	<div class="left">
+		<div class="subNav" style="padding-top:30px">
+		    <div class="subNavListPub">
+			<label for="pub-checkbox-year"><div class="pub-nav-title">By Year</div></label>
+			<input id="pub-checkbox-year" type="checkbox" name="" value="" onclick="navCheck('pub-checkbox-year', 'nav-year')" class="pub-nav-checkbox">
+			<div class="tag-list-nav" id="nav-year" style="display:none">
+			<ul><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2029.html"> 2029 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2022.html"> 2022 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2028.html"> 2028 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2021.html"> 2021 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2027.html"> 2027 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2020.html"> 2020 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2026.html"> 2026 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2019.html"> 2019 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2025.html"> 2025 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2018.html"> 2018 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2024.html"> 2024 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2017.html"> 2017 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2023.html"> 2023 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2016.html"> 2016 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2022.html"> 2022 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2015.html"> 2015 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2021.html"> 2021 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2014.html"> 2014 </a>
+			  </li><!---->
+			  
+			  <li>
+			  <!--<a class="dropdown" href="https://pal.cs.ucr.edu/paperlist/2020.html"> 2020 </a>-->
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2013.html"> 2013 </a>
+			  </li><li>
+			  <a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-year/2011.html"> 2011 </a>
+			  </li>
+			</ul>
+			</div>		
+			
+
+			<label for="pub-checkbox-area"><div class="pub-nav-title">By Topic</div></label>
+			<input id="pub-checkbox-area" type="checkbox" name="" value="" onclick="navCheck('pub-checkbox-area', 'nav-area')"  class="pub-nav-checkbox"> 
+			<div class="tag-list-nav" id="nav-area" style="display:none">
+			<ul>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/graph.html">Graph Algorithms</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/data-structure.html">Data Structures</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/geometry.html">Geometry</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/architecture.html">Architecture-Friendly Algorithms</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/pseq.html">Parallelism in Sequential Algorithms</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-area/data.html">Database and Data Science</a></li>
+			</ul>
+			</div>
+			
+			<label for="pub-checkbox-conference"><div class="pub-nav-title">By Conference</div></label>
+			<input id="pub-checkbox-conference" type="checkbox" name="" value="" onclick="navCheck('pub-checkbox-conference', 'nav-conference')" class="pub-nav-checkbox">
+			<div class="tag-list-nav" id="nav-conference" style="display:none">
+			<ul>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/spaa.html">SPAA</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/ppopp.html">PPoPP</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/esa.html">ESA</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/vldb.html">VLDB</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/sigmod.html">SIGMOD</a></li>
+			  <li><a class="nav-list" href="https://pal.cs.ucr.edu/paperlist-conference/apocs.html">APOCS</a></li>
+			  <li>&nbsp;</li>
+			</ul>
+			</div>			
+			</div>
+		</div>
+		</div>
+	
+	<div class="maincontent">
+	
+		<div class="col-lg-12 text-left" style="width:800px">
+		<h2 class="section-heading text-uppercase">publications</h2>
+		</div>
+
+		<!--<script src="/assets/js/copyCode.js"></script>
+
+<p id="copy">This is the copy string!</p>-->
+
+<script>
+    function copyEvent(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy")
+    }
+	function showDiv(id) {
+	document.getElementById(id).style.display = "block";
+	}
+	function bibCheck(checkid, textid) {
+	  // Get the checkbox
+	  var checkBox = document.getElementById(checkid);
+	  // Get the output text
+	  var text = document.getElementById(textid);
+
+	  // If the checkbox is checked, display the output text
+	  if (checkBox.checked == true){
+		text.style.display = "block";
+	  } else {
+		text.style.display = "none";
+	  }
+	}
+</script>
+<!--<button onclick="copyEvent('copy');">Hello</button>-->
+<!--style="padding-top: 150px; margin-top: -150px;"-->
+
+<style>
+.beforetitle {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+</style>
+
+<div class="publication"><ul class="post-list"><li><div class = "paper-year">2025:</div><a class="beforetitle" id="pkdtree"></a>
+		<span class = "paper-number"> [63]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2025/SIGMOD25/pkdtree.pdf"  >
+            Pkd-tree: Parallel kd-tree with Batch Updates (To Appear)
+        </a><br>Ziyang Men, Zheqi Shen, Yan Gu, and Yihan Sun<!--<div class = "papernote"> efficient kd-tree implementation with batch updates, including a construction algorithm with efficient work, polylog span and I/O efficiency, and batch update algorithms with nearly efficient work, polylog span and I/O efficiency </div>--><div class = "papernote"> #parallel data structure, #kdtree, #kNN search, #theory, #I/O efficient, #code available </div><div class = "confbutton">SIGMOD</div>	&nbsp;ACM Special Interest Group on Management of Data (SIGMOD), 2025 &nbsp;&nbsp;
+			<label for="bib-checkbox62"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox62" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox62', 'bib62')">
+			<div id="bib62" style="display:none">
+			<div id="bibcontent62" style="margin-left:1em">
+			@inproceedings{
+			pkdtree,<br>
+			title = {
+			Pkd-tree: Parallel kd-tree with Batch Updates (To Appear) 
+			},<br>
+			author = {Men, Ziyang and&nbsp;Shen, Zheqi and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Special Interest Group on Management of Data (SIGMOD)},<br>
+			year = {
+			2025
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent62');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib62"></div>
+		<button class="copy-button" onclick="copyEvent('bib62');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib62');">BibTeX</button>
+		<div class="bib" id="bib62"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2025/SIGMOD25/pkdtree.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="cluster-bfs"></a>
+		<span class = "paper-number"> [62]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2025/ALENEX25/cbfs.pdf"  >
+            Parallel Cluster-BFS and Applications to Shortest Paths
+        </a><br>Letong Wang, Guy Blelloch, Yan Gu, and Yihan Sun<!--<div class = "papernote"> efficient implementation for parallel cluster BFS </div>--><div class = "papernote"> #graph processing, #BFS, #code available </div><div class = "confbutton">ALENEX</div>	&nbsp;Algorithm Engineering and Experiments (ALENEX), 2025 &nbsp;&nbsp;
+			<label for="bib-checkbox61"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox61" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox61', 'bib61')">
+			<div id="bib61" style="display:none">
+			<div id="bibcontent61" style="margin-left:1em">
+			@inproceedings{
+			cluster-bfs,<br>
+			title = {
+			Parallel Cluster-BFS and Applications to Shortest Paths 
+			},<br>
+			author = {Wang, Letong and&nbsp;Blelloch, Guy and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {Algorithm Engineering and Experiments (ALENEX)},<br>
+			year = {
+			2025
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent61');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib61"></div>
+		<button class="copy-button" onclick="copyEvent('bib61');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib61');">BibTeX</button>
+		<div class="bib" id="bib61"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2025/ALENEX25/cbfs.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2410.17226">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://zenodo.org/records/13905461">Code</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2024:</div><a class="beforetitle" id="dp"></a>
+		<span class = "paper-number"> [61]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/dp.pdf"  >
+            Parallel and (Nearly) Work-Efficient Dynamic Programming
+        </a><br>Xiangyun Ding, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Parallel and (nearly) work-efficient dynamic programming algorithms, especially those using optimization such as sparsification and decision monotonicity, including sparse longest common subsequence (LCS), concave/convex generalized longest weighted subsequences (GLWS), optimal alphabetic tree (OAT), and concave/convex GAP edit distance (GAP). </div>--><div class = "papernote"> #dynamic programming, #DP, #LCS, #LIS, #sparsification, #decision monotonicity, #theory, #code available </div><div class="paper-title" style="margin-top:0em">&#127942; Outstanding Paper Award (Best paper finalist)!</div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2024 &nbsp;&nbsp;
+			<label for="bib-checkbox60"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox60" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox60', 'bib60')">
+			<div id="bib60" style="display:none">
+			<div id="bibcontent60" style="margin-left:1em">
+			@inproceedings{
+			dp,<br>
+			title = {
+			Parallel and (Nearly) Work-Efficient Dynamic Programming 
+			},<br>
+			author = {Ding, Xiangyun and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent60');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib60"></div>
+		<button class="copy-button" onclick="copyEvent('bib60');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib60');">BibTeX</button>
+		<div class="bib" id="bib60"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/dp.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2404.16314">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Parallel-Work-Efficient-Dynamic-Programming">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/dp-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="pasgal"></a>
+		<span class = "paper-number"> [60]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/pasgal.pdf"  >
+            Brief Announcement: PASGAL: Parallel And Scalable Graph Algorithm Library
+        </a><br>Xiaojun Dong, Yan Gu, Yihan Sun, and Letong Wang<!--<div class = "papernote"> Announcing software library PASGAL on high-performance parallel graph processing </div>--><div class = "papernote"> #graph processing, #graph library, #SCC, #BCC, #SSSP, #BFS </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2024 &nbsp;&nbsp;
+			<label for="bib-checkbox59"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox59" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox59', 'bib59')">
+			<div id="bib59" style="display:none">
+			<div id="bibcontent59" style="margin-left:1em">
+			@inproceedings{
+			pasgal,<br>
+			title = {
+			Brief Announcement: PASGAL: Parallel And Scalable Graph Algorithm Library 
+			},<br>
+			author = {Dong, Xiaojun and&nbsp;Gu, Yan and&nbsp;Sun, Yihan and&nbsp;Wang, Letong},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent59');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib59"></div>
+		<button class="copy-button" onclick="copyEvent('bib59');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib59');">BibTeX</button>
+		<div class="bib" id="bib59"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/pasgal.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2404.17101">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/PASGAL">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2024/SPAA24/pasgal-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="bf-edupar"></a>
+		<span class = "paper-number"> [59]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/EduPar24/edupar-bf.pdf"  >
+            Teaching Parallel Algorithms Using the Binary-Forking Model
+        </a><br>Guy Blelloch, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Using the binary-forking model in classes </div>--><div class = "papernote"> #teaching parallel algorithms </div><div class = "confbutton">EduPar</div>	&nbsp; &nbsp;&nbsp;
+			<label for="bib-checkbox58"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox58" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox58', 'bib58')">
+			<div id="bib58" style="display:none">
+			<div id="bibcontent58" style="margin-left:1em">
+			@inproceedings{
+			bf-edupar,<br>
+			title = {
+			Teaching Parallel Algorithms Using the Binary-Forking Model 
+			},<br>
+			author = {Blelloch, Guy and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent58');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib58"></div>
+		<button class="copy-button" onclick="copyEvent('bib58');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib58');">BibTeX</button>
+		<div class="bib" id="bib58"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/EduPar24/edupar-bf.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2024/EduPar24/edupar-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="ann"></a>
+		<span class = "paper-number"> [58]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/PPoPP24/parlayann.pdf"  >
+            ParlayANN: Scalable and Deterministic Parallel Graph-Based Algorithms for Approximate Nearest Neighbor Search
+        </a><br>Magdalen Dobson, Zheqi Shen, Guy Blelloch, Laxman Dhulipala, Yan Gu, Harsha Simhadri, and Yihan Sun<!--<div class = "papernote"> Parallel implementation for four ANNS algorithms </div>--><div class = "papernote"> #approximate nearest neighbor search, #high-performance implementation, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2024 &nbsp;&nbsp;
+			<label for="bib-checkbox57"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox57" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox57', 'bib57')">
+			<div id="bib57" style="display:none">
+			<div id="bibcontent57" style="margin-left:1em">
+			@inproceedings{
+			ann,<br>
+			title = {
+			ParlayANN: Scalable and Deterministic Parallel Graph-Based Algorithms for Approximate Nearest Neighbor Search 
+			},<br>
+			author = {Dobson, Magdalen and&nbsp;Shen, Zheqi and&nbsp;Blelloch, Guy and&nbsp;Dhulipala, Laxman and&nbsp;Gu, Yan and&nbsp;Simhadri, Harsha and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent57');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib57"></div>
+		<button class="copy-button" onclick="copyEvent('bib57');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib57');">BibTeX</button>
+		<div class="bib" id="bib57"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/PPoPP24/parlayann.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2305.04359">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/cmuparlay/ParlayANN">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="intsort"></a>
+		<span class = "paper-number"> [57]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/PPoPP24/integer-sort.pdf"  >
+            Parallel Integer Sort: Theory and Practice
+        </a><br>Xiaojun Dong, Laxman Dhulipala, Yan Gu, and Yihan Sun<!--<div class = "papernote"> New parallel integer sort algorithm </div>--><div class = "papernote"> #sorting, #dovetail sort, #theory, #high-performance implementation, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2024 &nbsp;&nbsp;
+			<label for="bib-checkbox56"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox56" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox56', 'bib56')">
+			<div id="bib56" style="display:none">
+			<div id="bibcontent56" style="margin-left:1em">
+			@inproceedings{
+			intsort,<br>
+			title = {
+			Parallel Integer Sort: Theory and Practice 
+			},<br>
+			author = {Dong, Xiaojun and&nbsp;Dhulipala, Laxman and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent56');">[copy]</button>
+			</div>
+			<br><div class = "confbutton">HOPC</div>	&nbsp;Poster and oral presentation at the Highlights of Parallel Computing (HOPC@SPAA), 2024<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib56"></div>
+		<button class="copy-button" onclick="copyEvent('bib56');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib56');">BibTeX</button>
+		<div class="bib" id="bib56"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/PPoPP24/integer-sort.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2401.00710">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/DovetailSort">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2024/PPoPP24/int-sort-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="im"></a>
+		<span class = "paper-number"> [56]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2024/VLDB24/im.pdf"  >
+            Fast and Space-Efficient Parallel Algorithms for Influence Maximization
+        </a><br>Letong Wang, Xiangyun Ding, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Parallel influence maximization system with compression </div>--><div class = "papernote"> #influence-maximization, #parallel-CELF, #parallel-priority-queue, #compressed-sketch, #high-performance implementation </div><div class = "confbutton">VLDB</div>	&nbsp;Proceedings of the VLDB Endowment (VLDB), 2024 &nbsp;&nbsp;
+			<label for="bib-checkbox55"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox55" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox55', 'bib55')">
+			<div id="bib55" style="display:none">
+			<div id="bibcontent55" style="margin-left:1em">
+			@inproceedings{
+			im,<br>
+			title = {
+			Fast and Space-Efficient Parallel Algorithms for Influence Maximization 
+			},<br>
+			author = {Wang, Letong and&nbsp;Ding, Xiangyun and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {Proceedings of the VLDB Endowment (VLDB)},<br>
+			year = {
+			2024
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent55');">[copy]</button>
+			</div>
+			<br><div class = "confbutton">HOPC</div>	&nbsp;Poster and oral presentation at the Highlights of Parallel Computing (HOPC@SPAA), 2024<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib55"></div>
+		<button class="copy-button" onclick="copyEvent('bib55');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib55');">BibTeX</button>
+		<div class="bib" id="bib55"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2024/VLDB24/im.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2311.07554">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Influence-Maximization">Code</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2023:</div><a class="beforetitle" id="edit-distance"></a>
+		<span class = "paper-number"> [55]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2023/ESA23/edit-distance.pdf"  >
+            Efficient Parallel Output-Sensitive Edit Distance
+        </a><br>Xiangyun Ding, Xiaojun Dong, Yan Gu, Youzhe Liu, and Yihan Sun<!--<div class = "papernote"> Parallel output-sensitive edit distance with theoretical guarnatee and high performance </div>--><div class = "papernote"> #edit-distance, #output-sensitive, #theoretically-efficient, #high-performance implementation </div><div class="paper-title" style="margin-top:0em">&#127942; Best Paper Award!</div><div class = "confbutton">ESA</div>	&nbsp;European Symposium on Algorithms (ESA), 2023 &nbsp;&nbsp;
+			<label for="bib-checkbox54"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox54" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox54', 'bib54')">
+			<div id="bib54" style="display:none">
+			<div id="bibcontent54" style="margin-left:1em">
+			@inproceedings{
+			edit-distance,<br>
+			title = {
+			Efficient Parallel Output-Sensitive Edit Distance 
+			},<br>
+			author = {Ding, Xiangyun and&nbsp;Dong, Xiaojun and&nbsp;Gu, Yan and&nbsp;Liu, Youzhe and&nbsp;Sun, Yihan},<br>
+			booktitle = {European Symposium on Algorithms (ESA)},<br>
+			year = {
+			2023
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent54');">[copy]</button>
+			</div>
+			<br><div class = "confbutton">HOPC</div>	&nbsp;Poster and oral presentation at the Highlights of Parallel Computing (HOPC@SPAA), 2024<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib54"></div>
+		<button class="copy-button" onclick="copyEvent('bib54');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib54');">BibTeX</button>
+		<div class="bib" id="bib54"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2023/ESA23/edit-distance.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2306.17461">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Edit-Distance">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2023/ESA23/ed-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="semisort-imp"></a>
+		<span class = "paper-number"> [54]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/semisort.pdf"  >
+            High-Performance and Flexible Parallel Algorithms for Semisort and Related Problems
+        </a><br>Xiaojun Dong, Yunshu Wu, Zhongqi Wang, Laxman Dhulipala, Yan Gu, and Yihan Sun<!--<div class = "papernote"> I/O-efficient and high-performance semisort, histogram, and collect-reduce </div>--><div class = "papernote"> #semisort, #histogram, #collect-reduce, #theoretically-efficient, #high-performance implementation </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2023 &nbsp;&nbsp;
+			<label for="bib-checkbox53"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox53" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox53', 'bib53')">
+			<div id="bib53" style="display:none">
+			<div id="bibcontent53" style="margin-left:1em">
+			@inproceedings{
+			semisort-imp,<br>
+			title = {
+			High-Performance and Flexible Parallel Algorithms for Semisort and Related Problems 
+			},<br>
+			author = {Dong, Xiaojun and&nbsp;Wu, Yunshu and&nbsp;Wang, Zhongqi and&nbsp;Dhulipala, Laxman and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2023
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent53');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib53"></div>
+		<button class="copy-button" onclick="copyEvent('bib53');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib53');">BibTeX</button>
+		<div class="bib" id="bib53"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/semisort.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2301.01356">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Parallel-Semisort">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/semisort-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="lis-veb"></a>
+		<span class = "paper-number"> [53]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/lis-veb.pdf"  >
+            Parallel Longest Increasing Subsequence and van Emde Boas Trees
+        </a><br>Yan Gu, Ziyang Men, Zheqi Shen, Yihan Sun, and Zijin Wan<!--<div class = "papernote"> Parallel longest increasing subsequence (LIS) algorithm using efficient range query algorithm and weighted LIS algorithm using parallel van Emde Boas Trees, with implementation </div>--><div class = "papernote"> #LIS, #Weighted LIS, #vEB tree, #theoretically-efficient, #high-performance implementation </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2023 &nbsp;&nbsp;
+			<label for="bib-checkbox52"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox52" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox52', 'bib52')">
+			<div id="bib52" style="display:none">
+			<div id="bibcontent52" style="margin-left:1em">
+			@inproceedings{
+			lis-veb,<br>
+			title = {
+			Parallel Longest Increasing Subsequence and van Emde Boas Trees 
+			},<br>
+			author = {Gu, Yan and&nbsp;Men, Ziyang and&nbsp;Shen, Zheqi and&nbsp;Sun, Yihan and&nbsp;Wan, Zijin},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2023
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent52');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib52"></div>
+		<button class="copy-button" onclick="copyEvent('bib52');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib52');">BibTeX</button>
+		<div class="bib" id="bib52"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/lis-veb.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2208.09809">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Parallel-LIS">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SPAA23/lis-veb-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="scc"></a>
+		<span class = "paper-number"> [52]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2023/SIGMOD23/scc.pdf"  >
+            Parallel Strong Connectivity Based on Faster Reachability
+        </a><br>Letong Wang, Xiaojun Dong, Yan Gu, and Yihan Sun<!--<div class = "papernote"> High-performance implementation of parallel SCC </div>--><div class = "papernote"> #Strong connectivity, #graph algorithms, #high-performance implementation, #BGSS SCC algorithm, #LE-list, #connectivity </div><div class = "confbutton">SIGMOD</div>	&nbsp;ACM Special Interest Group on Management of Data (SIGMOD), 2023 &nbsp;&nbsp;
+			<label for="bib-checkbox51"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox51" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox51', 'bib51')">
+			<div id="bib51" style="display:none">
+			<div id="bibcontent51" style="margin-left:1em">
+			@inproceedings{
+			scc,<br>
+			title = {
+			Parallel Strong Connectivity Based on Faster Reachability 
+			},<br>
+			author = {Wang, Letong and&nbsp;Dong, Xiaojun and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Special Interest Group on Management of Data (SIGMOD)},<br>
+			year = {
+			2023
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent51');">[copy]</button>
+			</div>
+			<br><div class = "confbutton">ACDA</div>	&nbsp;Poster presented at the SIAM Conference on Applied and Computational Discrete Algorithms (ACDA), 2023<br><div class = "confbutton">HOPC</div>	&nbsp;Poster presented at the Highlights of Parallel Computing (HOPC@SPAA), 2023<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib51"></div>
+		<button class="copy-button" onclick="copyEvent('bib51');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib51');">BibTeX</button>
+		<div class="bib" id="bib51"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SIGMOD23/scc.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2303.04934">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Parallel-Strong-Connectivity">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2023/SIGMOD23/scc-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="bcc"></a>
+		<span class = "paper-number"> [51]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2023/PPoPP23/bcc.pdf"  >
+            Provably Fast and Space-Efficient Parallel Biconnectivity
+        </a><br>Xiaojun Dong, Letong Wang, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Work-, span- and space-efficient algorithm and implementation of parallel biconnected components </div>--><div class = "papernote"> #FAST-BCC, #Biconnectivity, #graph algorithms, #theoretically-efficient, #high-performance implementation </div><div class="paper-title" style="margin-top:0em">&#127942; Best Paper Award!</div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2023 &nbsp;&nbsp;
+			<label for="bib-checkbox50"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox50" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox50', 'bib50')">
+			<div id="bib50" style="display:none">
+			<div id="bibcontent50" style="margin-left:1em">
+			@inproceedings{
+			bcc,<br>
+			title = {
+			Provably Fast and Space-Efficient Parallel Biconnectivity 
+			},<br>
+			author = {Dong, Xiaojun and&nbsp;Wang, Letong and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2023
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent50');">[copy]</button>
+			</div>
+			<br><div class = "confbutton">ACDA</div>	&nbsp;Poster and oral presentation at the SIAM Conference on Applied and Computational Discrete Algorithms (ACDA), 2023<br><div class = "confbutton">HOPC</div>	&nbsp;Poster and oral presentation at the Highlights of Parallel Computing (HOPC@SPAA), 2023<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib50"></div>
+		<button class="copy-button" onclick="copyEvent('bib50');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib50');">BibTeX</button>
+		<div class="bib" id="bib50"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2023/PPoPP23/bcc.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2301.01356">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/FAST-BCC">Code</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2022:</div><a class="beforetitle" id="bidirectional"></a>
+		<span class = "paper-number"> [50]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/SSDBM/bilsm.pdf"  >
+            Bi-directional Log-Structured Merge Tree
+        </a><br>Xin Zhang, Qizhong Mao, Ahmed Eldawy, Vagelis Hristidis, and Yihan Sun<!--<div class = "papernote"> bi-directional LSM trees </div>--><div class = "papernote"> #LSM tree, #range query, #database </div><div class = "confbutton">SSDBM</div>	&nbsp;International Conference on Scientific and Statistical Database Management (SSDBM), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox49"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox49" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox49', 'bib49')">
+			<div id="bib49" style="display:none">
+			<div id="bibcontent49" style="margin-left:1em">
+			@inproceedings{
+			bidirectional,<br>
+			title = {
+			Bi-directional Log-Structured Merge Tree 
+			},<br>
+			author = {Zhang, Xin and&nbsp;Mao, Qizhong and&nbsp;Eldawy, Ahmed and&nbsp;Hristidis, Vagelis and&nbsp;Sun, Yihan},<br>
+			booktitle = {International Conference on Scientific and Statistical Database Management (SSDBM)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent49');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib49"></div>
+		<button class="copy-button" onclick="copyEvent('bib49');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib49');">BibTeX</button>
+		<div class="bib" id="bib49"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/SSDBM/bilsm.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=HJkX8_f0-f8">Video</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="covertree"></a>
+		<span class = "paper-number"> [49]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/covertree.pdf"  >
+            Parallel Cover Trees and Applications
+        </a><br>Yan Gu, Zachary Napier, Yihan Sun, and Letong Wang<!--<div class = "papernote"> Parallel cover tree data structure for nearest neighbor search and other applications </div>--><div class = "papernote"> #cover tree, #data structure, #agglomerative clustering </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox48"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox48" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox48', 'bib48')">
+			<div id="bib48" style="display:none">
+			<div id="bibcontent48" style="margin-left:1em">
+			@inproceedings{
+			covertree,<br>
+			title = {
+			Parallel Cover Trees and Applications 
+			},<br>
+			author = {Gu, Yan and&nbsp;Napier, Zachary and&nbsp;Sun, Yihan and&nbsp;Wang, Letong},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent48');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib48"></div>
+		<button class="copy-button" onclick="copyEvent('bib48');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib48');">BibTeX</button>
+		<div class="bib" id="bib48"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/covertree.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/cover-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="iterative"></a>
+		<span class = "paper-number"> [48]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/iterative.pdf"  >
+            Many Sequential Iterative Algorithms Can Be Parallel and (Nearly) Work-efficient
+        </a><br>Zheqi Shen, Zijin Wan, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Parallelizing classic sequential iterative algorithms, including activity selection, LIS, Huffman tree, Dijkstra's algorithm, MIS, etc.  </div>--><div class = "papernote"> #paralleling sequential iterative algorithms, #data structure, #LIS, #MIS, #SSSP </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox47"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox47" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox47', 'bib47')">
+			<div id="bib47" style="display:none">
+			<div id="bibcontent47" style="margin-left:1em">
+			@inproceedings{
+			iterative,<br>
+			title = {
+			Many Sequential Iterative Algorithms Can Be Parallel and (Nearly) Work-efficient 
+			},<br>
+			author = {Shen, Zheqi and&nbsp;Wan, Zijin and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent47');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib47"></div>
+		<button class="copy-button" onclick="copyEvent('bib47');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib47');">BibTeX</button>
+		<div class="bib" id="bib47"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/iterative.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2205.13077">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2022/SPAA22/iterative-talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="pactree"></a>
+		<span class = "paper-number"> [47]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/PLDI22/PacTree.pdf"  >
+            PaC-trees: Supporting Parallel and Compressed Purely-Functional Collections
+        </a><br>Laxman Dhulipala, Guy Blelloch, Yan Gu, and Yihan Sun<!--<div class = "papernote"> A space and theoretically efficient data structure that support broad functionality </div>--><div class = "papernote"> #join-based trees, #data structure, #compressed trees, #graph streaming, #functional data structures </div><div class = "confbutton">PLDI</div>	&nbsp;ACM Conference on Programming Language Design and Implementation (PLDI), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox46"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox46" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox46', 'bib46')">
+			<div id="bib46" style="display:none">
+			<div id="bibcontent46" style="margin-left:1em">
+			@inproceedings{
+			pactree,<br>
+			title = {
+			PaC-trees: Supporting Parallel and Compressed Purely-Functional Collections 
+			},<br>
+			author = {Dhulipala, Laxman and&nbsp;Blelloch, Guy and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Conference on Programming Language Design and Implementation (PLDI)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent46');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib46"></div>
+		<button class="copy-button" onclick="copyEvent('bib46');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib46');">BibTeX</button>
+		<div class="bib" id="bib46"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/PLDI22/PacTree.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2204.06077">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ParAlg/CPAM">Code</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2022/PLDI22/talk.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="joinable"></a>
+		<span class = "paper-number"> [46]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/TOPC/joinable.pdf"  >
+            Joinable Parallel Balanced Binary Trees
+        </a><br>Guy E. Blelloch, Daniel Ferizovic, and Yihan Sun<!--<div class = "papernote"> Join-based framework for multiple balanced binary trees, and the conditions that make them joinable. </div>--><div class = "papernote"> #ptrees, #join-based algorithms, #theory, #experiments, #code available </div><div class = "confbutton">TOPC</div>	&nbsp;ACM Transactions on Parallel Computing (TOPC), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox45"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox45" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox45', 'bib45')">
+			<div id="bib45" style="display:none">
+			<div id="bibcontent45" style="margin-left:1em">
+			@inproceedings{
+			joinable,<br>
+			title = {
+			Joinable Parallel Balanced Binary Trees 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Ferizovic, Daniel and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Transactions on Parallel Computing (TOPC)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent45');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib45"></div>
+		<button class="copy-button" onclick="copyEvent('bib45');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib45');">BibTeX</button>
+		<div class="bib" id="bib45"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/TOPC/joinable.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://github.com/cmuparlay/PAM">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="pbbsv2"></a>
+		<span class = "paper-number"> [45]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/PPoPP22/pbbsv2.pdf"  >
+            POSTER: The Problem-Based Benchmark Suite (PBBS), V2
+        </a><br>Daniel Anderson, Guy E. Blelloch, Laxman Dhulipala, Magdalen Dobson, and Yihan Sun<!--<div class = "papernote"> The Problem-Based Benchmark Suite (PBBS), V2 </div>--><div class = "papernote"> #library, #benchmark, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox44"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox44" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox44', 'bib44')">
+			<div id="bib44" style="display:none">
+			<div id="bibcontent44" style="margin-left:1em">
+			@inproceedings{
+			pbbsv2,<br>
+			title = {
+			POSTER: The Problem-Based Benchmark Suite (PBBS), V2 
+			},<br>
+			author = {Anderson, Daniel and&nbsp;Blelloch, Guy E. and&nbsp;Dhulipala, Laxman and&nbsp;Dobson, Magdalen and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent44');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib44"></div>
+		<button class="copy-button" onclick="copyEvent('bib44');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib44');">BibTeX</button>
+		<div class="bib" id="bib44"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/PPoPP22/pbbsv2.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://github.com/cmuparlay/pbbsbench">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="scheduler"></a>
+		<span class = "paper-number"> [44]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2022/APOCS22/RWS.pdf"  >
+            Analysis of Work-Stealing and Parallel Cache Complexity
+        </a><br>Yan Gu, Zachary Napier, and Yihan Sun<!--<div class = "papernote"> Simplified analysis for work-stealing scheduler and improvded parallel cache bounds. </div>--><div class = "papernote"> #work-stealing scheduler, #I/O bounds </div><div class = "confbutton">APOCS</div>	&nbsp;ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2022 &nbsp;&nbsp;
+			<label for="bib-checkbox43"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox43" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox43', 'bib43')">
+			<div id="bib43" style="display:none">
+			<div id="bibcontent43" style="margin-left:1em">
+			@inproceedings{
+			scheduler,<br>
+			title = {
+			Analysis of Work-Stealing and Parallel Cache Complexity 
+			},<br>
+			author = {Gu, Yan and&nbsp;Napier, Zachary and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM-SIAM Algorithmic Principles of Computer Systems (APOCS)},<br>
+			year = {
+			2022
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent43');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib43"></div>
+		<button class="copy-button" onclick="copyEvent('bib43');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib43');">BibTeX</button>
+		<div class="bib" id="bib43"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2022/APOCS22/RWS.pdf">Paper</a> &nbsp;&nbsp;</li><li><div class = "paper-year">2021:</div><a class="beforetitle" id="parchain"></a>
+		<span class = "paper-number"> [43]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/VLDB21/ParChain.pdf"  >
+            ParChain: A Framework for Parallel Hierarchical Agglomerative Clustering using Nearest-Neighbor Chain
+        </a><br>Shangdi Yu, Yiqiu Wang, Yan Gu, Laxman Dhulipala, and Julian Shun<!--<div class = "papernote"> Parallel algorithms for hierarchical agglomerative clustering (HAC) </div>--><div class = "papernote"> #geometry, #data-science, #experiments, #code available </div><div class = "confbutton">VLDB</div>	&nbsp;Proceedings of the VLDB Endowment (VLDB), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox42"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox42" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox42', 'bib42')">
+			<div id="bib42" style="display:none">
+			<div id="bibcontent42" style="margin-left:1em">
+			@inproceedings{
+			parchain,<br>
+			title = {
+			ParChain: A Framework for Parallel Hierarchical Agglomerative Clustering using Nearest-Neighbor Chain 
+			},<br>
+			author = {Yu, Shangdi and&nbsp;Wang, Yiqiu and&nbsp;Gu, Yan and&nbsp;Dhulipala, Laxman and&nbsp;Shun, Julian},<br>
+			booktitle = {Proceedings of the VLDB Endowment (VLDB)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent42');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib42"></div>
+		<button class="copy-button" onclick="copyEvent('bib42');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib42');">BibTeX</button>
+		<div class="bib" id="bib42"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/VLDB21/ParChain.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="pim"></a>
+		<span class = "paper-number"> [42]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/SPAA21/PIM.pdf"  >
+            The Processing-in-Memory Model
+        </a><br>Hongbo Kang, Phillip B. Gibbons, Guy E. Blelloch, Laxman Dhulipala, Yan Gu, and Charles McGuffey<!--<div class = "papernote"> Model and algorithms (skiplists) for PIM architecture </div>--><div class = "papernote"> #architecture, #model-of-computation, #data structure, #set/tree algorithms </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox41"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox41" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox41', 'bib41')">
+			<div id="bib41" style="display:none">
+			<div id="bibcontent41" style="margin-left:1em">
+			@inproceedings{
+			pim,<br>
+			title = {
+			The Processing-in-Memory Model 
+			},<br>
+			author = {Kang, Hongbo and&nbsp;Gibbons, Phillip B. and&nbsp;Blelloch, Guy E. and&nbsp;Dhulipala, Laxman and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent41');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib41"></div>
+		<button class="copy-button" onclick="copyEvent('bib41');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib41');">BibTeX</button>
+		<div class="bib" id="bib41"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/SPAA21/PIM.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=dpxnbvHImZ8">Video</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="mvgc"></a>
+		<span class = "paper-number"> [41]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/DISC21/mvgc.pdf"  >
+            Space and Time Bounded Multiversion Garbage Collection
+        </a><br>Naama Ben-David, Guy E. Blelloch, Panagiota Fatourou, Eric Ruppert, Yihan Sun, and Yuanhao Wei<!--<div class = "papernote"> Proposed algorithm for garbage collection in multi-versioned concurrent systems. </div>--><div class = "papernote"> #concurrent data structures, #range-tracking, #garbage collection, #memory management, #wait-free and lock-free algorithms, #MVCC, #time and space bounds </div><div class = "confbutton">DISC</div>	&nbsp;International Symposium on Distributed Computing (DISC), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox40"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox40" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox40', 'bib40')">
+			<div id="bib40" style="display:none">
+			<div id="bibcontent40" style="margin-left:1em">
+			@inproceedings{
+			mvgc,<br>
+			title = {
+			Space and Time Bounded Multiversion Garbage Collection 
+			},<br>
+			author = {Ben-David, Naama and&nbsp;Blelloch, Guy E. and&nbsp;Fatourou, Panagiota and&nbsp;Ruppert, Eric and&nbsp;Sun, Yihan and&nbsp;Wei, Yuanhao},<br>
+			booktitle = {International Symposium on Distributed Computing (DISC)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent40');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib40"></div>
+		<button class="copy-button" onclick="copyEvent('bib40');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib40');">BibTeX</button>
+		<div class="bib" id="bib40"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/DISC21/mvgc.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=mU3JZdvapBc">Video</a>&nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2108.02775">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="stepping"></a>
+		<span class = "paper-number"> [40]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/SPAA21/stepping.pdf"  >
+            Efficient Stepping Algorithms and Implementations for Parallel Shortest Paths
+        </a><br>Xiaojun Dong, Yan Gu, Yihan Sun, and Yunming Zhang<!--<div class = "papernote"> Proposed the stepping framework and two new algorithms for parallel SSSP. </div>--><div class = "papernote"> #SSSP, #time bounds, #rho-stepping, #delta*-stepping, #delta-stepping, #Bellman-Ford, #experiments, #code available </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox39"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox39" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox39', 'bib39')">
+			<div id="bib39" style="display:none">
+			<div id="bibcontent39" style="margin-left:1em">
+			@inproceedings{
+			stepping,<br>
+			title = {
+			Efficient Stepping Algorithms and Implementations for Parallel Shortest Paths 
+			},<br>
+			author = {Dong, Xiaojun and&nbsp;Gu, Yan and&nbsp;Sun, Yihan and&nbsp;Zhang, Yunming},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent39');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib39"></div>
+		<button class="copy-button" onclick="copyEvent('bib39');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib39');">BibTeX</button>
+		<div class="bib" id="bib39"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/SPAA21/stepping.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=QZdrG3ZsDVo&t=2s">Video</a>&nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2105.06145">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/Parallel-SSSP">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="geograph"></a>
+		<span class = "paper-number"> [39]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/SIGOPSOSR21/geograph.pdf"  >
+            GeoGraph: A Framework for Graph Processing on Geometric Data
+        </a><br>Yiqiu Wang, Shangdi Yu, Laxman Dhulipala, Yan Gu, and Julian Shun<!--<div class = "papernote"> Enable parallel graph processing for geometric data </div>--><div class = "papernote"> #system #graph #geometry </div><div class = "confbutton">SIGOPS-OSR</div>	&nbsp;ACM SIGOPS Operating Systems Review (SIGOPS-OSR), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox38"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox38" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox38', 'bib38')">
+			<div id="bib38" style="display:none">
+			<div id="bibcontent38" style="margin-left:1em">
+			@inproceedings{
+			geograph,<br>
+			title = {
+			GeoGraph: A Framework for Graph Processing on Geometric Data 
+			},<br>
+			author = {Wang, Yiqiu and&nbsp;Yu, Shangdi and&nbsp;Dhulipala, Laxman and&nbsp;Gu, Yan and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM SIGOPS Operating Systems Review (SIGOPS-OSR)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent38');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib38"></div>
+		<button class="copy-button" onclick="copyEvent('bib38');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib38');">BibTeX</button>
+		<div class="bib" id="bib38"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/SIGOPSOSR21/geograph.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://github.com/ParAlg/GeoGraph">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="emst"></a>
+		<span class = "paper-number"> [38]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/SIGMOD21/hdbscan.pdf"  >
+            Fast Parallel Algorithms for Euclidean Minimum Spanning Tree and Hierarchical Spatial Clustering
+        </a><br>Yiqiu Wang, Shangdi Yu, Yan Gu, and Julian Shun<!----><div class = "papernote"> #geometry, #data-science, #theory, #experiments, #code available </div><div class = "confbutton">SIGMOD</div>	&nbsp;ACM Special Interest Group on Management of Data (SIGMOD), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox37"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox37" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox37', 'bib37')">
+			<div id="bib37" style="display:none">
+			<div id="bibcontent37" style="margin-left:1em">
+			@inproceedings{
+			emst,<br>
+			title = {
+			Fast Parallel Algorithms for Euclidean Minimum Spanning Tree and Hierarchical Spatial Clustering 
+			},<br>
+			author = {Wang, Yiqiu and&nbsp;Yu, Shangdi and&nbsp;Gu, Yan and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Special Interest Group on Management of Data (SIGMOD)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent37');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib37"></div>
+		<button class="copy-button" onclick="copyEvent('bib37');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib37');">BibTeX</button>
+		<div class="bib" id="bib37"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/SIGMOD21/hdbscan.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=_Dwj-KdlDQs">Video</a>&nbsp;&nbsp;<a class = "button" href="https://arxiv.org/pdf/2104.01126">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/wangyiqiu/hdbscan">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="closestpair"></a>
+		<span class = "paper-number"> [37]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/SoCG21/closest.pdf"  >
+            An Experimental Study of a New Parallel Batch-Dynamic Closest Pair Data Structure
+        </a><br>Wang Yiqiu, Shangdi Yu, Yan Gu, and Julian Shun<!----><div class = "papernote"> #geometry, #theory, #experiments, #code available </div><div class = "confbutton">SoCG</div>	&nbsp;ACM Symposium on Computational Geometry (SoCG), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox36"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox36" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox36', 'bib36')">
+			<div id="bib36" style="display:none">
+			<div id="bibcontent36" style="margin-left:1em">
+			@inproceedings{
+			closestpair,<br>
+			title = {
+			An Experimental Study of a New Parallel Batch-Dynamic Closest Pair Data Structure 
+			},<br>
+			author = {Yiqiu, Wang and&nbsp;Yu, Shangdi and&nbsp;Gu, Yan and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Symposium on Computational Geometry (SoCG)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent36');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib36"></div>
+		<button class="copy-button" onclick="copyEvent('bib36');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib36');">BibTeX</button>
+		<div class="bib" id="bib36"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/SoCG21/closest.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2010.02379">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/wangyiqiu/closest-pair">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [36]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/APOCS/PIP.pdf"  >
+            Parallel In-Place Algorithms: Theory and Practice
+        </a><br>Yan Gu, Omar Obeya, and Julian Shun<!----><div class = "papernote"> #architecture, #model-of-computation, #theory, #experiments, #code available </div><div class = "confbutton">APOCS</div>	&nbsp;ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox35"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox35" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox35', 'bib35')">
+			<div id="bib35" style="display:none">
+			<div id="bibcontent35" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Parallel In-Place Algorithms: Theory and Practice 
+			},<br>
+			author = {Gu, Yan and&nbsp;Obeya, Omar and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM-SIAM Algorithmic Principles of Computer Systems (APOCS)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent35');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib35"></div>
+		<button class="copy-button" onclick="copyEvent('bib35');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib35');">BibTeX</button>
+		<div class="bib" id="bib35"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/APOCS/PIP.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.cs.ucr.edu/~ygu/video/apocs2021.mp4">Video</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/ucrparlay/PIP-algorithms">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [35]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/APOCS21/ROSE.pdf"  >
+            The Read-Only Semi-External Model
+        </a><br>Guy E. Blelloch, Laxman Dhulipala, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #architecture, #model-of-computation, #graph, #theory </div><div class = "confbutton">APOCS</div>	&nbsp;ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox34"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox34" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox34', 'bib34')">
+			<div id="bib34" style="display:none">
+			<div id="bibcontent34" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			The Read-Only Semi-External Model 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Dhulipala, Laxman and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM-SIAM Algorithmic Principles of Computer Systems (APOCS)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent34');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib34"></div>
+		<button class="copy-button" onclick="copyEvent('bib34');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib34');">BibTeX</button>
+		<div class="bib" id="bib34"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/APOCS21/ROSE.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="vcas"></a>
+		<span class = "paper-number"> [34]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2021/PPoPP21/vcas.pdf"  >
+            Constant-Time Snapshots with Applications to Concurrent Data Structures
+        </a><br>Yuanhao Wei, Naama Ben-David, Guy E. Blelloch, Panagiota Fatourou, Eric Ruppert, and Yihan Sun<!--<div class = "papernote"> Proposed a general framework to support multi-versioning for CAS objects. </div>--><div class = "papernote"> #concurrent data structures, #wait-free and lock-free algorithms, #experiments, #time bounds, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2021 &nbsp;&nbsp;
+			<label for="bib-checkbox33"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox33" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox33', 'bib33')">
+			<div id="bib33" style="display:none">
+			<div id="bibcontent33" style="margin-left:1em">
+			@inproceedings{
+			vcas,<br>
+			title = {
+			Constant-Time Snapshots with Applications to Concurrent Data Structures 
+			},<br>
+			author = {Wei, Yuanhao and&nbsp;Ben-David, Naama and&nbsp;Blelloch, Guy E. and&nbsp;Fatourou, Panagiota and&nbsp;Ruppert, Eric and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2021
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent33');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib33"></div>
+		<button class="copy-button" onclick="copyEvent('bib33');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib33');">BibTeX</button>
+		<div class="bib" id="bib33"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2021/PPoPP21/vcas.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=k4MoXSuKKAE">Video</a>&nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/2007.02372">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/yuanhaow/vcaslib">Code</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2020:</div><a class="beforetitle" id="binaryforking"></a>
+		<span class = "paper-number"> [33]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/SPAA20/BF.pdf"  >
+            Optimal (Randomized) Parallel Algorithms in the Binary-Forking Model
+        </a><br>Guy E. Blelloch, Jeremy Fineman, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Proposed the binary-forking (BF) model and parallel algorithms with optimal work and span under the BF model. </div>--><div class = "papernote"> #binary-forking model, #sorting, #semisorting, #list/tree contraction, #set-set algorithms, #join-based tree algorithms, #time bounds </div><div class="paper-title" style="margin-top:0em">&#127942; Best Paper Candidate!</div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox32"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox32" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox32', 'bib32')">
+			<div id="bib32" style="display:none">
+			<div id="bibcontent32" style="margin-left:1em">
+			@inproceedings{
+			binaryforking,<br>
+			title = {
+			Optimal (Randomized) Parallel Algorithms in the Binary-Forking Model 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Fineman, Jeremy and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent32');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib32"></div>
+		<button class="copy-button" onclick="copyEvent('bib32');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib32');">BibTeX</button>
+		<div class="bib" id="bib32"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/SPAA20/BF.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.cs.ucr.edu/~ygu/video/bf.mp4">Video</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="convexhull"></a>
+		<span class = "paper-number"> [32]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/SPAA20/CH.pdf"  >
+            Randomized Incremental Convex Hull is Highly Parallel
+        </a><br>Guy E. Blelloch, Yan Gu, Julian Shun, and Yihan Sun<!--<div class = "papernote"> Proved the low dependence depth in randomized construction incremental (RIC) d-D convex hull algorithm. Showed a new parallel work-efficient convex hull algorithm with low span. </div>--><div class = "papernote"> #parallel randomized incremental algorithms #computational geometry, #convex hull #time bounds </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox31"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox31" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox31', 'bib31')">
+			<div id="bib31" style="display:none">
+			<div id="bibcontent31" style="margin-left:1em">
+			@inproceedings{
+			convexhull,<br>
+			title = {
+			Randomized Incremental Convex Hull is Highly Parallel 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Shun, Julian and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent31');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib31"></div>
+		<button class="copy-button" onclick="copyEvent('bib31');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib31');">BibTeX</button>
+		<div class="bib" id="bib31"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/SPAA20/CH.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=8NZ-2MjjlV0&list=PL3Ctc-PX1MivaI-jFK72qRqMhAWaRW2TA&index=2">Video</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="incremental-jacm"></a>
+		<span class = "paper-number"> [31]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/JACM20/incremental.pdf"  >
+            Parallelism in Randomized Incremental Algorithms
+        </a><br>Guy E. Blelloch, Yan Gu, Julian Shun, and Yihan Sun<!--<div class = "papernote"> Proposed the framework of parallel RIC algorithms. Showed several algorithms based on RIC with efficient work and low span. </div>--><div class = "papernote"> #parallel randomized incremental algorithms, #computational geometry, #graph algorithms, #sorting, #Delaunay triangulation, #closest pair, #smallest enclosing disk, #SCC, #LE list, #prefix doubling, #time bounds </div><div class = "confbutton">JACM</div>	&nbsp;Journal of the ACM (JACM), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox30"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox30" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox30', 'bib30')">
+			<div id="bib30" style="display:none">
+			<div id="bibcontent30" style="margin-left:1em">
+			@inproceedings{
+			incremental-jacm,<br>
+			title = {
+			Parallelism in Randomized Incremental Algorithms 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Shun, Julian and&nbsp;Sun, Yihan},<br>
+			booktitle = {Journal of the ACM (JACM)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent30');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib30"></div>
+		<button class="copy-button" onclick="copyEvent('bib30');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib30');">BibTeX</button>
+		<div class="bib" id="bib30"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/JACM20/incremental.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [30]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/VLDB20/SAGE.pdf"  >
+            Sage: Parallel Semi-Asymmetric Graph Algorithms for NVRAMs
+        </a><br>Laxman Dhulipala, Charles McGuffey, Hongbo Kang, Yan Gu, Guy E. Blelloch, Phillip B. Gibbons, and Julian Shun<!----><div class = "papernote"> #architecture, #system, #graph, #experiments, #code available </div><div class = "confbutton">VLDB</div>	&nbsp;Proceedings of the VLDB Endowment (VLDB), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox29"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox29" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox29', 'bib29')">
+			<div id="bib29" style="display:none">
+			<div id="bibcontent29" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Sage: Parallel Semi-Asymmetric Graph Algorithms for NVRAMs 
+			},<br>
+			author = {Dhulipala, Laxman and&nbsp;McGuffey, Charles and&nbsp;Kang, Hongbo and&nbsp;Gu, Yan and&nbsp;Blelloch, Guy E. and&nbsp;Gibbons, Phillip B. and&nbsp;Shun, Julian},<br>
+			booktitle = {Proceedings of the VLDB Endowment (VLDB)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent29');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib29"></div>
+		<button class="copy-button" onclick="copyEvent('bib29');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib29');">BibTeX</button>
+		<div class="bib" id="bib29"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/VLDB20/SAGE.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1910.12310">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://paralg.github.io/gbbs/docs/sage/sage/">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [29]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/SIGMOD20/DBSCAN.pdf"  >
+            Theoretically-Efficient and Practical Parallel DBSCAN
+        </a><br>Yiqiu Wang, Yan Gu, and Julian Shun<!----><div class = "papernote"> #geometry #data-science #experiments #code-available </div><div class = "confbutton">SIGMOD</div>	&nbsp;ACM Special Interest Group on Management of Data (SIGMOD), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox28"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox28" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox28', 'bib28')">
+			<div id="bib28" style="display:none">
+			<div id="bibcontent28" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Theoretically-Efficient and Practical Parallel DBSCAN 
+			},<br>
+			author = {Wang, Yiqiu and&nbsp;Gu, Yan and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Special Interest Group on Management of Data (SIGMOD)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent28');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib28"></div>
+		<button class="copy-button" onclick="copyEvent('bib28');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib28');">BibTeX</button>
+		<div class="bib" id="bib28"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/SIGMOD20/DBSCAN.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=j3HZ0ZxbyB8">Video</a>&nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1912.06255">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/wangyiqiu/dbscan">Code</a>&nbsp;&nbsp;<a class = "button" href="https://sites.google.com/view/yiqiuwang/dbscan?authuser=0">Page</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [28]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2020/APOCS20/DP.pdf"  >
+            Improved Parallel Cache-Oblivious Algorithms for Dynamic Programming
+        </a><br>Yan Gu, and Guy E. Blelloch<!----><div class = "papernote"> #dynamic-programming #linear-algebra #architecture #theory </div><div class = "confbutton">APOCS</div>	&nbsp;ACM-SIAM Algorithmic Principles of Computer Systems (APOCS), 2020 &nbsp;&nbsp;
+			<label for="bib-checkbox27"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox27" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox27', 'bib27')">
+			<div id="bib27" style="display:none">
+			<div id="bibcontent27" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Improved Parallel Cache-Oblivious Algorithms for Dynamic Programming 
+			},<br>
+			author = {Gu, Yan and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {ACM-SIAM Algorithmic Principles of Computer Systems (APOCS)},<br>
+			year = {
+			2020
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent27');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib27"></div>
+		<button class="copy-button" onclick="copyEvent('bib27');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib27');">BibTeX</button>
+		<div class="bib" id="bib27"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2020/APOCS20/DP.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/pdf/1809.09330">ArXiV</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2019:</div><a class="beforetitle" id="pam-snapshot"></a>
+		<span class = "paper-number"> [27]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2019/VLDB20/pam-snapshot.pdf"  >
+            On Supporting Efficient Snapshot Isolation for Hybrid Workloads with Multi-Versioned Indexes
+        </a><br>Yihan Sun, Guy E. Blelloch, Wan Shen Lim, and Andrew Pavlo<!--<div class = "papernote"> Applying P-trees and the PAM library to support efficient multi-verioned indexes in DBMS. </div>--><div class = "papernote"> #multi-version concurrency control (MVCC), #OLAP/OLTP/HTAP database systems, #join-based tree algorithms, #PAM library, #persistent/pure data structures, #nested indexes, #YCSB/TPCH/TPCC experiments, #code available </div><div class = "confbutton">VLDB</div>	&nbsp;Proceedings of the VLDB Endowment (VLDB), 2019 &nbsp;&nbsp;
+			<label for="bib-checkbox26"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox26" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox26', 'bib26')">
+			<div id="bib26" style="display:none">
+			<div id="bibcontent26" style="margin-left:1em">
+			@inproceedings{
+			pam-snapshot,<br>
+			title = {
+			On Supporting Efficient Snapshot Isolation for Hybrid Workloads with Multi-Versioned Indexes 
+			},<br>
+			author = {Sun, Yihan and&nbsp;Blelloch, Guy E. and&nbsp;Lim, Wan Shen and&nbsp;Pavlo, Andrew},<br>
+			booktitle = {Proceedings of the VLDB Endowment (VLDB)},<br>
+			year = {
+			2019
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent26');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib26"></div>
+		<button class="copy-button" onclick="copyEvent('bib26');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib26');">BibTeX</button>
+		<div class="bib" id="bib26"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2019/VLDB20/pam-snapshot.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://www.youtube.com/watch?v=532ONpw2pGk">Video</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/cmuparlay/PAM/tree/master/examples/tpch">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="single-writer"></a>
+		<span class = "paper-number"> [26]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2019/SPAA19/single-writer.pdf"  >
+            Multiversion Concurrency with Bounded Delay and Precise Garbage Collection
+        </a><br>Naama Ben-David, Guy E. Blelloch, Yihan Sun, and Yuanhao Wei<!--<div class = "papernote"> Proposed a framework for GC in transactional systems. Showed a linearizable wait-free algorithm to achieve safe and precise GC. Applied P-trees in experiments. </div>--><div class = "papernote"> #transactional system, #GC, #wait-free algorithms, #persistent/functional data structures, #P-trees, #the PAM libaray, #time bounds, #experiments </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2019 &nbsp;&nbsp;
+			<label for="bib-checkbox25"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox25" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox25', 'bib25')">
+			<div id="bib25" style="display:none">
+			<div id="bibcontent25" style="margin-left:1em">
+			@inproceedings{
+			single-writer,<br>
+			title = {
+			Multiversion Concurrency with Bounded Delay and Precise Garbage Collection 
+			},<br>
+			author = {Ben-David, Naama and&nbsp;Blelloch, Guy E. and&nbsp;Sun, Yihan and&nbsp;Wei, Yuanhao},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2019
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent25');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib25"></div>
+		<button class="copy-button" onclick="copyEvent('bib25');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib25');">BibTeX</button>
+		<div class="bib" id="bib25"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2019/SPAA19/single-writer.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1803.08617">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="ppopp-tutorial"></a>
+		<span class = "paper-number"> [25]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2019/PPoPP19/ppopp-tutorial.pdf"  >
+            Implementing Parallel and Concurrent Tree Structures
+        </a><br>Yihan Sun, and Guy E. Blelloch<!--<div class = "papernote"> Tutorial on join-based trees (or P-trees) and the PAM libaray. </div>--><div class = "papernote"> #join-based tree algorithms, #PAM library, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2019 &nbsp;&nbsp;
+			<label for="bib-checkbox24"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox24" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox24', 'bib24')">
+			<div id="bib24" style="display:none">
+			<div id="bibcontent24" style="margin-left:1em">
+			@inproceedings{
+			ppopp-tutorial,<br>
+			title = {
+			Implementing Parallel and Concurrent Tree Structures 
+			},<br>
+			author = {Sun, Yihan and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2019
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent24');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib24"></div>
+		<button class="copy-button" onclick="copyEvent('bib24');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib24');">BibTeX</button>
+		<div class="bib" id="bib24"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2019/PPoPP19/ppopp-tutorial.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="pam-geometry"></a>
+		<span class = "paper-number"> [24]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2019/ALENEX19/pam-geometry.pdf"  >
+            Parallel Range, Segment and Rectangle Queries with Augmented Maps
+        </a><br>Yihan Sun, and Guy E. Blelloch<!--<div class = "papernote"> Used augmented maps to model 2-D range, segment, and rectangle queries in parallel. Showed implementations and experimental results based on PAM. </div>--><div class = "papernote"> #P-trees, #join-based tree algorithms, #the PAM library, #range/segment/rectangle query, #computational geometry, #augmented maps, #augmented trees, #prefix structures, #experiments, #code available </div><div class = "confbutton">ALENEX</div>	&nbsp;Algorithm Engineering and Experiments (ALENEX), 2019 &nbsp;&nbsp;
+			<label for="bib-checkbox23"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox23" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox23', 'bib23')">
+			<div id="bib23" style="display:none">
+			<div id="bibcontent23" style="margin-left:1em">
+			@inproceedings{
+			pam-geometry,<br>
+			title = {
+			Parallel Range, Segment and Rectangle Queries with Augmented Maps 
+			},<br>
+			author = {Sun, Yihan and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {Algorithm Engineering and Experiments (ALENEX)},<br>
+			year = {
+			2019
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent23');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib23"></div>
+		<button class="copy-button" onclick="copyEvent('bib23');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib23');">BibTeX</button>
+		<div class="bib" id="bib23"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2019/ALENEX19/pam-geometry.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1803.08621">ArXiV</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2018:</div><a class="beforetitle" id="we-exp"></a>
+		<span class = "paper-number"> [23]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2018/ESA18/we-exp.pdf"  >
+            Algorithmic Building Blocks for Asymmetric Memories
+        </a><br>Yan Gu, Yihan Sun, and Guy E. Blelloch<!--<div class = "papernote"> Discussed write-efficient algorithms and their implementations. Showed experimental evaluations of these algorithms in a software simulator. </div>--><div class = "papernote"> #write-effient algorithms, #algorithms for NVRAM, #k-level hash table, #join-based tree algorithms, #sorting, #BFS, #single-source shortest path, #phased Dijkstra, #experiments </div><div class = "confbutton">ESA</div>	&nbsp;European Symposium on Algorithms (ESA), 2018 &nbsp;&nbsp;
+			<label for="bib-checkbox22"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox22" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox22', 'bib22')">
+			<div id="bib22" style="display:none">
+			<div id="bibcontent22" style="margin-left:1em">
+			@inproceedings{
+			we-exp,<br>
+			title = {
+			Algorithmic Building Blocks for Asymmetric Memories 
+			},<br>
+			author = {Gu, Yan and&nbsp;Sun, Yihan and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {European Symposium on Algorithms (ESA)},<br>
+			year = {
+			2018
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent22');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib22"></div>
+		<button class="copy-button" onclick="copyEvent('bib22');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib22');">BibTeX</button>
+		<div class="bib" id="bib22"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2018/ESA18/we-exp.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1806.10370">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="PPM"></a>
+		<span class = "paper-number"> [22]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2018/SPAA18/PPM.pdf"  >
+            The Parallel Persistent Memory Model
+        </a><br>Guy E. Blelloch, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #architecture #scheduling </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018 &nbsp;&nbsp;
+			<label for="bib-checkbox21"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox21" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox21', 'bib21')">
+			<div id="bib21" style="display:none">
+			<div id="bibcontent21" style="margin-left:1em">
+			@inproceedings{
+			PPM,<br>
+			title = {
+			The Parallel Persistent Memory Model 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2018
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent21');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib21"></div>
+		<button class="copy-button" onclick="copyEvent('bib21');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib21');">BibTeX</button>
+		<div class="bib" id="bib21"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2018/SPAA18/PPM.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="decomposition"></a>
+		<span class = "paper-number"> [21]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2018/IPDPS18/impdecomp.pdf"  >
+            Implicit Decomposition for Write-Efficient Connectivity Algorithms
+        </a><br>Naama Ben-David, Guy E. Blelloch, Jeremy T. Fineman, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #write-efficient algorithms, #graph, #theory, #architecture, #connectivity </div><div class = "confbutton">IPDPS</div>	&nbsp;IEEE International Parallel & Distributed Processing Symposium (IPDPS), 2018 &nbsp;&nbsp;
+			<label for="bib-checkbox20"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox20" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox20', 'bib20')">
+			<div id="bib20" style="display:none">
+			<div id="bibcontent20" style="margin-left:1em">
+			@inproceedings{
+			decomposition,<br>
+			title = {
+			Implicit Decomposition for Write-Efficient Connectivity Algorithms 
+			},<br>
+			author = {Ben-David, Naama and&nbsp;Blelloch, Guy E. and&nbsp;Fineman, Jeremy T. and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {IEEE International Parallel & Distributed Processing Symposium (IPDPS)},<br>
+			year = {
+			2018
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent20');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib20"></div>
+		<button class="copy-button" onclick="copyEvent('bib20');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib20');">BibTeX</button>
+		<div class="bib" id="bib20"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2018/IPDPS18/impdecomp.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1710.02637">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="we-geo"></a>
+		<span class = "paper-number"> [20]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2018/SPAA18/we-geo.pdf"  >
+            Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry
+        </a><br>Guy E. Blelloch, Yan Gu, Yihan Sun, and Julian Shun<!--<div class = "papernote"> Proposed write-efficient algorithms for several computational geometry problems based on the randomized incremental construction (RIC) and parallel augmented trees. </div>--><div class = "papernote"> #parallel randomized incremental algorithms, #computational geometry, #Delaunay triangulation, #k-d trees, #interval tree, #priority search tree, #range tree, #augmented trees, #sorting, #DAG tracing, #history graph, #prefix doubling, #time bounds </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2018 &nbsp;&nbsp;
+			<label for="bib-checkbox19"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox19" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox19', 'bib19')">
+			<div id="bib19" style="display:none">
+			<div id="bibcontent19" style="margin-left:1em">
+			@inproceedings{
+			we-geo,<br>
+			title = {
+			Parallel Write-Efficient Algorithms and Data Structures for Computational Geometry 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Sun, Yihan and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2018
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent19');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib19"></div>
+		<button class="copy-button" onclick="copyEvent('bib19');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib19');">BibTeX</button>
+		<div class="bib" id="bib19"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2018/SPAA18/we-geo.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1805.05592">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="pam"></a>
+		<span class = "paper-number"> [19]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2018/PPoPP18/pam.pdf"  >
+            PAM: Parallel Augmented Maps
+        </a><br>Yihan Sun, Daniel Ferizovic, and Guy E. Blelloch<!--<div class = "papernote"> Proposed the augmented map ADT and its implementation using parallel balanced BST based on join-based algorithms. Implemented the augmented map in the PAM (parallel augmented map) library. Showed four applications and their implementations/experiments.  </div>--><div class = "papernote"> #ordered maps, #augmented maps, #augmented trees, #join-based algorithms, #the PAM library, #persistent/functional data structures, #range sum, #interval tree, #2-D range tree, #inverted index searching #experiments, #code available </div><div class = "confbutton">PPoPP</div>	&nbsp;ACM Symposium on Principles and Practice of Parallel Programming (PPoPP), 2018 &nbsp;&nbsp;
+			<label for="bib-checkbox18"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox18" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox18', 'bib18')">
+			<div id="bib18" style="display:none">
+			<div id="bibcontent18" style="margin-left:1em">
+			@inproceedings{
+			pam,<br>
+			title = {
+			PAM: Parallel Augmented Maps 
+			},<br>
+			author = {Sun, Yihan and&nbsp;Ferizovic, Daniel and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {ACM Symposium on Principles and Practice of Parallel Programming (PPoPP)},<br>
+			year = {
+			2018
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent18');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib18"></div>
+		<button class="copy-button" onclick="copyEvent('bib18');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib18');">BibTeX</button>
+		<div class="bib" id="bib18"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2018/PPoPP18/pam.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1612.05665">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/syhlalala/PAM-AE">Code</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2017:</div><a class="beforetitle" id="frt"></a>
+		<span class = "paper-number"> [18]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2017/ICALP17/FRT.pdf"  >
+            Efficient Construction of Probabilistic Tree Embeddings
+        </a><br>Guy E. Blelloch, Yan Gu, and Yihan Sun<!--<div class = "papernote"> Proposed an efficient algorithm to construct probablistic tree embeddings with improved bounds, with a key component as a novel approximate single-source shortest path algorithm.  </div>--><div class = "papernote"> #probablistic tree embedding, #FRT trees, #Ramsey partitions, #LE-list, #approximate single-source shortest path (SSSP), #bucket-tree, #distance oracle, #improved bounds </div><div class = "confbutton">ICALP</div>	&nbsp;International Colloquium on Automata, Languages, and Programming (ICALP), 2017 &nbsp;&nbsp;
+			<label for="bib-checkbox17"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox17" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox17', 'bib17')">
+			<div id="bib17" style="display:none">
+			<div id="bibcontent17" style="margin-left:1em">
+			@inproceedings{
+			frt,<br>
+			title = {
+			Efficient Construction of Probabilistic Tree Embeddings 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Sun, Yihan},<br>
+			booktitle = {International Colloquium on Automata, Languages, and Programming (ICALP)},<br>
+			year = {
+			2017
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent17');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib17"></div>
+		<button class="copy-button" onclick="copyEvent('bib17');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib17');">BibTeX</button>
+		<div class="bib" id="bib17"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2017/ICALP17/FRT.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1605.04651">ArXiV</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2016:</div><a class="beforetitle" id="join"></a>
+		<span class = "paper-number"> [17]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/join.pdf"  >
+            Just Join for Parallel Ordered Sets
+        </a><br>Guy E. Blelloch, Daniel Ferizovic, and Yihan Sun<!--<div class = "papernote"> Proposed an efficient algorithm to construct probablistic tree embeddings with improved bounds, with a key component as a novel approximate single-source shortest path algorithm.  </div>--><div class = "papernote"> #join-based tree algorithms, #P-trees, #efficient parallel set-set algorithms, #balancing-scheme independent tree algorithms, #AVL trees, #red-black trees, #weight-balanced trees, #treaps, #rank-based analysis, #time bounds, #experiments </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016 &nbsp;&nbsp;
+			<label for="bib-checkbox16"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox16" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox16', 'bib16')">
+			<div id="bib16" style="display:none">
+			<div id="bibcontent16" style="margin-left:1em">
+			@inproceedings{
+			join,<br>
+			title = {
+			Just Join for Parallel Ordered Sets 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Ferizovic, Daniel and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2016
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent16');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib16"></div>
+		<button class="copy-button" onclick="copyEvent('bib16');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib16');">BibTeX</button>
+		<div class="bib" id="bib16"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/join.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1602.02120">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://github.com/cmuparlay/PAM">Code</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="radius-stepping"></a>
+		<span class = "paper-number"> [16]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/RadiusStepping.pdf"  >
+            Parallel Shortest-paths Using Radius Stepping
+        </a><br>Guy E. Blelloch, Yan Gu, Yihan Sun, and Kanat Tangwongsan<!--<div class = "papernote"> Proposed the radius-stepping algorithm for parallel single-source shortest path (SSSP) problem with work-span tradeoff. </div>--><div class = "papernote"> #graph algorithms, #single-source shortest path (SSSP), #radius-stepping, #delta-stepping, #time bounds, #experiments </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016 &nbsp;&nbsp;
+			<label for="bib-checkbox15"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox15" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox15', 'bib15')">
+			<div id="bib15" style="display:none">
+			<div id="bibcontent15" style="margin-left:1em">
+			@inproceedings{
+			radius-stepping,<br>
+			title = {
+			Parallel Shortest-paths Using Radius Stepping 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Sun, Yihan and&nbsp;Tangwongsan, Kanat},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2016
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent15');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib15"></div>
+		<button class="copy-button" onclick="copyEvent('bib15');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib15');">BibTeX</button>
+		<div class="bib" id="bib15"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/RadiusStepping.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id="incremental"></a>
+		<span class = "paper-number"> [15]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/Incremental.pdf"  >
+            Parallelism in Randomized Incremental Algorithms
+        </a><br>Guy E. Blelloch, Yan Gu, Julian Shun, and Yihan Sun<!--<div class = "papernote"> Proposed the framework of parallel randomized incremental construction (RIC) algorithms. Showed several algorithms based on RIC that are work-efficient with low span. </div>--><div class = "papernote"> #parallel randomized incremental algorithms, #computational geometry, #graph algorithms, #sorting, #Delaunay triangulation, #closest pair, #smallest enclosing disk, #strongly connected conponent (SCC), #least-element (LE) list, #prefix-doubling </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016 &nbsp;&nbsp;
+			<label for="bib-checkbox14"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox14" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox14', 'bib14')">
+			<div id="bib14" style="display:none">
+			<div id="bibcontent14" style="margin-left:1em">
+			@inproceedings{
+			incremental,<br>
+			title = {
+			Parallelism in Randomized Incremental Algorithms 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Gu, Yan and&nbsp;Shun, Julian and&nbsp;Sun, Yihan},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2016
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent14');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib14"></div>
+		<button class="copy-button" onclick="copyEvent('bib14');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib14');">BibTeX</button>
+		<div class="bib" id="bib14"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/Incremental.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1810.05303">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [14]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/ParrallelARWC.pdf"  >
+            Parallel Algorithms with Asymmetric Read and Write Costs
+        </a><br>Naama Ben-David, Guy E. Blelloch, Jeremy T. Fineman, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #write-efficient algorithms, #architecture, #theory, #model-of-computation, #graph, #geometry, #BFS, list/tree contraction </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2016 &nbsp;&nbsp;
+			<label for="bib-checkbox13"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox13" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox13', 'bib13')">
+			<div id="bib13" style="display:none">
+			<div id="bibcontent13" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Parallel Algorithms with Asymmetric Read and Write Costs 
+			},<br>
+			author = {Ben-David, Naama and&nbsp;Blelloch, Guy E. and&nbsp;Fineman, Jeremy T. and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2016
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent13');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib13"></div>
+		<button class="copy-button" onclick="copyEvent('bib13');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib13');">BibTeX</button>
+		<div class="bib" id="bib13"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2016/SPAA16/ParrallelARWC.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [13]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2016/ESA16/asymmetry.pdf"  >
+            Efficient Algorithms with Asymmetric Read and Write Costs
+        </a><br>Guy E. Blelloch, Jeremy T. Fineman, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #write-efficient algorithms, #architecture, #theory, #model-of-computation, #graph, #SSSP </div><div class = "confbutton">ESA</div>	&nbsp;European Symposium on Algorithms (ESA), 2016 &nbsp;&nbsp;
+			<label for="bib-checkbox12"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox12" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox12', 'bib12')">
+			<div id="bib12" style="display:none">
+			<div id="bibcontent12" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Efficient Algorithms with Asymmetric Read and Write Costs 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Fineman, Jeremy T. and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {European Symposium on Algorithms (ESA)},<br>
+			year = {
+			2016
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent12');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib12"></div>
+		<button class="copy-button" onclick="copyEvent('bib12');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib12');">BibTeX</button>
+		<div class="bib" id="bib12"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2016/ESA16/asymmetry.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1511.01038">ArXiV</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2015:</div><a class="beforetitle" id="wave"></a>
+		<span class = "paper-number"> [12]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2015/WABI/wave.pdf"  >
+            Simultaneous Optimization of Both Node and Edge Conservation in Network Alignment via WAVE
+        </a><br>Yihan Sun, Joseph Crawford, Jie Tang, and Tijana Milenkovic<!--<div class = "papernote"> Proposed graph aligner algorithm WAVE for protein-protein interaction (PPI) networks. </div>--><div class = "papernote"> #computational biology, #graph algorithms, #protein-protein interaction (PPI) networks, #graph alignment, #WAVE, #experimental results </div><div class = "confbutton">WABI</div>	&nbsp;Workshop on Algorithms in Bioinformatics (WABI), 2015 &nbsp;&nbsp;
+			<label for="bib-checkbox11"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox11" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox11', 'bib11')">
+			<div id="bib11" style="display:none">
+			<div id="bibcontent11" style="margin-left:1em">
+			@inproceedings{
+			wave,<br>
+			title = {
+			Simultaneous Optimization of Both Node and Edge Conservation in Network Alignment via WAVE 
+			},<br>
+			author = {Sun, Yihan and&nbsp;Crawford, Joseph and&nbsp;Tang, Jie and&nbsp;Milenkovic, Tijana},<br>
+			booktitle = {Workshop on Algorithms in Bioinformatics (WABI)},<br>
+			year = {
+			2015
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent11');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib11"></div>
+		<button class="copy-button" onclick="copyEvent('bib11');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib11');">BibTeX</button>
+		<div class="bib" id="bib11"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2015/WABI/wave.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1410.3301">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [11]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2015/SPAA15/readwrite.pdf"  >
+            Sorting with Asymmetric Read and Write Costs
+        </a><br>Guy E. Blelloch, Jeremy T. Fineman, Phillip B. Gibbons, Yan Gu, Charles McGuffey, and Julian Shun<!----><div class = "papernote"> #write-efficient algorithms, #architecture, #theory, #model-of-computation, #sort </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2015 &nbsp;&nbsp;
+			<label for="bib-checkbox10"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox10" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox10', 'bib10')">
+			<div id="bib10" style="display:none">
+			<div id="bibcontent10" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Sorting with Asymmetric Read and Write Costs 
+			},<br>
+			author = {Blelloch, Guy E. and&nbsp;Fineman, Jeremy T. and&nbsp;Gibbons, Phillip B. and&nbsp;Gu, Yan and&nbsp;McGuffey, Charles and&nbsp;Shun, Julian},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2015
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent10');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib10"></div>
+		<button class="copy-button" onclick="copyEvent('bib10');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib10');">BibTeX</button>
+		<div class="bib" id="bib10"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2015/SPAA15/readwrite.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1603.03505">ArXiV</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="semisort"></a>
+		<span class = "paper-number"> [10]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2015/SPAA15/semisort.pdf"  >
+            A Top-down Parallel Semisort
+        </a><br>Yan Gu, Julian Shun, Yihan Sun, and Guy E. Blelloch<!--<div class = "papernote"> Proposed the parallel semisort algorithm with linear work and low depth. </div>--><div class = "papernote"> #semisort, #integer sort, #random sampling, #light/heavy bucket, #improved bounds, #experimental results </div><div class = "confbutton">SPAA</div>	&nbsp;ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), 2015 &nbsp;&nbsp;
+			<label for="bib-checkbox9"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox9" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox9', 'bib9')">
+			<div id="bib9" style="display:none">
+			<div id="bibcontent9" style="margin-left:1em">
+			@inproceedings{
+			semisort,<br>
+			title = {
+			A Top-down Parallel Semisort 
+			},<br>
+			author = {Gu, Yan and&nbsp;Shun, Julian and&nbsp;Sun, Yihan and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {ACM Symposium on Parallelism in Algorithms and Architectures (SPAA)},<br>
+			year = {
+			2015
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent9');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib9"></div>
+		<button class="copy-button" onclick="copyEvent('bib9');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib9');">BibTeX</button>
+		<div class="bib" id="bib9"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2015/SPAA15/semisort.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2015/SPAA15/semisort-slides.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [9]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2015/SODA15/permutation.pdf"  >
+            Sequential Random Permutation, List Contraction and Tree Contraction are Highly Parallel
+        </a><br>Julian Shun, Yan Gu, Guy E. Blelloch, Jeremy T. Fineman, and Phillip B. Gibbons<!----><div class = "papernote"> #theory, #parallel-ric, #list/tree contraction, #experiments, #code available </div><div class = "confbutton">SODA</div>	&nbsp;ACM-SIAM Symposium on Discrete Algorithms (SODA), 2015 &nbsp;&nbsp;
+			<label for="bib-checkbox8"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox8" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox8', 'bib8')">
+			<div id="bib8" style="display:none">
+			<div id="bibcontent8" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Sequential Random Permutation, List Contraction and Tree Contraction are Highly Parallel 
+			},<br>
+			author = {Shun, Julian and&nbsp;Gu, Yan and&nbsp;Blelloch, Guy E. and&nbsp;Fineman, Jeremy T. and&nbsp;Gibbons, Phillip B.},<br>
+			booktitle = {ACM-SIAM Symposium on Discrete Algorithms (SODA)},<br>
+			year = {
+			2015
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent8');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib8"></div>
+		<button class="copy-button" onclick="copyEvent('bib8');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib8');">BibTeX</button>
+		<div class="bib" id="bib8"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2015/SODA15/permutation.pdf">Paper</a> &nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [8]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2015/PG15/conference.pdf"  >
+            Ray Specialized BVH Contraction
+        </a><br>Yan Gu, Yong He, and Guy E. Blelloch<!----><div class = "papernote"> #graphics, #data-structure, #BVH, #experiments </div><div class = "confbutton">PG</div>	&nbsp;Pacific Graphics. Computer Graphics Forum (PG), 2015 &nbsp;&nbsp;
+			<label for="bib-checkbox7"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox7" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox7', 'bib7')">
+			<div id="bib7" style="display:none">
+			<div id="bibcontent7" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Ray Specialized BVH Contraction 
+			},<br>
+			author = {Gu, Yan and&nbsp;He, Yong and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {Pacific Graphics. Computer Graphics Forum (PG)},<br>
+			year = {
+			2015
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent7');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib7"></div>
+		<button class="copy-button" onclick="copyEvent('bib7');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib7');">BibTeX</button>
+		<div class="bib" id="bib7"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2015/PG15/conference.pdf">Paper</a> &nbsp;&nbsp;</li><li><div class = "paper-year">2014:</div><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [7]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2014/SIGGRAPH14/multirate.pdf"  >
+            Extending the Graphics Pipeline with Adaptive, Multi-Rate Shading
+        </a><br>Yong He, Yan Gu, and Kayvon Fatahalian<!----><div class = "papernote"> #graphics, #architecture, #experiments </div><div class = "confbutton">SIGGRAPH</div>	&nbsp;ACM Transactions on Graphics (SIGGRAPH), 2014 &nbsp;&nbsp;
+			<label for="bib-checkbox6"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox6" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox6', 'bib6')">
+			<div id="bib6" style="display:none">
+			<div id="bibcontent6" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Extending the Graphics Pipeline with Adaptive, Multi-Rate Shading 
+			},<br>
+			author = {He, Yong and&nbsp;Gu, Yan and&nbsp;Fatahalian, Kayvon},<br>
+			booktitle = {ACM Transactions on Graphics (SIGGRAPH)},<br>
+			year = {
+			2014
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent6');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib6"></div>
+		<button class="copy-button" onclick="copyEvent('bib6');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib6');">BibTeX</button>
+		<div class="bib" id="bib6"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2014/SIGGRAPH14/multirate.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="http://graphics.cs.cmu.edu/projects/multirate/video.mp4">Video</a>&nbsp;&nbsp;<a class = "button" href="http://graphics.cs.cmu.edu/projects/multirate/">Page</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id="ppi-exp"></a>
+		<span class = "paper-number"> [6]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2014/AMB/ppi-exp.pdf"  >
+            Fair Evaluation of Global Network Aligners
+        </a><br>Joseph Crawford, Yihan Sun, and Tijana Milenkovic<!--<div class = "papernote"> Provided experimental evaluation about different combinations of existing node cost function (NCF) and alignment strategy (AS). </div>--><div class = "papernote"> #computational biology, #graph algorithms, #protein-protein interaction (PPI) networks, #graph alignment, #experiments </div><div class = "confbutton">AMB</div>	&nbsp;Algorithms for Molecular Biology (AMB), 2014 &nbsp;&nbsp;
+			<label for="bib-checkbox5"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox5" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox5', 'bib5')">
+			<div id="bib5" style="display:none">
+			<div id="bibcontent5" style="margin-left:1em">
+			@inproceedings{
+			ppi-exp,<br>
+			title = {
+			Fair Evaluation of Global Network Aligners 
+			},<br>
+			author = {Crawford, Joseph and&nbsp;Sun, Yihan and&nbsp;Milenkovic, Tijana},<br>
+			booktitle = {Algorithms for Molecular Biology (AMB)},<br>
+			year = {
+			2014
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent5');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib5"></div>
+		<button class="copy-button" onclick="copyEvent('bib5');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib5');">BibTeX</button>
+		<div class="bib" id="bib5"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2014/AMB/ppi-exp.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1407.4824">ArXiV</a>&nbsp;&nbsp;</li><li><div class = "paper-year">2013:</div><a class="beforetitle" id="dynamicinf"></a>
+		<span class = "paper-number"> [5]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2013/ICDM13/dynamicinf.pdf"  >
+            Influence Maximization in Dynamic Social Networks
+        </a><br>Honglei Zhuang, Yihan Sun, Jie Tang,  Zhang Jialin, and Xiaoming Sun<!--<div class = "papernote"> Defined the problem of dynamic influence maximization (IM) on social networks. Showed several algorithms for dynamic IM. </div>--><div class = "papernote"> #data mining, #social networks, #social influence, #(dynamic) influence maximization, #maximum gap probing (MaxG), #experiments </div><div class = "confbutton">ICDM</div>	&nbsp;IEEE International Conference on Data Mining (ICDM), 2013 &nbsp;&nbsp;
+			<label for="bib-checkbox4"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox4" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox4', 'bib4')">
+			<div id="bib4" style="display:none">
+			<div id="bibcontent4" style="margin-left:1em">
+			@inproceedings{
+			dynamicinf,<br>
+			title = {
+			Influence Maximization in Dynamic Social Networks 
+			},<br>
+			author = {Zhuang, Honglei and&nbsp;Sun, Yihan and&nbsp;Tang, Jie and&nbsp;Zhang Jialin and&nbsp;Sun, Xiaoming},<br>
+			booktitle = {IEEE International Conference on Data Mining (ICDM)},<br>
+			year = {
+			2013
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent4');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib4"></div>
+		<button class="copy-button" onclick="copyEvent('bib4');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib4');">BibTeX</button>
+		<div class="bib" id="bib4"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2013/ICDM13/dynamicinf.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://arxiv.org/abs/1506.06294">ArXiV</a>&nbsp;&nbsp;<a class = "button" href="https://pal.cs.ucr.edu/papers/2013/ICDM13/dynamicinf-slides.pdf">Slides</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [4]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2013/HPG13/HPG13.pdf"  >
+            Efficient BVH Construction via Approximate Agglomerative Clustering
+        </a><br>Yan Gu, Yong He, Kayvon Fatahalian, and Guy E. Blelloch<!----><div class = "papernote"> #graphics, #data-structure, #BVH, #experiments, #code available </div><div class = "confbutton">HPG</div>	&nbsp;High Performance Graphics (HPG), 2013 &nbsp;&nbsp;
+			<label for="bib-checkbox3"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox3" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox3', 'bib3')">
+			<div id="bib3" style="display:none">
+			<div id="bibcontent3" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Efficient BVH Construction via Approximate Agglomerative Clustering 
+			},<br>
+			author = {Gu, Yan and&nbsp;He, Yong and&nbsp;Fatahalian, Kayvon and&nbsp;Blelloch, Guy E.},<br>
+			booktitle = {High Performance Graphics (HPG)},<br>
+			year = {
+			2013
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent3');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib3"></div>
+		<button class="copy-button" onclick="copyEvent('bib3');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib3');">BibTeX</button>
+		<div class="bib" id="bib3"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2013/HPG13/HPG13.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="http://graphics.cs.cmu.edu/projects/aac/">Code</a>&nbsp;&nbsp;<a class = "button" href="http://graphics.cs.cmu.edu/projects/aac/">Page</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [3]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2013/TIP14/mixdomain.pdf"  >
+            Mixed-Domain Edge-Aware Image Manipulation
+        </a><br>Xian-Ying Li, Yan Gu, Shi-Min Hu, and Ralph R. Martin<!----><div class = "papernote"> #graphics, #image-processing, #experiments, #code available </div><div class = "confbutton">TIP</div>	&nbsp;IEEE Transactions on Image Processing (TIP), 2013 &nbsp;&nbsp;
+			<label for="bib-checkbox2"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox2" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox2', 'bib2')">
+			<div id="bib2" style="display:none">
+			<div id="bibcontent2" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Mixed-Domain Edge-Aware Image Manipulation 
+			},<br>
+			author = {Li, Xian-Ying and&nbsp;Gu, Yan and&nbsp;Hu, Shi-Min and&nbsp;Martin, Ralph R.},<br>
+			booktitle = {IEEE Transactions on Image Processing (TIP)},<br>
+			year = {
+			2013
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent2');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib2"></div>
+		<button class="copy-button" onclick="copyEvent('bib2');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib2');">BibTeX</button>
+		<div class="bib" id="bib2"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2013/TIP14/mixdomain.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://cg.cs.tsinghua.edu.cn/people/~xianying/Softwares/MixedDomainFilter.zip">Code</a>&nbsp;&nbsp;<a class = "button" href="https://cg.cs.tsinghua.edu.cn/people/~xianying/Papers/MixedDomain/index.html">Page</a>&nbsp;&nbsp;</li><li><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [2]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2013/SWAT12/fullversion.pdf"  >
+            Algorithms on Minimizing the Maximum Sensor Movement for Barrier Coverage of a Linear Domain
+        </a><br>Danny Z. Chen, Yan Gu, Jian Li, and Haitao Wang<!----><div class = "papernote"> #theory, #geometry </div><div class = "confbutton">SWAT</div>	&nbsp;SWAT. Discrete & Computational Geometry (SWAT), 2013 &nbsp;&nbsp;
+			<label for="bib-checkbox1"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox1" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox1', 'bib1')">
+			<div id="bib1" style="display:none">
+			<div id="bibcontent1" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			Algorithms on Minimizing the Maximum Sensor Movement for Barrier Coverage of a Linear Domain 
+			},<br>
+			author = {Chen, Danny Z. and&nbsp;Gu, Yan and&nbsp;Li, Jian and&nbsp;Wang, Haitao},<br>
+			booktitle = {SWAT. Discrete & Computational Geometry (SWAT)},<br>
+			year = {
+			2013
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent1');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib1"></div>
+		<button class="copy-button" onclick="copyEvent('bib1');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib1');">BibTeX</button>
+		<div class="bib" id="bib1"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2013/SWAT12/fullversion.pdf">Paper</a> &nbsp;&nbsp;</li><li><div class = "paper-year">2011:</div><a class="beforetitle" id=""></a>
+		<span class = "paper-number"> [1]</span><a class="paper-title" href="https://pal.cs.ucr.edu/papers/2011/SIGGRAPH11/vpopup.pdf"  >
+            A Geometric Study of V-style Pop-ups: Theories and Algorithms
+        </a><br>Xian-Ying Li, Tao Ju, Yan Gu, and Shi-Min Hu<!----><div class = "papernote"> #graphics, #experiments, #code available </div><div class = "confbutton">SIGGRAPH</div>	&nbsp;ACM Transactions on Graphics (SIGGRAPH), 2011 &nbsp;&nbsp;
+			<label for="bib-checkbox0"><span class="bibtex-text">[BibTeX]</span></label>
+			<input id="bib-checkbox0" style="display:none" type="checkbox" name="" value="" onclick="bibCheck('bib-checkbox0', 'bib0')">
+			<div id="bib0" style="display:none">
+			<div id="bibcontent0" style="margin-left:1em">
+			@inproceedings{
+			,<br>
+			title = {
+			A Geometric Study of V-style Pop-ups: Theories and Algorithms 
+			},<br>
+			author = {Li, Xian-Ying and&nbsp;Ju, Tao and&nbsp;Gu, Yan and&nbsp;Hu, Shi-Min},<br>
+			booktitle = {ACM Transactions on Graphics (SIGGRAPH)},<br>
+			year = {
+			2011
+			} <br>
+			}
+			</div>
+			<button class="copy-button" onclick="copyEvent('bibcontent0');">[copy]</button>
+			</div>
+			<br><!--
+		<span class = "button" id="bibtexbutton"> BibTeX 
+		<div class="di"> 
+		<div id="bib0"></div>
+		<button class="copy-button" onclick="copyEvent('bib0');">[copy]</button>
+		</div>
+		</span>&nbsp;&nbsp;
+		<button onclick="showDiv('bib0');">BibTeX</button>
+		<div class="bib" id="bib0"></div>
+		&nbsp;&nbsp;--><a class = "button" href="https://pal.cs.ucr.edu/papers/2011/SIGGRAPH11/vpopup.pdf">Paper</a> &nbsp;&nbsp;<a class = "button" href="https://cg.cs.tsinghua.edu.cn/people/~xianying/Papers/V-Popup/vpopup(720_480).avi">Video</a>&nbsp;&nbsp;<a class = "button" href="https://cg.cs.tsinghua.edu.cn/people/~xianying/Papers/V-Popup/index.html">Page</a>&nbsp;&nbsp;</li></ul></div>
+
+	</div>
+</div>
+</div>
+
+	  <!-- Footer -->
+<footer class="footer" id="footer" style="background-color: white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <span class="copyright">Copyright &copy; UCR PAL 2024</span><br>
+		<span class="copyright">Website generated with <a href="http://jekyllthemes.org/themes/agency/">Jekyll agency theme</a> </span>
+      </div>
+      <!-- Social Media -->
+	  <!--
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          
+          <li class="list-inline-item">
+            
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://facebook.com">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://github.com/raviriley/agency-jekyll-theme">
+              <i class="fab fa-github"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://instagram.com">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+          </li>
+          
+        </ul>
+      </div>
+	  -->
+      <!-- Legal -->
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+		    <span>Last updated: November 26, 2024</span><br>
+            <a href="">BACK TO TOP</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  fixPageShort();
+  function fixPageShort() {
+    if (window.innerHeight > document.body.offsetHeight) {
+      document.getElementById("footer").style.position = "fixed";
+      document.getElementById("footer").style.bottom = 0;
+      document.getElementById("footer").style.right = 0;
+      document.getElementById("footer").style.left = 0;
+      document.getElementById("footer").style.width = "100%";
+    }
+  }
+</script>
+
+<!-- End Footer -->
+
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jqBootstrapValidation.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/agency.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/copyCode.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/clipboard.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/codeselect.js"></script>
+
+
+  </body>
+</html>
+

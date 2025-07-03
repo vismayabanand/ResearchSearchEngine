@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CS112/212: Operating Systems</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <style type="text/css">
+    .bot-buffer { margin-bottom:20px;  }
+  </style>
+</head>
+
+<body>
+  <article class="container">
+
+    <header class="row col-md-12">
+      <h1 id="title" class="text-center">
+        CS112, CS212: Operating Systems
+      </h1>
+      <h3 class="lead text-center">Winter 2023</h3>
+    </header>
+
+
+    <div class="lead text-center row col-md-12 alert alert-warning">
+      <p>
+	Final exam is 3:30pm-6:30pm Wednesday March 22, in Skilling
+	Auditorium
+      </p>
+    </div>
+<!--
+    <div class="lead text-center row col-md-12 alert alert-warning">
+      <p>
+	<a href="final.html">Important final exam information</a>
+      </p>
+    </div>
+
+
+    <div class="lead text-center row col-md-12 alert alert-warning">
+      <p>
+	Click <a href="https://web.stanford.edu/~uun/cgi-bin/finalreg.html">here</a>
+	if you do not plan to take the final in person next Wednesday
+	March 22 3:30pm-6:30pm.
+      </p>
+    </div>
+
+-->
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <nav class="panel panel-primary">
+          <header class="panel-heading">Course Material</header>
+          <div class="panel-body">
+            <table class="table table-hover table-condensed">
+
+            <tr><td><a href="https://edstem.org/us/join/mcbxvM">Edstem
+            page</a></td></tr>
+<!--
+	    <tr><td>
+<a href="https://www.gradescope.com/">Gradescope</a> code: TBD
+	    </td></tr>
+-->
+            <tr><td><a href="sched/">Syllabus</a></td></tr>
+            <tr><td><a href="notes/">Lecture and section notes</a></td></tr>
+<!--
+            <tr><td><a href="https://mvideox.stanford.edu/Course/1026">Lecture and section videos</a></td></tr>
+-->
+            <tr><td><a href="labs/lab0.html">Lab 0</a></td></tr>
+            <tr><td><a href="labs/project.html">Programming Projects</a></td></tr>
+            <tr><td><a href="reference/">Reference Materials</a></td></tr>
+	    <tr><td><a href="which.html">FAQ: CS112 vs. CS212</a></td></tr>
+            <tr><td><a href="exams/index.html">Exam Archive</a></td></tr>
+
+            </table>
+          </div>
+        </nav>
+      </div>
+
+      <div class="col-md-6">
+        <section class="panel panel-info">
+          <header class="panel-heading">Meetings</header>
+          <div class="panel-body">
+            <strong>Lecture:</strong> Mondays and Wednesdays,
+            1:30pm-2:50pm, <a href="https://campus-map.stanford.edu/?id=04-550&lat=37.42713104&lng=-122.17284632&zoom=17&srch=skilling%20auditorium">Skilling
+            auditorium</a> (please wear a mask)
+	    and <a href="https://stanford.zoom.us/j/95259690361">zoom</a>
+            (see canvas for password)<br>
+	    <strong>Section:</strong> some Fridays (as indicated on
+	    <a href="sched/">syllabus</a>) 10:30am, Skilling and
+	    <a href="https://stanford.zoom.us/j/95259690361">zoom</a>
+	    (same password as lecture)<br>
+            <strong>Office hours:</strong> First half of office hours
+            will be round-robin public questions.  Priority for second
+            half will go to students who attended first half.<br>
+          </div>
+        </section>
+
+<!--
+        <section class="panel panel-info">
+          <header class="panel-heading">Mailing List/Discussion Forum</header>
+          <div class="panel-body">
+           All discussions and class announcements will take place
+           in <a href="https://groups.google.com/d/forum/15au-cs140">the
+           google group</a>.
+          </div>
+        </section>
+-->
+
+	<section class="panel panel-info">
+          <header class="panel-heading">Staff</header>
+          <div class="panel-body">
+            <div class="row">
+              <address class="col-md-12 bot-buffer">
+	      <strong>Staff list:</strong>
+	      <img src="staff.png"/ alt="logo" style="max-width:75%;"/>
+              </address>
+	    </div>
+            <div class="row">
+              <address class="col-md-12 bot-buffer">
+                <strong>Instructor: </strong>
+                  <a href="https://www.scs.stanford.edu/~dm/">David Mazi&egrave;res</a><br>
+                  <strong>Office hours:</strong>
+		  Monday 3/20 3pm-done
+		  (<a href="https://stanford.zoom.us/j/98320590222?pwd=QS9IN1lwL2VBSjFONUliSWh3ckE3QT09">zoom</a>
+		  only)<br>
+                  <span><strong>Pre-final
+		  office hours:</strong> 
+		  Tuesday 3/21 3pm-4pm
+		  (<a href="https://stanford.zoom.us/j/98320590222?pwd=QS9IN1lwL2VBSjFONUliSWh3ckE3QT09">zoom</a>
+		  only)</span><br>
+                  <strong>Address:</strong> Gates 474
+		  (<a href="https://stanford.zoom.us/j/98320590222?pwd=QS9IN1lwL2VBSjFONUliSWh3ckE3QT09">zoom</a>)
+<!--
+                <strong>Phone:</strong> (415) 490-9451
+-->
+              </address>
+
+          <address class="col-md-6 bot-buffer">
+              <strong>CA: </strong>Josh Cho<br>
+              <strong>Office hours:</strong> Wednesdays 3-5pm; Thursdays 2-4pm<br>
+              <strong>Address:</strong> Huang Basement (<a href="https://stanford.zoom.us/j/5957451918?pwd=a3FKenJNSWx4cWhXcjFrNDNJTVRSUT09">zoom</a>, <a href="https://queuestatus.com/queues/2183">queuestatus</a>)<br>
+	  </address>
+
+          <address class="col-md-6 bot-buffer">
+              <strong>CA: </strong>Michelina Hanlon<br>
+              <strong>Office hours:</strong> Tuesday 12:30-2:30pm, Thursday 9-11am <br>
+              <strong>Address:</strong> Huang Basement (<a href="https://stanford.zoom.us/j/93674222583?pwd=bS9zTGt3UGVOYjVtNUhCRHVWczdMUT09">zoom</a>) <p> </p> <br>
+	  </address>
+
+          <address class="col-md-6 bot-buffer">
+            <strong>CA: </strong>Ana Selvaraj<br>
+            <strong>Office hours:</strong> Monday 3-5pm, Wednesday 5-7pm <br>
+            <strong>Address:</strong> Huang Basement (<a href="https://stanford.zoom.us/j/94218442386?pwd=ZTM4RXM5cCtnaHJTWGNXTHM3cjJZQT09x">zoom</a>, <a href="https://queuestatus.com/queues/2192">queuestatus</a>) <br>
+      </address>
+
+          <address class="col-md-6 bot-buffer">
+              <strong>CA: </strong>Ellie Talius<br>
+              <strong>Office hours:</strong> Monday 9-11am, Wednesday 10am-12pm <br>
+              <strong>Address:</strong> Huang Basement  (<a href="https://stanford.zoom.us/j/96492354134?pwd=ajYrT042UDBya1pVZWgyK09Pa2lPUT09">zoom</a>) <p> </p> <br>
+	  </address>
+
+          <address class="col-md-6 bot-buffer">
+              <strong>CA: </strong>Drew Wadsworth<br>
+              <strong>Office hours:</strong> Tuesday 9-11am, Wednesday 10am-12pm <br>
+              <strong>Address:</strong> Huang Basement (<a href="https://stanford.zoom.us/j/96492354134?pwd=ajYrT042UDBya1pVZWgyK09Pa2lPUT09">zoom</a>, <a href="https://queuestatus.com/queues/2183">queuestatus</a>) <br>
+	  </address>
+
+          <address class="col-md-6 bot-buffer">
+              <strong>CA: </strong>Sunny Yu<br>
+              <strong>Office hours:</strong> Mondays 4:30-6:30pm in 260-003 (<a href="https://stanford.zoom.us/j/92772776447?pwd=TGFNOTUweHpOWldIR1JDWlJaa0lPUT09">Zoom</a>); Tuesdays 2:30-4:30pm in 120-314 (<a href="https://stanford.zoom.us/j/91929809327?pwd=dGkvNzd5bjlzODJMM21IbG9Ub1VIUT09">Zoom</a>) <br>
+    </address>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</body>
+</html>

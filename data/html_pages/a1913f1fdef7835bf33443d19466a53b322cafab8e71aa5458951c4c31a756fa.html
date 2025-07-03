@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+	<head>
+		<meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169849027-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "UA-169849027-1", {"groups":"default","anonymize_ip":true,"page_placeholder":"PLACEHOLDER_page_path"});</script>
+<meta name="description" content="With so many AI coding assistants out there, it can be hard to keep track of ones that perform well on real-world tasks. To help analyze which leading or emerging code-writing large language models (LLMs) the developer community prefers, researchers at Carnegie Mellon University developed Copilot Arena, a platform that crowdsources user ratings of LLM-written code." />
+<link rel="canonical" href="https://csd.cmu.edu/news/copilot-arena-helps-rank-realworld-llm-coding-abilities" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/favicon_0.ico_0_0.gif" type="image/gif" />
+
+			<title>Copilot Arena Helps Rank Real-World LLM Coding Abilities | Carnegie Mellon University Computer Science Department</title>
+			<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/modules/contrib/responsive_menus/styles/responsive_menus_simple/css/responsive_menus_simple.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/modules/contrib/calendar/css/calendar.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/modules/contrib/calendar/css/calendar_multiday.css?svl7jw" />
+<link rel="stylesheet" media="all" href="/themes/custom/csd/css/style.css?svl7jw" />
+
+				
+					<link rel="preconnect" href="https://fonts.googleapis.com">
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+					<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+					<link href="/themes/custom/csd/fontawesome6/pro/css/all.min.css" rel="stylesheet">
+				</head>
+				<body class="path-node page-node-type-news">
+										<a href="#main-content" class="visually-hidden focusable">
+						Skip to main content
+					</a>
+					
+					  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+
+  <header role="banner">
+      <div>
+    <div id="block-csd-site-branding">
+  
+    
+  			<div class="logo">
+			<a href="/" rel="home">
+				<img src="/sites/default/files/logo.svg" alt="Home"/>
+			</a>
+						
+	</div>
+
+	<div id="mobilenav" tabindex="0">
+		<i class="fas fa-bars" id="mobile-menu">
+			<div aria-label="menu" class="visually-hidden focusable">Expand Menu</div>
+		</i>
+	</div>
+
+	<div class="searchform">
+		<form action="/search-results" method="get" accept-charset="UTF-8">
+			<div class="js-form-item form-item js-form-type-textfield">
+				<label for="search_api_fulltext" class="visually-hidden">Search</label>
+				<input type="text" name="search_api_fulltext" id="search_api_fulltext" value="" placeholder="Enter your search text." size="30" maxlength="30" class="form-text"><input type="submit" value="Search" class="button js-form-submit form-submit">
+			</div>
+		</form>
+	</div>
+
+</div></div>
+<nav
+	role="navigation" aria-labelledby="block-csd-main-menu-menu"  id="block-csd-main-menu">
+						
+	<h2 class="visually-hidden" id="block-csd-main-menu-menu">Main navigation</h2>
+	
+
+				
+	
+						<div class="submenu-background"></div>
+			<ul class="menu-level-0">
+																						<li class="menu-item menu-item--expanded"  >
+						<div
+							class="link-arrow-wrapper" tabindex="-1">
+														<a href="javascript:;">About</a>
+													</div>
+						<div class="submenus-wrapper">
+							<div class="submenus">
+								<div class="submenus-title">
+									<h3>Back to Main Menu</h3>
+								</div>
+								<div class="submenus-wrapper-inner">
+									<ul
+										class="submenu" aria-hidden="true">
+										
+										<div class="item-description">
+											<h3>
+												<a href="/about">
+													About
+													Main page
+												</a>
+
+											</h3>
+											<div class="text-container">
+												
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
+
+																							
+							<ul class="menu menu-level-1">
+																							<li class="menu-item menu-item--expanded"  							><a href="/about" data-drupal-link-system-path="node/222314602">About</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to About" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/calendar" data-drupal-link-system-path="calendar">Events</a>
+														</li>
+																		<li class="menu-item" 						><a href="/news" data-drupal-link-system-path="node/222269335">News</a>
+														</li>
+																		<li class="menu-item" 						><a href="/key-contacts" data-drupal-link-system-path="node/4">Key Contacts</a>
+														</li>
+																		<li class="menu-item" 						><a href="/about/csd-history" data-drupal-link-system-path="node/222238381">History</a>
+														</li>
+																		<li class="menu-item" 						><a href="/sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/employment" data-drupal-link-system-path="node/5">Employment</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Employment" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/employment/faculty-hiring" data-drupal-link-system-path="node/222218841">Faculty Hiring</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://cmu.wd5.myworkdayjobs.com/CMU?q=CSD" title="CMU HR job listing link - search parameter for Computer Science Department job listings">Staff Hiring</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/marcom/csd-marketing-guidelines" data-drupal-link-system-path="node/222227241">Marketing &amp; Communications</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Marketing &amp; Communications" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="https://www.cs.cmu.edu/scs-media-kit-press-contacts">SCS Marketing &amp; Communications</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/partnerships/">Partnerships </a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/scs-ece-career-center/">Employer Recruiting</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cmu.edu/marcom/">CMU Marketing &amp; Communications</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="https://www.cmu.edu/visit/">Visit Carnegie Mellon</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Visit Carnegie Mellon" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="https://www.cmu.edu/transportation/park/visitor.html">Visitor Parking</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cmu.edu/visit/maps-parking-transportation.html">Maps &amp; Directions</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item" 						><a href="https://givenow.cmu.edu/campaigns/42524/donations/new?a=7621440" target="_blank">Give</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  >
+						<div
+							class="link-arrow-wrapper" tabindex="-1">
+														<a href="javascript:;">Admissions</a>
+													</div>
+						<div class="submenus-wrapper">
+							<div class="submenus">
+								<div class="submenus-title">
+									<h3>Back to Main Menu</h3>
+								</div>
+								<div class="submenus-wrapper-inner">
+									<ul
+										class="submenu" aria-hidden="true">
+										
+										<div class="item-description">
+											<h3>
+												<a href="/admissions/prospective-students">
+													Admissions
+													Main page
+												</a>
+
+											</h3>
+											<div class="text-container">
+												
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
+
+																							
+							<ul class="menu menu-level-1">
+																							<li class="menu-item" 						><a href="/admissions/prospective-students" data-drupal-link-system-path="node/8">Prospective Students</a>
+														</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/bachelors/admissions" title="Main Bachelor&#039;s Program Page" data-drupal-link-system-path="node/19208">Bachelor&#039;s Admissions</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Bachelor&#039;s Admissions" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/bachelors/overview" data-drupal-link-system-path="node/1">Bachelor&#039;s Programs</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/bachelors/incoming-student-course-transfer" data-drupal-link-system-path="node/222221663">Incoming Student Course Transfer</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/masters/admissions" data-drupal-link-system-path="node/19397">Master&#039;s Admissions</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Master&#039;s Admissions" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/masters/overview" data-drupal-link-system-path="node/2">Master&#039;s Programs</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/doctoral/admissions" title="Main Doctoral Programs Page" data-drupal-link-system-path="node/19564">Doctoral Admissions</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Doctoral Admissions" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/doctoral/overview" data-drupal-link-system-path="node/3">Doctoral Programs</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/core-csd-advisors" data-drupal-link-system-path="node/222340993">Core CSD Doctoral Advisors</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/phd-open-house" data-drupal-link-system-path="node/222185475">Admitted Doctoral Student Open House</a>
+														</li>
+					</ul>
+	
+									</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  >
+						<div
+							class="link-arrow-wrapper" tabindex="-1">
+														<a href="javascript:;">Academics</a>
+													</div>
+						<div class="submenus-wrapper">
+							<div class="submenus">
+								<div class="submenus-title">
+									<h3>Back to Main Menu</h3>
+								</div>
+								<div class="submenus-wrapper-inner">
+									<ul
+										class="submenu" aria-hidden="true">
+										
+										<div class="item-description">
+											<h3>
+												<a href="/academics">
+													Academics
+													Main page
+												</a>
+
+											</h3>
+											<div class="text-container">
+												
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
+
+																							
+							<ul class="menu menu-level-1">
+																							<li class="menu-item menu-item--expanded"  							><a href="/academics" data-drupal-link-system-path="node/222314444">Academics</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Academics" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/courses" data-drupal-link-system-path="node/222314498">Current Semester Courses</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/upcoming-courses" data-drupal-link-system-path="node/222335631">Upcoming Semester Courses</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/fall-courses" data-drupal-link-system-path="node/222339532">Fall 2025 Courses</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://enr-apps.as.cmu.edu/open/SOC/SOCServlet/search">Schedule of Classes</a>
+														</li>
+																		<li class="menu-item" 						><a href="http://coursecatalog.web.cmu.edu/">Undergraduate Catalog</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/bachelors/overview" data-drupal-link-system-path="node/1">Bachelor&#039;s Programs</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Bachelor&#039;s Programs" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/bachelors/admissions" data-drupal-link-system-path="node/19208">How to Apply as Incoming First-Year</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/bachelors/incoming-student-course-transfer" data-drupal-link-system-path="node/222221663">Incoming Student Course Transfer</a>
+														</li>
+																		<li class="menu-item" 						><a href="http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/#bscurriculumtextcontainer">B.S. in CS Curriculum</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/bachelors/bachelors_concentrations" data-drupal-link-system-path="node/222233931">B.S. in CS Concentrations</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/academics/forms/transfer-credit-evaluation-request">B.S. in CS External Course Transfer</a>
+														</li>
+																		<li class="menu-item" 						><a href="/bachelors/cs-bachelors-program-contacts" data-drupal-link-system-path="node/222186289">B.S. in CS Program Contacts</a>
+														</li>
+																		<li class="menu-item" 						><a href="/guidelines-for-internal-transfer-or-dual-degree" data-drupal-link-system-path="node/222315161">Guidelines for Internal Transfer or Dual Degree</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/bachelors/minor-and-additional-major" data-drupal-link-system-path="node/19511">Minor and Additional Major in Computer Science</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/academics/undergraduate/programs">Other SCS Undergraduate Programs</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/bachelors/summer-research-for-international-students" data-drupal-link-system-path="node/222334253">Summer Research for International Students</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/masters/overview" title="Main Master&#039;s Programs Page" data-drupal-link-system-path="node/2">Master&#039;s Programs</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Master&#039;s Programs" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/masters/ms-in-computer-science" title="MSCS Program Information" data-drupal-link-system-path="node/19391">M.S. in Computer Science</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/masters/fifth-year" data-drupal-link-system-path="node/19567">Fifth Year Master&#039;s</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cmu.edu/tepper/programs/mba/curriculum/dual-and-joint-degrees/3-2-mba.html">Accelerated MBA Program</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/masters/admissions" data-drupal-link-system-path="node/19397">Master&#039;s - How to Apply</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/masters/ms-program-contacts" title="Master&#039;s Programs Contact information" data-drupal-link-system-path="node/19395">Master&#039;s Programs Contacts</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/academics/masters/programs">Other SCS Master&#039;s Programs</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/doctoral/overview" title="Doctoral Programs Overview" data-drupal-link-system-path="node/3">Doctoral Programs</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Doctoral Programs" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/doctoral/phd-in-computer-science" title="CSD Doctoral Program" data-drupal-link-system-path="node/222235311">Ph.D. in Computer Science</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/phd-in-aco" data-drupal-link-system-path="node/222332455">Ph.D. in ACO</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://logic.cmu.edu/">Ph.D. in PAL</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cnbc.cmu.edu/">CNBC Certificate Program</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/phd-portugal" data-drupal-link-system-path="node/19455">Ph.D. Dual Degree Portugal</a>
+														</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/doctoral/admissions" data-drupal-link-system-path="node/19564">Doctoral - How to Apply</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Doctoral - How to Apply" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-3">
+																							<li class="menu-item" 						><a href="/academics/doctoral/phd-open-house" data-drupal-link-system-path="node/222185475">Doctoral Open House</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/core-csd-advisors" data-drupal-link-system-path="node/222340993">Core CSD Advisors</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/degrees-conferred" title="List of Doctoral Degrees Awarded by CSD" data-drupal-link-system-path="node/222332446">Degrees Conferred</a>
+														</li>
+																		<li class="menu-item" 						><a href="https://www.cs.cmu.edu/academics/phd/programs">Other SCS Doctoral Programs</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/current-student-resources" data-drupal-link-system-path="node/222232881">Student Resources</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Student Resources" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/current-student-resources" data-drupal-link-system-path="node/222232881">General Student Resources</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/current-student-resources/undergraduate" data-drupal-link-system-path="node/222314501">Bachelor&#039;s Resources</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/current-student-resources/masters-student-resources" data-drupal-link-system-path="node/222314549">Master&#039;s Resources</a>
+														</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/current-student-resources/doctoral-resources">Doctoral Resources</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Doctoral Resources" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-3">
+																							<li class="menu-item" 						><a href="/academics/doctoral-resources/phd-handbook" data-drupal-link-system-path="node/222337930">Doctoral Program Handbook</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/doctoral-breadth-courses" data-drupal-link-system-path="node/222335646">Doctoral Breadth Courses</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/dsr-schedule" data-drupal-link-system-path="node/222337122">Doctoral Student Review Schedule</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/writing-skills-requirement" data-drupal-link-system-path="node/222335690">Doctoral Writing Skills</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/speaking-skills" data-drupal-link-system-path="node/222315428">Doctoral Speaking Skills</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academic/doctoral-resources/thesis-proposal-process" data-drupal-link-system-path="node/222335689">Doctoral Thesis Proposal Process</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/thesis-oral-defense-process" data-drupal-link-system-path="node/222334428">Doctoral Thesis Oral Defense Process</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/degrees-conferred" data-drupal-link-system-path="node/222332446">Doctoral Degrees Conferred</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral-resources/ombudspersons" data-drupal-link-system-path="node/222217181">Doctoral Student Ombudspersons</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/doctoral/csd-doctoral-service-award" data-drupal-link-system-path="node/222315931">Doctoral Student Service Award</a>
+														</li>
+					</ul>
+	
+									</li>
+					</ul>
+	
+									</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  >
+						<div
+							class="link-arrow-wrapper" tabindex="-1">
+														<a href="javascript:;">People</a>
+													</div>
+						<div class="submenus-wrapper">
+							<div class="submenus">
+								<div class="submenus-title">
+									<h3>Back to Main Menu</h3>
+								</div>
+								<div class="submenus-wrapper-inner">
+									<ul
+										class="submenu" aria-hidden="true">
+										
+										<div class="item-description">
+											<h3>
+												<a href="/people/all">
+													People
+													Main page
+												</a>
+
+											</h3>
+											<div class="text-container">
+												
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
+
+																							
+							<ul class="menu menu-level-1">
+																							<li class="menu-item menu-item--expanded"  							><a href="/people/all" data-drupal-link-system-path="people/all">Directory</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Directory" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/people/doctoral" data-drupal-link-system-path="people/doctoral">Doctoral </a>
+														</li>
+																		<li class="menu-item" 						><a href="/people/faculty" data-drupal-link-system-path="people/faculty">Faculty</a>
+														</li>
+																		<li class="menu-item" 						><a href="/people/post-docs" data-drupal-link-system-path="people/post-docs">Postdoctoral</a>
+														</li>
+																		<li class="menu-item" 						><a href="/people/staff" data-drupal-link-system-path="people/staff">Staff</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item" 						><a href="/key-contacts" data-drupal-link-system-path="node/4">Key Contacts</a>
+														</li>
+																		<li class="menu-item" 						><a href="/staff-resources" data-drupal-link-system-path="node/11">Staff Resources</a>
+														</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/academics/current-student-resources" data-drupal-link-system-path="node/222232881">Student Resources</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Student Resources" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/academics/current-student-resources" data-drupal-link-system-path="node/222232881">General Student Resources</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/current-student-resources/undergraduate" data-drupal-link-system-path="node/222314501">Bachelor&#039;s Resources</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/current-student-resources/masters-student-resources" data-drupal-link-system-path="node/222314549">Master&#039;s Resources</a>
+														</li>
+																		<li class="menu-item" 						><a href="/academics/current-student-resources/doctoral-resources">Doctoral Resources</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item" 						><a href="/faculty-resources" data-drupal-link-system-path="node/10">Faculty Resources</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  >
+						<div
+							class="link-arrow-wrapper" tabindex="-1">
+														<a href="javascript:;">Research</a>
+													</div>
+						<div class="submenus-wrapper">
+							<div class="submenus">
+								<div class="submenus-title">
+									<h3>Back to Main Menu</h3>
+								</div>
+								<div class="submenus-wrapper-inner">
+									<ul
+										class="submenu" aria-hidden="true">
+										
+										<div class="item-description">
+											<h3>
+												<a href="/research">
+													Research
+													Main page
+												</a>
+
+											</h3>
+											<div class="text-container">
+												
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
+
+																							
+							<ul class="menu menu-level-1">
+																							<li class="menu-item" 						><a href="/research/faculty-research-guide" title="Research Guide Intro">Faculty Research Guide</a>
+														</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/artificial-intelligence" data-drupal-link-system-path="taxonomy/term/2569">Artificial Intelligence</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Artificial Intelligence" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/computational-neuroscience" data-drupal-link-system-path="taxonomy/term/2504">Computational Neuroscience</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/machine-learning" data-drupal-link-system-path="taxonomy/term/7824">Machine Learning</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/robotics" data-drupal-link-system-path="taxonomy/term/2523">Robotics</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/graphics" data-drupal-link-system-path="taxonomy/term/2520">Graphics</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Graphics" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/robotics" data-drupal-link-system-path="taxonomy/term/2523">Robotics</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/programming-languages" data-drupal-link-system-path="taxonomy/term/2505">Programming Languages</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Programming Languages" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/formal-methods" data-drupal-link-system-path="taxonomy/term/2512">Formal Methods</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/pure-and-applied-logic" data-drupal-link-system-path="taxonomy/term/2658">Pure and Applied Logic</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/software-engineering" data-drupal-link-system-path="taxonomy/term/2522">Software Engineering</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/software-verification" data-drupal-link-system-path="taxonomy/term/3651">Software Verification</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/type-theory" data-drupal-link-system-path="taxonomy/term/2659">Type Theory</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/security" data-drupal-link-system-path="taxonomy/term/4097">Security</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Security" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/cryptography" data-drupal-link-system-path="taxonomy/term/4521">Cryptography</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/security-and-privacy" data-drupal-link-system-path="taxonomy/term/2508">Security and Privacy</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/systems" data-drupal-link-system-path="taxonomy/term/2660">Systems</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Systems" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/computer-architecture" data-drupal-link-system-path="taxonomy/term/2519">Computer Architecture</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/databases" data-drupal-link-system-path="taxonomy/term/3221">Databases</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/data-intensive-and-cloud-computing" title="link to data-intensive and cloud computing research sub-area" data-drupal-link-system-path="taxonomy/term/2535">Data-intensive and Cloud Computing</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/distributed-systems" data-drupal-link-system-path="taxonomy/term/2506">Distributed Systems</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/human-computer-interaction" data-drupal-link-system-path="taxonomy/term/2516">Human-Computer Interaction</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/mobile-and-pervasive-computing" data-drupal-link-system-path="taxonomy/term/2524">Mobile &amp; Pervasive Computing</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/networking" data-drupal-link-system-path="taxonomy/term/2507">Networking</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/operating-systems" data-drupal-link-system-path="taxonomy/term/4317">Operating Systems</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/scientific-computing" data-drupal-link-system-path="taxonomy/term/3191">Scientific Computing</a>
+														</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item menu-item--expanded"  							><a href="/research/research-areas/theory" data-drupal-link-system-path="taxonomy/term/2661">Theory</a>
+							<br>
+							<a href="javascript:;" tabindex="0" class="related-links" title="show links related to Theory" aria-expanded="false">Related links<span class="line-segment" tabindex="-1"></span>
+							</a>
+																							
+							<ul class="menu menu-level-2">
+																							<li class="menu-item" 						><a href="/research/research-areas/algorithms-and-complexity" data-drupal-link-system-path="taxonomy/term/2502">Algorithms and Complexity</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/game-theory" data-drupal-link-system-path="taxonomy/term/2662">Game Theory</a>
+														</li>
+																		<li class="menu-item" 						><a href="/research/research-areas/performance-modeling-analysis" data-drupal-link-system-path="taxonomy/term/4319">Performance Modeling Analysis</a>
+														</li>
+					</ul>
+	
+									</li>
+					</ul>
+	
+									</li>
+																		<li class="menu-item" 						><a href="https://givenow.cmu.edu/campaigns/42524/donations/new?a=7621440">Give</a>
+														</li>
+					</ul>
+	
+
+<div class="close">
+	<a href="javascript:;" tabindex="0" aria-label="close subnavigation">X</a>
+</div>
+
+
+	</nav>
+
+  </div>
+
+  </header>
+
+  
+  
+
+  
+
+    <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+  
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content
+        ">
+        <div>
+    <div id="block-csd-breadcrumbs">
+  
+    
+        <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  <a href="/news">Latest News</a>
+              </li>
+          <li>
+                  Copilot Arena Helps Rank Real-World LLM Coding Abilities
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+<div id="block-csd-content">
+  
+    
+      
+<article class="news-full published ">
+  
+  <h1>
+    <span>Copilot Arena Helps Rank Real-World LLM Coding Abilities</span>
+
+  </h1>
+  
+        <p><em>Tuesday, April 22, 2025
+
+          </em></p>
+      <div class="newsimg">
+              <img src="https://csd.cmu.edu/sites/default/files/2025-04/copilot-arena.jpg">
+                </div>
+    
+            <!-- RS:MainContent:BEGIN --><!-- Section 1 --><div class="rsTrackContainer"><div class="rsSectionContainer" style="order:2;"><div class="rsContent "><figure class="float-right" aria-label="With so many AI coding assistants out there, it can be hard to keep track of ones that perform well on real-world tasks. CMU researchers developed Copilot Arena to do just that by crowdsourcing user ratings of LLM-written code." role="figure"><img src="https://cs.cmu.edu/files/images/copilot-arena.jpg" width="900" height="900" loading="lazy"><figcaption>With so many AI coding assistants out there, it can be hard to keep track of ones that perform well on real-world tasks. CMU researchers developed Copilot Arena to do just that by crowdsourcing user ratings of LLM-written code.</figcaption></figure><p>With so many AI coding assistants out there, it can be hard to keep track of ones that perform well on real-world tasks. To help analyze which leading or emerging code-writing large language models (LLMs) the developer community prefers, researchers at Carnegie Mellon University developed <a href="https://blog.lmarena.ai/blog/2024/copilot-arena/" target="_blank" rel="noopener">Copilot Arena</a>, a platform that crowdsources user ratings of LLM-written code.</p><p>AI coding assistants that can generate code on their own can make a difficult and time-consuming process easier and faster. However, even the slightest error — to which AI coding assistants can be prone — could derail an entire project.</p><p>Copilot Arena has been downloaded more than 11,200 times since launching in September and has provided more than 4.5 million suggestions to users of 10 models. The tool has around 500 daily users and more than 3,000 unique users overall.</p><p>Valerie Chen and Wayne Chi, graduate students in CMU's School of Computer Science, co-led the development of Copilot Arena. They developed the tool in partnership with the creators of Chatbot Arena, a similar LLM-ranking platform that <a href="https://www.bloomberg.com/news/articles/2025-02-18/before-deepseek-blew-up-one-website-announced-its-arrival" target="_blank" rel="noopener">predicted the rising popularity of DeepSeek</a> before it went mainstream. The team published the first set of findings from the platform in the <a href="https://arxiv.org/abs/2502.09328" target="_blank" rel="noopener">preprint journal arXiv</a>, in a <a href="https://blog.lmarena.ai/blog/2024/copilot-arena/" target="_blank" rel="noopener">blog post</a> on the Copilot Arena website, and on Carnegie Mellon's <a href="https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/" target="_blank" rel="noopener">Machine Learning Blog</a>.</p><p>The team believes free, open-source tools like Copilot Arena are important for model developers trying to improve their AI coding assistants in a way that benefits actual users.</p><p>The setup is simple. Software developers using Visual Studio Code (VS Code) can download and access the Copilot Arena extension while they work. They can ask Copilot Arena to help them with a certain section of code, and Copilot Arena offers two options to choose from without telling the user which LLMs provided the responses. The LLMs are then ranked on the backend based on how frequently users chose their outputs.</p><p>"User votes help build this leaderboard of which models are best for coding applications and also give us insights into how people are interacting with these kinds of AI tools," said Chen, a Ph.D. student in the <a href="https://www.ml.cmu.edu/" target="_blank" rel="noopener">Machine Learning Department</a>.</p><p>The AI models they've tested include ones from Google's Gemini, DeepSeek, Anthropic's Claude, OpenAI's GPT models, Meta's Llama, Qwen from Alibaba Cloud, and Codestral from Mistral AI. New models are added into the platform as they're released.</p><p>"We've also got a lot of interest from people building these code-generation models. Recently, a startup named Inception Labs created a new model called Mercury Coder," said Chi, a Ph.D. student in the <a href="https://csd.cmu.edu/" target="_blank" rel="noopener">Computer Science Department</a>. "They reached out to us so they could test their model on our platform. This was an unreleased model at the time, and they wanted to demonstrate that their model was fast and of good quality."</p><p>DeepSeek and Claude's Sonnet currently sit atop the leaderboard. Chi noted that this parallels what developers in online communities have said are their favorite models to use for coding.</p><p>During their research, the CMU team found that Copilot Arena's top-performing models differed from existing evaluation approaches. The existing approaches are based on static benchmarks, like simple functional problems or tasks from Leetcode, an online platform with preset questions for coding practice, and not on the dynamics of user preference used by Copilot Arena.</p><p>Being able to evaluate the performance of AI coding models while users are working on real-world problems has allowed the Copilot Arena team to perform a more detailed analysis of the areas where specific models have an advantage and where they may fall short. For example, many existing benchmarks tend to test AI models on short problems, meaning there are only a few lines of existing code or no code at all. But that's not indicative of what happens in the real world.</p><p>"In practice, when people write code, they might keep everything in one big file. Models have to be able to handle that," Chen said. "We see that models like DeepSeek tend to be better at that than smaller models like Qwen."</p><p>As another example, Chi said that Claude's Sonnet performs better than other models at front-end tasks like website development and back-end tasks like data and infrastructure management.</p><p>"Evaluation is probably the most important problem in all of machine learning right now," said <a href="https://www.cmu.edu/news/experts/ameet.talwalkar" target="_blank" rel="noopener">Ameet Talwalkar</a>, a machine learning professor at CMU and an adviser on the project. "You want to evaluate these models in the most realistic settings possible. You also want to be scalable."</p><p>For the better part of the last two decades, computer scientists worked mostly on classification problems, like whether a cat appeared in an image. These problems are hard for computers but easy to evaluate, Talwalkar said. People simply need to manually annotate whether there is a cat in the image and compare it to the model's prediction.</p><p>"Now we're asking models to do these incredibly complicated things and, for coding in particular, evaluation is hard," he said.</p><p>Copilot Arena tries to capture rigorous, realistic interactions between AI models and human developers in a way that can also be scaled across multiple users and use cases, Talwalkar said. "It has a lot of value."</p><p>On top of evaluating models, tools like Copilot Arena may help researchers study the changing nature of programming.</p><p>"We are in the middle of a dramatic pivot from developers writing code manually to AI assistance being ubiquitous," said Chris Donahue, an assistant professor in CSD and an adviser on the project. "Not only does Copilot Arena help us better understand the implications of this shift for downstream aspects of code like reliability, security and maintainability, but it also allows us to study the fundamental shift in human and computer agency in programming."</p><p>The tool itself is a work in progress. Chen and Chi plan to expand the set of features available on the Copilot Arena platform to accommodate code editing and agentic systems.</p></div></div></div><div class="rsTrackContainer"><div class="rsSectionContainer" style="order:2;"><div class="rsContent rsMoreInfo"><p><strong>Media Contact:</strong></p><p>Aaron Aupperlee | 412-268-9068 | aaupperlee@cmu.edu</p></div></div></div><!-- RS:MainContent:END -->
+      
+
+          
+</article>
+
+  </div>
+
+  </div>
+
+    </div>
+                    
+    
+  </main>
+
+  
+      <footer role="contentinfo">
+        <div>
+    <div id="block-footer">
+  
+    
+      
+            <div class="layout-container"><div class="left"><h2>Computer Science Department</h2>
+
+<div class="address__cmu"><strong>Carnegie Mellon University</strong></div>
+
+<div class="address__street">5000 Forbes Avenue</div>
+
+<div class="address__city">Pittsburgh, PA 15213</div>
+
+<div class="address__phone">Fax: 412-268-5576</div>
+<div class="social-icons"><a href="/key-contacts" title="CSD key contacts"><i class="fa-regular fa-envelope"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://bsky.app/profile/csdatcmu.bsky.social" target="_blank" title="go to mastodon"><i class="fa-brands fa-bluesky"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://mastodon.acm.org/@CSDatCMU" target="_blank" title="go to mastodon"><i class="fa-brands fa-mastodon"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/CSDatCMU" target="_blank" title="go to facebook"><i class="fa-brands fa-facebook-f"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/school/csdatcmu/" target="_blank" title="go to linkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+</div>
+
+<div class="right">
+  <p><a href="https://www.scs.cmu.edu" target="new"><img alt="Carnegie Mellon University School of Computer Science" src="/themes/custom/csd/images/scs-logo.png"></a></p>
+
+<ul>
+    <li><a href="https://www.cmu.edu/" target="_blank">Pittsburgh Campus</a><br></li>
+    <li><a href="https://www.qatar.cmu.edu" target="_blank">Qatar Campus</a><br></li>
+    <li><a href="https://www.cmu.edu/legal/" target="_blank">Legal Info</a></li>
+</ul>
+</div>
+</div>
+
+      
+  </div>
+
+  </div>
+
+    </footer>
+  
+</div>
+  </div>
+
+					
+					<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/222343301","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"UA-169849027-1","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"responsive_menus":[{"toggler_text":"\u2630 Menu","selectors":["#main-menu"],"media_size":768,"media_unit":"px","absolute":1,"disable_mouse_events":0,"remove_attributes":1,"responsive_menus_style":"responsive_menus_simple"}],"user":{"uid":0,"permissionsHash":"34350834a653edc52fd73b030550f18b26cc34c9b4b9fbbd372d409005cefd0e"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.4.6"></script>
+<script src="/core/misc/drupal.js?v=10.4.6"></script>
+<script src="/core/misc/drupal.init.js?v=10.4.6"></script>
+<script src="/themes/custom/csd/js/main.js?svl7jw"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=10.4.6"></script>
+<script src="/modules/contrib/responsive_menus/styles/responsive_menus_simple/js/responsive_menus_simple.js?v=10.4.6"></script>
+</body>
+				</html>

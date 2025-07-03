@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Home | Yan Gu</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Yan Gu" />
+<meta property="og:description" content="Yan Gu" />
+<link rel="canonical" href="https://www.cs.ucr.edu/~ygu/~ygu/" />
+<meta property="og:url" content="https://www.cs.ucr.edu/~ygu/~ygu/" />
+<meta property="og:site_name" content="Home" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"name":"Home","headline":"Home","url":"https://www.cs.ucr.edu/~ygu/~ygu/","@type":"WebSite","description":"Yan Gu","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!--<link rel="stylesheet" href="/~ygu/assets/main.css">-->
+  <link rel="stylesheet" href="https://www.cs.ucr.edu/~ygu/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://www.cs.ucr.edu/~ygu/~ygu/feed.xml" title="Home" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+                <ul>
+                <li class="image-slider">
+                <!--<img src= "//~ygu/images/mao.jpg" alt="">-->
+				<img src= "https://www.cs.ucr.edu/~ygu/newhead.jpg" alt="">
+                </li>
+                <!--<div class="logo">Yihan Sun</div>-->
+				
+                <li>
+				<div class="myname"> Yan Gu </div>
+				<div class="contact">
+                <b>University of California, Riverside</b>
+				<br><br>
+                <p>ygu [at] cs.ucr.edu</p>
+                <p>Office: WCH 335</p>
+				<div>
+                </li>
+				</ul><!--<a class="site-title" rel="author" href="/~ygu/">Home</a>-->
+	<a class="site-title" rel="author" href="https://www.cs.ucr.edu/~ygu/index.html">Home</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+		
+        <div class="trigger">
+            <!--<a class="page-link" href="/~ygu/publications/index.html">Publications</a>-->
+			<a class="page-link" href="https://www.cs.ucr.edu/~ygu//publications/index.html">Publications</a>
+            <!--<a class="page-link" href="/~ygu/service/index.html">Service</a>-->
+			<a class="page-link" href="https://www.cs.ucr.edu/~ygu//service/index.html">Service</a>
+            <!--<a class="page-link" href="/~ygu/courseteaching/index.html">Teaching</a>-->
+			<a class="page-link" href="https://www.cs.ucr.edu/~ygu//courseteaching/index.html">Teaching</a></div>
+      </nav></div>
+</header>
+
+<style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:50px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: lightblue;
+    border-radius: 20%;
+    overflow: hidden;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><p>I am an Assistant Professor in the Computer Science and Engineering (CSE) Department at the <a href="https://www1.cs.ucr.edu/">University of California, Riverside (UCR)</a>, since 2020.</p>
+
+<p>Prior to that, I was a postdoc associate at <a href="https://www.csail.mit.edu/">MIT CSAIL</a> in 2019, working with <a href="https://people.csail.mit.edu/jshun/">Julian Shun</a>. Before that, I finished my PhD at <a href="https://csd.cmu.edu/">Carnegie Mellon University</a> in 2018, advised by <a href="http://www.cs.cmu.edu/~./blelloch/">Guy Blelloch</a>. Before that, I received my Bachelor’s degree in Computer Science from <a href="https://www.tsinghua.edu.cn/en/index.htm">Tsinghua University</a> in 2012. You can find my <a href="https://www.cs.ucr.edu/~ygu/cv.pdf">[CV]</a> here.</p>
+
+<p>My current research interest is design efficient (usually parallel) algorithms for large-scale data with good performance in practice.
+You can find more information about our research group <a href="https://pal.cs.ucr.edu/">here</a>.</p>
+
+<p>We always welcome highly self-motivated students to join our group.
+However, the requested number is huge and we only have very limited slots per year for PhDs, Master’s projects/theses, undergrad research, and summer internship.
+If you are currently at UCR (for both undergrads and graduates), make sure you have taken CS 214: Parallel Algorithm (offered yearly) and did well.
+If you are not at UCR but want to join <a href="https://pal.cs.ucr.edu/">our research group</a>, please fill out <a href="https://forms.gle/QAaAdRzqYN3FsVpm9">this form</a> and drop me an email. 
+This is particularly important for PhD applications since we do not necessarily check the general pool (which is very large). 
+You can find more information about <a href="recruiting.html">[recruiting]</a>, and instructions on requesting my <a href="https://docs.google.com/document/d/1pqtWU3MWK-sO7hR5bZ9FWH_q8vjbK2N6_EIEfaVTG-w/edit?usp=sharing">[recommendation letter]</a>.</p>
+
+<p>Please refer to the <a href="https://www.cs.ucr.edu/~ygu//courseteaching/index.html">teaching page</a> for the links to the courses I have been teaching.</p>
+
+<p>This is the <a href="https://www.cs.ucr.edu/~yihans/">homepage</a> of my lovely wife.</p>
+
+<h3 id="view-my-publication-list"><strong class="themetext">View my publication list:</strong></h3>
+
+<p><a href="https://scholar.google.com/citations?user=BmshmX8AAAAJ&amp;hl=en" class="button">Google Scholar</a>
+<a href="https://dblp.uni-trier.de/pid/61/2029-1.html" class="button">DBLP</a>
+<a href="publications/index.html" class="button">By Year</a></p>
+
+<p>A full list of my publications can be found <a href="publications/index.html">here</a>.</p>
+
+<h2 id="research-interests-and-selected-topics"><strong>Research Interests and Selected Topics</strong></h2>
+
+<p>My research aims at designing efficient algorithms and software for the most fundamental problems (e.g., graphs, geometry) in CS.
+Basically speaking, the two main approaches are (1) by understanding the emerging hardware and algorithm design principles on top of them, and (2) to design new algorithms that are faster and/or have better theoretical guarantees than the best previous ones.  In many cases, the two methods overlap, and the algorithms designed for certain hardware actually work well for a wide variety of scenarios, due to the new angle to consider these problems.</p>
+
+<h3 id="parallel-algorithms"><strong>Parallel Algorithms:</strong></h3>
+
+<p>Shared-memory parallel algorithms have been studied for over 50 years.  Still, quite surprisingly, it seems that there are a lot of room for improvements both theoretically and practically, even for the most fundamental problems.  The new algorithms I have designed are classed into the following categories.</p>
+
+<h4 id="graph-algorithms--related-papers"><strong>Graph algorithms</strong>  <a href="https://www.cs.ucr.edu/~ygu/publication/graphs/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>The new parallel graph algorithms I have designed include: a variety of stepping algorithms (rho-stepping, radius-stepping, delta*-stepping) for SSSP, BGSS algorithm for SCC, BC labeling for biconnectivity, and many other distance-based or connectivity-based algorithms.</p>
+
+<h4 id="geometric-algorithms---related-papers"><strong>Geometric algorithms</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/geometry/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>The new parallel geometric algorithms I have designed include: the first theoretically-efficient parallel algorithms for incremental convex hull and Delaunay triangulation, several algorithms to construct spatial-partitioning data structures, and several spatial clustering algorithms that are efficient both theoretically and practically.</p>
+
+<h4 id="data-structures--related-papers"><strong>Data structures</strong>    <a href="https://www.cs.ucr.edu/~ygu/publication/datastructure/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>I have been working on parallel tree structures, both in theory and in practice.  Some interesting works include: parallel priority queues, compressed parallel search trees, and parallel data structures for range and nearest-neighbor search in low dimension.</p>
+
+<h4 id="parallel-incremental-algorithms---related-papers"><strong>Parallel incremental algorithms</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/incremental/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>We show parallel algorithms under the randomized incremental construction (RIC) framework, and many incremental algorithms in this framework are highly parallel (i.e., with shallow dependence depth).</p>
+
+<h3 id="algorithm-design-for-emerging-computer-architecture---related-papers"><strong>Algorithm design for emerging computer architecture:</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/architecture/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<h4 id="write-efficient-algorithms---related-papers"><strong>Write-efficient algorithms</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/writeefficient/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>This group of work aims at better utilizing the new non-volatile main memories (NVRAMs) for computing, which provides significantly larger capacity than normal DRAM. However, writing to NVRAMs is significantly more costly than reading, so how to reduce the number of writes in algorithms is interesting both theoretically and practically.</p>
+
+<h4 id="space-efficient-algorithms---related-papers"><strong>Space-efficient algorithms</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/spaceefficient/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>Space-efficient algorithms consider computing using limited-size fast memories (i.e., DRAMs).  Nowadays, DRAM size is sufficient for many applications that were only available on distributed settings, super-computers, or on disks previously, which greatly improves the performance.  However, DRAM size is still limited and relatively small (e.g., compared to NVRAMs).
+Hence, how to use such a DRAM for efficient computing remains to be an interesting topic to explore.</p>
+
+<h4 id="pim-balanced-algorithms---related-papers"><strong>PIM-balanced algorithms</strong>     <a href="https://www.cs.ucr.edu/~ygu/publication/pim/index.html" class="relatedpapers">[Related Papers]</a></h4>
+
+<p>Processing-in-Memory (PIM) is an architectural idea that puts processors inside the memory chips to reduce data movement between CPU and main memory.  Algorithmically, this new architecture can be considered as a hybrid of shared-memory computing (the CPU side) and distributed computing (the PIM side).  While the setting is very different from what we have previously, it remains an open problem on how to cooperate between the CPU and the PIM modules for a balanced overall computation.</p>
+
+<h3 id="other-topics"><strong>Other Topics</strong></h3>
+
+<p>I have also been working on some other interesting research topics, such as computer graphics and image processing.  You can go to the <a href="publications/index.html">full list</a> of my papers for more details.</p>
+
+<h3 id="phd-thesis"><strong class="themetext">Ph.D. Thesis:</strong></h3>
+
+<p><a href="https://www.cs.ucr.edu/~ygu/thesis.pdf">Write-efficient algorithms</a>, 2018</p>
+
+
+
+  <!--<h2 class="post-list-heading">News</h2>
+    <ul class="post-list"><li><span class="post-meta">Aug 17, 2021</span>
+        <h3>
+          <a class="post-link" href="/~ygu/jekyll/update/2021/08/17/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li><li><span class="post-meta">Jul 15, 2021</span>
+        <h3>
+          <a class="post-link" href="/~ygu/jekyll/update/2021/07/15/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li><li><span class="post-meta">Jul 15, 2021</span>
+        <h3>
+          <a class="post-link" href="/~ygu/jekyll/update/2021/07/15/test.html">
+            New Title!
+          </a>
+        </h3></li></ul>
+	--></div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/~ygu/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"> Yan Gu </h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            <!--Home-->
+			University of California, Riverside
+            </li><li><a class="u-email" href="mailto:ygu@cs.ucr.edu">ygu [at] cs.ucr.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <!--<ul class="social-media-list"><li><a href="https://github.com/henryy321"><svg class="svg-icon"><use xlink:href="/~ygu/assets/minima-social-icons.svg#github"></use></svg> <span class="username">henryy321</span></a></li></ul>
+-->
+		<p>Last updated: March 19, 2025</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <!--<p>Yan Gu</p>-->
+		<a href="">BACK TO TOP</a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

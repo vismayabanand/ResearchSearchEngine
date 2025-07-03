@@ -1,0 +1,1551 @@
+
+
+
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1120176403",accountID:"1028497",trustKey:"1028497",xpid:"VQYFWVJaDxABVVBaDwAAV1IC",licenseKey:"ab0374a39e",applicationID:"1118817163"};;/*! For license information please see nr-loader-spa-1.288.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>g,xN:()=>p});var n=r(3333);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},l={},f="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function g(e,t){if(!e)throw new Error(f);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.288.1",i="PROD",o="CDN",a="^2.0.0-alpha.18"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(6154);const i="newrelic";function o(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=g(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>o,t:()=>a});var n=r(3241);const i=new Set,o={};function a(e,t){const r=t.agentIdentifier;o[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),o[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},3496:(e,t,r)=>{"use strict";function n(e){return!e||!(!e.licenseKey||!e.applicationID)}function i(e,t){return!e||e.licenseKey===t.info.licenseKey&&e.applicationID===t.info.applicationID}r.d(t,{A:()=>i,I:()=>n})},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9414:(e,t,r)=>{"use strict";r.d(t,{J:()=>c});var n=r(7836),i=r(2646),o=r(944),a=r(3434);const s=new Map;function c(e,t,r,c){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,o.R)(29);const u=function(e){return(e||n.ee).get("logger")}(e),d=(0,a.YM)(u),l=new i.y(n.P);l.level=c.level,l.customAttributes=c.customAttributes;const f=t[r]?.[a.Jt]||t[r];return s.set(f,l),d.inPlace(t,[r],"wrap-logger-",(()=>s.get(f))),u}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>o,ET:()=>a,TZ:()=>s,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log",s=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(8154),s=r(993);function c(e,t,r={},c=s.p_.INFO,u,d=(0,i.t)()){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[d,t,r,c,u],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},8154:(e,t,r)=>{"use strict";r.d(t,{z_:()=>o,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>a});r(6154),r(9566),r(384);const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s,rF:()=>d});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}function d(e,t){try{if("string"==typeof t?.type){if("password"===t.type.toLowerCase())return"*".repeat(e?.length||0);if(void 0!==t?.dataset?.nrUnmask||t?.classList?.contains("nr-unmask"))return e}}catch(e){}return"string"==typeof e?e.replace(/[\S]/g,"*"):"*".repeat(e?.length||0)}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>c,Qu:()=>u,TZ:()=>s,ih:()=>d,pP:()=>a,tC:()=>i});var n=r(860);const i=["click","keydown","submit","popstate"],o="api",a="initialPageLoad",s=n.K7.softNav,c={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},u={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},d={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>x,BR:()=>b,Kp:()=>R,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>p,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>E,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>g,rw:()=>u,tH:()=>T,uP:()=>s,wW:()=>A,xq:()=>a});var n=r(384);const i=r(860).K7.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",p="jsonpNode",g="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",R="-end",x="-body",A="cb"+R,E="jsTime",T="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},2110:(e,t,r)=>{"use strict";r.d(t,{j:()=>j});var n=r(860),i=r(9908),o=r(1687),a=r(5289),s=r(6154),c=r(944),u=r(8154),d=r(384),l=r(6344);const f=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",l.G4.RECORD,l.G4.PAUSE,"log","wrapLogger","register"],h=["setErrorHandler","finished","addToTrace","addRelease"];var p=r(1863),g=r(2614),m=r(993),v=r(3785),b=r(9414),y=r(3496);var w=r(3241),R=r(5701);function x(){const e=(0,d.pV)();f.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.runtime?e.exposed&&e[t]&&"micro-agent"!==e.runtime.loaderType&&n.push(e[t](...r)):(0,c.R)(38,t)})),n[0]}(t,...r)}))}const A={};function E(e,t){t||(0,o.Ak)(e.agentIdentifier,"api");const d=e.ee.get("tracer");A[e.agentIdentifier]=g.g.OFF,e.ee.on(l.G4.REPLAY_RUNNING,(t=>{A[e.agentIdentifier]=t}));const f="api-",x=f+"ixn-",E={addPageAction:function(e,t,r,i=(0,p.t)()){N(f,"addPageAction",!0,n.K7.genericEvents,i)(e,t,r)},log:function(t,{customAttributes:r={},level:o=m.p_.INFO}={},a,s=(0,p.t)()){(0,i.p)(u.xV,["API/log/called"],void 0,n.K7.metrics,e.ee),(0,v.R)(e.ee,t,r,o,a,s)},noticeError:function(t,r,o,a=(0,p.t)()){"string"==typeof t&&(t=new Error(t)),(0,i.p)(u.xV,["API/noticeError/called"],void 0,n.K7.metrics,e.ee),(0,i.p)("err",[t,a,!1,r,!!A[e.agentIdentifier],void 0,o],void 0,n.K7.jserrors,e.ee)}};function T(t,r,n,i){const o=e.info;return null===r?delete o.jsAttributes[t]:e.info={...e.info,jsAttributes:{...o.jsAttributes,[t]:r}},N(f,n,!0,i||null===r?"session":void 0)(t,r)}function S(){}e.register=function(t){return(0,i.p)(u.xV,["API/register/called"],void 0,n.K7.metrics,e.ee),function(e,t,r){const o={};let a,s;(0,c.R)(54,"newrelic.register"),e.init.api.allow_registered_children||(a=()=>(0,c.R)(55)),r&&(0,y.I)(r)||(a=()=>(0,c.R)(48,r));const d={addPageAction:(e,n={})=>{l(t.addPageAction,[e,{...o,...n}],r)},log:(e,n={})=>{l(t.log,[e,{...n,customAttributes:{...o,...n.customAttributes||{}}}],r)},noticeError:(e,n={})=>{l(t.noticeError,[e,{...o,...n}],r)},setApplicationVersion:e=>{o["application.version"]=e},setCustomAttribute:(e,t)=>{o[e]=t},setUserId:e=>{o["enduser.id"]=e},metadata:{customAttributes:o,target:r,get connected(){return s||Promise.reject(new Error("Failed to connect"))}}};a?a():s=new Promise(((t,n)=>{try{const i=e.runtime?.entityManager;let a=!!i?.get().entityGuid,s=i?.getEntityGuidFor(r.licenseKey,r.applicationID),c=!!s;if(a&&c)r.entityGuid=s,t(d);else{const u=setTimeout((()=>n(new Error("Failed to connect - Timeout"))),15e3);function l(n){(0,y.A)(n,e)?a||=!0:r.licenseKey===n.licenseKey&&r.applicationID===n.applicationID&&(c=!0,r.entityGuid=n.entityGuid),a&&c&&(clearTimeout(u),e.ee.removeEventListener("entity-added",l),t(d))}e.ee.emit("api-send-rum",[o,r]),e.ee.on("entity-added",l)}}catch(f){n(f)}}));const l=async(t,r,o)=>{if(a)return a();const d=(0,p.t)();(0,i.p)(u.xV,["API/register/".concat(t.name,"/called")],void 0,n.K7.metrics,e.ee);try{await s;const n=e.init.api.duplicate_registered_data;(!0===n||Array.isArray(n)&&n.includes(o.entityGuid))&&t(...r,void 0,d),t(...r,o.entityGuid,d)}catch(e){(0,c.R)(50,e)}};return d}(e,E,t)},e.log=function(e,t){E.log(e,t)},e.wrapLogger=(t,r,{customAttributes:o={},level:a=m.p_.INFO}={})=>{(0,i.p)(u.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,e.ee),(0,b.J)(e.ee,t,r,{customAttributes:o,level:a})},h.forEach((t=>{e[t]=N(f,t,!0,"api")})),e.addPageAction=function(e,t){E.addPageAction(e,t)},e.recordCustomEvent=N(f,"recordCustomEvent",!0,n.K7.genericEvents),e.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),e.runtime.customTransaction=(r||"http://custom.transaction")+t,N(f,"setPageViewName",!0)()},e.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return T(e,t,"setCustomAttribute",r);(0,c.R)(40,typeof t)}else(0,c.R)(39,typeof e)},e.setUserId=function(e){if("string"==typeof e||null===e)return T("enduser.id",e,"setUserId",!0);(0,c.R)(41,typeof e)},e.setApplicationVersion=function(e){if("string"==typeof e||null===e)return T("application.version",e,"setApplicationVersion",!1);(0,c.R)(42,typeof e)},e.start=()=>{try{(0,i.p)(u.xV,["API/start/called"],void 0,n.K7.metrics,e.ee),e.ee.emit("manual-start-all")}catch(e){(0,c.R)(23,e)}},e[l.G4.RECORD]=function(){(0,i.p)(u.xV,["API/recordReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.RECORD,[],void 0,n.K7.sessionReplay,e.ee)},e[l.G4.PAUSE]=function(){(0,i.p)(u.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,e.ee),(0,i.p)(l.G4.PAUSE,[],void 0,n.K7.sessionReplay,e.ee)},e.interaction=function(e){return(new S).get("object"==typeof e?e:{})};const I=S.prototype={createTracer:function(t,r){var o={},a=this,s="function"==typeof r;return(0,i.p)(u.xV,["API/createTracer/called"],void 0,n.K7.metrics,e.ee),e.runSoftNavOverSpa||(0,i.p)(x+"tracer",[(0,p.t)(),t,o],a,n.K7.spa,e.ee),function(){if(d.emit((s?"":"no-")+"fn-start",[(0,p.t)(),a,s],o),s)try{return r.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw d.emit("fn-err",[arguments,this,t],o),t}finally{d.emit("fn-end",[(0,p.t)()],o)}}}};function N(t,r,o,a,s=(0,p.t)()){return function(){return(0,i.p)(u.xV,["API/"+r+"/called"],void 0,n.K7.metrics,e.ee),(0,w.W)({agentIdentifier:e.agentIdentifier,drained:!!R.B?.[e.agentIdentifier],type:"data",name:"api",feature:t+r,data:{notSpa:o,bufferGroup:a}}),a&&(0,i.p)(t+r,[s,...arguments],o?null:this,a,e.ee),o?void 0:this}}function _(){r.e(478).then(r.bind(r,8778)).then((({setAsyncAPI:t})=>{t(e),(0,o.Ze)(e.agentIdentifier,"api")})).catch((t=>{(0,c.R)(27,t),e.ee.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((t=>{I[t]=function(){return N.apply(this,[x,t,void 0,e.runSoftNavOverSpa?n.K7.softNav:n.K7.spa]).apply(this,arguments)}})),e.setCurrentRouteName=function(){return e.runSoftNavOverSpa?N(x,"routeName",void 0,n.K7.softNav)(...arguments):N(f,"routeName",!0,n.K7.spa)(...arguments)},e.noticeError=function(e,t){E.noticeError(e,t)},s.RI?(0,a.GG)((()=>_()),!0):_(),!0}var T=r(2555),S=r(9417),I=r(5603),N=r(3371);const _=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var O=r(7836);const P=new Set;function j(e,t={},r,n){let{init:i,info:o,loader_config:a,runtime:c={},exposed:u=!0}=t;c.loaderType=r;const l=(0,d.pV)();o||(i=l.init,o=l.info,a=l.loader_config),(0,S.xN)(e.agentIdentifier,i||{}),(0,I.a)(e.agentIdentifier,a||{}),o.jsAttributes??={},s.bv&&(o.jsAttributes.isWorker=!0),(0,T.x1)(e.agentIdentifier,o);const f=e.init,h=[o.beacon,o.errorBeacon];P.has(e.agentIdentifier)||(f.proxy.assets&&(_(f.proxy.assets),h.push(f.proxy.assets)),f.proxy.beacon&&h.push(f.proxy.beacon),x(),(0,d.US)("activatedFeatures",R.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),c.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?h:[]],c.ptid=e.agentIdentifier,(0,N.V)(e.agentIdentifier,c),P.has(e.agentIdentifier)||(e.ee=O.ee.get(e.agentIdentifier),e.exposed=u,E(e,n),(0,w.W)({agentIdentifier:e.agentIdentifier,drained:!!R.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),P.add(e.agentIdentifier)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>s,df:()=>o,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:a,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:o,[c.sessionReplay]:o,[c.logging]:s,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.288.1.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.288.1.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-A197RDwDZ/NC6lb/PMIOFBrBanO57cULL4UpUepScgzjZPIPBBvfu4q0KzMhC7C3O5hKrc4kmK4aLpo+cShQzw==",249:"sha512-vLsg6+YBYhjurdM2WzfhBAhBVePWtoDu80qykIlpvNN2ZI/vQW6RtaLjxO4qURR+uoqAzj3rmr/WXrut/dMk6w==",212:"sha512-zp1Z+7gPpQlCybgSJryGY0yfN1jgDOdumlzqhYMlkNM6WECh2j0PyauwuXIRk8U4vpuwRq7tFWKekZv0Lednvw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.288.1.PROD"]=self["webpackChunk:NRBA-1.288.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if(this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}register(e){return this.#e("register",e)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if(this[t]!==o.prototype[t]&&this[t]!==n.prototype[t])return this[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(2110);var l=i(9908),f=i(1687),h=i(4234),p=i(5289),g=i(6154),m=i(5270),v=i(7767),b=i(6389);class y extends h.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,f.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,b.J)((()=>{(0,f.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,v.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,f.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,f.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};g.RI?(0,p.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,m.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var w=i(6630);class R extends y{static featureName=w.T;constructor(e,t=!0){super(e,w.T,t),this.ee.on("api-send-rum",((e,t)=>(0,l.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e)}}var x=i(384);var A=i(2843),E=i(3878),T=i(782),S=i(1863);class I extends y{static featureName=T.T;constructor(e,t=!0){super(e,T.T,t),g.RI&&((0,A.u)((()=>(0,l.p)("docHidden",[(0,S.t)()],void 0,T.T,this.ee)),!0),(0,E.sp)("pagehide",(()=>(0,l.p)("winPagehide",[(0,S.t)()],void 0,T.T,this.ee))),this.importAggregator(e))}}var N=i(8154);class _ extends y{static featureName=N.TZ;constructor(e,t=!0){super(e,N.TZ,t),g.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,l.p)(N.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e)}}var O=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return D(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection: ";if(!e?.reason)return;if(D(e.reason)){try{e.reason.message.startsWith(t)||(e.reason.message=t+e.reason.message)}catch(e){}return C(e.reason)}const r=C(e.reason);return(r.message||"").startsWith(t)||(r.message=t+r.message),r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return D(e.error)?e.error:C(e)}function D(e){return e instanceof Error&&!!e.stack}class M extends y{static featureName=O.T;#r=!1;constructor(e,r=!0){super(e,O.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,l.p)("ierr",[C(e),(0,S.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),g.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,l.p)("err",[k(e),(0,S.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,E.jT)(!1,this.removeOnAbort?.signal)),g.gm.addEventListener("error",(e=>{this.abortHandler&&(0,l.p)("err",[L(e),(0,S.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,E.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var H=i(8990);let K=1;function U(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===g.gm?0:(0,H.I)(e,"nr@id",(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var V=i(8139),F=i(7836),B=i(3434);const W={},z=["open","send"];function q(t){var r=t||F.ee;const n=function(e){return(e||F.ee).get("xhr")}(r);if(void 0===g.gm.XMLHttpRequest)return n;if(W[n.debugId]++)return n;W[n.debugId]=1,(0,V.u)(r);var i=(0,B.YM)(n),o=g.gm.XMLHttpRequest,a=g.gm.MutationObserver,s=g.gm.Promise,c=g.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=g.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,E.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,z,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(p?p.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var p=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Z="fetch-",Y=Z+"body-",J=["arrayBuffer","blob","json","text","formData"],X=g.gm.Request,Q=g.gm.Response,ee="prototype";const te={};function re(e){const t=function(e){return(e||F.ee).get("fetch")}(e);if(!(X&&Q&&g.gm.fetch))return t;if(te[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[F.P]&&o[F.P].dt&&(e=o[F.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return te[t.debugId]=1,J.forEach((e=>{r(X[ee],e,Y),r(Q[ee],e,Y)})),r(g.gm,"fetch",Z),t.on(Z+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Z+"done",[null,r],n)}else t.emit(Z+"done",[e],n)})),t}var ne=i(7485),ie=i(5603);class oe{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,ie.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof g.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ne.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var ae=i(9300),se=i(7295),ce=["load","error","abort","timeout"],ue=ce.length,de=(0,x.dV)().o.REQ,le=(0,x.dV)().o.XHR;const fe="X-NewRelic-App-Data";class he extends y{static featureName=ae.T;constructor(e,t=!0){super(e,ae.T,t),this.dt=new oe(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,l.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};g.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};pe(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}re(this.ee),q(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=x,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){A(t,e)}),(0,E.jT)(!1)),g.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,E.jT)(!1))}function o(e){this.params={method:e[0]},pe(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,S.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<ue;s++)r.addEventListener(ce[s],this.listener,(0,E.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+U(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function f(e,t){var r=""+U(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function h(){this.endTime=(0,S.t)()}function p(e,r){r instanceof le&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function m(e,r){r instanceof le&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function v(e,t,r){t instanceof le&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,S.t)()))}function b(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,S.t)()-this.xhrCbStart,this.onload,r],r)}function y(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&g.RI&&(t=""+g.gm.location.href):e[0]&&e[0].url?t=e[0].url:g.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ne.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function w(e,t){this.params={},this.metrics={},this.startTime=(0,S.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof de?r=i.url:g.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),pe(this,r);var o=(""+(i&&i instanceof de&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function R(e,t){if(this.endTime=(0,S.t)(),this.params||(this.params={}),(0,se.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,S.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function x(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<ue;t++)e.removeEventListener(ce[t],this.listener,!1);t.aborted||(0,se.iW)(t)||(n.duration=(0,S.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):A(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function A(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin&&r.getAllResponseHeaders().indexOf(fe)>=0){var i=r.getResponseHeader(fe);i&&((0,l.p)(N.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",f),t.on("xhr-resolved",h),t.on("addEventListener-end",p),t.on("removeEventListener-end",m),t.on("fn-end",b),t.on("fetch-before-start",y),t.on("fetch-start",w),t.on("fn-start",v),t.on("fetch-done",R)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function pe(e,t){var r=(0,ne.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ge={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||F.ee).get("history")}(e);return!g.RI||ge[t.debugId]++||(ge[t.debugId]=1,(0,B.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:we,d3:Re,Kp:xe,TZ:Ae,Lc:Ee,uP:Te,Rz:Se}=be;class Ie extends y{static featureName=Ae;constructor(e,t=!0){super(e,Ae,t);if(!(0,v.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,V.u)(r),this.eventsEE.on(Te,(function(e,t){this.bstStart=(0,S.t)()})),this.eventsEE.on(Ee,(function(e,t){(0,l.p)("bst",[e[0],t,this.bstStart,(0,S.t)()],void 0,a.K7.sessionTrace,r)})),r.on(Se+Re,(function(e){this.time=(0,S.t)(),this.startPath=location.pathname+location.hash})),r.on(Se+xe,(function(e){(0,l.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,l.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:we,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var Ne=i(2614);class _e extends y{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(Ne.H3,"_").concat(Ne.uh)))}catch(e){}(0,m.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,l.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===Ne.g.FULL||e.sessionReplayMode===Ne.g.ERROR)||(0,m.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==Ne.g.FULL&&this.featAggregate.initializeRecording(Ne.g.FULL,!0):(this.#i=Ne.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==Ne.g.FULL&&(this.recorder.parent.mode=Ne.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Oe=i(3962);class Pe extends y{static featureName=Oe.TZ;constructor(e,t=!0){if(super(e,Oe.TZ,t),!g.RI||!(0,x.dV)().o.MO)return;const r=ve(this.ee);Oe.tC.forEach((e=>{(0,E.sp)(e,(e=>{a(e)}),!0)}));const n=()=>(0,l.p)("newURL",[(0,S.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n);try{this.removeOnAbort=new AbortController}catch(e){}(0,E.sp)("popstate",(e=>(0,l.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let i=!1;const o=new((0,x.dV)().o.MO)(((e,t)=>{i||(i=!0,requestAnimationFrame((()=>{(0,l.p)("newDom",[(0,S.t)()],void 0,this.featureName,this.ee),i=!1})))})),a=(0,b.s)((e=>{(0,l.p)("newUIEvent",[e],void 0,this.featureName,this.ee),o.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),o.disconnect(),this.abortHandler=void 0},this.importAggregator(e,{domObserver:o})}}var je=i(7378);const Ce={},ke=["appendChild","insertBefore","replaceChild"];function Le(e){const t=function(e){return(e||F.ee).get("jsonp")}(e);if(!g.RI||Ce[t.debugId])return t;Ce[t.debugId]=!0;var r=(0,B.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,ke,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,E.jT)(!1)),e.removeEventListener("error",f,(0,E.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,E.jT)(!1)),e.removeEventListener("error",f,(0,E.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,E.jT)(!1)),e.addEventListener("error",f,(0,E.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const De={};function Me(e){const t=function(e){return(e||F.ee).get("promise")}(e);if(De[t.debugId])return t;De[t.debugId]=!0;var r=t.context,n=(0,B.YM)(t),i=g.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}g.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[B.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const He={},Ke="setTimeout",Ue="setInterval",Ge="clearTimeout",Ve="-start",Fe=[Ke,"setImmediate",Ue,Ge,"clearImmediate"];function Be(e){const t=function(e){return(e||F.ee).get("timer")}(e);if(He[t.debugId]++)return t;He[t.debugId]=1;var r=(0,B.YM)(t);return r.inPlace(g.gm,Fe.slice(0,2),Ke+"-"),r.inPlace(g.gm,Fe.slice(2,3),Ue+"-"),r.inPlace(g.gm,Fe.slice(3),Ge+"-"),t.on(Ue+Ve,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ke+Ve,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const We={};function ze(e){const t=function(e){return(e||F.ee).get("mutation")}(e);if(!g.RI||We[t.debugId])return t;We[t.debugId]=!0;var r=(0,B.YM)(t),n=g.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:qe,d3:Ze,Kp:Ye,$p:Je,wW:Xe,e5:$e,tH:Qe,uP:et,rw:tt,Lc:rt}=je;class nt extends y{static featureName=qe;constructor(e,t=!0){if(super(e,qe,t),!g.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let r,n=0;const i=this.ee.get("tracer"),o=Le(this.ee),a=Me(this.ee),s=Be(this.ee),c=q(this.ee),u=this.ee.get("events"),d=re(this.ee),f=ve(this.ee),h=ze(this.ee);function p(e,t){f.emit("newURL",[""+window.location,t])}function m(){n++,r=window.location.hash,this[et]=(0,S.t)()}function v(){n--,window.location.hash!==r&&p(0,!0);var e=(0,S.t)();this[$e]=~~this[$e]+e-this[et],this[rt]=e}function b(e,t){e.on(t,(function(){this[t]=(0,S.t)()}))}this.ee.on(et,m),a.on(tt,m),o.on(tt,m),this.ee.on(rt,v),a.on(Xe,v),o.on(Xe,v),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e.agentIdentifier]||(0,l.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([et,rt,"xhr-resolved"],this.featureName),u.buffer([et],this.featureName),s.buffer(["setTimeout"+Ye,"clearTimeout"+Ze,et],this.featureName),c.buffer([et,"new-xhr","send-xhr"+Ze],this.featureName),d.buffer([Qe+Ze,Qe+"-done",Qe+Je+Ze,Qe+Je+Ye],this.featureName),f.buffer(["newURL"],this.featureName),h.buffer([et],this.featureName),a.buffer(["propagate",tt,Xe,"executor-err","resolve"+Ze],this.featureName),i.buffer([et,"no-"+et],this.featureName),o.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),b(d,Qe+Ze),b(d,Qe+"-done"),b(o,"new-jsonp"),b(o,"jsonp-end"),b(o,"cb-start"),f.on("pushState-end",p),f.on("replaceState-end",p),window.addEventListener("hashchange",p,(0,E.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",p,(0,E.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){p(0,n>1)}),(0,E.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var it=i(3333);class ot extends y{static featureName=it.TZ;constructor(e,t=!0){super(e,it.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(g.RI&&(e.init.user_actions.enabled&&(it.Zp.forEach((e=>(0,E.sp)(e,(e=>(0,l.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),it.qN.forEach((e=>{const t=(0,b.s)((e=>{(0,l.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,E.sp)(e,t)}))),e.init.performance.resources.enabled&&g.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,l.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var at=i(993),st=i(3785),ct=i(9414);class ut extends y{static featureName=at.TZ;constructor(e,t=!0){super(e,at.TZ,t);const r=this.ee;(0,ct.J)(r,g.gm.console,"log",{level:"info"}),(0,ct.J)(r,g.gm.console,"error",{level:"error"}),(0,ct.J)(r,g.gm.console,"warn",{level:"warn"}),(0,ct.J)(r,g.gm.console,"info",{level:"info"}),(0,ct.J)(r,g.gm.console,"debug",{level:"debug"}),(0,ct.J)(r,g.gm.console,"trace",{level:"trace"}),this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,st.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),g.gm?(this.features={},(0,x.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,x.Zm)();delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[he,R,I,Ie,_e,_,M,ot,ut,Pe,nt],loaderType:"spa"})})()})();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="/wp-content/themes/iceo/dist/assets/images/MIT_ICEO_logo_icononly.png">
+    <link rel="icon" type="image/x-icon" href="/wp-content/themes/iceo/dist/assets/images/MIT_ICEO_logo_icononly.png">
+    <link rel="stylesheet" href="https://iceo.mit.edu/wp-content/themes/iceo/dist/assets/css/animate.css" />	
+    <link rel="stylesheet" href="https://use.typekit.net/glz4ssv.css">
+    <title>MIT Committees &#8211; MIT ICEO</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/iceo.mit.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://iceo.mit.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='co-authors-plus-coauthors-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-coauthors.is-layout-flow [class*=wp-block-co-authors-plus]{display:inline}
+
+</style>
+<style id='co-authors-plus-avatar-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-avatar :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-avatar :where(img){vertical-align:middle}.wp-block-co-authors-plus-avatar:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-avatar.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='co-authors-plus-image-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-image{margin-bottom:0}.wp-block-co-authors-plus-image :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-image :where(img){vertical-align:middle}.wp-block-co-authors-plus-image:is(.alignfull,.alignwide) :where(img){width:100%}.wp-block-co-authors-plus-image:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-image.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--teal-dark: #075A57;--wp--preset--color--teal: #0B8380;--wp--preset--color--teal-light: #6CCBC1;--wp--preset--color--red: #E61E49;--wp--preset--color--orange: #FF7800;--wp--preset--color--orange-light: #FCB211;--wp--preset--color--blue: #1676CA;--wp--preset--color--dark-blue: #011C41;--wp--preset--color--purple: #8C408E;--wp--preset--color--ob-purple: #715561;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='flickity-stylesheet-css' href='https://iceo.mit.edu/wp-content/themes/iceo/vendor/flickity/flickity.css?ver=2.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='main-stylesheet-css' href='https://iceo.mit.edu/wp-content/themes/iceo/dist/assets/css/styles.css?ver=6.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://iceo.mit.edu/wp-content/plugins/tablepress/css/build/default.css?ver=3.1.1' type='text/css' media='all' />
+<style id='tablepress-default-inline-css' type='text/css'>
+.tablepress-id-3 .column-1{padding:4px}.tablepress-id-8 .column-1{width:15%}
+</style>
+<link rel="https://api.w.org/" href="https://iceo.mit.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://iceo.mit.edu/wp-json/wp/v2/pages/127" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://iceo.mit.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+<link rel="canonical" href="https://iceo.mit.edu/mit-committees/" />
+<link rel='shortlink' href='https://iceo.mit.edu/?p=127' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://iceo.mit.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ficeo.mit.edu%2Fmit-committees%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://iceo.mit.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ficeo.mit.edu%2Fmit-committees%2F&#038;format=xml" />
+<link rel="icon" href="https://iceo.mit.edu/wp-content/uploads/2023/11/cropped-apple-touch-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://iceo.mit.edu/wp-content/uploads/2023/11/cropped-apple-touch-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://iceo.mit.edu/wp-content/uploads/2023/11/cropped-apple-touch-icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://iceo.mit.edu/wp-content/uploads/2023/11/cropped-apple-touch-icon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.bread-crumb ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.bread-crumb ul li {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: 20px !important;
+    padding-right: 20px !important;
+}
+
+.bread-crumb ul li a,.bread-crumb ul li span {
+    font-size: 14px;
+}
+
+.bread-crumb ul li a {
+    position: relative;
+    font-size: 14px !important;
+}
+
+.bread-crumb ul li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -8px;
+    top: 5px;
+    background-image: url('/wp-content/uploads/2025/02/right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    width: 15px;
+    height: 15px;
+}
+.bread-crumb ul li {
+    position: relative;
+}
+
+
+
+.bread-crumb ul li a, .bread-crumb ul li span {
+    position: relative;
+    font-size: 14px !important;
+    color: #D91A51;
+    font-weight: normal !important;
+    text-decoration: none;
+}
+
+.bread-crumb ul li:last-child:after {
+    display: none;
+}
+
+.mega-menu .mega-menu-area .menu li a[aria-current="page"] 
+{
+	color:#df1b51 !important;
+}
+
+.bread-crumb {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+    .committee-members {
+        flex-direction: row !important;
+        width: 100%;
+        gap: 0;
+    }
+    .committee-members > .wp-block-column {
+        flex: 0 1 50% !important;
+        width: 50%;
+        min-width: auto;
+        box-sizing: border-box !important;
+        margin: 0;
+    }
+    .committee-members > .wp-block-column figure {
+        width: 100%;
+    }
+}
+.committee-members figcaption {
+    height: 110px;
+}
+@media screen and (max-width: 1250px) {
+    .committee-members figcaption {
+        height: 70px;
+    }
+	.committee-members .wp-block-column figure {
+    width: 100% !important;
+}
+	.committee-members.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+    flex: 0 1 50%!important;
+}
+}
+@media screen and (max-width: 575px) {
+    .committee-members figcaption {
+        height: auto;
+    }
+	.bread-crumb ul li a, .bread-crumb ul li span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 80px;
+    display: inline-block;
+		font-size:12px !important;
+}
+	.bread-crumb {
+    margin-bottom: 30px;
+}
+body .hero-banner {
+    position: relative;
+    margin: 0 0 20px 0 !important;
+}
+	.bread-crumb ul li:after {
+		top:0;
+	}
+	.bread-crumb ul li {
+    position: relative;
+}
+.bread-crumb ul li {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-right: 13px !important;
+    padding-right: 10px !important;
+}
+	.committee-members.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+    flex: 1 1 100%!important;
+}
+}
+.complex-hero-banner .image-column .image-columns{left:-310px}
+.group-events{padding:40px;width:inherit!important}
+.gform_wrapper.gravity-theme .gform_footer input{margin-bottom:0!important}
+.upcoming-events .upcoming-events__container .featured .featured-carousel .item img{object-fit:cover;max-height:none}
+#art-dis h4.item-title{text-align:center}
+.committee-members figcaption a{color:#d91a51}
+@media (min-width:768px){header .navbar .navbar-brand{max-width:300px}}
+@media (min-width:1350px){header .navbar .navbar-brand{max-width:400px}}
+@media screen and (max-width:1250px){.status-publish .employee-cards{grid-template-columns:1fr 1fr}
+.status-publish .employee-cards .card .card-image img{width:100%;height:300px}
+.committee-members{flex-wrap:wrap!important;flex-direction:column;gap:0}
+.committee-members .wp-block-column{flex:1 1 50%!important;display:flex;height:auto;margin:0 -10px}
+.committee-members .wp-block-column figure figcaption{line-height:normal;position:static}
+.committee-members .wp-block-column figure{width:50%;padding:0 10px;box-sizing:border-box;display:table}
+.status-publish .employee-cards .card{width:100%;margin:0}}
+@media screen and (max-width:575px){.committee-members .wp-block-column figure{width:100%}
+.committee-members .wp-block-column{flex:1 1 100%!important;flex-wrap:wrap}
+.status-publish .employee-cards{grid-template-columns:1fr}
+.employee-cards__wrapper .employee-cards .card .card-body .employee-info{grid-template-rows:repeat(2,1fr)}}
+
+
+/* added Dec 2022 for layout adjustments */
+/* ------------------------------------- */
+
+/* removes excess space below header banner */
+.hero-banner {
+  position: relative;
+  margin: 0 0 20px 0 !important; 
+}
+
+/* increases desktop l-r margins to match header and footer */
+@media (min-width: 768px) {
+article > *, .article > * {
+  padding: 0 50px;
+}
+}
+
+/* fix unordered bullet spacing */
+article ul:not(.menu) > li, article ol:not(.menu) > li, .article ul:not(.menu) > li, .article ol:not(.menu) > li {
+  margin: 0 0 12px 20px;
+}
+
+/* fix heading sizes on mobile */
+@media (max-width: 767px) {
+h1, .h1, h2, .h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+	h3, .h3, {
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+		h4, .h4, {
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+	}
+
+/* fix extra space at top of footer */
+@media (min-width: 992px) {
+#footer {
+  padding: 60px 45px 30px;
+}
+}
+
+/* reduce spacing between article paras and headings */
+
+article p, .article p {
+  margin: 0 auto 20px auto;
+  line-height: 24px;
+}
+
+article h1, article h2 {
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin-bottom: 6px;
+}
+
+h4, h5, h6 {
+  margin-bottom: 4px;
+}
+
+/* video gallery */
+
+.sby_thumbnail_hover_inner { border-top: 8px solid #d91a51; }
+
+[id^="sb_youtube_"].sb_youtube .sby_info {
+  padding: 10px 15px;
+  background: #efefef;
+	min-height: 125px;
+}
+
+.sby_video_title_wrap {
+  font-size: 1.2em;
+  margin-bottom: .3em;
+}
+
+.sby_video_title { color: #000; line-height: 1.2em; }
+
+.sby_date { color: #666; margin: .5em 0 0 0; }
+
+/* experiment: reduce space above and below all wp-block-columns */
+.wp-block-columns {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* tablepress table styles */
+
+.tablepress {
+  --text-color: #111;
+  --head-text-color: #fff;
+  --head-bg-color: #000035;
+  --odd-text-color: var(--text-color);
+  --odd-bg-color: #f3f5fb;
+  --even-text-color: var(--text-color);
+  --even-bg-color: #fff;
+  --hover-text-color: var(--text-color);
+  --hover-bg-color: #f5f5f5;
+  --border-color: #ddd;
+  --padding: 0.5rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+	border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+	clear: both;
+  margin: 0 auto 1rem;
+  table-layout: auto;
+  width: 94%;
+}
+
+table.resourcestable { width: 85%; margin: 2em auto; border-bottom: 1px solid #ddd; }
+
+table.resourcestable td { vertical-align: middle; }
+
+table.resourcestable td.departmentname {font-size: 1.3em; text-align: left; vertical-align: top; font-weight: bold; background: #ccc; }
+
+table.resourcestable td.departmentname a { color: #202060; }
+
+table.resourcestable tr.maincontact a { color: #202060; }
+
+table.resourcestable tr.maincontact {font-size: 1.2em; text-align: left; vertical-align: middle; font-weight: bold; background: #e4e4e4; }
+
+table.resourcestable tr.maincontact-alone { border-bottom: solid #ffffff 15px; }
+
+.tablepress-id-3 .column-1 {
+	padding: 4px;
+}
+
+.tablepress-id-8 .column-1,
+.tablepress-id-8 .column-3 {
+	width: 20%;
+}
+
+/* new column style */
+.col_text_on_bg { padding: 20px; background-color: #e3ecec; color: #000; }
+.col_text_on_bg li { margin: 0 0 12px 0px !important; }
+.col_text_on_bg h3 { color: #040445; }
+
+/* restyle Separator block with Wide option selected */
+
+hr.is-style-wide { color: #ccc; 
+margin: 1em 3em 2em 3em;}
+
+/* font change adjustments */
+h1 { line-height: .9; font-weight: 700;}
+h2 { line-height: 1.1; font-weight: 700;}
+header li a {
+	letter-spacing: 0px;
+}
+@media (min-width: 768px) {
+.mega-menu .mega-menu-area .menu li a {
+    font-size: 1em;
+}}
+.mega-menu > li.active > a:after {
+    width: 100%;
+}
+.mega-menu > li.active > a:after {
+    width: 100%;
+}
+
+/* block css */
+        .card-listing {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .list-item figure img {
+            width: 100%;
+        }
+        figure {
+            margin: 0px;
+        }
+        .list-item figure {
+            position: relative;
+            height: 380px;
+            width: 100%;
+        }
+        figcaption {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            padding: 30px 40px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .list-item {
+            width: calc(33.33% - 30px);
+        }
+        .list-description {
+            color: #fff;
+        }
+         .color-black {
+                                background: #010101;
+                            }
+
+                            .color-purple {
+                                background: #040136;
+                            }
+
+                            .color-green {
+                                background: #0D312F;
+                            }
+
+            .list-description.color-green p,  .list-description.color-purple p, .list-description.color-black p {
+    color: #fff;
+}
+    .list-item.column-two {
+        width: calc(50% - 24px);
+    }
+    .list-item.column-four {
+        width: calc(25% - 15px);
+    }
+    .list-item.column-four figcaption {
+        padding: 20px 20px;
+    }
+    .list-item.column-four figcaption .list-title h2 {
+        font-size: 23px;
+    }
+    .list-item.column-four figure {
+        position: relative;
+        height: 280px;
+        width: 100%;
+    }
+    .column-four .list-description figcaption p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .card-listing.box-space.container-three {
+        gap: 45px;
+    }
+    .card-listing.box-space.container-two {
+        gap: 45px;
+    }
+
+
+
+
+
+    @media(max-width:1180px){
+        .list-item{
+            width: calc(50% - 10px);
+        }
+        .list-item.column-four {
+            width: calc(50% -  10px);
+        }
+        .list-item.column-three {
+            width: calc(50% - 10px);
+        }
+        .list-item.column-two {
+            width: calc(50% - 10px);
+        }
+        .list-item.column-two figcaption,
+        .list-item.column-three figcaption,
+        .list-item.column-four figcaption {
+            padding: 20px 20px;
+        }
+        .list-item.column-two figcaption h2,
+        .list-item.column-three figcaption h2,
+        .list-item.column-four figcaption h2 {
+            margin: 0;
+        }
+
+        .card-listing.box-space.container-two,
+        .card-listing.box-space.container-three,
+        .card-listing.box-space.container-four {
+            gap: 20px;
+        }
+    }
+
+
+
+
+    @media(max-width:767px){
+        .list-item{
+            width: calc(100% - 0px);
+        }
+        .list-item.column-four {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-three {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-two {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-two figcaption,
+        .list-item.column-three figcaption,
+        .list-item.column-four figcaption {
+            padding: 20px 20px;
+        }
+        .list-item.column-two figcaption h2,
+        .list-item.column-three figcaption h2,
+        .list-item.column-four figcaption h2 {
+            margin: 0;
+        }
+
+        .card-listing.box-space.container-two,
+        .card-listing.box-space.container-three,
+        .card-listing.box-space.container-four {
+            gap: 20px;
+        }
+        .list-item,
+        .list-item.column-two figure,
+        .list-item.column-three figure,
+        .list-item.column-four figure {
+            min-height:380px;
+        }
+    }
+.home-multi-item-section__item.purpleBox .home-multi-item-section__item-text {
+    -webkit-background-size: 200% 200%;
+    background-size: 200% 200%;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #abbcff), color-stop(50%, transparent));
+    background-image: -webkit-linear-gradient(bottom, #abbcff 50%, transparent 50%);
+    background-image: -o-linear-gradient(bottom, #abbcff 50%, transparent 50%);
+    background-image: linear-gradient(to top, #abbcff 50%, transparent 50%);
+    -webkit-transition: background-position 300ms;
+    -o-transition: background-position 300ms;
+}
+
+.home-multi-item-section__item.redBox {
+    border-color: #ff9494;
+}
+
+.home-multi-item-section__item.redBox .home-multi-item-section__item-text {
+    -webkit-background-size: 200% 200%;
+    background-size: 200% 200%;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ff9494), color-stop(50%, transparent));
+    background-image: -webkit-linear-gradient(bottom, #ff9494 50%, transparent 50%);
+    background-image: -o-linear-gradient(bottom, #ff9494 50%, transparent 50%);
+    background-image: linear-gradient(to top, #ff9494 50%, transparent 50%);
+    -webkit-transition: background-position 300ms;
+    -o-transition: background-position 300ms;
+}
+
+.home-multi-item-section__item.purpleBox {
+    border-color: #abbcff;
+}
+            .box-space {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.list-item figure:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: linear-gradient(2deg,transparent 0,rgb(0 0 0 / 48%) 100%);
+}
+
+.list-item figure > * {
+    position: relative;
+    z-index: 1;
+}
+
+.list-item figure {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden; /* Hide the scaled overflow */
+}
+
+/* Create a pseudo-element that holds the background image */
+.list-item figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;  /* or use url("your-image.jpg") */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+/* Scale the pseudo-element on hover */
+.list-item figure:hover::before {
+  transform: scale(1.1);
+}
+
+.list-item figcaption .list-title h2 {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    text-transform: capitalize;
+}
+.list-description {
+    padding: 15px 20px;
+}
+
+.list-description p {
+    margin: 0;
+}
+.list-item a {
+    text-decoration: none;
+}
+.list-description p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.home-multi-item-section__item {
+    background-color: #fff;
+}
+.home-multi-item-section__item  {
+    display: block;
+    color: #000;
+    Height:100%;
+}
+.home-multi-item-section__item a:hover {
+    text-decoration: none !important;
+}
+.home-multi-item-section__item:hover .home-multi-item-section__item-text {
+    background-position: 0 100%;
+    -webkit-transition: background-position 300ms;
+    -o-transition: background-position 300ms;
+    transition: background-position 300ms;
+}
+
+
+.home-multi-item-section__item-text { 
+    width: 100%; 
+}
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -2rem;
+    margin-left: -2rem;
+}
+.contenBox li {
+    margin: 0;
+    list-style: none;
+    padding: 0px 2rem;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.contenBox ul {
+    padding: 0; 
+}
+
+.home-multi-item-section__item .home-multi-item-section__item-text h3.home-multi-item-section__item-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top:0px;
+	    color: #040445;
+}
+
+.home-multi-item-section__item .home-multi-item-section__item-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.home-multi-item-section__item .home-multi-item-section__item-text ul li {
+    font-size: 16px;
+}
+
+.home-multi-item-section__item .home-multi-item-section__item-text ul {
+    padding: 0;
+        margin: 0;
+}
+.home-multi-item-padding {
+    padding: 30px;
+}
+.col-12 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Listing */
+.card-listing.box-space.container-two {
+			gap: 45px;
+		}
+
+		.card-listing {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+
+		.list-item {
+			width: calc(33.33% - 30px);
+			margin:0 !important;
+			padding:0 !important;
+		}
+
+		.list-item.column-two {
+			width: calc(50% - 24px);
+			margin:0 !important;
+		}
+
+    .list-description {
+       color: #fff;
+    }
+
+    .list-item.column-four {
+        width: calc(25% - 15px);
+		margin:0 !important;
+		
+    }
+    .list-item.column-four figcaption {
+        padding: 20px 20px;
+    }
+    .list-item.column-four figcaption .list-title h2 {
+        font-size: 23px;
+    }
+    .list-item.column-four figure {
+        position: relative;
+        height: 280px;
+        width: 100%;
+    }
+    .column-four .list-description figcaption p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+.card-listing.box-space.container-three {
+        gap: 45px;
+    }
+    .card-listing.box-space.container-two {
+        gap: 45px;
+    }
+
+.home-multi-item-padding ul li {
+    list-style: disc;
+    padding-left: 0;
+}
+
+
+/* colours */
+.magentaBox {
+    background: #fed0fe !important;
+}
+
+.dark-greenBox {
+    background: #d4fdd3 !important;
+}
+
+.yellowBox {
+    background: #fffaa0 !important;
+}
+
+.dark-blueBox {
+    background: #e1ebea !important;
+}
+
+.blackBox {
+    background: #d5d5d5 !important;
+}
+
+.indigoBox {
+    background: #d1d1e5 !important;
+}
+
+.list-item.column-four h3.home-multi-item-section__item-title {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+    @media(max-width:1180px){
+        .list-item{
+            width: calc(50% - 10px);
+        }
+        .list-item.column-four {
+            width: calc(50% -  10px);
+        }
+        .list-item.column-three {
+            width: calc(50% - 10px);
+        }
+        .list-item.column-two {
+            width: calc(50% - 10px);
+        }
+        .list-item.column-two figcaption,
+        .list-item.column-three figcaption,
+        .list-item.column-four figcaption {
+            padding: 20px 20px;
+        }
+        .list-item.column-two figcaption h2,
+        .list-item.column-three figcaption h2,
+        .list-item.column-four figcaption h2 {
+            margin: 0;
+        }
+
+.card-listing.box-space.container-two,
+.card-listing.box-space.container-three,
+.card-listing.box-space.container-four {
+            gap: 20px;
+        }
+			
+.card-listing.box-space.container-two .list-item,
+.card-listing.box-space.container-three .list-item,
+.card-listing.box-space.container-four .list-item {
+            margin-bottom:10px !important;
+        }
+    }
+
+
+
+
+    @media(max-width:767px){
+        .list-item{
+            width: calc(100% - 0px);
+        }
+        .list-item.column-four {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-three {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-two {
+            width: calc(100% - 0px);
+        }
+        .list-item.column-two figcaption,
+        .list-item.column-three figcaption,
+        .list-item.column-four figcaption {
+            padding: 20px 20px;
+        }
+        .list-item.column-two figcaption h2,
+        .list-item.column-three figcaption h2,
+        .list-item.column-four figcaption h2 {
+            margin: 0;
+        }
+
+        .card-listing.box-space.container-two,
+        .card-listing.box-space.container-three,
+        .card-listing.box-space.container-four {
+            gap: 20px;
+        }
+        .list-item,
+        .list-item.column-two figure,
+        .list-item.column-three figure,
+        .list-item.column-four figure {
+            height:auto;
+        }
+    }
+
+@media (min-width: 768px){
+.col-md-6 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+@media (min-width: 1080px){
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+}
+
+@media (max-width: 991px){
+    .list-item {
+    width: 48%;
+}
+}
+@media (max-width: 767px){
+      .list-item {
+    width: 100%;
+}
+}		</style>
+		</head>
+<body class="page-template-default page page-id-127">
+
+<div id="page" class="site">
+    <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+    <header>
+        <div class="header-nav" id="header-nav">
+
+            <nav class="main-nav" id="menu-mobile">
+                <div class="slideout-header">
+							<span class="mobile-menu-logo">
+<!--								<a href="/">-->
+<!--									<img src="/wp-content/themes/iceo/dist/assets/images/iceo.png"/>-->
+<!--								</a>-->
+							</span>
+                    <div id="closebtn">&times;</div>
+
+                </div>
+
+                <a href="#" class="menu-link mobile-menu-back-link" id="back-button"
+                   aria-label="Back to previous menu">
+                    <img src="/wp-content/themes/iceo/dist/assets/images/back-arrow.svg" alt=""/>
+                    <span class="back-text">Back</span>
+                </a>
+
+                <div class="menu-items">
+                    <div class="menu-mobile-nav-container"><ul id="mobile-menu" class="navbar-nav first-mobile-menu"><li id="menu-item-205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-205"><a href="#!" class="nav-link plus-sign-menu-item" data-href="#!">Programs</a>
+<ul class="sub-menu">
+	<li id="menu-item-2824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2824"><a href="https://iceo.mit.edu/dialogues-across-difference/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/dialogues-across-difference/">Dialogues Across Difference</a></li>
+	<li id="menu-item-810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-810"><a href="#!" class="nav-link plus-sign-menu-item" data-href="#!">Employee Resource Groups</a>
+	<ul class="sub-menu">
+		<li id="menu-item-812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-812"><a href="https://iceo.mit.edu/employee-resource-groups/african-black-american-caribbean/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/african-black-american-caribbean/">African, Black, American, Caribbean (ABAC) ERG</a></li>
+		<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="https://iceo.mit.edu/employee-resource-groups/asian-pacific-american-apa-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/asian-pacific-american-apa-erg/">Asian Pacific American (APA) ERG</a></li>
+		<li id="menu-item-814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-814"><a href="https://iceo.mit.edu/employee-resource-groups/disabilities-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/disabilities-erg/">Disabilities ERG</a></li>
+		<li id="menu-item-815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="https://iceo.mit.edu/employee-resource-groups/latino-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/latino-erg/">Latino ERG</a></li>
+		<li id="menu-item-818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-818"><a href="https://iceo.mit.edu/employee-resource-groups/lesbian-bisexual-gay-transgender-queer-lbgtq-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/lesbian-bisexual-gay-transgender-queer-lbgtq-erg/">Lesbian, Bisexual, Gay, Transgender Queer LBGTQ+ ERG</a></li>
+		<li id="menu-item-817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="https://iceo.mit.edu/employee-resource-groups/millennials-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/millennials-erg/">Millennials ERG</a></li>
+		<li id="menu-item-3866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3866"><a href="https://iceo.mit.edu/employee-resource-groups/veterans-and-military-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/veterans-and-military-erg/">Veterans and Military ERG</a></li>
+		<li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816"><a href="https://iceo.mit.edu/employee-resource-groups/women-in-technology-wit-erg/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/employee-resource-groups/women-in-technology-wit-erg/">Women in Technology WIT ERG</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1626"><a href="https://iceo.mit.edu/funding-sources/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/funding-sources/">Funding</a></li>
+	<li id="menu-item-825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-825"><a href="https://iceo.mit.edu/mit-programs-and-services/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mit-programs-and-services/">Programs and Services</a></li>
+	<li id="menu-item-4219" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4219"><a href="https://mindhandheart.mit.edu/" class="nav-link plus-sign-menu-item" data-href="https://mindhandheart.mit.edu/">MindHandHeart</a></li>
+	<li id="menu-item-1391" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1391"><a href="http://mindhandheart.mit.edu/supporting-mit-values" class="nav-link plus-sign-menu-item" data-href="http://mindhandheart.mit.edu/supporting-mit-values">MIT Values</a></li>
+	<li id="menu-item-809" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-809"><a href="#!" class="nav-link plus-sign-menu-item" data-href="#!">MLK Programs</a>
+	<ul class="sub-menu">
+		<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="https://iceo.mit.edu/mlk-programs/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mlk-programs/">MLK Programs Overview</a></li>
+		<li id="menu-item-4213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4213"><a href="https://mlkscholars.mit.edu/" class="nav-link plus-sign-menu-item" data-href="https://mlkscholars.mit.edu/">MLK Scholars Program</a></li>
+		<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="https://iceo.mit.edu/mlk-programs/annual-mlk-celebrations/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mlk-programs/annual-mlk-celebrations/">Annual MLK Celebration</a></li>
+		<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="https://iceo.mit.edu/mlk-programs/mlk-inspired-art-performance-contest/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mlk-programs/mlk-inspired-art-performance-contest/">MLK-Inspired Art &#038; Performance Contest</a></li>
+		<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://iceo.mit.edu/mlk-programs/martin-luther-king-leadership-award/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mlk-programs/martin-luther-king-leadership-award/">MLK Leadership Awards</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-201"><a href="#" class="nav-link plus-sign-menu-item" data-href="#">Initiatives</a>
+<ul class="sub-menu">
+	<li id="menu-item-4045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4045"><a href="https://iceo.mit.edu/?page_id=3103" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/?page_id=3103">Community Learning</a></li>
+	<li id="menu-item-2315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"><a href="https://iceo.mit.edu/?page_id=2306" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/?page_id=2306">Free Expression</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="https://iceo.mit.edu/gender-identity-initiative/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/gender-identity-initiative/">Gender Identity Initiative</a></li>
+	<li id="menu-item-1343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1343"><a href="https://iceo.mit.edu/inclusive-restrooms/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/inclusive-restrooms/">Inclusive Restrooms</a></li>
+	<li id="menu-item-2533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2533"><a href="https://iceo.mit.edu/indigenous-working-group/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/indigenous-working-group/">Indigenous Working Group</a></li>
+	<li id="menu-item-4157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4157"><a href="https://iceo.mit.edu/community-learning/still-becoming-mit/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/community-learning/still-becoming-mit/">Still Becoming MIT</a></li>
+	<li id="menu-item-1390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1390"><a href="http://actionplan.mit.edu/" class="nav-link plus-sign-menu-item" data-href="http://actionplan.mit.edu/">Strategic Action Plan</a></li>
+</ul>
+</li>
+<li id="menu-item-824" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-824"><a href="#" class="nav-link plus-sign-menu-item" data-href="#">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-2156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2156"><a href="https://iceo.mit.edu/awards-and-recognition/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/awards-and-recognition/">Awards and Recognition</a></li>
+	<li id="menu-item-4368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4368"><a href="https://iceo.mit.edu/broader-impacts/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/broader-impacts/">Broader impacts </a></li>
+	<li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-127 current_page_item menu-item-828"><a href="https://iceo.mit.edu/mit-committees/" aria-current="page" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mit-committees/">Committees</a></li>
+	<li id="menu-item-826" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-826"><a href="https://iceo.mit.edu/data/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/data/">Data</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="https://iceo.mit.edu/land-acknowledgement/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/land-acknowledgement/">Land Acknowledgement</a></li>
+	<li id="menu-item-830" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-830"><a href="https://iceo.mit.edu/mit-news/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/mit-news/">MIT News</a></li>
+	<li id="menu-item-2766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2766"><a href="https://iceo.mit.edu/ncfdd-membership/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/ncfdd-membership/">NCFDD Membership</a></li>
+	<li id="menu-item-829" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-829"><a href="https://iceo.mit.edu/reports/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/reports/">Reports</a></li>
+</ul>
+</li>
+<li id="menu-item-831" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-831"><a href="#!" class="nav-link plus-sign-menu-item" data-href="#!">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="https://iceo.mit.edu/about-iceo/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/about-iceo/">About the ICEO</a></li>
+	<li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="https://iceo.mit.edu/newsletter/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/newsletter/">Newsletter</a></li>
+	<li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"><a href="https://iceo.mit.edu/staff/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/staff/">Staff</a></li>
+</ul>
+</li>
+<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-837"><a href="https://iceo.mit.edu/events/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/events/">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-2458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2458"><a href="https://iceo.mit.edu/past-events/" class="nav-link plus-sign-menu-item" data-href="https://iceo.mit.edu/past-events/">Past Events</a></li>
+</ul>
+</li>
+<li id="menu-item-390" class="btn btn-small btn-wide m-5 menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a href="https://idhr.mit.edu/submitincidentreport" class="nav-link plus-sign-menu-item" data-href="https://idhr.mit.edu/submitincidentreport">Report an incident</a></li>
+</ul></div>
+                </div>
+
+
+                <!--Div Templates to use in Javascript for MobileNav expanding elements -->
+
+                <div id="back-button-reference" class="back-button-mobile-nav" style="display:none">
+
+                    <li class="back-button-menu-item">
+                        <a href="#" class="navbar-link">< Back</a>
+                    </li>
+
+                    <li class="header-menu-item">
+                        <a class="expanded-mobile-nav-sub-menu-header" href="#" class="navbar-link">HEADER -</a>
+                    </li>
+
+                </div>
+
+
+            </nav>
+           <nav class="navbar" id="menu-desktop">
+                <div class="navbar-brand">
+                    <a class="navbar-ICEO" style="height: 48px; width: 313px" href="/">
+                      <img class="ICEO" src="/wp-content/themes/iceo/dist/assets/images/iceo-logo-black.svg" alt="ICEO">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    
+                    <ul class="mega-menu" id="mega-menu">
+    <li id='item-Programs' class=''><a id='here' class='has-mega-menu' href="#!">Programs<svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></a><div id="mega-menu-widget-area-132" class="mega-menu  col-1"><div id="mega-menu-132" class="mega-menu-area"><div class="single-col has-mega-menu"><div class="menu-programs-container"><ul id="menu-programs" class="menu"><li id="menu-item-2841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2841"><a href="https://iceo.mit.edu/dialogues-across-difference/" data-href="https://iceo.mit.edu/dialogues-across-difference/">Dialogues Across Difference</a></li>
+<li id="menu-item-146" class="menu-second-col parent-slide-over menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-146"><a href="https://iceo.mit.edu/employee-resource-groups/" data-href="https://iceo.mit.edu/employee-resource-groups/">Employee Resource Groups</a>
+<ul class="sub-menu">
+	<li id="menu-item-195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-195"><a href="https://iceo.mit.edu/employee-resource-groups/african-black-american-caribbean/" data-href="https://iceo.mit.edu/employee-resource-groups/african-black-american-caribbean/">African, Black, American, Caribbean (ABAC) ERG</a></li>
+	<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="https://iceo.mit.edu/employee-resource-groups/asian-pacific-american-apa-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/asian-pacific-american-apa-erg/">Asian Pacific American (APA) ERG</a></li>
+	<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="https://iceo.mit.edu/employee-resource-groups/disabilities-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/disabilities-erg/">Disabilities ERG</a></li>
+	<li id="menu-item-192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a href="https://iceo.mit.edu/employee-resource-groups/latino-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/latino-erg/">Latino ERG</a></li>
+	<li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://iceo.mit.edu/employee-resource-groups/lesbian-bisexual-gay-transgender-queer-lbgtq-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/lesbian-bisexual-gay-transgender-queer-lbgtq-erg/">Lesbian, Bisexual, Gay, Transgender Queer (LBGTQ+) ERG</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="https://iceo.mit.edu/employee-resource-groups/millennials-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/millennials-erg/">Millennials ERG</a></li>
+	<li id="menu-item-3867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3867"><a href="https://iceo.mit.edu/employee-resource-groups/veterans-and-military-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/veterans-and-military-erg/">Veterans and Military ERG</a></li>
+	<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="https://iceo.mit.edu/employee-resource-groups/women-in-technology-wit-erg/" data-href="https://iceo.mit.edu/employee-resource-groups/women-in-technology-wit-erg/">Women in Technology (WIT) ERG</a></li>
+</ul>
+</li>
+<li id="menu-item-2689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2689"><a href="https://iceo.mit.edu/funding-sources/" data-href="https://iceo.mit.edu/funding-sources/">Funding</a></li>
+<li id="menu-item-4217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4217"><a href="https://mindhandheart.mit.edu/" data-href="https://mindhandheart.mit.edu/">MindHandHeart</a></li>
+<li id="menu-item-141" class="parent-slide-over menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-141"><a href="https://iceo.mit.edu/mlk-programs/" data-href="https://iceo.mit.edu/mlk-programs/">MLK Programs</a>
+<ul class="sub-menu">
+	<li id="menu-item-916" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-916"><a href="https://mlkscholars.mit.edu/" data-href="https://mlkscholars.mit.edu/">MLK Scholars Program</a></li>
+	<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a href="https://iceo.mit.edu/mlk-programs/annual-mlk-celebrations/" data-href="https://iceo.mit.edu/mlk-programs/annual-mlk-celebrations/">Annual MLK Celebration</a></li>
+	<li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743"><a href="https://iceo.mit.edu/mlk-programs/mlk-inspired-art-performance-contest/" data-href="https://iceo.mit.edu/mlk-programs/mlk-inspired-art-performance-contest/">MLK-Inspired Art &#038; Performance Contest</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://iceo.mit.edu/mlk-programs/martin-luther-king-leadership-award/" data-href="https://iceo.mit.edu/mlk-programs/martin-luther-king-leadership-award/">MLK Leadership Awards</a></li>
+</ul>
+</li>
+<li id="menu-item-2552" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2552"><a href="https://mindhandheart.mit.edu/supporting-mit-values" data-href="https://mindhandheart.mit.edu/supporting-mit-values">MIT Values</a></li>
+</ul></div></div></div></div></li><li id='item-Initiatives' class=''><a id='here' class='has-mega-menu' href="#!">Initiatives<svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></a><div id="mega-menu-widget-area-382" class="mega-menu  col-1"><div id="mega-menu-382" class="mega-menu-area"><div class="single-col has-mega-menu"><div class="menu-initiatives-container"><ul id="menu-initiatives" class="menu"><li id="menu-item-4631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4631"><a href="https://iceo.mit.edu/community-learning/" data-href="https://iceo.mit.edu/community-learning/">Community Learning</a></li>
+<li id="menu-item-4212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4212"><a href="https://free-expression.mit.edu/" data-href="https://free-expression.mit.edu/">Free Expression</a></li>
+<li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386"><a href="https://iceo.mit.edu/gender-identity-initiative/" data-href="https://iceo.mit.edu/gender-identity-initiative/">Gender Identity Initiative</a></li>
+<li id="menu-item-1344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1344"><a href="https://iceo.mit.edu/inclusive-restrooms/" data-href="https://iceo.mit.edu/inclusive-restrooms/">Inclusive Restrooms</a></li>
+<li id="menu-item-2648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2648"><a href="https://iceo.mit.edu/indigenous-working-group/" data-href="https://iceo.mit.edu/indigenous-working-group/">Indigenous Working Group</a></li>
+<li id="menu-item-4158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4158"><a href="https://iceo.mit.edu/community-learning/still-becoming-mit/" data-href="https://iceo.mit.edu/community-learning/still-becoming-mit/">Still Becoming MIT</a></li>
+<li id="menu-item-612" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-612"><a target="_blank" href="http://actionplan.mit.edu/" data-href="http://actionplan.mit.edu/">Strategic Action Plan</a></li>
+</ul></div></div></div></div></li><li id='item-Resources' class=''><a id='here' class='has-mega-menu' href="#!">Resources<svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></a><div id="mega-menu-widget-area-18" class="mega-menu  col-1"><div id="mega-menu-18" class="mega-menu-area"><div class="single-col has-mega-menu"><div class="menu-resources-menu-container"><ul id="menu-resources-menu" class="menu"><li id="menu-item-2157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2157"><a href="https://iceo.mit.edu/awards-and-recognition/" data-href="https://iceo.mit.edu/awards-and-recognition/">Awards and Recognition</a></li>
+<li id="menu-item-4369" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4369"><a href="https://iceo.mit.edu/broader-impacts/" data-href="https://iceo.mit.edu/broader-impacts/">Broader impacts </a></li>
+<li id="menu-item-285" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-127 current_page_item menu-item-285"><a href="https://iceo.mit.edu/mit-committees/" aria-current="page" data-href="https://iceo.mit.edu/mit-committees/">Committees</a></li>
+<li id="menu-item-284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284"><a href="https://iceo.mit.edu/data/" data-href="https://iceo.mit.edu/data/">Data</a></li>
+<li id="menu-item-2522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2522"><a href="https://iceo.mit.edu/land-acknowledgement/" data-href="https://iceo.mit.edu/land-acknowledgement/">Land Acknowledgement</a></li>
+<li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="https://iceo.mit.edu/mit-news/" data-href="https://iceo.mit.edu/mit-news/">MIT News</a></li>
+<li id="menu-item-2783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2783"><a href="https://iceo.mit.edu/ncfdd-membership/" data-href="https://iceo.mit.edu/ncfdd-membership/">NCFDD Membership</a></li>
+<li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="https://iceo.mit.edu/mit-programs-and-services/" data-href="https://iceo.mit.edu/mit-programs-and-services/">Programs and Services</a></li>
+<li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a href="https://iceo.mit.edu/reports/" data-href="https://iceo.mit.edu/reports/">Reports</a></li>
+</ul></div></div></div></div></li><li id='item-About' class=''><a id='here' class='has-mega-menu' href="#!">About<svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></a><div id="mega-menu-widget-area-17" class="mega-menu  col-1"><div id="mega-menu-17" class="mega-menu-area"><div class=" single-col has-mega-menu"><div class="menu-about-container"><ul id="menu-about" class="menu"><li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://iceo.mit.edu/about-iceo/" data-href="https://iceo.mit.edu/about-iceo/">About the ICEO</a></li>
+<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="https://iceo.mit.edu/newsletter/" data-href="https://iceo.mit.edu/newsletter/">ICEO Newsletter</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://iceo.mit.edu/staff/" data-href="https://iceo.mit.edu/staff/">Staff</a></li>
+</ul></div></div></div></div></li><li id='item-Events' class=''><a id='here' class='has-mega-menu' href="https://iceo.mit.edu/events/">Events<svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="#fff" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></a><div id="mega-menu-widget-area-301" class="mega-menu  col-1"><div id="mega-menu-301" class="mega-menu-area"><div class="single-col has-mega-menu"><div class="menu-events-container"><ul id="menu-events" class="menu"><li id="menu-item-2459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2459"><a href="https://iceo.mit.edu/past-events/" data-href="https://iceo.mit.edu/past-events/">Past Events</a></li>
+<li id="menu-item-2469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2469"><a href="https://iceo.mit.edu/events/" data-href="https://iceo.mit.edu/events/">Upcoming Events</a></li>
+</ul></div></div></div></div></li></ul>
+                </div>
+                <div class="navbar__right">
+                    <img id="Search_button" class="search-icon" data-name="Search button" width="27" height="28" src="https://iceo.mit.edu/wp-content/themes/iceo/dist/assets/images/search.svg" alt=""/>
+                    <a href="https://idhr.mit.edu/submitincidentreport" target="_blank" rel="noopener noreferrer"
+                       class="btn btn-small btn-transparent navbar__right-btn">Report an incident</a>
+                    <a href="#" id="navbtn" class="navbtn" aria-label="Toggle navigation">
+                        <div class="nav-lines"></div>
+                    </a>
+                </div>
+            </nav> <!-- #site-navigation -->
+
+            <div id="search-area-drop-down" class="search-area">
+                <form id="searchform" class="search-bar"  style="display:none" action="https://iceo.mit.edu/">
+    <div class="grid-search-bar">
+        <input type="text" class="search-field" name="s" placeholder="Enter your search here..." value="">
+        <input type="submit" value="SEARCH">
+    </div>
+</form>
+
+
+            </div>
+        </div>
+    </header>
+
+
+
+	<main id="primary" class="site-main">
+		<div class="entry-content">
+			
+<article id="post-127" class="post-127 page type-page status-publish hentry">
+		    <div class="hero-banner dark-blue">
+        <div class="hero-banner__container">
+            <div class="hero-banner__container-title">
+                <h1>MIT Committees</h1>
+            </div>
+            <div class="hero-banner__container-images">
+                <div class="left">
+                                            <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2024/07/Cynthia-300x300.png"
+                             alt=""/>
+                                                <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2022/06/34-300x300.png"
+                             alt=""/>
+                                                <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2023/08/8-300x300.png"
+                             alt=""/>
+                                        </div>
+
+                <div class="middle">
+                                            <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2024/02/TracieJones-300x200.png"
+                             alt=""/>
+                                                <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2022/06/25-300x300.png"
+                             alt=""/>
+                                        </div>
+
+                <div class="right">
+                                            <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2022/01/13-300x300.png"
+                             alt=""/>
+                                                <img decoding="async" class="img-before" onload="this.className='image-fade-in'" src="https://iceo.mit.edu/wp-content/uploads/2022/01/4-300x300.png"
+                             alt=""/>
+                                        </div>
+            </div>
+        </div>
+    </div>
+    <div class="bread-crumb">
+                    <div class="bread-crumb-list"><ul><li><a href="https://iceo.mit.edu">ICEO Home</a></li><li><span>MIT Committees</span></li></ul></div>                </div>
+
+
+
+
+<p>MIT hosts a tremendous range of committees and groups dedicated to advancing the Institute’s objectives and goals for diversity, equity, and inclusion. Participants in the groups below, which are all organized around campus-wide mandates or charters, are drawn from academic, research, and administrative units all across the MIT. </p>
+
+
+
+<p>For more detailed listings of active committees at MIT, please consult the individual listings on our <a href="/local-resources-and-contacts/" data-type="page" data-id="287">Local Resources and Contacts</a> page.</p>
+
+
+
+<h3 class="wp-block-heading">Institute Committees</h3>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Committee</th><th>Population served</th><th>Contact</th></tr></thead><tbody><tr><td><a href="https://idhr.mit.edu/our-office/brt" target="_blank" rel="noreferrer noopener">Bias Response Team (BRT)</a></td><td>MIT Community</td><td><a href="mailto: srankin@mit.edu">Sarah Rankin</a></td></tr><tr><td><a href="https://facultygovernance.mit.edu/committee/institute-council-belonging-achievement-and-composition#:~:text=With%20this%2C%20the%20newly%20renamed,annual%20reports%20from%20owners%20of" target="_blank" rel="noreferrer noopener">Institute Council on Belonging, Achievement, and Composition</a></td><td>MIT Community</td><td><a href="mailto:cbac@mit.edu" target="_blank" rel="noreferrer noopener">Committee</a></td></tr><tr><td><a href="http://facultygovernance.mit.edu/committee/committee-sexual-misconduct-prevention-and-response" target="_blank" rel="noreferrer noopener">Committee on Sexual Misconduct Prevention and Response</a></td><td>MIT Community</td><td><a href="mailto:srankin@mit.edu" data-type="mailto" data-id="mailto:srankin@mit.edu">Sarah Rankin</a> | <a href="mailto:steil@mit.edu" data-type="mailto" data-id="mailto:lerna@mit.edu">Justin Steil</a> | <a href="mailto:cbarret@mit.edu" data-type="mailto" data-id="mailto:cbarret@mit.edu">Catherine Barrett</a></td></tr><tr><td><a href="https://facultygovernance.mit.edu/committee/council-family-and-work" target="_blank" rel="noreferrer noopener">Council on Family and Work</a></td><td>MIT Community</td><td><a href="mailto:kegol@mit.edu" target="_blank" rel="noreferrer noopener">Ken Goldsmith</a> | <a href="mailto:kegol@mit.edu" data-type="link" data-id="kegol@mit.edu">Kathleen Thelen</a></td></tr><tr><td><a href="https://ome.mit.edu/about/committees-councils/omefac" target="_blank" rel="noreferrer noopener">OME Faculty Advisory Committee</a></td><td>Faculty</td><td><a href="mailto:luu@mit.edu">Diep Luu</a></td></tr><tr><td><a href="https://ome.mit.edu/about/committees-councils/omesac" target="_blank" rel="noreferrer noopener">OME Student Advisory Council</a></td><td>Students</td><td><a href="mailto:dionetta@mit.edu"></a><a href="mailto:luu@mit.edu">Diep Luu</a></td></tr><tr><td><a href="https://orgchart.mit.edu/node/6/letters_to_community/faculty-gender-equity-committees" target="_blank" rel="noreferrer noopener">Faculty Gender Equity Committees</a></td><td>Faculty</td><td>Various</td></tr><tr><td><a href="https://facultygovernance.mit.edu/committee/womens-advisory-group" target="_blank" rel="noreferrer noopener">Women&#8217;s Advisory Group</a></td><td>MIT Community</td><td><a href="mailto:jsegall@mit.edu">Judi Segall</a> | <a href="mailto: kalina_s@mit.edu">Kalina Schloneger</a></td></tr><tr><td><a href="http://wgssi.mit.edu/about" target="_blank" rel="noreferrer noopener">Working Group for Support Staff</a></td><td>Staff</td><td><a href="mailto:wgcc@mit.edu">Shirley Entzminger</a></td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Local Committees</h3>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Committee</th><th>Contact</th></tr></thead><tbody><tr><td>SAP Faculty Diversity Committee</td><td><a rel="noreferrer noopener" href="mailto:jankh@mit.edu" target="_blank">Janelle Knox-Hayes</a> | <a href="mailto:lsass@mit.edu" target="_blank" rel="noreferrer noopener">Larry Sass</a></td></tr><tr><td><a href="https://aeroastro.mit.edu/about-us/diversity-equity-inclusion/" target="_blank" rel="noreferrer noopener">AeroAstro Diversity, Equity, and Inclusion Committee</a></td><td><a href="mailto:dap1@mit.edu" target="_blank" rel="noreferrer noopener">Denise Phillips</a></td></tr><tr><td><a href="https://studentlife.mit.edu/about/seaboard/committee-charges" target="_blank" rel="noreferrer noopener">SEABoard Diversity &amp; Inclusion Committee</a></td><td><a href="mailto:seaboard@mit.edu" target="_blank" rel="noreferrer noopener">Committee Chairs</a></td></tr><tr><td><a href="https://d-lab.mit.edu/about/diversity-equity-inclusion-and-belonging" target="_blank" rel="noreferrer noopener">D-Lab DEIB Committee</a></td><td><a href="mailto:d-lab-deib@mit.edu" target="_blank" rel="noreferrer noopener">Committee Chairs</a></td></tr><tr><td><a href="https://engineering.mit.edu/school-of-engineering-diversity-equity-and-inclusion-dei-committee/" target="_blank" rel="noreferrer noopener">SoE Diversity, Equity, and Inclusion Committee</a></td><td><a href="mailto:dplata@mit.edu" target="_blank" rel="noreferrer noopener">Desiree Plata</a></td></tr><tr><td><a href="https://engineering.mit.edu/about/leadership/faculty-gender-equity-committee/" target="_blank" rel="noreferrer noopener">SoE Faculty Gender Equity Committee</a></td><td><a href="mailto:darmofal@mit.edu" data-type="link" data-id="darmofal@mit.edu">David Darmofal</a></td></tr><tr><td><a href="https://www.eecs.mit.edu/community-equity/dei/">EECS Committee for Diversity Equity and Inclusi</a><a href="https://www.eecs.mit.edu/community-equity/dei/" data-type="link" data-id="https://www.eecs.mit.edu/community-equity/dei/">on (CDEI)</a></td><td><a href="mailto:abeyerpu@mit.edu" target="_blank" rel="noreferrer noopener">Amanda Beyer-Purvis</a></td></tr><tr><td><a href="https://physvals.mit.edu/" target="_blank" rel="noreferrer noopener">Physics Values Committee</a></td><td><a href="https://physvals.mit.edu/contact" target="_blank" rel="noreferrer noopener">Committee Chairs</a></td></tr><tr><td><a href="http://tide.scripts.mit.edu/home/" target="_blank" rel="noreferrer noopener">Towards Inclusion, Diversity, and Equity (TIDE) in MIT Earth Atmospheric, and Planetary Sciences (EAPS)</a></td><td><a href="mailto:ljfranco@mit.edu" target="_blank" rel="noreferrer noopener">Lesly Franco</a> | <a href="mailto:jonesae@mit.edu" target="_blank" rel="noreferrer noopener">Alexandra Jones-Kellett</a> | <a href="mailto:jptl@mit.edu">Jensen Lawrence</a></td></tr><tr><td>MIT Sloan, DEI Committee  </td><td><a href="mailto:sloandei@mit.edu" data-type="link" data-id="sloandei@mit.edu">Committee Chairs</a></td></tr></tbody></table></figure>
+
+
+
+<p></p>
+</article><!-- #post-127 -->
+			</div>
+	</main>
+	<footer id="footer">
+    <div class="footer-wrap">
+        <div class="col col-1">
+            <div class="logos">
+                <div>
+                    <a class="navbar-ICEO" href="https://www.mit.edu/" target="_blank">
+                        <svg style="width:100%; min-width: 300px; margin-bottom: 20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 6440 1040" enable-background="new 0 0 6440 1040" xml:space="preserve"><path fill="#FFFFFF" d="M1737.06274,680l28.2522,100.41949c3.35645,12.86707,6.71301,25.73413,8.95105,36.36371
+                            c1.39844,6.15399,2.51697,12.02802,3.63599,17.62256h0.55957c1.1189-5.59454,2.23792-11.46857,3.63647-17.62256
+                            c2.23755-10.62958,5.03503-23.49664,8.67102-36.36371L1819.02124,680h57.90173v200h-37.76221V765.31494
+                            c0-8.11206,0-18.18213,0.83899-26.85315c0.28003-4.75549,0.55957-9.79053,0.8396-14.54559h-0.55957
+                            c-0.83948,4.75507-1.95801,9.23059-2.79749,13.70612c-1.95801,7.83252-3.91602,16.78357-5.87402,24.33557L1797.20264,880h-38.88074
+                            l-33.56665-118.04211c-2.23755-7.552-3.91602-16.50305-5.87402-24.33557c-0.83899-4.47552-1.95801-8.95105-2.79749-13.70612
+                            h-0.55908c0.27954,4.75507,0.55908,9.7901,0.83899,14.54559c0.27954,8.67102,0.83899,18.74109,0.83899,26.85315V880H1680V680
+                            H1737.06274z M1988.81104,864.05591h-0.55945c-3.6366,5.59454-8.11206,10.34955-14.54565,13.70612
+                            c-6.7135,3.35699-15.38452,5.59448-27.69214,5.59448c-29.65063,0-50.07019-15.10455-50.07019-43.91571
+                            c0-15.66455,6.15405-26.29413,16.78357-33.28717c10.62903-6.99255,24.61511-10.62903,40.83875-12.86707
+                            c24.05603-3.35651,34.68567-5.31451,34.68567-16.22357c0-10.62958-7.83252-17.06311-24.05615-17.06311
+                            c-17.9021,0-26.57361,6.15405-27.69214,20.14014h-33.84619c0.27954-12.86707,5.59448-24.33563,15.66406-33.0072
+                            c10.07007-8.67102,25.17517-14.26556,46.15381-14.26556c43.07715,0,60.4198,19.02112,60.4198,52.86725v73.0069
+                            c0,10.90906,1.67847,17.34259,5.03503,19.86011V880h-36.64319C1991.04858,876.92297,1989.65002,870.48944,1988.81104,864.05591z
+                            M1980.41907,848.11182c5.59448-5.03497,8.67151-11.74805,8.67151-18.74109v-21.53857
+                            c-6.7135,4.19598-16.78308,6.15399-26.57361,8.39154c-20.13965,4.47552-29.65015,8.95105-29.65015,22.37762
+                            s8.95105,18.18207,22.37756,18.18207C1966.15344,856.78339,1974.54504,853.42639,1980.41907,848.11182z M2038.31885,833.56628
+                            h35.24463c2.51758,16.78357,13.98608,23.77661,31.32861,23.77661c16.78369,0,26.2937-6.43402,26.2937-16.5036
+                            c0-6.7135-4.75488-10.62952-11.46802-13.14703c-6.99316-2.51752-16.50366-3.91602-26.29419-5.87402
+                            c-13.14648-2.51752-25.4541-5.31458-34.9646-11.74811c-9.79053-6.43353-15.94409-15.94409-15.94409-31.60864
+                            c0-15.66406,6.15356-26.85315,17.0625-34.68518c10.62964-7.55255,24.89526-11.18903,41.39868-11.18903
+                            c38.32178,0,58.46191,18.18207,61.53882,47.55273h-34.40552c-1.95801-15.66461-11.18921-20.97913-27.69263-20.97913
+                            c-15.10474,0-24.61523,5.31451-24.61523,15.94409c0,6.43353,4.75513,9.51056,12.30762,11.74805
+                            c7.27246,2.51752,17.06299,3.63654,27.13306,5.87451c12.02759,2.51703,24.61523,5.31458,34.40527,11.74811
+                            c9.79053,6.71301,16.22412,16.78308,16.22412,33.56616c0,14.54553-6.15405,26.0141-16.78369,33.84613
+                            c-10.90894,7.83258-25.73413,12.30811-43.63623,12.30811C2063.4939,884.19604,2040.55688,864.33594,2038.31885,833.56628z
+                            M2174.25903,833.56628h35.24487c2.51733,16.78357,13.98608,23.77661,31.32861,23.77661
+                            c16.78345,0,26.29419-6.43402,26.29419-16.5036c0-6.7135-4.75562-10.62952-11.46875-13.14703
+                            c-6.99292-2.51752-16.50342-3.91602-26.29395-5.87402c-13.14673-2.51752-25.45435-5.31458-34.96484-11.74811
+                            c-9.79053-6.43353-15.94409-15.94409-15.94409-31.60864c0-15.66406,6.15356-26.85315,17.06323-34.68518
+                            c10.62891-7.55255,24.89453-11.18903,41.39819-11.18903c38.32153,0,58.46167,18.18207,61.53833,47.55273h-34.40527
+                            c-1.95801-15.66461-11.18896-20.97913-27.69263-20.97913c-15.10449,0-24.61523,5.31451-24.61523,15.94409
+                            c0,6.43353,4.75513,9.51056,12.30762,11.74805c7.27319,2.51752,17.06323,3.63654,27.1333,5.87451
+                            c12.02759,2.51703,24.61499,5.31458,34.40503,11.74811c9.79053,6.71301,16.22412,16.78308,16.22412,33.56616
+                            c0,14.54553-6.15405,26.0141-16.7832,33.84613c-10.90942,7.83258-25.73462,12.30811-43.63647,12.30811
+                            C2199.43433,884.19604,2176.49707,864.33594,2174.25903,833.56628z M2405.02539,864.05591h-0.55957
+                            c-3.63647,5.59454-8.11206,10.34955-14.54541,13.70612c-6.71362,3.35699-15.38477,5.59448-27.69214,5.59448
+                            c-29.65088,0-50.07031-15.10455-50.07031-43.91571c0-15.66455,6.15405-26.29413,16.78345-33.28717
+                            c10.62915-6.99255,24.61523-10.62903,40.83887-12.86707c24.05615-3.35651,34.68555-5.31451,34.68555-16.22357
+                            c0-10.62958-7.83252-17.06311-24.05615-17.06311c-17.9021,0-26.57349,6.15405-27.69214,20.14014h-33.84619
+                            c0.27954-12.86707,5.59473-24.33563,15.66406-33.0072c10.07007-8.67102,25.17529-14.26556,46.15381-14.26556
+                            c43.07715,0,60.41992,19.02112,60.41992,52.86725v73.0069c0,10.90906,1.67847,17.34259,5.03491,19.86011V880h-36.64307
+                            C2407.26294,876.92297,2405.86426,870.48944,2405.02539,864.05591z M2396.6333,848.11182
+                            c5.59448-5.03497,8.67163-11.74805,8.67163-18.74109v-21.53857c-6.71362,4.19598-16.7832,6.15399-26.57373,8.39154
+                            c-20.13965,4.47552-29.65015,8.95105-29.65015,22.37762s8.95117,18.18207,22.37769,18.18207
+                            C2382.36768,856.78339,2390.75928,853.42639,2396.6333,848.11182z M2476.35083,862.0979
+                            c-12.86719-13.42657-19.86011-32.44763-19.86011-53.70624s6.99292-40.27972,19.58057-53.98578
+                            c12.30762-13.42657,29.93018-21.8186,52.02783-21.8186c18.74146,0,33.56665,5.59448,44.75513,14.54553
+                            c10.90918,9.23108,17.9021,22.37762,20.41968,38.04224h-37.20264c-2.51758-12.86707-12.02808-22.09814-26.2937-22.09814
+                            c-23.21655,0-34.6853,17.06311-34.6853,45.31476c0,27.4126,10.62915,45.3147,34.12573,45.3147
+                            c15.66455,0,26.2937-7.83203,28.81128-24.33563h36.64307c-1.11841,15.38458-7.83203,28.81116-18.74097,38.6012
+                            c-11.18872,10.07007-26.85327,16.22412-45.87427,16.22412C2507.11987,884.19604,2489.21777,875.80396,2476.35083,862.0979z
+                            M2648.37915,755.24487c10.62964-15.38458,21.81812-22.65759,41.67822-22.65759c15.10498,0,27.13306,5.59448,35.8042,15.10504
+                            c8.67163,9.79004,13.70654,22.93713,13.70654,38.6012V880h-38.04224v-88.11194c0-15.66406-8.6709-26.29364-24.89502-26.29364
+                            c-16.7832,0-29.09082,13.14709-29.09082,33.00714V880h-38.04199V680h38.04199v75.24487H2648.37915z M2852.01514,863.21692h-0.83887
+                            c-9.79053,13.14655-20.97925,20.6991-41.11938,20.6991c-32.16748,0-49.78955-19.86011-49.78955-51.74823v-95.664h37.76196v89.23047
+                            c0,16.78308,7.27271,26.0141,23.77612,26.0141c17.9021,0,28.81128-13.42657,28.81128-32.44763v-82.79694h38.04175V880h-36.64331
+                            V863.21692z M2902.64502,833.56628h35.24463c2.51758,16.78357,13.98608,23.77661,31.32861,23.77661
+                            c16.78369,0,26.29419-6.43402,26.29419-16.5036c0-6.7135-4.75562-10.62952-11.46851-13.14703
+                            c-6.99316-2.51752-16.50366-3.91602-26.29419-5.87402c-13.14673-2.51752-25.4541-5.31458-34.96484-11.74811
+                            c-9.79053-6.43353-15.94409-15.94409-15.94409-31.60864c0-15.66406,6.15356-26.85315,17.06323-34.68518
+                            c10.62915-7.55255,24.89453-11.18903,41.39819-11.18903c38.32178,0,58.46167,18.18207,61.53833,47.55273h-34.40527
+                            c-1.95801-15.66461-11.18896-20.97913-27.69263-20.97913c-15.10449,0-24.61499,5.31451-24.61499,15.94409
+                            c0,6.43353,4.75488,9.51056,12.30737,11.74805c7.27319,2.51752,17.06323,3.63654,27.1333,5.87451
+                            c12.02759,2.51703,24.61499,5.31458,34.40503,11.74811c9.79053,6.71301,16.22412,16.78308,16.22412,33.56616
+                            c0,14.54553-6.15405,26.0141-16.78296,33.84613c-10.90967,7.83258-25.73462,12.30811-43.63672,12.30811
+                            C2927.82007,884.19604,2904.88281,864.33594,2902.64502,833.56628z M3059.28198,862.0979
+                            c-12.86719-13.42657-19.30078-32.72717-19.30078-53.98578c0-21.25909,7.27319-40.27966,19.86011-53.70624
+                            c12.30811-13.42657,29.93018-21.8186,50.90942-21.8186c23.21655,0,40.55908,8.67151,52.58716,24.05609
+                            s18.18213,36.64319,18.18213,62.37781h-104.05615c3.07715,22.37762,14.8252,35.8042,36.64331,35.8042
+                            c15.10498,0,23.49658-6.71356,27.69263-17.62262h37.48218c-2.51758,12.86707-9.5105,24.33563-20.41968,33.0072
+                            c-11.18848,8.67102-26.01367,13.98608-44.4751,13.98608C3090.33105,884.19604,3072.14941,875.80396,3059.28198,862.0979z
+                            M3078.02344,792.72754h63.77637c-1.11914-18.46155-12.86768-30.76965-30.48975-30.76965
+                            C3091.16992,761.95789,3081.37988,773.70648,3078.02344,792.72754z M3206.13452,736.50378v-44.75525h37.20288v44.75525h24.61548
+                            v26.57312h-24.61548v74.68536c0,10.90906,5.59448,14.26562,14.26587,14.26562h7.27271c1.39844,0,2.51733,0,3.91602-0.27954v27.97217
+                            C3266.83398,880,3264.87598,880,3262.63843,880c-4.19604,0.27948-10.07007,0.27948-17.62256,0.27948
+                            c-9.23071,0-18.74121-1.67798-26.2937-6.99249c-7.55249-5.31506-12.58765-13.98608-12.58765-27.41266V763.0769h-19.86011v-26.57312
+                            H3206.13452z M3294.52417,736.50378v-44.75525h37.20264v44.75525h24.61572v26.57312h-24.61572v74.68536
+                            c0,10.90906,5.59448,14.26562,14.26611,14.26562h7.27246c1.39844,0,2.51758,0,3.91602-0.27954v27.97217
+                            C3355.22339,880,3353.26538,880,3351.02783,880c-4.19604,0.27948-10.07007,0.27948-17.62256,0.27948
+                            c-9.23047,0-18.74097-1.67798-26.2937-6.99249c-7.55249-5.31506-12.5874-13.98608-12.5874-27.41266V763.0769h-19.86011v-26.57312
+                            H3294.52417z M3366.68555,833.56628h35.24487c2.51733,16.78357,13.98584,23.77661,31.32861,23.77661
+                            c16.78345,0,26.29395-6.43402,26.29395-16.5036c0-6.7135-4.75537-10.62952-11.46851-13.14703
+                            c-6.99292-2.51752-16.50342-3.91602-26.29419-5.87402c-13.14648-2.51752-25.4541-5.31458-34.9646-11.74811
+                            c-9.79053-6.43353-15.94409-15.94409-15.94409-31.60864c0-15.66406,6.15356-26.85315,17.06323-34.68518
+                            c10.62891-7.55255,24.89453-11.18903,41.39819-11.18903c38.32153,0,58.46167,18.18207,61.53833,47.55273h-34.40527
+                            c-1.95801-15.66461-11.18896-20.97913-27.69263-20.97913c-15.10449,0-24.61523,5.31451-24.61523,15.94409
+                            c0,6.43353,4.75513,9.51056,12.30762,11.74805c7.27319,2.51752,17.06323,3.63654,27.13306,5.87451
+                            c12.02759,2.51703,24.61523,5.31458,34.40527,11.74811c9.79053,6.71301,16.22412,16.78308,16.22412,33.56616
+                            c0,14.54553-6.15405,26.0141-16.7832,33.84613c-10.90942,7.83258-25.73462,12.30811-43.63672,12.30811
+                            C3391.86084,884.19604,3368.92358,864.33594,3366.68555,833.56628z M3598.84985,680v200h-40.55908V680H3598.84985z
+                            M3663.18335,756.08386c9.79004-15.66406,22.65698-23.49658,42.51709-23.49658c15.10522,0,27.13306,5.59448,35.8042,15.10504
+                            c8.67114,9.79004,13.70605,22.93713,13.70605,38.6012V880h-38.04126v-88.11194c0-15.66406-8.67188-26.29364-24.89502-26.29364
+                            c-16.78418,0-29.09106,13.14709-29.09106,33.00714V880h-38.04224V736.50378h37.20312v19.58008H3663.18335z M3768.07788,833.56628
+                            h35.24414c2.51807,16.78357,13.98608,23.77661,31.3291,23.77661c16.7832,0,26.29321-6.43402,26.29321-16.5036
+                            c0-6.7135-4.75513-10.62952-11.46802-13.14703c-6.99316-2.51752-16.50415-3.91602-26.29419-5.87402
+                            c-13.14722-2.51752-25.4541-5.31458-34.96533-11.74811c-9.79004-6.43353-15.94385-15.94409-15.94385-31.60864
+                            c0-15.66406,6.15381-26.85315,17.06299-34.68518c10.63013-7.55255,24.89502-11.18903,41.39917-11.18903
+                            c38.32129,0,58.46118,18.18207,61.53833,47.55273h-34.40625c-1.95801-15.66461-11.18799-20.97913-27.69214-20.97913
+                            c-15.10498,0-24.61499,5.31451-24.61499,15.94409c0,6.43353,4.75488,9.51056,12.30811,11.74805
+                            c7.27197,2.51752,17.06201,3.63654,27.13208,5.87451c12.02808,2.51703,24.61597,5.31458,34.40601,11.74811
+                            c9.79004,6.71301,16.22314,16.78308,16.22314,33.56616c0,14.54553-6.15308,26.0141-16.78296,33.84613
+                            c-10.90918,7.83258-25.73413,12.30811-43.63623,12.30811C3793.25195,884.19604,3770.31494,864.33594,3768.07788,833.56628z
+                            M3919.68359,736.50378v-44.75525h37.20312v44.75525h24.61523v26.57312h-24.61523v74.68536
+                            c0,10.90906,5.59399,14.26562,14.26514,14.26562h7.27295c1.39917,0,2.51709,0,3.91602-0.27954v27.97217
+                            C3980.38281,880,3978.4248,880,3976.18701,880c-4.19507,0.27948-10.07007,0.27948-17.62231,0.27948
+                            c-9.23096,0-18.74097-1.67798-26.29395-6.99249c-7.552-5.31506-12.58716-13.98608-12.58716-27.41266V763.0769h-19.86011v-26.57312
+                            H3919.68359z M4037.44141,685.315v34.12567h-38.04126V685.315H4037.44141z M4037.44141,736.50378V880h-38.04126V736.50378
+                            H4037.44141z M4071.84741,736.50378v-44.75525h37.20337v44.75525h24.61523v26.57312h-24.61523v74.68536
+                            c0,10.90906,5.59375,14.26562,14.26514,14.26562h7.27295c1.39893,0,2.51807,0,3.91602-0.27954v27.97217
+                            C4132.54688,880,4130.58887,880,4128.35059,880c-4.1958,0.27948-10.06982,0.27948-17.62207,0.27948
+                            c-9.23096,0-18.74097-1.67798-26.29395-6.99249c-7.552-5.31506-12.58716-13.98608-12.58716-27.41266V763.0769h-19.86011v-26.57312
+                            H4071.84741z M4242.19336,863.21692h-0.83887c-9.79004,13.14655-20.979,20.6991-41.11816,20.6991
+                            c-32.16846,0-49.79053-19.86011-49.79053-51.74823v-95.664h37.76221v89.23047c0,16.78308,7.27197,26.0141,23.77637,26.0141
+                            c17.90186,0,28.81104-13.42657,28.81104-32.44763v-82.79694h38.04199V880h-36.64404V863.21692z M4313.24268,736.50378v-44.75525
+                            h37.20312v44.75525h24.61523v26.57312h-24.61523v74.68536c0,10.90906,5.59424,14.26562,14.26514,14.26562h7.27295
+                            c1.39941,0,2.51709,0,3.91602-0.27954v27.97217C4373.94189,880,4371.98389,880,4369.74609,880
+                            c-4.19531,0.27948-10.07031,0.27948-17.62207,0.27948c-9.23096,0-18.74121-1.67798-26.29395-6.99249
+                            c-7.55225-5.31506-12.5874-13.98608-12.5874-27.41266V763.0769h-19.85986v-26.57312H4313.24268z M4403.87207,862.0979
+                            c-12.8667-13.42657-19.2998-32.72717-19.2998-53.98578c0-21.25909,7.27197-40.27966,19.85986-53.70624
+                            c12.30713-13.42657,29.93018-21.8186,50.9082-21.8186c23.21729,0,40.56055,8.67151,52.58838,24.05609
+                            s18.18115,36.64319,18.18115,62.37781H4422.0542c3.07715,22.37762,14.8252,35.8042,36.64307,35.8042
+                            c15.10547,0,23.49756-6.71356,27.69238-17.62262h37.4834c-2.51807,12.86707-9.51123,24.33563-20.42041,33.0072
+                            c-11.18896,8.67102-26.01416,13.98608-44.4751,13.98608C4434.92139,884.19604,4416.73926,875.80396,4403.87207,862.0979z
+                            M4422.61328,792.72754h63.77637c-1.11914-18.46155-12.86719-30.76965-30.48926-30.76965
+                            C4435.76025,761.95789,4425.97021,773.70648,4422.61328,792.72754z M4601.35303,862.0979
+                            c-13.42676-13.42657-20.979-32.44763-20.979-53.70624s7.55225-40.27972,20.979-53.98578
+                            c13.14648-13.42657,31.6084-21.8186,53.98535-21.8186c22.37842,0,40.83936,8.39203,54.2666,21.8186
+                            c13.14697,13.70605,20.69873,32.72717,20.69873,53.98578s-7.55176,40.27966-20.69873,53.70624
+                            c-13.42725,13.70605-31.88818,22.09814-54.2666,22.09814C4632.96143,884.19604,4614.49951,875.80396,4601.35303,862.0979z
+                            M4691.70264,808.39166c0-28.25165-12.86719-46.99323-36.36426-46.99323c-23.49609,0-36.36328,18.74158-36.36328,46.99323
+                            c0,27.97211,12.86719,46.7132,36.36328,46.7132C4678.83545,855.10486,4691.70264,836.36377,4691.70264,808.39166z
+                            M4754.63818,736.50378v-12.86755c0-17.62213,6.71387-29.37018,18.18213-36.36322
+                            c11.18896-6.7135,27.13281-8.95105,45.59424-6.99304v29.37067c-17.90234-0.83948-25.73438,1.11853-25.73438,16.22357v10.62958
+                            h25.73438v27.41211h-25.73438V880h-38.04199V763.91589h-19.58008v-27.41211H4754.63818z M5032.95752,680v34.12616h-60.13916V880
+                            h-40.56055V714.12616h-60.13916V680H5032.95752z M5028.7627,862.0979c-12.86719-13.42657-19.30029-32.72717-19.30029-53.98578
+                            c0-21.25909,7.27197-40.27966,19.85986-53.70624c12.30713-13.42657,29.93018-21.8186,50.90967-21.8186
+                            c23.21582,0,40.55908,8.67151,52.58691,24.05609C5144.84717,772.02795,5151,793.28656,5151,819.02118h-104.05566
+                            c3.07715,22.37762,14.8252,35.8042,36.64355,35.8042c15.10498,0,23.49609-6.71356,27.69189-17.62262h37.4834
+                            c-2.51807,12.86707-9.51123,24.33563-20.42041,33.0072c-11.18896,8.67102-26.01416,13.98608-44.4751,13.98608
+                            C5059.81152,884.19604,5041.62939,875.80396,5028.7627,862.0979z M5047.50342,792.72754h63.77637
+                            c-1.11914-18.46155-12.86719-30.76965-30.48926-30.76965C5060.65039,761.95789,5050.86035,773.70648,5047.50342,792.72754z
+                            M5179.81006,862.0979c-12.8667-13.42657-19.85986-32.44763-19.85986-53.70624s6.99316-40.27972,19.58008-53.98578
+                            c12.30811-13.42657,29.93018-21.8186,52.02832-21.8186c18.74121,0,33.56592,5.59448,44.75537,14.54553
+                            c10.90869,9.23108,17.90186,22.37762,20.41895,38.04224h-37.20215c-2.51807-12.86707-12.02832-22.09814-26.29443-22.09814
+                            c-23.2168,0-34.68506,17.06311-34.68506,45.31476c0,27.4126,10.62891,45.3147,34.12646,45.3147
+                            c15.66406,0,26.29297-7.83203,28.81104-24.33563h36.64307c-1.11914,15.38458-7.83203,28.81116-18.74121,38.6012
+                            c-11.18896,10.07007-26.85303,16.22412-45.87402,16.22412C5210.57959,884.19604,5192.67725,875.80396,5179.81006,862.0979z
+                            M5351.83887,755.24487c10.62939-15.38458,21.81836-22.65759,41.67822-22.65759c15.10449,0,27.13232,5.59448,35.8042,15.10504
+                            c8.67139,9.79004,13.70605,22.93713,13.70605,38.6012V880h-38.04199v-88.11194c0-15.66406-8.6709-26.29364-24.89502-26.29364
+                            c-16.7832,0-29.09131,13.14709-29.09131,33.00714V880h-38.04102V680h38.04102v75.24487H5351.83887z M5502.88574,756.08386
+                            c9.79102-15.66406,22.6582-23.49658,42.51855-23.49658c15.104,0,27.13184,5.59448,35.8042,15.10504
+                            c8.6709,9.79004,13.70605,22.93713,13.70605,38.6012V880h-38.04248v-88.11194c0-15.66406-8.6709-26.29364-24.89502-26.29364
+                            c-16.7832,0-29.09131,13.14709-29.09131,33.00714V880h-38.04102V736.50378h37.20215v19.58008H5502.88574z M5630.71875,862.0979
+                            c-13.42725-13.42657-20.97949-32.44763-20.97949-53.70624s7.55225-40.27972,20.97949-53.98578
+                            c13.146-13.42657,31.60791-21.8186,53.98486-21.8186c22.37842,0,40.83936,8.39203,54.2666,21.8186
+                            c13.14697,13.70605,20.69873,32.72717,20.69873,53.98578s-7.55176,40.27966-20.69873,53.70624
+                            c-13.42725,13.70605-31.88818,22.09814-54.2666,22.09814C5662.32666,884.19604,5643.86475,875.80396,5630.71875,862.0979z
+                            M5721.06787,808.39166c0-28.25165-12.86719-46.99323-36.36426-46.99323c-23.49609,0-36.36279,18.74158-36.36279,46.99323
+                            c0,27.97211,12.8667,46.7132,36.36279,46.7132C5708.20068,855.10486,5721.06787,836.36377,5721.06787,808.39166z M5814.2124,680v200
+                            h-38.04199V680H5814.2124z M5851.69385,862.0979c-13.42725-13.42657-20.979-32.44763-20.979-53.70624
+                            s7.55176-40.27972,20.979-53.98578c13.146-13.42657,31.60791-21.8186,53.98535-21.8186
+                            c22.37793,0,40.83887,8.39203,54.26611,21.8186c13.14697,13.70605,20.69922,32.72717,20.69922,53.98578
+                            s-7.55225,40.27966-20.69922,53.70624c-13.42725,13.70605-31.88818,22.09814-54.26611,22.09814
+                            C5883.30176,884.19604,5864.83984,875.80396,5851.69385,862.0979z M5942.04297,808.39166
+                            c0-28.25165-12.8667-46.99323-36.36377-46.99323c-23.49609,0-36.36328,18.74158-36.36328,46.99323
+                            c0,27.97211,12.86719,46.7132,36.36328,46.7132C5929.17627,855.10486,5942.04297,836.36377,5942.04297,808.39166z
+                            M5992.67041,884.19604h37.76221c3.07617,8.95099,10.90918,15.94403,28.81104,15.94403
+                            c21.2583,0,31.88818-9.79053,31.88818-29.93011v-15.66461h-0.83984c-8.6709,9.79059-19.02002,16.78314-37.48242,16.78314
+                            c-16.22363,0-31.60791-6.15356-43.35596-18.18164c-12.02832-11.74805-19.86035-28.53162-19.86035-50.34973
+                            c0-21.25861,6.43311-38.88123,17.62207-51.18878c10.90918-12.30756,26.01416-19.02106,44.47559-19.02106
+                            c17.90186,0,31.04883,6.99304,39.72021,19.02106h0.56006v-15.10455h36.64307v132.58716
+                            c0,20.13959-6.1543,33.84619-17.06299,43.63623c-12.02832,11.18903-30.48926,16.22406-51.74854,16.22406
+                            C6020.08252,928.95123,5996.86572,912.16766,5992.67041,884.19604z M6085.25684,829.37073
+                            c5.31494-6.99304,7.83301-16.50354,7.83301-27.4126c0-10.62958-2.79785-20.41962-8.39209-27.41266
+                            c-5.59375-6.99304-13.98584-11.46857-25.73389-11.46857c-19.58008,0-32.16797,14.82507-32.16797,39.16071
+                            c0,24.6156,12.58789,38.60168,32.44775,38.60168C6071.27197,840.83929,6079.66309,836.36377,6085.25684,829.37073z
+                            M6168.05518,897.06311c15.38525,0,21.25928-7.55255,21.25928-19.58063c0-3.63654-0.56006-8.39154-2.23779-14.26556
+                            c-1.95801-5.87402-4.47607-13.70654-8.67139-24.6156l-38.60205-102.09753h40l21.25928,64.6153
+                            c2.23779,6.71307,4.1958,14.26562,6.15381,20.69916c0.83936,3.63647,1.95801,6.99298,3.07715,10.62952h0.55908
+                            c0.83887-3.63654,1.67822-6.99304,2.51709-10.62952c1.39893-6.43353,3.63721-13.98608,5.875-20.69916l20.13916-64.6153h38.32227
+                            l-50.07031,147.13275c-5.59424,16.22357-10.90918,26.85309-18.46143,33.56616c-7.83203,6.99304-17.62305,9.79053-32.16797,9.79053
+                            h-22.37695v-29.93011H6168.05518z M880,880h160V400H880V880z M1120,320h400V160h-400V320z M880,160.00003h160v160H880V160.00003z
+                            M640,880h160V160H640V880z M400,720h160V160H400V720z M160,880h160V160H160V880z M1120,880h160V400h-160V880z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="address">Institute Community and Equity Office<br>
+                Massachusetts Institute of Technology<br>
+                77 Massachusetts Avenue, 4-205<br>Cambridge MA 02139</p>
+            <div class="subscription-form">
+            </div>
+        </div>
+        <div class="col col-2">
+            <h3>Quick Links</h3>
+                        <ul class="quick-links">
+                <li class="page_item page-item-2">
+                                            <a href="https://ir.mit.edu/diversity-dashboard/">
+                            <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.063 0H2.813A2.816 2.816 0 0 0 0 2.813v15.75a2.816 2.816 0 0 0 2.813 2.812h11.25a2.816 2.816 0 0 0 2.812-2.813V2.813A2.816 2.816 0 0 0 14.062 0Zm1.687 18.563a1.69 1.69 0 0 1-1.688 1.687H2.813a1.69 1.69 0 0 1-1.687-1.688V2.813c0-.93.757-1.687 1.688-1.687h11.25c.93 0 1.687.757 1.687 1.688v15.75ZM14.063 23.625H2.813A2.816 2.816 0 0 0 0 26.438v6.75A2.816 2.816 0 0 0 2.813 36h11.25a2.816 2.816 0 0 0 2.812-2.813v-6.75a2.816 2.816 0 0 0-2.813-2.812Zm1.687 9.563a1.69 1.69 0 0 1-1.688 1.687H2.813a1.69 1.69 0 0 1-1.687-1.688v-6.75c0-.93.757-1.687 1.688-1.687h11.25c.93 0 1.687.757 1.687 1.688v6.75ZM36 33.188v-15.75a2.816 2.816 0 0 0-2.813-2.813h-11.25a2.816 2.816 0 0 0-2.812 2.813v15.75A2.816 2.816 0 0 0 21.938 36h11.25A2.816 2.816 0 0 0 36 33.187Zm-1.125 0a1.69 1.69 0 0 1-1.688 1.687h-11.25a1.69 1.69 0 0 1-1.687-1.688v-15.75c0-.93.757-1.687 1.688-1.687h11.25c.93 0 1.687.757 1.687 1.688v15.75ZM36 9.563v-6.75A2.816 2.816 0 0 0 33.187 0h-11.25a2.816 2.816 0 0 0-2.812 2.813v6.75a2.816 2.816 0 0 0 2.813 2.812h11.25A2.816 2.816 0 0 0 36 9.562Zm-1.125 0a1.69 1.69 0 0 1-1.688 1.687h-11.25a1.69 1.69 0 0 1-1.687-1.688v-6.75c0-.93.757-1.687 1.688-1.687h11.25c.93 0 1.687.757 1.687 1.688v6.75Z"
+                                      fill="#fff"/>
+                            </svg>
+                            <span>Demographic Data</span>
+                        </a>
+                                    </li>
+                <li>
+                                            <a href=/mit-programs-and-services/>
+                            <svg width="37" height="31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.41 10.419a3.326 3.326 0 0 0-.507-1.78 3.306 3.306 0 0 0-1.378-1.23L19.879.332a3.301 3.301 0 0 0-2.88 0L2.293 7.41A3.33 3.33 0 0 0 .92 8.642a3.351 3.351 0 0 0 1.373 4.786l3.173 1.532v9.372a5.318 5.318 0 0 0 .934 3.03 5.282 5.282 0 0 0 2.49 1.952 27.723 27.723 0 0 0 19.038 0 5.282 5.282 0 0 0 2.49-1.952c.611-.89.937-1.948.933-3.03V14.96l3.174-1.532.055-.03v6.52a.913.913 0 1 0 1.83 0V10.42Zm-6.89 13.913a3.468 3.468 0 0 1-.602 1.976 3.444 3.444 0 0 1-1.619 1.278 25.999 25.999 0 0 1-17.781 0 3.444 3.444 0 0 1-1.619-1.278 3.468 3.468 0 0 1-.603-1.976v-8.489l9.672 4.664a3.301 3.301 0 0 0 2.88 0l9.673-4.664v8.489Zm4.217-12.565-14.682 7.085a1.495 1.495 0 0 1-1.293 0L3.08 11.767a1.491 1.491 0 0 1-.845-1.348 1.5 1.5 0 0 1 .845-1.348l14.682-7.055a1.496 1.496 0 0 1 1.293 0l14.682 7.055a1.491 1.491 0 0 1 .845 1.348 1.5 1.5 0 0 1-.845 1.348Z"
+                                      fill="#fff"/>
+                            </svg>
+                            <span>Community Resources</span>
+                        </a>
+                                    </li>
+                <li>
+                                            <a href=https://actionplan.mit.edu/>
+                            <svg width="36" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.58 6.446c.581-.697.93-1.568.93-2.497 0-2.09-1.742-3.832-3.833-3.832-2.09 0-3.832 1.742-3.832 3.832 0 .93.349 1.8.93 2.497C1.276 7.491 0 9.291 0 11.672c0 1.045.232 1.742.755 2.207.87.754 2.729.406 3.368.29.754-.116 1.625-.232 2.554-.232.93 0 1.8.116 2.555.232 1.394.232 2.555.406 3.368-.29.523-.407.755-1.162.755-2.207 0-2.38-1.278-4.18-3.774-5.226Zm-2.903-5.11c1.452 0 2.671 1.22 2.671 2.671 0 1.452-1.219 2.671-2.67 2.671-1.452 0-2.672-1.219-2.672-2.67 0-1.452 1.22-2.672 2.671-2.672Zm5.168 11.671c-.406.349-1.335.175-2.438 0-.813-.116-1.742-.29-2.73-.29-.987 0-1.916.116-2.729.29-1.103.233-2.032.349-2.438 0-.233-.174-.349-.638-.349-1.277 0-2.148 1.22-3.542 3.658-4.355a3.83 3.83 0 0 0 1.858.465 3.83 3.83 0 0 0 1.859-.465c2.438.813 3.658 2.265 3.658 4.355 0 .639-.117 1.103-.349 1.277ZM32.225 6.505c.58-.697.93-1.568.93-2.497 0-2.09-1.743-3.832-3.833-3.832S25.49 1.918 25.49 4.008c0 .93.348 1.8.929 2.497-2.497 1.045-3.774 2.845-3.774 5.226 0 1.045.232 1.742.754 2.206.871.755 2.73.407 3.368.29.755-.116 1.684-.232 2.555-.232.929 0 1.8.116 2.555.232 1.393.233 2.555.407 3.368-.29.522-.406.754-1.161.754-2.206 0-2.381-1.277-4.181-3.774-5.226Zm-2.903-5.168c1.452 0 2.67 1.22 2.67 2.671 0 1.452-1.219 2.67-2.67 2.67-1.452 0-2.671-1.218-2.671-2.67s1.22-2.671 2.67-2.671Zm5.168 11.671c-.407.348-1.336.174-2.439 0-.813-.116-1.742-.29-2.73-.29-.986 0-1.915.116-2.728.29-1.103.174-2.032.29-2.439 0-.232-.174-.348-.639-.348-1.277 0-2.149 1.22-3.542 3.658-4.355a3.83 3.83 0 0 0 1.858.464 3.83 3.83 0 0 0 1.858-.464c2.439.813 3.658 2.264 3.658 4.355 0 .638-.116 1.103-.348 1.277ZM20.905 25.954c.58-.697.929-1.568.929-2.497 0-2.09-1.742-3.832-3.832-3.832s-3.833 1.742-3.833 3.832c0 .93.349 1.8.93 2.497-2.497 1.045-3.775 2.845-3.775 5.226 0 1.045.232 1.742.755 2.206.871.755 2.73.407 3.368.29.755-.115 1.684-.232 2.555-.232.929 0 1.8.116 2.555.233 1.393.232 2.554.406 3.367-.29.523-.407.755-1.162.755-2.207 0-2.38-1.277-4.18-3.774-5.226Zm-2.903-5.168c1.451 0 2.67 1.22 2.67 2.671 0 1.452-1.219 2.671-2.67 2.671-1.452 0-2.671-1.22-2.671-2.67 0-1.452 1.219-2.672 2.67-2.672Zm5.167 11.73c-.406.348-1.335.174-2.438 0-.813-.117-1.742-.291-2.73-.291-.986 0-1.915.116-2.728.29-1.104.175-2.033.29-2.439 0-.232-.174-.348-.638-.348-1.277 0-2.148 1.219-3.542 3.658-4.355a3.83 3.83 0 0 0 1.858.465 3.83 3.83 0 0 0 1.858-.465c2.438.813 3.658 2.265 3.658 4.355 0 .639-.116 1.045-.349 1.277ZM30.775 15.273c-.174 4.413-2.729 8.478-6.677 10.626l.58 1.045c4.297-2.322 7.026-6.793 7.258-11.612l-1.16-.059ZM18.056.754c-2.322 0-4.645.58-6.677 1.684l.58 1.045c1.8-1.045 3.89-1.568 6.04-1.568 2.148 0 4.238.523 6.096 1.568l.58-1.045A13.846 13.846 0 0 0 18.057.754ZM5.224 15.273l-1.162.059c.233 5.11 3.252 9.696 7.84 11.96l.522-1.102c-4.239-2.033-6.968-6.213-7.2-10.917Z"
+                                      fill="#fff"/>
+                            </svg>
+                            <span>Action Plan</span>
+                        </a>
+                                    </li>
+                <li>
+                                    </li>
+            </ul>
+
+
+        </div>
+        <div class="col col-3">
+            <h3>Keep in touch</h3>
+            <ul class="contacts">
+                <li>
+                    <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.62 10.275 11.666 8.32c-.698-.698-1.884-.419-2.163.488-.21.628-.907.977-1.535.838-1.396-.35-3.28-2.163-3.628-3.629-.21-.628.209-1.326.837-1.535.907-.279 1.186-1.465.488-2.163L3.712.366c-.559-.488-1.396-.488-1.884 0L.502 1.692c-1.326 1.396.14 5.094 3.419 8.373 3.28 3.28 6.978 4.815 8.373 3.42l1.326-1.326c.488-.559.488-1.396 0-1.884Z"
+                              fill="#fff"/>
+                    </svg>
+                                        <a href="tel:+1 617-715-2066">
+                        +1 617-715-2066                    </a>
+                </li>
+                <li>
+                    <svg width="14" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.281 5.57 4.72 2.984V2.461l-4.72 3.11ZM0 2.46v6.094l4.72-2.983L0 2.46ZM13.126.688H.876a.864.864 0 0 0-.849.744l6.974 4.595 6.974-4.595a.864.864 0 0 0-.849-.744ZM8.478 6.099l-1.238.815a.437.437 0 0 1-.481 0L5.52 6.098.027 9.572a.863.863 0 0 0 .847.739h12.25c.435 0 .78-.323.847-.739L8.478 6.1Z"
+                              fill="#fff"/>
+                    </svg>
+                                        <a href="mailto:iceo@mit.edu">iceo@mit.edu</a>
+                </li>
+            </ul>
+<!--            <div class="icons">-->
+<!---->
+<!--                <a href="--><!--" target="_blank" rel="noreferrer noopener">-->
+<!--                    <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title>-->
+<!--                        <rect width="30" height="30" rx="5" fill="#fff"/>-->
+<!--                        <path d="M22.945 11.99A8.118 8.118 0 0 0 25 9.895v-.001a8.667 8.667 0 0 1-2.363.637c.85-.5 1.5-1.285 1.805-2.23a8.282 8.282 0 0 1-2.6.977A4.137 4.137 0 0 0 18.847 8c-2.27 0-4.098 1.814-4.098 4.038 0 .32.028.627.095.92a11.669 11.669 0 0 1-8.451-4.223 4.024 4.024 0 0 0-.562 2.04c0 1.399.73 2.638 1.821 3.356a4.102 4.102 0 0 1-1.852-.497v.044c0 1.962 1.42 3.591 3.285 3.967-.334.09-.698.133-1.075.133a3.67 3.67 0 0 1-.776-.069 4.133 4.133 0 0 0 3.831 2.813 8.324 8.324 0 0 1-5.084 1.721c-.336 0-.659-.014-.981-.055A11.678 11.678 0 0 0 11.29 24c7.236 0 11.952-5.944 11.655-12.01Z"-->
+<!--                              fill="#000035"/>-->
+<!--                    </svg>-->
+<!--                </a>-->
+<!--                <a href="--><!--" target="_blank" rel="noreferrer noopener">-->
+<!--                    <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title>-->
+<!--                        <rect width="30" height="30" rx="5" fill="#fff"/>-->
+<!--                        <path fill-rule="evenodd" clip-rule="evenodd"-->
+<!--                              d="M10.87 5.122c-1.628.073-3.04.467-4.179 1.592-1.143 1.13-1.536 2.536-1.61 4.133-.045.997-.313 8.529.463 10.504a5.02 5.02 0 0 0 2.91 2.878c.634.244 1.356.41 2.416.458 8.86.397 12.145.18 13.53-3.336.246-.626.415-1.341.462-2.39.405-8.808-.066-10.717-1.61-12.247-1.225-1.211-2.666-2.036-12.382-1.592Zm.081 17.793c-.97-.043-1.496-.203-1.848-.338a3.241 3.241 0 0 1-1.888-1.867c-.591-1.501-.395-8.63-.342-9.783.051-1.13.282-2.163 1.086-2.96.995-.984 2.28-1.466 11.034-1.075 1.142.051 2.186.28 2.992 1.075.995.984 1.489 2.269 1.087 10.915-.044.96-.206 1.48-.342 1.828-.901 2.288-2.973 2.606-11.779 2.205ZM19.09 9.65c0 .652.534 1.181 1.194 1.181.66 0 1.195-.53 1.195-1.18 0-.652-.536-1.182-1.195-1.182-.66 0-1.194.53-1.194 1.181Zm-9.227 5.254c0 2.79 2.287 5.054 5.11 5.054 2.821 0 5.109-2.263 5.109-5.054 0-2.791-2.288-5.053-5.11-5.053-2.822 0-5.11 2.261-5.11 5.053Zm1.793 0c0-1.811 1.484-3.28 3.316-3.28 1.832 0 3.317 1.469 3.317 3.28 0 1.812-1.485 3.281-3.317 3.281s-3.316-1.47-3.316-3.281Z"-->
+<!--                              fill="#000"/>-->
+<!--                    </svg>-->
+<!--                </a>-->
+<!--            </div>-->
+        </div>
+        <div class="col col-4">
+            <p class="call-out">Have you experienced or witnessed discrimination or harassment at MIT?</p>
+            <p><a href="https://idhr.mit.edu/submitincidentreport" class="btn btn-small btn-wide">Report an incident</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="left">
+            <a href="https://iceo.mit.edu/privacy-statement/">Privacy policy</a>
+        </div>
+        <div class="right"><a href="https://accessibility.mit.edu/">Accessibility</a></div>
+    </div>
+</footer><!-- #footer -->
+</div><!-- #page -->
+
+<!-- YouTube Feed JS -->
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript" src="https://iceo.mit.edu/wp-content/themes/iceo/vendor/flickity/flickity.js?ver=2.2.2" id="flickity-js"></script>
+<script type="text/javascript" src="https://iceo.mit.edu/wp-content/themes/iceo/dist/assets/js/app.js?ver=0.1" id="iceo-sripts-js"></script>
+<script type="text/javascript" src="https://iceo.mit.edu/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script type="text/javascript" src="https://iceo.mit.edu/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script type="text/javascript" src="https://iceo.mit.edu/wp-content/themes/iceo/src/assets/js/custom.js?ver=2.2.2" id="custom-js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-56CWZYFYBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-56CWZYFYBE');
+</script>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  
+  const menus = document.querySelectorAll(".menu");
+
+  menus.forEach((menu) => {
+    const menuItems = menu.querySelectorAll("li");
+
+    menuItems.forEach((menuItem) => {
+      if (menuItem.classList.contains("current-menu-item")) {
+        const parentLi = menu.closest("li");
+
+        if (parentLi) {
+          parentLi.classList.add("active");
+        }
+      }
+    });
+  });
+});
+
+
+</script>
+
+<script type="text/javascript" src="https://iceo.mit.edu/wp-content/themes/iceo/dist/assets/js/wow.js"></script>
+
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ab0374a39e","applicationID":"1118817163","transactionName":"Z1QGZBZQVkNYU0YNWV4eJVMQWFdeFkBTA1M=","queueTime":0,"applicationTime":168,"atts":"SxMFEl5KRU0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

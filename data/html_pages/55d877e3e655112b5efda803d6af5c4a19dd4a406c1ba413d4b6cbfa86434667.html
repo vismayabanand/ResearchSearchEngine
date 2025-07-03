@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5FJHJW2Y"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-6Z5FJHJW2Y", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+<link rel="canonical" href="https://www.library.cmu.edu/" />
+<link rel="shortlink" href="https://www.library.cmu.edu/" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home | CMU Libraries</title>
+      <link href="//library.cmu.edu/favicon.svg" rel="icon"/>
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_6_ey4iORJaUcpiyypi8NTFrZU4O690ZydtwMO77IP4A.css?delta=0&amp;language=en&amp;theme=cmulibrary&amp;include=eJxFyFsKQjEMRdEJ1WZMp024LaQPkhuls1dE8Gez2BUqk2FUf8h3kyGpKtwPzcUfj9BeDHbo0lWgj-qeNgyXYTcnttjQ_D855o6i3Ztw8uO3DCpwSc8uL6dv81gcKm-pvTIr" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1XbJmlHUZFKah4Yqdi1InSQGv5aWYS8VvXbBhlYODRk.css?delta=1&amp;language=en&amp;theme=cmulibrary&amp;include=eJxFyFsKQjEMRdEJ1WZMp024LaQPkhuls1dE8Gez2BUqk2FUf8h3kyGpKtwPzcUfj9BeDHbo0lWgj-qeNgyXYTcnttjQ_D855o6i3Ztw8uO3DCpwSc8uL6dv81gcKm-pvTIr" />
+
+    
+    <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webstats.library.cmu.edu/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+  </head>
+  <body class="title--home path-frontpage page-node-type-page widepage" >
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <header role="banner">
+    <div class="layout-container">
+     
+    
+      <div class="layout-container"><a href = "/"><img alt="Carnegie Mellon University Library Logo" class="liblogo" src="/themes/custom/cmulibrary/images/cmu_libraries_logo.svg" /></a>
+<div id="block-hamburgermenu">
+<button id="hamburgerbutt" aria-label="Main menu" aria-expanded="false">
+<p>
+-<br>
+-<br>
+-</button>
+</div></div>
+    
+   
+    
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script src="https://cmu.libcal.com/js/hours_today.js"></script> 
+
+<div id = "tophours" style="color:black;"><div class="layout-container">
+<a href="/visit" style="color:black;">
+<div class="legend">Hours:</div>
+	<div class="libraryHoursContainer"><div class="libraryName"></div><div class="libraryHours"></div></div>
+	<div class="libraryHoursContainer"><div class="libraryName"></div><div class="libraryHours"></div></div>
+	<div class="libraryHoursContainer"><div class="libraryName"></div><div class="libraryHours"></div></div>
+</a>
+<script>
+
+fetch("https://cmu.libcal.com/api/1.0/hours/7070,7071,7072?key=f350ce8f5f34fd1cae1ccee509352e59").then(function(response){
+return response.json();
+}).then(function(data) {
+           //sigh - javascript date stuff...
+           var d = new Date();
+           day = d.getDate();
+           day = day.toString();
+           month = d.getMonth()+1;
+           month = month.toString();
+           year = d.getUTCFullYear().toString();
+
+           if(day.length===1){
+           	day="0"+day;
+           }
+           if(month.length===1){
+           	month="0"+month;
+           }
+           date = year+'-'+month+'-'+day;
+           data.forEach(function callback(loc,index){
+           	if(loc['dates'][date]['hours']!==undefined){
+           		hours = loc['dates'][date]['hours'][0]['from'] + " - " + loc['dates'][date]['hours'][0]['to'];
+           	}
+            else if(loc['dates'][date]['status']=="closed"){
+                hours="Closed";
+            }
+           	else{
+           	 	hours = loc['dates'][date]['text'];
+           	}
+           	loc_name = loc['name'];
+           	$(".libraryHoursContainer .libraryName")[index].innerHTML=loc_name;
+           	$(".libraryHoursContainer .libraryHours")[index].innerHTML=hours;
+
+           });
+            
+        },
+    ).catch(function(error){
+    console.error('something went wrong with the hours');
+    console.error(error);
+    });
+
+</script> 
+</div>
+
+</div>
+    
+       
+
+<div class="menubg">
+
+<nav aria-label="Global links">
+
+<div class = "menu-container">
+              <ul class="menu primary">
+            <li class = "stickylogo"><a href = "/">
+            <img src ="/themes/custom/cmulibrary/images/cmu_libraries_logo.svg" alt="CMU Libraries Logo"></a></li>
+                <li class="menu-item">
+        <a href="/find" data-drupal-link-system-path="node/2207">Find</a>
+              </li>
+                <li class="menu-item">
+        <a href="/borrow" data-drupal-link-system-path="node/11">Borrow &amp; Request</a>
+              </li>
+                <li class="menu-item">
+        <a href="/services-overview" data-drupal-link-system-path="node/1663">Services</a>
+              </li>
+                <li class="menu-item">
+        <a href="/visit" data-drupal-link-system-path="node/10">Visit</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about" data-drupal-link-system-path="node/13">About</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about/news" target="_blank" data-drupal-link-system-path="node/14">Events</a>
+              </li>
+        </ul>
+  
+
+
+       
+
+
+              <ul class="menu secondary">
+                    <li class="menu-item">
+        <a href="https://cmu.primo.exlibrisgroup.com/discovery/login?vid=01CMU_INST%3A01CMU&amp;lang=en" target="_blank" title="Log in to your account.">My Account</a>
+              </li>
+                <li class="menu-item">
+        <a href="/ask" data-drupal-link-system-path="node/2328">Ask Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="" class="searchtoggle" role="button" title="Click this icon to open a search dialog">Search</a>
+              </li>
+        </ul>
+  
+
+        </div>
+        <div class="layout-container" style="position: relative;">
+         <form id="searchbox" name="searchbox" action="/site-search" method="get" class="searchbox" aria-hidden="true">
+           <input id="magnifyingSearch" type = "text" name = "search" placeholder="search the site..." aria-label="Search term">
+          <input type = "submit" name = "submit" value = "submit" aria-label="Submit">
+        </form>
+        </div>
+
+  
+
+    </div>
+  </header>
+
+  <div class = "region region-primary-menu">
+    <div class = "menu-container">
+  
+    </div>
+  </div>
+  
+
+
+
+  <div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+  
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>    <div class="primary-content layout-container">
+
+      
+       
+    
+      
+<article data-history-node-id="15" class="node node--type-page path-home node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+                   <div class = "topsearch">
+      
+          
+          <script>
+function searchPrimo_E() {    // Everything search
+ document.getElementById("cmulib_search_output").value = "any,contains," + document.getElementById("cmulib_search_input").value.replace(/[,]/g, " ");  
+ document.forms["searchForm_E"].submit();
+}
+</script>
+<h1 id="page-title">Search</h1>
+<h2>Explore <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&mode=basic&tab=CMU&lang=en&sortby=rank" target=“_blank” title=“Search books and media.”>books and media</a>, <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&mode=basic&tab=CentralIndex&lang=en&sortby=rank" target="_blank" title="Search for articles.">articles</a>, <a href="https://cmu.primo.exlibrisgroup.com/discovery/jsearch?vid=01CMU_INST:01CMU" target=“_blank” title=“Search journals.”>journals</a> and <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&lang=en&mode=advanced" target="_blank" title="Use advanced search.">advanced search</a>.</h2>
+<div class="searchblock">
+            <form  name="searchForm_E" method="get" action="https://cmu.primo.exlibrisgroup.com/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo_E()" target="_self" >
+<!-- Customizable Parameters -->
+<input type="hidden" name="institution" value="01CMU_INST">
+<input type="hidden" name="vid" value="01CMU_INST:01CMU">
+<input type="hidden" name="tab" value="Everything">
+<input type="hidden" name="search_scope" value="MyInst_and_CI">
+<input type="hidden" name="mode" value="Basic">
+<!-- Fixed parameters -->
+<input type="hidden" name="displayMode" value="full">
+<input type="hidden" name="bulkSize" value="10">
+<input type="hidden" name="highlight" value="true">
+<input type="hidden" name="displayField" value="all">
+<input id="cmulib_search_output" name="query" type="hidden">
+<!-- Enable this if "Expand My Results" is enabled by default in Views Wizard -->
+<!-- input type="hidden" name="pcAvailabiltyMode" value="true" -->
+              <input type="text" name="searchtext" class="cmulib_search_main cmulib_search_input" aria-labelledby="page-title" id="cmulib_search_input" placeholder="Explore our collections...">
+            </form>
+      </div>
+
+      </div>
+
+
+             
+<div class="askus"
+>
+            <div>
+              <a href = "/visit">
+      
+            <img loading="lazy" src="/sites/default/files/styles/max_1300x1300/public/2025-02/240926D_Library_Students895-v2.jpg?itok=D87rEU9i" width="1200" height="800" alt="Student in Hunt Library" class="image-style-max-1300x1300" />
+
+
+
+    
+          
+          </a>
+    </div>
+
+
+     <div class = "askbanner">
+              <a href = "/visit">
+      
+          
+          <a href="/node/10/"><h3>Visit Us</h3>
+
+<div class="datetext"></div></a>
+
+
+          </a>
+    </div>
+
+
+    
+  </div>
+
+             
+<div class="historic-photo fullwidth"
+>
+          <div class = "bottom-caption">
+              <a href = "https://digitalcollections.library.cmu.edu/cmu-collection/general-photograph-collection">
+      
+          
+          <p><a href="http://doi.library.cmu.edu/10.1184/pmc/GPC/GPC_67137_031" target="_blank" title="View original image in the General Photograph Collection in CMU Digital Collections." rel=" noopener">Spring Carnival Midway Rides (c.1967)</a></p>
+          </a>
+    </div>
+
+
+    
+<div class="subnav"
+>
+          <div class = "layout-container">
+      
+          
+          <h3>Quick Links</h3><ul><li><a href="https://guides.library.cmu.edu/az.php" target="_blank" title="Visit the Databases, eResources &amp; Tools page in a new window." rel=" noopener">Databases eResources &amp; Tools</a></li><li><a href="/node/2336/" title="Visit the Journals &amp; Newspapers page.">Journals &amp; Newspapers</a></li><li><a href="/node/2331/" title="Visit the Connecting From Off-Campus page.">Connecting From Off-Campus</a></li><li><a href="/node/2223/" title="Visit the Find Your Librarian page.">Find Your Librarian</a></li><li><a href="https://guides.library.cmu.edu/" target="_blank" title="Visit the Research Guides page in a new window." rel=" noopener">Research Guides</a></li><li><a href="https://cmu.libcal.com/r/new" target="_blank" title="Visit the Reserve a Space page in a new window." rel=" noopener">Reserve A Space</a></li><li><a href="/node/2322/" title="Learn more on the Requesting from other Libraries service page.">Interlibrary Loan</a></li><li><a href="/node/2339/" title="Visit the Course Reserves service page.">Course Reserves</a></li></ul>
+      </div>
+
+
+       <div>
+      
+          
+          
+      </div>
+
+
+    
+  </div>
+
+       <div>
+      
+          
+          <h2><a href="/node/2324/">Discover Distinctive Collections</a></h2>
+      </div>
+
+
+    
+  </div>
+
+              <div class = "below-photo">
+      
+    <h2>Getting Started Guides
+    </h2>
+          
+          <h3>Connect with solutions for your academic and research needs.</h3>
+      </div>
+
+
+               <a href="/undergraduate" class="featureblock">
+    <div class="views-row card4x">
+      <div class="duotone blacktint">
+        <img src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_4_screen/public/2021-08/SolutionsFor_Undergraduates.jpg?h=a7e6d17b&amp;itok=nUF9Wcgy" loading="lazy">
+        <div class="animationtrigger">
+          <div class="coloroverlay"></div>
+          <div class="morelink">Solutions For</div>
+          <div class="card-details">
+            <h2>Undergraduate Students</h2>
+            <p>The Libraries connects you with the resources you need to excel in the classroom from 1-on-1 librarian consultations to in-depth research guides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+               <a href="/graduate-postdoc" class="featureblock">
+    <div class="views-row card4x">
+      <div class="duotone blacktint">
+        <img src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_4_screen/public/2021-08/SolutionsFor_HomepageArtboard%202%20copy%203.jpg?h=a7e6d17b&amp;itok=umblLKxY" loading="lazy">
+        <div class="animationtrigger">
+          <div class="coloroverlay"></div>
+          <div class="morelink">Solutions For</div>
+          <div class="card-details">
+            <h2>Graduate Students &amp; Postdocs</h2>
+            <p>We offer a variety of services designed to make your learning, research, and teaching more effective.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+               <a href="/faculty-staff" class="featureblock">
+    <div class="views-row card4x">
+      <div class="duotone blacktint">
+        <img src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_4_screen/public/2021-08/SolutionsFor_FacultyStaff.jpg?h=a7e6d17b&amp;itok=f2pc_ti9" loading="lazy">
+        <div class="animationtrigger">
+          <div class="coloroverlay"></div>
+          <div class="morelink">Solutions For</div>
+          <div class="card-details">
+            <h2>Faculty &amp; Staff</h2>
+            <p>Connect with the Libraries' expertise, resources &amp; technologies to support and transform your scholarly work and expand your information toolkit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+               <a href="/alumni-visitors" class="featureblock">
+    <div class="views-row card4x">
+      <div class="duotone blacktint">
+        <img src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_4_screen/public/2021-08/SolutionsFor_AlumniVisitors.jpg?h=a7e6d17b&amp;itok=9ExZvbKW" loading="lazy">
+        <div class="animationtrigger">
+          <div class="coloroverlay"></div>
+          <div class="morelink">Solutions For</div>
+          <div class="card-details">
+            <h2>Alumni &amp; Visitors</h2>
+            <p>The Libraries welcomes alumni and visitors to explore our spaces, attend our events, and utilize select services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+              <div class = "below-photo">
+      
+    <h2>Featured Services
+    </h2>
+          
+          <h3>Discover&nbsp;our services and tools to support and transform your work.</h3>
+      </div>
+
+
+               <a class="one-third stone-bkg-feature manage title="Research/Reference Help: We can help with first-year assignments to dissertation work and grant-funded research projects.&amp;nbsp;" featureblock" href="/services/reference-help">
+    <div class="stone-text">
+      <h3>Research/Reference Help</h3>
+      <p>We can help with first-year assignments to dissertation work and grant-funded research projects.&nbsp;</p>
+    </div>
+
+    <div class = "overlay"></div>
+    <div class = "arrow"></div>
+  </a>
+
+               <a class="one-third stone-bkg-feature none title="Find a Study Space: Need a place to study? Looking for a room to work on a project? Reserve an individual seat or a group study space." featureblock" href="/services/study-spaces">
+    <div class="stone-text">
+      <h3>Find a Study Space</h3>
+      <p>Need a place to study? Looking for a room to work on a project? Reserve an individual seat or a group study space.</p>
+    </div>
+
+    <div class = "overlay"></div>
+    <div class = "arrow"></div>
+  </a>
+
+               <a class="one-third stone-bkg-feature publish title="Thesis &amp; Dissertation Deposit: The Libraries maintains KiltHub and provides access to and assistance with ProQuest." featureblock" href="/services/thesis-dissertation-deposit">
+    <div class="stone-text">
+      <h3>Thesis &amp; Dissertation Deposit</h3>
+      <p>The Libraries maintains KiltHub and provides access to and assistance with ProQuest.</p>
+    </div>
+
+    <div class = "overlay"></div>
+    <div class = "arrow"></div>
+  </a>
+
+              <div class = "rightalign blackarrow">
+      
+          
+          <p><a href="/services">See our Services Directory</a></p>
+      </div>
+
+
+                   <h3 class="fullwidth-with-link-heading">Exhibits &amp; Events</h3>
+    <a class="fullwidth-with-link " href="internal:/node/5211/" >
+    <img src="" alt="" loading="lazy">
+  </a>
+
+              <div class = "home-events-left">
+              <a href = "https://youtu.be/EBBeiuGRpJU?si=DZu8GX0-vX8su1Wy">
+      
+            <img loading="lazy" src="/sites/default/files/styles/max_1300x1300/public/2025-04/fine-and-rare-2025-0422.png?itok=r7VNdGea" width="1000" height="667" alt="Watch Fine and Rare V" class="image-style-max-1300x1300" />
+
+
+
+    
+          
+          </a>
+    </div>
+
+
+             
+<div class = "home-events-right">
+<div class="views-element-container"><div class="front-page-events-list view view-this-month-s-events-for-front-page view-id-this_month_s_events_for_front_page view-display-id-block_1 js-view-dom-id-23727e36070ff20098684ac009b77634415d059bfa17d4f3aabdcee13329ebc5">
+  
+    
+      
+      <div class="view-empty">
+      <h2>Upcoming Events</h2>
+<p><a href="https://cmu.libcal.com">see all events</a></p>
+<p>No events are scheduled at this time. Please check back later.</p>
+    </div>
+  
+          </div>
+</div>
+
+    
+  </div>
+
+                <div>
+      
+          
+          <p><spacer type="block" size="50"></spacer></p>
+      </div>
+
+
+               <a href="/node/6040" class="one-third-featured-collection-block duotone blacktint featureblock" title="Like, Totally Transformative: CMU in the 1980s: Exhibit Extended until July 11">
+    <img class="ctaimage" src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_3_screen/public/2025-02/ComputerLife_0.jpg?h=1bf8db40&amp;itok=kgazSUCk" alt="CMU 1980s"  loading="lazy">
+    <div class="animationtrigger">
+      <div class="coloroverlay"></div>
+      <div class="morelink"></div>
+      <div class="card-details">
+        <h4><p>Exhibit Extended until July 11</p></h4>
+        <h3>Like, Totally Transformative: CMU in the 1980s</h3>
+
+      </div>
+    </div>
+  </a>
+
+
+               <a href="https://cmu.libcal.com/event/14116508" class="one-third-featured-collection-block duotone blacktint featureblock" title="(MUG) Map (&amp; GIS) User Group: Thursday, May 8 (Posner Hall)">
+    <img class="ctaimage" src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_3_screen/public/2025-04/jakob-braun-vpsPRd_rz-A-unsplash.jpg?h=10d202d3&amp;itok=1GLgX6a8" alt="map"  loading="lazy">
+    <div class="animationtrigger">
+      <div class="coloroverlay"></div>
+      <div class="morelink"></div>
+      <div class="card-details">
+        <h4><p>Thursday, May 8 (Posner Hall)</p></h4>
+        <h3>(MUG) Map (&amp; GIS) User Group</h3>
+
+      </div>
+    </div>
+  </a>
+
+
+               <a href="/node/6233" class="one-third-featured-collection-block duotone blacktint featureblock" title="Student Organizations Archival Event: Photo Gallery">
+    <img class="ctaimage" src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_3_screen/public/2025-04/1student-organizations-cmu_0.jpg?h=6eb229a4&amp;itok=HSD62ebN" alt="Living History"  loading="lazy">
+    <div class="animationtrigger">
+      <div class="coloroverlay"></div>
+      <div class="morelink"></div>
+      <div class="card-details">
+        <h4><p>Photo Gallery</p></h4>
+        <h3>Student Organizations Archival Event</h3>
+
+      </div>
+    </div>
+  </a>
+
+
+              <div class = "rightalign blackarrow">
+      
+          
+          <p><a href="/node/4938/">See all exhibits</a><strong> &amp; </strong><a href="https://cmu.libcal.com">events</a></p>
+      </div>
+
+
+             
+<div class="views-element-container"><div class="newsfeatures view view-news-front-page view-id-news_front_page view-display-id-block_1 js-view-dom-id-69b78cfc89ae854dec7d6b7c4cd2cb6c6820b119a2e4a8f4df5c78d47b8939cd">
+  
+    
+      
+      <div class="view-content">
+          <div class="views-row"><h2>Featured Story</h2>  <a href="/about/news/2025-04/student-workers" hreflang="en"><img loading="lazy" src="/sites/default/files/styles/max_650x650/public/2025-04/Enhance-Library-Learning-Spaces-main.jpg?itok=tTgMj5us" width="650" height="433" alt="Sorrells Library" class="image-style-max-650x650" />
+
+</a>
+<div class="date"><time datetime="2025-04-14T12:00:00Z" class="datetime">April 14, 2025</time>
+</div><h3><a href="/about/news/2025-04/student-workers" hreflang="en">Meet the Libraries Student Workers</a></h3></div>
+
+    </div>
+  
+            <div class="view-footer">
+      <div class="newsfeatures-side view view-news-front-page view-id-news_front_page view-display-id-block_2 js-view-dom-id-38c2ae8e66141642eff5e2e915dc1e5f63b60fcecc01f07d74ab64a2fb12375b">
+  
+    
+      <div class="view-header">
+      <h2>Recent News</h2>
+    </div>
+      
+      <div class="view-content">
+          <div class="views-row"><div class="date"><time datetime="2025-05-05T12:00:00Z" class="datetime">May 5, 2025</time>
+</div><h3><a href="/about/news/2025-05/sustainable-art-gallery-fashion" hreflang="en">“Metamorphosis: A Sustainable Art Gallery &amp; Fashion Showcase” Photo Gallery</a></h3></div>
+    <div class="views-row"><div class="date"><time datetime="2025-05-05T12:00:00Z" class="datetime">May 5, 2025</time>
+</div><h3><a href="/about/news/2025-05/remembering-julia-parsons" hreflang="en">Remembering Julia Parsons</a></h3></div>
+    <div class="views-row"><div class="date"><time datetime="2025-05-01T12:00:00Z" class="datetime">May 1, 2025</time>
+</div><h3><a href="/about/news/2025-05/jewish-american-heritage-month" hreflang="en">Discover &amp; Discuss: Jewish American Heritage Month</a></h3></div>
+    <div class="views-row"><div class="date"><time datetime="2025-04-25T12:00:00Z" class="datetime">April 25, 2025</time>
+</div><h3><a href="/about/news/2025-04/cmu-student-organizations-history" hreflang="en">“Living History: Tracing CMU Culture Through Student Organizations” Photo Gallery</a></h3></div>
+    <div class="views-row"><div class="date"><time datetime="2025-04-23T12:00:00Z" class="datetime">April 23, 2025</time>
+</div><h3><a href="/about/news/2025-04/architecture-archives-graduate-research" hreflang="en">How a Collection in the Architecture Archives Inspired Graduate Research</a></h3></div>
+
+    </div>
+  
+            <div class="view-footer">
+      <h4><a href="/news">View all news and stories</a></h4>
+    </div>
+    </div>
+
+    </div>
+    </div>
+</div>
+
+    
+
+             
+<div class="views-element-container"><div class="all-staff-view view view-all-staff view-id-all_staff view-display-id-block_1 js-view-dom-id-121c53a52bdb3c812e1bc37377a0fe436911f0f1fbfdf093f16379f1b37baa46">
+  
+    
+      <div class="view-header">
+      <h2>Libraries Staff &amp; Faculty</h2>
+    </div>
+      
+      <div class="view-content">
+      <div class = "people-wrapper">
+
+    <div class="views-row">  <img loading="lazy" src="/sites/default/files/styles/focal_point_person_circle/public/person/images/Heather%20Duganieri_0.jpeg?h=e679a1d3&amp;itok=0p2mIOMV" width="250" height="250" alt="Heather Duganieri" class="image-style-focal-point-person-circle" />
+
+
+<h3><a href="/about/people/heather-duganieri" hreflang="en">Heather Duganieri</a></h3><h5><p>Senior Administrative Assistant - UEIS</p></h5></div>
+
+    <div class="views-row">  <img loading="lazy" src="/sites/default/files/styles/focal_point_person_circle/public/person/images/240502_Studio_Portraits_Jason_Glenn01A.jpg?h=ab122eea&amp;itok=zPoF20bS" width="250" height="250" alt="Jason Glenn" class="image-style-focal-point-person-circle" />
+
+
+<h3><a href="/about/people/jason-glenn" hreflang="en">Jason Glenn</a></h3><h5><p>Program Director for Research Information Management Services</p>
+</h5></div>
+
+    <div class="views-row">  <img loading="lazy" src="/sites/default/files/styles/focal_point_person_circle/public/person/images/Z9A_78478LR-Edit_1.jpg?h=7262c4fb&amp;itok=isc-V7-o" width="250" height="250" alt="Maria Regan" class="image-style-focal-point-person-circle" />
+
+
+<h3><a href="/about/people/maria-regan" hreflang="en">Maria Regan</a></h3><h5><p>UEIS Financial Analyst</p></h5></div>
+
+    <div class="views-row">  <img loading="lazy" src="/sites/default/files/styles/focal_point_person_circle/public/person/images/240723-Studio-Portraits-Di-Yoong15A-min.jpg?h=ba332023&amp;itok=Fypr4IS2" width="250" height="250" alt="Di Yoong" class="image-style-focal-point-person-circle" />
+
+
+<h3><a href="/about/people/di-yoong" hreflang="en">Di Yoong</a></h3><h5><p>Social Sciences Librarian</p></h5></div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    
+
+              <div class = "rightalign blackarrow">
+      
+          
+          <p><a href="/about/people">See all Staff &amp; Faculty</a></p>
+      </div>
+
+
+                <div>
+      
+          
+          <p><spacer type="block" size="50"></spacer></p>
+      </div>
+
+
+                 <a class="fullwidth-with-link " href="https://library.cmu.edu/about/news/2024-11/hunt-library" >
+    <img src="https://www.library.cmu.edu/sites/default/files/styles/fullwidth1400x/public/2025-04/archives-intern-2025-2x.png?itok=LY1xQhQO" alt="One Day at Hunt Library: Your Destination for Discovery" loading="lazy">
+  </a>
+
+        
+  </div>
+
+</article>
+
+  
+
+
+    </div>
+          <aside class="layout-sidebar-first" role="complementary">
+         
+    
+      <div class="libchatblockcontainer" style="position: fixed; top: 120px;z-index: 99999;right: 3px;">
+<script src="https://cmu.libanswers.com/load_chat.php?hash=a5b8ce7fb27db34e427037cfe3a501a120f6f49db612749e0648cb4bcd156129"></script>
+<div id="libchat_a5b8ce7fb27db34e427037cfe3a501a120f6f49db612749e0648cb4bcd156129"></div>
+<!-- <script src="https://cmu.libanswers.com/load_chat.php?hash=aaf4a6f7405bc20b63dd936f59442213"></script> 
+<div id="libchat_aaf4a6f7405bc20b63dd936f59442213"></div>-->
+</div>
+    
+  
+
+      </aside>
+    
+    
+  </main>
+
+<footer role="contentinfo">
+  <div class = "layout-container">
+    <div class = "footer-links secondary">
+      
+    </div>
+    
+    <div class = "socialicons">
+      <div class = "footer-links secondary right">
+  
+      <p><strong>Location</strong></p>
+    
+      <p><a href="https://www.google.com/maps/place/Warner+Hall,+5000+Forbes+Ave,+Pittsburgh,+PA+15213/@40.4441688,-79.9455665,17z/data=!3m1!4b1!4m5!3m4!1s0x8834f2218bddc99f:0xeea6ccadbf7b721e!8m2!3d40.4441647!4d-79.9433725" target="_blank">5000 Forbes Avenue<br>
+          Pittsburgh, PA 15213-3890</a><br>
+          <a href="tel:412-268-2444">+1 412-268-2444</a><br>
+          <a href="/about/contact">Contact Us</a> | <a href="/node/1700/">Subscribe to our Newsletters</a><br>
+          <a href="https://unilib.library.cmu.edu" target="_blank">Staff Portal</a> | <a href="/policies">Policies</a> | <a href="/node/5352/">Accessibility</a> | <a href="/node/4982/">COVID-19 Updates</a><br>
+          <a href="https://www.cmu.edu/legal/" target="_blank">Legal Info</a> | <a href="https://www.cmu.edu/" target="_blank">www.cmu.edu</a></p>
+    
+  </div>
+ 
+    
+      <p><a href="/about/giving" target="_blank"><img src = "/themes/custom/cmulibrary/images/give_to_lib_button.png" class="footergive" alt="give to the libraries"></a></p>
+
+    
+   
+    
+      <div class="socialicons">
+        <a href="https://www.instagram.com/cmulibraries/" target="_blank"><img src="/themes/custom/cmulibrary/images/insta.svg" alt="instagram"></a>
+        <a href="https://www.youtube.com/c/CarnegieMellonUniversityLibraries/videos" target="_blank"><img src="/themes/custom/cmulibrary/images/you.svg" alt="youtube"></a>
+<!--        <a href="https://www.linkedin.com/company/cmu-libraries" target="_blank"><img src="/themes/custom/cmulibrary/images/linkedin.svg" alt="linkedin"></a>-->
+      </div>
+    
+    <p class="copyright">&copy; 2025 CARNEGIE
+      MELLON UNIVERSITY</p>
+  
+
+
+
+    </div>
+    <img class="cmufooterlogo" src="/themes/custom/cmulibrary/images/cmu-lettermark-w.png" alt="CMU logo">
+  </div>
+</footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/15","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"G-6Z5FJHJW2Y","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"quicklink":{"admin_link_container_patterns":["#block-local-tasks-block a",".block-local-tasks-block a","#drupal-off-canvas a","#toolbar-administration a"],"ignore_admin_paths":true,"ignore_ajax_links":true,"ignore_file_ext":true,"total_request_limit":0,"concurrency_throttle_limit":0,"idle_wait_timeout":2000,"viewport_delay":0,"debug":false,"url_patterns_to_ignore":["user\/logout","#","\/admin","\/edit"]},"user":{"uid":0,"permissionsHash":"d3931732b00e2dce23a55be7a66da115a90c76e5b7c1db05974a65ba0ccdc643"}}</script>
+<script src="https://polyfill-fastly.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry%2CURL%2CObject.assign%2CArray.from%2CArray.prototype.includes%2CString.prototype.includes%2CElement.prototype.matches%2CPromise%2CPromise.prototype.finally"></script>
+<script src="/sites/default/files/js/js_1NX-6lPOVILXImEzBtL3EBF4CUQB1DrlqEyf3FW7YoE.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=cmulibrary&amp;include=eJxtyUsOgCAQBNELYTgSGYiSlnZG-Sy4vTsXhl3lVboGEavU6TMtCrezuWyWuQdR4exIzf_BPQOpEFr8VysLUPTluI3zAPkC0M4zOA"></script>
+<script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js"></script>
+<script src="/sites/default/files/js/js_PTh5L8k9mcPVyMARpXD82zutrIzIMV4G1y2xlJwHx6A.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=cmulibrary&amp;include=eJxtyUsOgCAQBNELYTgSGYiSlnZG-Sy4vTsXhl3lVboGEavU6TMtCrezuWyWuQdR4exIzf_BPQOpEFr8VysLUPTluI3zAPkC0M4zOA"></script>
+
+  </body>
+</html>

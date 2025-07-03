@@ -1,0 +1,727 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="Carnegie Mellon University (CMU)" name="author"/>
+        <meta content="Carnegie Mellon University (CMU) is a global research university recognized for world-class arts and technology programs, collaboration across disciplines and innovative leadership in education." name="description"/>
+        <meta content="CMU, arts, technology, science, policy, business, humanities, engineering, energy, environment, health, brain, wellness, creativity, global, society, economy, computing, graduate, undergraduate, research, interdisciplinary, finance, computer, interaction, entertainment" name="keywords"/>
+        <title>Carnegie Mellon University - Schedule Of Classes</title>
+    
+        <link rel="shortcut icon" href="/open/SOC/static/images/cmu.ico" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/open/SOC/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/open/SOC/static/css/soc.css">
+        
+    </head>
+    <body>
+        <div id="body" class="container">
+            <div id="header">
+                <div id="logo">
+                    <div class="row">
+                        <ul class="list-inline pull-right">
+                            <li><a href="http://www.cmu.edu" target="_blank">Carnegie Mellon Home</a></li>
+                            <li><a href="http://www.cmu.edu/hub" target="_blank">The HUB</a></li>
+                            <li><a href="http://www.cmu.edu/hub/legend.html" target="_blank">Map/Legend</a></li>
+                            <li><a href="http://bookstore.web.cmu.edu/selecttermdept.aspx" target="_blank">Text Book Information</a></li>
+                        </ul>                     
+                    </div>
+                    <div class="row">
+                        <a href="/open/SOC/SOCServlet"><img class="img-responsive" src="/open/SOC/static/images/logo.png"></a>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <div class="navbar-default navbar-inner">
+                        <ul class="nav nav-tabs">
+                            <li  >
+                                <a href="/open/SOC/SOCServlet">Welcome</a>
+                            </li>
+                            <li class="active" >
+                                <a href="/open/SOC/SOCServlet/search">Course Search</a>
+                            </li>
+                            <li  >
+                                <a href="/open/SOC/SOCServlet/completeSchedule">Complete Schedule</a>
+                            </li>
+                            <li  >
+                                <a href="/open/SOC/SOCServlet/feedback">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        	<div id="content">
+                <div id="messages">
+                    
+                </div>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-title">Search for Courses</h2>
+    </div>
+</div>
+    
+<form id="search-form" class="form" action="/open/SOC/SOCServlet/search" method="post">    
+    <div class="row">
+        <div class="col-md-6">            
+            <div class="form-group" data-default="F25">
+                <h4>Semester / Year</h4>
+                <select id="semester" name="SEMESTER" class="form-control">
+                
+                    <option  value="F25">Fall 2025</option>
+                
+                    <option  value="M25">Summer 2025</option>
+                
+                    <option  value="S25">Spring 2025</option>
+                
+                    <option  value="F24">Fall 2024</option>
+                
+                    <option  value="M24">Summer 2024</option>
+                
+                    <option  value="S24">Spring 2024</option>
+                
+                </select>
+            </div>
+            <div class="form-group" id="course-type" data-default="NO">
+                
+                <label class="radio-inline" for="all-courses"> 
+                    <input type="radio" name="MINI" id="all-courses" value="NO" checked="checked">
+                    View All Courses
+                </label>
+                
+                <label class="radio-inline" for="mini-courses">
+                    <input type="radio" name="MINI" id="mini-courses" value="YES" >
+                    View Mini Courses Only
+                </label> 
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group" data-default="All">
+                <h4>Course Level</h4>
+                <select id="grad-under" name="GRAD_UNDER" class="form-control">
+                    
+                        <option selected value="All">All Levels</option>
+                    
+                        <option  value="U">Undergraduate</option>
+                    
+                        <option  value="G">Graduate</option>
+                    
+                </select>
+            </div>
+            <div class="form-group" data-default="All">
+                <h4>Teaching Location</h4>
+                <select id="prg-location" name="PRG_LOCATION" class="form-control">
+                    
+                        <option selected value="All">All Locations</option>
+                    
+                        <option  value="DOH">Doha, Qatar</option>
+                    
+                        <option  value="KGL">Kigali, Rwanda</option>
+                    
+                        <option  value="LIS">Lisbon, Portugal</option>
+                    
+                        <option  value="LAX">Los Angeles, California</option>
+                    
+                        <option  value="NYC">New York, New York</option>
+                    
+                        <option  value="PIT">Pittsburgh, Pennsylvania</option>
+                    
+                        <option  value="SJC">San Jose, California</option>
+                    
+                        <option  value="UNK">Unknown Location</option>
+                    
+                        <option  value="DCA">Washington, District of Columbia</option>
+                    
+                        <option  value="IAD">Washington, District of Columbia:Dulles</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group" data-default="All">
+                <h4>Departments</h4>
+                <h4 id="dept-warn-sublabel" class="text-danger">Searching across all or several departments may result in a longer response time.</h4>
+                <select multiple id="dept" name="DEPT" class="form-control">
+                 
+                        <option selected value="All">
+                            All Departments 
+                            
+                        </option>
+                    
+                        <option  value="ARC">
+                            Architecture 
+                            
+                                (48XXX)
+                            
+                        </option>
+                    
+                        <option  value="ART">
+                            Art 
+                            
+                                (60XXX)
+                            
+                        </option>
+                    
+                        <option  value="AEM">
+                            Arts & Entertainment Management 
+                            
+                                (93XXX)
+                            
+                        </option>
+                    
+                        <option  value="BXA">
+                            BXA Intercollege Degree Programs 
+                            
+                                (52XXX)
+                            
+                        </option>
+                    
+                        <option  value="BSC">
+                            Biological Sciences 
+                            
+                                (03XXX)
+                            
+                        </option>
+                    
+                        <option  value="BMD">
+                            Biomedical Engineering 
+                            
+                                (42XXX)
+                            
+                        </option>
+                    
+                        <option  value="BUS">
+                            Business Administration 
+                            
+                                (70XXX)
+                            
+                        </option>
+                    
+                        <option  value="CFA">
+                            CFA Interdisciplinary 
+                            
+                                (62XXX)
+                            
+                        </option>
+                    
+                        <option  value="CIT">
+                            CIT Interdisciplinary 
+                            
+                                (39XXX)
+                            
+                        </option>
+                    
+                        <option  value="CST">
+                            CM Institute for Strategy and Tech 
+                            
+                                (84XXX)
+                            
+                        </option>
+                    
+                        <option  value="CMQ">
+                            CMUQ-Wide Studies 
+                            
+                                (97XXX)
+                            
+                        </option>
+                    
+                        <option  value="CMU">
+                            Carnegie Mellon University-Wide Studies 
+                            
+                                (99XXX)
+                            
+                        </option>
+                    
+                        <option  value="CHE">
+                            Chemical Engineering 
+                            
+                                (06XXX)
+                            
+                        </option>
+                    
+                        <option  value="CMY">
+                            Chemistry 
+                            
+                                (09XXX)
+                            
+                        </option>
+                    
+                        <option  value="CEE">
+                            Civil & Environmental Engineering 
+                            
+                                (12XXX)
+                            
+                        </option>
+                    
+                        <option  value="CB">
+                            Computational Biology 
+                            
+                                (02XXX)
+                            
+                        </option>
+                    
+                        <option  value="CS">
+                            Computer Science 
+                            
+                                (15XXX)
+                            
+                        </option>
+                    
+                        <option  value="BCA">
+                            Computer Science and Arts 
+                            
+                                (62XXX)
+                            
+                        </option>
+                    
+                        <option  value="DES">
+                            Design 
+                            
+                                (51XXX)
+                            
+                        </option>
+                    
+                        <option  value="HSS">
+                            Dietrich College Interdisciplinary 
+                            
+                                (66XXX)
+                            
+                        </option>
+                    
+                        <option  value="DRA">
+                            Drama 
+                            
+                                (54XXX)
+                            
+                        </option>
+                    
+                        <option  value="ECO">
+                            Economics 
+                            
+                                (73XXX)
+                            
+                        </option>
+                    
+                        <option  value="ECE">
+                            Electrical & Computer Engineering 
+                            
+                                (18XXX)
+                            
+                        </option>
+                    
+                        <option  value="EPP">
+                            Engineering & Public Policy 
+                            
+                                (19XXX)
+                            
+                        </option>
+                    
+                        <option  value="BEA">
+                            Engineering Studies and Arts 
+                            
+                                (62XXX)
+                            
+                        </option>
+                    
+                        <option  value="ENG">
+                            English 
+                            
+                                (76XXX)
+                            
+                        </option>
+                    
+                        <option  value="ETC">
+                            Entertainment Technology 
+                            
+                                (53XXX)
+                            
+                        </option>
+                    
+                        <option  value="H00">
+                            General Dietrich College 
+                            
+                                (65XXX)
+                            
+                        </option>
+                    
+                        <option  value="HC">
+                            Heinz College Wide Courses 
+                            
+                                (94XXX)
+                            
+                        </option>
+                    
+                        <option  value="HIS">
+                            History 
+                            
+                                (79XXX)
+                            
+                        </option>
+                    
+                        <option  value="HCI">
+                            Human-Computer Interaction 
+                            
+                                (05XXX)
+                            
+                        </option>
+                    
+                        <option  value="BHA">
+                            Humanities and Arts 
+                            
+                                (62XXX)
+                            
+                        </option>
+                    
+                        <option  value="ICT">
+                            Information & Communication Technology 
+                            
+                                (04XXX)
+                            
+                        </option>
+                    
+                        <option  value="INI">
+                            Information Networking Institute 
+                            
+                                (14XXX)
+                            
+                        </option>
+                    
+                        <option  value="ISP">
+                            Information Systems Program 
+                            
+                                (67XXX)
+                            
+                        </option>
+                    
+                        <option  value="ISM">
+                            Information Systems:Sch of IS & Mgt 
+                            
+                                (95XXX)
+                            
+                        </option>
+                    
+                        <option  value="III">
+                            Integrated Innovation Institute 
+                            
+                                (49XXX)
+                            
+                        </option>
+                    
+                        <option  value="LTI">
+                            Language Technologies Institute 
+                            
+                                (11XXX)
+                            
+                        </option>
+                    
+                        <option  value="LCL">
+                            Languages Cultures & Appl Linguistics 
+                            
+                                (82XXX)
+                            
+                        </option>
+                    
+                        <option  value="MCS">
+                            MCS Interdisciplinary 
+                            
+                                (38XXX)
+                            
+                        </option>
+                    
+                        <option  value="MLG">
+                            Machine Learning 
+                            
+                                (10XXX)
+                            
+                        </option>
+                    
+                        <option  value="MSE">
+                            Materials Science & Engineering 
+                            
+                                (27XXX)
+                            
+                        </option>
+                    
+                        <option  value="MSC">
+                            Mathematical Sciences 
+                            
+                                (21XXX)
+                            
+                        </option>
+                    
+                        <option  value="MEG">
+                            Mechanical Engineering 
+                            
+                                (24XXX)
+                            
+                        </option>
+                    
+                        <option  value="MED">
+                            Medical Management:Sch of Pub Pol & Mgt 
+                            
+                                (92XXX)
+                            
+                        </option>
+                    
+                        <option  value="MUS">
+                            Music 
+                            
+                                (57XXX)
+                            
+                        </option>
+                    
+                        <option  value="NVS">
+                            Naval Science - ROTC 
+                            
+                                (32XXX)
+                            
+                        </option>
+                    
+                        <option  value="NSI">
+                            Neuroscience Institute 
+                            
+                                (86XXX)
+                            
+                        </option>
+                    
+                        <option  value="PHI">
+                            Philosophy 
+                            
+                                (80XXX)
+                            
+                        </option>
+                    
+                        <option  value="PE">
+                            Physical Education 
+                            
+                                (69XXX)
+                            
+                        </option>
+                    
+                        <option  value="PHY">
+                            Physics 
+                            
+                                (33XXX)
+                            
+                        </option>
+                    
+                        <option  value="PSY">
+                            Psychology 
+                            
+                                (85XXX)
+                            
+                        </option>
+                    
+                        <option  value="PMP">
+                            Public Management:Sch of Pub Pol & Mgt 
+                            
+                                (91XXX)
+                            
+                        </option>
+                    
+                        <option  value="PPP">
+                            Public Policy & Mgt:Sch of Pub Pol & Mgt 
+                            
+                                (90XXX)
+                            
+                        </option>
+                    
+                        <option  value="ROB">
+                            Robotics 
+                            
+                                (16XXX)
+                            
+                        </option>
+                    
+                        <option  value="SCS">
+                            SCS Interdisciplinary 
+                            
+                                (07XXX)
+                            
+                        </option>
+                    
+                        <option  value="BSA">
+                            Science and Arts 
+                            
+                                (62XXX)
+                            
+                        </option>
+                    
+                        <option  value="SDS">
+                            Social & Decision Sciences 
+                            
+                                (88XXX)
+                            
+                        </option>
+                    
+                        <option  value="S3D">
+                            Software & Societal Systems 
+                            
+                                (17XXX)
+                            
+                        </option>
+                    
+                        <option  value="STA">
+                            Statistics and Data Science 
+                            
+                                (36XXX)
+                            
+                        </option>
+                    
+                        <option  value="STU">
+                            StuCo (Student Led Courses) 
+                            
+                                (98XXX)
+                            
+                        </option>
+                    
+                </select>
+                <h4><small>Note: To select multiple departments, hold down the Apple key (Mac) or the Control key (PC) while you click on your department selections.</small></h4>                
+            </div>
+        </div>
+        <div id="form-instructor">
+            <div class="col-md-6">
+              <h4>Instructor <small class="search-helpertext">Use the '%' character as a wildcard</small></h4>
+            </div>
+            <div id="form-instructor-last-name" class="col-md-3">
+              <div class="form-group">
+                  <label for="last-name">Last Name</label>
+                  
+                  <input class="form-control" id="last-name" name="LAST_NAME" type="text" size="30" maxlength="30" value=""/>
+              </div>
+            </div>
+            <div id="form-instructor-first-name" class="col-md-3">
+              <div class="form-group">
+                  <label for="first-name">First Name</label>
+                  
+                  <input class="form-control" id="first-name" name="FIRST_NAME" type="text" size="15" maxlength="15" value=""/>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div id="form-starting-time">
+              <div class="form-group" data-default="All">
+                  <h4>Starting Time</h4>
+                  <select id="beg-time" name="BEG_TIME" class="form-control">
+                      
+                          <option selected value="All">All Times</option>
+                      
+                          <option  value="0700AM">07:00AM</option>
+                      
+                          <option  value="0730AM">07:30AM</option>
+                      
+                          <option  value="0800AM">08:00AM</option>
+                      
+                          <option  value="0830AM">08:30AM</option>
+                      
+                          <option  value="0900AM">09:00AM</option>
+                      
+                          <option  value="0930AM">09:30AM</option>
+                      
+                          <option  value="1000AM">10:00AM</option>
+                      
+                          <option  value="1030AM">10:30AM</option>
+                      
+                          <option  value="1100AM">11:00AM</option>
+                      
+                          <option  value="1130AM">11:30AM</option>
+                      
+                          <option  value="1200PM">12:00PM</option>
+                      
+                          <option  value="1230PM">12:30PM</option>
+                      
+                          <option  value="0100PM">01:00PM</option>
+                      
+                          <option  value="0130PM">01:30PM</option>
+                      
+                          <option  value="0200PM">02:00PM</option>
+                      
+                          <option  value="0230PM">02:30PM</option>
+                      
+                          <option  value="0300PM">03:00PM</option>
+                      
+                          <option  value="0330PM">03:30PM</option>
+                      
+                          <option  value="0400PM">04:00PM</option>
+                      
+                          <option  value="0430PM">04:30PM</option>
+                      
+                          <option  value="0500PM">05:00PM</option>
+                      
+                          <option  value="0530PM">05:30PM</option>
+                      
+                          <option  value="0600PM">06:00PM</option>
+                      
+                          <option  value="0630PM">06:30PM</option>
+                      
+                          <option  value="0700PM">07:00PM</option>
+                      
+                          <option  value="0730PM">07:30PM</option>
+                      
+                          <option  value="0800PM">08:00PM</option>
+                      
+                          <option  value="0830PM">08:30PM</option>
+                      
+                          <option  value="0900PM">09:00PM</option>
+                      
+                          <option  value="0930PM">09:30PM</option>
+                      
+                  </select>
+              </div>
+            </div>
+            <div id="form-keyword">
+              <div class="form-group">
+                  <h4>Keyword <small class="search-helpertext">(Example: Biology)</small> <small class="search-helpertext">Use the '%' character as a wildcard</small></h4>
+                  
+                  <input class="form-control" id="keyword" name="KEYWORD" type="text" size="30" maxlength="30" value=""/>
+              </div>
+              <div class="form-group" id="keyword-type" data-default="YES">
+                  
+                  <label class="radio-inline" for="titles">
+                    <input type="radio" name="TITLE_ONLY" id="titles" value="YES" checked="checked">
+                    Course Titles Only
+                  </label>                  
+                  <label class="radio-inline" for="titles-descriptions"> 
+                    <input type="radio" name="TITLE_ONLY" id="titles-descriptions" value="NO"  >
+                    Course Titles and Descriptions
+                  </label>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <hr />
+            <div id="searchbuttons" class="form-group pull-right">
+                <button type="submit" class="btn btn-default form-button submit-button" name="SUBMIT">Retrieve Schedule</button>
+                <button class="btn btn-default form-button reset-button" name="CLEAR" onclick="resetForm('#messages', '#search-form'); removeCookies(['CmuSocAppSelectedSemester', 'CmuSocAppSelectedCourseLevel', 'CmuSocAppSelectedPrglocation']); return false;">Reset Form</button>                
+            </div>
+        </div>
+    </div>
+</form>
+
+        	</div>
+            <div id="footer">
+                <p class="text-left"><small>© 2014 Carnegie Mellon University</small></p>
+                 
+                <p class="text-right"><small>May 05, 2025</small></p>
+            </div>
+        </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/open/SOC/static/js/jquery-1.11.0.min.js"></script>
+    <script src="/open/SOC/static/js/jquery.cookie.js"></script>
+    <script src="/open/SOC/static/js/bootstrap.min.js"></script>
+    <script src="/open/SOC/static/js/soc.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+  <meta name="ProgId" content="FrontPage.Editor.Document"><title>Welcome to the UCR Time Series Classification/Clustering Page</title></head><body>
+<table border="0" width="100%">
+	<tbody><tr>
+		<td width="153"><img src="NSF.jpg" border="0" height="85" width="86"></td>
+		<td style="color: rgb(153, 153, 153);">
+		<p align="center">
+		<span style="font-size: 44pt; font-family: Calibri;">UCR 
+		Time Series Classification Archive</span></p></td>
+		<td style="color: rgb(153, 153, 153);" width="707">
+Last major update, Summer 2015: Early work on this data resource was funded by an NSF Career Award
+<a href="http://www.checkout.org.cn/awardsearch/showAward.do?AwardNumber=0237918">
+0237918</a>, and it continues to be funded through NSF IIS-1161997 II and NSF 
+IIS 1510741.</td>
+	</tr>
+</tbody></table>
+<p>&nbsp;
+
+</p>
+<p class="MsoNormal"><big style="color: rgb(204, 0, 0);"><big><big><big>Discontinued! <br>
+</big></big></big></big></p>
+<p class="MsoNormal"><big style="color: rgb(204, 0, 0);"><big><big><big>There is now a larger archive <a href="https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/">here</a>.</big></big></big></big> <o:p></o:p></p>
+
+
+<p><font size="4"><br>
+</font></p>
+<p><font size="4"><br>
+</font></p>
+<p><font size="4"><br>
+</font></p>
+<p style="color: rgb(153, 153, 153);"><font size="4">We suggest you begin by reading the briefing document in
+<a href="UCR%20Time%20Series%20Classification%20Archive.pdf">PDF</a> or
+<a href="UCR%20Time%20Series%20Classification%20Archive.pptx">PowerPoint</a>, 
+which also contains the password. Then you can download the entire
+<a href="UCR_TS_Archive_2015.zip">archive</a> (about 350mb in zipped format).</font></p>
+
+<p style="color: rgb(153, 153, 153);"><font size="4">Please reference as: Yanping&nbsp;Chen, Eamonn
+<a href="http://www.cs.ucr.edu/%7Eeamonn/">Keogh</a>, Bing Hu, Nurjahan&nbsp;Begum, 
+Anthony Bagnall, Abdullah Mueen and Gustavo Batista (2015). <i>The UCR Time Series 
+Classification Archive.</i> URL
+<a href="http://www.cs.ucr.edu/%7Eeamonn/time_series_data/">www.cs.ucr.edu/~eamonn/time_series_data/</a></font></p>
+<blockquote style="color: rgb(153, 153, 153);">
+	<p><font size="2">@misc{UCRArchive,<br>
+	title={The UCR Time Series Classification Archive},<br>
+	author={ Chen, Yanping and Keogh, Eamonn and Hu, Bing and Begum, Nurjahan 
+	and Bagnall, Anthony and Mueen, Abdullah and Batista, Gustavo},<br>
+	year={2015},<br>
+	month={July},<br>
+	note = {\url{www.cs.ucr.edu/~eamonn/time_series_data/}}<br>
+	}</font></p>
+</blockquote>
+<table border="1" height="366" width="80%">
+  <tbody>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="18%"><b>Name</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="16%"><b>First paper or data creator</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="5%"><b>Number of classes</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="6%"><b>Size of training set</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="7%"><b>Size of testing set</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="7%"><b>Time series</b>&nbsp;<b>Length&nbsp;</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="13%"><b>1-NN Euclidean
+Distance</b></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="14%">
+		<p style="margin-top: 0pt; margin-bottom: 0pt;"><b>1-NN
+Best Warping Window DTW (<i>r</i>)</b></p>
+		<p style="margin-top: 0pt; margin-bottom: 0pt;">Note that <i>r</i> is the 
+		percentage of time series length</p></td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="38" width="9%">&nbsp;<b>1-NN DTW, no
+Warping Window</b></td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Synthetic Control</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">
+      <p align="center">&nbsp;Pham&nbsp;</p>
+      </td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">6</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">300 </td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">300</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">60</td>
+      <td style="color: rgb(153, 153, 153);" height="19" width="13%">
+      <p align="center">0.120</p>
+      </td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.017 (6)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.007</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Gun-Point</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;Ratanamahatana</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;2</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;50</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;150</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;150</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.087</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.087 (0)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.093</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>CBF</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;3</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;30</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;900</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;128</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.148</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.004 (11)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.003</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Face (all)</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">Xi</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;14</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;560</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;1690</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;131</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.286</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.192 (3)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.192</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>OSU Leaf</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">Gandhi</font>&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;6</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;200</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;242</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;427</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.479</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.388 (7)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.409</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="17" width="18%"><b>Swedish Leaf</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="17" width="16%"><font size="3">Soderkvist</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="17" width="5%">&nbsp;15</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="17" width="6%">&nbsp;500</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="17" width="7%">&nbsp;625</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="17" width="7%">&nbsp;128</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="17" width="13%">&nbsp;0.211</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="17" width="14%">&nbsp;0.154 (2)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="17" width="9%">0.208</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="18" width="18%"><b>50Words</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="18" width="16%">&nbsp;<font size="3">Rath</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="18" width="5%">&nbsp;50</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="18" width="6%">&nbsp;450</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="18" width="7%">&nbsp;455</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="18" width="7%">&nbsp;270</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="18" width="13%">&nbsp;0.369</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="18" width="14%">&nbsp;0.242 (6)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="18" width="9%">&nbsp;0.310</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Trace</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">Roverso</font>&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;4</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;100</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;100</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;275</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.240</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.010 (3)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.000</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Two Patterns</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;<font size="3">Geurts</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;4</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;1000</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;4000</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;128</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.090</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.002 (4)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.000</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Wafer</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;<font size="3">Olszewski</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;2</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;1000</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;6174</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;152</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.005</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.005 (1)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.020</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Face (four)</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;Ratanamahatana</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;4</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;24</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;88</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;350</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.216</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.114 (2)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.170</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Lightning-2</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">
+      <p align="center">&nbsp;<font size="3">Eads</font></p>
+      </td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;2</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;60</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;61</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;637</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.246</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.131 (6)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.131</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Lightning-7</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;<font size="3">Eads</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">&nbsp;7</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;70</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;73</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">&nbsp;319</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">&nbsp;0.425</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">&nbsp;0.288 (5)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">&nbsp;0.274</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>ECG</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">Olszewski</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">2</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">100</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">100</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">96</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.120</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.120 (0)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.230</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Adiac</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">
+      <p align="center">Jalba</p>
+      </td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">37</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">390</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">391</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">176</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.389</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.391 (3)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.396</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><b>Yoga</b></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">Xi</font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">2</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">300</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">3000</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">426</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.170</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.155 (2)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.164</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><font size="3"><b>Fish </b></font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">Lee</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">7</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">175</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">175</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">463</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.217</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.154(4)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.177</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><font size="3"><b>Plane</b></font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">7</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">105</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">105</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">144</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.038</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.000 (6)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.000</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><font size="3"><b>Car</b></font></td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="16%">&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="5%">4</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="6%">60</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">60</td>
+      <td style="background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center" bgcolor="#c0c0c0" height="19" width="7%">577</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="13%">0.267</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="14%">0.233 (1)</td>
+      <td style="color: rgb(153, 153, 153);" align="center" height="19" width="9%">0.267</td>
+    </tr>
+    <tr>
+      <td style="color: rgb(153, 153, 153);" height="19" width="18%"><span style="font-weight: bold;">Beef</span><br>
+      </td>
+      <td style="background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);" bgcolor="#c0c0c0" height="19" width="16%"><font size="3">
+		Tony Bagnall </font></td>
+      <td style="background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);" bgcolor="#c0c0c0" height="19" width="5%">5&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);" bgcolor="#c0c0c0" height="19" width="6%">&nbsp;30</td>
+      <td style="background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);" bgcolor="#c0c0c0" height="19" width="7%">30&nbsp;</td>
+      <td style="background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);" bgcolor="#c0c0c0" height="19" width="7%">470&nbsp;</td>
+      <td style="text-align: center; color: rgb(153, 153, 153);" height="19" width="13%">0.333<br>
+      </td>
+      <td style="text-align: center; color: rgb(153, 153, 153);" height="19" width="14%">0.333 (0)<br>
+      </td>
+      <td style="text-align: center; color: rgb(153, 153, 153);" height="19" width="9%">0.367<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><span style="font-weight: bold;">Coffee</span><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);"><font size="3">Tony Bagnall </font></td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);">2<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center">28<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);">28<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);">286<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.000<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.000 (0)<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.000<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><span style="font-weight: bold;">OliveOil</span><br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);"><font size="3">Tony Bagnall </font></td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);">4<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center">30<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); color: rgb(153, 153, 153);" align="center">30<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 255, 0); text-align: center; color: rgb(153, 153, 153);">570<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.133<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.133 (0)<br>
+      </td>
+      <td style="vertical-align: top; text-align: center; color: rgb(153, 153, 153);">0.167<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>CinC_ECG_torso</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" bgcolor="#ffff00">&nbsp;</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">4</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">40</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1380</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1639</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.103</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.07 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.349</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ChlorineConcentration</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>Lei 
+		Li &amp; C. Faloutsos</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">467</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3840</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">166</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.35</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.35 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.352</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>DiatomSizeReduction</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		<font size="2">rbg-web2.rbge.org.uk/ADIAC/</font></b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">4</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">16</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">306</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">345</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.065</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.065 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.033</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ECGFiveDays</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		physionet.org &amp; E. Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">23</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">861</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">136</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.203</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.203 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.232</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>FacesUCR</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>E. 
+		Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">14</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">200</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2050</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">131</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.231</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.088 (12)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.095</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Haptics</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">&nbsp;</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">5</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">155</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">308</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1092</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.630</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.588 (2)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.623</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>InlineSkate</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		Fabian Morchen</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">7</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">100</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">550</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1882</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.658</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.613 (14)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.616</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ItalyPowerDemand</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>JJ 
+		van Wijk</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">67</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1029</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">24</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.045</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.045 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.05</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MALLAT</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">&nbsp;</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">55</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2345</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1024</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.086</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.086 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.066</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MedicalImages</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">&nbsp;</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">10</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">381</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">760</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">99</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.316</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.253 (20)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.263</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MoteStrain</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">&nbsp;</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1252</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">84</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.121</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.134 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.165</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>SonyAIBORobot SurfaceII</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		<font size="2">(D. 
+		Vail &amp; M. Veloso) &amp; E. Keogh</font></b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">27</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">953</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">65</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.141</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.141 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.169</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>SonyAIBORobot Surface</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		<font size="2">(D. 
+		Vail &amp; M. Veloso) &amp; E. Keogh</font></b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">601</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">70</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.305</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.305 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.275</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>StarLightCurves</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		Pavlos Protopapas</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1000</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8236</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1024</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.151</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.095 (16)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.093</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Symbols</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>E. 
+		Keogh &amp; J. Brady</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">6</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">25</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">995</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">398</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.100</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.062 (8)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.050</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>TwoLeadECG</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00"><b>
+		physionet.org &amp; E. Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">23</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1139</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">82</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.253</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.132 (5)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.096</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Cricket_X</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" rowspan="3" align="center" bgcolor="#ffff00">
+		<b>M. H. Ko, G. West, S. Venkatesh, and M. Kuma. </b>
+      </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">12</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">300</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.423</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.228 (10)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.246</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Cricket_Y</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">12</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">300</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.433</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.238 (17)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.256</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Cricket_Z</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">12</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">390</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">300</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.413</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.254 (5)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.246</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>uWaveGestureLibrary_X</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" rowspan="3" align="center" bgcolor="#ffff00">
+		<b>Rice Efficient Computing Group, Rice University</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">896</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3582</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">315</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.261</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.227 (4)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.273</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>uWaveGestureLibrary_Y</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8<br>
+      </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">896</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3582</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">315</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.338</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.301 (4)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.366</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>uWaveGestureLibrary_Z</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">896</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3582</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">315</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.35</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.322 (6)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.342
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Non-Invasive Fetal ECG Thorax1 </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Bing Hu and Eamonn Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">42</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1800</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1965</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">750</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.171</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.185 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.209</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Non-Invasive Fetal ECG Thorax2 </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Bing Hu and Eamonn Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">42</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1800</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1965</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">750</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.120</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.129 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.135</td>
+    </tr>
+
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>InsectWingbeatSound </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Yanping Chen and Eamonn Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">11</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">220</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1980</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">256</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.438</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.422 (2)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.645</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ECG5000 </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Yanping Chen and Eamonn Keogh</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">5</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">500</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">4500</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">140</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.075</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.075 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.076</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ArrowHead </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">36</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">175</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">251</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.200</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.200 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.297</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>BeetleFly </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">512</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.250</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.300 (7)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.300</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>BirdChicken </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">512</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.450</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.300(6)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.250</td>
+    </tr>
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Ham </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">109</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">105</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">431</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.400 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.533</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Herring </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">64</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">64</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">512</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.484</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.469 (5)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.469</td>
+    </tr>
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>PhalangesOutlinesCorrect</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1800</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">858</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.239</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.239 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.272</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ProximalPhalanxOutlineAgeGroup</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">205</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.215</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.215 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.195</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ProximalPhalanxOutlineCorrect</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">600</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">291</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.192</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.210 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.216</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ProximalPhalanxTW</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">6</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">205</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.292</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.263 (6)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.263</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ToeSegmentation1</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">40</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">228</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">277</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.320</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.250 (8)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.228</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ToeSegmentation2</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">36</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">130</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">343</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.192</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.092 (5)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.162</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>DistalPhalanxOutlineAgeGroup</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">139</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.218</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.228 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.208</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>DistalPhalanxOutlineCorrect</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">276</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">600</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.248</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.232 (2)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.232</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>DistalPhalanxTW</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">6</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">139</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.273</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.272 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.290</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Earthquakes</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">139</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">322</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">512</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.326</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.258 (22)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.258</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MiddlePhalanxOutlineAgeGroup</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">154</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">400</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.260</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.253 (5)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.250</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MiddlePhalanxOutlineCorrect</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">291</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">600</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.247</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.318 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.352</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>MiddlePhalanxTW</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">6</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">154</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">399</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">80</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.439</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.419 (2)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.416</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ShapeletSim</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">20</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">180</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">500</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.461</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.300 (3)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.350</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Wine</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">57</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">54</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">234</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.389</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.389 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.426</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>WordSynonyms</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">25</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">267</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">638</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">270</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.382</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.252 (8)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.351</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Computers</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">250</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">250</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">720</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.424 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.380 (13)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.300</td>
+    </tr>
+
+
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ElectricDevices</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">7</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8926</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">7711</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">96</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.450 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.376 (14)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.399</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>FordA</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1320</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3601</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">500</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.341 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.341 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.438 </td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>FordB</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">810</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3636</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">500</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.442</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.414 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.406</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>HandOutlines</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">370</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1000</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2709</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.199  </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.197 (1)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.202 </td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>LargeKitchenAppliances</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">720</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.507</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.205 (94)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.205 </td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Meat</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">60</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">60</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">448</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.067</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.067 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.067</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Phoneme <a href="Phoneme%20Dataset.txt">(readme)</a> </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Hossein Hamooni and Mueen Abdullah </b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">39</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">214</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1896</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">1024</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.891</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.773 (14)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.772</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>RefrigerationDevices</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">720</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.605 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.560 (8)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.536 </td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ScreenType</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">720</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.640 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.589 (17)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.603</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>ShapesAll</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">60</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">600</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">600</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">512</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.248</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.198 (4)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.232</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>SmallKitchenAppliances</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">375</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">720</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.659</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.328 (15)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.357 </td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Strawberry</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">370</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">613</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">235</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.062 </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center"> 0.062 (0)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center"> 0.060</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>UWaveGestureLibraryAll</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">8</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">896</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">3582</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">945</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.052</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.034 (4)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.108</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>Worms</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">5</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">77</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">181</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">900</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.635</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.586 (3)</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.536</td>
+    </tr>
+
+<tr>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);"><b>WormsTwoClass</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">
+		<b>Tony Bagnall</b></td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">2</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">77</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">181</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center" bgcolor="#ffff00">900</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.414</td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.414 (9) </td>
+      <td style="vertical-align: top; color: rgb(153, 153, 153);" align="center">0.337</td>
+    </tr>
+
+  </tbody>
+</table>
+<hr>
+</body></html>

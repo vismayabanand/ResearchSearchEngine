@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/software" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Essential Stanford Software | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xKroXt1_E9JqHuY-bQMoAn2rt14MHBu295U_c41vhNk.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGKwzAMRC_kxB97IKPYaqJiW0ZjN-3tN3R3KU3ZH8HMewwigHuQeuXY1XwE5mZSu6NPAOkcdkn8H5TSTG8cLnJnuEW1oxu1sJCZqF-zLpQn9EeWun7ywgCtjLBvx5iLauyjlqaVa8d89qepcB0_WrLRKM90pbtrZLQe2oa_-tXMo7axZMHGyaFTvailMKT713pM9R2d_n5j0GGRA6gifJ3Qb5iO4PBA5-IXArub8A7_vHPRNDJ_A0xwmm8" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/25348","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJyNkUFuxCAMRS9EwqJSr4Mc4hBSwMg2k-nti9pRZ5KoUjcWfs-yrA-IoLpYNvRKbL3IWDkWNXAVEhXdHmf8S8ZcmW7olnhHOQ9t_5yhRXdgNBORijJUNwFzJLtQUdhRKKN7v-qQaII0iH6mWMLVd_ohV5xRBAKK29d-3dULNfboBIq4N-OJ0XrKlQoWlfE8PgwZSzOBKCR0CsGGXs79CBvcjzCbCgyhb1rFztwqpPFJxlZqm1KUFWcjCmUhnl2Lap8H-Lkc1TGvgzpldXC_H3CirzEc1aMZemPkUxSznUDQ9N4JAvvVPp8PyrfY10FCVrFX5DYxt4i72O_6E9gryDS3hF-6IhY8","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:acd8cd882d0d857c2874caca6540f1072b3d4344fe41644175664e20eb958173":{"view_name":"software","view_display_id":"block","view_args":"","view_path":"\/node\/25348","view_base_path":null,"view_dom_id":"acd8cd882d0d857c2874caca6540f1072b3d4344fe41644175664e20eb958173","pager_element":0,"viewsreference":{"compressed":"eJxdj9EKgzAMRf8lzz5sbmzMXxmjxDXWQFuljQ4R_33tRIU95OHm3HtDZtAoCNUMPRoKUPnB2gIsO5ZNCIulTWAwgyO_w65pIu2qJdRby1IAeawtaZUcwt5EqJ6vIl0KqUClYZmUTH0qz0s0AfsW_g2sE75fz4-DNExWK48uJ1cR6S3ceTUyfQ5joJFjXv9KyvJWXhJcEyzklCab3z8tX9IiXa4"}}}},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxlj9EOwjAIRX-os2_-DmEdrSxdWQA3_XsXYzR1DxDuuSRc0IwcuM2UXDTOdjF24mVV2QgyP8gCnnck-45KYRRxc8UVRlRliaXKiHUwf1ZuJRSRUgkcSyxH-9cXnPHRwyWYY8uiE9zZ4-9AmlpvZWmOO5ksBNfe-kvRed_sPf2I4RDhKDBCTbf4Gz9UN04EWEnd4hnBbGFj2i2--_vBF0zJjRc"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-25348 path-software path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          <nav class="navbar navbar-expand-lg bg-lagunita-dark navbar-dark navbar-expand-lg" id="navbar-main">
+                        <div class="container">
+                          
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar2" aria-controls="CollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Topic Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar2">
+                                                              
+<nav role="navigation" aria-labelledby="secondary-menu-title" id="block-stanford-uit-menu-menu-software-guide" region="secondary_menu" class="block block-menu navigation menu--menu-software-guide">
+    
+  
+    <h2 id="secondary-menu-title" ><a href="/software" target="" title="" class="navbar-brand">Essential Stanford Software</a></h2>
+    
+
+        
+              <ul region="secondary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item active">
+                          <a href="/software" title="" class="menu-node-unpublished nav-link active menu-node-unpublished menu-node-unpublished nav-link--software is-active" data-drupal-link-system-path="node/25348" aria-current="page">Overview</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/guide/browser-recommendations" title="" class="nav-link dropdown-toggle nav-link--guide-browser-recommendations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24967">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <span title="" class="nav-link-">Windows</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/ess/pc/sunet" class="nav-link--service-ess-pc-sunet" data-drupal-link-system-path="node/637">Connect to the Stanford Network (SUNet) with Windows</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Mac OS X</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/ess/mac/sunet" class="nav-link--service-ess-mac-sunet" data-drupal-link-system-path="node/625">Connect to the Stanford Network (SUNet) with Mac OS X</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Recommendations</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/hardwarerec" class="nav-link--service-hardwarerec" data-drupal-link-system-path="node/3525">Hardware Recommendations</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/browser-recommendations" class="nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser Recommendations for Administrative Applications</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Software Removal</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/software/removal-guide" class="nav-link--software-removal-guide" data-drupal-link-system-path="node/29438">Stanford Software Removal Guide</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                                    </div>
+                                                    </div>
+                      </nav>
+                  </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/ess-banner_1.jpg?itok=A7FrdcaP); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Essential Stanford Software</span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p>Get applications that help you plug into the Stanford network (SUNet) and access university computing services safely and securely.</p>
+</div>
+      
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-df2d3c3c9cc1e43ed311c30b02b012deac759122ae7e7d240e6ebf7ad62eec60">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div class="views-element-container alert alert-info block block-views block-views-blockguide-notice-block" id="block-stanford-uit-views-block-guide-notice-block" region="highlighted">
+  
+    
+      <div class="content">
+      <div region="highlighted"><div class="view view-guide-notice view-id-guide_notice view-display-id-block js-view-dom-id-621d2e4dabbce7fedaeba44210e20faecb9bc6e7df045e4b138a633b6ca0dd15">
+  
+    
+      
+      <div class="view-content row">
+          <div>
+    <p>Can’t find the software you need? Check out <a href="http://softwareguide.stanford.edu/">softwareguide.stanford.edu</a> for guidance on choosing and evaluating software that aligns with your needs and works well with Stanford systems.</p>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_7420" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--7420 section--default">
+		<div class="container">
+						<div id="section_content_7420" class="primary-section-content  ">
+				
+				<div class="row section"><div class="section-content  col-md-12 mx-auto ">
+          <div class="paragraph paragraph--type--view paragraph--view-mode--default">
+          
+            <div class="field field--name-field-section-view field--type-viewsreference field--label-hidden field__item"><div class="views-element-container"><div class="card-filter view view-software view-id-software view-display-id-block js-view-dom-id-acd8cd882d0d857c2874caca6540f1072b3d4344fe41644175664e20eb958173">
+  
+    
+      <div class="view-header">
+      <h2 class="element-invisible">Filter software</h2>
+                                <form class="form-search">
+                                    <div class="filters">
+                                        <fieldset class="filter-group">
+                                            <legend>Select platform</legend>
+                                            <div id="filter-platform" class="filter-button-group" data-filter-group="platform">
+                                                <label><input type="radio" name="platform" value="" data-filter="" data-status-name="either Web Apps, Windows, Macintosh, or Mobile" checked aria-controls="software-list"> <span class="sr-only">Show Software for</span> All <span class="sr-only">Platforms</span></label>
+                                                <label><input type="radio" name="platform" value=".Apps"  data-status-name="Web Apps" data-filter=".Apps" aria-controls="software-list"> Web Apps</label>
+                                                <label><input type="radio" name="platform" value=".Windows"  data-status-name="Windows" data-filter=".Windows" aria-controls="software-list"> Windows</label>
+                                                <label><input type="radio" name="platform" value=".Macintosh"  data-status-name="Macintosh" data-filter=".Macintosh" aria-controls="software-list"> Macintosh</label>
+                                                <label><input type="radio" name="platform" value=".Mobile"  data-status-name="Mobile" data-filter=".Mobile" aria-controls="software-list"> Mobile</label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="filter-group">
+                                            <legend>Select <span class="sr-only">software</span> category</legend>
+                                            <div id="filter-category" class="filter-button-group" data-filter-group="category">
+                                                <label><input type="radio" name="category" value="" data-filter=""  data-status-name="all categories" checked aria-controls="software-list"> <span class="sr-only">Show Software for</span> All <span class="sr-only">Categories</span></label>
+                                                <label><input type="radio" name="category" value=".software-244"  data-status-name="accessibility category" data-filter=".software-244" aria-controls="software-list"> Accessibility</label>
+                                                <label><input type="radio" name="category" value=".software-190"  data-status-name="collaboration category" data-filter=".software-190" aria-controls="software-list"> Collaboration</label>
+                                                <label><input type="radio" name="category" value=".software-146"  data-status-name="compliance category" data-filter=".software-146" aria-controls="software-list"> Compliance</label>
+                                                <label><input type="radio" name="category" value=".software-143"  data-status-name="file transfer category" data-filter=".software-143" aria-controls="software-list"> File Transfer</label>
+                                                <label><input type="radio" name="category" value=".software-148"  data-status-name="networks and connectivity category" data-filter=".software-148" aria-controls="software-list"> Networks and Connectivity</label>
+                                                <label><input type="radio" name="category" value=".software-144"  data-status-name="productivity category" data-filter=".software-144" aria-controls="software-list"> Productivity</label>                                    
+                                                <label><input type="radio" name="category" value=".software-226"  data-status-name="utilities category" data-filter=".software-226" aria-controls="software-list"> Utilities</label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </form>
+                                <div id="software-results" class="sr-only" role="status" aria-live="polite"></div>
+                                <h2 class="element-invisible" id="software-list-heading">List of software</h2>
+    </div>
+        
+          <div role="list" class="view-content row">
+              <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-142 software-143" data-category="software-142 software-143" role="listitem">
+<p class="type"> <i class="fa fa-copy" aria-hidden="true" title="ESS File Transfer category"></i><span class="sr-only">ESS File Transfer category</span></p>
+<h3 class="name">AFS at Stanford</h3>
+<p class="description">Makes it easy to access and save files stored in AFS without using an SFTP client. </p>
+<p class="url url-software"><a href="/software/afs" title="AFS at Stanford" hreflang="und"><span class="element-invisible">AFS at Stanford</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Macintosh Windows ESS File Transfer </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Mobile Web Apps software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">AirWatch (Mobile Device Management)</h3>
+<p class="description">Provides device management capabilities, including convenient configuration, self-service tools, and enhanced protection.</p>
+<p class="url url-software"><a href="/software/mdm" title="AirWatch (Mobile Device Management)" hreflang="und"><span class="element-invisible">AirWatch (Mobile Device Management)</span></a></p>
+<p class="url url-service"><a href="/service/mobiledevice/management"><span class="element-invisible">AirWatch (Mobile Device Management)</span></a></p>
+<div class="hidden">Mobile Web Apps Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">BigFix Client</h3>
+<p class="description">Recommended software that helps ensure your computer has the latest operating system security updates.</p>
+<p class="url url-software"><a href="/software/bigfix" title="BigFix Client" hreflang="und"><span class="element-invisible">BigFix Client</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Macintosh Windows Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Box</h3>
+<p class="description">Provides web-based file sharing, document management, and online collaboration.</p>
+<p class="url url-software"><a href="/software/box" title="Box" hreflang="und"><span class="element-invisible">Box</span></a></p>
+<p class="url url-service"><a href="/service/box"><span class="element-invisible">Box</span></a></p>
+<div class="hidden">Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-226" data-category="software-226" role="listitem">
+<p class="type"> <i class="fa fa-wrench" aria-hidden="true" title="Utilities category"></i><span class="sr-only">Utilities category</span></p>
+<h3 class="name">Dashlane Password Manager </h3>
+<p class="description">Dashlane stores your passwords securely and allows you to log in to websites without having to remember all of your passwords. </p>
+<p class="url url-software"><a href="/software/dashlane" title="Dashlane Password Manager " hreflang="und"><span class="element-invisible">Dashlane Password Manager </span></a></p>
+<p class="url url-service"><a href="/security/password-manager"><span class="element-invisible">Dashlane Password Manager </span></a></p>
+<div class="hidden">Web Apps Utilities </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh software-143" data-category="software-143" role="listitem">
+<p class="type"> <i class="fa fa-copy" aria-hidden="true" title="File Transfer category"></i><span class="sr-only">File Transfer category</span></p>
+<h3 class="name">Fetch</h3>
+<p class="description">Provides secure access to your AFS files for Mac OS X 10.7 and later.</p>
+<p class="url url-software"><a href="/software/fetch" title="Fetch" hreflang="und"><span class="element-invisible">Fetch</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Macintosh File Transfer </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Mobile Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Google Drive</h3>
+<p class="description">Cloud storage service that is also the home of Google Docs amd G Suite. </p>
+<p class="url url-software"><a href="/software/googledrive" title="Google Drive" hreflang="und"><span class="element-invisible">Google Drive</span></a></p>
+<p class="url url-service"><a href="/service/gsuite/drive"><span class="element-invisible">Google Drive</span></a></p>
+<div class="hidden">Mobile Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Google Forms</h3>
+<p class="description">Makes contact forms, short surveys and polls, instructor evaluations, and other forms, free of charge.</p>
+<p class="url url-software"><a href="/software/formbuilder" title="Google Forms" hreflang="und"><span class="element-invisible">Google Forms</span></a></p>
+<p class="url url-service"><a href="/service/google-forms"><span class="element-invisible">Google Forms</span></a></p>
+<div class="hidden">Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-190" data-category="software-190" role="listitem">
+<p class="type"><span class="badge">Recommended</span> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Google Shared drives</h3>
+<p class="description">Shared space where teams can easily store, search, and access their files anywhere, from any device. </p>
+<p class="url url-software"><a href="/software/googleshareddrive" title="Google Shared drives" hreflang="und"><span class="element-invisible">Google Shared drives</span></a></p>
+<p class="url url-service"><a href="/service/gsuite/teamdrive"><span class="element-invisible">Google Shared drives</span></a></p>
+<div class="hidden">Web Apps Collaboration <span class="badge">Recommended</span></div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Mobile Windows software-190" data-category="software-190" role="listitem">
+<p class="type"> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Jabber Softphone</h3>
+<p class="description">Jabber Softphone allows you to use your computer as your Stanford telephone, including placing, receiving, and forwarding calls.</p>
+<p class="url url-software"><a href="/software/jabber" title="Jabber Softphone" hreflang="und"><span class="element-invisible">Jabber Softphone</span></a></p>
+<p class="url url-service"><a href="/service/jabber/softphone"><span class="element-invisible">Jabber Softphone</span></a></p>
+<div class="hidden">Macintosh Mobile Windows Collaboration </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Mobile software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">Jamf</h3>
+<p class="description">Jamf lets us manage and secure Apple devices in a way that meets the needs of modern and mobile users — to better address IT problems and improve security.</p>
+<p class="url url-software"><a href="/software/jamf" title="Jamf" hreflang="und"><span class="element-invisible">Jamf</span></a></p>
+<p class="url url-service"><a href="https://uit.stanford.edu/service/StanfordJamf"><span class="element-invisible">Jamf</span></a></p>
+<div class="hidden">Macintosh Mobile Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Windows software-148" data-category="software-148" role="listitem">
+<p class="type"> <i class="fa fa-exchange" aria-hidden="true" title="Networks and Connectivity category"></i><span class="sr-only">Networks and Connectivity category</span></p>
+<h3 class="name">Kerberos</h3>
+<p class="description">Provides authentication for various Stanford University Network (SUNet) services.</p>
+<p class="url url-software"><a href="/software/kerberos" title="Kerberos" hreflang="und"><span class="element-invisible">Kerberos</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Windows Networks and Connectivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Microsoft 365</h3>
+<p class="description">Microsoft 365 is a cloud-based email and calendaring service, hosted by Microsoft.</p>
+<p class="url url-software"><a href="/software/office365" title="Microsoft 365" hreflang="und"><span class="element-invisible">Microsoft 365</span></a></p>
+<p class="url url-service"><a href="/service/office365"><span class="element-invisible">Microsoft 365</span></a></p>
+<div class="hidden">Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Microsoft Office</h3>
+<p class="description">Provides Microsoft Office to Stanford faculty, staff and students.</p>
+<p class="url url-software"><a href="/software/office" title="Microsoft Office" hreflang="und"><span class="element-invisible">Microsoft Office</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Macintosh Windows Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Windows software-142 software-144" data-category="software-142 software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="ESS Productivity category"></i><span class="sr-only">ESS Productivity category</span></p>
+<h3 class="name">Microsoft Project Professional</h3>
+<p class="description">Project management software for Stanford faculty and staff with full SUNet IDs on Stanford-owned computers.</p>
+<p class="url url-software"><a href="/software/project" title="Microsoft Project Professional" hreflang="und"><span class="element-invisible">Microsoft Project Professional</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Windows ESS Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Windows software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Microsoft Visio Professional</h3>
+<p class="description">Diagramming software for Stanford faculty and staff with full SUNet IDs on Stanford-owned computers.</p>
+<p class="url url-software"><a href="/software/visio" title="Microsoft Visio Professional" hreflang="und"><span class="element-invisible">Microsoft Visio Professional</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Windows Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">MyDevices</h3>
+<p class="description">Lets Stanford affiliates who are subject to Stanford&#039;s information security mandates view the compliance status of their devices.</p>
+<p class="url url-software"><a href="/software/mydevices" title="MyDevices" hreflang="und"><span class="element-invisible">MyDevices</span></a></p>
+<p class="url url-service"><a href="/service/mydevices"><span class="element-invisible">MyDevices</span></a></p>
+<div class="hidden">Web Apps Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">OneDrive for Business</h3>
+<p class="description">OneDrive for Business, an integral part of Microsoft 365, provides a place in the cloud where you can store, share, and sync your work files. </p>
+<p class="url url-software"><a href="/software/onedrive" title="OneDrive for Business" hreflang="und"><span class="element-invisible">OneDrive for Business</span></a></p>
+<p class="url url-service"><a href="/service/office365/online-and-onedrive"><span class="element-invisible">OneDrive for Business</span></a></p>
+<div class="hidden">Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-190" data-category="software-190" role="listitem">
+<p class="type"> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Poll Everywhere</h3>
+<p class="description">Web-based polling tool that allows participants to respond on the web or via SMS texting on their phones.</p>
+<p class="url url-software"><a href="/software/poll-everywhere" title="Poll Everywhere" hreflang="und"><span class="element-invisible">Poll Everywhere</span></a></p>
+<p class="url url-service"><a href="https://ctl.stanford.edu/use-learning-technology/live-polling"><span class="element-invisible">Poll Everywhere</span></a></p>
+<div class="hidden">Web Apps Collaboration </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-144" data-category="software-144" role="listitem">
+<p class="type"> <i class="fa fa-pencil" aria-hidden="true" title="Productivity category"></i><span class="sr-only">Productivity category</span></p>
+<h3 class="name">Qualtrics (Survey Tool)</h3>
+<p class="description">Easy-to-use, full-featured, web-based tool for creating and conducting online surveys.</p>
+<p class="url url-software"><a href="/software/qualtrics" title="Qualtrics (Survey Tool)" hreflang="und"><span class="element-invisible">Qualtrics (Survey Tool)</span></a></p>
+<p class="url url-service"><a href="/service/survey"><span class="element-invisible">Qualtrics (Survey Tool)</span></a></p>
+<div class="hidden">Web Apps Productivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-244" data-category="software-244" role="listitem">
+<p class="type"> <i class="fa fa-universal-access" aria-hidden="true" title="Accessibility category"></i><span class="sr-only">Accessibility category</span></p>
+<h3 class="name">SCRIBE</h3>
+<p class="description">The Stanford Converter into Braille &amp; E-Text (SCRIBE) is an online document conversion system supporting the transformation of text and image-based file types into different formats. </p>
+<p class="url url-software"><a href="/software/scribe" title="SCRIBE" hreflang="und"><span class="element-invisible">SCRIBE</span></a></p>
+<p class="url url-service"><a href="https://oae.stanford.edu/accessibility-resources/scribe"><span class="element-invisible">SCRIBE</span></a></p>
+<div class="hidden">Web Apps Accessibility </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-143" data-category="software-143" role="listitem">
+<p class="type"> <i class="fa fa-copy" aria-hidden="true" title="File Transfer category"></i><span class="sr-only">File Transfer category</span></p>
+<h3 class="name">SecureCRT + SecureFX</h3>
+<p class="description">Integrated secure terminal emulator and file transfer client.</p>
+<p class="url url-software"><a href="/software/scrt_sfx" title="SecureCRT + SecureFX" hreflang="und"><span class="element-invisible">SecureCRT + SecureFX</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Macintosh Windows File Transfer </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Mobile Web Apps Windows software-190" data-category="software-190" role="listitem">
+<p class="type"><span class="badge">Recommended</span> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Slack</h3>
+<p class="description">A cloud-based collaboration tool that lets individuals and groups communicate in real-time via chat in public or private channels.</p>
+<p class="url url-software"><a href="/software/slack" title="Slack" hreflang="und"><span class="element-invisible">Slack</span></a></p>
+<p class="url url-service"><a href="/service/slack"><span class="element-invisible">Slack</span></a></p>
+<div class="hidden">Macintosh Mobile Web Apps Windows Collaboration <span class="badge">Recommended</span></div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Mobile Web Apps Windows software-244" data-category="software-244" role="listitem">
+<p class="type"> <i class="fa fa-universal-access" aria-hidden="true" title="Accessibility category"></i><span class="sr-only">Accessibility category</span></p>
+<h3 class="name">Speechify</h3>
+<p class="description">Text-to-speech that&#039;s available online and various platforms.</p>
+<p class="url url-software"><a href="/software/speechify" title="Speechify" hreflang="und"><span class="element-invisible">Speechify</span></a></p>
+<p class="url url-service"><a href="/software/speechify"><span class="element-invisible">Speechify</span></a></p>
+<div class="hidden">Macintosh Mobile Web Apps Windows Accessibility </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">Stanford Anti-Malware</h3>
+<p class="description">CrowdStrike Falcon provides advanced defensive capabilities against modern computer and network threats.</p>
+<p class="url url-software"><a href="/software/antimalware" title="Stanford Anti-Malware" hreflang="und"><span class="element-invisible">Stanford Anti-Malware</span></a></p>
+<p class="url url-service"><a href="/service/edr"><span class="element-invisible">Stanford Anti-Malware</span></a></p>
+<div class="hidden">Macintosh Windows Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Mobile Web Apps software-226" data-category="software-226" role="listitem">
+<p class="type"> <i class="fa fa-wrench" aria-hidden="true" title="Utilities category"></i><span class="sr-only">Utilities category</span></p>
+<h3 class="name">Stanford Mobile</h3>
+<p class="description">Stanford Mobile is the official mobile app for Stanford University. It provides access to essential Stanford information and services anytime, anywhere on your mobile device.</p>
+<p class="url url-software"><a href="/software/mobileapp" title="Stanford Mobile" hreflang="und"><span class="element-invisible">Stanford Mobile</span></a></p>
+<p class="url url-service"><a href="/mobileapp"><span class="element-invisible">Stanford Mobile</span></a></p>
+<div class="hidden">Mobile Web Apps Utilities </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-146" data-category="software-146" role="listitem">
+<p class="type"> <i class="fa fa-shield" aria-hidden="true" title="Compliance category"></i><span class="sr-only">Compliance category</span></p>
+<h3 class="name">VLRE (Very Lightweight Reporting Engine)</h3>
+<p class="description">Provides encryption verification without requiring BigFix and periodically reports on the computer&#039;s encryption status.</p>
+<p class="url url-software"><a href="/software/vlre" title="VLRE (Very Lightweight Reporting Engine)" hreflang="und"><span class="element-invisible">VLRE (Very Lightweight Reporting Engine)</span></a></p>
+<p class="url url-service"><a href="/service/vlre"><span class="element-invisible">VLRE (Very Lightweight Reporting Engine)</span></a></p>
+<div class="hidden">Macintosh Windows Compliance </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Windows software-148" data-category="software-148" role="listitem">
+<p class="type"> <i class="fa fa-exchange" aria-hidden="true" title="Networks and Connectivity category"></i><span class="sr-only">Networks and Connectivity category</span></p>
+<h3 class="name">VPN (Virtual Private Network)</h3>
+<p class="description">Lets you connect to Stanford&#039;s network as if you were on campus, making access to restricted services possible.</p>
+<p class="url url-software"><a href="/software/vpn" title="VPN (Virtual Private Network)" hreflang="und"><span class="element-invisible">VPN (Virtual Private Network)</span></a></p>
+<p class="url url-service"><a href="/service/vpn"><span class="element-invisible">VPN (Virtual Private Network)</span></a></p>
+<div class="hidden">Macintosh Windows Networks and Connectivity </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Web Apps Windows software-190" data-category="software-190" role="listitem">
+<p class="type"> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">WebEx</h3>
+<p class="description">Lets you schedule, host, and attend video conferencing meetings.</p>
+<p class="url url-software"><a href="/software/webex" title="WebEx" hreflang="und"><span class="element-invisible">WebEx</span></a></p>
+<p class="url url-service"><a href="/service/webex"><span class="element-invisible">WebEx</span></a></p>
+<div class="hidden">Macintosh Web Apps Windows Collaboration </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Windows software-226" data-category="software-226" role="listitem">
+<p class="type"> <i class="fa fa-wrench" aria-hidden="true" title="Utilities category"></i><span class="sr-only">Utilities category</span></p>
+<h3 class="name">Windows Eraser</h3>
+<p class="description">Lets you securely and permanently delete files from your Windows hard drive.</p>
+<p class="url url-software"><a href="/software/eraser" title="Windows Eraser" hreflang="und"><span class="element-invisible">Windows Eraser</span></a></p>
+<p class="url url-service"></p>
+<div class="hidden">Windows Utilities </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Web Apps software-190" data-category="software-190" role="listitem">
+<p class="type"> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Workgroup Manager</h3>
+<p class="description">Lets Stanford community members define groups of community members for use in various online applications.</p>
+<p class="url url-software"><a href="/software/workgroup" title="Workgroup Manager" hreflang="und"><span class="element-invisible">Workgroup Manager</span></a></p>
+<p class="url url-service"><a href="/service/workgroup"><span class="element-invisible">Workgroup Manager</span></a></p>
+<div class="hidden">Web Apps Collaboration </div>
+</div>
+</span></div>
+  </div>
+    <div>
+    <div class="views-field views-field-nothing"><span class="field-content"><div class="element-item Macintosh Mobile Web Apps Windows software-190" data-category="software-190" role="listitem">
+<p class="type"><span class="badge">Recommended</span> <i class="fa fa-users" aria-hidden="true" title="Collaboration category"></i><span class="sr-only">Collaboration category</span></p>
+<h3 class="name">Zoom</h3>
+<p class="description">Stanford&#039;s recommended video conferencing tool.  Lets you schedule, host, and attend video conferencing meetings.</p>
+<p class="url url-software"><a href="/software/zoom" title="Zoom" hreflang="und"><span class="element-invisible">Zoom</span></a></p>
+<p class="url url-service"><a href="/service/zoom"><span class="element-invisible">Zoom</span></a></p>
+<div class="hidden">Macintosh Mobile Web Apps Windows Collaboration <span class="badge">Recommended</span></div>
+</div>
+</span></div>
+  </div>
+
+    </div>
+  
+            <div class="view-footer">
+      <div class="no-results center"><p class="lead">No results found.</p></div>
+    </div>
+    </div>
+</div>
+</div>
+      
+      </div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3633" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--3633 section--default">
+		<div class="container">
+							<div id="section_title_3633" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Resources
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_3633" class="primary-section-content  ">
+				
+				<div class="row section"><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3630"  class="paragraph paragraph--card paragraph-id--3630 card--default">
+    <div class="card  mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-info-circle fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Learn more</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><h4>Connecting to the Stanford network</h4>
+
+<ul>
+	<li><a href="/service/ess/pc/sunet">Connect to SUNet with Windows</a></li>
+	<li><a href="/service/ess/mac/sunet">Connect to SUNet with Mac OS X</a></li>
+</ul>
+
+<h4>Recommendations</h4>
+
+<ul>
+	<li><a href="/service/hardwarerec">Hardware Recommendations</a></li>
+	<li><a href="/guide/browser-recommendations">Browser Recommendations for Administrative Applications</a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3631"  class="paragraph paragraph--card paragraph-id--3631 card--default">
+    <div class="card  mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-question-circle fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Help and Support</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><h4>Help</h4><ul><li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=3a3bd43b131cfb80d11dbda12244b035">Submit a Help Ticket</a></li></ul><h4>Software compatibility</h4><ul><li><a href="https://uit.stanford.edu/service/helpdesk/windows">Windows at Stanford</a></li><li><a href="https://uit.stanford.edu/service/helpdesk/macos">macOS at Stanford</a></li></ul></div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3632"  class="paragraph paragraph--card paragraph-id--3632 card--default">
+    <div class="card  mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-arrow-circle-right fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">See Also</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><h4>Other software resources at Stanford</h4><ul><li><a href="/service/software">Software and Related Services</a></li><li><a href="http://software.stanford.edu/">Software at Stanford - Searchable Database</a></li><li><a href="/guide/evaluating-software">Software Evaluation Guide</a></li></ul><h4>Related Services</h4><ul><li><a href="/service/softwarelic">Software Licensing</a></li></ul></div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/software" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_gPN-bsKDsKpO6T1P9dXubs7p_euX3ib6y7PDCHqBmas.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxlj9EOwjAIRX-os2_-DmEdrSxdWQA3_XsXYzR1DxDuuSRc0IwcuM2UXDTOdjF24mVV2QgyP8gCnnck-45KYRRxc8UVRlRliaXKiHUwf1ZuJRSRUgkcSyxH-9cXnPHRwyWYY8uiE9zZ4-9AmlpvZWmOO5ksBNfe-kvRed_sPf2I4RDhKDBCTbf4Gz9UN04EWEnd4hnBbGFj2i2--_vBF0zJjRc"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_MInH_gNpklLUAOtZcaTwo5Lu3JDgwYQObAoND0NvMcA.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxlj9EOwjAIRX-os2_-DmEdrSxdWQA3_XsXYzR1DxDuuSRc0IwcuM2UXDTOdjF24mVV2QgyP8gCnnck-45KYRRxc8UVRlRliaXKiHUwf1ZuJRSRUgkcSyxH-9cXnPHRwyWYY8uiE9zZ4-9AmlpvZWmOO5ksBNfe-kvRed_sPf2I4RDhKDBCTbf4Gz9UN04EWEnd4hnBbGFj2i2--_vBF0zJjRc"></script>
+
+  </body>
+</html>

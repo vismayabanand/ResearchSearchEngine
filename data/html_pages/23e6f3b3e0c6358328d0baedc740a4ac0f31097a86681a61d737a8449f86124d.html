@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<!-- [if startif]
+/*! 
+* @author: Machine Learning Department, Carnegie Mellon University
+* @feedback: mariya@cmu.edu, mldweb@cs.cmu.edu
+* @copyright: Carnegie Mellon University | All Rights Reserved
+* @description: Blog capable website for Research Scientists with the Machine Learning Department at Carnegie Mellon University.
+*/
+[endif] -->
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <meta name="referrer" content="origin">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114918459-2"></script>
+    <script>'use strict';window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-114918459-2');</script>     
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://blog.ml.cmu.edu/xmlrpc.php">
+    <meta property="og:image" content="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-970x546.jpg" />
+    <title>Machine Learning Blog | ML@CMU | Carnegie Mellon University</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Machine Learning Blog | ML@CMU | Carnegie Mellon University &raquo; Feed" href="https://blog.ml.cmu.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Machine Learning Blog | ML@CMU | Carnegie Mellon University &raquo; Comments Feed" href="https://blog.ml.cmu.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.ml.cmu.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.14"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://blog.ml.cmu.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.6.14' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='email-subscribers-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/email-subscribers/lite/public/css/email-subscribers-public.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='modern_footnotes-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/modern-footnotes/styles.min.css?ver=1.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=5.6.14' type='text/css' media='all' />
+<link rel='stylesheet' id='mc4wp-form-themes-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/mailchimp-for-wp/assets/css/form-themes.min.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mint-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic%7CLora:400,400italic,700,700italic&#038;subset=latin' type='text/css' media='all' />
+<link rel='stylesheet' id='plugins-styles-css'  href='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/css/plugins-styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-css'  href='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/css/woocommerce.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mint-main-styles-css'  href='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/style.css' type='text/css' media='all' />
+<style id='mint-main-styles-inline-css' type='text/css'>
+ 
+ .header-top{ height: 60px; } 
+ .header-logo{ width: 250px!important;} 
+ .header-logo{ height: 60px!important; } 
+ 
+ 
+ 
+ .header-navigation li a, .header-socials li a, .top-cart-wrapper a, .header-menu-panel .menu-tumbl{ color:#111;}
+	body{font-family:'Lato',Arial,serif;font-size:px;color:;}input::-webkit-input-placeholder{font-family: 'Lato', Arial, serif;}input:-moz-placeholder{font-family: 'Lato', Arial, serif;}
+	input::-moz-placeholder{font-family: 'Lato', Arial, serif;}
+	input:-ms-input-placeholder{font-family: 'Lato', Arial, serif;}
+	
+	.slide .category-post-title a, .post-author-name span, span.date, .single-post .post-tags a, .post-related-title h4, .thecomment .comment-text span.date, #respond h3, #cancel-comment-reply-link, .widget-title, .widget-slide-info .date a, .woocommerce .woocommerce-message,.woocommerce .woocommerce-error,.woocommerce .woocommerce-info, .woocommerce span.onsale, span.price, .woocommerce ul.cart_list .amount, .woocommerce ul.product_list_widget .amount, .woocommerce.widget_shopping_cart .total > strong, .woocommerce div.product div.summary p.price,.woocommerce div.product div.summary span.price,.woocommerce #content div.product div.summary p.price, .woocommerce #content div.product div.summary span.price,.woocommerce .related.products > h2, .quantity.mkd-quantity-buttons .mkd-quantity-input{font-family: 'Lato'!important;}
+	h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.navigation li{ font-family: 'Lora', Arial, serif!important; font-weight:;letter-spacing:em;color:; }
+	blockquote, .author-post-name a, .page .page-title-wrapper h3, .instagram-footer #sbi_load a, .woocommerce-page .page-title-wrapper h3, .woocommerce-page .woocommerce-result-count, .woocommerce ul.cart_list li a,
+.woocommerce ul.product_list_widget li a, .woocommerce div.product .woocommerce-review-link,
+.woocommerce #content div.product .woocommerce-review-link, .woocommerce-cart table.cart .product-name > a  {font-family: 'Lora'!important;}
+ 	.post-entry a {
+  font-weight: 400;
+  text-decoration: underline;
+} 
+</style>
+<link rel='stylesheet' id='resposive-css'  href='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/css/media.css' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css'  href='https://blog.ml.cmu.edu/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=BaUKYlr1JydyEx/' type='text/css' media='all' />
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/enable-jquery-migrate-helper/js/jquery/jquery-1.12.4-wp.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/enable-jquery-migrate-helper/js/jquery-migrate/jquery-migrate-1.4.1-wp.js?ver=1.4.1-wp' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='email-subscribers-js-extra'>
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https:\/\/blog.ml.cmu.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/email-subscribers/lite/public/js/email-subscribers-public.js?ver=4.7.0' id='email-subscribers-js'></script>
+<script type='text/javascript' id='simple-likes-public-js-js-extra'>
+/* <![CDATA[ */
+var simpleLikes = {"ajaxurl":"https:\/\/blog.ml.cmu.edu\/wp-admin\/admin-ajax.php","like":"Like","unlike":"Unlike"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/js/simple-likes-public.js?ver=0.5' id='simple-likes-public-js-js'></script>
+<link rel="https://api.w.org/" href="https://blog.ml.cmu.edu/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.ml.cmu.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.ml.cmu.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6.14" />
+
+
+<!-- This site is optimized with the Schema plugin v1.7.9.0 - https://schema.press -->
+<script type="application/ld+json">[{"@context":"http:\/\/schema.org\/","@type":"WPHeader","url":"https:\/\/blog.ml.cmu.edu","headline":"Machine Learning Blog | ML@CMU | Carnegie Mellon University","description":""},{"@context":"http:\/\/schema.org\/","@type":"WPFooter","url":"https:\/\/blog.ml.cmu.edu","headline":"Machine Learning Blog | ML@CMU | Carnegie Mellon University","description":""}]</script>
+
+
+
+<!-- This site is optimized with the Schema plugin v1.7.9.0 - https://schema.press -->
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","url":"https:\/\/blog.ml.cmu.edu","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":973,"height":194,"@id":"https:\/\/blog.ml.cmu.edu#logo"},"sameAs":["https:\/\/plus.google.com\/u\/0\/112274422040114014843","https:\/\/www.facebook.com\/mldcmu","https:\/\/twitter.com\/mldcmu","https:\/\/www.instagram.com\/mldcmu","https:\/\/www.youtube.com\/mldcmu","https:\/\/www.linkedin.com\/company\/mldcmu","https:\/\/www.wikidata.org\/wiki\/Q59760081","https:\/\/medium.com\/@mldcmu","https:\/\/mldcmu.tumblr.com\/"]}</script>
+
+
+
+<!-- This site is optimized with the Schema plugin v1.7.9.0 - https://schema.press -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org\/","@type":"Blog","headline":"Machine Learning Blog | ML@CMU | Carnegie Mellon University","description":"","url":"https:\/\/blog.ml.cmu.edu","blogPost":[{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/04\/23\/carnegie-mellon-university-at-iclr-2025\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/04\/23\/carnegie-mellon-university-at-iclr-2025\/","headline":"Carnegie Mellon University at ICLR 2025","datePublished":"2025-04-23T09:54:22-04:00","dateModified":"2025-04-23T09:54:24-04:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2025\/04\/thumbnail.jpg","width":1920,"height":1080},"articleSection":"Educational","description":"CMU researchers are presenting 143 papers at the Thirteenth International Conference on Learning Representations (ICLR 2025), held from April 24 - 28 at the Singapore EXPO. Here is a quick overview of the areas our researchers are working on: And here are our most frequent collaborator institutions: Table of","author":{"@type":"Person","name":"Keegan Harris","url":"https:\/\/blog.ml.cmu.edu\/author\/keeganh\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/21e106c247bf6f027c0384dec8910426?s=96&d=identicon&r=g","height":96,"width":96},"sameAs":["https:\/\/keeganharris.github.io\/","https:\/\/twitter.com\/keegan_w_harris"]}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/04\/21\/allie-a-human-aligned-chess-bot\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/04\/21\/allie-a-human-aligned-chess-bot\/","headline":"Allie: A Human-Aligned Chess Bot","datePublished":"2025-04-21T10:14:52-04:00","dateModified":"2025-04-21T10:14:53-04:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2025\/04\/main_figure.pdf.png-1-1024x246-1.png","width":1024,"height":246},"articleSection":"artificial intelligence","description":"Play against Allie on lichess! Introduction In 1948, Alan Turning designed what might be the first chess playing AI, a paper program that Turing himself acted as the computer for. Since then, chess has been a testbed for nearly every generation of AI advancement. After decades of improvement, today's","author":{"@type":"Person","name":"Yiming Zhang","url":"https:\/\/blog.ml.cmu.edu\/author\/yimingz3\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/357390ce9f129d8682c72f9f44d5de71?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/04\/18\/llm-unlearning-benchmarks-are-weak-measures-of-progress\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/04\/18\/llm-unlearning-benchmarks-are-weak-measures-of-progress\/","headline":"LLM Unlearning Benchmarks are Weak Measures of Progress","datePublished":"2025-04-18T11:04:59-04:00","dateModified":"2025-04-18T11:05:00-04:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2025\/04\/unnamed-1.png","width":1024,"height":1024},"articleSection":"machine learning","description":"TL;DR: \"Machine unlearning\" aims to remove data from models without retraining the model completely. Unfortunately, state-of-the-art benchmarks for evaluating unlearning in LLMs are flawed, especially because they separately test \"forget queries\" and \"retain queries\" without examining potential dependencies between forget and retain data. We show that such benchmarks do","author":{"@type":"Person","name":"Pratiksha Thaker","url":"https:\/\/blog.ml.cmu.edu\/author\/pthaker\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/8a8263818aa7619082d7f4605668d108?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/04\/09\/copilot-arena-a-platform-for-code\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/04\/09\/copilot-arena-a-platform-for-code\/","headline":"Copilot Arena: A Platform for Code","datePublished":"2025-04-09T12:24:34-04:00","dateModified":"2025-04-09T12:24:36-04:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2025\/04\/system_design_v2-6.png","width":4024,"height":1540},"articleSection":"machine learning","description":"Figure 1. Copilot Arena is a VSCode extension that collects human preferences of code directly from developers.  As model capabilities improve, large language models (LLMs) are increasingly integrated into user environments and workflows. In particular, software developers code with LLM-powered tools in integrated development environments such as VS Code,","author":{"@type":"Person","name":"Wayne Chi","url":"https:\/\/blog.ml.cmu.edu\/author\/waynechi\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/19ed8a313c4fcb3ea617dd53772deeda?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/01\/08\/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/01\/08\/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem\/","headline":"Optimizing LLM Test-Time Compute Involves Solving a Meta-RL Problem","datePublished":"2025-01-08T20:11:13-05:00","dateModified":"2025-01-09T19:28:53-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2025\/01\/image-3.png","width":2048,"height":1049},"articleSection":"machine learning","description":"Figure 1: Training models to optimize test-time compute and learn \"how to discover\" correct responses, as opposed to the traditional learning paradigm of learning \"what answer\" to output. The major strategy to improve large language models (LLMs) thus far has been to use more and more high-quality data for","author":{"@type":"Person","name":"Amrith Setlur","url":"https:\/\/blog.ml.cmu.edu\/author\/asetlur\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ee705261aa45aecfc06f9bb2b9103ed9?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2025\/01\/02\/inductive-biases-of-neural-network-modularity-in-spatial-navigation\/"},"url":"https:\/\/blog.ml.cmu.edu\/2025\/01\/02\/inductive-biases-of-neural-network-modularity-in-spatial-navigation\/","headline":"Inductive biases of neural network modularity in spatial navigation","datePublished":"2025-01-02T11:38:56-05:00","dateModified":"2025-01-02T11:38:58-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2024\/12\/teaser-1.png","width":696,"height":461},"articleSection":"artificial intelligence","description":"TL;DR:&nbsp;The brain may have evolved a modular architecture for daily tasks, with circuits featuring functionally specialized modules that match the task structure. We hypothesize that this architecture enables better learning and generalization than architectures with less specialized modules. To test this, we trained reinforcement learning agents with various neural","author":{"@type":"Person","name":"Ruiyi Zhang","url":"https:\/\/blog.ml.cmu.edu\/author\/ruiyiz\/","description":"Ruiyi Zhang is a postdoctoral researcher at the Neuroscience Institute and Machine Learning Department at Carnegie Mellon University. His research focuses on the intersection of neuroscience and artificial intelligence, aiming to draw inspiration from brain mechanisms to advance AI and leverage AI models to deepen our understanding of the brain. Prior to joining CMU, he earned his PhD from New York University in 2024.","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/aaef12cab8ca0c0f234d179707dbf33b?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2024\/12\/12\/human-ai-collaboration-in-physical-tasks\/"},"url":"https:\/\/blog.ml.cmu.edu\/2024\/12\/12\/human-ai-collaboration-in-physical-tasks\/","headline":"Human-AI Collaboration in Physical Tasks","datePublished":"2024-12-12T10:27:45-05:00","dateModified":"2024-12-12T10:27:47-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2024\/11\/image-3-1024x490-1.png","width":1024,"height":490},"articleSection":"machine learning","description":"TL;DR: At SmashLab, we're creating an intelligent assistant that uses the sensors in a smartwatch to support physical tasks such as cooking and DIY. This blog post explores how we use less intrusive scene understanding—compared to cameras—to enable helpful, context-aware interactions for task execution in their daily lives. Thinking","author":{"@type":"Person","name":"Riku Arakawa","url":"https:\/\/blog.ml.cmu.edu\/author\/rarakawa\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/f6a6953aec54a1a87e283d1ab0176e94?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2024\/12\/06\/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation\/"},"url":"https:\/\/blog.ml.cmu.edu\/2024\/12\/06\/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation\/","headline":"ScribeAgent: Fine-Tuning Open-Source LLMs for Enhanced Web Navigation","datePublished":"2024-12-06T07:44:33-05:00","dateModified":"2024-12-06T08:40:36-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2024\/12\/Screen-Shot-2024-11-26-at-3.20.54-PM-1024x580-1.png","width":1024,"height":580},"articleSection":"machine learning","description":"TL;DR: LLM web agents are designed to predict a sequence of actions to complete a user-specified task. Most existing agents are built on top of general-purpose, proprietary models like GPT-4 and rely heavily on prompt engineering. We demonstrate that fine-tuning open-source LLMs using a large set of high-quality, real-","author":{"@type":"Person","name":"Junhong Shen","url":"https:\/\/blog.ml.cmu.edu\/author\/junhongs\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/76b5dddf80a24d3ef5c68b702280da82?s=96&d=identicon&r=g","height":96,"width":96}}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2024\/12\/02\/carnegie-mellon-university-at-neurips-2024\/"},"url":"https:\/\/blog.ml.cmu.edu\/2024\/12\/02\/carnegie-mellon-university-at-neurips-2024\/","headline":"Carnegie Mellon University at NeurIPS 2024","datePublished":"2024-12-02T09:30:06-05:00","dateModified":"2024-12-02T09:30:10-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2024\/11\/vancouver_convention_center-copy-pdf.jpg","width":3556,"height":1422},"articleSection":"Educational","description":"Carnegie Mellon University is proud to present 194 papers at the 38th conference on Neural Information Processing Systems (NeurIPS 2024), held from December 10-15 at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are working on: Here are some of our top collaborator","author":{"@type":"Person","name":"Keegan Harris","url":"https:\/\/blog.ml.cmu.edu\/author\/keeganh\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/21e106c247bf6f027c0384dec8910426?s=96&d=identicon&r=g","height":96,"width":96},"sameAs":["https:\/\/keeganharris.github.io\/","https:\/\/twitter.com\/keegan_w_harris"]}},{"@context":"https:\/\/schema.org\/","@type":"ScholarlyArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/blog.ml.cmu.edu\/2024\/11\/07\/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action\/"},"url":"https:\/\/blog.ml.cmu.edu\/2024\/11\/07\/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action\/","headline":"Identification of Hazardous Areas for Priority Landmine Clearance: AI for Humanitarian Mine Action","datePublished":"2024-11-07T13:27:49-05:00","dateModified":"2024-11-07T13:27:51-05:00","publisher":{"@type":"Organization","@id":"https:\/\/blog.ml.cmu.edu\/#organization","name":"ML@CMU | Machine Learning | Carnegie Mellon University","logo":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2018\/11\/mlcmu-logo.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/blog.ml.cmu.edu\/wp-content\/uploads\/2024\/11\/reland_trio_map.png","width":4356,"height":1339},"articleSection":"machine learning","description":"TL;DR: Landmines pose a persistent threat and hinder development in over 70 war-affected countries. Humanitarian demining aims to clear contaminated areas, but progress is slow: at the current pace, it will take 1,100 years to fully demine the planet. In close collaboration with the UN and local NGOs, we","author":{"@type":"Person","name":"Mateo Dulce Rubio","url":"https:\/\/blog.ml.cmu.edu\/author\/mdulceru\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/6cc7f2c67196e2147b6968c562fb6660?s=96&d=identicon&r=g","height":96,"width":96},"sameAs":["https:\/\/mdulcer.github.io\/"]}}]}</script>
+
+
+<style></style>
+    
+    <link rel="icon" href="https://blog.ml.cmu.edu/wp-content/uploads/2018/06/favicon-80x80.png" sizes="32x32" />
+<link rel="icon" href="https://blog.ml.cmu.edu/wp-content/uploads/2018/06/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blog.ml.cmu.edu/wp-content/uploads/2018/06/favicon.png" />
+<meta name="msapplication-TileImage" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/06/favicon.png" />
+
+<!-- START - Open Graph and Twitter Card Tags 3.1.1 -->
+ <!-- Facebook Open Graph -->
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+  <meta property="og:title" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+  <meta property="og:url" content="https://blog.ml.cmu.edu"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University."/>
+  <meta property="og:image" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/cover-introduction-mlblog-2.jpg"/>
+  <meta property="og:image:url" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/cover-introduction-mlblog-2.jpg"/>
+  <meta property="og:image:secure_url" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/cover-introduction-mlblog-2.jpg"/>
+ <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+  <meta itemprop="headline" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+  <meta itemprop="description" content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University."/>
+  <meta itemprop="image" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/cover-introduction-mlblog-2.jpg"/>
+  <!--<meta itemprop="publisher" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+ <!-- Twitter Cards -->
+  <meta name="twitter:title" content="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/>
+  <meta name="twitter:url" content="https://blog.ml.cmu.edu"/>
+  <meta name="twitter:description" content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University."/>
+  <meta name="twitter:image" content="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/cover-introduction-mlblog-2.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+ <!-- SEO -->
+ <!-- Misc. tags -->
+ <!-- is_front_page -->
+<!-- END - Open Graph and Twitter Card Tags 3.1.1 -->
+	
+    <!-- Meta -->
+    <meta content="Machine learning, artificial intelligence, deep learning, natural language processing, automated machine learning, big data, data science, neural networks, ethics and ai, computer science, ml, ai, research" name="Keywords"/>
+    <meta content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University." name="Description"/>
+    <meta content="Machine Learning Department, Carnegie Mellon University" name="author"/>
+    <!-- OG:Graph  
+    <meta name="title" property="og:title" content="Blog | Machine Learning | Carnegie Mellon University"/>
+    <meta property="og:site_name" content="Blog | Machine Learning | Carnegie Mellon University"/>
+    <meta property="og:description" content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University."/> 
+    <meta property="og:image:alt" content="Blog | Machine Learning | Carnegie Mellon University - Cover Picture"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:url" content="https://blog.ml.cmu.edu"/>
+    <meta property="og:type" content="article"/>
+    <meta property="fb:app_id" content=""/>
+    <meta property="fb:pages" content=""/>
+    <meta property="fb:admins" content="654417927"/>
+    <meta property="fb:profile_id" content="654417927"/>
+    <meta name="twitter:site" content="@mldcmu"/>
+    <meta name="twitter:creator" concent="@mldcmu"/>
+    <meta name="twitter:title" content="Blog | Machine Learning | Carnegie Mellon University"/>
+    <meta name="twitter:description" content="The latest news and publications regarding machine learning, artificial intelligence or related, brought to you by the Machine Learning Blog, a spinoff of the Machine Learning Department at Carnegie Mellon University."/>
+    <meta name="twitter:image" content="http://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/cover-introduction-mlblog-2.jpg"/>
+    <meta name="twitter:image:alt" content="Blog | Machine Learning | Carnegie Mellon University - Cover Picture"/>
+    <meta name="twitter:card" content="summary"/>
+    <!-- /OG:Graph -->
+    <!-- Robots -->
+    <meta name="robots" content="noarchive"/>
+    <meta name="googlebot" content="noarchive"/>
+    <!-- /Robots -->
+    <!-- /Meta -->
+</head>
+
+<body class="home blog">
+
+<!-- Preloader // Preloader affects how pages are read if javascript is removed.
+<div id="preloader"></div>
+<!-- /Preloader -->
+
+<!-- Uncomment /** inside <php if you'd like to restore glide-navigation to original version -->
+<!--  -->
+
+<header>
+    <div class="header-top">
+        <div class="top-header-content">
+            <div class="container">
+                <h1 class="hidden">Machine Learning Blog | ML@CMU | Carnegie Mellon University</h1>
+                <div class="col-lg-10 col-lg-offset-1">
+                                            <div class="menu-tumbl"><i class="fa fa-navicon"></i></div>
+                        <div class="header-soc-icon"><i class="fa fa-search"></i></div>
+                                        <div class="header-logo">
+                                                    <a href="https://blog.ml.cmu.edu/" class="logo-img"><img
+                                    src="https://blog.ml.cmu.edu/wp-content/uploads/2018/11/mlcmu-logo.png"
+                                    alt="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/></a>
+                        
+                                                    <a href="https://blog.ml.cmu.edu/" class="retina-logo-img"><img
+                                    src=""
+                                    alt="Machine Learning Blog | ML@CMU | Carnegie Mellon University"/></a>
+                                            </div>
+                    <!-- Statistics -->
+                    <div id="blog-stats">
+                        <h4 class="widget-title">Statistics:</h4>
+                        <span class="sbs-count-posts"><span class="sbs-count-posts">108</span> publications.</span>
+                        <span class="sbs-count-cats"><span class="sbs-count-cats">14</span> categories.</span>
+                        <span class="sbs-count-tags"><span class="sbs-count-tags">70</span> tags.</span>
+                    </div>
+                    <!-- /Statistics -->
+                    <!-- Desktop Navigation -->
+                    <div id="desktop-nav">
+                      <ul class="desktop-nav-ul">
+                        <li id="menu-item-19"><a title="Homepage" href="https://blog.ml.cmu.edu/#">[ Home ]</a></li>
+                        <li id="menu-item-121"><a title="Submissions" href="https://blog.ml.cmu.edu/submissions/">[ Submissions ]</a></li>
+                        <li id="menu-item-88"><a title="About us" href="https://blog.ml.cmu.edu/about/">[ About ]</a></li>
+                      </ul>
+                    </div
+                    <!-- /Desktop Navigation -->
+                    <!-- Moved Glide Navigation here // If needs restored you can restore it at wp-content/header.php-->
+                    <div class="glide-navigation">
+    <div class="sidebar-scroll scrollbar-macosx">
+
+        <!-- close-glide-button -->
+        <div class="close-glide-button">
+            <a href="#" class="close-btn"></a>
+        </div>
+
+        <!-- navbar -->
+        <ul id="menu-top-menu" class="navbar"><li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-19"><a title="Homepage" href="https://blog.ml.cmu.edu/#" aria-current="page">Home</a></li>
+<li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a title="Our Team" href="https://blog.ml.cmu.edu/submissions/">Submissions</a></li>
+<li id="menu-item-88" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a title="Contact us" href="https://blog.ml.cmu.edu/about/">About</a></li>
+</ul>    </div>
+</div>                    <!-- /Glide Navigation -->
+                </div>
+            </div>
+        </div>
+        <div class="background-block"></div>
+        <div class="background-opacity"></div>
+    </div>
+    <div class="header-menu-panel">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="menu-tumbl"><i class="fa fa-navicon"></i></div>
+                <ul id="menu-top-menu-1" class="header-navigation"><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-19"><a title="Homepage" href="https://blog.ml.cmu.edu/#" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a title="Our Team" href="https://blog.ml.cmu.edu/submissions/">Submissions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a title="Contact us" href="https://blog.ml.cmu.edu/about/">About</a></li>
+</ul>
+                <div class="header-menu-buttons">
+                                    </div>
+                <ul class="header-socials socials"><li><a href="https://blog.ml.cmu.edu/feed/" target="_blank"><i class="fa fa-rss"></i></a></li></ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="search-wrapper">
+    <form role="search" method="get" class="search-form" action="https://blog.ml.cmu.edu/">
+        <input type="search" placeholder="Search Keyword" name="s" id="s"
+               class="searchbox-input" autocomplete="off" required />
+        <span>Input your search keywords and press Enter.</span>
+    </form>
+    <div class="search-wrapper-close"></div>
+</div>
+<!-- Categories Picker 
+<div class="categories-picker">
+  <ul>
+      <li><h2>Categories:</h2></li> 
+      <li class="category-research"><a href="https://blog.ml.cmu.edu/category/research">Research</a></li>
+      <li class="category-educational"><a href="https://blog.ml.cmu.edu/category/educational/">Educational</a></li> 
+  </ul>
+</div>
+<!-- /Categories Picker-->
+
+<!-- Sidebar -->
+<div class="toggle-sidebar">
+  <a class="display-sidebar">
+    <i class="fa fa-angle-left"></i>
+  </a>
+</div>
+<div class="blog-sidebar categories-picker">
+      <h2>Categories:</h2> 
+  <ul>
+      <li class="category-research"><a href="https://blog.ml.cmu.edu/category/research">Research</a></li>
+      <li class="category-educational"><a href="https://blog.ml.cmu.edu/category/educational/">Educational</a></li> 
+  </ul>
+</div>
+<!-- /Sidebar -->
+
+<div class="main-panel">
+
+    <div class="main">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div
+                    id="main-column" >
+                        <div
+        class="fl-grid post-list full-and-list">
+                                                        
+<aside data="primary-post" id="post-21092" class="default-post-style post-21092 post type-post status-publish format-standard has-post-thumbnail hentry category-educational category-machine-learning">
+
+    
+        <div class="post-header">
+                            <span class="category-post"><a href="https://blog.ml.cmu.edu/category/educational/" title="View all posts in Educational" >Educational</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a></span>
+
+                <h2><a href="https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/">Carnegie Mellon University at ICLR 2025</a></h2>
+
+                
+                    </div>
+            <div class="post-img">
+                                <a href="https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-970x546.jpg"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-970x546.jpg"
+                     alt=""/>
+            </a>
+                        </div>
+ 
+        
+        <div class="post-info"><span class="post-author-name">by                        <a href="https://keeganharris.github.io/">Keegan Harris</a></span>
+                        <span class="separator"> / </span> 
+                        <span class="date">April 23, 2025</span>
+        </div>
+                
+        <div class="post-entry">
+            <p>CMU researchers are presenting 143 papers at the Thirteenth International Conference on Learning Representations (ICLR 2025), held from April 24 &#8211; 28 at the Singapore EXPO. Here is a quick overview of the areas our researchers are working on: And here are our most frequent collaborator institutions: Table of Contents Oral Papers Spotlight Papers Poster Papers Alignment, Fairness, Safety, Privacy, And Societal Considerations Applications to Computer Vision, Audio, Language, And Other Modalities Applications to Neuroscience &amp; Cognitive Science Applications to&hellip;</p>
+        </div>
+        
+        <!-- Default function, restore if it causes issues <!-- php get_template_part('inc/templates/default-post-meta'); ?>  --> 
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=21092&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-21092" data-nonce="0743610742" data-post-id="21092" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">72</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>3047</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Carnegie%20Mellon%20University%20at%20ICLR%202025%20-%20https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/&media=https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail.jpg&description=Carnegie%20Mellon%20University%20at%20ICLR%202025"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>        
+        <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20858" class="list-post-content post-20858 post type-post status-publish format-standard has-post-thumbnail hentry category-artificial-intelligence category-machine-learning category-research tag-chess tag-mcts">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/artificial-intelligence/" title="View all posts in artificial intelligence" >artificial intelligence</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/">Allie: A Human-Aligned Chess Bot</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-970x233.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-300x72.png"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Yiming Zhang</a></span>
+                / 
+            -->
+            <span class="date">April 21, 2025</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>Play against Allie on lichess! Introduction In 1948, Alan Turning designed what might be the first chess playing AI, a paper program that Turing himself acted as the computer for. Since then, chess has been a testbed for nearly every&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/artificial-intelligence/" title="View all posts in artificial intelligence" >artificial intelligence</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20858&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20858" data-nonce="0743610742" data-post-id="20858" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">105</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>1295</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Allie:%20A%20Human-Aligned%20Chess%20Bot%20-%20https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/&media=https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1.png&description=Allie:%20A%20Human-Aligned%20Chess%20Bot"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-21079" class="list-post-content post-21079 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/">LLM Unlearning Benchmarks are Weak Measures of Progress</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-625x625.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-220x220.png"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Pratiksha Thaker</a></span>
+                / 
+            -->
+            <span class="date">April 18, 2025</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>TL;DR: &#8220;Machine unlearning&#8221; aims to remove data from models without retraining the model completely. Unfortunately, state-of-the-art benchmarks for evaluating unlearning in LLMs are flawed, especially because they separately test &#8220;forget queries&#8221; and &#8220;retain queries&#8221; without examining potential dependencies between forget&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=21079&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-21079" data-nonce="0743610742" data-post-id="21079" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">103</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>1271</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20LLM%20Unlearning%20Benchmarks%20are%20Weak%20Measures%20of%20Progress%20-%20https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/&media=https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1.png&description=LLM%20Unlearning%20Benchmarks%20are%20Weak%20Measures%20of%20Progress"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-21017" class="list-post-content post-21017 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research tag-machine-learning tag-ml">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/">Copilot Arena: A Platform for Code</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-970x371.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-300x115.png"
+                     alt="How do real-world developer preferences compare to existing evaluations? A CMU and UC Berkeley team led by @iamwaynechi and @valeriechen_ created @CopilotArena to collect user preferences on in-the-wild workflows. This blogpost overviews the  design and deployment of Copilot Arena + new insights into developer code preferences."/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Wayne Chi</a></span>
+                / 
+            -->
+            <span class="date">April 9, 2025</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>Figure 1. Copilot Arena is a VSCode extension that collects human preferences of code directly from developers.  As model capabilities improve, large language models (LLMs) are increasingly integrated into user environments and workflows. In particular, software developers code with LLM-powered&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=21017&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-21017" data-nonce="0743610742" data-post-id="21017" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">128</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>2222</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Copilot%20Arena:%20A%20Platform%20for%20Code%20-%20https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/&media=https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6.png&description=Copilot%20Arena:%20A%20Platform%20for%20Code"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20621" class="list-post-content post-20621 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/">Optimizing LLM Test-Time Compute Involves Solving a Meta-RL Problem</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-970x497.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-300x154.png"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Amrith Setlur</a></span>
+                / 
+            -->
+            <span class="date">January 8, 2025</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>Figure 1: Training models to optimize test-time compute and learn &#8220;how to discover&#8221; correct responses, as opposed to the traditional learning paradigm of learning &#8220;what answer&#8221; to output. The major strategy to improve large language models (LLMs) thus far has&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20621&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20621" data-nonce="0743610742" data-post-id="20621" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">353</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>22229</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Optimizing%20LLM%20Test-Time%20Compute%20Involves%20Solving%20a%20Meta-RL%20Problem%20-%20https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/&media=https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3.png&description=Optimizing%20LLM%20Test-Time%20Compute%20Involves%20Solving%20a%20Meta-RL%20Problem"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20549" class="list-post-content post-20549 post type-post status-publish format-standard has-post-thumbnail hentry category-artificial-intelligence category-deep-learning category-machine-learning category-reinforcement-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/artificial-intelligence/" title="View all posts in artificial intelligence" >artificial intelligence</a> <a href="https://blog.ml.cmu.edu/category/deep-learning/" title="View all posts in deep learning" >deep learning</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/reinforcement-learning/" title="View all posts in reinforcement learning" >reinforcement learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/">Inductive biases of neural network modularity in spatial navigation</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2024/12/teaser-1.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2024/12/teaser-1-287x220.png"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Ruiyi Zhang</a></span>
+                / 
+            -->
+            <span class="date">January 2, 2025</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>TL;DR:&nbsp;The brain may have evolved a modular architecture for daily tasks, with circuits featuring functionally specialized modules that match the task structure. We hypothesize that this architecture enables better learning and generalization than architectures with less specialized modules. To test&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/artificial-intelligence/" title="View all posts in artificial intelligence" >artificial intelligence</a> <a href="https://blog.ml.cmu.edu/category/deep-learning/" title="View all posts in deep learning" >deep learning</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/reinforcement-learning/" title="View all posts in reinforcement learning" >reinforcement learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20549&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20549" data-nonce="0743610742" data-post-id="20549" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">348</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>6206</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Inductive%20biases%20of%20neural%20network%20modularity%20in%20spatial%20navigation%20-%20https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/&media=https://blog.ml.cmu.edu/wp-content/uploads/2024/12/teaser-1.png&description=Inductive%20biases%20of%20neural%20network%20modularity%20in%20spatial%20navigation"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2025/01/02/inductive-biases-of-neural-network-modularity-in-spatial-navigation/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20303" class="list-post-content post-20303 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/">Human-AI Collaboration in Physical Tasks</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/image-3-1024x490-1-970x464.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/image-3-1024x490-1-300x144.png"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Riku Arakawa</a></span>
+                / 
+            -->
+            <span class="date">December 12, 2024</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>TL;DR: At SmashLab, we&#8217;re creating an intelligent assistant that uses the sensors in a smartwatch to support physical tasks such as cooking and DIY. This blog post explores how we use less intrusive scene understanding—compared to cameras—to enable helpful, context-aware&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20303&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20303" data-nonce="0743610742" data-post-id="20303" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">380</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>4589</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Human-AI%20Collaboration%20in%20Physical%20Tasks%20-%20https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/&media=https://blog.ml.cmu.edu/wp-content/uploads/2024/11/image-3-1024x490-1.png&description=Human-AI%20Collaboration%20in%20Physical%20Tasks"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2024/12/12/human-ai-collaboration-in-physical-tasks/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20484" class="list-post-content post-20484 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/">ScribeAgent: Fine-Tuning Open-Source LLMs for Enhanced Web Navigation</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2024/12/Screen-Shot-2024-11-26-at-3.20.54-PM-1024x580-1-970x549.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2024/12/Screen-Shot-2024-11-26-at-3.20.54-PM-1024x580-1-300x170.png"
+                     alt="LLM web agents are designed to predict a sequence of actions to complete a user-specified task. Most existing agents are built on top of general-purpose, proprietary models like GPT-4 and rely heavily on prompt engineering. We demonstrate that fine-tuning open-source LLMs using a large set of high-quality, real- world workflow data can improve performance while using a smaller LLM backbone, which can reduce serving costs. "/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="">Junhong Shen</a></span>
+                / 
+            -->
+            <span class="date">December 6, 2024</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>TL;DR: LLM web agents are designed to predict a sequence of actions to complete a user-specified task. Most existing agents are built on top of general-purpose, proprietary models like GPT-4 and rely heavily on prompt engineering. We demonstrate that fine-tuning&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20484&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20484" data-nonce="0743610742" data-post-id="20484" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">380</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>6838</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20ScribeAgent:%20Fine-Tuning%20Open-Source%20LLMs%20for%20Enhanced%20Web%20Navigation%20-%20https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/&media=https://blog.ml.cmu.edu/wp-content/uploads/2024/12/Screen-Shot-2024-11-26-at-3.20.54-PM-1024x580-1.png&description=ScribeAgent:%20Fine-Tuning%20Open-Source%20LLMs%20for%20Enhanced%20Web%20Navigation"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2024/12/06/scribeagent-fine-tuning-open-source-llms-for-enhanced-web-navigation/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20453" class="list-post-content post-20453 post type-post status-publish format-standard has-post-thumbnail hentry category-educational category-machine-learning">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/educational/" title="View all posts in Educational" >Educational</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/">Carnegie Mellon University at NeurIPS 2024</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/vancouver_convention_center-copy-pdf.jpg"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/vancouver_convention_center-copy-pdf.jpg"
+                     alt=""/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="https://keeganharris.github.io/">Keegan Harris</a></span>
+                / 
+            -->
+            <span class="date">December 2, 2024</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>Carnegie Mellon University is proud to present 194 papers at the 38th conference on Neural Information Processing Systems (NeurIPS 2024), held from December 10-15 at the Vancouver Convention Center. Here is a quick overview of the areas our researchers are&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/educational/" title="View all posts in Educational" >Educational</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20453&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20453" data-nonce="0743610742" data-post-id="20453" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">372</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>7026</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Carnegie%20Mellon%20University%20at%20NeurIPS%202024%20-%20https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/&media=https://blog.ml.cmu.edu/wp-content/uploads/2024/11/vancouver_convention_center-copy.pdf&description=Carnegie%20Mellon%20University%20at%20NeurIPS%202024"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2024/12/02/carnegie-mellon-university-at-neurips-2024/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                                                        
+<aside id="post-20317" class="list-post-content post-20317 post type-post status-publish format-standard has-post-thumbnail hentry category-machine-learning category-research">
+    
+    <div class="post-header">
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span> <!-- This line was commented out, see below for default category post view -->
+
+            <h3><a href="https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/">Identification of Hazardous Areas for Priority Landmine Clearance: AI for Humanitarian Mine Action</a></h3>
+            
+    <!-- Custom -->        
+    <style>
+        .list-post-content .post-img {
+            padding-top: 10px;
+        }
+    </style>
+            
+                
+                <div class="post-img">
+                        <a href="https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/">
+                <img class="lazy" src="https://blog.ml.cmu.edu/wp-content/themes/mint/mint/img/layzyload.jpg"
+                     data-original="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/reland_trio_map-970x298.png"
+                     data-lazy="https://blog.ml.cmu.edu/wp-content/uploads/2024/11/reland_trio_map-300x92.png"
+                     alt="RELand pipeline for AI-informed demining prioritization, statista landmine contamination map from 2022, and field test deployment in Colombia with UNMAS & CCBL."/>
+            </a>
+                    </div>
+        
+    <!-- /Custom -->
+        <div class="post-info">
+            <!-- Default - Restore if issues arise 
+            <span class="post-author-name">by                <a href="https://mdulcer.github.io/">Mateo Dulce Rubio</a></span>
+                / 
+            -->
+            <span class="date">November 7, 2024</span>
+        </div>
+        <div class="post-entry">
+            <!-- 14 Words is the Default excerpt for posts. -->
+            <p>TL;DR: Landmines pose a persistent threat and hinder development in over 70 war-affected countries. Humanitarian demining aims to clear contaminated areas, but progress is slow: at the current pace, it will take 1,100 years to fully demine the planet. In&hellip;</p>
+        </div>
+        
+        <!-- Default, restores if it causes issues 
+                    <span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+                <!-- /Default, restores if it causes issues -->
+                
+
+        <ul class="boxed-post-meta post-meta">
+    <li>
+<div class="list-meta">
+    <span class="likes-counter"><span class="sl-wrapper"><a href="https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=process_simple_like&post_id=20317&nonce=0743610742&is_comment=0&disabled=true" class="sl-button sl-button-20317" data-nonce="0743610742" data-post-id="20317" data-iscomment="0" title="Like"><span class="sl-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 128 128" enable-background="new 0 0 128 128" xml:space="preserve"><path class="heart" d="M64 127.5C17.1 79.9 3.9 62.3 1 44.4c-3.5-22 12.2-43.9 36.7-43.9 10.5 0 20 4.2 26.4 11.2 6.3-7 15.9-11.2 26.4-11.2 24.3 0 40.2 21.8 36.7 43.9C124.2 62 111.9 78.9 64 127.5zM37.6 13.4c-9.9 0-18.2 5.2-22.3 13.8C5 49.5 28.4 72 64 109.2c35.7-37.3 59-59.8 48.6-82 -4.1-8.7-12.4-13.8-22.3-13.8 -15.9 0-22.7 13-26.4 19.2C60.6 26.8 54.4 13.4 37.6 13.4z"/>&#9829;</svg></span><span class="sl-count">476</span></a><span class="sl-loader"></span></span></span>
+
+            <span class="views-counter"><i class="fa fa-eye"></i> <a>5173</a></span>
+    
+    </div>
+</li>
+    <li><div class="socials-box">
+    <div class="socials-box-icon"><i class="fa fa-share-alt"></i></div>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/" target="_blank"><i
+                    class="fa fa-facebook"></i></a></li>
+        <li>
+            <a href="https://twitter.com/home?status=Check%20out%20this%20article:%20Identification%20of%20Hazardous%20Areas%20for%20Priority%20Landmine%20Clearance:%20AI%20for%20Humanitarian%20Mine%20Action%20-%20https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/"
+               target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <!--  <li><a data-pin-do="skipLink" target="_blank"
+               href="https://pinterest.com/pin/create/button/?url=https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/&media=https://blog.ml.cmu.edu/wp-content/uploads/2024/11/reland_trio_map.png&description=Identification%20of%20Hazardous%20Areas%20for%20Priority%20Landmine%20Clearance:%20AI%20for%20Humanitarian%20Mine%20Action"><i
+                    class="fa fa-pinterest"></i></a></li> -->
+        <li><a target="_blank" href="https://plus.google.com/share?url=https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/"><i
+                    class="fa fa-google-plus"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/"><i
+                    class="fa fa-linkedin"></i></a></li>
+        <li><a href="mailto:?subject=I'd like to share a link with you&body=https://blog.ml.cmu.edu/2024/11/07/identification-of-hazardous-areas-for-priority-landmine-clearance-ai-for-humanitarian-mine-action/">
+            <i class="fa fa-envelope"></i></a>
+        </li>                    
+    </ul>
+</div>
+</li>
+</ul>    </div>
+    <hr class="post-separator">
+</aside>                
+            
+                    </div>
+
+    <div class="pagination">
+        <div
+            class="older"><a href="https://blog.ml.cmu.edu/page/2/" >Older Posts <i class="fa fa-angle-double-right"></i></a></div>
+        <div
+            class="newer"></div>
+    </div>
+                    </div>
+                <div class="sidebar-column sidebar-stick">
+
+    <aside id="sidebar">
+        <div id="latest_news_widget-1" class="widget latest_news_widget"><h4 class="widget-title">Latest Posts</h4>			<ul class="side-newsfeed">
+						<li>
+				<div class="side-item">
+
+											<div class="side-image">
+							<a href="https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/" rel="bookmark"><img width="80" height="45" src="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-80x45.jpg" class="side-item-thumb wp-post-image" alt="" loading="lazy" srcset="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-80x45.jpg 80w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-300x169.jpg 300w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-1024x576.jpg 1024w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-1536x864.jpg 1536w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-970x546.jpg 970w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-320x180.jpg 320w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail.jpg 1920w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/thumbnail-300x169@2x.jpg 600w" sizes="(max-width: 80px) 100vw, 80px" /></a>
+							</div>										<div class="side-item-text">
+						<span class="category-post"><a href="https://blog.ml.cmu.edu/category/educational/" title="View all posts in Educational" >Educational</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a></span>
+						<span class="date">April 23, 2025</span>
+						<h5><a href="https://blog.ml.cmu.edu/2025/04/23/carnegie-mellon-university-at-iclr-2025/" rel="bookmark">Carnegie Mellon University at ICLR 2025</a></h5>
+
+					</div>
+				</div>
+			</li>
+
+					<li>
+				<div class="side-item">
+
+											<div class="side-image">
+							<a href="https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/" rel="bookmark"><img width="80" height="19" src="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-80x19.png" class="side-item-thumb wp-post-image" alt="" loading="lazy" srcset="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-80x19.png 80w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-300x72.png 300w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-970x233.png 970w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-320x77.png 320w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1.png 1024w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/main_figure.pdf.png-1-1024x246-1-300x72@2x.png 600w" sizes="(max-width: 80px) 100vw, 80px" /></a>
+							</div>										<div class="side-item-text">
+						<span class="category-post"><a href="https://blog.ml.cmu.edu/category/artificial-intelligence/" title="View all posts in artificial intelligence" >artificial intelligence</a> <a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+						<span class="date">April 21, 2025</span>
+						<h5><a href="https://blog.ml.cmu.edu/2025/04/21/allie-a-human-aligned-chess-bot/" rel="bookmark">Allie: A Human-Aligned Chess Bot</a></h5>
+
+					</div>
+				</div>
+			</li>
+
+					<li>
+				<div class="side-item">
+
+											<div class="side-image">
+							<a href="https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/" rel="bookmark"><img width="80" height="80" src="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-80x80.png" class="side-item-thumb wp-post-image" alt="" loading="lazy" srcset="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-80x80.png 80w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-150x150@2x.png 300w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-150x150.png 150w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-625x625.png 625w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-230x230.png 230w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-220x220.png 220w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1.png 1024w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/unnamed-1-300x300@2x.png 600w" sizes="(max-width: 80px) 100vw, 80px" /></a>
+							</div>										<div class="side-item-text">
+						<span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+						<span class="date">April 18, 2025</span>
+						<h5><a href="https://blog.ml.cmu.edu/2025/04/18/llm-unlearning-benchmarks-are-weak-measures-of-progress/" rel="bookmark">LLM Unlearning Benchmarks are Weak Measures of Progress</a></h5>
+
+					</div>
+				</div>
+			</li>
+
+					<li>
+				<div class="side-item">
+
+											<div class="side-image">
+							<a href="https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/" rel="bookmark"><img width="80" height="31" src="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-80x31.png" class="side-item-thumb wp-post-image" alt="" loading="lazy" srcset="https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-80x31.png 80w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-300x115.png 300w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-1024x392.png 1024w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-1536x588.png 1536w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-2048x784.png 2048w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-970x371.png 970w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-320x122.png 320w, https://blog.ml.cmu.edu/wp-content/uploads/2025/04/system_design_v2-6-300x115@2x.png 600w" sizes="(max-width: 80px) 100vw, 80px" /></a>
+							</div>										<div class="side-item-text">
+						<span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+						<span class="date">April 9, 2025</span>
+						<h5><a href="https://blog.ml.cmu.edu/2025/04/09/copilot-arena-a-platform-for-code/" rel="bookmark">Copilot Arena: A Platform for Code</a></h5>
+
+					</div>
+				</div>
+			</li>
+
+					<li>
+				<div class="side-item">
+
+											<div class="side-image">
+							<a href="https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/" rel="bookmark"><img width="80" height="41" src="https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-80x41.png" class="side-item-thumb wp-post-image" alt="" loading="lazy" srcset="https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-80x41.png 80w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-300x154.png 300w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-1024x525.png 1024w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-1536x787.png 1536w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-970x497.png 970w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-320x164.png 320w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3.png 2048w, https://blog.ml.cmu.edu/wp-content/uploads/2025/01/image-3-300x154@2x.png 600w" sizes="(max-width: 80px) 100vw, 80px" /></a>
+							</div>										<div class="side-item-text">
+						<span class="category-post"><a href="https://blog.ml.cmu.edu/category/machine-learning/" title="View all posts in machine learning" >machine learning</a> <a href="https://blog.ml.cmu.edu/category/research/" title="View all posts in Research" >Research</a></span>
+						<span class="date">January 8, 2025</span>
+						<h5><a href="https://blog.ml.cmu.edu/2025/01/08/optimizing-llm-test-time-compute-involves-solving-a-meta-rl-problem/" rel="bookmark">Optimizing LLM Test-Time Compute Involves Solving a Meta-RL Problem</a></h5>
+
+					</div>
+				</div>
+			</li>
+
+							
+		</ul>
+
+		</div><div id="mc4wp_form_widget-1" class="widget widget_mc4wp_form_widget"><h4 class="widget-title">Newsletter</h4><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.8.3 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-187 mc4wp-form-theme mc4wp-form-theme-light" method="post" data-id="187" data-name="Form" ><div class="mc4wp-form-fields"><P ALIGN=RIGHT> <label>Sign up to receive updates about our latest posts.</label>
+<input type="email" name="EMAIL" align="right" placeholder="Your email address" required /> 
+  <input type="submit" value="subscribe"/> 
+
+
+</div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1746495930" /><input type="hidden" name="_mc4wp_form_id" value="187" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div><div id="tag_cloud-3" class="widget widget_tag_cloud"><h4 class="widget-title">Tags</h4><div class="tagcloud"><a href="https://blog.ml.cmu.edu/tag/accountability/" class="tag-cloud-link tag-link-103 tag-link-position-1" style="font-size: 8pt;" aria-label="accountability (1 item)">accountability</a>
+<a href="https://blog.ml.cmu.edu/tag/approximate-inference/" class="tag-cloud-link tag-link-302 tag-link-position-2" style="font-size: 8pt;" aria-label="approximate inference (1 item)">approximate inference</a>
+<a href="https://blog.ml.cmu.edu/tag/artificial-intelligence/" class="tag-cloud-link tag-link-12 tag-link-position-3" style="font-size: 8pt;" aria-label="artificial intelligence (1 item)">artificial intelligence</a>
+<a href="https://blog.ml.cmu.edu/tag/bayesian/" class="tag-cloud-link tag-link-233 tag-link-position-4" style="font-size: 8pt;" aria-label="Bayesian (1 item)">Bayesian</a>
+<a href="https://blog.ml.cmu.edu/tag/chess/" class="tag-cloud-link tag-link-399 tag-link-position-5" style="font-size: 8pt;" aria-label="chess (1 item)">chess</a>
+<a href="https://blog.ml.cmu.edu/tag/computational-neuroscience/" class="tag-cloud-link tag-link-101 tag-link-position-6" style="font-size: 8pt;" aria-label="computational neuroscience (1 item)">computational neuroscience</a>
+<a href="https://blog.ml.cmu.edu/tag/computer-vision/" class="tag-cloud-link tag-link-270 tag-link-position-7" style="font-size: 14.3pt;" aria-label="computer vision (2 items)">computer vision</a>
+<a href="https://blog.ml.cmu.edu/tag/deep-learning/" class="tag-cloud-link tag-link-89 tag-link-position-8" style="font-size: 8pt;" aria-label="deep learning (1 item)">deep learning</a>
+<a href="https://blog.ml.cmu.edu/tag/deep-probabilistic-models/" class="tag-cloud-link tag-link-301 tag-link-position-9" style="font-size: 8pt;" aria-label="deep probabilistic models (1 item)">deep probabilistic models</a>
+<a href="https://blog.ml.cmu.edu/tag/evaluation/" class="tag-cloud-link tag-link-334 tag-link-position-10" style="font-size: 8pt;" aria-label="evaluation (1 item)">evaluation</a>
+<a href="https://blog.ml.cmu.edu/tag/fate/" class="tag-cloud-link tag-link-104 tag-link-position-11" style="font-size: 8pt;" aria-label="fate (1 item)">fate</a>
+<a href="https://blog.ml.cmu.edu/tag/federated-learning/" class="tag-cloud-link tag-link-170 tag-link-position-12" style="font-size: 8pt;" aria-label="federated learning (1 item)">federated learning</a>
+<a href="https://blog.ml.cmu.edu/tag/game-theory/" class="tag-cloud-link tag-link-115 tag-link-position-13" style="font-size: 8pt;" aria-label="game theory (1 item)">game theory</a>
+<a href="https://blog.ml.cmu.edu/tag/gradient-descent/" class="tag-cloud-link tag-link-79 tag-link-position-14" style="font-size: 8pt;" aria-label="gradient-descent (1 item)">gradient-descent</a>
+<a href="https://blog.ml.cmu.edu/tag/healthcare/" class="tag-cloud-link tag-link-314 tag-link-position-15" style="font-size: 8pt;" aria-label="Healthcare (1 item)">Healthcare</a>
+<a href="https://blog.ml.cmu.edu/tag/human-computer-interaction/" class="tag-cloud-link tag-link-335 tag-link-position-16" style="font-size: 8pt;" aria-label="human-computer interaction (1 item)">human-computer interaction</a>
+<a href="https://blog.ml.cmu.edu/tag/human-language-processing/" class="tag-cloud-link tag-link-102 tag-link-position-17" style="font-size: 8pt;" aria-label="human language processing (1 item)">human language processing</a>
+<a href="https://blog.ml.cmu.edu/tag/implicit-regularization/" class="tag-cloud-link tag-link-82 tag-link-position-18" style="font-size: 8pt;" aria-label="implicit-regularization (1 item)">implicit-regularization</a>
+<a href="https://blog.ml.cmu.edu/tag/information-bottleneck-principle/" class="tag-cloud-link tag-link-91 tag-link-position-19" style="font-size: 8pt;" aria-label="information-bottleneck-principle (1 item)">information-bottleneck-principle</a>
+<a href="https://blog.ml.cmu.edu/tag/interpretability/" class="tag-cloud-link tag-link-59 tag-link-position-20" style="font-size: 8pt;" aria-label="interpretability (1 item)">interpretability</a>
+<a href="https://blog.ml.cmu.edu/tag/latent-variable-model/" class="tag-cloud-link tag-link-303 tag-link-position-21" style="font-size: 8pt;" aria-label="latent variable model (1 item)">latent variable model</a>
+<a href="https://blog.ml.cmu.edu/tag/learning-from-people/" class="tag-cloud-link tag-link-98 tag-link-position-22" style="font-size: 8pt;" aria-label="learning from people (1 item)">learning from people</a>
+<a href="https://blog.ml.cmu.edu/tag/learning-theory/" class="tag-cloud-link tag-link-106 tag-link-position-23" style="font-size: 8pt;" aria-label="learning theory (1 item)">learning theory</a>
+<a href="https://blog.ml.cmu.edu/tag/llm/" class="tag-cloud-link tag-link-381 tag-link-position-24" style="font-size: 8pt;" aria-label="llm (1 item)">llm</a>
+<a href="https://blog.ml.cmu.edu/tag/machine-learning/" class="tag-cloud-link tag-link-11 tag-link-position-25" style="font-size: 22pt;" aria-label="machine learning (4 items)">machine learning</a>
+<a href="https://blog.ml.cmu.edu/tag/mcmc/" class="tag-cloud-link tag-link-235 tag-link-position-26" style="font-size: 8pt;" aria-label="MCMC (1 item)">MCMC</a>
+<a href="https://blog.ml.cmu.edu/tag/mcts/" class="tag-cloud-link tag-link-400 tag-link-position-27" style="font-size: 8pt;" aria-label="mcts (1 item)">mcts</a>
+<a href="https://blog.ml.cmu.edu/tag/ml/" class="tag-cloud-link tag-link-409 tag-link-position-28" style="font-size: 8pt;" aria-label="ml (1 item)">ml</a>
+<a href="https://blog.ml.cmu.edu/tag/multitask-learning/" class="tag-cloud-link tag-link-99 tag-link-position-29" style="font-size: 8pt;" aria-label="multitask learning (1 item)">multitask learning</a>
+<a href="https://blog.ml.cmu.edu/tag/online-learning/" class="tag-cloud-link tag-link-116 tag-link-position-30" style="font-size: 8pt;" aria-label="online learning (1 item)">online learning</a>
+<a href="https://blog.ml.cmu.edu/tag/optimization/" class="tag-cloud-link tag-link-76 tag-link-position-31" style="font-size: 14.3pt;" aria-label="optimization (2 items)">optimization</a>
+<a href="https://blog.ml.cmu.edu/tag/peer-review/" class="tag-cloud-link tag-link-97 tag-link-position-32" style="font-size: 8pt;" aria-label="peer review (1 item)">peer review</a>
+<a href="https://blog.ml.cmu.edu/tag/planning/" class="tag-cloud-link tag-link-195 tag-link-position-33" style="font-size: 8pt;" aria-label="planning (1 item)">planning</a>
+<a href="https://blog.ml.cmu.edu/tag/probabilistic-deep-learning/" class="tag-cloud-link tag-link-300 tag-link-position-34" style="font-size: 8pt;" aria-label="probabilistic deep learning (1 item)">probabilistic deep learning</a>
+<a href="https://blog.ml.cmu.edu/tag/probabilistic-inference/" class="tag-cloud-link tag-link-234 tag-link-position-35" style="font-size: 8pt;" aria-label="probabilistic inference (1 item)">probabilistic inference</a>
+<a href="https://blog.ml.cmu.edu/tag/regret-minimization/" class="tag-cloud-link tag-link-117 tag-link-position-36" style="font-size: 8pt;" aria-label="regret minimization (1 item)">regret minimization</a>
+<a href="https://blog.ml.cmu.edu/tag/reinforcement-learning/" class="tag-cloud-link tag-link-105 tag-link-position-37" style="font-size: 18.5pt;" aria-label="reinforcement learning (3 items)">reinforcement learning</a>
+<a href="https://blog.ml.cmu.edu/tag/ridge-regression/" class="tag-cloud-link tag-link-81 tag-link-position-38" style="font-size: 8pt;" aria-label="ridge-regression (1 item)">ridge-regression</a>
+<a href="https://blog.ml.cmu.edu/tag/robotics/" class="tag-cloud-link tag-link-207 tag-link-position-39" style="font-size: 14.3pt;" aria-label="robotics (2 items)">robotics</a>
+<a href="https://blog.ml.cmu.edu/tag/robot-perception/" class="tag-cloud-link tag-link-269 tag-link-position-40" style="font-size: 8pt;" aria-label="robot perception (1 item)">robot perception</a>
+<a href="https://blog.ml.cmu.edu/tag/sim2real/" class="tag-cloud-link tag-link-208 tag-link-position-41" style="font-size: 8pt;" aria-label="sim2real (1 item)">sim2real</a>
+<a href="https://blog.ml.cmu.edu/tag/slam/" class="tag-cloud-link tag-link-206 tag-link-position-42" style="font-size: 8pt;" aria-label="SLAM (1 item)">SLAM</a>
+<a href="https://blog.ml.cmu.edu/tag/software/" class="tag-cloud-link tag-link-315 tag-link-position-43" style="font-size: 8pt;" aria-label="Software (1 item)">Software</a>
+<a href="https://blog.ml.cmu.edu/tag/statistics/" class="tag-cloud-link tag-link-77 tag-link-position-44" style="font-size: 8pt;" aria-label="statistics (1 item)">statistics</a>
+<a href="https://blog.ml.cmu.edu/tag/visualization/" class="tag-cloud-link tag-link-336 tag-link-position-45" style="font-size: 8pt;" aria-label="visualization (1 item)">visualization</a></div>
+</div><div id="categories-6" class="widget widget_categories"><h4 class="widget-title">Categories</h4><form action="https://blog.ml.cmu.edu" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="13">artificial intelligence&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="55">automl&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="7">computer science&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="9">computer vision&nbsp;&nbsp;(7)</option>
+	<option class="level-0" value="8">deep learning&nbsp;&nbsp;(15)</option>
+	<option class="level-0" value="178">Educational&nbsp;&nbsp;(17)</option>
+	<option class="level-0" value="122">FATE&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="171">federated learning&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="121">learning theory&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="6">machine learning&nbsp;&nbsp;(110)</option>
+	<option class="level-0" value="56">machine translation&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="57">natural language processing&nbsp;&nbsp;(7)</option>
+	<option class="level-0" value="120">reinforcement learning&nbsp;&nbsp;(9)</option>
+	<option class="level-0" value="177">Research&nbsp;&nbsp;(99)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</div>    </aside>
+
+</div>            </div>
+        </div>
+    </div>
+
+<div class="instagram-footer">
+    <div class="instagram-widget">
+        <div id="text-7" class="widget footer-insta widget_text">			<div class="textwidget"><p>[instagram-feed num=6 cols=6 imagepadding=0 disablemobile=true showbutton=false showheader=false followtext=&#8221;Follow @Mint_Theme&#8221;]</p>
+</div>
+		</div>    </div>
+</div>
+</div>
+<footer>
+    <!-- <div class="container footers">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="footer-parts footer-part-1"></div>
+            <div class="footer-parts footer-part-2"></div>
+            <div class="footer-parts footer-part-3"></div>
+        </div>
+    </div> -->
+
+    <div class="copy-wrapper">
+        <div class="container">
+            <div class="col-lg-10 col-lg-offset-1">
+                                    <ul class="socials pt-10"><li><a href="https://blog.ml.cmu.edu/feed/" target="_blank"><i class="fa fa-rss"></i></a></li></ul>
+                                <p class="copyright">
+                    <!-- 2018 &copy; Carnegie Mellon University -->
+                    <!-- Legal Info -->
+                    <a href="//www.cmu.edu/legal/" target="_blank" rel="noopener">Legal Info</a> | <a href="//www.cmu.edu/" target="_blank" rel="noopener">www.cmu.edu</a><br>
+                    <!-- /Legal Info -->
+                    <span id="js-current-year">2018</span> &copy; <a title="Machine Learning | Carnegie Mellon University" href="https://www.ml.cmu.edu" target="_blank" rel="noopener">Machine Learning</a> | <a title="Carnegie Mellon University" href="https://www.cmu.edu" target="_blank" rel="noopener">Carnegie Mellon University</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="back-to-top">
+    <a title="Back to top button" aria-label="Back to top button" role="button" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<script>(function() {function maybePrefixUrlField() {
+	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if (urlFields) {
+	for (var j=0; j < urlFields.length; j++) {
+		urlFields[j].addEventListener('blur', maybePrefixUrlField);
+	}
+}
+})();</script><script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/i18n.min.js?ver=9e36b5da09c96c657b0297fd6f7cb1fd' id='wp-i18n-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.21' id='lodash-js'></script>
+<script type='text/javascript' id='lodash-js-after'>
+window.lodash = _.noConflict();
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/url.min.js?ver=1b4bb2b3f526a1db366ca3147ac39562' id='wp-url-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/hooks.min.js?ver=d0d9f43e03080e6ace9a3dabbd5f9eee' id='wp-hooks-js'></script>
+<script type='text/javascript' id='wp-api-fetch-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", { "locale_data": { "messages": { "": {} } } } );
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/dist/api-fetch.min.js?ver=c207d2d188ba8bf763f7acd50b7fd5a9' id='wp-api-fetch-js'></script>
+<script type='text/javascript' id='wp-api-fetch-js-after'>
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://blog.ml.cmu.edu/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "aec9774ad6" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://blog.ml.cmu.edu/wp-admin/admin-ajax.php?action=rest-nonce";
+</script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/modern-footnotes/modern-footnotes.min.js?ver=1.4.4' id='modern_footnotes-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/js/owl.carousel.min.js?ver=5.6.14' id='owl-carousel-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/js/plugins.js?ver=5.6.14' id='plugins-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/themes/mint/mint/js/main.js?ver=5.6.14' id='mint-main-scripts-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=BaUKYlr1JydyEx/' id='enlighterjs-js'></script>
+<script type='text/javascript' id='enlighterjs-js-after'>
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"enlighter","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+</script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-includes/js/wp-embed.min.js?ver=5.6.14' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://blog.ml.cmu.edu/wp-content/plugins/mailchimp-for-wp/assets/js/forms.min.js?ver=4.8.3' id='mc4wp-forms-api-js'></script>
+<!-- Scripts -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="custom-javascript">
+    var $ = jQuery;
+    $('.author').prop('target','_blank');
+    document.getElementById("js-current-year").textContent=(new Date().getFullYear());
+    /* Sidebar */
+    var $ = jQuery;
+    $(document).ready(function() {
+      $('.display-sidebar').toggle(
+        function() {
+            $('.blog-sidebar').css('right', '0');
+            $('.toggle-sidebar').css('right', '280px');
+            $('.display-sidebar i').addClass('fa-angle-right').removeClass('fa-angle-left');
+        }, function() {
+            $('.blog-sidebar').css('right', '-300px');
+            $('.toggle-sidebar').css('right', '10px');
+            $('.display-sidebar i').addClass('fa-angle-left').removeClass('fa-angle-right');
+      });
+    });
+    /* /Sidebar */
+</script>
+<!-- /Scripts -->
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: blog.ml.cmu.edu @ 2025-05-05 21:45:30 by W3 Total Cache
+-->

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hyoseung Kim</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+      var shiftWindow = function() { scrollBy(0, -50) };
+      window.addEventListener("hashchange", shiftWindow);
+      function load() { if (window.location.hash) shiftWindow(); }
+    </script>
+</head>
+
+<body onload="load()">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=".">Hyoseung Kim</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="?arg=research">Research</a>
+                    </li>
+                    <li>
+                        <a href="?arg=pubs">Publications</a>
+                    </li>
+                    <li>
+                        <a href="?arg=vita">Vita</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+<!-- Portfolio Item Heading -->
+<!--
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Portfolio Item
+            <small>Item Subheading</small>
+        </h1>
+    </div>
+</div>
+-->
+<!-- /.row -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+        var audio = new Audio();
+        if(audio.canPlayType("audio/mp3"))
+                audio.src = "img/name.mp3";
+        else if(audio.canPlayType("audio/wav"))
+                audio.src = "img/name.wav";
+                        
+        $("#play-button").click(function() {
+                audio.play();
+        });
+        $("#pause-button").click(function() {
+                audio.pause();
+        });
+});
+</script>
+
+
+<!-- Portfolio Item Row -->
+<div class="row">
+    <div class="col-sm-4" align="center">
+        <h3><img class="img-responsive" width=210 src="img/Hyoseung_Kim_2_small.JPG" alt=""></h3>
+    </div>
+
+    <div class="col-sm-8">
+        <h3>Hyoseung Kim</h3>
+        <p>
+        Associate Professor, <a href="http://www.ece.ucr.edu/">Electrical and Computer Engineering</a></br>
+        Chair, <a href="https://cen.ucr.edu/">Computer Engineering Program</a></br>
+        Cooperating Faculty, <a href="http://www.cs.ucr.edu">Computer Science and Engineering</a></br>
+        <a href="http://www.ucr.edu">University of California, Riverside</a>
+        </p>
+
+        <p>
+        <table border="0">
+        <tr>
+            <td valign="top"><b>Office:</b></td>
+            <td>346 Winston Chung Hall</br>900 University Avenue</br>Riverside, CA 92521</td>
+        </tr>
+        <tr>
+            <td><b>Email:</b></td>
+            <td>hyoseung@ucr.edu</br></td>
+        </tr>
+        <tr>
+            <td><b>Phone: </b></td>
+            <td>(951) 827-2390</br></td>
+        </tr>
+        </table>
+        </p>
+        <p><a href=http://scholar.google.com/citations?user=eyrxuzsAAAAJ&hl=en>Google Scholar</a> | <a href=http://www.linkedin.com/in/hyoseung>LinkedIn Profile</a></p>
+        <p><input id="play-button" type="button" value="How to pronounce my name?" /></p>
+    </div>
+</div>
+<!-- /.row -->
+
+<!-- Related Projects Row -->
+<div class="row">
+    <div class="col-lg-12">
+        <!--<h3 class="page-header">About Me</h3>-->
+        <h3>About Me</h3>
+            <p>I am an Associate Professor in the <a href=http://www.ece.ucr.edu>Department of 
+            Electrical and Computer Engineering</a> at the <a href=http://www.ucr.edu>University 
+            of California, Riverside</a>. I received my Ph.D. in Electrical and 
+            Computer Engineering from Carnegie Mellon University in 2016.
+            </p>
+            <p>
+            Research in our lab centers around <b>real-time, embedded and cyber-physical systems</b>. Specifically, we aim to achieve safe, predictable, and efficient computing under uncertain environments, which is a critical area of research for the continued innovation and widespread usability of intelligent autonomous technologies including self-driving cars and smart health and agriculture. We seek opportunities at the intersection of real-time cyber-physical systems and modern parallel computing platforms, and develop novel system software, algorithms, modeling and analysis techniques as a key enabler to build reliable, efficient and usable systems in practice.
+            </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h3>News</h3>
+            <ul class=sq>
+              <li>Aug 2024: New CPS project on honeybee health monitoring and analysis</li>
+              <li>May 2024: <a href=pdf/RTAS_2024_PAAM-CR.pdf>PAAM</a> received Best Paper Award and Best Student Paper Award at <a href=https://2024.rtas.org/>RTAS 2024</a> (<a href=img/rtas2024.jpg>pic: Daniel & Hyunjong</a>)</li>
+              <li>Aug 2022: Two papers will appear at <a href=https://rtcsa.org/>RTCSA 2022</a> and one paper at <a href="http://2022.rtss.org/">RTSS 2022</a></li>
+              <li>Oct 2021: PiCAS demonstrated at <a href=https://www.apex.ai/roscon-21>ROSCon 2021 ROS2 Executor Workshop</a></li>
+              <li>Oct 2021: Five papers to appear at <a href=http://2021.rtss.org/>RTSS 2021</a></li>
+              <li>Feb 2021: Our paper on real-time ROS2 accepted to RTAS 2021</li>
+              <li>Jun 2020: Finally it's official! Received the <a href=https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=503214>NSF CAREER Award</a></li>
+              <li>Jun 2020: Invited to serve as the Artifact Evaluation Chair of RTAS 2021</li>
+              <li>May 2020: Invited to serve on the TPC of RTSS 2020</li>
+              <li>May 2020: Check out our recent papers: Yecheng's real-time DNN scheduling @ RTSS 2019 (<a href=pdf/rtss19-dart.pdf>paper</a>, <a href=pdf/rtss19-dart-slides.pdf>slides</a>) and Mehdi's thermal-aware mixed-criticality systems @ RTAS 2020 (<a href=pdf/rtas20-mc-thermal.pdf>paper</a>, <a href=pdf/rtas20-mc-thermal-slides.pdf>slides</a>)</li>
+              <li>May 2020: Invited to serve on the TPC of DATE 2021</li>
+              <li>Apr 2020: Invited to serve on the TPC of ASPDAC 2021</li>
+              <li>Mar 2020: Invited to serve on the TPC of ICCD 2020</li>
+              <li>May 2019: Two papers accepted for publication at <a href=https://rtcsa2019.github.io/index/>RTCSA 2019</a></li>
+              <li>May 2019: Co-organizing the ACM Student Research Competition at ESWEEK 2019 (<a href=https://esweek.org/src>link</a>)</li>
+              <li>Feb 2019: Two papers have been accepted and will be presented at <a href=http://2019.rtas.org/>RTAS 2019</a>, as part of the <a href=http://www.cpsweek.org/>CPS Week</a>. Both papers are first-authored by my students, Mehdi and Hyunjong. Congrats!</li>
+              <li>Feb 2019: Serving on the TPC for RTCSA 2019</li>
+              <li>Feb 2019: Serving on the TPC for <a href="https://www.iccd-conf.com/">ICCD 2019</a></li>
+              <li>Feb 2019: Serving on the TPC for <a href=http://www.icccn.org/icccn19/index.html">ICCCN 2019</a></li>
+              <li>Apr 2018: Our paper "Analytical Enhancements and Practical Insights for MPCP with Self-Suspensions" won the Best Presentation Award at <a href=http://2018.rtas.org/>RTAS 2018</a></li>
+              <li>Feb 2018: Serving on the TPC for <a href=http://rtcsa2018.ht.sfc.keio.ac.jp/>RTCSA 2018</a></li>
+              <li>Nov 2017: Organizing the <a href=http://2018.rtas.org/demo/>Demo session</a> of <a href=http://2018.rtas.org/>RTAS 2018</a></li>
+              <li>Nov 2017: Serving on the TPC for <a href=https://ospert18.ittc.ku.edu/>OSPERT 2018</a></li>
+              <li>Aug 2017: Our paper "A Server-based Approach for Predictable GPU Access Control" won the Best Paper Award at <a href=http://rtcsa2017.cs.nctu.edu.tw/>RTCSA 2017</a></li>
+              <li>Aug 2017: I will be serving on the TPC for <a href=http://2018.rtas.org/>RTAS 2018</a></li>
+              <li>Jul 2017: I will be serving on the TPC for DATE 2018 (E1 track, see <a href=https://www.date-conference.com/call-for-papers>CFP</a>)</li>
+              <li>Jun 2017: Our paper "A Server-based Approach for Predictable GPU Access Control" accepted to RTCSA 2017</li>
+              <li>May 2017: Our paper "Predictable Shared Cache Management for Multi-Core Real-Time Virtualization" accepted to <a href=http://tecs.acm.org/>ACM TECS</a></li>
+              <li>Jan 2017: I will be serving on the program committee for <a href=http://www.rtcsa.org/>RTCSA 2017</a></li>
+              <li>Dec 2016: I will be serving on the program committee for <a href=http://esweek.org/emsoft/>EMSOFT 2017</a></li>
+              <li>Oct 2016: I will be serving on the program committee for <a href=https://ospert2017.snt.uni.lu/>OSPERT 2017</a></li>
+              <li>Oct 2016: Our paper "Real-Time Cache Management for Multi-Core Virtualization" was nominated for the Best Paper Award at <a href=http://esweek.org/>EMSOFT 2016</a></li>
+              <li>Jul 2016: Started working at UCR!</li>
+              <li>Jul 2016: I will be serving on the program committee for <a href=http://2016.rtss.org/rtsswork/>RTSS@Work 2016</a></li>
+              <li>Jun 2016: I will be serving on the program committee for <a href=https://gsathish.github.io/wmc2016/>WMC 2016</a></li>
+              <li>May 2016: Our paper "<a href=?arg=pubs#emsoft16>Real-Time Cache Management for Multi-Core Virtualization</a>" accepted to <a href=http://esweek.org/emsoft/about>EMSOFT 2016</a></li>
+            </ul>
+
+    </div>
+
+    <!--
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+        </a>
+    </div>
+    -->
+</div>
+<!-- /.row -->
+
+
+<!-- Footer -->
+<footer>
+<div class="row">
+<div class="col-lg-12">
+    <hr>
+</div>
+</div>
+</footer>
+
+
+</div>
+<!-- /.container -->
+
+
+
+
+</body>
+
+</html>

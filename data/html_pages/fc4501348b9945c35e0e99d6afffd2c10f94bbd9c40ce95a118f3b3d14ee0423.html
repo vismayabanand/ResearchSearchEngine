@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/security/responsibleai" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Responsible AI at Stanford | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_8gDMAAM5yTLVZ7_MdIabtxWjBPk7HBRdrQwjkDW2akM.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j1uOwzAIRTfkxB-zIIRjmrhjgwV20u5-rHmoatr5QYJzBBc0owaJr7Q0Ub-YzQGZSSGifkJL3ECpyI7Z4atbdQjvgKVGcKRI_8FUqspOcEk3sndSTw0wwbBWxeKCSLOmWCGgahK_ZgmYJ2v3nHh95YXMcCWDYxvn3CJKfpFShYnb-PLkT1Mh7j9a1F4xz3jFm6uoOALUzf7Gj8ncufaQk20UnTXki2iEEdw_ti-Rn9Ep9xMz6boQGLLBxwn9NtNonN2tUfEBjdye6DD_XecisWf6Aod-uYk" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/29327","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJx1kV2OwzAIhC_kxA8r7XUQSajr1DYWkKS9_XpXlar87Asy840QjFGVDGKZaTQWP6r2A5ZCAhPKAywWA6HMKyaHZ2-VZrgCGo1gixP9B2OuwivBLT5Jr0xLNMAIzRUE89ExX00ZmE1NsMKAIpH9jYvhRsqZ4PuMQ-IBU6f2SrGEM2_q42JqJlUMpLDd2wpnrrzISKBYFL7cyEJ-5Fy5ULEW78HedZnK4gJzSASGwYdWjn2PMz73YnYVBVs49a5-kqVi6j9Kv5S6DCnqnSanhuXGMkEL1X8WGKeyR_u8duiQ1Y7tD96jd9O1xulLjbIfUMn9fq8Synj3n-dblTW2cZhITP1ZglndGmlT_1f7zNOS6AddURtH","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-29327 path-security-responsibleai path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          <nav class="navbar navbar-expand-lg bg-lagunita-dark navbar-dark navbar-expand-lg" id="navbar-main">
+                        <div class="container">
+                          
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar2" aria-controls="CollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Topic Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar2">
+                                              
+<nav role="navigation" aria-labelledby="secondary-menu-title" id="block-stanford-uit-informationsecurity" region="secondary_menu" class="block block-menu navigation menu--menu-security-category">
+    
+  
+    <h2 id="secondary-menu-title" ><a href="/security" class="menu-item--active-trail" data-drupal-link-system-path="node/24784">Information Security</a></h2>
+    
+
+        
+              <ul region="secondary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/organization/information-security-office" class="menu-node-unpublished nav-link dropdown-toggle menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished nav-link--organization-information-security-office" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/26784">About Us</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-cat-itemsys-idf7ae081a13bce2008a9175c36144b0ad">Contact Us</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/team#section_3753" class="nav-link-https--uitstanfordedu-security-teamsection-3753">View all ISO services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="/security/getting-started" class="nav-link active dropdown-toggle nav-link--security-getting-started" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24802">Guides</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <span class="nav-link-">Data Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/copyright-infringement" class="nav-link--security-copyright-infringement" data-drupal-link-system-path="node/24892">Copyright infringement</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/crashplan" class="nav-link--service-crashplan" data-drupal-link-system-path="node/24150">File and data backup</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/secureemail" class="nav-link--service-secureemail" data-drupal-link-system-path="node/45">High risk data in email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/identity-theft" class="nav-link--security-identity-theft" data-drupal-link-system-path="node/25023">Identity theft</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/travel" class="nav-link--security-travel" data-drupal-link-system-path="node/29188">International travel</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sysadmin" class="nav-link--security-sysadmin" data-drupal-link-system-path="node/24803">IT system administrator guidance</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/password-manager" class="nav-link--service-password-manager" data-drupal-link-system-path="node/24793">Password manager</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/stay-safe-from-phishing" class="nav-link--security-stay-safe-from-phishing" data-drupal-link-system-path="node/29214">Phishing awareness</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/positionpapers" class="nav-link--security-positionpapers" data-drupal-link-system-path="node/26869">Position papers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sensitivedata" class="nav-link--security-sensitivedata" data-drupal-link-system-path="node/29291">Protecting sensitive data</a>
+              </li>
+                <li class="dropdown-item active">
+                          <a href="/security/responsibleai" class="active nav-link--security-responsibleai is-active" data-drupal-link-system-path="node/29327" aria-current="page">Responsible AI at Stanford</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/asp" class="nav-link--security-asp" data-drupal-link-system-path="node/24804">Third party security requirements</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/resources" class="nav-link--security-resources" data-drupal-link-system-path="node/24795">Other Stanford security resources</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Device Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/exception" class="nav-link--security-exception" data-drupal-link-system-path="node/24786">Compliance exception</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/encrypt/config" class="nav-link--guide-encrypt-config" data-drupal-link-system-path="node/24863">Encrypt your device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Mobile device security</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mydevices" class="nav-link--service-mydevices" data-drupal-link-system-path="node/24569">View your Stanford-registered devices</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/guide/riskclassifications" class="nav-link dropdown-toggle nav-link--guide-riskclassifications" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24632">Policies</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/guide/securitystandards" class="nav-link--guide-securitystandards" data-drupal-link-system-path="node/24600">Minimum Security Standards</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://pcicompliance.stanford.edu/" class="nav-link-https--pcicompliancestanfordedu-">Payment Card Industry (PCI)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/riskclassifications" class="nav-link--guide-riskclassifications" data-drupal-link-system-path="node/24632">Risk Classifications</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">Risk Classifications: Approved Services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/dra" class="nav-link dropdown-toggle nav-link--security-dra" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/29582">Privacy</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/security/dra" class="nav-link--security-dra" data-drupal-link-system-path="node/29582">Data Risk Assessment (DRA)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/hipaa" class="nav-link--security-hipaa" data-drupal-link-system-path="node/24924">HIPAA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/FERPA-Policy" class="nav-link--ferpa-policy" data-drupal-link-system-path="node/27245">FERPA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://privacy.stanford.edu" class="nav-link-https--privacystanfordedu">University Privacy Office</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/internship" class="nav-link dropdown-toggle nav-link--security-internship" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/25934">Programs</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/service/phishingawareness" class="nav-link--service-phishingawareness" data-drupal-link-system-path="node/28814">Phishing Awareness Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/bug-bounty" class="nav-link--security-bug-bounty" data-drupal-link-system-path="node/26809">Bug Bounty Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/vulnerability-disclosure" class="nav-link--security-vulnerability-disclosure" data-drupal-link-system-path="node/29897">Vulnerability Disclosure Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/cyberfest/2024" class="nav-link--security-cyberfest-2024" data-drupal-link-system-path="node/29733">Cybersecurity and Privacy Festival</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link dropdown-toggle nav-link-https--wwwcisagov-news-events-cybersecurity-advisories" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Security Alerts</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link-https--wwwcisagov-news-events-cybersecurity-advisories">Cybersecurity alerts and advisories</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/sunset-schedule" class="nav-link--guide-sunset-schedule" data-drupal-link-system-path="node/26942">Service and Software Sunset Schedule</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                                    </div>
+                                                    </div>
+                      </nav>
+                  </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/responsible-ai-bg.png?itok=ougg4xyB); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Responsible AI at Stanford </span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p>Enabling innovation through AI best practices</p>
+</div>
+      
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-1b0071d8d9a7d6afd162a17c3bfdde066c76a958ec53a8236e25ca2ef44f0622">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    <div class="item-list"><ul class="list-group"><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_2959">Overview</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_2970">Safety measures</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_2968">Risk factors</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_2960">Guidance</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_3427">Tools</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/responsibleai/#section_2967">Resources and help</a></li><li class="list-group-item"><a href="https://uit.stanford.edu/ai">More on GenAI</a></li></ul></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_2959" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--2959 section--default">
+		<div class="container">
+						<div id="section_content_2959" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <div class="section-body">
+<div class="row-fluid margin-top-0">
+<div class="offset1 span7 column" style="display: flex; height: 363px;">
+<p class="margin-bottom-20" style="font-size: 28px; line-height: 1.35em; display: flex; justify-content: center; flex-direction: column; width: 100%;">Generative artificial intelligence (AI) is built using algorithms that can generate text, images, videos, audio, and 3D models in response to prompts. Popular examples of generative AI include ChatGPT and Google Gemini.<br />
+<br />
+This type of AI can introduce both positive and negative impacts.<br />
+<br />
+​With this guide, learn how to more confidently use AI tools and models while keeping Stanford's data safe.</p>
+</div>
+
+<div class="center span3 column" style="height: 363px;"><img alt="" src="https://uit.stanford.edu/sites/default/files/images/2023/06/14/AI.png" /></div>
+</div>
+</div>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2970" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2970 section--default">
+		<div class="container">
+						<div id="section_content_2970" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2023/06/28/Sheild.png" style="width: 130px; height: 130px;" /><br />
+Safety measures</h2>
+
+<p style="text-align: center;">Let's take a look at several key ways we can increase privacy and security when using third-party&nbsp;AI platforms and tools.</p>
+
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3035"  class="paragraph paragraph--card paragraph-id--3035 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Be aware </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">A critical step to using AI is to build your awareness of how the platform you are using works.</p>
+
+<p>Importantly, any data put into third-party AI systems is transmitted and stored on external third-party servers over which Stanford has no direct control. This can introduce risks of compromising these data, or even data loss.</p>
+
+<p style="letter-spacing: 0.16px;">You can build awareness of <a href="https://www.nytimes.com/2023/03/28/technology/ai-chatbots-chatgpt-bing-bard-llm.html" target="_blank">how large language models work</a>&nbsp;and&nbsp;<a href="https://www.nytimes.com/column/on-tech-ai-newsletter">more</a>&nbsp;from the&nbsp;New York Times&nbsp;(free for Stanford students, faculty, and staff through&nbsp;<a href="https://library.stanford.edu/news/get-your-new-york-times-here">Stanford Libraries</a>).</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3033"  class="paragraph paragraph--card paragraph-id--3033 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Be careful </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">In general, err on the side of caution when it comes to what you input with a generative AI platform.</p>
+
+<p>Consider disabling options related to saved history to prevent the information from being logged or tracked for training model purposes.</p>
+
+<p><span style="font-weight: 600;">Avoid inputting any sensitive data, such as <a href="https://uit.stanford.edu/guide/riskclassifications#risk-classifications">Moderate or High Risk Data</a>, whether using a personal or Stanford account</span> with a third-party AI platform or tool that is not covered by a Stanford Business Associates Agreement. Review Stanford <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services">approved services</a> by data risk classification.&nbsp;</p>
+
+<p>Have more questions? <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=fe60e0981365660019813598d144b040">Start a discussion with ISO</a>.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3034"  class="paragraph paragraph--card paragraph-id--3034 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Be transparent </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">If your final product is significantly influenced by an AI platform, consider informing people how you used AI and <a href="http://www.researchprospect.com/how-to-cite-chatgpt-format-examples/" target="_blank">cite</a> appropriately.</p>
+
+<p><span style="letter-spacing: 0.01em;">Transparency will help your audiences understand more about the role of AI in your work and build trust in your integrity.</span></p>
+
+<p>&nbsp;</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2968" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--2968 section--default">
+		<div class="container">
+						<div id="section_content_2968" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2023/07/21/Yield.png" style="width: 130px; height: 130px;" /><br />
+Risk factors</h2>
+
+<p style="text-align: center;">Let's now look at the main risk factors when working with generative AI platforms.</p>
+
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_2973"  class="paragraph paragraph--card paragraph-id--2973 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Compromising sensitive data </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">Typically you need&nbsp;to provide some information, even if just a prompt, to bring out&nbsp;a result from generative AI.</p>
+
+<p>Yet these inputs often train the model and might be used to form future responses for others.</p>
+
+<p>When creating prompts: Avoid inputting any sensitive data, such as <a href="https://uit.stanford.edu/guide/riskclassifications">Moderate Risk or High Risk Data</a>.*</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p>&nbsp;</p>
+
+<p><em style="font-size: 0.9rem; font-weight: 300; letter-spacing: 0.01em;">*This includes: Home addresses, passport numbers, personal health information, passwords, financial data, or intellectual property. This also includes: Controlled Unclassified Information (CUI), International Traffic in Arms Regulations (ITAR) data, as well as proprietary source code, and any information that would be protected under non-disclosure agreements (NDA).</em></p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_2974"  class="paragraph paragraph--card paragraph-id--2974 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Inaccurate results</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">Information provided by AI can be incorrect or can create “hallucinations.”</p>
+
+<p><span style="letter-spacing: 0.01em;">A </span><a href="https://www.nytimes.com/2023/05/01/business/ai-chatbots-hallucination.html" style="color: rgb(46, 45, 41); border-bottom: 1px dotted rgb(46, 45, 41); letter-spacing: 0.01em;" target="_blank">hallucination</a><span style="letter-spacing: 0.01em;">&nbsp;by AI is when false or incorrect information is provided by AI, but in a very convincing manner. AI platforms typically will not introduce any skepticism about the false information, nor will they&nbsp;fact-check or provide citations. </span></p>
+
+<p><span style="letter-spacing: 0.01em;">Additionally, if prompted for&nbsp;citations and references, AI platforms have been known to generate inaccurate&nbsp;(but convincing) source information.&nbsp;</span></p>
+
+<p>In short: We&nbsp;can't trust results from generative AI completely.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p>&nbsp;</p>
+
+<p><em style="font-size: 0.9rem; font-weight: 300; letter-spacing: 0.01em;">This can also apply to using AI to generate code, which&nbsp;could be badly constructed, insecure, create backdoors, and even risk intellectual property infringement.</em></p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2960" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2960 section--default">
+		<div class="container">
+						<div id="section_content_2960" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2023/08/31/Wayfinding-Icon.png" style="width: 130px; height: 130px;" /><br />
+Explore best practices</h2>
+
+<p class="center">Discover security and privacy considerations for working with generative AI today.</p>
+
+<p class="center alert alert-info" style="text-align: center;">The information provided for these context areas is not considered complete or exhaustive.</p>
+
+<div class="section center" style="max-width: 900px; margin: 0 auto 0 auto;">
+<table class="table table-guide table-standards center">
+	<thead>
+		<tr>
+			<th class="standards" style="width: 30%;">Area</th>
+			<th class="what-to-do">Best Practices</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Data Privacy &amp; Usage</span></th>
+			<td>Avoid inputting data into generative AI about others that you wouldn’t want them to input about you.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Data Privacy &amp; Usage</span></th>
+			<td>Avoid inputting any sensitive data, such as <a href="https://uit.stanford.edu/guide/riskclassifications#risk-classifications">Moderate or High Risk Data</a>, whether using a personal or Stanford account with a third-party AI platform or tool that is not covered by a Stanford Business Associates Agreement. Review Stanford <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services">approved services</a> by data risk classification.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Data Privacy &amp; Usage</span></th>
+			<td>If inputting&nbsp;<a href="https://uit.stanford.edu/guide/riskclassifications#risk-classifications">Low Risk Data</a>, think about whether you want it to be public.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Data Privacy &amp; Usage</span></th>
+			<td>It's recommended to opt out of sharing data for AI iterative learning wherever possible.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Data Privacy &amp; Usage</span></th>
+			<td>If generative AI is to be used to interact with users, obtain their informed consent. Users must be informed about how their data is being used and have the option to opt-out or delete their data.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Emerging Technology</span></th>
+			<td><span style="letter-spacing: 0.16px; background-color: rgb(255, 255, 255);">To keep meetings secure and private, <a href="https://uit.stanford.edu/news/avoiding-third-party-bots-meeting-help">a</a></span><a href="https://uit.stanford.edu/news/avoiding-third-party-bots-meeting-help">void potentially risky third-party bots</a> and integrations. (Third-party tools may have the ability to scrape your calendar for information, unknowingly transcribe or record meetings, save meetings in unknown places, and join meetings even when you’re not present.)</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Recommended Best Practices</span></th>
+			<td>For content creation: If use of generative AI is permitted at all, one should always transparently cite its use.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Recommended Best Practices</span></th>
+			<td>Always refer to the specific policies and statements of discipline-relevant journals, publishers, and professional groups.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Promoting Discourse</span></th>
+			<td>Discuss opportunities for AI to contribute positively to your goals.</td>
+		</tr>
+		<tr>
+			<th><span style="font-size: 18px; letter-spacing: 0.16px; text-align: center; background-color: rgb(255, 255, 255);">Promoting Discourse</span></th>
+			<td>Have conversations around ethical issues and limitations related to AI use and development.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3427" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--3427 section--default">
+		<div class="container">
+						<div id="section_content_3427" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="https://uit.stanford.edu/sites/default/files/images/2024/04/30/Tools.png" style="width: 150px;" /><br />
+Tools being explored</h2>
+
+<p class="center">View a list of generative AI tools being evaluated by University IT (UIT) for potential implementation in various contexts, according to the needs of the Stanford community.</p>
+
+    </div></div>
+				
+				<p class="text-center section-url"><a href="/ai/genai-tool-matrix">GenAI Tool Evaluation Matrix</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2967" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2967 section--default">
+		<div class="container">
+						<div id="section_content_2967" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <h2 style="text-align:center;"><img alt="" src="/sites/default/files/images/2023/06/28/Resources-Icon2.png" style="width: 150px; height: 125px;" /><br />
+Resources and help</h2>
+
+<p class="center">When reviewing the resources and policies shown on this page, keep in mind that the legality and ethics of how AI is developed and used is still evolving.</p>
+
+<p class="center">For example, the growth of the AI industry has sparked an increase in "data scraping" (or copying and using) huge amounts of information on the internet to train new AI models. While this practice is common, its legality and potential outcomes are not clearly decided at this time.</p>
+
+<p class="center">Other concerns related to generative AI are similarly under debate and scrutiny.</p>
+
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_2965"  class="paragraph paragraph--card paragraph-id--2965 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-cogs fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">More resources and communities at Stanford</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>Stanford University community members are part of the ground-breaking research and work around generative AI.</p>
+
+<p><span style="letter-spacing: 0.01em;">You can explore more perspectives and explorative efforts with these sites:</span></p>
+
+<ul dir="ltr">
+	<li><a href="https://teachingcommons.stanford.edu/teaching-guides/artificial-intelligence-teaching-guide">Artificial Intelligence Teaching Guide | Stanford Teaching Commons</a></li>
+	<li><a href="https://hai.stanford.edu/generative-ai-perspectives-stanford-hai">Generative AI: Perspectives from Stanford HAI</a></li>
+	<li><a href="https://ai.stanford.edu/">The Stanford Artificial Intelligence Laboratory (SAIL)</a></li>
+	<li><a href="https://stai.stanford.edu/">Stanford Trustworthy AI</a></li>
+</ul>
+
+<p>And you can build knowledge about AI with this useful newsletter series from the New York Times&nbsp;(available free for Stanford students, staff, and faculty through <a href="https://library.stanford.edu/news/get-your-new-york-times-here">Stanford Libraries</a>):</p>
+
+<ul>
+	<li><a href="https://www.nytimes.com/column/on-tech-ai-newsletter">On Tech: A.I. Newsletter Series (New York Times)</a>&nbsp;&nbsp;</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_2966"  class="paragraph paragraph--card paragraph-id--2966 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-envelope fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Help</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>For privacy questions:</p>
+
+<ul>
+	<li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=1ecf90ff1bf0409094c0fee58d4bcb3e">​Submit a help request for the University Privacy Office&nbsp;(UPO)</a>.</li>
+</ul>
+
+<p style="font-size: 12pt; letter-spacing: 0.16px; margin: 0in; font-family: &quot;Source Sans Pro&quot;;"><span style="font-family: &quot;Source Sans Pro&quot;, sans-serif; letter-spacing: 0.01em; font-size: 12pt;">For IT security questions:</span></p>
+
+<ul style="letter-spacing: 0.16px;">
+	<li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad">Submit a help request for the Information Security Office&nbsp;(ISO)</a>.</li>
+</ul>
+
+<p>Considering a generative AI&nbsp;third-party tool?</p>
+
+<ul>
+	<li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=fe60e0981365660019813598d144b040">Start a discussion with ISO</a>.</li>
+</ul>
+
+<p>To report an incident (such as a data breach or system compromise):</p>
+</div>
+      
+            
+        </div>
+                	<div class="card-footer pb-4 border-0 text-center">
+        		<a class="btn btn-secondary mx-1 mt-2" href="http://uit.stanford.edu/security/report-incident">Report an incident  »</a>
+                                                                        	</div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_3052"  class="paragraph paragraph--card paragraph-id--3052 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-th-list fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Relevant policies at Stanford</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>Remember to review and consider how Stanford's security and privacy policies&nbsp;apply to using&nbsp;AI:</p>
+
+<ul>
+	<li><a href="https://communitystandards.stanford.edu/generative-ai-policy-guidance" style="letter-spacing: 0.01em;">Generative AI Policy Guidance at Stanford</a></li>
+	<li><a href="https://uit.stanford.edu/guide/securitystandards">Minimum Security Standards at Stanford</a></li>
+	<li><a href="https://uit.stanford.edu/guide/privacystandards">Minimum Privacy Standards at Stanford</a></li>
+	<li><a href="https://privacy.stanford.edu/policies/hipaa-privacy-policies">Health Insurance Portability and Accountability Act (HIPAA)</a></li>
+	<li><a href="https://privacy.stanford.edu/policies/gdpr/gdpr-data-subjects-rights">European Union’s General Data Protection Regulation (GDPR)</a></li>
+	<li><a href="https://privacy.stanford.edu/policies/ferpa-overview">Federal Family Educational Rights and Privacy Act (FERPA)</a></li>
+	<li><a href="https://researchcompliance.stanford.edu/panels/hs/policies">Research Policy Handbook and HRPP</a></li>
+</ul>
+
+<p>Consider other policies that might apply to your work and scholarship, as well.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_3346"  class="paragraph paragraph--card paragraph-id--3346 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-bookmark fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Education and awareness</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p>Grow your awareness,&nbsp;build an education plan, and keep track of AI-related developments worldwide&nbsp;with these resources:</p>
+
+<ul>
+	<li><a href="https://uit.stanford.edu/service/techtraining/schedule">UIT Tech Training</a></li>
+	<li><a href="https://online.stanford.edu/ai-programs-comparison" target="_blank">AI Programs Comparison Chart by Stanford Online</a></li>
+	<li><a href="https://www.linkedin.com/learning/topics/artificial-intelligence" rtarget="_blank">LinkedIn Learning: Artificial Intelligence</a></li>
+	<li>Coursera (<a href="https://cardinalatwork.stanford.edu/learning-stanford/professional-development/free-learning-platforms/coursera" target="_blank">log in with your Stanford ID to audit</a>)
+	<ul>
+		<li><a href="https://www.coursera.org/learn/ai-for-everyone?utm_source=deeplearningai&amp;utm_medium=institutions&amp;utm_campaign=WebsiteCoursesAI4ETopButton" target="_blank">AI for Everyone</a></li>
+		<li><a href="https://www.coursera.org/learn/prompt-engineering" target="_blank">Prompt Engineering for ChatGPT</a></li>
+	</ul>
+	</li>
+	<li><a href="https://www.whitecase.com/insight-our-thinking/ai-watch-global-regulatory-tracker">AI Watch: Global Regulatory Tracker</a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3112" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--3112 section--default">
+		<div class="container">
+						<div id="section_content_3112" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center" style="font-size: 28px; line-height: 1.35em; max-width: 900px; margin: -2rem auto 0 auto;">Do you have feedback about this page?<br />
+<br />
+<a class="more-button" href="https://docs.google.com/forms/d/e/1FAIpQLScUb_2SiFm7ie5Gm5XfpGUdpLdmSPiSMgyj5uVGCHuGDT4G4g/viewform" style="text-align: center; margin: 0 auto 2rem auto; font-size: 20px;">Share Feedback</a></p>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3013" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--3013 section--default">
+		<div class="container">
+						<div id="section_content_3013" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p><img alt="" src="/sites/default/files/2023/06/15/Footer_1.svg" /></p>
+
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/security/responsibleai" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

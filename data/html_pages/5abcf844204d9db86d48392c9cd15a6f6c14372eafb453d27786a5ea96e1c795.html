@@ -1,0 +1,575 @@
+<html>
+<head>
+<TITLE>The Modern Algorithmic Toolbox (CS168), Spring 2024</TITLE>
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+
+<h1>CS 168: The Modern Algorithmic Toolbox, Spring 2024</h1>
+
+<p>
+<b><h2>Announcements:</h2></b>
+
+<ul>
+<li>5/28: <a href="p9.pdf">Mini-project #9</a> is available.  Here are the <a href="close.csv">close.csv</a> and <a href="tickers.csv">tickers.csv</a> data files. The project is due Thursday, June 6th at 11am.
+<li>5/23: Here is a <a href="practice_final.pdf">practice final exam</a>.  
+<li>5/22: <a href="p8.pdf">Mini-project #8</a> is available.  Here is the <a href="laurel_yanny.wav">laurel_yanny.wav</a> audio clip for Part 3, and a zipped folder <a href="worldsYikes.zip">worldsYikes.zip</a> containing examples that we created illustrating that the 10-point research-oriented bonus part is not impossible : )  Also feel free to see the <a href=" https://theory.stanford.edu/~valiant/polyperceivable/index.html">research paper<a/> that grew out of the work of two former CS68 students on this bonus part.  The miniproject is due Thursday, May 30th at 11am.
+<li>5/14: <a href="p7.pdf">Mini-project #7</a> is available. It is
+due Thursday, May 23rd at 11am.   <a href="parks.csv">Here</a> is the list of national parks, and <a href="plot_route.py">plot_route.py</a> for Part 2. For Part 3, the QWOP scripts are available for MATLAB <a href="qwop.m">here</a> and Python <a href="qwop.py">here</a>.</li>
+<li>5/8: <a href="p6.pdf">Mini-project #6</a> is available. It is
+due Thursday, May 16th at 11am.   <a href="cs168mp6.csv">Here</a> is the data file for Part 2.</li>
+<li>5/1: <a href="p5.pdf">Mini-project #5</a> is available (this is one of my favorites!) It is
+due Thursday, May 9th at 11am.   The data files you will need are: <a href="dictionary.txt">dictionary.txt</a>, <a href="co_occur.csv">co_occur.csv</a>, <a href="analogy_task.txt">analogy_task.txt</a>, and <a href="p5_image.gif">p5_image.gif</a>. </li>
+<li>4/23: <a href="p4.pdf">Mini-project #4</a> is available.  The genomic dataset is available <a href="p4dataset2024.txt">here</a>, and the short file to decode the demographic tags is <a href="p4dataset2024_decoding.txt">here</a>. It is due Thursday, May 2nd (at 11am). 
+<li>4/16: <a href="p3.pdf">Mini-project #3</a> is available.  It is due Thursday, April 25th (at 11am). 
+<li>4/9: <a href="p2.pdf">Mini-project #2</a> is available. The dataset is available <a href="p2_data.zip">here</a>. 
+It is due Thursday, April 18th (at 11am). 
+<li> Most CA office hours are now posted, though they might be slightly in flux over the next couple days.  We may tweak the schedule in a few weeks after it is more clear which office hours are the most attended.  
+<li>Here is <a href="sol_template.tex">Mini-project LaTex solution template</a>.  Feel free to also use your own solution template, though in general the CAs would prefer you to not include the question prompts in your solutions, as it adds a lot of length/clutter.
+<li>Here is <a href="p1.pdf">Mini-project #1</a>.
+It is due Thursday, April 11th (at 11am).  Please submit via Gradescope, entry code 2PN4J7.
+ <a href="histogram.py">Here</a> is some starter code for drawing
+  histograms in Python, which might be helpful.
+<li>First lecture Tuesday, April 2nd, 1:30-2:50pm in NVIDIA Auditorium.  See you there!
+<li>Lecture videos will be available via Canvas, though I strongly encourage you to attend lecture in person if possible---its more fun for all of us.
+<li> <a href="https://edstem.org/us/join/ZYbyeA"><b>Here is a link to our Ed online discussion forum.</a>
+</ul>
+</li>
+</ul>
+
+
+
+<b><h2>Instructor:</h2></b>
+<ul>
+<li>
+<A HREF="http://theory.stanford.edu/~valiant/">Gregory Valiant</A> (Office hours: Tues 3-4pm, Gates 162).  Contact: email me at my last name at stanford.edu or via our course Ed page.
+</ul>
+<p>
+
+<b><h2>Course Assistants: </h2></b>
+<ul>
+<li>
+Sidhant Bansal (Office hours: Mon 4:15-6:15pm, Huang Basement)
+<li>
+Luci Bresette (Office hours: Wed 10:30-11:30, Fri 10:30-11:30, Huang Basement)
+<li>
+Isaac Gorelik  (Office hours: Mon 11-1, Huang Basement)
+<li>
+Meenal Gupta (Office hours: Wednesday 8-10pm, <a href="https://stanford.zoom.us/j/91570040226?pwd=b3hESUVKdVB6N01kNCtZTXYyTlFZQT09"> Zoom link, entry password 856878</a>))
+<li>
+Benson Kung (Office hours:  Wed 11-1,  <a href="https://stanford.zoom.us/j/9649412299?pwd=eERaSGZnVU5NeVp4ZmVOSmZXZ3VHZz09"> Zoom link</a>)
+<li>
+Ali Malik  (Office hours: Wed 6-8pm, Huang Basement)
+<li>
+Ligia Melo  (Office hours: Mon 9-11am Huang Basement)
+<li>
+Joey Rivkin  (Office hours: Tues 10:45-11:45 and Wed 10-11am, Huang Basement)
+<li>
+Luna Yang (Office hours: Wed 2-4pm, Huang Basement)
+</ul>
+
+<p> <b><h2>Lecture Time/location:</h2></b> Tues/Thurs, 1:30-2:50pm in NVIDIA Auditorium
+
+<p>  <a href="https://edstem.org/us/join/ZYbyeA"><b>Ed site for online discussion/questions.</a>  This link includes the access-code that you need the first time you sign up.</b></a>
+
+<p> <b><h2>Prerequisites:</h2></b> CS107 and CS161, or permission from the instructor.
+
+<p class="header"><h2>Course Description</h2></p> 
+This course will provide a rigorous and hands-on
+introduction to the central ideas and algorithms that constitute the
+core of the modern algorithms toolkit. Emphasis will be on
+understanding the high-level theoretical intuitions and principles
+underlying the algorithms we discuss, as well as developing a concrete
+understanding of when and how to implement and apply the algorithms.
+The course will be structured as a sequence of one-week
+investigations; each week will introduce one algorithmic idea, and
+discuss the motivation, theoretical underpinning, and practical
+applications of that algorithmic idea. Each topic will be accompanied
+by a mini-project in which students will be guided through a practical
+application of the ideas of the week. Topics include modern techniques
+in hashing, dimension reduction, linear and convex programming,
+gradient descent and regression, sampling and estimation, compressive
+sensing, linear-algebraic techniques (principal components
+analysis, singular value decomposition, spectral techniques), and an intro to differential privacy.
+
+<p>
+
+<p class="header"> <h2>Proposed Lecture Schedule</h2></p>
+
+<ul>
+
+<li><h3>Week 1: Modern Hashing</h3>
+
+<ul>
+<li><b>Lecture 1 (Tues 4/2):</b> Course introduction.  ``Consistent'' hashing.
+<ul>
+<li><A HREF="l/l1.pdf">Lecture notes</A>
+</ul>
+Supplementary material:
+<ul>
+<li>The Akamai paper:
+Karger/Lehman/Leighton/Levine/Lewin/Panigrahy,
+<a href="https://dl.acm.org/doi/pdf/10.1145/258533.258660">Consistent
+  Hashing and Random Trees:
+Distributed Caching Protocols for Relieving Hot Spots on the World Wide
+  Web</a>, STOC 1997.
+<li><a href="https://www.youtube.com/watch?v=apHAqUG3Pi8">Akamai
+    stories</a> by co-founder Tom Leighton.
+<li><a href="http://www.sigcomm.org/sites/default/files/ccr/papers/2015/July/0000000-0000009.pdf">Further
+    implementation details</a> (see Section 3).
+<li>The Chord paper: Stoica et al.,
+<a href="http://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf">Chord:
+  A Scalable Peer-to-peer Lookup Service for Internet
+Applications</a>, SIGCOMM 2001.
+<li> The Amazon Dynamo paper: DeCandia et al.,
+<a href="http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf">Dynamo:
+  Amazon's Highly Available Key-value Store</a>, SOSP 2007.
+<li>Review videos on hashing:
+<a href="https://www.youtube.com/watch?v=Qu183GFHbZQ&index=67&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V">Operations and
+  Applications</a>, 
+<a href="https://www.youtube.com/watch?v=j5KkC-wjlK4&index=68&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V">Implementation
+  Details Part 1</a> and <a href="https://www.youtube.com/watch?v=2MocX5A3pSs&index=69&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V">
+Part 2</a>.
+</ul>
+<p>
+
+<li><b>Lecture 2 (Thurs 4/4):</b>
+Property-preserving lossy compression.
+From majority elements to approximate heavy hitters.
+From bloom filters to the count-min sketch.
+<ul>
+<li><a href="l/l2.pdf">Lecture notes</a> 
+</ul>
+Supplementary material:
+<ul>
+<li>Review videos on bloom filters:
+<a href="https://www.youtube.com/watch?v=zYlxP7F3Z3c&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V&index=74">The Basics</a>
+and <a href="https://www.youtube.com/watch?v=oT-Zhry0hBI&list=PLXFMmlk03Dt7Q0xr1PIAriY5623cKiH7V&index=75">Heuristic
+  Analysis</a>
+<li>Broder/Mitzenmacher,
+<a href="http://www.eecs.harvard.edu/~michaelm/postscripts/im2005b.pdf">Network
+  Applications of
+Bloom Filters: A Survey</a>, 2005.
+<li>Cormode/Muthukrishnan,
+<a href="http://dimacs.rutgers.edu/~graham/pubs/papers/cm-full.pdf">An
+  Improved Data Stream Summary:
+The Count-Min Sketch and its Applications</a>, 2003.
+<li>One of
+  several <a href="https://github.com/addthis/stream-lib">count-min sketch
+  implementations</a>.
+</ul>
+
+
+</ul>
+<li><h3>Week 2: Data with Distances (Similarity Search, Nearest Neighbor,
+    Dimension Reduction, LSH)</h3></h3>
+<ul>
+<li><b>Lecture 3 (Tues 4/9):</b>
+Similarity Search.
+(Dis)similarity metrics: Jaccard, Euclidean, Lp.
+Efficient algorithm for finding similar elements in small/medium (ie. <20)
+dimensions using k-d-trees. 
+<ul>
+<li><a href="l/l3.pdf">Lecture notes</a>.
+</ul>
+
+Supplementary material:
+<ul>
+<li>Original paper of Bentley:
+<a href="http://dl.acm.org/citation.cfm?id=361007">Multidimensional binary search trees used for associative searching</a>, 1975.
+<li>Python scipy kd-tree implementation
+<a href="http://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html">here</a>.
+</ul>
+</ul>
+<p>
+
+
+<ul>
+<li><b>Lecture 4 (Thurs 4/11):</b>
+Curse of Dimensionality, kissing number.
+Distance-preserving compression.
+Estimating Jaccard similarity using MinHash.
+Euclidean distance preserving dimensionality reduction (aka the Johnson-Lindenstrauss Transform).
+<ul>
+<li><a href="l/l4.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>A nice survey of "kissing number", and some other strange phenomena from high dimensional spaces:
+<a href="http://www.ams.org/notices/200408/fea-pfender.pdf">Kissing Numbers, Sphere Packings, and some Unexpected Proofs</a> (from 2000).
+<li>Origins of MinHash at Alta Vista:
+Broder,
+<a href="http://cs.brown.edu/courses/cs253/papers/nearduplicate.pdf">Identifying
+  and Filtering Near-Duplicate
+Documents</a> (from 2000).
+<li>Ailon/Chazelle, <a href="https://www.cs.princeton.edu/~chazelle/pubs/fasterdim-ac10.pdf">Faster
+    Dimension Reduction</a>, CACM '10.
+<li>Andoni/Indyk,
+<a href="http://mags.acm.org/communications/200801/#pg119">Near-Optimal
+  Hashing Algorithms for Approximate Nearest Neighbor in High
+  Dimensions</a>, CACM '08.
+<li>For much more on Locality Sensitive Hashing, see <a href="http://infolab.stanford.edu/~ullman/mmds/ch3.pdf">this chapter</a> of
+the CS246 textbook (by Leskovec, Rajaraman, and Ullman).
+</ul> 
+</ul>
+
+
+
+<li><h3>Week 3: Generalization and Regularization</h3>
+
+
+<ul>
+<li><b>Lecture 5 (Tues 4/16):</b>
+Generalization (or, how much data is enough?).  
+Learning an unknown function from samples from an unknown distribution.
+Training error vs. test error. PAC guarantees for linear classifiers.  Empirical risk minimization.
+<ul>
+<li>
+<a href="l/l5.pdf">Lecture notes</a>
+</ul>
+</ul>
+<p>
+
+<ul>
+<li><b>Lecture 6 (Thurs 4/18):</b> Regularization.  The polynomial embedding and random projection, L2 regularization, and L1 regularization as a computationally tractable surrogate for L0 regularization, frequentist and Bayesian perspectives on regularization. 
+<ul>
+<li>
+<a href="l/l6.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>A 2016 paper arguing that, to understand why deep learning works, we need to rethink the theory of generalization.  This paper was quite controversial, with one camp thinking that its conclusions are completely obvious, and the other camp thinking that it is revealing an extremely deep mystery.  You decide for yourself!  Paper is <a href = "https://arxiv.org/pdf/1611.03530.pdf">here</a>. 
+</ul>
+</ul>
+<p>
+
+
+<li><h3>Week 4: Linear-Algebraic Techniques:
+Understanding Principal Components Analysis</h3>
+
+<ul>
+<li><b>Lecture 7 (Tues 4/23):</b>
+Understanding Principal Component Analysis (PCA).
+Minimizing squared distances equals maximizing variance.
+Use cases for data visualization and data compression.
+Failure modes for PCA.  
+<ul>
+<li><a href="l/l7.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>An exposition by 23andMe of the fact that the top 2 principal components of genetic SNP data of Europeans essentially recovers the geography of europe:  <a href="http://blog.23andme.com/news/a-different-kind-of-gene-mapping-comparing-genetic-and-geographic-structure-in-europe-the-return/">nice exposition w. figures</a>.  Original Nature paper: <a href="http://www.nature.com/nature/journal/v456/n7218/abs/nature07331.html">Genes mirror geography in Europe</a>, Nature, Aug. 2008.
+<li><a href="http://www.cs.ucsb.edu/~mturk/Papers/jcn.pdf">Eigenfaces</a>
+(see also this <a href="http://jeremykun.com/2011/07/27/eigenfaces/">blog post</a>)
+<LI>There's tons of PCA tutorials floating around the Web (some good, some
+  not so good), which you are also permitted to refer to.
+</ul>
+</ul>
+
+
+<p>
+<ul>
+<li><b>Lecture 8 (Thurs 4/25):</b>
+How PCA works.  Maximizing variance as finding the
+"direction of maximum stretch" of the covariance matrix.
+The simple geometry of "diagonals in disguise."
+The power iteration algorithm.  
+ <ul>
+<li><a href="l/l8.pdf">Lecture notes</a>
+</ul>
+</ul>
+
+
+<li><h3>Week 5: Linear-Algebraic Techniques: Understanding the Singular Value Decomposition and Tensor Methods</h3>
+<ul>
+<li><b>Lecture 9 (Tues 4/30):</b>
+Low-rank matrix approximations.  The singular value decomposition (SVD),  applications to matrix compression, de-noising, and matrix completion (i.e. recovering missing entries).
+<ul>
+<li><a href="l/l9.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>For a striking recent application of low-rank approximation, check out the<a href="https://arxiv.org/abs/2106.09685"> LoRA paper</a> from 2021.  The punchline is that in many cases, when fine-tuning large language models, the updates are close to low rank.  Hence once can explicitly train these fine-tuning updates to the original model in the low-rank factorized parameter space, reducing the number of parameters that need to be trained by 1000x or 10,000x!! 
+</ul> 
+</ul>
+
+<p>
+
+<ul>
+<li><b>Lecture 10 (Thurs 5/2):</b>
+Tensor methods.   Differences between matrices and tensors, the uniqueness of low-rank tensor factorizations, and Jenrich's algorithm.
+<ul>
+<li><a href="l/l10.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>A blog post discussing Spearman's original experiment and the motivation for tensor methods: <a href="http://www.offconvex.org/2015/12/17/tensor-decompositions/">here</a>.
+<li> See chapter 3 of Ankur Moitra's course notes  <a href="http://people.csail.mit.edu/moitra/docs/bookex.pdf">here</a> for a more technical in depth discussion of tensor methods, and Jenrich's algorithm.
+</ul>
+</ul>
+
+
+<li><h3>Week 6: Spectral Graph Theory</h3>
+<ul>
+<li><b>Lecture 11 (Tues 5/7):</b> 
+Graphs as matrices and the Laplacian of a graph.  Interpretations of the largest and smallest eigenvectors/eigenvalues of the Laplacian.  Spectral embeddings, and an overview of applications (e.g. graph coloring, spectral clustering.)
+<ul>
+<li>
+<a href="l/l11.pdf">Lecture notes.</a>
+</ul>
+Supplementary material:
+<ul>
+<li>Dan Spielman's <a href="http://www.cs.yale.edu/homes/spielman/561/">excellent lecture notes</a> for his semester-long course on Spectral Graph Theory.  The notes include a number of helpful plots.
+
+<li>
+Amin Saberi offered a grad seminar a few years ago that covered some of the research frontier of Spectral Graph Theory.  Hopefully he will offer this again soon...
+</ul>
+</ul>
+
+<p>
+
+<ul>
+
+<li><b>Lecture 12 (Thurs 5/9):</b> 
+
+Spectral techniques, Part 2.  
+ Interpretations of the second eigenvalue
+  (via conductance and isoperimetric number), and connections with the
+  speed at which random walks/diffusions converge.
+<ul>
+<li>
+<a href="l/l12.pdf">Lecture notes.</a>
+</ul>
+
+
+</ul>
+<p>
+
+
+<li><h3>Week 7: Sampling and Estimation</h3>
+
+
+<ul>
+<li><b>Lecture 13 (Tues 5/14):</b>
+Reservoir sampling (how to select a random sample from a datastream).  Basic probability tools: Markov's inequality and Chebyshev's inequality.  Importance Sampling (how to make inferences about one distribution based on samples from a different distribution).  Good-Turing estimate of the missing/unseen mass.
+<ul>
+<li><a href="l/l13.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<!-- <li>A nice description of the probabilistic tools/approach that went into Nate Silver's original Senate election  forecasting model:   <a href="http://fivethirtyeight.com/features/how-the-fivethirtyeight-senate-forecast-model-works/">here</a>. -->
+<li>A paper of mine showing that one can accurately estimate the structure of the unobserved portion of a distribution---not just the total probability mass.  <a href="https://dl.acm.org/citation.cfm?id=3125643">paper link here</a>.
+</ul> 
+</ul>
+<p>
+
+
+<ul>
+<li><b>Lecture 14 (Thurs 5/16):</b>
+Markov Chains, stationary distributions. Markov Chain Monte Carlo (MCMC)
+  as approaches to solving hard problems by sampling from carefully
+  crafted distributions. 
+<ul>
+
+<li><a href="l/l14.pdf">Lecture notes</a>
+</ul>
+Supplementary material:
+<ul>
+<li>A basic description of MCMC, <a href="http://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/">here</a>.
+<li>Lecture notes from Persi Diaconis on MCMC, including a description of the MCMC approach to decoding substitution-ciphers,
+<a href="https://www.researchgate.net/publication/215446278_The_Markov_Chain_Monte_Carlo_Revolution">here</a>.
+<li>Example of MCMC used for fitting extremely complex biological models:
+<a href="http://www.sciencemag.org/content/347/6218/1254806.full">The human splicing code...</a> Science, Jan. 2015.
+<li>For those interested in computer Go: <a href="http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html">here</a> is the Jan, 2016 Nature paper from Google's DeepMind group.
+</ul>
+</ul>
+
+<li><h3>Week 8: The Fourier Perspective (and other bases)</h3>
+<ul>
+<li><b>Lecture 15 (Tues 5/21):</b>
+Fourier methods, part 1.  
+<ul>
+<li><a href="l/l15.pdf">Lecture notes for Lectures 15 and 16</a>
+</ul> 
+Supplementary material:
+<ul>
+<li> A very basic intro to Fourier transformations with some nice visualizations:  <a href="http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/">here</a>.
+<li>A book version of a Stanford course on the Fourier Transform, which has many extremely nice applications:  <a href="http://see.stanford.edu/materials/lsoftaee261/book-fall-07.pdf">pdf here</a>.
+</ul>
+</ul>
+
+<p>
+
+<ul>
+<li><b>Lecture 16 (Thurs 5/23):</b>
+Fourier methods, part 2.  Emphasis on convolution and its many applications (fast multiplication, physics simulations, etc.)
+<ul>
+<li>Lecture  <a href="l/l15.pdf">notes</a> combined with Lecture 15.
+</ul>
+</ul>
+
+<li><h3>Week 9: <!--Mathematical Programming and -->Online Learning with Multiplicative Weights,  and Convex Optimization</h3>
+
+<ul>
+
+<li><b> Lecture 17 (Tues 5/28):</b> Online learning and the multiplicative weights algorithm, and applications.
+<ul>
+<li>
+<a href="l/l17.pdf">Lecture notes</a>
+</ul>. 
+<!--
+Supplementary material:
+<ul>
+<li>A <a href="https://www.youtube.com/watch?v=c6OEZQ3Hhp4">video</a>
+and <a href="http://theory.stanford.edu/~tim/f14/l/l9.pdf">lecture notes</a>
+    from CS264 with more of the mathematics behind compressive sensing.
+<li><a href="https://www.youtube.com/watch?v=W-b4aDGsbJk">Survey talk</a>
+by Candes from ICM 2014.
+
+<li>Rice's <a href="https://ieeexplore.ieee.org/document/4472247">single-pixel camera</a>
+
+<li><a href="http://spectrum.ieee.org/semiconductors/optoelectronics/camera-chip-makes-alreadycompressed-images">More</a>
+  on potential applications in cameras.
+<li>Developments
+  in <a href="http://www.eecs.berkeley.edu/~mlustig/l1-SPIRiT.pdf">medical imaging</a>.
+<li>More
+  <a href="http://nuit-blanche.blogspot.com/p/teaching-compressed-sensing.html">resources</a>
+  on compressive sensing.
+</ul>
+-->
+</ul>
+
+<ul>
+
+<p>
+<li><b>Lecture 18 (Thurs 5/30):</b>
+Compressive sensing, Linear and convex programming, and solving LPs via the multiplicative weights algorithm.  
+<ul>
+<li>
+<a href="l/l18a.pdf">Lecture notes on compressive sensing</a> and <a href="l/l18b.pdf">Lecture notes on linear and convex programming.</a>
+</ul>
+Supplementary material:
+<ul>
+<li><a href="http://lpsolve.sourceforge.net/4.0/LinearProgrammingFAQ.htm">Linear
+    programming FAQ</a>, out of date but still with lots of useful info.
+<li>For convex optimization at Stanford,
+start with <a href="http://stanford.edu/~boyd/index.html">Stephen
+    Boyd</a>.
+<li>For more on matrix completion, start with Chapter 7
+of <a href="http://people.csail.mit.edu/moitra/docs/bookex.pdf">Moitra's
+    notes</a>.
+</ul>
+-->
+</ul>
+
+<li><h3>Week 10: Privacy Preserving Computation</h3>
+
+<ul>
+<li><b>Lecture 19 (Tues 6/4):</b>
+Differential Privacy in data analysis and machine learning.
+<ul>
+<li>
+We won't have the usual lecture notes for this lecture, though the first chapter of the the Dwork/Roth book linked below is a fantastic starting place for learning about differential privacy.
+</ul>
+Supplementary material:
+<ul>
+<li>A fairly recent book on Differential Privacy by Cynthia Dwork and Aaron Roth: <a href="https://ieeexplore.ieee.org/document/8187424?arnumber=8187424">here</a> (should be downloadable from stanford network).
+<li>The <a href="https://link.springer.com/chapter/10.1007/11681878_14">original paper</a> of Dwork, McSherry, Nissim, and Smith, introducing differential privacy.
+<!--<li> The 2016  paper of Papernot, Abadi, Erlingsson, Goodfellow, and Talwar, describing the "Private Aggregation of Teacher Ensembles" approach of training multiples models on subsets of the data, and using them to ``teach'' a new, private, model, by combining their predictions in a differentially private fashion: <a href="https://arxiv.org/pdf/1610.05755.pdf">here</a>.
+-->
+</ul>
+</ul>
+
+<!--
+
+-->
+<!--
+<p>
+
+<ul>
+<li><b>Lecture 19 (Thurs6/7):</b>
+Expander codes.  (optional lecture)
+<ul>
+<li><a href="l/l19.pdf">Lecture notes</a>
+</ul>
+Optional supplementary material:
+<ul>
+<li>Sipser/Spielman, <a href="http://www.cs.yale.edu/homes/spielman/PAPERS/expandersIT.pdf">Expander
+    Codes</a>.
+<li>
+<a href="http://theory.stanford.edu/~tim/f14/l/l11.pdf">Lecture notes</a>
+    from CS264.
+
+</ul>
+-->
+</ul>
+
+
+<p class="header"><h2>Coursework</h2></p>
+
+    <ul>
+      <li><b>Assignments (70% of Grade)</b>: There will be 9 weekly mini-projects centered around the topics covered that week. Each mini-project contains both written and programming parts. You are strongly encouraged to work in teams of up to four students.  If you work in a team <b>only one member</b> should submit all of the relevant files.  
+
+      <p></p>
+
+      <p>For the written part, you are encouraged to use LaTeX to typeset your homeworks;
+      we've provided a <a href="homework.tex">template</a> for your
+      convenience. We will be using the <a href="https://gradescope.com/"> GradeScope </a> online submission system. Please create an account on Gradescope using your Stanford ID and join CS168 using entry code 2PN4J7. 
+
+<!--
+You must turn in a single PDF file --
+  --through <a href="https://scoryst.com/enroll/0jj4i6sNNK/">Scoryst</a>. 
+-->
+</p>
+
+      <p>For the programming part, you are encouraged to use Numpy and Pyplot in Python (<a href="https://docs.python.org/3/tutorial/index.html">Python tutorial</a>, <a href="http://www.numpy.org/">Numpy tutorial</a>, <a href="https://matplotlib.org/stable/">Matplotlib tutorial</a>), matlab (<a href="http://www.cyclismo.org/tutorial/matlab/">tutorial</a>), or some other scientific computing tool (with plotting). <a href="https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/python-colab.ipynb">Here</a> is a comprehensive python tutorial using Google's colab that was put together for the CS231n course, with examples of plotting using matplotlib at the very end.
+<!--
+	<p>To turn in your programming part:</p>
+        <ol>
+            <li>Compress all your files into a .zip file, such
+            as <code>p1.zip</code>.
+
+<li>See the instructions on the mini-project for details about what files to
+            submit.  For example, we generally want your code in addition
+            to your answers.
+</li>
+            <li>Copy the zip file to the cardinal machine (don't miss the colon in the end):
+scp &lt;zip file&gt; &lt;your SUNetID&gt;@cardinal.stanford.edu:
+      </pre></li>
+            <li>Log onto the cardinal machine:
+<pre>
+ssh &lt;your SUNetID&gt;cardinal.stanford.edu
+</pre></li>
+            <li>Run the submit script (run the script without any argument to see its usage):
+
+<pre>
+/usr/class/cs168/WWW/submit.py &lt;project ID&gt; .
+</pre></li>
+Note: your file must have the proper name (such as <code>p1.zip</code>) for the submit script to process it.
+
+        </ol>
+      <p>You can submit multiple times; each submission will just replace the previous one.</p>
+-->
+      <p>Assignments will be released on Tuesdays, and are due at 11am on Thursday the following week. <b>No late assignments will be accepted</b>, but we will drop your lowest assignment grade when calculating your final grade.</p>
+      </li>
+      <li><b>Final Exam (30% of Grade)</b>:  There will be an in-class final exam, covering all the material with an emphasis on the high-level punchlines of each lecture.  We will post a practice exam a few weeks before the end of the quarter.
+
+    </ul>
+    <p>
+  </div>
+
+  <p class="header"><h2>Collaboration Policy</h2></p>
+
+<p>You can discuss the problems at a high level with other groups and contact the course staff (via Ed or office hours) for additional help.  And of course, you are encouraged to help respond to Ed questions .</p>
+
+<p>You may refer to the course notes and research papers linked from the course webpage, and can also use other references that you find online.  You may *NOT* consult solution sets or code from past offerings of this course.  Of course, you are expected to understand everything that is written on any assignment turned in with your name; if you do refer to references, make sure you cite them appropriately, and make
+  sure that all your words are your own.</p>
+
+<p>
+You are also permitted to use general resources for whatever programming
+language you choose to use.  None of the assignments require you to write much code, and *you may NOT reuse any code from friends/internet sources.  If you use helper functions or code snippets that you did not write yourself (aside from standard python packages, etc.)  you must clearly cite the source in your writeup.
+<p>
+
+
+<p>Please follow the <a href="https://communitystandards.stanford.edu/policies-and-guidance/honor-code">honor code</a>.</p>

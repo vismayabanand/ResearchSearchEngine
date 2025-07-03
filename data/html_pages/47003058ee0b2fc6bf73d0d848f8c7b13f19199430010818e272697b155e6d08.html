@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      EE180 Digital Systems Architecture, Winter 2025
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./site_files/basic-profile.css" media="all">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+  </head>
+  <body>
+    <div id="wrap">
+        <div id="content">
+            <h1 id="ee180-digital-systems-architecture">EE180 Digital Systems Architecture</h1>
+Winter 2025, Tue/Thu 1:30 PM - 2:50 PM<br>
+<strong>Location</strong>: <a href="http://campus-map.stanford.edu/?srch=stlc111">STLC111</a><br>
+<p><strong>Instructors</strong>: Thierry Tambe, Caroline Trippel<br>
+<strong>Teaching Assistants</strong>: Caterina Zampa, Suresh Nambi, Kira Tran<br>
+<strong>Ed Discussion</strong>: <a href="https://edstem.org/us/courses/69749/discussion" target="_blank">Ed Stem</a> <br>
+<strong>Staff Email</strong>: <a href = "mailto: ee180-win2425-staff@lists.stanford.edu"> ee180-win2425-staff@lists.stanford.edu</a><br>
+<strong>Canvas</strong>: <a href="https://canvas.stanford.edu/courses/203801">Canvas Home Page</a><br>
+<strong>Course Information</strong>: <a href="http://ee180.stanford.edu/ee180info.pdf">PDF</a></p>
+
+<p><strong>Office Hours:</strong> <br>
+	Thierry: Tuesdays 3:00 PM - 4:00 PM (and by appointment). Allen 106. <br>
+  Caroline: Thursdays 3:00 PM - 4:00 PM (and by appointment). Gates 470. <br>
+  Caterina: Mondays 2:30 PM - 4:30 PM. Gates 104. <br>
+  Suresh: Wednesdays 5:30 PM - 7:30 PM. Huang Basement Room 020  <br>
+  Kira: Fridays 4:30 PM - 6:30 PM. Huang basement. <br>
+</p>
+
+<h2 id="overview">Overview</h2>
+<p>
+    &ensp; EE180 introduces students to computer architecture and the design of efficient computing and memory systems. The key topics of this course include: hardware/software interface (instruction set, data and thread level parallelism), assembly language programming,  efficiency metrics (performance, power, energy, and cost), processor design (pipelining and vectors), memory hierarchy (cache, main memory), virtualization, basic I/O, and custom accelerator design. The programming assignments provide an introduction to performance optimization of software on a modern architecture and the design of a processor.
+    <br>
+    &ensp; At the completion of the course, you will understand <u>how</u> to determine the performance of processor-based digital systems, <u>why</u> they are designed that way, and <u>how</u> to implement your own accelerator design. 
+    <br>
+    &ensp; EE180 is appropriate for undergraduate and graduate students who are specializing in the interrelated discipline of hardware/software systems. It is also appropriate for other EE and CS students who want to understand, optimize, or design their own processor based digital-system of any scale in their day-to-day work. Post EE180, students can take EE282, a class on advanced computer system architecture, and modern datacenter hardware/software architecture.
+</p>
+
+ <!--<div class="announcement">-->
+     <!--<h4> News </h4>-->
+     <!--<p>-->
+     <!--<ul style="margin-left: 20px;">-->
+     <!--<li>First 2 weeks of classes will be virtual</li>-->
+     <!--[><li>Homework 2 is released</li><]-->
+     <!--[><li>Lab 1 is now due on Wednesday, April 14th</li><]-->
+     <!--[><li>Lab 1 released</li><]-->
+     <!--[><li>Office hours will start during the second week of class.</li><]-->
+     <!--</ul>-->
+     <!--</p>-->
+ <!--</div> -->
+     <!--<li><strong><font color="red">(3/14) Please read this <a href="https://piazza.com/class/k4tj26ycggms8?cid=134" target="_blank">post</a> for EE282 final exam plan.</font></strong></li>-->
+     <!--<li>(3/5) We are providing virtual office hours via Zoom. Please read more details <a href="https://piazza.com/class/k4tj26ycggms8?cid=111" target="_blank">here</a>.-->
+     <!--<li>(2/26) NVIDIA's <a href="https://canvas.stanford.edu/courses/109906/files/folder/files?preview=5629946" target="_blank"> Speculative Reconvergence paper</a> is now available online. It was presented on <a href="https://cgo-conference.github.io/cgo2020/program/" target="_blank">CGO'2020</a> conference. </li>-->
+
+<h2 id="schedule">Schedule</h2>
+
+<h4 id="textbook">Required Textbook</h4>
+    <u>H&amp;P</u>: J. Hennessy & D. Patterson, <i>Computer Organization & Design: The Hardware/Software Interface</i>, 6th edition, Morgan-Kaufmann, 2020. <br>
+    <!-- <u>M/C</u>: <a href="https://www.morganclaypool.com/page/coll_eight" target="_blank"><i>Morgan Claypool Synthesis Lectures</i></a> (available through the library using your SUNet id). -->
+The book is available at the Stanford Bookstore, and one copy is on reserve at the <a href="https://searchworks.stanford.edu/view/14128350">Terman Engineering Library</a>. The book is also available in print or digital form by online retailers.
+
+</p>
+<h4 id="lectures">Lectures and Assignments</h4>
+<table style="width: 100%;">
+    <thead>
+	      <tr><th>Date</th><th>Topic</th><th>Reading Assignment</th><th>Class Info</th></tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>1/7</td>
+            <td>Introduction</td>
+            <td>H&amp;P: 1.{1-5}</td>
+            <td>
+                <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12749529" target="_blank">L1 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/9</td>
+            <td>Hardware/Software Interface I <br>
+                <button class="button">Lab 1 released</button> 
+			</td>
+            <td>H&amp;P: 2.{1-4, 6}</td>
+            <td>
+                <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12768679" target="_blank">L2 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/14</td>
+            <td>Hardware/Software Interface II
+            </td>
+            <td>H&amp;P: 2.{7-10}</td>
+            <td>
+                <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12797134" target="_blank">L3 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/16</td>
+			<td>Hardware/Software Interface III <br>
+                <button class="button">Lab 2 released </button>
+			</td>
+            <td>H&amp;P: 2.{4, 11-14} <br> H&amp;P: 6.3</td>
+            <td>
+             <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12823850" target="_blank">L4 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/21</td>
+            <td>Efficiency Metrics</td>
+            <td>H&amp;P: 1.{6-7}</td>
+            <td>
+			 <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12834979" target="_blank">L5 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/23</td>
+            <td>Hardware Design Overview<br>
+                <button class="button button2">Homework 1 released </button>
+                <a target="_blank"><button class="button button3">Lab 1 due </button></a>
+            </td>
+            <td>H&amp;P: Appendix B</td>
+            <td>
+			 <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12867464" target="_blank">L6 Slides</a>
+			</td>-->
+        </tr>
+
+
+        <tr>
+            <td>1/28</td>
+            <td> Processor Design</td>
+            <td>H&amp;P: 4.{1-4}</td>
+            <td>
+			 <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12889507" target="_blank">L7 Slides</a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>1/30</td>
+			<td>Pipelined Processor I</td>
+            <td>H&amp;P: 4.{5-6}</td>
+            <td>
+		    <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12941280" target="_blank">L8 Slides<a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>2/4</td>
+            <td>Pipelined Processor II <br>
+            <td>H&amp;P: 4.7</td>
+            <td>
+		    <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12950929" target="_blank">L9 Slides<a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>2/6</td>
+            <td>Pipelined Processor III <br>
+				<a target="_blank"><button class="button button3">Lab 2 due </button></a>
+                <button class="button">Lab 3 released </button>
+            </td>
+            <td>H&amp;P: 4.{8-10}</td>
+            <td>
+		    <!--<a href="https://canvas.stanford.edu/courses/185715/files/folder/lectures?preview=12984861" target="_blank">L10 Slides<a>
+			</td>-->
+        </tr>
+
+        <tr>
+            <td>2/11</td>
+			<td>Memory Hierarchy I<br>
+				<button class="button button3">Homework 1 due </button>
+                <button class="button button2">Homework 2 released</button>
+			</td>
+            <td>H&amp;P: 5.{1-4}</td>
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2/13</td>
+            <td>Memory Hierarchy II</td>
+            <td>
+                H&amp;P: 5.{8-10} <br>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>2/18</td>
+            <td>Memory Hierarchy III</td>
+            <td>
+                H&amp;P: 5.10, 6.5 <br>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>2/19</td>
+			<td><b>Midterm Exam</b></td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>2/20</td>
+            <td>Custom Accelerators<br>
+                 <a target="_blank"><button class="button button3">Homework 2 due </button></a>
+			<td>
+				Lecture Notes
+            </td>
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2/25</td>
+            <td>Virtual Memory<br>
+				<a target="_blank"><button class="button button">Lab 4 released </button></a>
+				<a target="_blank"><button class="button button2">Homework 3 released </button></a>
+                <a target="_blank"><button class="button button3">Lab 3 due </button></a>
+ 
+			</td>
+            <td>
+                H&amp;P: 5.7 <br>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>2/27</td>
+            <td>Operating System Support<br/>
+            </td>
+            <td>
+                H&amp;P: 4.9 </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3/4</td>
+            <td>I/O Devices &amp; Interfaces<br>
+            </td>
+            <td>H&amp;P: 6.9 <br>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3/6</td>
+            <td>I/O Optimizations<br>
+            </td>
+            <td>Lecture Notes</td>
+            <td></td>
+        </tr>
+		
+	   	<tr>
+            <td>3/11</td>
+			<td>Side-channel Security <br>
+            	<a target="_blank"><button class="button button3">Homework 3 due</button></a>
+			</td>
+			<td><a href="https://ieeexplore.ieee.org/document/8835233">Spectre Attacks: Exploiting Speculative Execution</a></td>
+            <td></td>
+        </tr>
+
+		 <tr>
+            <td>3/13</td>
+            <td>Optimizing AI/ML Hardware<br>
+				<a target="_blank"><button class="button button3">Lab 4 due</button></a>
+            </td>
+			<td><a href="https://ieeexplore.ieee.org/document/8942127">MAGNet: A Modular Accelerator Generator for Neural Networks</td>
+            <td></td>
+        </tr>
+		
+        <tr>
+            <td>3/18</td>
+            <td>
+              <b>Final Exam (3:30PM - 6:30PM)</b>
+            </td>
+            <td></td>
+            <td></td>
+		</tr>
+
+
+    </tbody>
+</table>
+
+&nbsp;
+<h4 id="review-sessions">Review Sessions</h4>
+<p> The TAs will hold review sessions on most Fridays. These sessions will clarify topics covered during lecture, introduction to homework and laboratory assignments, and review special topics. Review sessions will be recorded and posted. Attendance is optional, but highly recommended.
+ </p>
+
+<p> <b>Times:</b> Friday 3:30 PM – 4:30 PM <br>
+<b>Location</b>: Hewlett 102<br>
+
+
+
+<table style="width: 100%;">
+    <thead>
+	      <tr><th>Date</th><th>Topic</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1/10</td>
+            <td>Lab 1 Overview<br>
+            </td>
+        </tr>
+        <tr>
+            <td>1/17</td>
+            <td>Office Hours<br>
+            </td>
+        </tr>
+        <tr>
+            <td>1/24</td>
+            <td>Lab 2 Overview<br>
+            </td>
+        </tr>
+        <tr>
+            <td>1/31</td>
+            <td>Verilog and Hardware Design Tutorial<br>
+            </td>
+        </tr>
+        <tr>
+            <td>2/7</td>
+            <td>Lab 3 Overview<br>
+            </td>
+        </tr>
+        <tr>
+            <td>2/14</td>
+            <td>Midterm Review<br>
+            </td>
+        </tr>
+        <tr>
+            <td>2/21</td>
+            <td>Office Hours<br>
+            </td>
+        </tr>
+        <tr>
+            <td>2/28</td>
+            <td>Lab 4 Overview<br>
+            </td>
+        </tr>
+        <tr>
+            <td>3/7</td>
+            <td>No Review Session<br>
+            </td>
+        </tr>
+        <tr>
+            <td>3/14</td>
+            <td>Final Exam Review (Gates 403)<br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="homework-and-project"><a name="homework-project">Homework and Lab Assignments</a></h2>
+
+<p>For problem sets, we recommend working in groups of <b>two students</b>. All problem sets are due by <u><b>11:59 PM</b> PDT</u> on the dates indicated on the assignment. Solutions to homework sets will be available online shortly thereafter. All assignments should be submitted through <a href="https://www.gradescope.com/courses/922962" target="_blank">Gradescope</a>.</p>
+<p> For laboratory assignments, due to limited FPGA resources, we require that you work in groups of <b>four students</b> for lab 2, and <b>two students</b> for labs 1, 3, and 4. All lab assignments are due by <u><b>11:59 PM</b> PDT</u> on the dates indicated on the assignment. All lab assignments should be submitted through <a href="https://www.gradescope.com/courses/922962" target="_blank">Gradescope</a>.</p>  
+The lab and homework release dates and due dates are in the schedule above.
+<h2 id="logistics"><a name="logistics">Logistics</a></h2>
+<p><strong>Announcements: </strong> Visit this web page regularly to access all the slides, handouts, and announcements.
+</p>
+
+<p><strong>Final Exam: </strong> Tuesday March 18 (3/18/25), 3:30pm - 6:30pm, Location : STLC 111. 
+</p>
+
+ 
+<p><strong>Grading Scheme:</strong><br>
+Homework:							15%  <br>
+Class Participation:						10%  <br>
+Lab Assignments:						35% <br>
+Midterm Exam:							20% <br>
+Final Exam:							20% <br>
+</p>
+
+<p>
+<strong>Collaboration:</strong> See: <a href="http://web.stanford.edu/class/archive/cs/cs106b/cs106b.1164/handouts/honor-code.pdf" target="_blank">honor code and collaboration</a> for some general guidelines, which apply to both project assignments and problem sets. In general, collaboration is encouraged subject to the following guidelines:
+<ul style="margin-left: 20px; margin-top: -15px;">
+  <li>Students working together should submit a single assignment for the group.</li>
+  <li>Any assistance received in the solution of a homework set or programming assignment should be acknowledged in writing with specific details.</li>
+  <li>Sharing of code or solutions (partial or complete) between groups is not permitted.</li>
+</ul>
+
+</p>
+
+<!-- <p>
+     <strong>SCPD Video Recording Disclaimer: </strong>
+     Video cameras located in the back of the room will capture the instructor presentations in this course. For your convenience, you can access these recordings by logging into the course <a href="https://canvas.stanford.edu/" target="_blank">Canvas</a> site. These recordings might be reused in other Stanford courses, viewed by other Stanford students, faculty, or staff, or used for other education and research purposes. Note that while the cameras are positioned with the intention of recording only the instructor, occasionally a part of your image or voice might be incidentally captured. If you have questions, please contact a member of the teaching team.
+     </p>
+-->
+<p class="credits">
+      Adapted from a template by <a href="http://andreasviklund.com/">Andreas Viklund</a>.
+  </p>
+  </div>
+</div>
+
+
+</body></html>

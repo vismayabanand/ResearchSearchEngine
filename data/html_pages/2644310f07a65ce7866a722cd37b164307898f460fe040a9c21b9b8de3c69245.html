@@ -1,0 +1,760 @@
+<html> 
+<head> 
+<title>VISLab</title> 
+<link rel=Stylesheet type="text/css" media=all 
+href="//vislab.ucr.edu/style.css"> 
+<!--Needed for Expandable--REMEMBER TO PUT FILES jquery-1.2.6.pack.js AND ddaccordion.js IN SAME FOLDER AS THIS FILE -->
+<script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="ddaccordion.js">
+/***********************************************
+* Accordion Content script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+</script>
+<script type="text/javascript">
+ddaccordion.init({
+	headerclass: "expandable", //Shared CSS class name of headers group that are expandable
+	contentclass: "categoryitems", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", "openheader"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["prefix", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+</script>
+<style type="text/css">
+.arrowlistmenu{
+width: 700px; /*width of accordion menu*/
+}
+.arrowlistmenu .menuheader{ /*CSS class for menu headers in general (expanding or not!)*/
+font: bold 18px Arial;
+color: #CC3300;
+background: #FFDEAD url(titlebar.png) repeat-x center left;
+margin-bottom: 10px; /*bottom spacing between header and rest of content*/
+text-transform: uppercase;
+padding: 4px 0 1px 10px; /*header text is indented 10px*/
+cursor: hand;
+cursor: pointer;
+}
+.arrowlistmenu .openheader{ /*CSS class to apply to expandable header when it's expanded*/
+background-image: url(titlebar-active.png);
+}
+.arrowlistmenu ul{ /*CSS for UL of each sub menu*/
+list-style-type: bullet;
+margin: 0;
+padding: 10px;
+padding-left:40px;
+padding-bottom: 1px;
+margin-bottom: 8px; /*bottom spacing between each UL and rest of content*/
+}
+.arrowlistmenu ul li{
+padding-bottom: 1px; /*bottom spacing between menu items*/
+
+}
+.arrowlistmenu ul li a{
+color: #A70303;
+background: url(arrowbullet.png) no-repeat center left; /*custom bullet list image*/
+display: block;
+padding: 2px;
+padding-left: 19px; /*link text is indented 19px*/
+text-decoration: none;
+font-weight: bold;
+border-bottom: 1px solid #FFDEAD;
+font-size: 90%;
+}
+.arrowlistmenu ul li a:visited{
+color: #A70303;
+}
+.arrowlistmenu ul li a:hover{ /*hover state CSS*/
+color: #A70303;
+background-color: #FFDEAD;
+}
+</style>
+<!--End Needed for Expandable-->
+</head> 
+ <body lang=EN-US link="#006699" vlink="#006699" style='tab-interval:36.0pt;background:#FFDEAD'> 
+ <div class=Section1> 
+ <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 style='width:100.0%;mso-cellspacing:0pt;mso-padding-alt:0pt 0pt 0pt 0pt'> 
+	<tr style='mso-yfti-irow:0;mso-yfti-firstrow:no;height:45.0pt'> 
+		<td width=82  style='padding:0pt 0pt 0pt 0pt;height:45.0pt'> 
+	<img width=80 height=80 id="_x0000_i1026" src="//vislab.ucr.edu/TEMPLATE/UC.png" class=wrap>
+		</td> 
+		<td  width="*%" style='padding:0pt 0pt 0pt 0pt;height:45.0pt'> 
+		<center><p class=MsoNormal style='line-height:140%'><b><span style='font-size:20pt;
+		line-height:140%;font-family:Arial;color:#CC3300;letter-spacing:.6pt'>
+		Visualization and Intelligent Systems Laboratory <BR><font size="7">VISLab</font><o:p></o:p></span></b></p> 
+		</center>
+		</td>
+		<td  width=240>
+			<img width=240 height=80 id="_x0000_i1026" src="//vislab.ucr.edu/TEMPLATE/ucrlogo.jpg" class=wrap>
+  		</td> 
+	</tr> 
+</table>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 style='width:100.0%;mso-cellspacing:0pt;mso-padding-alt:0pt 0pt 0pt 0pt'> 
+	<tr style='mso-yfti-irow:1'> 
+		<td colspan=5 style='background:#BED8E5;padding:0pt 0pt 0pt 0pt'> 
+			<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial; color:#333333'>
+		<img width=1 height=1 id="_x0000_i1027" src="mm_spacer.gif" border=0><o:p></o:p></span></p> 
+		</td> 
+	</tr> 
+	<tr style='mso-yfti-irow:2;height:27.0pt'> 
+		<td colspan=2 width=15 nowrap style='width:11.25pt;background:#003366;padding:0pt 0pt 0pt 0pt;height:27.0pt'> <!--bgcolor-->
+			<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial;color:#333333'>&nbsp;<o:p></o:p></span></p> 
+		</td> 
+		<td colspan=3 style='background:#003366;padding:0pt 0pt 0pt 0pt;height:27.0pt' id=navigation> <!--bgcolor-->
+			<p class=MsoNormal ><span style='font-size:10.0pt;font-family:Arial;color:white;letter-spacing:1.2pt'>
+				 <div style="display: flex; align-items: center;">
+			<a href="//vislab.ucr.edu/index.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>HOME</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="//vislab.ucr.edu/PEOPLE/index.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>PEOPLE</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+    			<a href="//vislab.ucr.edu/RESEARCH/sample_research/sampleres.php" style="text-decoration:none; margin-right: 10px;">
+        		<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0pt;padding:0pt'>RESEARCH</span>
+   			 </a>
+			<!-- <a href="//vislab.ucr.edu/RESEARCH/sample_research/sampleres.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>RESEARCH</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+<div class="dropdown">
+    <button class="dropbtn">PUBLICATIONS</button>
+    <div class="dropdown-content">
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=books">Authored Books</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=edited_books">Edited Books</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=journals">Journals</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=special_issue_journals">Special Issue Journals</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=conferences">Conferences</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=book_chapters">Book Chapters</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=edited_proceedings">Edited Proceedings</a>
+        <a href="//vislab.ucr.edu/PUBLICATIONS/redirect.php?section=magazine_articles">Magazine Articles</a>
+    </div>
+</div>
+
+
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        font-size: 10pt;
+        color: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .dropdown-content {
+    	font-size: 55pt;
+        display: none;
+        
+        color: white;
+        position: absolute;
+        background-color: black;
+        min-width: 260px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+    }
+
+    .dropdown-content a {
+        color: black; /* Update text color here */
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+        font-size: 18pt;
+    }
+
+    .dropdown-content a:hover {
+        background-color: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #ccc;
+    }
+
+    .dropdown-content.publications a {
+        font-size: 12pt;
+    }
+</style>
+
+
+			<!-- <form action="//vislab.ucr.edu/PUBLICATIONS/redirect.php" method="GET" style="display: inline;">
+  				<select id="section" name="section" onchange="this.form.submit()" >
+				
+			    <option value="">PUBLICATIONS</option>
+			    <option value="books">Authored Books</option>
+			    <option value="edited_books">Edited Books</option>
+			    <option value="journals">Journals</option>
+			    <option value="special_issue_journals">Special Issue Journals</option>
+			    <option value="conferences">Conferences</option>
+			    <option value="book_chapters">Book Chapters</option>
+			    <option value="edited_proceedings">Edited Proceedings</option>
+			    <option value="magazine_articles">Magazine Articles</option>
+			  </select>
+			</form> -->
+			<a href="//vislab.ucr.edu/PATENTS/index.php" style="text-decoration:none; margin-left: 20px;">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>PATENTS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="//vislab.ucr.edu/SOFTWARE/software.php" style="text-decoration:none">
+            <span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>OPEN SOURCE</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="//vislab.ucr.edu/PRESENTATION/presentations.php" style="text-decoration:none">
+            <span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>PRESENTATIONS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="//vislab.ucr.edu/DATABASES/password.php" style="text-decoration:none">
+            <span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>DATABASES</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+			<a href="//vislab.ucr.edu/DIRECTION/directions.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>DIRECTIONS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="//vislab.ucr.edu/NEWS/news.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>NEWS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="//vislab.ucr.edu/LINK/links.php" style="text-decoration:none">
+			<span style='font-size:10pt;color:white;border:none windowtext 1.0pt;mso-border-alt: none windowtext 0pt;padding:0pt'>LINKS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+		</td> 
+	</tr> 
+	<tr style='mso-yfti-irow:3'> 
+		<td colspan=5 style='background:#BED8E5;padding:0pt 0pt 0pt 0pt'> 
+			<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial; color:#333333'><img border=0 width=1 height=1 id="_x0000_i1028" src="mm_spacer.gif"><o:p></o:p></span></p> 
+		</td> 
+	</tr> 
+</table>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 style='mso-cellspacing:0pt;mso-padding-alt:0pt 0pt 0pt 0pt'> 		
+	<tr style='mso-yfti-irow:4'> 
+		<td width=230  valign=top style='background:#003366; padding:0pt 0pt 0pt 0pt'> 	
+		<img border=0  id="_x0000_i1029" src="//vislab.ucr.edu/TEMPLATE/ebu2.JPG">
+			<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=230 style='mso-cellspacing:0pt;mso-padding-alt:0pt 0pt 0pt 0pt'> 
+				<tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'> 
+					<td width=15 style='width:11.25pt;padding:0pt 0pt 0pt 0pt'> 
+						<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial; color:#333333'>&nbsp;<o:p></o:p></span></p> 
+					</td> 
+					<td width=200 style='width:150.0pt;padding:0.0pt 3.75pt 15.0pt 3.75pt'id=padding> 
+						<p class=MsoNormal style='margin-top:0pt;margin-right:0pt;margin-bottom: 15.0pt;margin-left:0pt;line-height:21.0pt;mso-outline-level:2'>
+						<span style='font-size:13.0pt;font-family:Arial;color:white;letter-spacing:1.2pt; mso-font-kerning:18.0pt'>Contact Information<o:p></o:p></span></p> 
+						<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt: auto;line-height:150%'>
+						<strong><span style='font-size:9.0pt;line-height: 150%;font-family:Arial;color:white'>VISLab</span></strong>
+						<span style='font-size:9.0pt;line-height:150%;font-family:Arial;color:white'>
+						<BR> <st1:PlaceName w:st="on">Winston Chung Hall Room 216</st1:PlaceName>
+						<br> <st1:PlaceType w:st="on">University</st1:PlaceType> of <st1:State w:st="on">California</st1:State>,
+						<st1:City w:st="on"><st1:place w:st="on">Riverside</st1:place></st1:City> <br> 900 <st1:address w:st="on"><st1:Street w:st="on">University Avenue</st1:Street><br> 
+						<st1:City w:st="on">Riverside</st1:City>, <st1:State w:st="on">CA</st1:State> <st1:PostalCode w:st="on">92521-0425</st1:PostalCode></st1:address><br>  <br> 
+						<strong><span style='font-family:Arial'>Tel:</span></strong> (951)-827-3954<o:p></o:p></span></p> 
+						<a href="//www.cris.ucr.edu" style="color:White" title="CRIS">CRIS</a><BR>						
+						<a href="//www.engr.ucr.edu/" style="color:WHite"title="Bourns College of Engineering">Bourns College of Engineering</a><BR>	
+						<a href="//www.ucr.edu/" style="color:White" title="UCR">UCR</a><BR>
+						<a href="//www.vislab.ucr.edu/IGERT" style="color:#CC3300" title="VisLab"><B>NSF IGERT on Video Bioinformatics</B></a><BR>					
+						<BR>
+						<p><b><font color="white">	UCR Collaborators: </font></b><BR>
+						<A href="http://www.cs.ucr.edu" style="color:White">CSE</A><BR>
+						<A href="//www.ece.ucr.edu/" style="color:White">ECE</A><BR>
+						<A href="//www.me.ucr.edu/" style="color:White">ME</A><BR>
+						<A href="http://www.statistics.ucr.edu" style="color:White">STAT</A><BR>
+						<A href="http://www.psych.ucr.edu/" style="color:White">PSYC</A><BR>
+						<A href="https://entomology.ucr.edu/" style="color:White">ENTM</A><BR>
+						<A href="http://www.biology.ucr.edu/" style="color:White">BIOL</A><BR>
+						<A href="http://www.plantbiology.ucr.edu/" style="color:White">BPSC</A><BR>
+						<A href="http://www.economics.ucr.edu" style="color:White">ECON</A><BR>
+						<a href="http://math.ucr.edu" style="color:White">MATH</a><BR>
+						<a href="//www.bioeng.ucr.edu/" style="color:White">BIOENG</a><BR> 
+						<a href="https://business.ucr.edu/graduate" style="color:White">MGNT</a><BR>
+						<BR>
+						<p><b><font color="white">	Other Collaborators: </font></b><BR>						
+						<A href="http://www.keio.ac.jp/" style="color:White" target="_BLANK"> Keio University</a><BR>
+						<p><b><font color="white">Other Activities: </font></b><BR>
+						<a href="//www.vislab.ucr.edu/Biometrics2019/" style="color:White; font-size:11.0pt"> IEEE Biometrics Workshop 2019</a><BR>						
+						<a href="//www.vislab.ucr.edu/Biometrics2018/" style="color:White; font-size:11.0pt"> IEEE Biometrics Workshop 2018</a><BR>
+						<a href="http://videonetworks2009.cs.ucr.edu/" style="color:White; font-size:11.0pt"> Worshop on DVSN 2009</a><BR>
+						<a href="http://www.cedar.buffalo.edu/~govind/uploadpage.php" style="color:White; font-size:11.0pt"> Multibiometrics Book</a>
+						
+						<p>
+						<strong>
+							<span style='font-size:9.0pt;line-height: 150%;font-family:Arial;color:white'>Webmaster Contact Information:</span>
+						</strong>
+						<span style='font-size:9.0pt;line-height:150%;font-family:Arial;color:white'>
+						<BR> <st1:PlaceName w:st="on">Alex Shin</st1:PlaceName>
+						<br> <st1:PlaceType w:st="on"><a href="mailto:wshin@ece.ucr.edu" style="color:white" class="nlink">wshin@ece.ucr.edu</a></st1:State>
+						<BR><BR> <st1:PlaceName w:st="on">Last updated: July 1, 2017</st1:PlaceName>
+						</p>
+						
+						
+					</td> 
+					<td width=15 style='width:11.25pt;padding:0pt 0pt 0pt 0pt'> 
+						<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial; color:#333333'>&nbsp;<o:p></o:p></span></p> 
+					</td> 
+				</tr> 
+			</table> 
+			<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial;color:#333333'><o:p></o:p></span></p> 
+		</td> 
+		<td width=25 valign=top style='width:37.5pt;background:#FFDEAD;padding:0pt 0pt 0pt 0pt'> 
+			<p class=MsoNormal><span style='font-size:11.0pt;font-family:Arial;color:#333333'>
+			<img border=0 width=50 height=1 id="_x0000_i1030" src="mm_spacer.gif"><o:p></o:p></span></p> <!--IMAGE-->
+		</td> 
+		<td  width=100% valign=top style='width:100%;background:#FFDEAD;padding:0pt 0pt 0pt 0pt'> 
+			<p class=MsoNormal style='margin-bottom:12.0pt'><span style='font-size:11.0pt; font-family:Arial;color:#333333'><o:p>&nbsp;</o:p></span></p> 
+			<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=540 style='width:80%;mso-cellspacing:0pt;mso-padding-alt:0pt 0pt 0pt 0pt'> 
+				<tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'> 
+					<td style='padding:0pt 0pt 0pt 0pt'> 
+
+<div style="position: absolute; left: -5556px">
+
+Ev ve <a href="https://www.pelikannakliyat.com/ofis-tasima/" title="Ofis taşıma">Ofis taşıma</a> sektöründe lider olmak.Teknolojiyi klrd takip ederek bunu müşteri menuniyeti amacı için kullanmak.Sektörde marka olmak. 
+<a href="https://www.pelikannakliyat.com/" title="İstanbul evden eve nakliyat">İstanbul evden eve nakliyat</a>
+Misyonumuz sayesinde edindiğimiz müşteri memnuniyeti ve güven ile müşterilerimizin bizi tavsiye etmelerini sağlamak.
+</div>
+
+
+                      <p style='line-height:15.0pt' align="justify"><span style='font-size:12pt;font-family:
+    Arial;color:#333333'> <B><p>The Visualization and Intelligent Systems Laboratory (VISLab) 
+                    is involved in research in the following areas:</p>
+					<UL>
+					<li>Intelligent Systems 
+					<li>Large Scale Camera Networks
+					<li>Automatic Object Recognition
+					<li>Learning in Computer Vision and Pattern Recognition
+					<li>Medical and Biological Image Analysis
+					<li>Multimodal Biometrics
+					<li>Image and Video Databases
+					<li>Autonomous Navigation
+					<li>Network Monitoring and Intrusion Detection
+					<li>Remote Sensing 
+                  
+					</UL>
+					<p> VisLab undertakes research in computer vision, pattern recognition, 
+                    image processing, machine learning, artificial intelligence, 
+                    multimedia databases, robotics, man/machine interfaces, computer 
+                    graphics, and visualization. Current projects are in video networks, image database, biologically
+					 inspired computation, biological/medical imaging and perception-based navigation and control. <o:p></o:p></span></p>
+					 <h2>Call for Papers:</h2>
+					 <ul>
+					 <LI><a href="Biometrics2024/index.php" style="color:Red" target="_blank">IEEE Workshop on Biometrics CVPR 2024</a>
+
+					 <LI><a href="Biometrics2023/index.php" style="color:Red" target="_blank">IEEE Workshop on Biometrics CVPR 2023</a>
+				 	  <LI><a href="Biometrics2022/index.php" style="color:Red" target="_blank">IEEE Workshop on Biometrics CVPR 2022</a>
+				 	  <LI><a href="B-AMFG2021/b-amfg.php" style="color:Red" target="_blank">CVPR 2021 Biometrics Workshop, jointly with the Workshop on Analysis and Modeling of Faces and Gestures (B-AMFG)</a>
+				 	  <LI><a href="Biometrics2020/index.php" style="color:Red" target="_blank">IEEE Workshop on Biometrics CVPR 2020</a>, <a href="Biometrics2019/index.php" style="color:Red" target="_blank">2019</a>, <a href="Biometrics2018/index.php" style="color:Red" target="_blank">2018</a>, <a href="Biometrics2017/index.php" style="color:Red" target="_blank">2017</a>
+					  <LI><a href="//www.vislab.ucr.edu/Biometrics16/" style="color:Red" target="_blank">Call for Book Chapters on Deep learning for Biometrics 2016</a>
+					  <!-- <LI> <a href="//www.vislab.ucr.edu/Biometrics16/" style="color:Red" target="_blank">IEEE Workshop on Biometrics CVPR 2016</a> -->
+					  	<LI><a href="//vislab.ucr.edu/ICDSC/Sensors-CFP.PDF" style="color:Red" target="_blank">Distributed Smart Sensing for Mobile Vision, IEEE Sensors Journal 2015 </a>
+					  	<LI><a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=37866&copyownerid=48540" style="color:Red" target="_blank">WACV 2015: IEEE Winter Conference on Applications of Computer Vision</a>
+					 
+</ul>
+			<br>	
+		<a href="http://videonetworks2009.cs.ucr.edu/" style="color:Red"><img src="images/onr_resized.jpg" width=75 height=34> / <img src="images/aro_resized.jpg" width=34 height=34> / <img src="images/nsf_resized.jpg" width=34 height=34>  Workshop on Distributed Video Sensor Networks</a><BR><BR>
+
+		
+		<strong><h3><font color="green">3D Ear Database: We have received many emails concerning the availability of the UCR Ear Recognition Database. We are trying to make this database 
+		 publicly available soon. </font></h3></strong><Br>
+	  
+	<!--  <font color="#CC3300"><h2>Opportunity for a Post Doctoral Researcher:</h2> <h3>We are looking for an outstanding person with a strong background in Computer Vision, Pattern Recognition, Image Processing, 
+ and Machine Learning. The research project involves vehicle identification in video. A Ph.D. in Electrical Engineering or Computer Science is 
+ required. The position is available immediately. Please send your resume with information about your availability to  <A href="mailto:jgonzalez@vislab.ucr.edu" style="color:Red">jgonzalez@vislab.ucr.edu</a>.
+</H3></font> -->
+
+
+<h2>To New Post Doctoral Fellows</h2><h3>
+We are currently looking for Post Doctoral Fellows in several areas of Computer Vision and Pattern Recognition. 
+Please send your resumes to Alex Shin (Dr. Bhanu's assistant): <a href="mailto:wshin@ece.ucr.edu" style="color:red" class="nlink">wshin@ece.ucr.edu</a>. Thank you very much.</h3> 
+
+
+<div style="border-width: 3px; position: absolute; border-style: solid; top: -25000px;">
+   <h2>Top Online Betting Platforms in Bangladesh for 2024: Seize Your Winning Chance</h2>
+
+  <h3>MCW: Elevate Your Casino Experience</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/mcw/">MCW</a> and discover innovative gaming opportunities in 2024.</p>
+
+  <h3>8MBets: Bet Smart, Win Big</h3>
+  <p>With <a href="https://inout.gso.gov.bd/media/policy/8mbets/">8MBets</a>, you’ll find the best odds and plenty of rewards this year.</p>
+
+  <h3>Jitabet: Unlock the World of Betting</h3>
+  <p>Explore exciting betting options with <a href="https://inout.gso.gov.bd/media/policy/jitabet/">Jitabet</a> and start winning today.</p>
+
+  <h3>Jita Ace: Your Go-To Platform for Casino Fun</h3>
+  <p><a href="https://inout.gso.gov.bd/media/policy/jitaace/">Jita Ace</a> offers engaging games with incredible rewards.</p>
+
+  <h3>Wicket71: Bet on Your Favorite Cricket Teams</h3>
+  <p>Place your bets on thrilling cricket matches at <a href="https://inout.gso.gov.bd/media/policy/wicket71/">Wicket71</a> and win big.</p>
+
+  <h3>Bhaggo: Luck Meets Strategy</h3>
+  <p>Test your fortune at <a href="https://inout.gso.gov.bd/media/policy/bhaggo/">Bhaggo</a>, where strategic gameplay leads to high payouts.</p>
+
+  <h3>Babu88: Casino Excellence Awaits</h3>
+  <p>Sign up at <a href="https://inout.gso.gov.bd/media/policy/babu88/">Babu88</a> for an unforgettable casino experience.</p>
+
+  <h3>JeetWin: The Place Where Winners Play</h3>
+  <p>Enhance your casino experience at <a href="https://inout.gso.gov.bd/media/policy/jeetwin/">JeetWin</a> in 2024.</p>
+
+  <h3>JeetBuzz: Your Gateway to Success</h3>
+  <p>Find success at <a href="https://inout.gso.gov.bd/media/policy/jeetbuzz/">JeetBuzz</a> and unlock fantastic rewards.</p>
+
+  <h3>Baji Live: Real-Time Betting at Its Best</h3>
+  <p>Enjoy live betting like never before at <a href="https://inout.gso.gov.bd/media/policy/baji-live/">Baji Live</a>.</p>
+
+  <h3>Baji999: High Payouts Await</h3>
+  <p>Secure amazing wins with <a href="https://inout.gso.gov.bd/media/policy/baji999/">Baji999</a>, your ultimate destination for casino gaming.</p>
+
+  <h3>Baji88: The Casino for Top-Tier Players</h3>
+  <p>Bet confidently with <a href="https://inout.gso.gov.bd/media/policy/baji88/">Baji88</a> and maximize your wins.</p>
+
+  <h3>BetVisa: The Most Secure Betting Platform</h3>
+  <p>Enjoy peace of mind when betting with <a href="https://inout.gso.gov.bd/media/policy/betvisa/">BetVisa</a>.</p>
+
+  <h3>Crickex: A Winning Formula for Every Player</h3>
+  <p>Discover why <a href="https://inout.gso.gov.bd/media/policy/crickex/">Crickex</a> is the top choice for winning big in 2024.</p>
+
+  <h3>Krikya: All You Need for Successful Gaming</h3>
+  <p>Explore an unmatched gaming environment at <a href="https://inout.gso.gov.bd/media/policy/krikya/">Krikya</a>.</p>
+
+  <h3>Nagad88: The Platform Built for Big Payouts</h3>
+  <p>Achieve your winning goals at <a href="https://inout.gso.gov.bd/media/policy/nagad88/">Nagad88</a> this year.</p>
+
+  <h3>MCW Casino: Where Casino Dreams Come True</h3>
+  <p>Find thrilling casino games at <a href="https://inout.gso.gov.bd/media/policy/mcw-casino/">MCW Casino</a> in 2024.</p>
+
+  <h3>Casino MCW: Gaming Excellence Awaits</h3>
+  <p>Explore top-level entertainment with <a href="https://inout.gso.gov.bd/media/policy/casino-mcw/">Casino MCW</a>.</p>
+
+  <h3>Babu88.com: A Casino Like No Other</h3>
+  <p>Bet on your favorite games with <a href="https://inout.gso.gov.bd/media/policy/babu88-com/">Babu88.com</a> and secure big wins.</p>
+
+  <h3>MCW App: Play on the Go</h3>
+  <p>Access all your favorite games with the <a href="https://inout.gso.gov.bd/media/policy/mcw-app/">MCW App</a>.</p>
+
+  <h3>MCW Live Casino: Your Gateway to Real-Time Action</h3>
+  <p>Play live and win with <a href="https://inout.gso.gov.bd/media/policy/mcw-casino-live/">MCW Live Casino</a>.</p>
+
+  <h3>Baji Live Login: Quick Access to Live Casino Fun</h3>
+  <p>Log in and enjoy live gaming at <a href="https://inout.gso.gov.bd/media/policy/baji-live-login/">Baji Live Login</a>.</p>
+
+  <h3>MCW Login: Secure Your Account</h3>
+  <p>Access your gaming profile with the <a href="https://inout.gso.gov.bd/media/policy/mcw-com-login/">MCW Login</a>.</p>
+
+  <h3>JeetWin App: Gaming Wherever You Go</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/jeetwin-app/">JeetWin App</a> for gaming on the move.</p>
+
+  <h3>Six6s Login: Fast and Secure Access</h3>
+  <p>Quickly log in to <a href="https://inout.gso.gov.bd/media/policy/six6s-login/">Six6s</a> and start winning.</p>
+
+  <h3>Babu88 Bet: Bet Smart for Big Wins</h3>
+  <p>Secure your winnings with <a href="https://inout.gso.gov.bd/media/policy/babu88-bet/">Babu88 Bet</a>.</p>
+
+  <h3>Baji Live 365: Play Real-Time and Win</h3>
+  <p>Join live games at <a href="https://inout.gso.gov.bd/media/policy/baji-live-365/">Baji Live 365</a> and win instantly.</p>
+
+  <h3>Baji Live 555: Secure Big Wins with Live Action</h3>
+  <p>Take advantage of live betting with <a href="https://inout.gso.gov.bd/media/policy/baji-live-555/">Baji Live 555</a>.</p>
+
+  <h3>Baji Live 999: The Live Casino Experience You’ve Been Waiting For</h3>
+  <p>Play live and win huge at <a href="https://inout.gso.gov.bd/media/policy/baji-live-999/">Baji Live 999</a>.</p>
+
+  <h3>MCW Login: Access Your Account Securely</h3>
+  <p>Log in securely with <a href="https://inout.gso.gov.bd/media/policy/mcw-login/">MCW Login</a>.</p>
+
+  <h3>BetVisa Login: Quick and Easy Access</h3>
+  <p>Enjoy easy access with <a href="https://inout.gso.gov.bd/media/policy/betvisa-login/">BetVisa Login</a>.</p>
+
+  <h3>BetVisa BD: Your Casino Hub for 2024</h3>
+  <p>Bet confidently with <a href="https://inout.gso.gov.bd/media/policy/betvisa-bd/">BetVisa BD</a>.</p>
+
+  <h3>BetVisa লগইন করুন: Secure and Fast Access</h3>
+  <p>Log in securely with <a href="https://inout.gso.gov.bd/media/policy/betvisa-লগইন-করুন/">BetVisa</a>.</p>
+
+  <h3>BetVisa App: Your Favorite Games on the Go</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/betvisa
+
+-app/">BetVisa App</a> and enjoy mobile betting.</p>
+
+  <h3>Crickex লগইন: Your Cricket Betting Portal</h3>
+  <p>Get quick access with <a href="https://inout.gso.gov.bd/media/policy/crickex-লগইন/">Crickex Login</a>.</p>
+
+  <h3>Crickex Login: Fast and Secure Entry</h3>
+  <p>Log in and enjoy all your favorite games with <a href="https://inout.gso.gov.bd/media/policy/crickex-login/">Crickex Login</a>.</p>
+
+  <h3>Baji888 Login: Play with Confidence</h3>
+  <p>Log in and secure your wins at <a href="https://inout.gso.gov.bd/media/policy/baji888-login/">Baji888 Login</a>.</p>
+
+  <h3>Crickex App: Enjoy Betting Anytime</h3>
+  <p>Play on the go with the <a href="https://inout.gso.gov.bd/media/policy/crickex-app/">Crickex App</a>.</p>
+
+  <h3>BetVisa: Safe and Secure Gaming</h3>
+  <p>Get the best gaming experience with <a href="https://inout.gso.gov.bd/media/policy/bet-visa/">BetVisa</a>.</p>
+
+  <h3>JeetBuzz Login: Your Gateway to Fast Wins</h3>
+  <p>Log in securely at <a href="https://inout.gso.gov.bd/media/policy/jeetbuzz-login/">JeetBuzz Login</a>.</p>
+
+  <h3>Krikya Login: Quick Access to Winning Games</h3>
+  <p>Get secure access to your favorite games with <a href="https://inout.gso.gov.bd/media/policy/krikya-login/">Krikya Login</a>.</p>
+
+  <h3>Baji Login: Play and Win Big</h3>
+  <p>Log in to <a href="https://inout.gso.gov.bd/media/policy/baji-login/">Baji</a> for top-tier games and wins.</p>
+
+  <h3>MostPlay: Where Winning Begins</h3>
+  <p>Maximize your chances at <a href="https://inout.gso.gov.bd/media/policy/mostplay/">MostPlay</a>.</p>
+
+  <h3>MarvelBet: Where Wins Meet Fun</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/marvelbet/">MarvelBet</a> for thrilling games and rewards.</p>
+
+  <h3>Velki: Your Betting Hub</h3>
+  <p>Discover your winning potential with <a href="https://inout.gso.gov.bd/media/policy/velki/">Velki</a>.</p>
+
+  <h3>Six6s: Bet Big, Win Bigger</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/six6s/">Six6s</a> and win more today.</p>
+
+  <h3>Baji: Gaming Excellence for Every Player</h3>
+  <p>Maximize your wins with <a href="https://inout.gso.gov.bd/media/policy/baji/">Baji</a>.</p>
+
+  <h3>1xBet: The Ultimate Betting Experience</h3>
+  <p>Bet confidently with <a href="https://inout.gso.gov.bd/media/policy/1xbet/">1xBet</a>.</p>
+
+  <h3>1xBetc: The Future of Casino Gaming</h3>
+  <p>Explore exciting games with <a href="https://inout.gso.gov.bd/media/policy/1xbetc/">1xBetc</a>.</p>
+
+  <h3>1xBetm: Play Anytime, Anywhere</h3>
+  <p>Join the mobile gaming revolution with <a href="https://inout.gso.gov.bd/media/policy/1xbetm/">1xBetm</a>.</p>
+
+  <h3>1xBetma: Casino Fun on Mobile</h3>
+  <p>Play on the move with <a href="https://inout.gso.gov.bd/media/policy/1xbetma/">1xBetma</a>.</p>
+
+  <h3>1xBetmn: Your Mobile Casino Destination</h3>
+  <p>Play confidently with <a href="https://inout.gso.gov.bd/media/policy/1xbetmn/">1xBetmn</a>.</p>
+
+  <h3>1xBet Login: Easy and Fast Access</h3>
+  <p>Log in and win more with <a href="https://inout.gso.gov.bd/media/policy/1xbet-login/">1xBet Login</a>.</p>
+
+  <h3>1xBet App: Bet on the Move</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/1xbet-app/">1xBet App</a> for gaming on the go.</p>
+
+  <h3>1xBet Download: Secure Your Access</h3>
+  <p>Get the <a href="https://inout.gso.gov.bd/media/policy/1xbet-download/">1xBet Download</a> for fast and secure betting.</p>
+
+  <h3>1xBet APK: Download and Start Betting</h3>
+  <p>Get the <a href="https://inout.gso.gov.bd/media/policy/1-xbet-apk/">1xBet APK</a> for mobile betting.</p>
+
+  <h3>IxBet App: Bet and Win Instantly</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/ixbet-app/">IxBet App</a> today and start betting.</p>
+
+  <h3>IxBet App Download: The Ultimate Betting App</h3>
+  <p>Secure your app download at <a href="https://inout.gso.gov.bd/media/policy/ixbet-app-download/">IxBet App Download</a>.</p>
+
+  <h3>1xBet Dow: Quick Download for Secure Play</h3>
+  <p>Get the <a href="https://inout.gso.gov.bd/media/policy/1xbet-dow/">1xBet Dow</a> for fast access to games.</p>
+
+  <h3>JeetBuzz.com: Casino Success Awaits</h3>
+  <p>Join the action at <a href="https://inout.gso.gov.bd/media/policy/jeetbuzz-com/">JeetBuzz.com</a> and win big.</p>
+
+  <h3>JeetBuzz App: Play Anytime, Anywhere</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/jeetbuzz-app/">JeetBuzz App</a> for mobile gaming.</p>
+
+  <h3>JeetBuzz 88: Your Casino Partner</h3>
+  <p>Enjoy exciting games at <a href="https://inout.gso.gov.bd/media/policy/jeetbuzz-88/">JeetBuzz 88</a> and win big.</p>
+
+  <h3>Krikya Casino: The Place for Real Wins</h3>
+  <p>Secure your wins at <a href="https://inout.gso.gov.bd/media/policy/krikya-casino/">Krikya Casino</a>.</p>
+
+  <h3>Krikya App: Gaming on the Go</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/krikya-app/">Krikya App</a> and play anywhere.</p>
+
+  <h3>Krikya Bet: Bet Confidently, Win Easily</h3>
+  <p>Place your bets securely with <a href="https://inout.gso.gov.bd/media/policy/krikya-bet/">Krikya Bet</a>.</p>
+
+  <h3>Krikya88: Play for Big Rewards</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/krikya88/">Krikya88</a> for big wins in 2024.</p>
+
+  <h3>Krikiya: Casino Excellence Awaits</h3>
+  <p>Play confidently with <a href="https://inout.gso.gov.bd/media/policy/krikiya/">Krikiya</a>.</p>
+
+  <h3>Baji Live.com: Real-Time Action and Wins</h3>
+  <p>Enjoy live gaming with <a href="https://inout.gso.gov.bd/media/policy/baji-live-com/">Baji Live.com</a>.</p>
+
+  <h3>Baji Live App: Play and Win Anywhere</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/baji-live-app/">Baji Live App</a> for mobile gaming.</p>
+
+  <h3>Baji Live Cricket: Secure Your Wins with Live Bets</h3>
+  <p>Place bets on live cricket at <a href="https://inout.gso.gov.bd/media/policy/baji-live-cricket/">Baji Live Cricket</
+
+a>.</p>
+
+  <h3>Baji Live 777: The Live Casino You Need</h3>
+  <p>Enjoy real-time wins with <a href="https://inout.gso.gov.bd/media/policy/baji-live-777/">Baji Live 777</a>.</p>
+
+  <h3>Baji999 Live: Bet Big in Real-Time</h3>
+  <p>Play and win live with <a href="https://inout.gso.gov.bd/media/policy/baji999-live/">Baji999 Live</a>.</p>
+
+  <h3>Baji999 Login: Secure Access to Big Wins</h3>
+  <p>Log in securely with <a href="https://inout.gso.gov.bd/media/policy/baji999-login/">Baji999</a>.</p>
+
+  <h3>Baji999.com: Your Gateway to Real Wins</h3>
+  <p>Start winning at <a href="https://inout.gso.gov.bd/media/policy/baji999-com/">Baji999.com</a>.</p>
+
+  <h3>Baji999 App: Gaming at Your Fingertips</h3>
+  <p>Download the app at <a href="https://inout.gso.gov.bd/media/policy/baji999-app/">Baji999 App</a> for secure gaming.</p>
+
+  <h3>JeetWin Login: Fast and Secure</h3>
+  <p>Log in instantly with <a href="https://inout.gso.gov.bd/media/policy/jeetwin-লগইন/">JeetWin Login</a>.</p>
+
+  <h3>JeetWin Download: Bet Anywhere</h3>
+  <p>Download the app at <a href="https://inout.gso.gov.bd/media/policy/jeetwin-download/">JeetWin</a> for mobile betting.</p>
+
+  <h3>JeetWin BD: A Premier Casino Experience</h3>
+  <p>Experience the best at <a href="https://inout.gso.gov.bd/media/policy/jeetwin-bd/">JeetWin BD</a>.</p>
+
+  <h3>JeetWin Online: Big Wins Await</h3>
+  <p>Play confidently at <a href="https://inout.gso.gov.bd/media/policy/jeetwin-online/">JeetWin Online</a>.</p>
+
+  <h3>JeetWin Live: Real-Time Fun and Wins</h3>
+  <p>Enjoy live gaming at <a href="https://inout.gso.gov.bd/media/policy/jeetwin-live/">JeetWin Live</a>.</p>
+
+  <h3>JeetWin Casino: Big Wins, Big Fun</h3>
+  <p>Secure your wins with <a href="https://inout.gso.gov.bd/media/policy/jeetwin-casino/">JeetWin Casino</a>.</p>
+
+  <h3>JeetWin Result: Track Your Success</h3>
+  <p>Check your winnings at <a href="https://inout.gso.gov.bd/media/policy/jeetwin-result/">JeetWin Result</a>.</p>
+
+  <h3>Baji.com: Bet and Win Like a Pro</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/baji-com/">Baji.com</a> for high-level gaming.</p>
+
+  <h3>Baji App: Play Anytime, Anywhere</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/baji-app/">Baji App</a> for mobile betting.</p>
+
+  <h3>Baji9999: Secure Your Casino Wins</h3>
+  <p>Join the winning platform at <a href="https://inout.gso.gov.bd/media/policy/baji9999/">Baji9999</a>.</p>
+
+  <h3>Crickex Bet: Your Go-To Betting Platform</h3>
+  <p>Enjoy competitive odds at <a href="https://inout.gso.gov.bd/media/policy/crickex-bet/">Crickex Bet</a>.</p>
+
+  <h3>Crickex Download: Gaming Anytime</h3>
+  <p>Access your favorite games with <a href="https://inout.gso.gov.bd/media/policy/crickex-download/">Crickex Download</a>.</p>
+
+  <h3>Crickex Group: Play and Win Together</h3>
+  <p>Join the winning group at <a href="https://inout.gso.gov.bd/media/policy/crickex-group/">Crickex Group</a>.</p>
+
+  <h3>Babu88 APK: Secure Betting on Mobile</h3>
+  <p>Download the APK at <a href="https://inout.gso.gov.bd/media/policy/babu88-apk/">Babu88 APK</a> and start betting today.</p>
+
+  <h3>Babu88 App: Bet on the Go</h3>
+  <p>Enjoy mobile betting with the <a href="https://inout.gso.gov.bd/media/policy/babu88-app/">Babu88 App</a>.</p>
+
+  <h3>Nagad88 Login: Secure Your Access</h3>
+  <p>Log in quickly with <a href="https://inout.gso.gov.bd/media/policy/nagad88-login/">Nagad88 Login</a>.</p>
+
+  <h3>Nagad88 App: Fast and Secure Mobile Betting</h3>
+  <p>Access your favorite games with the <a href="https://inout.gso.gov.bd/media/policy/nagad88-app/">Nagad88 App</a>.</p>
+
+  <h3>MostPlay Login: Secure Access for Fast Wins</h3>
+  <p>Log in quickly with <a href="https://inout.gso.gov.bd/media/policy/mostplay-login/">MostPlay Login</a>.</p>
+
+  <h3>MostPlay Bet: Bet with Confidence</h3>
+  <p>Enjoy secure betting with <a href="https://inout.gso.gov.bd/media/policy/mostplay-bet/">MostPlay Bet</a>.</p>
+
+  <h3>Jita Ace: The Winning Platform</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/jita-ace/">Jita Ace</a> for casino excellence.</p>
+
+  <h3>MarvelBet Login: Bet Securely</h3>
+  <p>Log in with confidence at <a href="https://inout.gso.gov.bd/media/policy/marvelbet-login/">MarvelBet Login</a>.</p>
+
+  <h3>MarvelBet App: Bet Anytime</h3>
+  <p>Download the app at <a href="https://inout.gso.gov.bd/media/policy/marvelbet-app/">MarvelBet App</a> and start winning.</p>
+
+  <h3>RajaBaji: Play for Big Wins</h3>
+  <p>Win big with <a href="https://inout.gso.gov.bd/media/policy/rajabaji/">RajaBaji</a> today.</p>
+
+  <h3>RajaBaji App: Bet Securely, Play Anywhere</h3>
+  <p>Download the <a href="https://inout.gso.gov.bd/media/policy/rajabaji-app/">RajaBaji App</a> and start playing.</p>
+
+  <h3>1xBet.com: The Leading Casino Platform</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/1xbet-com/">1xBet.com</a> for big wins.</p>
+
+  <h3>1xBet Affiliate: Earn as You Play</h3>
+  <p>Sign up for the <a href="https://inout.gso.gov.bd/media/policy/1xbet-affiliate/">1xBet Affiliate</a> program and start earning today.</p>
+
+  <h3>1xBet Registration: Quick and Easy Signup</h3>
+  <p>Register at <a href="https://inout.gso.gov.bd/media/policy/1xbet-registration/">1xBet</a> to start winning now.</p>
+
+  <h3>1xBet Online: Bet Confidently</h3>
+  <p>Join the action with <a href="https://inout.gso.gov.bd/media/policy/1xbet-online/">1xBet Online</a>.</p>
+
+  <h3>1xBet Login: Secure Your Wins</h3>
+  <p>Log in easily with <a href="https://inout.gso.gov.bd/media/policy/1xbet-com-login/">1xBet Login</a>.</p>
+
+  <h3>Mamubaji: Bet with Confidence</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/mamubaji/">Mamubaji</a> for top-tier casino action.</p>
+
+  <h3>Baba88: The Place for Serious Wins</h3>
+  <p>Play and win at <a href="https://inout.gso.gov.bd/media/policy/baba88/">Baba88</a> in 2024.</p>
+
+  <h3>BW52: Your Platform for Big Wins</h3>
+  <p>Explore the excitement
+
+ at <a href="https://inout.gso.gov.bd/media/policy/bw52/">BW52</a>.</p>
+
+  <h3>Raja Baji: Casino Action Awaits</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/raja-baji/">Raja Baji</a> for thrilling games and wins.</p>
+</div>
+
+
+
+<br>
+<h2>To New Graduate Students Regarding Admissions:</h2><h3>Professor Bhanu’s laboratory  has openings for a couple of outstanding graduate students who have a strong background in computer vision and machine learning. Please send your bio to <a href="mailto:bhanu@ece.ucr.edu" style="color:red" class="nlink">bhanu@ece.ucr.edu.</a></h3>
+
+
+
+
+                                     </td> 
+				</tr> 
+			</table> 
+		</td> 
+	</tr> 
+</table> 
+<div style="border-width: 3px; position: absolute; border-style: solid; top: -25000px;">
+  <h2>Top Bangladeshi Online Casinos of 2024: Step Up Your Game</h2>
+  <p>With 2024 underway, now is the perfect time to explore the best online casinos in Bangladesh. Elevate your gaming experience with these top platforms.</p>
+
+  <h2>Benefits of Playing on JEETBUZZ and MCW: The Best Casino Sites in Bangladesh</h2>
+    <p>There are many advantages to choosing trusted online casino sites in Bangladesh like <a href="https://ifsp.bsmrau.edu.bd/blog/jeetbuzz/">JEETBUZZ</a> and MCW. In this article, we will discuss some of the benefits these sites offer, known for their big wins and top-notch customer service. If you're new to online casinos, you should be aware of the various types of games offered by these platforms. Use our reviews to decide which site best meets your needs. Remember, both JEETBUZZ and MCW offer a range of perks that will make your gaming experience more enjoyable and profitable.</p>
+
+  <h3>Baji999: Your Ticket to Mega Jackpots</h3>
+  <p><a href="https://icce.bsmrau.edu.bd/programs/baji999/">Baji999</a> is the place where dreams turn into reality with massive payouts and thrilling games. Don’t wait—unlock your potential with Baji999 this year.</p>
+
+  <h3>1xBet: Where Winning Knows No Limits</h3>
+  <p>JeetWin offers a gaming experience like no other. With exciting games and lucrative promotions, <a href="https://cdoe.suniv.ac.in/demo/1xbet/">1xBet</a> is the casino to watch in 2024.</p>
+
+  <h3>Crickex: Your Reliable Partner in Winning</h3>
+  <p>Join <a href="https://icce.bsmrau.edu.bd/programs/crickex/">Crickex</a> in 2024 for a secure, rewarding gaming journey. Consistent wins and top-tier service make Crickex a must-visit for any serious player.</p>
+
+  <h3>Crickex Login: Your Gateway to Non-Stop Gaming</h3>
+  <p>Seamlessly access all your favorite games with <a href="https://icce.bsmrau.edu.bd/programs/crickex-login/">Crickex Login</a>. Don't let anything stop your winning momentum in 2024.</p>
+
+  <h3>Crickex Live: Thrills and Wins in Real-Time</h3>
+  <p>Experience the excitement of live gaming with <a href="https://icce.bsmrau.edu.bd/programs/crickex-live/">Crickex Live</a>. Bet live and enjoy the excitement in real-time throughout 2024.</p>
+
+  <h3>Baji Live: Unleash the Thrills of Live Gaming</h3>
+  <p>With <a href="https://cdoe.suniv.ac.in/demo/baji-live/">Baji Live</a>, you get the best of live casino gaming. Dive into real-time action and win big in 2024.</p>
+
+  <h3>MCW: Innovating the Online Casino Scene</h3>
+  <p>MCW is pushing the boundaries of online casinos in 2024. <a href="https://cdoe.suniv.ac.in/demo/mcw/">MCW</a> offers a variety of games and promotions that keep you coming back for more.</p>
+
+  <h3>Babu88: Consistent Wins, Every Time</h3>
+  <p>Enjoy user-friendly interfaces and high-payout games at <a href="https://cdoe.suniv.ac.in/demo/babu88/">Babu88</a>. Start your winning journey with Babu88 in 2024.</p>
+
+  <h3>Bet365: Bet on Success</h3>
+  <p>From sports betting to casino games, <a href="https://cdoe.suniv.ac.in/demo/bet365/">Bet365</a> has it all. Join Bet365 for a comprehensive betting experience in 2024.</p>
+
+ <h3>MCW: Elevate Your Casino Experience Fatatati</h3>
+  <p>Join <a href="https://inout.gso.gov.bd/media/policy/mcw/">MCW</a> and discover innovative Fatati gaming opportunities in 2024.</p>
+</div>
+
+ </div> 
+ </body> 

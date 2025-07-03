@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/tarjan" />
+<link rel="shortlink" href="/node/919" />
+<meta name="viewport" content="width=device-width" />
+<link rel="shortcut icon" href="https://www.semel.ucla.edu/sites/all/themes/professional-responsive-theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Tarjan | Semel Institute for Neuroscience and Human Behavior</title>
+<link type="text/css" rel="stylesheet" href="https://www.semel.ucla.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.semel.ucla.edu/sites/default/files/css/css_0hQPR18cJdd2S_p-ssRC_H18YVbL1Amz_fTPzxj3CmA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.semel.ucla.edu/sites/default/files/css/css_Js5FrxhoL0cL0rgHDiRljs9C_02_lbyXAX6FkjLahp0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.semel.ucla.edu/sites/default/files/css/css_PnrlfbCOvrmsj4Dp7WAGIryEhiBKprPNHCu-ceGsYOQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.semel.ucla.edu/sites/default/files/css/css_setemqscF27vhuijQ_qQMVnI4A_gG9spZmeRR44SDEI.css" media="all" />
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_6LlPPA3PNyYCjpBAC-b4NT17HTGxBKaIimNvcmdgnpY.js"></script>
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_H4cLI1G_0G_POVnWiEdfJq6oSwOGf24qJnZVrlNaKxg.js"></script>
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_BcQtJptc5L-8FIWbpO_EDfWJ74YqAIFCZaNyaLU8ugM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function($) { 
+    $.expr[':'].regex = function(elem, index, match) {
+            var matchParams = match[3].split(','),
+            validLabels = /^(data|css):/,
+            attr = {
+                method: matchParams[0].match(validLabels) ? 
+                matchParams[0].split(':')[0] : 'attr',
+                property: matchParams.shift().replace(validLabels,'')
+            },
+            regexFlags = 'ig',
+            regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
+            return regex.test(jQuery(elem)[attr.method](attr.property));
+        }
+    });
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_BaK_DQxRxwMfeTRrX-ahz8p0qBdgsj0mq6nhDNYvIY4.js"></script>
+<script type="text/javascript" src="https://www.semel.ucla.edu/sites/default/files/js/js_XyWIgKZIxegM4KPgNyecuAYT7Hqi2OGBOYWqjFC_eBo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"professional_responsive_theme","theme_token":"JSnHWe-uyV3XKhC8lahNl765CpPF1Gj8-kFe2z-s_fE","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.position-1.13.0-backport.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"misc\/ui\/jquery.ui.dialog-1.13.0-backport.js":1,"sites\/all\/modules\/views\/js\/jquery.ui.dialog.patch.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"misc\/form-single-submit.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/entityreference\/js\/entityreference.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/libraries\/DOMPurify\/purify.min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/event_calendar\/event_popup\/js\/event_popup.js":1,"sites\/all\/modules\/event_calendar\/event_popup\/js\/event_popup_validate.js":1,"0":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"sites\/all\/modules\/flexslider_views_slideshow\/js\/flexslider_views_slideshow.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/custom.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/thsrc.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/jquery.min.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/bootstrap.min.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/ajaxfileupload.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/read_more.js":1,"sites\/all\/themes\/professional-responsive-theme\/js\/fontawesome.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/event_calendar\/event_popup\/css\/event_popup.css":1,"sites\/all\/modules\/biblio\/biblio.css":1,"sites\/all\/modules\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/style.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/flexslider.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/media.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/font-awesome.min.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/default.css":1,"sites\/all\/themes\/professional-responsive-theme\/css\/bootstrap.min.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px","file_public_path":"\/sites\/default\/files","specificPagesDefaultValue":"admin*\nimagebrowser*\nimg_assist*\nimce*\nnode\/add\/*\nnode\/*\/edit\nprint\/*\nprintpdf\/*\nsystem\/ajax\nsystem\/ajax\/*"},"event_popup":{"classes":"","defaults":"width:300;height:auto;position:[center,60]","selector":"content","content_type":"event_calendar","op":false},"viewsSlideshow":{"slideshow-block_69_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","flexsliderViewsSlideshow","viewsSlideshowCycle"],"play":["viewsSlideshowControls","flexsliderViewsSlideshow","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"flexslider_views_slideshow":{"#flexslider_views_slideshow_main_slideshow-block_69_1":{"num_divs":6,"id_prefix":"#flexslider_views_slideshow_main_","vss_id":"slideshow-block_69_1","namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":7000,"directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"urlIsAjaxTrusted":{"\/tarjan":true},"ogContext":{"groupType":"node","gid":"919"}});
+//--><!]]>
+</script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-919 node-type-group og-context og-context-node og-context-node-919">
+    		 
+<div id="top"></div>
+<div id="header_wrapper">
+  <header id="header" role="banner">
+    <div id="logo"><a href="/" title="Home"><img alt="Semel Institute Logo" src="https://www.semel.ucla.edu/sites/default/files/logo_semel.png"/></a></div>
+        <!--h1 id="site-title">
+      <a href="" title=""></a>
+      <div id="site-description"></div>
+    </h1-->
+ 	   <!-- Header Right Area -->
+	   		 <div id="header-middle">
+				<div class="region region-header-middle">
+  <div id="block-block-107" class="block block-block">
+
+      
+  <div class="content">
+    <div>
+<a href="/tarjan"><img alt="tarjan logo" src="/sites/default/files/logo/logo_tarjan.png" /></a>
+</div>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+		 </div>
+	   	   		 <div id="header-right">
+				<div class="region region-header-right">
+  <div id="block-gtranslate-gtranslate" class="block block-gtranslate">
+
+      
+  <div class="content">
+    <script type="text/javascript">
+/* <![CDATA[ */
+eval(unescape("eval%28function%28p%2Ca%2Cc%2Ck%2Ce%2Cr%29%7Be%3Dfunction%28c%29%7Breturn%28c%3Ca%3F%27%27%3Ae%28parseInt%28c/a%29%29%29+%28%28c%3Dc%25a%29%3E35%3FString.fromCharCode%28c+29%29%3Ac.toString%2836%29%29%7D%3Bif%28%21%27%27.replace%28/%5E/%2CString%29%29%7Bwhile%28c--%29r%5Be%28c%29%5D%3Dk%5Bc%5D%7C%7Ce%28c%29%3Bk%3D%5Bfunction%28e%29%7Breturn%20r%5Be%5D%7D%5D%3Be%3Dfunction%28%29%7Breturn%27%5C%5Cw+%27%7D%3Bc%3D1%7D%3Bwhile%28c--%29if%28k%5Bc%5D%29p%3Dp.replace%28new%20RegExp%28%27%5C%5Cb%27+e%28c%29+%27%5C%5Cb%27%2C%27g%27%29%2Ck%5Bc%5D%29%3Breturn%20p%7D%28%276%207%28a%2Cb%29%7Bn%7B4%282.9%29%7B3%20c%3D2.9%28%22o%22%29%3Bc.p%28b%2Cf%2Cf%29%3Ba.q%28c%29%7Dg%7B3%20c%3D2.r%28%29%3Ba.s%28%5C%27t%5C%27+b%2Cc%29%7D%7Du%28e%29%7B%7D%7D6%20h%28a%29%7B4%28a.8%29a%3Da.8%3B4%28a%3D%3D%5C%27%5C%27%29v%3B3%20b%3Da.w%28%5C%27%7C%5C%27%29%5B1%5D%3B3%20c%3B3%20d%3D2.x%28%5C%27y%5C%27%29%3Bz%283%20i%3D0%3Bi%3Cd.5%3Bi++%294%28d%5Bi%5D.A%3D%3D%5C%27B-C-D%5C%27%29c%3Dd%5Bi%5D%3B4%282.j%28%5C%27k%5C%27%29%3D%3DE%7C%7C2.j%28%5C%27k%5C%27%29.l.5%3D%3D0%7C%7Cc.5%3D%3D0%7C%7Cc.l.5%3D%3D0%29%7BF%286%28%29%7Bh%28a%29%7D%2CG%29%7Dg%7Bc.8%3Db%3B7%28c%2C%5C%27m%5C%27%29%3B7%28c%2C%5C%27m%5C%27%29%7D%7D%27%2C43%2C43%2C%27%7C%7Cdocument%7Cvar%7Cif%7Clength%7Cfunction%7CGTranslateFireEvent%7Cvalue%7CcreateEvent%7C%7C%7C%7C%7C%7Ctrue%7Celse%7CdoGTranslate%7C%7CgetElementById%7Cgoogle_translate_element2%7CinnerHTML%7Cchange%7Ctry%7CHTMLEvents%7CinitEvent%7CdispatchEvent%7CcreateEventObject%7CfireEvent%7Con%7Ccatch%7Creturn%7Csplit%7CgetElementsByTagName%7Cselect%7Cfor%7CclassName%7Cgoog%7Cte%7Ccombo%7Cnull%7CsetTimeout%7C500%27.split%28%27%7C%27%29%2C0%2C%7B%7D%29%29"))
+/* ]]> */
+</script><style>div.skiptranslate,#google_translate_element2,#goog-gt-{display:none!important}body{top:0!important}</style><div id="google_translate_element2"></div>
+<script type="text/javascript">function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element2');}</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script><select onchange="doGTranslate(this);"><option value="">Select Language</option><option value="en|en" style="font-weight:bold;background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -0px;padding-left:18px;">English</option><option value="en|fr" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -160px;padding-left:18px;">French</option><option value="en|de" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -176px;padding-left:18px;">German</option><option value="en|it" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -224px;padding-left:18px;">Italian</option><option value="en|pt" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -304px;padding-left:18px;">Portuguese</option><option value="en|ru" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -336px;padding-left:18px;">Russian</option><option value="en|es" style="background:url('/sites/all/modules/gtranslate/gtranslate-files/16l.png') no-repeat scroll 0 -352px;padding-left:18px;">Spanish</option></select>  </div>
+  
+</div> <!-- /.block -->
+<div id="block-search-form" class="block block-search">
+
+      
+  <div class="content">
+    <form action="/tarjan" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-oQpwUNI6dIvb4rwVNowJc6Wglt1mbpxtqyQ4ZJu0TWE" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+  
+</div> <!-- /.block -->
+<div id="block-block-25" class="block block-block">
+
+      
+  <div class="content">
+        <div style="margin-right:10px;">
+	<a href="https://www.semel.ucla.edu/user">Log in</a>
+    </div>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+		 </div>
+	      <div class="clear"></div>
+  </header>
+
+  <div class="welcome">
+    <div class="region region-front-welcome">
+  <div id="block-block-22" class="block block-block">
+
+      
+  <div class="content">
+    <div class="group">
+<div class="title">UCLA Tarjan Center</div>
+</div>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+  </div>
+  <div class="menu_wrapper">
+	  				<nav id="main-menu"  role="navigation">
+        <a class="nav-toggle" href="#">Navigation</a>
+			<div class="region region-navigation">
+  <div id="block-menu-menu-tarjan" class="block block-menu">
+
+      
+  <div class="content">
+    <ul class="menu"><li class="first leaf active-trail"><a href="/tarjan" class="active-trail active">Home</a></li>
+<li class="expanded"><a href="/tarjan/about">About</a><ul class="menu"><li class="first leaf"><a href="/tarjan/mission-vision-and-values">Mission, Vision, and Values</a></li>
+<li class="leaf"><a href="/tarjan/accessibility-and-inclusion">Accessibility and Inclusion</a></li>
+<li class="leaf"><a href="/tarjan/history">History</a></li>
+<li class="last expanded"><a href="/tarjan/directory">Team</a><ul class="menu"><li class="first leaf"><a href="/tarjan/tarjan-advisory-committee">Advisory Committee</a></li>
+<li class="last collapsed"><a href="/tarjan/trainees">Trainees</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded"><a href="/tarjan/focus-areas">Focus Areas</a><ul class="menu"><li class="first leaf"><a href="/tarjan/physical-and-mental-health">Physical and Mental Health</a></li>
+<li class="leaf"><a href="/tarjan/postsecondary-education-initiatives">Postsecondary Education</a></li>
+<li class="last leaf"><a href="/tarjan/employment">Employment</a></li>
+</ul></li>
+<li class="expanded"><a href="/tarjan/programs-and-events">Programs and Events</a><ul class="menu"><li class="first expanded"><a href="/tarjan/lecture-series">Lecture Series</a><ul class="menu"><li class="first leaf"><a href="/tarjan/upcoming">Upcoming Presentations</a></li>
+<li class="leaf"><a href="/tarjan/about-presenters">About the Presenters</a></li>
+<li class="leaf"><a href="/tarjan/2024-2025-presentations">2024-2025 Presentations</a></li>
+<li class="last collapsed"><a href="/tarjan/archive-presentations">Archive</a></li>
+</ul></li>
+<li class="leaf"><a href="/tarjan/other-words">Podcast Series</a></li>
+<li class="leaf"><a href="/tarjan/film-series">Film Series</a></li>
+<li class="expanded"><a href="/tarjan/ucla-tarjan-center-forum-neurodevelopmental-disabilities">Annual Forum</a><ul class="menu"><li class="first leaf"><a href="/tarjan/2024-presentation-slides-and-recordings">2024 Forum: Slides and Recordings</a></li>
+<li class="last leaf"><a href="/tarjan/2023-presentation-slides-and-recordings">2023 Forum: Slides and Recordings</a></li>
+</ul></li>
+<li class="leaf"><a href="/tarjan/access-webinars">ACCESS Webinars</a></li>
+<li class="leaf"><a href="/tarjan/access-newsletters">ACCESS Newsletters</a></li>
+<li class="leaf"><a href="/tarjan/college-career-programs">College to Career Programs</a></li>
+<li class="leaf"><a href="https://www.uclaextension.edu/pathway" target="_blank">Pathway at UCLA Extension</a></li>
+<li class="last collapsed"><a href="/tarjan/eventscalendar">Events Calendar</a></li>
+</ul></li>
+<li class="expanded"><a href="/tarjan/research">Research</a><ul class="menu"><li class="first leaf"><a href="/tarjan/publications">Publications</a></li>
+<li class="last leaf"><a href="/tarjan/cecy/pie-states-resources">Participate in Research</a></li>
+</ul></li>
+<li class="expanded"><a href="/tarjan/clinics">Clinics</a><ul class="menu"><li class="first leaf"><a href="https://cpfamilynetwork.org/resources/resources-guide/center-cerebral-palsy-ucla/" target="_blank">Center for Cerebral Palsy</a></li>
+<li class="leaf"><a href="/tarjan/kameron-gait-and-motion-analysis-laboratory">Kameron Gait and Motion Analysis Laboratory</a></li>
+<li class="leaf"><a href="/tarjan/lifespan-autism-clinic">Lifespan Autism Clinic</a></li>
+<li class="leaf"><a href="/peers/peers%C2%AE-adolescents-certified-trainings" target="_blank">PEERS Clinic</a></li>
+<li class="last leaf"><a href="https://dentistry.ucla.edu/clinic/39" target="_blank">UCLA Special Patient Care Clinic</a></li>
+</ul></li>
+<li class="expanded"><a href="/tarjan/faq">Resources</a><ul class="menu"><li class="first leaf"><a href="/tarjan/faq">FAQ</a></li>
+<li class="expanded"><a href="/tarjan/training">Training</a><ul class="menu"><li class="first leaf"><a href="https://www.semel.ucla.edu/autism/bosa-training" target="_blank">BOSA Training</a></li>
+<li class="last leaf"><a href="https://www.semel.ucla.edu/peers/training" target="_blank">PEERS Training Seminars</a></li>
+</ul></li>
+<li class="leaf"><a href="/tarjan/resources">Resources</a></li>
+<li class="last leaf"><a href="/tarjan/accessibility-guidelines">Accessibility</a></li>
+</ul></li>
+<li class="leaf"><a href="https://giving.ucla.edu/UCLAtarjancenter" target="_blank">Give</a></li>
+<li class="last expanded"><a href="/tarjan/contact-us">Contact Us</a><ul class="menu"><li class="first leaf"><a href="/tarjan/contact-us">Contact Us</a></li>
+<li class="leaf"><a href="/tarjan/serve-advisory-committee">Serve on the Advisory Committee</a></li>
+<li class="leaf"><a href="/tarjan/follow-us-social-media">Follow Us on Social Media</a></li>
+<li class="leaf"><a href="/tarjan/webform/join-our-mailing-list">Join Our Mailing List</a></li>
+<li class="last leaf"><a href="/tarjan/webform/share-your-feedback-us">Share Your Feedback with Us</a></li>
+</ul></li>
+</ul>  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+		</nav><!-- end main-menu -->
+			  
+			  
+		        <div class="clear"></div>
+  </div>
+</div>
+  
+  <div id="container">
+		<div class="region region-slideshow">
+  <div id="block-views-slideshow-block-69" class="block block-views">
+
+      
+  <div class="content">
+    <div class="view view-slideshow view-id-slideshow view-display-id-block_69 view-dom-id-fae6f35175a96a3b6b775e262302e533">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="flexslider_views_slideshow_main_slideshow-block_69_1" class="flexslider_views_slideshow_main views_slideshow_main"><div class="flex-nav-container">
+  <div class="flexslider">
+    <ul id="flexslider_views_slideshow_slideshow-block_69_1" class="flexslider-views-slideshow-main-frame slides">
+        <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-1 views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/home-page.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/homne-page-1.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/home-page-2.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/home-page-3.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/home-page-4.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-6 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-image">        <div class="field-content"><img typeof="foaf:Image" src="https://www.semel.ucla.edu/sites/default/files/slideshow/home-page-5.jpg" width="1200" height="500" alt="" /></div>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"></div>  </div>  </li>
+    </ul>
+  </div>
+</div></div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+	
+      		  <!--div id="breadcrumbs"></div-->
+		  	  
+    <div class="content-sidebar-wrap">
+
+      <section id="post-content" role="main">
+              
+    <div id="content">
+                				
+        		
+		        				
+                                                		<!--iframe src="" height="1000" width="100%" title="Profile"></iframe-->
+	<div class="region region-content">
+  <div id="block-system-main" class="block block-system">
+
+      
+  <div class="content">
+    
+          	  <!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPZFR6N6LW"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-FPZFR6N6LW');
+		</script>
+            <span property="dc:title" content="Tarjan" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>  
+      
+    
+  <div class="content node-group">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">
+<p>The UCLA Tarjan Center is a University Center for Excellence in Developmental Disabilities (UCEDD). We are one of 67 federally designated UCEDDs across the country. These centers are authorized by the Developmental Disabilities Assistance and Bill of Rights Act and funded by the Administration on Intellectual and Developmental Disabilities (AIDD), part of the Administration on Community Living within the U.S. Department of Health and Human Services.</p>  
+<p>We serve as a bridge between the resources of the university and local, state, and international organizations, agencies, policy makers, people with disabilities and their families.</p> 
+<p><strong>Director:</strong> <a href="/profile/elizabeth-laugeson-psyd">Elizabeth Laugeson</a></p>
+<br>
+<p><strong><a href="/sites/default/files/pdf/laugeson_letter_from_the_director_winter_2024.pdf" target="_blank">Letter from the Director</a></strong></p>
+<p><a href="/sites/default/files/pdf/laugeson_letter_from_the_director_winter_2024.pdf" target="_blank"><img src="/sites/default/files/group/laugeson_letter-from-director_winter-2024.jpg"></a></p>
+ 
+<br>
+<p>The UCLA Tarjan Center is dedicated to anti-racism, social justice, and firmly condemns the acts of violence against communities of color.  The UCLA Tarjan Center acknowledges our presence on the traditional, ancestral and unceded territory of the Gabrielino/Tongva peoples.</p> 
+
+<br>
+<div style="margin:20px 0px 10px 40px;">
+<p>
+<a href="https://www.facebook.com/UCLATarjan" target="_blank"><span class="social_media_icon" style="background-color: rgb(59, 89, 152);"><i class="fa fa-fw fa-facebook"></i></span> Facebook</a></p>
+<p>
+<a href="https://twitter.com/UCLA_Tarjan" target="_blank"><span class="social_media_icon" style="background-color: rgb(29, 161, 242);"><i class="fa fa-fw fa-twitter"></i></span> Twitter</a></p>
+<p>
+<a href="https://www.instagram.com/uclatarjancenter/" target="_blank"><span class="social_media_icon" style="background-color: rgb(220, 78, 65);"><i class="fa fa-fw fa-instagram"></i></span> Instagram</a></p>
+<p>
+<a href="https://www.semel.ucla.edu/tarjan/contact-tarjan-center-directly" target="_blank"><span class="social_media_icon" style="background-color: #15aabf;"><i class="fa fa-fw fa-envelope"></i></span> Email</a></p>
+<p><a href="https://www.linkedin.com/company/ucla-tarjan-center" target="_blank"><span class="social_media_icon" style="background-color: #0077b7;"><i class="fa fa-fw fa-linkedin"></i></span> LinkedIn</a></p>
+<p><a href="https://www.youtube.com/channel/UC03-8CVV4jlqlsjiqld4akw" target="_blank"><span class="social_media_icon" style="background-color: rgb(220, 78, 65);"><i class="fa fa-fw fa-play"></i></span> YouTube</a></p>
+
+</div>
+<br></div></div></div>  </div>
+
+      <footer>
+          </footer>
+  
+                    </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+              </section> <!-- /#main -->
+    </div>
+  
+      
+    </div>
+
+</div>
+<div class="clear"></div>
+
+<div id="content_bottom">
+    	<div class="clear"></div>
+    	<div class="clear"></div>
+	
+    	<div class="clear"></div>
+
+		<div id="content_bottom_wrapper">
+	<div class="region region-content-bottom">
+  <div id="block-block-114" class="block block-block">
+
+      
+  <div class="content">
+    <div class="footer-banner"><div id="footer-banner-inner">
+<p>
+<a href="/tarjan" title="Tarjan Center at UCLA">
+<img src="/sites/default/files/logo/logo_tarjan.png" alt="Tarjan Center at UCLA" title="Tarjan Center" style="vertical-align: bottom;">
+</a>
+</p>
+
+<br>
+
+<div style="float: left; display: block;">
+<p class="small">
+Tarjan Center at UCLA<br>
+760 Westwood Plaza<br>
+58-228 Semel Institute<br>
+Los Angeles, CA 90095-1759<br>
+tarjancenter@mednet.ucla.edu
+</p>
+</div>
+
+<div style="float: right; display: block;">
+
+<a href="http://www.scdd.ca.gov" title="California State Council on Developmental Disabilities" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/cscdd.png" alt="California State Council on Developmental Disabilities " title="California State Council on Developmental Disabilities " style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/cscdd-b%2Bw.png';" onmouseout="this.src='/sites/default/files/tarjan/images/cscdd.png';">
+</a>
+ &nbsp;
+<a href="http://www.disabilityrightsca.org/" title="Disability Rights California" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/drc.jpg" alt="Disability Rights California " title="Disability Rights California " style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/drc_bw.jpg';" onmouseout="this.src='/sites/default/files/tarjan/images/drc.jpg';">
+</a>
+ &nbsp;
+<a href="http://www.ucdmc.ucdavis.edu/ddcenter/index.html" title="Center for Excellence in Developmental Disabilities" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/center_for_excellence.jpg" alt="California State Council on Developmental Disabilities " title="Center for Excellence in Developmental Disabilities " style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/center_for_excellence_bw.jpg';" onmouseout="this.src='/sites/default/files/tarjan/images/center_for_excellence.jpg';">
+</a>
+ &nbsp;
+<a href="http://www.uscucedd.org" title="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/children_hospital.jpg" alt="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" title="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/children_hospital_bw.jpg';" onmouseout="this.src='/sites/default/files/tarjan/images/children_hospital.jpg';">
+</a>
+
+<!--
+<a href="http://www.pai-ca.org" _mce_href="http://www.pai-ca.org" title="Disability Rights California" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/drc-logo-b%2Bw.png" _mce_src="/sites/default/files/tarjan/images/drc-logo-b%2Bw.png" alt="Disability Rights California" title="Disability Rights California" style="vertical-align: bottom;" _mce_style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/drc-logo.png';" onmouseout="this.src='/sites/default/files/tarjan/images/drc-logo-b%2Bw.png';" />
+</a>
+ &nbsp;
+<a href="http://www.uscucedd.org" _mce_href="http://www.uscucedd.org" title="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" rel="lightframe">
+<img src="/sites/default/files/tarjan/images/chlalogo-b%2Bw.png" _mce_src="/sites/default/files/tarjan/images/chlalogo-b%2Bw.png" alt="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" title="USC University Center for Excellence in Developmental Disabilities at Childrens Hospital Los Angeles" style="vertical-align: bottom;" _mce_style="vertical-align: bottom;" onmouseover="this.src='/sites/default/files/tarjan/images/chlalogo.png';" onmouseout="this.src='/sites/default/files/tarjan/images/chlalogo-b%2Bw.png';" />
+</a>
+-->
+
+</div>
+<br class="clearfloat">
+
+</div></div>
+<div class="footer-banner-closer">&nbsp;</div>  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+	</div>
+	
+</div>
+<div class="clear"></div>
+
+<div id="footer_above">
+  <div id="footer_above_wrapper">
+      </div>
+</div>
+<div id="footer">
+  <div id="footer_wrapper">
+  <!--div class="footer_credit"-->
+    <!--div class="footer_inner_credit"-->
+           <div id="foot">
+        <div class="region region-footer">
+  <div id="block-block-14" class="block block-block">
+
+      
+  <div class="content">
+    
+<div class="bottom_menu">
+<a title="" href="/research">Research</a> &nbsp;|&nbsp;
+<a title="" href="/health">Health</a> &nbsp;|&nbsp;
+<a title="" href="https://www.uclahealth.org/gastro/gi-wellness/wellness-resources" target="_blank">Wellness</a> &nbsp;|&nbsp;
+<a title="" href="https://www.uclahealth.org/privacy-notice" target="_blank">Privacy Notice</a> &nbsp;|&nbsp;
+<a title="" href="/semel">About</a>
+</div>
+<hr>
+Disclaimer: The statements on this page represent the views of the UCLA Semel Institute for Neuroscience and Human Behavior and do not necessarily represent the views of the University of California, or UCLA or its Chancellor. <a href="https://www.uclahealth.org/privacy-notice" target="_blank"><span style="color:yellow;">Privacy & Term</span></a>
+<hr>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+      </div>
+     <!--/div-->
+  <!--/div-->
+    <div class="clear"></div>
+     
+      <div id="footer-area" class="clearfix">
+                <div class="column1"><div class="region region-footer-first">
+  <div id="block-block-15" class="block block-block">
+
+      
+  <div class="content">
+    <table class="cke_editor">
+<tr>
+<td width="60px"><img src="/sites/default/files/logo-semel.png"></td>
+<td>
+<p style="color:#ffffff;">
+760 Westwood Plaza<br>
+Los Angeles, CA 90095<br>
+<a href="https://www.ucla.edu/" target="_blank">UCLA</a> | <a href="https://www.uclahealth.org/" target="_blank">UCLA Health</a> | <a href="https://medschool.ucla.edu/" target="_blank">DGSOM</a>
+</p>
+</td>
+</tr>
+</table>
+<!--Designed & developed by Liang Zhang-->  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+                        <div class="column2"><div class="region region-footer-second">
+  <div id="block-block-17" class="block block-block">
+
+      
+  <div class="content">
+    <p>&copy; 2025 UCLA Jane & Terry Semel Institute<br>
+for Neuroscience & Human Behavior</p>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+                        <div class="column3"><div class="region region-footer-third">
+  <div id="block-block-60" class="block block-block">
+
+      
+  <div class="content">
+    <p><a href="https://www.uclahealth.org/privacy-notice" target="_blank">Privacy Poicy<br>
+Terms of Service</a></p>
+  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+</div>
+              </div>
+        <div class="clear"></div>
+  </div>
+</div>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+  var _qevents = _qevents || [];
+  (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+  })();
+  _qevents.push({qacct:"p-aarRA3bMESt0k"});
+//--><!]]>
+</script>
+<noscript>
+  <div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-aarRA3bMESt0k.gif" border="0" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+</body>
+</html>

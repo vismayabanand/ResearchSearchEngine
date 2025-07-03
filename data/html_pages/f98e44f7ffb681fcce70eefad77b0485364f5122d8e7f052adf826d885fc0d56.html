@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google tag (gtag.js) -->
+    <script async src= https://www.googletagmanager.com/gtag/js?id=G-Z1RGSBHBF7></script>
+    <script async src= https://www.googletagmanager.com/gtag/js?id=G-S8BZQKWST2></script>
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-Z1RGSBHBF7');
+      gtag('config', 'G-S8BZQKWST2');
+    </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://systems.engr.ucr.edu/images/favicon.ico" type="">
+  
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="0kaBvS7GNMl55MD53gL67d5BGKnHgOpfDJfvchSE">
+
+  <title> BCOE Systems home</title>
+
+  <!-- Styles -->
+  <link href="https://systems.engr.ucr.edu/css/app.css" rel="stylesheet">
+  <link href="https://systems.engr.ucr.edu/css/select2.min.css" rel="stylesheet">
+  <link href="https://systems.engr.ucr.edu/css/select2-bootstrap4.min.css" rel="stylesheet">
+
+    <style>
+main>.container {
+    padding-top: 3em;
+}
+#gscSearchFormModal table {
+    margin-bottom: 0;
+}
+#gscSearchFormModal table tbody tr td {
+    border: none;
+    margin-bottom: 0;
+}
+#gscSearchFormModal table.gsc-search-box tbody {
+    border: none;
+}
+#gscSearchFormModal .gsc-input-box{
+    border:solid #3079ED 2px;
+    border-radius:4px;
+}
+</style>
+  
+</head>
+
+
+  <body class="home">
+   
+    <div id="app">
+      <div class="modal fade" id="gscSearchFormModal" tabindex="-1" role="dialog"
+        aria-labelledby="gscSearchFormModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="gscSearchFormModalLabel">Search</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="gcse-search"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <header class="">
+    
+        <div class="grid-x">
+            <div class="cell small-order-2 medium-order-1 audience-container">
+                <div class="grid-container audience-menu-bar">
+                    <div class="grid-x align-middle">
+                        <div id="block-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto org-name d-none d-md-block d-lg-block ">
+                            <p class="parent-org-title">
+                                <a href="https://www.engr.ucr.edu">MARLAN AND ROSEMARY BOURNS COLLEGE OF ENGINEERING</a>
+                            </p>
+                        </div>
+                        <div id="audience-links-desktop-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell medium-shrink show-for-medium audience-links-desktop">  
+    <ul id="audience-links-menu" class="vertical medium-horizontal menu audience-links dropdown " role="menubar" >
+
+        <li class="audience-button is-dropdown-submenu-parent opens-right" role="menuitem" aria-haspopup="true" aria-label="BCOE Departments &amp; Programs">
+            <a href="" target="_self"  class="dropdown-toggle" data-toggle="dropdown">BCOE Departments &amp; Programs</a>
+
+            <ul class="vertical menu submenu is-dropdown-submenu first-sub dropdown-menu" role="menubar"  aria-hidden="true"  data-submenu="">
+    
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="https://www.engr.ucr.edu">MARLAN AND ROSEMARY BOURNS COLLEGE OF ENGINEERING</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www.bioeng.ucr.edu/" target="_self">Bioengineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www.cee.ucr.edu/" target="_self">Chemical and Environmental Engineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://cen.ucr.edu/" target="_self">Computer Engineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www1.cs.ucr.edu/" target="_self">Computer Science and Engineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="https://datascience.ucr.edu" target="_self">Data Science</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www.ece.ucr.edu/" target="_self">Electrical and Computer Engineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www.mse.ucr.edu/" target="_self">Materials Science and Engineering</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://www.me.ucr.edu/" target="_self">Mechanical Engineernig</a>
+                            </li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                        <a href="http://msol.ucr.edu/" target="_self">Online M.S. in Engineering</a>
+                            </li>
+            </ul>
+
+        </li>
+    </ul>
+</div>                        <div id="block-ucriversideaudiencesearchblock" class="cell medium-shrink show-for-medium">
+
+                            <section class="google-search" role="search">
+                                
+                                 <button class="button audience-search-button" data-toggle="modal" data-target="#gscSearchFormModal" aria-controls="gscSearchFormModal" aria-haspopup="true" tabindex="0"><i class="fas fa-search"></i>  Search</button>
+                                 
+                            </section>
+
+                        </div>
+
+                        <div class="cell shrink hide-for-medium d-block d-sm-block d-md-none d-lg-none d-xl-none" 
+                            data-responsive-toggle="main-menu-container" 
+                            >
+                            <button class="mdi mdi-menu button mobile-menu-expander" 
+                                id="mobile-menu-expander" type="button" data-toggle="collapse" data-target="#main-menu-container" Xdata-toggle="main-menu-container">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cell small-order-1 medium-order-2 masthead-container">
+                <div class="grid-container">
+                    <div class="grid-x align-middle">
+                        <div class="cell shrink">
+                            <a class="masthead-logo" href="https://www.ucr.edu">
+                                <span class="show-for-sr">UC Riverside</span>
+                            </a>
+                        </div>
+                        <div class="cell auto">
+                            <h1 class="masthead-title">
+                                <a href="//systems.engr.ucr.edu"> BCOE Systems</a>
+                            </h1>
+                        </div>
+                        <div class="cell auto show-for-medium">
+                            <p class="slogan">We Engineer Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <div class="cell small-order-3 medium-order-3 main-nav-bar">
+                <div class="grid-container collapse show" id="main-menu-container" data-animate="fade-in fade-out">
+                    <div class="grid-x">
+                        <!-- <div id="block-ucriversideaudiencesearchblock-2" 
+                            data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium">
+                            <section class="google-search" role="search">
+                                <form id="audience-search-form" action="https://www.ucr.edu/search.php">
+                                    <label class="show-for-sr" for="audience-search">Search for:</label>
+                                    <input type="text" maxlength="255" id="audience-search" name="q" value="" >
+                                    <button type="submit" class="button show-for-small-only" value="">Search</button>
+                                </form>
+                            </section>
+                        </div> -->
+                        <div id="block-ucr-default-main-menu" class="cell main-menu-cell">
+
+                            <!-- Test of sticky button-->
+                                                        <div id="block-stickybuttonbasicblock" class="stickybtn ucr-custom-block" >
+                                <div class="grid-container basic-block full">
+                                    <div class="grid-x grid-padding-x">
+
+                                        <div class="cell">
+                                            <div class="stickybtn-green">
+                                                <p><a class="stickybtn-anchor" href="/tip-of-the-week" >Quick Tips</a></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul id="main-menu" role="menu" class="vertical medium-horizontal menu align-center-middle dropdown" >
+                                 
+
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Help">
+                                    <a href="/help" target="_self" class=" " >Help</a>
+                                </li>
+
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Account Setup">
+                                    
+                                    <a href="/createaccount" target="_self" class=" " title="Account Setup & Card/Group Access Management">Account Setup</a>
+                                </li>
+
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="CMS Help">
+                                    <a href="//websites.ucr.edu/" target="_self" class=" " >CMS Help</a>
+                                </li>
+
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Policies">
+                                    <a href="/policies" target="_self" class=" " >Policies</a>
+                                </li>
+
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Laptop Program">
+                                    <a href="https://student.engr.ucr.edu/computer-requirement" target="_blank" class=" " >Laptop Program</a>
+                                </li>
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Laptop Program">
+                                    <a href="/software" target="_self" class=" " >Software</a>
+                                </li>
+                                <li role="menuitem" class="" 
+                                    aria-haspopup="true" aria-label="Intranet">
+                                    <a href="https://intra.engr.ucr.edu/" target="_blank" class=" " >Intranet</a>
+                                </li>
+                                
+                                
+
+
+                                <!-- Authentication Links -->
+                                                            <li  class="nav-item pull-right"><a class="nav-link"  href="https://systems.engr.ucr.edu/login">Login</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="https://systems.engr.ucr.edu/register">Register</a></li> -->
+                                                        </ul>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+      <div class=" m-0 mb-2">
+        <ul class="nav justify-content-center  navbar-light m-0" style="background-color:#c0dff2;">
+          
+          <!-- <li class="nav-item">
+                <a class="nav-link" href="#" >Active</a>
+              </li> -->
+
+                            </ul>
+              </div>
+
+      <!-- SlideOut Menu -->
+      <!-- include('partials._slideout') -->
+
+      <!-- end slideout -->
+      <div>
+        <!-- Slider -->
+        <div class="container-fluid">
+          <div class="row">
+                      </div>
+        </div>
+
+
+        <div class="container mt-2">
+          <!-- Breadcrumbs -->
+                    <!-- {{--      <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                      </ol>
+                </nav> --}} -->
+
+        </div>
+        <!-- Banner -->
+        <div class="banner">
+          <div class="container">
+            
+
+
+          </div>
+        </div>
+
+        <!-- Status -->
+        <div class="container mtop-20">
+                    <div class="status" id="sys2_status">
+
+
+	 
+
+	 
+	
+	 
+	
+		</div>
+                    
+                    
+        </div>
+
+
+        <!--  Content -->
+        <div class="primary-content-area">
+
+
+          <div class="container mb-5">
+  <div class="row">
+    <div class="col-3">
+      <ul class="list-group">
+    <li class="list-group-item">   
+        <a href="/">Systems Home</a> 
+    </li>
+    <li class="list-group-item">
+        <a href="/help/help">Help/Questions</a>   
+    </li>
+    <li class="list-group-item">
+        
+        <a href="/createaccount">Account Setup</a>   
+    </li>
+    <li class="list-group-item">
+        <a href="/profile/cardaccess ">Card/Group Access Management</a>
+    </li>
+    <li class="list-group-item">
+        <a href="http://websites.ucr.edu/">CMS Help</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/help">Help Desk Info</a>
+    </li>
+    <li class="list-group-item">
+        <a href="http://student.engr.ucr.edu/laptop.html">Laptop Program</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/policies">Policies</a>
+    </li>
+    <li class="list-group-item">
+        <a href="http://cnc.ucr.edu/rcloud/">R'Cloud</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/software">Software</a> 
+    </li>
+    <li class="list-group-item">
+        <a href="/status">System Status</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/#location">Who We Are/Location</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/help/vpn">VPN</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/help/wireless">Wireless Info</a>
+    </li>
+    <li class="list-group-item">
+        <a href="https://bunkerweb.engr.ucr.edu/">Business Continuity/DR Site</a>
+    </li>
+</ul>    </div>
+    <div class="col">
+      <h1 class="title">Welcome to Engineering Systems!</h1>
+
+      <div class="card-deck">     
+        
+        <div class="card text-center col-lg-4" >  
+          <i class="fas fa-calendar fa-5x mt-3"></i>
+          <div class="card-body">
+             <h5 class="card-title"> Schedule a helpdesk appointment</h5>
+
+            <a class="btn btn-primary" href="https://scheduler.zoom.us/f/q9-y_u81" target="_blank">Schedule Now</a> 
+          </div>
+        </div>
+      
+        <div class="card text-center .bg-gradient-primary col-lg-4 "  style="background-color: aliceblue; border: 2px solid black;">  
+          <i class="fas fa-download fa-5x mt-3"></i>
+          <div class="card-body"> 
+            <h5 class="card-title"><a href="https://its.ucr.edu/cybersecurity-mandate-2025" target="_blank">UC Cybersecurity Mandate 2025</a></h5>
+            <p></p>
+            <a href="/software/security-agents" class=" btn btn-primary">Download the Security Toolset</a>
+          </div>
+        </div>
+
+        <div class="card text-center col-lg-4 " data-link="/help/SSLInstructions">  
+          <i class="fab fa-expeditedssl fa-5x mt-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Security Certificate</h5>
+            <p>&nbsp;</p>
+            <a class="btn btn-primary" href="/help/SSLInstructions">Install Instructions</a>
+          </div>
+        </div>
+      </div>
+
+      <div class=" card-deck mt-4">
+        
+          <div class="card text-center col-lg-4" >  
+            <i class="fas fa-laptop fa-5x mt-3"></i>
+            <div class="card-body"> 
+              <h5 class="card-title"> For Laptop and Software assistance</h5>
+              <p>Visit the Help Desk <br/>in WCH 107</p>
+            </div>
+          </div>
+
+          <div class="card text-center col" data-link="/info.bat">  
+            <i class="fab fa-windows fa-5x mt-3"></i>
+            <div class="card-body">
+              <h5 class="card-title">System Information</h5>
+              <p>If you would like to find out your computer information (Computer name, IP, MAC Address). Download and run this application, and your information will appear on your desktop background Image. (ENGR Only).</p>
+              <a class="btn btn-primary" href="/info.bat">View Info</a>
+            </div>
+          </div>
+        
+
+      </div>
+
+      <h4 id="location" class="mt-5">Location</h4>
+      <div class="row">
+        <div class="col">
+          <h5>Engineering Systems</h5>
+          <address>
+          WCH 107<br/>
+          University of California, Riverside<br/>
+          Riverside, CA 92521
+          </address>
+          <strong>Systems Administrator</strong>
+          <p><a href="mailto:systems@engr.ucr.edu">systems@engr.ucr.edu</a></p>
+
+          <strong>Systems Assistant</strong>
+          <p><a href="mailto:systems@engr.ucr.edu">systems@engr.ucr.edu</a></p>
+
+          <strong>Webmaster</strong>
+          <address>
+            Bourns Hall A304
+          </address>
+          <p><a href="mailto:webmaster@engr.ucr.edu">webmaster@engr.ucr.edu</a></p>
+        </div>
+
+        <div class="col">
+          <h5>ECE Systems</h5>
+          <address>
+            Room 107 Winston Chung Hall<br/>
+            University of California, Riverside<br/>
+            Riverside, CA 92521
+          </address>
+
+          <strong>Information Technology Manager</strong>
+          <p><a href="mailto:systems@ece.ucr.edu">systems@ece.ucr.edu</a></p>
+
+          <strong>Assistant Systems Administrator</strong>
+          <p><a href="mailto:systems@ece.ucr.edu">systems@ece.ucr.edu</a></p>
+        </div>
+
+      </div>
+      
+
+
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+        <!-- Modal -->
+        <div class="modal fade " id="sys2-modal" tabindex="-1" role="dialog" aria-labelledby="bc-modalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="bc-modalLabel"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                              </div>
+              <div class="modal-footer">
+                
+                <button type="button" class="btn btn-danger mr-5 deleteBtn hide">Delete</button>
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary saveBtn">Save changes</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+    <div class="footer-container">
+        <div class="footer-content-area">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x align-center">
+    				<div id="block-ucriversidefootersearchblock" data-block-plugin-id="ucr_global_footer_search" class="cell footer-google-search">
+						<!-- <section class="google-search">
+						<form action="https://www.ucr.edu/search.php">
+						<label class="show-for-sr" for="footer-search">Search for:</label>
+						<input type="text" maxlength="255" id="footer-search" name="q" value="" placeholder=" ">
+						</form>
+						</section> -->
+					</div>
+				</div>
+
+            	<div class="grid-x grid-padding-x footer-columns">
+                    <div class="cell medium-auto">  
+						<section class="footer-item ucr-footer-info">
+							<span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span>
+							<address>
+								<p>900 University Ave.<br>
+								Riverside, CA 92521</p>
+								<p>Tel: (951) 827-1012</p>
+							</address>
+							<!-- <ul class="footer-links">
+								<li><a href="http://library.ucr.edu/" target="_blank">UCR Library</a></li>
+								<li><a href="http://campusstatus.ucr.edu/" target="_blank">Campus Status</a></li>
+								<li><a href="http://campusstore.ucr.edu/" target="_blank">Campus Store</a></li>
+								<li><a href="http://jobs.ucr.edu" target="_blank">Career Opportunities</a></li>
+								<li><a href="http://diversity.ucr.edu/" target="_blank">Diversity</a></li>
+								<li><a href="http://campusmap.ucr.edu/" target="_blank">Maps and Directions</a></li>
+								<li><a href="https://www.ucr.edu/about/visitors" target="_blank">Visit UCR</a></li>
+							</ul> -->
+						</section>
+					</div>
+
+                    <div class="cell medium-auto">
+						<section id="block-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info">
+							<h3>Engineering Systems</h3>
+							<address class="address_2">
+								<p> <a href="http://campusmap.ucr.edu/?loc=CHUNG" target="_blank">
+								WCH 107<br>
+								900 University Ave.<br>             
+								Riverside, CA 92521</a>
+								</p>
+								<p> Tel: (951) 827-5190<br>                 
+								Fax: (951) 827-3188<br>         
+								email: <a href="mailto:systems@engr.ucr.edu">systems@engr.ucr.edu</a>        
+								</p>
+							</address>
+						</section>
+					</div>
+
+                    <div class="cell medium-auto">
+        				<section id="block-ucriversiderelatedlinks" class="footer-item footer-related-links">
+	                    	<h3>Related Links</h3>
+<ul class="vertical menu">
+    <li><a href="https://scheduler.engr.ucr.edu/Web/?" target="_blank">BCOE Available Conference Rooms and Technology Resources</a>
+        </li>
+    
+        </li>
+    <li><a href="https://myadv.ucr.edu/BCOE/%22Bourns%20College%20of%20Engineering%22" target="_blank">Give to Bourns</a>
+        </li>
+    <li><a href="/intranet" target="_self" >Intranet</a>
+        </li>
+    <li><a href="https://www.engr.ucr.edu/faculty-resources" target="_blank" data-drupal-link-system-path="node/521">Faculty Resources</a>
+        </li>
+
+    <li><a href="http://systems.engr.ucr.edu/" target="_self">Systems</a>
+        </li>
+</ul>						</section>
+					</div>
+
+                    <div class="cell medium-auto">
+					<!-- <section class="footer-item">
+							<p class="social-title">Follow US:</p> 
+<div class="social-link">
+	<a href="https://www.facebook.com/UCRBCOE/" target="_blank" class="button mdi mdi-facebook" title="Visit BCOE's Facebook page (external site: Facebook)"><span class="show-for-sr">Visit BCOE's Facebook page (external site: Facebook)</span></a>
+	<a href="https://twitter.com/bournscollege" target="_blank" class="button mdi mdi-twitter" title="Follow BCOE on Twitter (external site: Twitter)"><span class="show-for-sr">Follow BCOE on Twitter (external site: Twitter)</span></a>
+	<a href="https://www.youtube.com/user/BournsCollege" target="_blank" class="button mdi mdi-youtube-play" title="Visit BCOE's YouTube channel (external site: YouTube)"><span class="show-for-sr">Visit BCOE's YouTube channel (external site: YouTube)</span></a>
+	<a href="https://www.flickr.com/photos/bournscollege/" target="_blank" class="button mdi mdi-camera-iris" title="Visit BCOE's Flickr gallery (external site: Flickr)"><span class="show-for-sr">Visit BCOE's Flickr gallery (external site: Flickr)</span></a>
+	<a href="http://ucrtoday.ucr.edu/tag/bourns-college-of-engineering/feed" target="_blank" class="button mdi mdi-rss" title="Subscribe to BCOE News via RSS Feed"><span class="show-for-sr">Subscribe to BCOE News via RSS Feed</span></a>
+</div>						</section> -->
+	 				</div>
+                </div>
+			</div>
+    	</div>
+
+   		<div class="site-legal-footer">
+	        <div class="grid-container">
+	            <div class="grid-x grid-padding-x">
+	                <div class="cell">
+	                    <ul>
+	                        <!-- <li><a href="/feedback" title="Send Feedback E-mail">Feedback</a></li> -->
+	                        <li><a href="//www.ucr.edu/privacy.html">Privacy Policy</a></li>
+	                        <li><a href="//www.ucr.edu/terms.html">Terms and Conditions</a></li>
+	                        <li>&copy; 2025 Regents of the University of California</li>
+	                        <li>BCOE Systems </li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+
+	</div>
+</footer>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://systems.engr.ucr.edu/js/axios.min.js"></script>
+    <script src="https://systems.engr.ucr.edu/js/app.js"></script>
+    <script src="https://systems.engr.ucr.edu/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="https://systems.engr.ucr.edu/js/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://systems.engr.ucr.edu/js/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://systems.engr.ucr.edu/js/datatables.min.js"></script>
+    <script type="text/javascript" src="https://systems.engr.ucr.edu/js/jszip.min.js"></script>
+    <script type="text/javascript" src="https://systems.engr.ucr.edu/node_modules/tinymce/tinymce.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $.ajaxSetup({
+          headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+        });
+        $.fn.select2.defaults.set( "theme", "bootstrap4" );
+    });
+
+    </script>
+    <script async src="https://cse.google.com/cse.js?cx=35d34e2032d2d413e">
+    </script>
+    
+    <script>
+  $(document).ready(function(){
+    $('.card[data-link]').on('click',function(){
+      var link = $(this).data('link');
+      if(link){
+        window.location = link;
+      }
+    })
+
+  })
+  
+</script>
+
+  </body>
+
+</html>

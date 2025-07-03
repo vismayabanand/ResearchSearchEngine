@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/guide/website/hosting" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Website Hosting Options | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_DvDrSlkGaeluQbRu-vJsGoiYxED9Ag2ey_QaOYUh0GA.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1jlGOwjAMRC-UNh97oMhpTGuUxFHGoXD7rWBXCNj9sTTznkYmgC1IPfNi2v0CzK1LNUefAGIcdkn8H5TSul44nOTK-EvaOd5HNoVJXYM2E61wUdVgnVqI1LuoX7NGyhPslg_vkxcGaGWEfTv23KKd_aKlaeVqmN_9aSpcx0NLfTTKM53p6hp1Wg9tw2_9bOZR24hZsHFyMKon7SkMMf9cX1J9RW9_vzDo6AsHUEX4ekM_YTqCww3GxUcCu4vwDn-_c9E0Mn8DNjSr1w" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/28122","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJx1kFGOwyAMRC9EwsdKex3kEJeQBYxs07S3L6oqVTTdH4uZZ42NQQTVxbKjV2LrRebKsaiBM5Co6I644n8w5sp0RXeJN5RvTQcuz5CNRGMJjqpGKqfW_VvcQqSiDNUtwBzJXqgoHCiU0f2ecUi0QJpE76mPOvPu_n1JzSgCAcUdW1_hzIUae3QCRdyP8cRoPeVKBYvK_Nk-TRlLM4EoJHQKwYZePvUMO9xGM5sKDKEnbWJXbhXS_HbmVmpbUpQNVyMK5UK8uhbVvhfwaxnReK8BfdxqYOOHR_QSUxdG7qKY7QKCpmsnCOw3-36-XL7GHgcJWcWeLbeLuUY8xD7rnGltCR_iKQ2V","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-28122 path-guide-website-hosting path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link active dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item active">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished active nav-link--guide-website-hosting is-active" data-drupal-link-system-path="node/28122" aria-current="page">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/website-hosting-banner.jpg?itok=kxKuew0_); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Website Hosting Options</span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p>Explore options for where to build and maintain your website, and what University IT recommends for different website needs</p>
+</div>
+      
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-5b0dd88a6fe971366ba7282d885a3e426e57f5f8cdfb618ec1ea82e8a8f2a6b5">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_1199" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--1199 section--default">
+		<div class="container">
+							<div id="section_title_1199" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Help Me Choose
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_1199" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <table class="table table-comparison margin-top-30"><thead><tr><th style="text-align:center;width:15%;">Features</th><th style="text-align:center;width:17%;">Google Sites</th><th style="text-align:center;width:17%;">Stanford Domains</th><th style="text-align:center;width:17%;">Stanford Sites</th><th style="text-align:center;width:17%;">Drupal Hosting on Acquia</th></tr></thead><tbody><tr><th scope="row">Recommended Uses</th><td>Small, simple personal websites, project team sites, or portfolio or event websites that are short term. No Stanford branding provided; can be managed with little to no technical skill.</td><td>Small, low-traffic personal websites, portfolios, wikis, or prototypes for learning new applications as a student.</td><td>Scalable, centrally-managed Stanford-branded website for your group, department or unit websites on Drupal with deep support.</td><td>For complex department, unit or school websites using custom Drupal modules and themes. Also good for decoupled applications and/or complex websites with high traffic or storage requirements.</td></tr><tr><th scope="row">Authentication (SSO) &amp; Authorization: Stanford User</th><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Limited Support</span><i class="fa fa-exclamation-circle fa-2x"></i><br>Capabilities differ by app</td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Authentication (SSO) &amp; Authorization: Workgroup</th><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i><br>Must be mapped to Google Groups</td><td class="center"><span class="element-invisible">Not Supported</span><i class="fa fa-times-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Authentication (SSO) &amp; Authorization: Privgroup (e.g., staff, faculty)</th><td class="center"><span class="element-invisible">Not Supported</span><i class="fa fa-times-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Limited Support</span><i class="fa fa-exclamation-circle fa-2x"></i><br>Capabilities differ (e.g. Drupal - authentication / authorization, WordPress - authentication only)<br>Not supported in other websites, including HTML sites</td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Maintenance: Upgrades/Security</th><td class="center">Managed by Google</td><td class="center">Vendor-managed security updates for provided applications; self-managed plugin updates</td><td class="center">Managed by Stanford Web Services</td><td class="center">Self-managed; Stanford Web Services can manage for fee</td></tr><tr><th scope="row">Website Size</th><td class="center">Small</td><td class="center">Small to medium</td><td class="center">Small to large</td><td class="center">Large</td></tr><tr><th scope="row">Cost</th><td class="center">Free</td><td class="center">Free</td><td class="center">Free</td><td class="center">Varies by requirements. <a href="/service/drupalhostingonacquia">See rates section on service page.</a></td></tr><tr><th scope="row">Default URL</th><td class="center" style="word-break:break-word;">sites.google.com/stanford.edu/[mysite]</td><td class="center" style="word-break:break-word;">[mysite].su.domain</td><td style="word-break:break-word;"><ul><li>[mysite].sites.stanford.edu (for dept and groups)</li><li>[SUNetID].people.stanford.edu (for people)</li></ul></td><td class="center" style="word-break:break-word;">[mysite].stanford.edu</td></tr><tr><th scope="row">Custom URL</th><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Stanford Theming Available</th><td class="center"><span class="screen-reader-text">Limited Support</span><i class="fa fa-exclamation-circle fa-2x"></i><br>No official Stanford theme for Google Sites is available. Refer to <a href="https://identity.stanford.edu/">identity.stanford.edu</a> to get the Stanford signature images and color palette.</td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Drupal/WordPress Modules &amp; Plugins</th><td class="center">N/A</td><td class="center">Installed and maintained by site owner</td><td class="center">Pre-selected and maintained by SWS</td><td class="center">Installed and maintained by site owner</td></tr><tr><th scope="row">Disk Space</th><td class="center">Based on Google Drive quota</td><td class="center">1 GB (increase upon request);&nbsp;<span style="background-color:rgb(255, 255, 255);letter-spacing:0.16px;text-align:center;">encouraged to use different service for hosting large files</span></td><td class="center">No hard limit but encouraged to use different service for hosting large files</td><td class="center">Custom</td></tr><tr><th scope="row">Uptime/Availability</th><td class="center">High</td><td class="center">High*<br><em>*non-redundant infrastructure</em></td><td class="center">Highest</td><td class="center">Highest</td></tr><tr><th scope="row">Available Apps</th><td class="center">Integration with Google Drive and all Google apps</td><td class="center">WordPress, MediaWiki, Drupal, Omeka, CGI, static HTML, and more</td><td class="center">Drupal only</td><td class="center">Drupal; Node.js</td></tr><tr><th scope="row">Available Self-Service Application Support</th><td><ul><li>Vendor documentation</li><li>LinkedIn Learning</li></ul></td><td><ul><li>Vendor documentation</li><li>LinkedIn Learning</li><li>UIT support documentation</li></ul></td><td><ul><li>Vendor documentation</li><li>LinkedIn Learning</li><li>UIT support documentation</li></ul></td><td><ul><li>Vendor documentation</li><li>LinkedIn Learning</li></ul></td></tr><tr><th scope="row">Available UIT Service Support<br><em>(UIT-supported service infrastructure and configuration)</em></th><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Fee-based UIT Service Support<br><a href="https://uit.stanford.edu/sws/website-consulting"><em>(Consulting </em></a><em>&amp; </em><a href="https://uit.stanford.edu/sws/website-building"><em>website building</em></a><em> )</em></th><td class="center"><span class="element-invisible">Limited Support</span><i class="fa fa-exclamation-circle fa-2x"></i><br>Consulting services only</td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td><td class="center"><span class="element-invisible">Supported</span><i class="fa fa-check-circle fa-2x"></i></td></tr><tr><th scope="row">Learn more</th><td class="center"><a class="more-button" href="https://sites.google.com/new">Google Sites</a></td><td class="center"><a class="more-button" href="https://uit.stanford.edu/service/sudomains">Stanford Domains</a></td><td class="center"><a class="more-button" href="/service/stanfordsites">Stanford Sites</a></td><td class="center"><a class="more-button" href="/service/drupalhostingonacquia">Drupal Hosting on Acquia</a></td></tr></tbody></table>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_7436" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--7436 section--default">
+		<div class="container">
+							<div id="section_title_7436" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	Note about AFS-based websites
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_7436" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <div style="align:center;margin:auto;width:75%;"><p class="text-align-center">The AFS-based websites service (on web.stanford.edu) is deprecated and should be used only if your web hosting needs cannot be met through other service offerings mentioned on this page.&nbsp;</p><p class="text-align-center"><em><strong>For anyone currently using an AFS-based website, please take steps to move necessary content to one of the other services.&nbsp;</strong></em></p><p class="text-align-center">This guidance does not apply to AFS-based web sites that are part of the <a href="https://uit.stanford.edu/service/its-course-support">Course Support system</a>. And please note that the recommended learning management system (LMS) for Stanford continues to be <a href="https://gocanvas.stanford.edu/">Canvas</a>.</p></div>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/guide/website/hosting" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

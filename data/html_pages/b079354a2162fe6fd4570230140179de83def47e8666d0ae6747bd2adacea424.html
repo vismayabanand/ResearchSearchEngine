@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Site description">
+  <meta name="author" content="Your Name">
+  <link rel="canonical" href="https://pal.cs.ucr.edu//people.html">
+
+  <title>People | UCR PAL</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom fonts for this template -->
+  <link href="/assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this theme -->
+  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  <link href="/assets/css/agency.css" rel="stylesheet" />
+
+  <!-- Page container change top padding when nav shrinks -->
+  
+  <style>
+    #pagecontainer {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer {
+        padding-top: 100px;
+      }
+    }
+  </style>
+  
+  <style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:80px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: #2578FF;
+    border-radius: 20%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+	
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+</head>
+
+
+  <body id="page-top">
+
+        <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#003EA5">
+      <div class="container">
+	  <a class="navbar-brand js-scroll-trigger" href="/">UCR PAL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/publications.html">Papers</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/people.html">People</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#project">Projects</a>
+			  <!--<a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/index.html#project">Projects</a>--></li>
+        
+          <li class="nav-item"><div class="nav-link">
+				<a>Resources</a>
+				<div class="di">
+					<ul>
+					
+						<li> <a href="/courses.html"> 
+						Courses
+						</a></li>
+					
+						<li> <a href="/students.html"> 
+						Recruiting
+						</a></li>
+					
+						<li> <a href="/resource.html"> 
+						Useful Resources
+						</a></li>
+					
+					</ul>
+				</div>
+				</div>
+			    </div></li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- End Navigation -->
+  
+
+<div class="maincontainer" id="pagecontainer">
+
+<div class="control">
+	
+	<div class="left">
+		<div class="subNav" style="padding-top:30px">
+			<div class="subNavList">
+			  <li>
+			  <a class="dropdown" href="#faculty"> Faculty </a>	  
+			  </li>
+			  <li>
+			  <a class="dropdown" href="#phd"> Ph.D. Students</a>	  
+			  </li>
+			  <li>
+			  <a class="dropdown" href="#master"> MS & Undergrad Students</a>	  
+			  </li>
+			  <li>
+			  <a class="dropdown" href="#alumni"> Alumni</a>	  
+			  </li>
+			  <!--<li>
+			  <a class="dropdown" href="#alumni"> Alumni</a>	  
+			  </li>-->
+			</div>
+			</div>
+		</div>
+	
+	<div class="maincontent">
+	
+		<div class="col-lg-12 text-left" style="width:800px">
+		<h2 class="section-heading text-uppercase">People</h2>
+		</div>
+	<!--style="object-fit:cover;
+            width:200px;
+            height:300px"
+-->
+
+<h2 id="faculty-members"><strong class="themetext">Faculty Members:</strong></h2>
+<div class="peoplelist" id="faculty">
+	<ul>
+		<li> 
+		<p><img src="assets/img/people/yan.jpg" /></p>
+		<div class="name"> <a href="https://www.cs.ucr.edu/~ygu">Yan Gu </a></div>
+		</li>
+		<li> 
+		<p><img src="assets/img/people/yihan.jpg" /></p>
+		<div class="name"> <a href="https://www.cs.ucr.edu/~yihans">Yihan Sun </a></div>
+		</li>
+	</ul>
+</div>
+
+<h2 id="phd-students"><strong class="themetext">Ph.D. Students:</strong></h2>
+
+<!--
+
+| <img width="500px" src="assets/img/people/xiaojun.jpg" >  | | <img width="500px" src="assets/img/people/youzhe.jpeg"> |
+| <div class="name" > <a href="#">Xiaojun Dong </a></div> | | <div class="name" > <a href="https://alanliu.site/about/">Youzhe Liu </a></div> |
+| <div> |  |  |
+-->
+
+<div class="peoplelist" id="phd">
+	<ul>
+		<li> 
+		<p><img src="assets/img/people/xiaojun.jpg" /></p>
+		</li>
+		<li> 
+		<p><img src="assets/img/people/youzhe.jpeg" /></p>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<div class="name"> <a href="#">Xiaojun Dong </a></div>
+		</li>
+		<li> 
+		<div class="name"> <a href="https://alanliu.site/about/">Youzhe Liu </a></div>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<p><img src="assets/img/people/ziyang.jpg" /></p>
+		</li>
+		<li> 
+		<p><img src="assets/img/people/zheqi.jpg" /></p>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<div class="name"> <a href="https://www.cs.ucr.edu/~zmen002/">Ziyang Men </a></div>
+		</li>
+		<li> 
+		<div class="name"> <a href="#">Zheqi Shen </a></div>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<p><img src="assets/img/people/zijin.jpg" /></p>
+		</li>
+		<li> 
+		<p><img src="assets/img/people/letong.jpg" /></p>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<div class="name"> <a href="#">Zijin Wan </a></div>
+		</li>
+		<li> 
+		<div class="name"> <a href="https://sites.google.com/view/letong-wang/home">Letong Wang </a></div>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<p><img src="assets/img/people/xiangyun.jpg" /></p>
+		</li>
+		<li> 
+		<p><img src="assets/img/people/bo.jpg" /></p>
+		</li>
+	</ul>
+	<ul>
+		<li> 
+		<div class="name"> <a href="#">Xiangyun Ding </a></div>
+		</li>
+		<li> 
+		<div class="name"> <a href="https://itakejgo.github.io/">Bo Huang</a></div>
+		</li>
+	</ul>
+</div>
+
+<h2 id="current-master-and-undergraduate-students"><strong class="themetext">Current Master and Undergraduate Students:</strong></h2>
+
+<div class="peoplelistonly" id="master">
+  <ul>
+    <li>Andy Li (BS)</li>
+    <li>Thomas Li (BS)</li>
+    <li>Nishanth Prasanna Kumar (MS)</li>
+  </ul>
+</div>
+
+<h2 id="alumni"><strong class="themetext">Alumni:</strong></h2>
+<div class="peoplelistonly" id="alumni">
+  <ul>
+    <li>Xiaojun Dong (BS), Ph.D. at UCR</li>
+    <li>Yunshu Wu (BS), Ph.D. at UCR</li>
+    <li>Zhongqi Wang (MS), Ph.D. at University of Maryland</li>
+    <li>Haide He (MS), Ph.D. at UC Merced</li>
+    <li>Jiawen Lai (MS), TikTok USA</li>
+    <li>Zachary Napier (BS)</li>
+    <li>Zijin Wan (BS), Ph.D. at UCR</li>
+    <li>Daniel Li (MS)</li>
+    <li>Qun Lou (MS)</li>
+    <li>Brooke Godinez (MS)</li>
+    <li>Yuta Nakamura (BS and MS), Amazon</li>
+    <li>Enzuo Zhu (MS), Ph.D. at UC Davis</li>
+  </ul>
+</div>
+
+		
+
+	</div>
+</div>
+</div>
+
+	  <!-- Footer -->
+<footer class="footer" id="footer" style="background-color: white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <span class="copyright">Copyright &copy; UCR PAL 2024</span><br>
+		<span class="copyright">Website generated with <a href="http://jekyllthemes.org/themes/agency/">Jekyll agency theme</a> </span>
+      </div>
+      <!-- Social Media -->
+	  <!--
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          
+          <li class="list-inline-item">
+            
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://facebook.com">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://github.com/raviriley/agency-jekyll-theme">
+              <i class="fab fa-github"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://instagram.com">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+          </li>
+          
+        </ul>
+      </div>
+	  -->
+      <!-- Legal -->
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+		    <span>Last updated: November 26, 2024</span><br>
+            <a href="">BACK TO TOP</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- End Footer -->
+
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jqBootstrapValidation.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/agency.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/copyCode.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/clipboard.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/codeselect.js"></script>
+
+
+  </body>
+</html>
+

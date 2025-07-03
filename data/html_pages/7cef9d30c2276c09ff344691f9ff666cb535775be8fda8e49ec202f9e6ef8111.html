@@ -1,0 +1,1396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    
+    <!-- Favicon from theme -->
+    <link rel="icon" href="https://web.mit.edu/themes/mit/assets/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="https://web.mit.edu/themes/mit/assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://web.mit.edu/themes/mit/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="https://web.mit.edu/themes/mit/assets/favicon/manifest.webmanifest">
+
+    <!-- Title -->
+    <title>Touchstone@MIT : Please Authenticate</title>
+    
+    <!-- Core widget js and css -->
+    <script type="text/javascript" src="https://ok12static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.14.2/js/okta-sign-in.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://ok12static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.14.2/css/okta-sign-in.min.css">
+
+    <!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
+    <link rel="stylesheet" type="text/css" href="">
+
+    <!-- styles for custom sign in -->
+    <style>
+        * {
+            font-family: "lucida sans", "lucida grande", arial, verdana, helvetica, sans-serif !important;
+        }
+
+        body {
+            background: #777;
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.7;
+            color: #3f3f3f;
+        }
+        
+        .apploginbanner-container {
+            position: absolute;
+            top: 0;
+            width: 100%
+        }
+        
+        .applogin-container {
+            color: #777;
+            line-height: 19.6px
+        }
+        
+        .applogin-container h1,
+        .applogin-container p {
+            font-size: 14px;
+            margin: 0
+        }
+        
+        #okta-login-container.login-container {
+            margin-top: 210px
+        }
+
+        #okta-sign-in {
+            margin: 5em 5% 3em 5%;
+            width: 90%;
+            overflow: initial;
+        }
+        
+        #okta-sign-in.unsupported-message-container {
+            text-align: center
+        }
+        
+        #okta-sign-in .unsupported-message {
+            padding: 21px 55px 37px;
+            text-align: center
+        }
+        
+        #okta-sign-in .unsupported-message p {
+            padding-bottom: 20px
+        }
+        
+        #okta-sign-in .unsupported-message a.button {
+            display: block
+        }
+        
+        #okta-sign-in .idp-piv-button.link-button {
+            background-color: #fff;
+            border: 2px solid #1662dd;
+            color: #1662dd
+        }
+        
+        #okta-sign-in .idp-piv-button.link-button:active,
+        #okta-sign-in .idp-piv-button.link-button:focus,
+        #okta-sign-in .idp-piv-button.link-button:hover {
+            background-color: #e5edfb;
+            border-color: #124a94;
+            color: #124a94
+        }
+        
+        #inactive-tab-main-div {
+            color: #777;
+            margin-top: 210px
+        }
+        
+        #inactive-tab-main-div h2,
+        #inactive-tab-main-div p {
+            font-size: 14px;
+            margin: 0
+        }
+        
+        #inactive-tab-main-div .inactive-tab-container {
+            background: #fff;
+            margin: 0 auto;
+            padding: 30px 90px 75px;
+            text-align: center;
+            width: 32rem
+        }
+        
+        #inactive-tab-main-div .inactive-tab-container .inactive-tab-header {
+            padding-bottom: 30px
+        }
+        
+        #inactive-tab-main-div .inactive-tab-container .inactive-tab-header img {
+            max-height: 50px;
+            max-width: 100px
+        }
+        
+        #inactive-tab-main-div .inactive-tab-container .inactive-tab-content-title {
+            color: #5e5e5e;
+            font-weight: 600;
+            padding-bottom: 30px
+        }
+        
+        @media only screen and (max-device-width:600px) {
+            #inactive-tab-main-div .inactive-tab-container {
+                margin: auto;
+                width: 100%
+            }
+        }
+        
+        @media only screen and (max-height:750px) {
+            #okta-login-container.login-container {
+                margin-top: 100px
+            }
+        }
+        
+        @media only screen and (max-height:660px) {
+            #okta-login-container.login-container {
+                margin-top: 47px
+            }
+        }
+    </style>
+    
+    <!-- Login Background Image -->
+    <style nonce="kfqQniu1RlMTu0Y7zo0zOA">
+        #login-bg-image-id {
+            background-image: none
+        }
+    </style>
+    
+    <!-- Custom Touchstone Styles-->
+    <!-- Mobile -->
+    <style media="screen and (max-width: 601px)">
+	    body {
+            font-family: Helvetica, Arial, sans-serif !important;
+        }
+
+        .login-bg-image {
+            background-color: #b9c6d6 !important;
+        }
+
+        .mit-login {
+            padding: 0 10px !important;
+        }
+
+        .auth-header {
+            display: none;
+        }
+
+        #mit-mast {
+            display: flex;
+            height: 30px;
+            background-color: #869db3;
+            background-image: linear-gradient(180deg, #a3b2c5, #647D9B);
+            padding: 8px 5px 8px 5px;
+        }
+
+        div#mit-foot {
+            margin-top: 0px !important;
+        }
+
+        #mit-mast .mobile-only,
+        #mit-login .mobile-only,
+        #mit-foot .mobile-only {
+            display: block;
+        }
+
+        #mit-mast .desktop-only,
+        #mit-login .desktop-only,
+        #mit-foot .desktop-only {
+            display: none;
+        }
+
+        #mit-mast h1 {
+            color: #fff;
+            font-size: 18px;
+            margin: 0 0 0 0px;
+            padding-left: 15px;
+            text-shadow: 1px 1px 1px #777;
+        }
+
+        #mit-mast ul {
+            margin: 0px;
+        }
+
+        #mit-mast ul li {
+            list-style: none;
+        }
+
+        #mit-login .beacon-container {
+            display: none;
+        }
+
+        #mit-login .auth-container {
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        #mit-login h2.o-form-head {
+            text-align: left;
+            font-weight: 400;
+            color: #000;
+        }
+
+        #mit-login #okta-sign-in .o-form-fieldset {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #mit-login #okta-sign-in .o-form label::after {
+            content: ":";
+            position: relative;
+            left: -4px;
+        }
+        
+        #mit-login #okta-sign-in .o-form .custom-checkbox label::after,
+        #mit-login #okta-sign-in .o-form .custom-radio label::after {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix input[type=number], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=password], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=tel], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=text], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=textbox] {
+            border: 1px solid #758ea6;
+            border-radius: 3px;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+            border: none;
+        }
+
+        #mit-login #okta-sign-in .o-form-fieldset .o-form-label {
+            color: #627ba1;
+        }
+
+        #mit-login #okta-sign-in.auth-container .o-form-input-name-identifier::after,
+        #mit-login #okta-sign-in.auth-container .o-form-input-name-username::after {
+            content: "@mit.edu";
+            padding-left: 3px;
+            font-size: 14px;
+            position: relative;
+            top: 5px;
+            color: #000;
+        }
+
+        #mit-login .o-form-content {
+            padding-bottom: 0px;
+        }
+
+        #mit-login #okta-sign-in .link-button,
+        #mit-login #okta-sign-in.auth-container .button-primary {
+            background: linear-gradient(180deg, #85A0BA, #40618B);
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            height: 40px;
+            margin: 0 auto;
+            border-radius: 0;
+            border: none;
+        }
+
+        #mit-login #okta-sign-in.auth-container .auth-content {
+            padding: 15px;
+        }
+
+        #mit-login #okta-sign-in .custom-checkbox label, 
+        #mit-login #okta-sign-in .custom-radio label {
+            color: #000;
+        }
+
+        #mit-login #okta-sign-in div {
+            background-color: #fff !important;
+            border-radius: 9px;
+        }
+
+        #mit-login .okta-form-title {
+            color: #000;
+            font-weight: 400;
+            font-size: 15px;
+            margin-top: 0px;
+        }
+
+        #mit-login .primary-auth form .o-form-content::before {
+            content: 'Login using your MIT Kerberos username and password:';
+            color: #000;
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        #mit-login .primary-auth .okta-form-title {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .o-form-fieldset .o-form-label {
+            width: 125px;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix, 
+        #mit-login #okta-sign-in .o-form .textarea-fix {
+            height: 30px;
+        }
+
+        #mit-login #okta-sign-in .password-toggle {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .siw-main-body .identifier-container {
+            text-align: left;
+            color: #000;
+        }
+
+        #mit-login .o-form-button-bar {
+            padding-bottom: 10px;
+        }
+
+        #okta-sign-in.auth-container.main-container {
+            background-color: transparent !important;
+        }
+
+        .auth-content {
+            background-color: #fff;
+        }
+
+        .mit-login .auth-header {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+            display: flex;
+        }
+
+        #mit-login #okta-sign-in.auth-container .okta-form-input-field.focused-input {
+            border: none;
+            box-shadow: none;
+        }
+
+        div#mit-foot {
+            margin: 20px 5%;
+        }
+
+        #mit-foot>div:first-child a {
+            background-image: url('data:image/png;base64,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bnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iCiAgICB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6R0lNUD0iaHR0cDovL3d3dy5naW1wLm9yZy94bXAvIgogICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgIHhtcE1NOkRvY3VtZW50SUQ9ImdpbXA6ZG9jaWQ6Z2ltcDo0ZjA1MTk4Yy04N2JmLTQ1Y2ItODA0YS1jOTg3NGE5NTIwNmMiCiAgIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDRjYzY3ZDEtMjgxZC00ZTIzLTk1M2UtYmViZjIxMzcxODUxIgogICB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZTFiNWM2NTQtMDMwYS00NjBjLWFiZWYtMDk3MTllNjdmZDU5IgogICBkYzpGb3JtYXQ9ImltYWdlL3BuZyIKICAgR0lNUDpBUEk9IjIuMCIKICAgR0lNUDpQbGF0Zm9ybT0iTWFjIE9TIgogICBHSU1QOlRpbWVTdGFtcD0iMTcwOTIzNzUwODI4Nzg4OSIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjMyIgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCIKICAgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNDowMjoyOVQxNToxMTo0My0wNTowMCIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjQ6MDI6MjlUMTU6MTE6NDMtMDU6MDAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDM5ZmU1OC00OWM0LTQyYmEtYTJkZi0wNjUyZTA0ZGU0YTMiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wMi0yOVQxNToxMTo0OC0wNTowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz6d7auZAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAB3RJTUUH6AIdFAswMHINpgAAEsxJREFUeNrtnHucFcWVx3/njjMwM4ggDLCCvHxBTFAeogkoARU0AoLks/GzIat5LBB3NepisouiMTEYNkYhWRPRzWpkya4iAuJrwScKMTKsmiiKDwIIiDDD8BoY5nJv7R99ynum7Dvcy8wwPH7fz+d++nZ1dVd19ek651SdaoAQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQo4aJM/8swH0zjHvNACPx6SX51HetwC8G6SdCeD3OZ6/DcDwmPTrAYzP8RoLANwRk/5fAHodwmcV1xaEEEIayHF55u8NoH+OedtnSe+fR3mlMWkleVzj0yzpXfK4xhv1tEW/Q/isSiiuhBDS+CTYBIQQQqgICSGEECpCQgghhIqQEEIIoSIkhBBCqAgJIYQQKkJCCCGEipAQQgihIiSEEEKO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');
+            background-size: contain;
+            background-position: left;
+            background-repeat: no-repeat;
+            display: block;
+            color: transparent;
+            height: 40px;
+        }
+
+        #mit-login .auth-footer a.js-switchAuthenticator,
+        #mit-login .auth-footer a.js-help,
+        #mit-login .auth-footer a.js-unlock {
+            display: none;
+        }
+
+        #mit-login #okta-login-container .auth-content .auth-content-inner .identify .siw-main-body form {
+            padding-bottom: 32px;
+        }
+
+        #mit-login #mit-login-links {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 316px;
+            margin-bottom: 0px;
+        }
+
+        #mit-login #mit-login-links a {
+            position: relative;
+            top: -60px;
+            display: none;
+        }
+
+        #mit-login #mit-login-links a {
+        }
+
+        #mit-login #mit-login-links a:active,
+        #mit-login #mit-login-links a:focus,
+        #mit-login #mit-login-links a:hover {
+        }
+
+        #mit-foot>div {
+            margin-top: 15px;
+        }
+
+        #mit-foot ul {
+            margin: 0px;
+            padding-left: 0px;
+        }
+
+        #mit-foot ul li { 
+            list-style: none;
+        }
+
+        #mit-foot>div:last-child a {
+            position: relative;
+            bottom: 0;
+            padding: 5px;
+            font-size: 105%;
+            font-weight: 800;
+            text-decoration: none;
+            border-bottom: none;
+            color: #933;
+        }
+    </style>
+    <!-- Desktop -->
+    <style media="screen and (min-width: 600px)">
+        .login-bg-image {
+            background-color: transparent !important;
+        }
+        #mit-mast {
+            padding: 0 5%;
+            margin: 0;
+        }
+
+        #mit-mast .mobile-only,
+        #mit-login .mobile-only,
+        #mit-foot .mobile-only {
+            display: none;
+        }
+
+        #mit-mast .desktop-only,
+        #mit-login .desktop-only,
+        #mit-foot .desktop-only {
+            display: block;
+        }
+
+        #mit-mast h1 {
+            font-size: 275%;
+            color: #fff;
+            border: 15px solid #777;
+            margin: 0 0 0 -20px;
+            width: 55%;
+            white-space: nowrap;
+        }
+
+        #mit-mast h1 span {
+            color: #C7ECA2;
+        }
+
+        #mit-mast ul {
+            background: #777;
+            list-style: none;
+            margin: -2em 0 0 0;
+            text-align: right;
+            border-bottom: 5px solid #555;
+        }
+
+        #mit-mast ul li {
+            display: inline;
+        }
+
+        #mit-mast ul li a {
+            padding: 5px;
+            font-size: 105%;
+            font-weight: 800;
+            text-decoration: none;
+            border-bottom: 1px dotted #8DB849;
+            color: #ddd;
+        }
+
+        #mit-mast ul li a:active,
+        #mit-mast ul li a:focus,
+        #mit-mast ul li a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        #mit-login {
+            background: #fbfbfb;
+            border: 1px solid #aaa;
+            border-width: 2px 0 15px 0;
+        }
+
+        #mit-login .beacon-container {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .auth-header {
+            display: none;
+        }
+
+        #mit-login  #okta-sign-in .o-form-head {
+            text-align: left;
+        }
+
+        #mit-login #okta-sign-in.auth-container.main-container {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: #1d1d21;
+        }
+
+        #mit-login #okta-sign-in .infobox {
+            border-top: none;
+            border-right: none;
+            border-bottom: none;
+            border-left: 20px solid #e34843;
+            background: transparent;
+            border-radius: 0;
+            background: #F5FEAB;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+            padding-left: 5px !important;
+        }
+
+        #mit-login #okta-sign-in .o-form-input-error .icon-16,
+        #mit-login #okta-sign-in .infobox .icon {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .help-wrap .infobox.infobox-error:before, 
+        #mit-login #okta-sign-in .infobox-error:before, 
+        #mit-login #okta-sign-in .infobox.infobox-subtle.infobox-error:before {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .help-wrap .infobox.infobox-warning:before, 
+        #mit-login #okta-sign-in .infobox-warning:before, 
+        #mit-login #okta-sign-in .infobox.infobox-subtle.infobox-warning:before {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .o-form-explain.o-form-input-error,
+        #mit-login .okta-form-input-error,
+        #mit-login #okta-sign-in .o-form-explain {
+            padding-left: 0 !important;
+        }
+
+        #mit-login #okta-sign-in.auth-container h2 {
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #3f3f3f;
+            position: absolute;
+            width: max-content;
+        }
+
+        #mit-login #okta-sign-in.auth-container .primary-auth h2::before {
+            content: "Use Kerberos username";
+            color: #933;
+            background: #fbfbfb;
+            font-weight: 800;
+            font-size: 16px;
+            position: absolute;
+            top: 35px;
+            background: #fbfbfb;
+            z-index: 10;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .siw-main-body .identifier-container {
+            text-align: left;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .okta-form-subtitle,
+        #mit-login #okta-sign-in .select-authenticator-authenticate .okta-form-subtitle,
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_verify .okta-form-subtitle,
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .okta-form-subtitle,
+        #mit-login #okta-sign-in .select-authenticator-unlock-account .okta-form-subtitle form,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .okta-form-subtitle {
+            text-align: left !important;
+        }
+
+        #mit-login #okta-sign-in .auth-content {
+            padding: 0;
+        }
+
+        #mit-login #okta-sign-in .auth-content form .o-form-content {
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+
+        #mit-login #okta-sign-in .o-form-label {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        #mit-login #okta-sign-in .o-form-label label {
+            padding: 3px 0;
+        }
+
+        #mit-login #okta-sign-in .o-form-label-top .o-form-input, 
+        #mit-login #okta-sign-in .o-form-label-top .o-form-label,
+        #mit-login #okta-sign-in .o-form-label {
+            width: auto;
+            min-width: 100px;
+        }
+
+        #mit-login #okta-sign-in .o-form label::after {
+            content: ":";
+            position: relative;
+            left: -4px;
+        }
+        
+        #mit-login #okta-sign-in .o-form .custom-checkbox label::after,
+        #mit-login #okta-sign-in .o-form .custom-radio label::after {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .custom-checkbox label, 
+        #mit-login #okta-sign-in .custom-radio label {
+            padding-bottom: 0;
+            font-size: 12px;
+        }
+
+        #mit-login #okta-sign-in .link-button,
+        #mit-login #okta-sign-in.auth-container .button-primary {
+            background: #7DB047;
+            border: 3px solid #fff;
+            border-color: #A7C687 #618938 #618938 #A7C687;
+            color: #fff;
+            padding: 2px 10px;
+            font: 16px system-ui;
+            height: 28px;
+            text-decoration: none;
+        }
+
+        #mit-login #okta-sign-in .link-button:active
+        #mit-login #okta-sign-in .link-button:focus,
+        #mit-login #okta-sign-in .link-button:hover,
+        #mit-login #okta-sign-in.auth-container .button-primary:active,
+        #mit-login #okta-sign-in.auth-container .button-primary:focus,
+        #mit-login #okta-sign-in.auth-container .button-primary:hover {
+            border-color: #eeeee1 #555 #555 #eeeee1;
+            background-color: #A7C687;
+            color: #000;
+        }
+
+        #mit-login #okta-sign-in .challenge-poll--okta_verify a.link-button.link-button-disabled {
+            border: none;
+            background: transparent;
+            color: #1d1d21;
+            padding-left: 0;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        #mit-login .button-link,
+        #mit-login .authenticator-verification-data--okta_email .siw-main-footer a,
+        #mit-login #okta-sign-in .auth-content .auth-footer a {
+            color: #405A25;
+            background: #F2FCE0;
+            text-decoration: none;
+            border-bottom: 1px dotted #8DB849;
+            font-size: 12px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+        }
+
+        #mit-login .siw-main-footer .button-link,
+        #mit-login .siw-main-footer .auth-footer a {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+
+        #mit-login .button-link:active,
+        #mit-login .button-link:focus,
+        #mit-login .button-link:hover,
+        #mit-login .authenticator-verification-data--okta_email .siw-main-footer a:active,
+        #mit-login .authenticator-verification-data--okta_email .siw-main-footer a:focus,
+        #mit-login .authenticator-verification-data--okta_email .siw-main-footer a:hover,
+        #mit-login #okta-sign-in .auth-content .auth-footer a:active,
+        #mit-login #okta-sign-in .auth-content .auth-footer a:focus,
+        #mit-login #okta-sign-in .auth-content .auth-footer a:hover {
+            background-color: #fff;
+            color: #000;
+            border-bottom: 1px solid #000;
+            text-decoration: none;
+        }
+
+        #mit-login #okta-sign-in .password-toggle {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .o-form-fieldset {
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        #mit-login #okta-sign-in.auth-container .o-form-input-name-identifier::after,
+        #mit-login #okta-sign-in.auth-container .o-form-input-name-username::after {
+            content: "@mit.edu";
+            padding-left: 3px;
+            font-size: 12px;
+            position: relative;
+            top: 2px;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix input[type=number], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=password], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=tel], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=text], 
+        #mit-login #okta-sign-in .o-form .input-fix input[type=textbox] {
+            padding: 3px 5px;
+            border: 1px solid #777;
+            font: 11px system-ui;
+            border-color: #777 #555 #555 #777;
+            background: #F6F9EE;
+        }
+
+        #mit-login #okta-sign-in.auth-container .okta-form-input-field {
+            border: none;
+        }
+
+        #mit-login #okta-sign-in.auth-container .okta-form-input-field.focused-input {
+            border: none;
+            box-shadow: none;
+        }
+
+        #mit-login #okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+            height: 21px;
+            display: flex;
+        }
+
+        #mit-login .auth-footer a.js-switchAuthenticator,
+        #mit-login .auth-footer a.js-help,
+        #mit-login .auth-footer a.js-unlock {
+            display: none;
+        }
+
+        #mit-login #okta-sign-in .auth-content .challenge-authenticator--okta_verify form .o-form-content {
+            padding-top: 20px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .challenge-authenticator--okta_verify form .o-form-button-bar {
+            padding-top: 63px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .authenticator-verification-data--phone_number form .o-form-button-bar {
+            padding-top: 93px;
+        }
+
+        #mit-login #okta-login-container .auth-content .auth-content-inner .identify .siw-main-body form {
+            padding-bottom: 32px;
+        }
+
+        #mit-login #mit-login-links {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 0px;
+        }
+
+        #mit-login #mit-login-links a {
+            margin-left: 24px;
+            position: relative;
+            top: -80px;
+            display: none;
+        }
+
+        #mit-login #mit-login-links a {
+            color: #405A25;
+            background: #F2FCE0;
+            text-decoration: none;
+            border-bottom: 1px dotted #8DB849;
+        }
+
+        #mit-login #mit-login-links a:active,
+        #mit-login #mit-login-links a:focus,
+        #mit-login #mit-login-links a:hover {
+            background-color: #fff;
+            color: #000;
+            border-bottom: 1px solid #000;
+            text-decoration: none;
+        }
+
+        div#mit-foot {
+            display: flex;
+            margin: 20px 5%;
+            height: 46px;
+        }
+
+        #mit-foot>div:first-child {
+            flex-grow: 1;
+        }
+
+        #mit-foot>div:first-child a {
+            background-image: url('data:image/png;base64,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RG9jdW1lbnRJRD0iZ2ltcDpkb2NpZDpnaW1wOmY2Njg3NDY5LTJjMmYtNGUwMi1hNTkwLTc2OWQzYjlhN2M4NiIKICAgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmYTk4NzQ5YS0yMmUwLTRlZDgtOTQ0NS0wMzE4NjM4ZWE4MzIiCiAgIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowYTFkMzkxMS04MzRlLTQ1OGItYTQ0OC1iYmNiZjhkMGYwODAiCiAgIGRjOkZvcm1hdD0iaW1hZ2UvcG5nIgogICBHSU1QOkFQST0iMi4wIgogICBHSU1QOlBsYXRmb3JtPSJNYWMgT1MiCiAgIEdJTVA6VGltZVN0YW1wPSIxNzA5MjM3NjgxMjkyMTk1IgogICBHSU1QOlZlcnNpb249IjIuMTAuMzIiCiAgIHRpZmY6T3JpZW50YXRpb249IjEiCiAgIHhtcDpDcmVhdG9yVG9vbD0iR0lNUCAyLjEwIgogICB4bXA6TWV0YWRhdGFEYXRlPSIyMDI0OjAyOjI5VDE1OjE0OjM5LTA1OjAwIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyNDowMjoyOVQxNToxNDozOS0wNTowMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjI2Y2QwZTRmLTgwOTMtNGUxZS1hYzcyLTBmODNkZWQwZDY0YiIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChNYWMgT1MpIgogICAgICBzdEV2dDp3aGVuPSIyMDI0LTAyLTI5VDE1OjE0OjQxLTA1OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PobA+xsAAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAHdElNRQfoAh0UDikpblEjAAASpElEQVR42u2ceZQX1ZXHvxf3FgVHQAcVxH2NC4oyig4qqFFxwYmekYyaccCQ4xJjNHEnGpS44K7gZHAJJ6MEAVHcJeIyqOAWBXFBEEFUBEVpEYHv/FG37Muzqukf3W0Dfj/n9OlfvXr19nr33fvuK0AIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIVYbrJLIJO8BsGMdo/c3s/sL0phQQZY/N7PJyfM7A7irjs/PNbPuBWU4G0CvOqYx0syuKEjjLwB2+AH76nttIYQQov6sWWH8HQF0rGPcViXhHSvIb/2CsKoK0vi4JHzzCtJ4pZa22PMH7KsqDVchhGh4mqkJhBBCSBAKIYQQEoRCCCGEBKEQQgghQSiEEEJIEAohhBAShEIIIYQEoRBCCCFBKIQQQqyOrPkjrfffALxdx7hvlYT/EeVfz2kMpmu4CiGEBGGDYGbjAYyvZxr3a/gIIcSqj0yjQgghJAiFEEIICUIhhBBCglAIIYSQIFztIXkNyaV1/BtcksaECtLoraEmhBArJ2v+iOtu9YxnFaQhhBBCGqEQQgghQSiEEEJIEAohhBAShEIIIYQEoRBCCCFBKIQQQkgQCiGEEBKEQgghhAShEEIIIUEohBBCSBAKIYQQEoRCCCGEBKEQQgghQSiEEEJIEAohhBAShEIIIYQEoRBCCFF/1lQTrH6QbAegVQj6wMzmFMTbMwl6y8yqV7c2MLOXf8RjoRWAdn45w8w+1RvSIO26NYD2AD4ys8m1vHu18ZmZTW/AMu0AoArAEjN7rYnH2hQzW7C6dv4E1p3eJWlUwl4Fz+9dwfOz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');
+            background-size: contain;
+            background-position: left;
+            background-repeat: no-repeat;
+            display: block;
+            color: transparent;
+            height: 100%;
+            width: 300px;
+        }
+
+        #mit-foot>div:last-child {
+            text-align: right;
+        }
+        
+        #mit-foot>div:last-child a {
+            position: relative;
+            bottom: 0;
+            padding: 5px;
+            font-size: 105%;
+            font-weight: 800;
+            text-decoration: none;
+            border-bottom: 1px dotted #8DB849;
+            color: #ddd;
+        }
+
+        #mit-foot>div:last-child a:active,
+        #mit-foot>div:last-child a:focus,
+        #mit-foot>div:last-child a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        #mit-foot ul {
+            margin: 0px;
+        }
+
+        #mit-foot ul li { 
+            list-style: none;
+        }
+
+        #mit-login {
+            background: #fbfbfb;
+            border: 1px solid #aaa;
+            border-width: 2px 0 15px 0;
+        }
+
+        #mit-login #okta-sign-in .auth-content {
+            margin-bottom: 22px;
+        }
+        
+        #mit-login #okta-sign-in .auth-content {
+            padding-left: 0;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .clearfix:after, 
+        #mit-login #okta-sign-in .siw-main-view .clearfix:before {
+            display: none;
+        }
+
+        #mit-login .siw-main-body {
+            flex-grow: 1;
+        }
+
+        #mit-login #okta-sign-in .auth-content .authenticator-verification-data--okta_verify form>div {
+            width: 300px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .authenticator-verification-data--okta_verify .o-form-content {
+            padding-top: 25px;
+            padding-bottom: 0;
+        }
+        
+        #mit-login #okta-sign-in .auth-content .authenticator-verification-data--okta_verify .o-form-button-bar {
+            margin-bottom: 15px;
+            width: 170px;
+        }
+
+        #mit-login #okta-sign-in .auth-content form {
+            padding: 12px 24px;
+            border: 1px solid #ccc;
+            flex-grow: 1;
+            margin: 0;
+            display: flex;
+        }
+        
+        #mit-login #okta-sign-in .auth-content .siw-main-body {
+            flex-grow: 1;
+        }
+
+        #mit-login .o-form-theme {
+            padding-bottom: 0;
+        }
+
+        #mit-login #okta-sign-in .o-form-error-container {
+            width: max-content;
+            position: absolute;
+            top: 5px;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .infobox-error, 
+        #mit-login #okta-sign-in .siw-main-view .infobox-warning {
+            margin-bottom: 0px;
+        }
+
+        #mit-login #okta-sign-in .o-form-button-bar {
+            padding: 40px 0 20px 20px;
+        }
+        
+        #mit-login #okta-sign-in.auth-container h2 {
+            top: -57px;
+            left: -25px;
+        }
+
+        #mit-login #okta-sign-in.auth-container .primary-auth h2::before {
+            left: 6px;
+            padding-left: 5px;
+        }
+
+        #mit-login #okta-sign-in.auth-container.main-container .margin-btm-5 {
+            margin-bottom: 12px;
+        }
+
+        #mit-login #okta-sign-in.auth-container.main-container .margin-btm-30 {
+            margin-bottom: 12px;
+        }
+        #mit-login #okta-sign-in.auth-container .o-form-fieldset-identifier,
+        #mit-login #okta-sign-in.auth-container .o-form-input-name-username {
+            display: flex;
+        }
+
+        #mit-login #okta-sign-in .auth-content .primary-auth .auth-footer::before {
+            content: "Login using your MIT username (the 8 characters before your @mit.edu email address) and your Kerberos password.";
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .auth-footer {
+            border: 1px solid #eee;
+            background: #fff;
+            margin-left: 2px;
+            width: 210px;
+            padding: 12px 5px 12px 12px;
+            line-height: 12px;
+            color: #444;
+            font-size: 12px;
+            height: 85%;    
+        }
+
+        #mit-login .primary-auth .o-form-fieldset-container {
+            padding-top: 5px;
+        }
+
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .o-form-button-bar,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_password .o-form-button-bar {
+            padding-top: 85px;
+        }
+
+        #mit-login #okta-sign-in .authenticator-verify-list .o-form-button-bar {
+            padding-top: 20px;
+        }
+
+        #mit-login #okta-sign-in.auth-container .challenge-authenticator--okta_email .button-primary {
+            width: 280px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .challenge-authenticator--okta_email form .o-form-content {
+            padding-top: 20px;
+        }
+
+        #mit-login #okta-sign-in .auth-content .challenge-authenticator--okta_email form .o-form-button-bar {
+            padding-bottom: 20px;
+        }
+
+        
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .enter-auth-code-instead-link {
+            padding: 0;
+            margin: 0;
+        }
+
+        #mit-login .authenticator-verification-data--okta_verify>div {
+            width: min-content;
+        }
+
+        #mit-login .authenticator-verification-data--okta_verify,
+        #mit-login .authenticator-verification-data--okta_email,
+        #mit-login #okta-sign-in .auth-content .auth-content-inner>div {
+            display: flex;
+        }
+
+        #mit-login #okta-sign-in .select-authenticator-authenticate .o-form-button-bar,
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_verify .o-form-button-bar,
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .o-form-button-bar,
+        #mit-login #okta-sign-in .select-authenticator-unlock-account .o-form-button-bar,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .o-form-button-bar {
+            padding: 0;
+        }
+
+        #mit-login #okta-sign-in .select-authenticator-authenticate .siw-main-body form,
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_verify .siw-main-body form,
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .siw-main-body form,
+        #mit-login #okta-sign-in .select-authenticator-unlock-account .siw-main-body form,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .siw-main-body form {
+            display: block;
+        }
+
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .o-form-error-container {
+            position: relative
+        }
+
+        #mit-login #okta-sign-in .select-authenticator-authenticate .okta-form-subtitle,
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_verify .okta-form-subtitle,
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .okta-form-subtitle,
+        #mit-login #okta-sign-in .select-authenticator-unlock-account .okta-form-subtitle form,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .okta-form-subtitle {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #mit-login #okta-sign-in .select-authenticator-authenticate .o-form-explain,
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_verify .o-form-explain,
+        #mit-login #okta-sign-in .select-authenticator-authenticate--okta_password .o-form-explain,
+        #mit-login #okta-sign-in .select-authenticator-unlock-account .o-form-explain,
+        #mit-login #okta-sign-in .challenge-authenticator--okta_email .o-form-explain {
+            margin: 0;
+            width: max-content;
+        }
+
+        #mit-login #okta-sign-in .siw-main-view .siw-main-body .identifier-container {
+            padding-top: 10px;
+        }
+
+        #mit-login .authenticator-verification-data--okta_email .siw-main-footer {
+            border: 1px solid #eee;
+            background: #fff;
+            color: #444;
+        }
+
+        #mit-login #okta-sign-in .authenticator-verification-data--okta_email .auth-header,
+        #mit-login .authenticator-verification-data--okta_email .auth-header {
+            border-bottom: none !important;
+        }
+
+        #mit-login #okta-sign-in ol, #okta-sign-in ul {
+            list-style: disc;
+            padding-left: 15px;
+        }
+    </style>
+	<!-- Avoid flashing between transitions -->
+    <style> #okta-login-container { visibility: visible; }</style>
+</head>
+<body>
+    <div id="login-bg-image-id" class="login-bg-image tb--background"></div>
+
+    <div id="mit-mast">
+        <h1>Touchstone<span>@</span>MIT</h1>
+        <ul class="desktop-only">
+            <li class="desktop-only">
+                <!-- a href="https://kb.mit.edu" target="_blank">What's New?</a -->
+            </li>
+        </ul>
+    </div>
+
+    <div id="mit-login">
+        <div id="okta-login-container"></div>
+        <div id="mit-login-links">
+            <a id="mit-no-cert-link" href="http://kb.mit.edu/confluence/x/NYAYCg" target="_blank">Why can't I use my MIT certificate?</a>
+        </div>
+
+        <!--
+            "OktaUtil" defines a global OktaUtil object
+            that contains methods used to complete the Okta login flow.
+        -->
+        
+<div id="okta-sign-in" class="auth-container main-container unsupported-message-container" style="display:none">
+    <div id="unsupported-cookie" class="unsupported-message" style="display:none">
+        <h2 class="o-form-head">Cookies are required</h2>
+        <p>Cookies are disabled on your browser. Please enable Cookies and refresh this page.</p>
+        <a class="button button-primary" target="_blank" href=".">
+            Refresh
+        </a>
+    </div>
+</div>
+<div id="inactive-tab-main-div" style="display:none;">
+    <div class="inactive-tab-container">
+        <div class="inactive-tab-header">
+            <img src="https://ok14static.oktacdn.com/fs/bco/1/fs065jv4ixF9ppAs0697" alt="MITprod" class="report-org-logo">
+            <div class="divider"></div>
+        </div>
+        <div class="inactive-tab-content">
+            <h2 class="inactive-tab-content-title">The page has timed out</h2>
+            <p class="inactive-tab-details">If this page does not reload automatically, please refresh your browser.</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" nonce="kfqQniu1RlMTu0Y7zo0zOA">
+  var signInSuccessCallBackFunction;
+  var oktaData = {"redirectUri":"\x2Fapp\x2Fmitprod_touchstoneproxy_1\x2Fexk5nw3v2lQpUYnj8697\x2Fsso\x2Fsaml","isMobileSso":false,"orgSyncToAccountChooserEnabled":true,"fromUri":"","isMobileClientLogin":false,"requestContext":{"app":{"type":"object","value":{"name":"mitprod_touchstoneproxy_1","label":"Touchstone\x20proxy","id":"0oa5nw3v2mcb3UjCE697"}},"authentication":{"request":{},"protocol":{},"client":{"name":"mitprod_touchstoneproxy_1","label":"Touchstone\x20proxy","id":"0oa5nw3v2mcb3UjCE697"},"type":"object","value":{"request":{},"protocol":{}}},"target":{"clientId":"0oa5nw3v2mcb3UjCE697","name":"mitprod_touchstoneproxy_1","label":"Touchstone\x20proxy"}},"countryIso":"US","inactiveTab":{"elementId":"inactive\x2Dtab\x2Dmain\x2Ddiv","avoidPageRefresh":true,"enabled":true},"signIn":{"logoText":"MITprod\x20logo","brandName":"MITprod","language":"en","consent":{"cancel":function(){window.location.href='https\x3A\x2F\x2Fokta.mit.edu\x2Flogin\x2Ftoken\x2Fredirect\x3FstateToken\x3DeyJ6aXAiOiJERUYiLCJhbGlhcyI6ImVuY3J5cHRpb25rZXkiLCJ2ZXIiOiIxIiwib2lkIjoiMDBvdzFkZ3B2a0Q1R2JVWlE2OTYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..J\x2D1aJpbdYgxOgm6e.KKyZodC_3ePHqs27xiRU0\x2D1zkC6J64nRy7o9quNn76GMGlwA3y15LJZ8wjJmnaPflMAQjX9bZTrHzDgJODAeh_8Fz72ls5\x2DhLuEMsJ6AhYhlJQPAtw_HneEnkefSFnelGErW7AgZ_\x2Dh0JdKJ0LAnaH4jnBEAyyl517T4TL3JXX2sRu4XfheIKKDNBFKtlLiB8Z52Ph3D2XljRyQZwU1OH0dhkZC\x2DqUG\x2DLC1kpgTDxyfPvCle8FKf\x2DjzBzs56nfLOlwsFpMfIhM3\x2DYQcQ8myQZQ\x2Df\x2Do2umryaUMCi6JEikXQgxSQ_E3E0nz3BFx4Nso1x3gGwWxTB8\x2D4aQ6MG83Re6DEbP0CEQ9AM2\x2DMlIcLVTD4VG7qyqYRbsf0bMzdcLP1I3ZtQ1hsiU_7QdkHVgAm8kO2w4c0olXKrAueTCXd01PzpcmXExy3ciDZ6Bo\x2Dd78z\x2DcEloj9MEEP8HxPcDm0hr6dKH78Iog8OkH04Elk3W7\x2D_8SAyGXWLB4Iw8cjwkg9SKbEOMVL\x2D8tTyGMz64pEnyPUqjqXirkTjaOPStLTbs2\x2DpxV3w3CPfKVujj_W0zP2_VVI\x2Dq49MwGTkSHvcnyEm_SfZmi_smBXZcwj9TsAbA7jYxN5roQG6FXeOfjegCPnRzlITxKg8aqGnFXka_dsrOIAy9njvKRlUCxMTelvcr1t9lYMhI2mNC8Qe7fiT6lGgRUovKvSBjm0tL_r1d3bp6gFnh39gwqujq4cTGBuHOAdcM6pZ405Of125csUb8jEWjhDAoCmo99HuKeN9efrD1cSrurr4nfxCkFw10tq3bG0u_a1TNNPgqohw\x2Du692\x2DzDjYkokwRM5KI5NwEtTlNnwM5dI4lwBT7QaPEJ7UzRE2nC54XsmFYIYWtklSu6zW0072PWRBNLrOR5DPRB\x2DdzdI1Cdvzzxw2JqNqM3U0NIkLv7MIq0Wg6KpFWNTN2KNtCCPXGQzv9MuIhkIW6h8vwCF6nbVl39B2aMlheE2nX22lQOMWCibSD\x2DeRE80uBvdJY4FDp5sUNNu1Zle1QjSi4o34YEybRHF0mJzjX63anLZqOKQAHdnznfO68P6Y\x2DPI09j4xj3z6\x2DWHzMNp3hkai113AgfjovjAlAMaRXjvpKUWhej5IYJjoBmRe\x2DqAdM7BSolJOLYhgxv103vSXZXXpMiAEyRoxYw2p7UpMrdcyW\x2DqHKnPhTm3U7tvlKjraqcLeV6RscX5BuNq9WjmKz1q9qkphsy_zBJE5fiCKF4Ic3dHTsvPKW0h8rhHhGbfKZU\x2DLzsFH3BxYXHLpOxjXdBTmTm\x2DQsAICMnyYWI1jxeJAU9UBdVR67XHLB0MBTB0ohm\x2DGmbXI9urIytxq0d2Vm8iDdOLe7mDdj6S2\x2DWUsXWQVxWw_n8Dd5o1srPu1nh1pDbMvpwc1zyDIoCvwesyaFlTbhDuA8a9RyWeSlTcQy6VCxYUookFI3Z3oiithMV8TLBed2zDjPVdwDUaDsbnoZNE5K34ARCbx1BUgbyIyy95\x2DGb4kk7RVKCytYCoJrXnO1b1Kb0N\x2DpV2KOEmRQbQzzQdkB1Xaqf9rlStUgLtc0JPlY3M8UCn0XmiGOZYk6Uwv\x2D\x2DQBy8r9d4hEKxZ\x2Dvudi\x2DziIba3_s6RSohIE4GjsdwC3q7rH4i3xzCM5Tkkn39Ay8YCT9zu8vZ9GwbK7Fb9SemXdav_LkDjsnSBfoE0MSxSSjegwLoR8zN2EZd73YPDMWxfOzRaEtO3Ye1RuSinOkUTZj_dbwUNFiURCxI1tB7SWOCz7SqODN9AFqKyL8atKKYXKEnI0MMiLErMNhhtHoem_FoLMWZ3clSwgebJRTJwZtRXc3k_BvvE\x2DYCTf9U5KIVBqBDaXoyzYom61sSvYrthmgbhVBARx3ckWxk9g2PVwjNbK7F0R1UfbW_yx01dltH0dM0\x2DoIdEEUcCu3AQTTmVFgPXN6Hk53uN8of4G0v6Pr7av9Y2ShRhVDmHzBZ1L32D8AlLNIwWcOpO21Zo81VzdgH2vYLuY6lpsVCN16M7286B492iMvaw6lcPeobwjOQl7TTfUsD_Ns8u2fAa9hkSeUFtyAOsv1BAq6Xg9srpTsuJkiymYPK0YMXPK90r93wiSQIVnY1xb4Pi0mrAfSSj5Whx3TwNVPgfY3lT1k_N9xxrQ74BKOhW0bAQLKrfSChJ8SPZca8EMMQ9aCVJ1KnBl\x2DVgW7hRL2vqi8eS57pMswmfujSch8f1VxcJ6tRNaTP2ToQKs_X3kKS6Zvje3McZZG9RaWzEVzTJ9O_4IXh4FZEW1KfGjTW4FdKI7rTwyMl6vGjCJroCs8BeOTX2JXLjt4bHGtiXfYdP\x2DegxTOR9\x2Dihm0E04G1MhNg1KlvUdpekeKy5w81hX3X6iA5rvoVxkhrtPYvEtgup4wXc8jDd7hKFZNc\x2DF52Wk58henH\x2DRshWzVRe8aRCFBH_y1gMhjYkohkz6uCa3rPfGFOmAXvZm7RKo22LNq7eAm5H1fD8F5Av7Ktpstr4CQoVthLt4fLiPRmm4bTu0Oopw1Vnt1MngacURWHUGXO2h5wKDX6kSF\x2DeuJJma81up66qBf4vgMArMcBx\x2DGvhE6IL0ehboX3ey62xce0EjD\x2DszDPbALlq_RY0S1qRZyWtKqXPZ32T\x2DnS1ylSWv7LiELCsxTs_81neHhRpFSqVKDxLX_C9IfUqZnz7nFn8KAdI_1APO\x2DXk1hLnWrQX214kl9avBH0MDQrA2VfHpdnUatN6KRQiERthT2dzldnbBQpigjT\x2D4kow1ndjStK9jBJnYqgKEgDO7rTkzmEfqOe13IHzvzGISjkNJPLSNeIhAIvrt8ndKIBqhGMuMQJjYvy1wfUrIFOd9enYSn5BRnf9spupmp9aCHJFC5S6PDXkhFrnA3Pia5n_LmfKaVGJuRUzj\x2DhsCBUU7W4bBzasQEdZ_eT70cz9Len4cm\x2D_wu1YD9vwZsS56wdof_gED3C7GFaRBNil1nLfJ1DhUUCEwJkRc51zcWUsIiq1Q9ieznwi8zcTmYCeYIAXMI76EVVLvgIKC0f8DBxVz1l6x\x2D7CHUaKay\x2DGu6BZmdXWYbvQOdaz\x2DOFhejKgEBV9XUYYDQtA4HCbnWWK9O4FqiS_NDNrCb__\x2DoVeXmqitZ4jWCqmnoDY7_\x2DUOuVYeoM6WJtP\x2DkWzQ7mGAnF0JciD238zcOXjevXS1b2uUJfgtpiCDGZ_b6gK5LT59LrcUq7VLRlqJFO2iDAONqh3v53ojgo0Gcir9rISp3uhmL6u3um548uEpgCepUJajgtkETQjqURN1DgYvguLl3nebBkg49XAaCjE9Fe0PVJ0QFdI9zPrCCLlDU7WwfvAcRMnM8E4Ycu9Lsoc6i71SVn8vbhnxl7GAunvapSVrM2waAbCvKTwm\x2DT4KXxhBLPLaDXtf59xlop5rITv\x2DZqkZgMlQ5RaIo8ubk6OaTmwKOa9MPTckqosSrPSbKGJ5jfNMA1Y5j4ANqM8Gqo4k7hY6yFdCgVfwxVlJAylFxZm54\x2D2YSp1ydZsy4E\x2D_n3aaM0YyakYGHXZwKYbAdGzUK\x2DVkkvCnZSMaV371Fambzbk79T4yx_\x2DWLdCNHOc1nTkvT9JBcknboBIpT9KqxHtRhruFTXFLOSf2jUKEqTz3NwqGdslw_15qJBU0vTATw0Hbsrw1GSo7RDw20VKEOnNsceBIPn0eZIDI\x2DSHUz8PNR8P87WXWFAn8KyGUuGFasuYmUWU0xinjkYCuoiNJ6AovrqmeBEvL1Rr9RqEFJs9DoKFdahejv4s9ZyhQyxD5hsdFqzlQpDiZemtkJqU4Kc6yuBEvYJM7jPrWb5elgWMwGDGSDENFSIOEhJCeHJ9CWh1O8zYMBfvt63XkeLlylrUD_y\x2DWbqVEIRBAxTVUg1kTX2QPBTZuf1YYJxcnQ25T5aKJEy\x2DDNq0dsXlJjhYUG4CUR0_k31Ztox6gBKIU81TqvVEAwMr9sjGgwn8Sk49L5mLXI9jUvKqfCentev3se85JKwkbvgQWkPfuLO\x2DDWFc5h9UIr4KUbKNrOgghkK2bvsxhxoSD6sJuKs66TEPbXKE\x2D57i7\x2DE_a0MLRsyQxMeW\x2DPdinbgkBfxhIhTC2aTdh8R2JEQnLzgqTC8lZZPFflfTh8WV5mE1wuNSDnYTkMOhp_Vo6engPOEH06GJSYL2TkVh8QmWsMSk9GUAVM6e89hBB3jIHH4hNy_FZ62sVVEnZKrQtehTBQJIi\x2D9k94hqkdOZfQ0\x2DB2cJWwjbUqGKEtS_GebjaP0yWr8qytwpELcaXk8_GBPv9EBYqu7xgrksL16stjnaHbYwfhEPPxcXJtWeCfyFF4WyA7pGJhCrKcHPwzZrMNl2b82Y7YOEec1fFm9S0KoWvXVwXDWmcRVhuoEXxs0Hk1SyAIXnOBVwXmqYogyrtzoITdTddzqLtvAy5hfbMJiYMSCs9s\x2DHaXSP5Tq9jmZNRK6SXrf_xj2Tenszkpf3Pe28jsKFDVTKZFTbGoOwDMc9Vc_nM29rHNMN8Wf26MwP6\x2DRZhj2ia65fchCY71YKxiKbK9YHrRGGi1opP_Sff7XUHJ0naYeMd_RUB7S5Y5oQmvlawRTSfkUv_CQ\x2Dd9MRIpxcQe2jBT4qzvsiUeyKWRhMsAak9HdRY1lJu\x2DIAF4LZnDhPMwOM\x2DIaR7IG0oN44luqX5mUTtAX0d0J2HWavkHGFoTsvJOfxJesO9Oi1tHofTvO9yisAxWB2446cjZVW9BxSSrT9k0xWppBewpPdwl78.9L7kbUd9HjMNehKBZ7o__A';}},"i18n":{"en":{"mfa.challenge.password.placeholder":"Password","help":"Help","password.forgot.email.or.username.tooltip":"Email\x20or\x20Username","needhelp":"Need\x20help\x20signing\x20in\x3F","primaryauth.username.placeholder":"Username","password.forgot.email.or.username.placeholder":"Email\x20or\x20Username","account.unlock.email.or.username.tooltip":"Email\x20or\x20Username","unlockaccount":"Unlock\x20account\x3F","account.unlock.email.or.username.placeholder":"Email\x20or\x20Username","primaryauth.password.placeholder":"Password","primaryauth.title":"Sign\x20In","forgotpassword":"Forgot\x20password\x3F"}},"features":{"hideSignOutLinkInMFA":false,"emailRecovery":true,"deviceFingerprinting":true,"showIdentifier":true,"consent":true,"useDeviceFingerprintForSecurityImage":true,"customExpiredPassword":true,"router":true,"showPasswordToggleOnSignInPage":true,"securityImage":true,"autoPush":true,"smsRecovery":false,"idpDiscovery":false,"selfServiceUnlock":true,"webauthn":true,"passwordlessAuth":true,"showPasswordRequirementsAsHtmlList":true,"registration":false,"rememberMe":true,"callRecovery":false,"multiOptionalFactorEnroll":true},"baseUrl":"https\x3A\x2F\x2Fokta.mit.edu","helpSupportNumber":"6172531101","assets":{"baseUrl":"https\x3A\x2F\x2Fok14static.oktacdn.com\x2Fassets\x2Fjs\x2Fsdk\x2Fokta\x2Dsignin\x2Dwidget\x2F7.30.1"},"customButtons":[],"idpDiscovery":{"requestContext":"eyJ6aXAiOiJERUYiLCJhbGlhcyI6ImVuY3J5cHRpb25rZXkiLCJ2ZXIiOiIxIiwib2lkIjoiMDBvdzFkZ3B2a0Q1R2JVWlE2OTYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..J\x2D1aJpbdYgxOgm6e.KKyZodC_3ePHqs27xiRU0\x2D1zkC6J64nRy7o9quNn76GMGlwA3y15LJZ8wjJmnaPflMAQjX9bZTrHzDgJODAeh_8Fz72ls5\x2DhLuEMsJ6AhYhlJQPAtw_HneEnkefSFnelGErW7AgZ_\x2Dh0JdKJ0LAnaH4jnBEAyyl517T4TL3JXX2sRu4XfheIKKDNBFKtlLiB8Z52Ph3D2XljRyQZwU1OH0dhkZC\x2DqUG\x2DLC1kpgTDxyfPvCle8FKf\x2DjzBzs56nfLOlwsFpMfIhM3\x2DYQcQ8myQZQ\x2Df\x2Do2umryaUMCi6JEikXQgxSQ_E3E0nz3BFx4Nso1x3gGwWxTB8\x2D4aQ6MG83Re6DEbP0CEQ9AM2\x2DMlIcLVTD4VG7qyqYRbsf0bMzdcLP1I3ZtQ1hsiU_7QdkHVgAm8kO2w4c0olXKrAueTCXd01PzpcmXExy3ciDZ6Bo\x2Dd78z\x2DcEloj9MEEP8HxPcDm0hr6dKH78Iog8OkH04Elk3W7\x2D_8SAyGXWLB4Iw8cjwkg9SKbEOMVL\x2D8tTyGMz64pEnyPUqjqXirkTjaOPStLTbs2\x2DpxV3w3CPfKVujj_W0zP2_VVI\x2Dq49MwGTkSHvcnyEm_SfZmi_smBXZcwj9TsAbA7jYxN5roQG6FXeOfjegCPnRzlITxKg8aqGnFXka_dsrOIAy9njvKRlUCxMTelvcr1t9lYMhI2mNC8Qe7fiT6lGgRUovKvSBjm0tL_r1d3bp6gFnh39gwqujq4cTGBuHOAdcM6pZ405Of125csUb8jEWjhDAoCmo99HuKeN9efrD1cSrurr4nfxCkFw10tq3bG0u_a1TNNPgqohw\x2Du692\x2DzDjYkokwRM5KI5NwEtTlNnwM5dI4lwBT7QaPEJ7UzRE2nC54XsmFYIYWtklSu6zW0072PWRBNLrOR5DPRB\x2DdzdI1Cdvzzxw2JqNqM3U0NIkLv7MIq0Wg6KpFWNTN2KNtCCPXGQzv9MuIhkIW6h8vwCF6nbVl39B2aMlheE2nX22lQOMWCibSD\x2DeRE80uBvdJY4FDp5sUNNu1Zle1QjSi4o34YEybRHF0mJzjX63anLZqOKQAHdnznfO68P6Y\x2DPI09j4xj3z6\x2DWHzMNp3hkai113AgfjovjAlAMaRXjvpKUWhej5IYJjoBmRe\x2DqAdM7BSolJOLYhgxv103vSXZXXpMiAEyRoxYw2p7UpMrdcyW\x2DqHKnPhTm3U7tvlKjraqcLeV6RscX5BuNq9WjmKz1q9qkphsy_zBJE5fiCKF4Ic3dHTsvPKW0h8rhHhGbfKZU\x2DLzsFH3BxYXHLpOxjXdBTmTm\x2DQsAICMnyYWI1jxeJAU9UBdVR67XHLB0MBTB0ohm\x2DGmbXI9urIytxq0d2Vm8iDdOLe7mDdj6S2\x2DWUsXWQVxWw_n8Dd5o1srPu1nh1pDbMvpwc1zyDIoCvwesyaFlTbhDuA8a9RyWeSlTcQy6VCxYUookFI3Z3oiithMV8TLBed2zDjPVdwDUaDsbnoZNE5K34ARCbx1BUgbyIyy95\x2DGb4kk7RVKCytYCoJrXnO1b1Kb0N\x2DpV2KOEmRQbQzzQdkB1Xaqf9rlStUgLtc0JPlY3M8UCn0XmiGOZYk6Uwv\x2D\x2DQBy8r9d4hEKxZ\x2Dvudi\x2DziIba3_s6RSohIE4GjsdwC3q7rH4i3xzCM5Tkkn39Ay8YCT9zu8vZ9GwbK7Fb9SemXdav_LkDjsnSBfoE0MSxSSjegwLoR8zN2EZd73YPDMWxfOzRaEtO3Ye1RuSinOkUTZj_dbwUNFiURCxI1tB7SWOCz7SqODN9AFqKyL8atKKYXKEnI0MMiLErMNhhtHoem_FoLMWZ3clSwgebJRTJwZtRXc3k_BvvE\x2DYCTf9U5KIVBqBDaXoyzYom61sSvYrthmgbhVBARx3ckWxk9g2PVwjNbK7F0R1UfbW_yx01dltH0dM0\x2DoIdEEUcCu3AQTTmVFgPXN6Hk53uN8of4G0v6Pr7av9Y2ShRhVDmHzBZ1L32D8AlLNIwWcOpO21Zo81VzdgH2vYLuY6lpsVCN16M7286B492iMvaw6lcPeobwjOQl7TTfUsD_Ns8u2fAa9hkSeUFtyAOsv1BAq6Xg9srpTsuJkiymYPK0YMXPK90r93wiSQIVnY1xb4Pi0mrAfSSj5Whx3TwNVPgfY3lT1k_N9xxrQ74BKOhW0bAQLKrfSChJ8SPZca8EMMQ9aCVJ1KnBl\x2DVgW7hRL2vqi8eS57pMswmfujSch8f1VxcJ6tRNaTP2ToQKs_X3kKS6Zvje3McZZG9RaWzEVzTJ9O_4IXh4FZEW1KfGjTW4FdKI7rTwyMl6vGjCJroCs8BeOTX2JXLjt4bHGtiXfYdP\x2DegxTOR9\x2Dihm0E04G1MhNg1KlvUdpekeKy5w81hX3X6iA5rvoVxkhrtPYvEtgup4wXc8jDd7hKFZNc\x2DF52Wk58henH\x2DRshWzVRe8aRCFBH_y1gMhjYkohkz6uCa3rPfGFOmAXvZm7RKo22LNq7eAm5H1fD8F5Av7Ktpstr4CQoVthLt4fLiPRmm4bTu0Oopw1Vnt1MngacURWHUGXO2h5wKDX6kSF\x2DeuJJma81up66qBf4vgMArMcBx\x2DGvhE6IL0ehboX3ey62xce0EjD\x2DszDPbALlq_RY0S1qRZyWtKqXPZ32T\x2DnS1ylSWv7LiELCsxTs_81neHhRpFSqVKDxLX_C9IfUqZnz7nFn8KAdI_1APO\x2DXk1hLnWrQX214kl9avBH0MDQrA2VfHpdnUatN6KRQiERthT2dzldnbBQpigjT\x2D4kow1ndjStK9jBJnYqgKEgDO7rTkzmEfqOe13IHzvzGISjkNJPLSNeIhAIvrt8ndKIBqhGMuMQJjYvy1wfUrIFOd9enYSn5BRnf9spupmp9aCHJFC5S6PDXkhFrnA3Pia5n_LmfKaVGJuRUzj\x2DhsCBUU7W4bBzasQEdZ_eT70cz9Len4cm\x2D_wu1YD9vwZsS56wdof_gED3C7GFaRBNil1nLfJ1DhUUCEwJkRc51zcWUsIiq1Q9ieznwi8zcTmYCeYIAXMI76EVVLvgIKC0f8DBxVz1l6x\x2D7CHUaKay\x2DGu6BZmdXWYbvQOdaz\x2DOFhejKgEBV9XUYYDQtA4HCbnWWK9O4FqiS_NDNrCb__\x2DoVeXmqitZ4jWCqmnoDY7_\x2DUOuVYeoM6WJtP\x2DkWzQ7mGAnF0JciD238zcOXjevXS1b2uUJfgtpiCDGZ_b6gK5LT59LrcUq7VLRlqJFO2iDAONqh3v53ojgo0Gcir9rISp3uhmL6u3um548uEpgCepUJajgtkETQjqURN1DgYvguLl3nebBkg49XAaCjE9Fe0PVJ0QFdI9zPrCCLlDU7WwfvAcRMnM8E4Ycu9Lsoc6i71SVn8vbhnxl7GAunvapSVrM2waAbCvKTwm\x2DT4KXxhBLPLaDXtf59xlop5rITv\x2DZqkZgMlQ5RaIo8ubk6OaTmwKOa9MPTckqosSrPSbKGJ5jfNMA1Y5j4ANqM8Gqo4k7hY6yFdCgVfwxVlJAylFxZm54\x2D2YSp1ydZsy4E\x2D_n3aaM0YyakYGHXZwKYbAdGzUK\x2DVkkvCnZSMaV371Fambzbk79T4yx_\x2DWLdCNHOc1nTkvT9JBcknboBIpT9KqxHtRhruFTXFLOSf2jUKEqTz3NwqGdslw_15qJBU0vTATw0Hbsrw1GSo7RDw20VKEOnNsceBIPn0eZIDI\x2DSHUz8PNR8P87WXWFAn8KyGUuGFasuYmUWU0xinjkYCuoiNJ6AovrqmeBEvL1Rr9RqEFJs9DoKFdahejv4s9ZyhQyxD5hsdFqzlQpDiZemtkJqU4Kc6yuBEvYJM7jPrWb5elgWMwGDGSDENFSIOEhJCeHJ9CWh1O8zYMBfvt63XkeLlylrUD_y\x2DWbqVEIRBAxTVUg1kTX2QPBTZuf1YYJxcnQ25T5aKJEy\x2DDNq0dsXlJjhYUG4CUR0_k31Ztox6gBKIU81TqvVEAwMr9sjGgwn8Sk49L5mLXI9jUvKqfCentev3se85JKwkbvgQWkPfuLO\x2DDWFc5h9UIr4KUbKNrOgghkK2bvsxhxoSD6sJuKs66TEPbXKE\x2D57i7\x2DE_a0MLRsyQxMeW\x2DPdinbgkBfxhIhTC2aTdh8R2JEQnLzgqTC8lZZPFflfTh8WV5mE1wuNSDnYTkMOhp_Vo6engPOEH06GJSYL2TkVh8QmWsMSk9GUAVM6e89hBB3jIHH4hNy_FZ62sVVEnZKrQtehTBQJIi\x2D9k94hqkdOZfQ0\x2DB2cJWwjbUqGKEtS_GebjaP0yWr8qytwpELcaXk8_GBPv9EBYqu7xgrksL16stjnaHbYwfhEPPxcXJtWeCfyFF4WyA7pGJhCrKcHPwzZrMNl2b82Y7YOEec1fFm9S0KoWvXVwXDWmcRVhuoEXxs0Hk1SyAIXnOBVwXmqYogyrtzoITdTddzqLtvAy5hfbMJiYMSCs9s\x2DHaXSP5Tq9jmZNRK6SXrf_xj2Tenszkpf3Pe28jsKFDVTKZFTbGoOwDMc9Vc_nM29rHNMN8Wf26MwP6\x2DRZhj2ia65fchCY71YKxiKbK9YHrRGGi1opP_Sff7XUHJ0naYeMd_RUB7S5Y5oQmvlawRTSfkUv_CQ\x2Dd9MRIpxcQe2jBT4qzvsiUeyKWRhMsAak9HdRY1lJu\x2DIAF4LZnDhPMwOM\x2DIaR7IG0oN44luqX5mUTtAX0d0J2HWavkHGFoTsvJOfxJesO9Oi1tHofTvO9yisAxWB2446cjZVW9BxSSrT9k0xWppBewpPdwl78.9L7kbUd9HjMNehKBZ7o__A"},"logo":"https\x3A\x2F\x2Fok14static.oktacdn.com\x2Ffs\x2Fbco\x2F1\x2Ffs065jv4ixF9ppAs0697","stateToken":"eyJ6aXAiOiJERUYiLCJhbGlhcyI6ImVuY3J5cHRpb25rZXkiLCJ2ZXIiOiIxIiwib2lkIjoiMDBvdzFkZ3B2a0Q1R2JVWlE2OTYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..J\x2D1aJpbdYgxOgm6e.KKyZodC_3ePHqs27xiRU0\x2D1zkC6J64nRy7o9quNn76GMGlwA3y15LJZ8wjJmnaPflMAQjX9bZTrHzDgJODAeh_8Fz72ls5\x2DhLuEMsJ6AhYhlJQPAtw_HneEnkefSFnelGErW7AgZ_\x2Dh0JdKJ0LAnaH4jnBEAyyl517T4TL3JXX2sRu4XfheIKKDNBFKtlLiB8Z52Ph3D2XljRyQZwU1OH0dhkZC\x2DqUG\x2DLC1kpgTDxyfPvCle8FKf\x2DjzBzs56nfLOlwsFpMfIhM3\x2DYQcQ8myQZQ\x2Df\x2Do2umryaUMCi6JEikXQgxSQ_E3E0nz3BFx4Nso1x3gGwWxTB8\x2D4aQ6MG83Re6DEbP0CEQ9AM2\x2DMlIcLVTD4VG7qyqYRbsf0bMzdcLP1I3ZtQ1hsiU_7QdkHVgAm8kO2w4c0olXKrAueTCXd01PzpcmXExy3ciDZ6Bo\x2Dd78z\x2DcEloj9MEEP8HxPcDm0hr6dKH78Iog8OkH04Elk3W7\x2D_8SAyGXWLB4Iw8cjwkg9SKbEOMVL\x2D8tTyGMz64pEnyPUqjqXirkTjaOPStLTbs2\x2DpxV3w3CPfKVujj_W0zP2_VVI\x2Dq49MwGTkSHvcnyEm_SfZmi_smBXZcwj9TsAbA7jYxN5roQG6FXeOfjegCPnRzlITxKg8aqGnFXka_dsrOIAy9njvKRlUCxMTelvcr1t9lYMhI2mNC8Qe7fiT6lGgRUovKvSBjm0tL_r1d3bp6gFnh39gwqujq4cTGBuHOAdcM6pZ405Of125csUb8jEWjhDAoCmo99HuKeN9efrD1cSrurr4nfxCkFw10tq3bG0u_a1TNNPgqohw\x2Du692\x2DzDjYkokwRM5KI5NwEtTlNnwM5dI4lwBT7QaPEJ7UzRE2nC54XsmFYIYWtklSu6zW0072PWRBNLrOR5DPRB\x2DdzdI1Cdvzzxw2JqNqM3U0NIkLv7MIq0Wg6KpFWNTN2KNtCCPXGQzv9MuIhkIW6h8vwCF6nbVl39B2aMlheE2nX22lQOMWCibSD\x2DeRE80uBvdJY4FDp5sUNNu1Zle1QjSi4o34YEybRHF0mJzjX63anLZqOKQAHdnznfO68P6Y\x2DPI09j4xj3z6\x2DWHzMNp3hkai113AgfjovjAlAMaRXjvpKUWhej5IYJjoBmRe\x2DqAdM7BSolJOLYhgxv103vSXZXXpMiAEyRoxYw2p7UpMrdcyW\x2DqHKnPhTm3U7tvlKjraqcLeV6RscX5BuNq9WjmKz1q9qkphsy_zBJE5fiCKF4Ic3dHTsvPKW0h8rhHhGbfKZU\x2DLzsFH3BxYXHLpOxjXdBTmTm\x2DQsAICMnyYWI1jxeJAU9UBdVR67XHLB0MBTB0ohm\x2DGmbXI9urIytxq0d2Vm8iDdOLe7mDdj6S2\x2DWUsXWQVxWw_n8Dd5o1srPu1nh1pDbMvpwc1zyDIoCvwesyaFlTbhDuA8a9RyWeSlTcQy6VCxYUookFI3Z3oiithMV8TLBed2zDjPVdwDUaDsbnoZNE5K34ARCbx1BUgbyIyy95\x2DGb4kk7RVKCytYCoJrXnO1b1Kb0N\x2DpV2KOEmRQbQzzQdkB1Xaqf9rlStUgLtc0JPlY3M8UCn0XmiGOZYk6Uwv\x2D\x2DQBy8r9d4hEKxZ\x2Dvudi\x2DziIba3_s6RSohIE4GjsdwC3q7rH4i3xzCM5Tkkn39Ay8YCT9zu8vZ9GwbK7Fb9SemXdav_LkDjsnSBfoE0MSxSSjegwLoR8zN2EZd73YPDMWxfOzRaEtO3Ye1RuSinOkUTZj_dbwUNFiURCxI1tB7SWOCz7SqODN9AFqKyL8atKKYXKEnI0MMiLErMNhhtHoem_FoLMWZ3clSwgebJRTJwZtRXc3k_BvvE\x2DYCTf9U5KIVBqBDaXoyzYom61sSvYrthmgbhVBARx3ckWxk9g2PVwjNbK7F0R1UfbW_yx01dltH0dM0\x2DoIdEEUcCu3AQTTmVFgPXN6Hk53uN8of4G0v6Pr7av9Y2ShRhVDmHzBZ1L32D8AlLNIwWcOpO21Zo81VzdgH2vYLuY6lpsVCN16M7286B492iMvaw6lcPeobwjOQl7TTfUsD_Ns8u2fAa9hkSeUFtyAOsv1BAq6Xg9srpTsuJkiymYPK0YMXPK90r93wiSQIVnY1xb4Pi0mrAfSSj5Whx3TwNVPgfY3lT1k_N9xxrQ74BKOhW0bAQLKrfSChJ8SPZca8EMMQ9aCVJ1KnBl\x2DVgW7hRL2vqi8eS57pMswmfujSch8f1VxcJ6tRNaTP2ToQKs_X3kKS6Zvje3McZZG9RaWzEVzTJ9O_4IXh4FZEW1KfGjTW4FdKI7rTwyMl6vGjCJroCs8BeOTX2JXLjt4bHGtiXfYdP\x2DegxTOR9\x2Dihm0E04G1MhNg1KlvUdpekeKy5w81hX3X6iA5rvoVxkhrtPYvEtgup4wXc8jDd7hKFZNc\x2DF52Wk58henH\x2DRshWzVRe8aRCFBH_y1gMhjYkohkz6uCa3rPfGFOmAXvZm7RKo22LNq7eAm5H1fD8F5Av7Ktpstr4CQoVthLt4fLiPRmm4bTu0Oopw1Vnt1MngacURWHUGXO2h5wKDX6kSF\x2DeuJJma81up66qBf4vgMArMcBx\x2DGvhE6IL0ehboX3ey62xce0EjD\x2DszDPbALlq_RY0S1qRZyWtKqXPZ32T\x2DnS1ylSWv7LiELCsxTs_81neHhRpFSqVKDxLX_C9IfUqZnz7nFn8KAdI_1APO\x2DXk1hLnWrQX214kl9avBH0MDQrA2VfHpdnUatN6KRQiERthT2dzldnbBQpigjT\x2D4kow1ndjStK9jBJnYqgKEgDO7rTkzmEfqOe13IHzvzGISjkNJPLSNeIhAIvrt8ndKIBqhGMuMQJjYvy1wfUrIFOd9enYSn5BRnf9spupmp9aCHJFC5S6PDXkhFrnA3Pia5n_LmfKaVGJuRUzj\x2DhsCBUU7W4bBzasQEdZ_eT70cz9Len4cm\x2D_wu1YD9vwZsS56wdof_gED3C7GFaRBNil1nLfJ1DhUUCEwJkRc51zcWUsIiq1Q9ieznwi8zcTmYCeYIAXMI76EVVLvgIKC0f8DBxVz1l6x\x2D7CHUaKay\x2DGu6BZmdXWYbvQOdaz\x2DOFhejKgEBV9XUYYDQtA4HCbnWWK9O4FqiS_NDNrCb__\x2DoVeXmqitZ4jWCqmnoDY7_\x2DUOuVYeoM6WJtP\x2DkWzQ7mGAnF0JciD238zcOXjevXS1b2uUJfgtpiCDGZ_b6gK5LT59LrcUq7VLRlqJFO2iDAONqh3v53ojgo0Gcir9rISp3uhmL6u3um548uEpgCepUJajgtkETQjqURN1DgYvguLl3nebBkg49XAaCjE9Fe0PVJ0QFdI9zPrCCLlDU7WwfvAcRMnM8E4Ycu9Lsoc6i71SVn8vbhnxl7GAunvapSVrM2waAbCvKTwm\x2DT4KXxhBLPLaDXtf59xlop5rITv\x2DZqkZgMlQ5RaIo8ubk6OaTmwKOa9MPTckqosSrPSbKGJ5jfNMA1Y5j4ANqM8Gqo4k7hY6yFdCgVfwxVlJAylFxZm54\x2D2YSp1ydZsy4E\x2D_n3aaM0YyakYGHXZwKYbAdGzUK\x2DVkkvCnZSMaV371Fambzbk79T4yx_\x2DWLdCNHOc1nTkvT9JBcknboBIpT9KqxHtRhruFTXFLOSf2jUKEqTz3NwqGdslw_15qJBU0vTATw0Hbsrw1GSo7RDw20VKEOnNsceBIPn0eZIDI\x2DSHUz8PNR8P87WXWFAn8KyGUuGFasuYmUWU0xinjkYCuoiNJ6AovrqmeBEvL1Rr9RqEFJs9DoKFdahejv4s9ZyhQyxD5hsdFqzlQpDiZemtkJqU4Kc6yuBEvYJM7jPrWb5elgWMwGDGSDENFSIOEhJCeHJ9CWh1O8zYMBfvt63XkeLlylrUD_y\x2DWbqVEIRBAxTVUg1kTX2QPBTZuf1YYJxcnQ25T5aKJEy\x2DDNq0dsXlJjhYUG4CUR0_k31Ztox6gBKIU81TqvVEAwMr9sjGgwn8Sk49L5mLXI9jUvKqfCentev3se85JKwkbvgQWkPfuLO\x2DDWFc5h9UIr4KUbKNrOgghkK2bvsxhxoSD6sJuKs66TEPbXKE\x2D57i7\x2DE_a0MLRsyQxMeW\x2DPdinbgkBfxhIhTC2aTdh8R2JEQnLzgqTC8lZZPFflfTh8WV5mE1wuNSDnYTkMOhp_Vo6engPOEH06GJSYL2TkVh8QmWsMSk9GUAVM6e89hBB3jIHH4hNy_FZ62sVVEnZKrQtehTBQJIi\x2D9k94hqkdOZfQ0\x2DB2cJWwjbUqGKEtS_GebjaP0yWr8qytwpELcaXk8_GBPv9EBYqu7xgrksL16stjnaHbYwfhEPPxcXJtWeCfyFF4WyA7pGJhCrKcHPwzZrMNl2b82Y7YOEec1fFm9S0KoWvXVwXDWmcRVhuoEXxs0Hk1SyAIXnOBVwXmqYogyrtzoITdTddzqLtvAy5hfbMJiYMSCs9s\x2DHaXSP5Tq9jmZNRK6SXrf_xj2Tenszkpf3Pe28jsKFDVTKZFTbGoOwDMc9Vc_nM29rHNMN8Wf26MwP6\x2DRZhj2ia65fchCY71YKxiKbK9YHrRGGi1opP_Sff7XUHJ0naYeMd_RUB7S5Y5oQmvlawRTSfkUv_CQ\x2Dd9MRIpxcQe2jBT4qzvsiUeyKWRhMsAak9HdRY1lJu\x2DIAF4LZnDhPMwOM\x2DIaR7IG0oN44luqX5mUTtAX0d0J2HWavkHGFoTsvJOfxJesO9Oi1tHofTvO9yisAxWB2446cjZVW9BxSSrT9k0xWppBewpPdwl78.9L7kbUd9HjMNehKBZ7o__A","helpLinks":{"help":"","forgotPassword":"https\x3A\x2F\x2Fca.mit.edu\x2Fca\x2Fcpw","unlock":"","custom":[]},"piv":{}},"accountChooserDiscoveryUrl":"https\x3A\x2F\x2Flogin.okta.com\x2Fdiscovery\x2Fiframe.html"};
+
+  var runLoginPage = function(fn) {
+    var mainScript = document.createElement('script');
+    mainScript.src = "https://ok14static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.58de3be0c9b511a0fdfd7ea4f69b56fc.js";
+    mainScript.integrity = "sha384-cJ4LGViZBmIttMPH+ao2RyPuN5BztKWYWIa4smbm56r1cUhkU/Dr6vTS3UoPbKTI";
+    mainScript.crossOrigin = "anonymous";
+    document.getElementsByTagName('head')[0].appendChild(mainScript);
+    fn && mainScript.addEventListener('load', function () { setTimeout(fn, 1) });
+  };
+
+  var OktaUtil = {
+    _addClass: function(el, className) {
+      if(el) {
+        var elementClasses = el.className.split(" ");
+        if (elementClasses.indexOf(className) == -1) {
+          el.className += " " + className;
+        }
+      }
+    },
+
+    _removeElement: function(el) {
+      if(el) {
+        el.parentNode.removeChild(el);
+      }
+    },
+
+    _hideElement: function(el) {
+      if(el) {
+        el.style.display = 'none';
+      }
+    },
+
+    _isDocumentVisible: function() {
+      return document.visibilityState === 'visible';
+    },
+
+    addLoginContainerClass: function () {
+      this._addClass(document.getElementById('okta-login-container'), 'login-container');
+    },
+
+    showUnsupportedCookieWarning: function () {
+      document.getElementById('okta-sign-in').removeAttribute('style');
+      document.getElementById('unsupported-cookie').removeAttribute('style');
+    },
+
+    removeUnsupportedCookieWarning: function () {
+      this._removeElement(document.getElementById('okta-sign-in'));
+    },
+
+    hideOktaLoginContainer: function () {
+      this._hideElement(document.getElementById('okta-login-container'));
+    },
+
+    isChromeOs:  function () {
+      return /\bCrOS\b/.test(navigator.userAgent);
+    },
+
+    addChromeOSScript: function() {
+      var chromeOSScript = document.createElement('script');
+      chromeOSScript.src = "/js/google/users-1.0.js";
+      document.getElementsByTagName('head')[0].appendChild(chromeOSScript);
+    },
+
+    getSignInWidgetConfig: function () {
+        if (oktaData.inactiveTab && oktaData.inactiveTab.enabled && !this._isDocumentVisible() && !oktaData.inactiveTab.avoidPageRefresh) {
+            // Show a loading state and wait for the visibility event
+            this.hideOktaLoginContainer();
+            // remove stateToken so SIW does not attempt a login flow
+            oktaData.signIn.stateToken = undefined;
+        }
+        return oktaData.signIn;
+    },
+
+    completeLogin: function (res) {
+      signInSuccessCallBackFunction(res);
+    },
+
+    getRequestContext: function () {
+      return oktaData.requestContext;
+    },
+
+    setRedirectUri: function (uri) {
+      oktaData.redirectUri = uri;
+    },
+
+    init: function () {
+      if (!navigator.cookieEnabled) {
+        this.showUnsupportedCookieWarning();
+        this.hideOktaLoginContainer();
+      } else {
+        this.removeUnsupportedCookieWarning();
+
+        if (oktaData.inactiveTab && oktaData.inactiveTab.enabled && !this._isDocumentVisible()) {
+          try {
+            oktaData.inactiveTab.renderFnBackup = OktaSignIn.prototype.renderEl;
+          } catch (err) {
+            // no op - graceful handling OktaSignIn undefined case
+          }
+
+          // pause render sign-in widget when browser tab is inactive
+          if (!oktaData.inactiveTab.renderFnBackup) {
+            // for older SIW, renderFnBackup is undefined, fallback to full page reload
+            oktaData.inactiveTab.fallbackFullPageReload = true;
+            // Show a loading state and wait for the visibility event
+            this.hideOktaLoginContainer();
+            // remove stateToken so SIW does not attempt a login flow
+            oktaData.signIn.stateToken = undefined;
+          } else {
+            // for newer SIW, override renderEl function so SIW does not attempt a login flow
+            OktaSignIn.prototype.renderEl = function () {
+              oktaData.inactiveTab.renderArgsBackup = arguments;
+              oktaData.inactiveTab.signInInstance = this;
+              try {
+                return new Promise(function (resolve, reject) {
+                  oktaData.inactiveTab.renderResolve = resolve;
+                  oktaData.inactiveTab.renderReject = reject;
+                });
+              } catch (err) {
+                // return nothing if promise is not supported, since promise chaining won't work anyway
+              }
+            }
+          }
+
+          // event handler to resume render sign-in widget
+          document.addEventListener('visibilitychange', function checkVisibilityAndCallSuccess() {
+            if (document.visibilityState === 'visible') {
+              try {
+                document.removeEventListener('visibilitychange', checkVisibilityAndCallSuccess);
+                const inactiveTabDiv = document.getElementById(oktaData.inactiveTab.elementId);
+                inactiveTabDiv.style.display = 'none';
+
+                // resume render sign-in widget
+                if (oktaData.inactiveTab.renderFnBackup && oktaData.inactiveTab.renderArgsBackup) {
+                  OktaSignIn.prototype.renderEl = oktaData.inactiveTab.renderFnBackup;
+                  var result = oktaData.inactiveTab.signInInstance.renderEl.apply(oktaData.inactiveTab.signInInstance, oktaData.inactiveTab.renderArgsBackup);
+                  if (result && result.then) {
+                    result.then(oktaData.inactiveTab.renderResolve, oktaData.inactiveTab.renderReject);
+                  }
+                }
+              } catch (err) {
+                oktaData.inactiveTab.fallbackFullPageReload = true;
+              }
+              if (oktaData.inactiveTab.fallbackFullPageReload) {
+                location.reload();
+              }
+            }
+          });
+        }
+
+        // add class if app login banner is present
+        if (oktaData.isAppBannerVisible) {
+          this.addLoginContainerClass();
+        }
+
+        oktaData.isCustomSignIn = true;
+        oktaData.hasChromeOSFeature = this.isChromeOs();
+        if (oktaData.hasChromeOSFeature) {
+          this.addChromeOSScript();
+        }
+        runLoginPage(function () {
+          var res = OktaLogin.initLoginPage(oktaData);
+          oktaData.signIn = res.signIn;
+          signInSuccessCallBackFunction = res.signInSuccessCallbackFn;
+
+        });
+      }
+    }
+  };
+  OktaUtil.init();
+  //# sourceURL=OktaUtil.js
+</script>
+
+
+
+        <script type="text/javascript" nonce="kfqQniu1RlMTu0Y7zo0zOA">
+            // "config" object contains default widget configuration
+            // with any custom overrides defined in your admin settings.
+            var config = OktaUtil.getSignInWidgetConfig();
+            
+            // custom config
+            config.logo = undefined;
+            config.i18n = {
+                en: {
+                    'primaryauth.title': 'Welcome, please identify yourself to access MIT services.'
+                }
+            };
+            config.transformUsername = function (username) { return username.includes('@mit.edu') ? username : username + '@mit.edu'; };
+            function cleanIndentifierField() {
+                try {
+                    var titles = document.getElementsByClassName('okta-form-title')
+                    var identifierInput = document.getElementsByClassName('o-form-input-name-identifier')[0].children[0]
+                    if (titles.length === 1 && 
+                        titles[0].innerText === 'Welcome, please identify yourself to access MIT services.') {
+                        var username = identifierInput.value
+                        if (username.includes('@mit.edu')) {
+                            username = username.replaceAll('@mit.edu', '')
+                            identifierInput.value = username
+                        }
+                    }
+                } catch (e) {
+                    //console.log(e)
+                }
+            }
+
+            // Render the Okta Sign-In Widget
+            var oktaSignIn = new OktaSignIn(config);
+            oktaSignIn.renderEl({ el: '#okta-login-container' },
+                OktaUtil.completeLogin,
+                function(error) {
+                    // Logs errors that occur when configuring the widget.
+                    // Remove or replace this with your own custom error handler.
+                    console.log(error.message, error);
+                }
+            );
+
+            // Avoid flashing between transitions
+            oktaSignIn.on('afterError', function() { 
+                document.getElementById('okta-login-container').style.visibility = 'visible';
+                //console.log('visible')
+                cleanIndentifierField()
+            }); 
+            oktaSignIn.on('afterRender', function() { 
+                document.getElementById('okta-login-container').style.visibility = 'visible';
+                //console.log('visible')
+                cleanIndentifierField()
+            });
+            oktaSignIn.router.listenTo(oktaSignIn.router.appState, 'all', function(action) {
+                var titles = document.getElementsByClassName('okta-form-title')
+                if (titles.length === 1 && 
+                    titles[0].innerText === 'Get a push notification') {
+                    return;
+                }
+
+                //console.log('event', arguments)
+                if (action === 'navigate' || 
+                    action === 'saveForm') {
+                    document.getElementById('okta-login-container').style.visibility = 'visible';
+                    //console.log('hidden')
+                }
+            });
+            oktaSignIn.router.listenTo(oktaSignIn.router.appState, 'all', function(action, _, name) {
+                if (action === 'change:currentFormName') {
+                    console.log('change:currentFormName', name)
+                }
+
+                if (action === 'change:currentFormName') {
+                    if (name === 'identify') {
+                        document.getElementById('mit-no-cert-link').style.display = 'inline-block';
+                    } else {
+                        document.getElementById('mit-no-cert-link').style.display = 'none';
+                    }
+                }
+
+                if (action === 'change:currentFormName' && name === 'challenge-authenticator') {
+                    var titles = document.getElementsByClassName('okta-form-title')
+                    var buttons = document.getElementsByClassName('button-primary')
+                    if (titles.length === 1 && 
+                        titles[0].innerText === 'Verify with Duo Authentication' &&
+                        buttons.length === 1) {
+                        buttons[0].click();
+                        //console.log('button clicked to verify with Duo')
+                    }
+                }
+
+                if (action === 'change:currentFormName' && name === 'identify') {
+                    cleanIndentifierField()
+                }
+            });
+            
+        </script>
+    </div>
+
+    <div id="mit-foot">
+        <div>
+            <a href="http://web.mit.edu/">massachusetts institute of technology</a>
+        </div>
+        <div>
+            <ul>
+                <!--li class="mobile-only"><a href="https://kb.mit.edu" target="_blank">What's New?</a></li-->
+                <li><a href="https://accessibility.mit.edu" target="_blank">Accessibility</a></li>
+                <li><a href="https://idp.mit.edu/help.html" target="_blank">Help</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

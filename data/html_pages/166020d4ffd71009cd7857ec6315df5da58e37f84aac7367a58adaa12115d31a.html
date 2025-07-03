@@ -1,0 +1,397 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Student Organizations | Student Organizations,</title>
+<link rel="stylesheet" href="https://sole.ucla.edu/themes/custom/ucla_campus/css/ucla_sa.css?v=a20250206114255">
+<link rel="stylesheet" href="https://sole.ucla.edu/themes/custom/ucla_campus/css/ucla_campus.css?v=a20250206114255">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KFDL2LJQEZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-KFDL2LJQEZ');
+</script>
+<style type="text/css">
+/* @media (min-width: 768px) {
+  [data-ucla-node-id="1"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  [data-ucla-node-id="1"] .body--section,
+  [data-ucla-node-id="1"] .paragraph--section {
+     grid-column: 1/3;
+  }
+  [data-ucla-node-id="1"] .paragraph--section.body-content[data-section-title="News and Updates"] {
+     grid-column: 1/2;
+  }
+  [data-ucla-node-id="1"] .paragraph--section.body-content[data-section-title="Student Organizations"] {
+     grid-column: 2/3;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .nav-main {
+    font-size: 0.85rem;
+  }  
+} */
+/* Organizations Page Collapsed Headers w/ Advanced Sections */
+[data-ucla-path="/organizations"] [data-section-title="Event Planning"], [data-ucla-path="/organizations"] [data-section-title="Group Email Accounts"] {
+    margin-bottom: 0;
+    padding-top: 0;
+}
+[data-ucla-path="/organizations"] [data-section-title="Event Planning"] .hcollapse {
+    border-top: none;
+    border-bottom: none;
+}
+/* organizations page collapsed headers w/ advanced sections */
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #menus {
+      width: 100%;
+  }
+  #menus .navbar ul {
+      justify-content: space-between;
+  }
+  #menus .navbar ul li {
+      flex-basis: min-content;
+      flex-grow: 1;
+      flex-shrink: 0;
+  }
+  #menus .navbar ul li a {
+      height: 100%;
+      display: grid;
+      align-items: end;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar li a, .navtop li a {
+    padding: 0.5rem;
+  }
+  .navbar li a {
+    font-size: 1rem;
+  }
+}
+</style>
+<script type="text/javascript">
+const mountSoleTwoColumnLayout = () => {
+
+   if (document.body.dataset.uclaPath != "/") {
+       return
+   }
+   
+   const leftColumnContent = document.querySelector('[data-section-title="News and Updates"] .container')
+       ?.childNodes;
+   const rightColumnContent = document.querySelector('[data-section-title="Student Organizations"] .container')
+       ?.childNodes;
+   if (!leftColumnContent || !rightColumnContent) {
+       console.log({
+           leftColumnContent,
+           rightColumnContent
+       })
+       console.error('Could not find a match when turning homepage into two-column layout');
+       return
+   }
+
+   const mount = document.querySelector('[data-ucla-node-id]');
+   if (!mount) {
+         console.error('Could not find mount point for two-column layout');
+         return
+   }
+   
+   const template = `
+          <div class="container">
+             <section class="columns columns-2 columns-2-5050">
+                <section class="column column-1" id="sole-homepage-left-column">
+                    <!-- Left column content -->
+                </section>
+                <section class="column column-2" id="sole-homepage-right-column">
+                    <!-- Right column content -->
+                </section>
+             </section>
+          </div>
+       </div>
+       `;
+
+   const content = document.createElement('div');
+   for (const classItem of [
+      'body-content',
+      'paragraph--section'
+   ]) {
+      content.classList.add(classItem);
+   }
+   content.innerHTML = template;
+   content.querySelector('#sole-homepage-left-column').append(...leftColumnContent);
+   content.querySelector('#sole-homepage-right-column').append(...rightColumnContent);
+
+   mount.append(content);
+}
+
+document.addEventListener('DOMContentLoaded', mountSoleTwoColumnLayout);
+</script>
+</head>
+<body
+    data-ucla-ref="sole/templates/student-organizations"
+    data-ucla-path="/templates/student-organizations"
+    data-ucla-origin="https://sole.ucla.edu"
+    data-ucla-theme-cache-version="a20250206114255"
+    data-ucla-theme-root="https://sole.ucla.edu/themes/custom/ucla_campus"
+    class="no-js"
+>
+<script>document.body.classList.remove('no-js'); document.body.classList.add('js');</script>
+<header class="siteheader">
+  <div class="skiplink">
+      <a href="#main">Skip to Main Content</a>
+  </div>
+      <div class="topbar">
+    <div class="container">
+      <a href="http://www.ucla.edu/" aria-label="UCLA">UCLA</a>
+    </div>
+  </div>
+  <div class="navbar-wrapper">
+    <div class="navbar-grid container">
+        <span role="heading" aria-level="1">
+                      <a href="/" class="h2">
+              <div class="site-name">Student Organizations,</div>
+                              <div class="site-slogan">Leadership & Engagement</small></div>
+                          </a>
+                  </span>      
+        <nav aria-label="Secondary Top" class="navtop desktop-only">
+          <ul>
+  <li><a href="/about-us">About Us</a></li>
+  <li><a href="/dayosole">Days O’SOLE</a></li>
+  <li><a href="/faqs">FAQs</a></li>
+<li class="topbar-yellow-button"><strong><a href="https://www.facebook.com/UCLASOLE/">Follow</a></strong></li>
+</ul>
+        </nav>
+        <button class="mobile-only" aria-haspopup="true" aria-controls="menus" aria-expanded="false" aria-label="Main Menus">
+          <span class="menu-icon-wrap">
+            <span class="menu-icon">
+            </span>
+          </span>
+        </button>
+        <div class="navbar-position">
+          <div id="menus">
+            <nav class="navbar">
+              <form action="https://www.ucla.edu/search" method="GET" class="site-search mobile-only">
+                <label for="header-search-mobile-only">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-mobile-only"><button type="submit" class="ucla-button ucla-button-primary">Search</button>
+              </form>
+                            <ul>
+  <li><a href="/resources">Resources</a></li>
+  <li><a href="/policies">Policies</a></li>
+  <li><a href="/organizations">Organizations</a></li>
+  <li><a href="/leadership">Leadership</a></li>
+  <li><a href="/funding">Funding</a></li>
+  <li><a href="/toolkit">Leader Toolkit</a></li>
+  <li><a href="/pab">Program Activities Board</a></li>
+  <li><a href="/cey-award">CEY Award</a></li>
+</ul>
+                          </nav>
+            <nav aria-label="Secondary Menu" class="navtop mobile-only">
+            <ul>
+  <li><a href="/about-us">About Us</a></li>
+  <li><a href="/dayosole">Days O’SOLE</a></li>
+  <li><a href="/faqs">FAQs</a></li>
+<li class="topbar-yellow-button"><strong><a href="https://www.facebook.com/UCLASOLE/">Follow</a></strong></li>
+</ul>
+            </nav>
+          </div> 
+          <button aria-haspopup="true" aria-controls="desktop-search" aria-expanded="false" aria-label="Search..." class="desktop-only"></button>
+        </div>
+      </div>
+      <form id="desktop-search" action="https://www.ucla.edu/search" method="GET" class="site-search desktop-only">
+        <p class="container">
+          <label for="header-search-headerbar">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-headerbar">
+          <button type="submit" class="ucla-button ucla-button-primary">Search</button>
+        </p>
+      </form>
+  </div>
+</header>
+
+
+<main id="main">
+        <div class="page">
+<div class="page-header">
+  <div id="block-system-messages" class="container">
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+<div id="block-ucla-campus-breadcrumbs" class="block">
+  <div class="container">
+  
+    
+      
+    </div>
+</div>
+<div id="block-ucla-campus-page-title" class="block">
+  <div class="container">
+  
+    
+      
+  <h1>Student Organizations</h1>
+
+
+    </div>
+</div>
+
+
+</div>
+<div class="page-content">
+  <div id="block-ucla-campus-mainpagecontent" class="block system-main-block">
+  
+    
+      <div data-ucla-node-id="4">
+    
+    
+            
+                                    <div class="body--page">
+                        <div class="container">
+                                                                                        
+    <div data-custom-embed-id="6" data-custom-embed-title="app embed zone for sa.ucla.edu templates">
+
+<div class="app-embed-container"> <div data-ucla-sa="replace"> <p>Apps can be embedded in this template using the following regular expression replacement.</p> <p><strong>document.body.outerHTML.replace(new RegExp('&lt;div data-ucla-sa="replace"&gt;.*?&lt;/div&gt;', 's'), '-- REPLACEMENT HTML --');</strong></p></div></div>
+
+</div>
+
+
+
+                                                    </div>
+                    </div>
+                    
+
+                    
+            
+        </div>
+
+  </div>
+
+
+</div>
+</div>
+
+
+          <footer class="site-footer" role="contentinfo">
+	      <div class="footer-logo">
+	                                  <a href="/" class="site-name">
+                            <img src="https://sole.ucla.edu/themes/custom/ucla_campus/logos/ucla-student-organizations-leadership-and-engagement.svg" height="150" width="350" alt="UCLA Student Organizations, Leadership &amp; Engagement">
+                          </a>
+               	      	      </div>
+        
+        <div class="footer-content">
+  <address class="footer-contact">
+    105 Kerckhoff Hall<br>
+    308 Westwood Plaza<br>
+    Los Angeles, CA 90095
+    <br><br>
+    <a href="tel:(310) 825-7041">(310) 825-7041</a><br>
+    <a href="mailto:uclasole@ucla.edu">uclasole@ucla.edu</a>
+  </address>
+</div>
+
+<div class="social-links-container">
+  <a href="https://www.facebook.com/UCLASOLE"><span class="social-link-label">Facebook @UCLASOLE</span></a>
+</div>
+
+<div class="footer-covid19">
+  <a href="https://covid-19.ucla.edu">COVID-19 Resources</a>
+</div>
+
+      </footer>
+    </main>
+
+<footer class="global-footer">
+  <div class="container">
+    <p class="regents">© 2025 Regents of the
+      <a href="https://www.universityofcalifornia.edu/">University of California</a>
+    </p>
+    <div class="global-footer-links">
+      <a href="https://www.bso.ucla.edu/">Emergency</a>
+      <a href="https://www.ucla.edu/accessibility">Accessibility</a>
+      <a href="https://www.ucla.edu/terms-of-use">Privacy & Terms of Use</a>
+    </div>
+    <div class="social-links-container">
+      <a href="https://www.facebook.com/UCLA/"><span class="social-link-label">Facebook @UCLAhousing</span></a>
+      <a href="https://www.instagram.com/ucla/"><span class="social-link-label">Instagram @uclahousing</span></a>
+      <a href="https://www.linkedin.com/school/ucla"><span class="social-link-label">Linkedin @ucla</span></a>
+      <a href="https://x.com/ucla"><span class="social-link-label">X @ucla</span></a>  
+      <a href="https://www.youtube.com/user/UCLA"><span class="social-link-label">YouTube @ucla</span></a>
+      <a href="https://www.tiktok.com/@ucla?lang=en"><span class="social-link-label">TikTok @ucla</span></a>
+      <a href="https://story.snapchat.com/@uclaofficial"><span class="social-link-label">Snapchat @uclaofficial</span></a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://sole.ucla.edu/themes/custom/ucla_campus/js/ucla_sa.js?v=a20250206114255" async></script>
+<script src="https://sole.ucla.edu/themes/custom/ucla_campus/js/node_modules/wicg-inert/dist/inert.min.js?v=a20250206114255"></script>
+<script src="https://sole.ucla.edu/themes/custom/ucla_campus/js/ucla_campus.js?v=a20250206114255" async></script>
+
+<script type="text/javascript">
+(function() {
+  if(document.querySelector('[data-ucla]')) {
+    var embed = document.createElement('script'); embed.type = 'text/javascript'; embed.async = true;
+    embed.src = 'https://sole.ucla.edu/themes/custom/ucla_campus/js/ucla_embed.js?v=20250206114255';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(embed, s);
+  }
+})();
+</script>
+</body>
+</html>
+
+
+
+
+<script src="https://iwe.myucla.it.ucla.edu/iwe-static/V4/LITElementLoader-NoExternalCss.js" async></script>
+<script>
+    function getCssLinkTag(location) {
+        var CssLinkTag = document.createElement('link');
+        CssLinkTag.setAttribute("rel", "stylesheet")
+        CssLinkTag.setAttribute("type", "text/css")
+        CssLinkTag.href = location;
+        return CssLinkTag;
+    }
+
+    document.head.appendChild(getCssLinkTag("https://sa.ucla.edu/RCO" + "/Content/DrupalMainRco.min.css"));
+/*    document.head.appendChild(getCssLinkTag("https://iwe-test.uclanet.ucla.edu/iwestyleguide/LitElement/SASS/rco-v4.min.css"));*/
+    document.head.appendChild(getCssLinkTag("https://iwe.myucla.it.ucla.edu/iwe-static/V4/rco-v4.min.css"));
+    document.head.appendChild(getCssLinkTag("https://sa.ucla.edu/RCO" + "/iwe/SOLE/DrupalSole.min.css"));
+</script>
+
+<script>
+    var baseTag = document.createElement('base');
+    baseTag.href = 'https://sa.ucla.edu/RCO';
+    document.head.appendChild(baseTag);
+
+    document.body.innerHTML = document.body.innerHTML.replace(new RegExp(`<div data-ucla-sa="replace">.*?</div>`, 's'), '<my-app path="https://sa.ucla.edu/RCO"><img src="https://sa.ucla.edu/RCO/Content/img/BG-spinner.gif" class="mc-spinner" /></my-app>');
+</script>
+
+<script type="text/javascript">
+    var isProduction = true;
+    var BaseUrl = "https://sa.ucla.edu/rco" + "/";
+    var UseBundle = "true";
+    var DebugBundle = "false";
+</script>
+
+<script src="/RCO/node_modules/core-js/client/shim.min.js"></script>
+<script src="/RCO/node_modules/systemjs/dist/system.src.js"></script>
+<script src="/RCO/systemjs.config.js?rnd=5/5/2025_5:15:16_PM"></script>
+<script src="/RCO/iwe/SOLE/js/jQueryV1-7-1.js"></script>
+
+<script>
+    var polymer3 = true;
+</script>
+
+
+
+
+            <script src="/RCO/Areas/RCO/Scripts/AppModule/dist/bundle-rco.min.js?rnd=5/5/2025_5:15:16_PM"></script>
+        <script async src="/RCO/bundle-rxjs.min.js?rnd=5/5/2025_5:15:16_PM"></script>
+

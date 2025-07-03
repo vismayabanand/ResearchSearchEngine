@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>Self-Adaptation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script type="text/javascript">
+    jQuery.loadScript = function (url, callback) {
+    jQuery.ajax({
+        url: url,
+        dataType: 'script',
+        success: callback,
+        async: true
+    });
+    }
+    
+    var ua = window.navigator.userAgent;
+
+    if (ua.indexOf("MSIE ") != -1 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  {
+      $.loadScript('sortBy-ie.js', loadContent);
+    }
+    else {
+
+      $.loadScript('sortBy.js', loadContent);
+    }
+
+    function loadContent() {
+      getMenu('research');
+    }
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="dynamic.js"></script>
+	<script type="text/javascript" src="pubs.js"></script>
+	<script type="text/javascript" src="https://acme.able.cs.cmu.edu/pubs/publications.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="pubstyle-projects.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.cs.cmu.edu/~able/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://www.cs.cmu.edu/~able/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.cs.cmu.edu/~able/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://www.cs.cmu.edu/~able/favicons/manifest.json">
+    <link rel="shortcut icon" href="https://www.cs.cmu.edu/~able/favicons/favicon.ico">
+    <meta name="msapplication-config" content="https://www.cs.cmu.edu/~able/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body onload='loadContent();'>
+<!-- functions for loading in appropriate publications -->
+<script type="text/javascript">
+function showRainbowPubs(url) {
+  makePubsRequest(url,"rainbowPubSection")
+}
+function showRainbowLandmarkPubs(url) {
+  makePubsRequest(url,"rainbowLandmarkPubSection")
+}
+
+function showAdvancedPubs(url) {
+  makePubsRequest(url,"advancedPubSection");
+}
+
+function showDiagnosisPubs(url) {
+  makePubsRequest(url, "diagnosisSection");
+}
+
+function showLatencyPubs(url) {
+  makePubsRequest (url, "predictionSection");
+}
+
+function showMIPubs(url) {
+  makePubsRequest(url, "MISection");
+}
+
+function showPlanningPubs(url) {
+  makePubsRequest(url, "PlanningSetion")
+}
+
+function showMetaPubs(url) {
+    makePubsRequest(url, "PlanningSetion")
+}
+
+function showAssuranceLandmark (url) {
+  makePubsRequest (url, "assuranceLandmarkSection")
+}
+
+function showAssuranceSection (url) {
+  makePubsRequest (url, "assuranceSection")
+}
+
+function showSecuritySection (url) {
+  makePubsRequest (url, "securitySection")
+}
+
+function showExplainSection (url) {
+  makePubsRequest(url, "explainSection")
+}
+
+function loadContent() {
+try {
+makePubsRequest ("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Rainbow,Self-adaptation,Landmark&op=a&mode=ajax&type=html&script=showRainbowLandmarkPubs&httpPrefix=https://acme.able.cs.cmu.edu/pubs/","rainbowLandmarkPubSection");
+makePubsRequest ("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Rainbow,Self-adaptation&mode=ajax&op=o&type=html&script=showRainbowPubs&httpPrefix=https://acme.able.cs.cmu.edu/pubs/","rainbowPubSection");
+makePubsRequest ("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=SA-advanced&mode=ajax&type=html&script=showAdvancedPubs&httpPrefix=https://acme.able.cs.cmu.edu/pubs", "advancedPubSection");
+}
+catch(e) {
+  if (e.name== "ReferenceError") {
+    alert("Publications will not be loaded on this page unless you add https://acme.able.cs.cmu.edu/ as a trusted site");
+  }
+}
+}
+</script>
+
+<div id="art-page-background-simple-gradient">
+    </div>
+    <div id="art-page-background-glare">
+        <div id="art-page-background-glare-image"></div>
+    </div>
+    <div id="art-main">
+        <div class="art-Sheet">
+            <div class="art-Sheet-tl"></div>
+            <div class="art-Sheet-tr"></div>
+            <div class="art-Sheet-bl"></div>
+            <div class="art-Sheet-br"></div>
+            <div class="art-Sheet-tc"></div>
+            <div class="art-Sheet-bc"></div>
+            <div class="art-Sheet-cl"></div>
+            <div class="art-Sheet-cr"></div>
+            <div class="art-Sheet-cc"></div>
+            <div class="art-Sheet-body">
+                <div class="art-nav" id="nav-menu">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="art-menu">
+                		<li>
+                			<a href="index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                		</li>
+                		<li>
+                			<a href="#"  class=" active"><span class="l"></span><span class="r"></span><span class="t">Research</span></a>
+                			<ul>
+                				<li><a href="architecture.html">Software Architecture</a>
+                					<ul>
+                						<li><a href="https://acme.able.cs.cmu.edu">AcmeStudio</a></li>
+                					</ul>
+                				</li>
+                				<li><a href="self-adaptation.html">Self-Adaptive Systems</a></li>
+                				<li><a href="cyberphysical.html">Cyberphysical and IoT</a></li>
+                			</ul>
+                		</li>
+						<li>
+							<a href="publications.html"><span class="l"></span><span class="r"></span><span class="t">Publications</span></a>
+						</li>
+                                                <li>
+                                                        <a href="talks.html"><span class="l"></span><span class="r"></span><span class="t">Talks</span></a>
+                                                <li>
+
+						<li>
+						    <a href="members.html"><span class="l"></span><span class="r"></span><span class="t">Members</span></a>
+							<ul>
+								<li><a href="members.html#faculty">Faculty</a></li>
+								<li><a href="members.html#students">Students</a></li>
+								<li><a href="members.html#visitors">Visitors</a></li>
+								<li><a href="members.html#past">Past</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="https://acme.able.cs.cmu.edu/able-internal"><span class="l"></span><span class="r"></span><span class="t">Internal</span></a>
+						</li>
+                	</ul>
+                </div>
+                <div class="art-Header">
+                    <div class="art-Header-jpeg"></div>
+                    <div class="art-Logo">
+                        <h1 id="name-text" class="art-Logo-name"><a href="#">ABLE Research Group</a></h1>
+                        <div id="slogan-text" class="art-Logo-text">Changing Architecture</div>
+                    </div>
+                </div>
+				<div class="art-contentLayout">
+				  <div class="art-content-wide">
+				    <div class="art-Post">
+					  <div class="art-Post-body">
+					    <div class="art-Post-inner">
+						  <h2 class="art-PostHeader">
+						    Self-Adaptive Systems
+						  </h2>
+						  <div class="art-PostContent">
+
+<p>
+In order to maintain system goals during execution, self-adaptation is increasingly
+employed to monitor runtime conditions, analyze whether goals are being met or could
+be met better, choose (or plan) how to adapt the system, and then, finally, execute
+the chosen adaptation. Self-adaptive systems therefore can often be considered as
+adding closed-loop control, where the self-adaptive elements are the control and the
+system being adapted is the plant.</p>
+
+<p>In this research area, we are investigating foundations, frameworks, and techniques for developing self-adaptive systems, using a control-systems paradigm. We are conducting 
+research in the following close-related areas:
+<ul>
+<li><b><a href="#rainbow">Rainbow</a>:</b> A framework for developing self-adaptive systems that focuses on architectural models of systems to monitor, reason about, and adapt running systems. Rainbow allows self-adaptive capabilities to be added to existing systems, 
+trading-off multiple business concerns and capturing domain-specific adaptation strategies and operations.</li>
+<li><b><a href="#assurance">Assurances for self-adaptive systems:</a></b> A major challenge in engineering self-adaptive systems is to provide assurances engineers can use to be confident that the self-adaptive system will perform as designed. 
+We are investigating the use of probabilistic model checking and stochastic multiplayer games to provide such assurances.</li>
+<li><b><a href="#advanced">Advanced self-adaptation paradigms:</a></b> While the foundations give engineers the capabilities to develop self-adaptive systems, we are advancing self-adaptive development and analysis to provide 
+more nuanced self-adaptation, including fault localization and diagnosis, the impact of latency and predicition, including human operators as collaborators in self-adaption, the use of AI-planning and other adaptation synthesis techniques, and control-theory 
+metrics for examining and adapting the behavior of self-adaptive parts of the system.
+</ul>
+
+Our initial work focussed on adaptation in the context of performance, cost, and quality of service. Recently, we have been investigating the role of our techniques in <a href="#security">self-protection and system resilience</a>. We are interested in how to apply these techniques in the context of big data.
+<section class="res_proj">
+<h3><a name="rainbow"></a>Rainbow: A Framework for Self-Adaptation</h3>
+<div class="contents">
+<h4>Project Description</h4>
+
+Rainbow is a framework that (a) separates out the concern of self-adaptation so that it can be engineered, analyzed, and changed more easily 
+than dispersing the cabapilities throughout a system, (b)  uses software archiecture models primarily as the basis for reasoning about the state of the system and when adaptation is required,
+(c) uses utility-based decision  making to determine the best adaptation  among a set of potentially applicable adaptations.
+
+As a framework, Rainbow can be customized with different monitors, analysis, and adaptation strategies so that it can apply in different domains for different quality attributes. It forms the foundation for much of the prototyping of research 
+in our group. 
+
+<h4>Research</h4>
+<p><i>Our Positon:</i> Self-adaptation needs to be conducted in the presence of multiple business and technical constraints. Software architecture models are iwell-suited to reason about these constraintsi at run time. In addition, formal 
+analysis of software architecture yields correctness criteria in terms of quality attributes, behaviors, etc. Software architecture is therefore an ideal place to reason about the adaptation of software.
+<p><i>Research Questions</i>:
+<ul>
+<li>How to design and evaluate a framework that can be used for multiple styles of system and quality attributes?</li>
+<li>What are the appropriate monitoring mechanisms to get information out of a system?</li>
+<li>How can system observations be mapped into architecture level observations?</li>
+<li>How can the architecture be evaluated to determine whether the system needs adapting?</li>
+<li>How can adaptations be specified?</li>
+</ul>
+
+<h4>Contacts</h4>
+<p>David Garlan, Bradley Schmerl, Javier Ca&#769;mara</p>
+
+<h4>Landmark Papers</h4>
+<div id="rainbowLandmarkPubSection" class="pub_section" style="height:200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Rainbow,Self-adaptation,Landmark&op=a">here</a>
+</div>
+
+<h4>Related Papers</h4>
+<div id="rainbowPubSection" class="pub_section" style="height: 350px; overflow-y: auto;">
+If papers do not laod, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Rainbow,Self-adaptation&mode=ajax&op=o">here</a>
+</div>
+
+<h4>Related tools and systems</h4>
+<ul>
+<li>Rainbow self-adaptation framework. The current release of Rainbow is available <a href="https://acme.able.cs.cmu.edu/public/Rainbow.Orange.4-20160223.zip">here</a></li> 
+<li><a href="https://github.com/cmu-able/znn">ZNN Exemplar System</a>. This is an exemplar system that implements a simple three-tiered web news site. It comes with probes and effectors to make changes, but is independent of Rainbow. 
+<li><a href="https://theone.ece.cmu.edu/cmart/">C-MART Example System</a>. This is an example HTML 5 Java web application developed independently from this group, that we have recently been using for some experimentation. We are not otherwise affiliated with the developers 
+of this, nor do we have any involvement in its maintenance of deployment.</li>
+<li><a href="https://www.hpi.uni-potsdam.de/giese/public/selfadapt/exemplars/">SEAMS Community related exemplars</a>. These are a list of exemplar systems that are made publicly available to the research community. </li>
+
+</ul>
+</div>
+</section>
+<section class="res_proj">
+<h3><a name="assurance"></a>Assurances for Self-Adaptive Systems</h3>
+<div class="contents">
+<h4>Project Description</h4>
+An important aspect of the engineering process for self-adaptive systems is providing evidence 
+that its requirements are met during their development and throughout operation. This 
+evidence has to be obtained despite the uncertainty that affects the environment in which 
+the system has to operate, and even its goals. Our research in this area explores the use of 
+probabilistic models to handle uncertainty and provide guarantees that system requirements 
+are satisfied both during construction and at run time. Part of our work investigates the 
+combined use of formal verification and testing techniques to evaluate the ability of a self-
+adaptive system to deliver a service that can when facing changing environments, requirements, and uses.
+
+<h4>Research</h4>
+<i>Our position:</i> Probabilistic models and formal verification techniques, such as probabilistic 
+model checking, are well-suited to analyzing the interplay between a self-adaptive system and 
+its environment. In particular, some of these models like stochastic multii-player games (SMGs) 
+are able to capture (a) the uncertainty and variability intrinsic to the environment in the form of 
+probabilistic and non-deterministic choices, and (b) the competitive behavior between the self-
+adaptive system and its environment. In these models, both the self-adaptive system and its 
+environment can be naturally modeled as players in a game whose behavior is independent, 
+reflecting the fact that changes in the environment cannot be controlled by the system.
+
+<i>Research Questions:</i>
+<ul>
+<li>What are the appropriate models to capture the different sources of uncertainty that affect 
+self-adaptive systems?</li>
+<li>How can different sources of evidence be composed to reason about 
+requirements compliance?</li>
+<li>How can an assurance solution continually integrate new evidence and provide timely updates 
+of assurance arguments without impacting the operation of the self-adaptive system?</li>
+</ul>
+<h4>Contacts</h4>
+Javier Ca&#769;mara, David Garlan, Bradley Schmerl 
+<h4>Landmark Papers</h4>
+<div id="assuranceLandmarkSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Assurance,Self-Adaptation,Landmark&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showAssuranceLandmark", "assuranceLandmarkSection");
+</script>
+</div>
+<h4>Related Papers</h4>
+<div id="assuranceSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Assurance,Self-Adaptation&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showAssuranceSection", "assuranceSection");
+</script>
+</div>
+</div>
+</section>
+
+<section class="res_proj">
+<h3><a name="advanced"></a>Advanced Topics in Self-Adaptation</h3>
+<div class="contents">
+<h4>Research</h4>
+Our research extends the foundational concepts of self-adaptation to explore advanced 
+aspects of self-adaptation. These topics include:
+<ul>
+<li><b>Strategy Planning &amp; Synthesis</b>: Many self-adaptation approaches assume a fixed set of strategies. In this research we are investigating how
+planning (from AI, stochastic search, and other communities) can be used to plan adatpations on-demand. 
+<div id="PlanningSection" class="pub_section" style="margin-left: 1cm; height:200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Planning,Self-Adaptation&op=a">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Planning,Self-Adaptation&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showPlanningPubs", "PlanningSection");
+
+</script>
+</div>
+</li>
+<li><b>Mixed Initiative Adaptation:</b> Self-adaptation approaches typically strive for complete autonomy, but there are many situations
+where involving human operators is necessary. We are exploring (a) how to bring humans into the loop of 
+self-adaptation, and (b) how to use knowledge about human operators in deciding which adaptations to 
+apply.
+<div id="MISection" class="pub_section" style="height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Human-in-the-loop">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Human-in-the-loop&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showMIPubs", "MISection");
+
+</script>
+</div>
+</li>
+<li><b>Explainability of Autonomous Systems</b>: When self-adaptive systems synthesize and/or choose adapation plans, the reasoning behind the choices is often opaque to operators. In this research we are investigating ways to explain planning decisions that are made using probabistic models to help build trust in adaptive systems. This can also be helpful in Mixed Initiative Adaptation.
+<div id="explainSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Explainable%20Software,Self-Adaptation&op=a">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Explainable%20Software,Self-Adaptation&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showExplainSection", "explainSection");
+</script>
+</div>
+</li>
+<li><b>Coordination and Control of Self-Adaptation</b>: Self-Adaptive systems often interact with each other, either for coordination or management purposes. In this research we are investigating how to analyze coordination patterns, and also how we might use metrics of the self-adaptive system to manage and adapt the adaptations.
+<div id="coordSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Coordination,Self-Adaptation&op=a">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Coordination,Self-Adaptation&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showCoordSection", "coordSection");
+
+</script>
+</div>
+
+</ul>
+<li><b>Fault diagnosis and localization:</b> A key aspect of self adaptation is determining when and 
+where something is wrong. This research is developing techniques from the testing community for 
+fault localization for use at run time for self-adaptation.
+<div id="diagnosisSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Diagnosis">here.</a>
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Diagnosis&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showDiagnosisPubs", "diagnosisSection");
+</script>
+</div>
+</li>
+<li><b>Prediction and Proactivity:</b> Many approaches to self-adaptation assume that the effects of an 
+adaptation will be instantaneous.
+However, the time an adaptation will take should also be accounted for in 
+ choosing the adaptation. Would a quicker, but less effective, adaptation be better? Should the 
+quicker one be started and then followed by the more effective one? How should one account for the 
+increase in uncertainty when looking further into the future?
+<div id="predictionSection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Latency-aware">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Latency-aware&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showLatencyPubs", "predictionSection");
+</script>
+</div>
+</li>
+</div>
+</section>
+
+<section class="res_proj">
+<h3><a name="security"></a>Self-Protection and other Security-Related Self-Adaptation</h3>
+<div class="contents">
+<h4>Project Description</h4>
+One domain in which self-adaptation could be applied is to the area of security, or self-protection. At first glance, 
+it might seem that this quality is similar to others. However, there are a number of key differences that make this 
+challenging for self-adaptation. For example, (a) the environment is antagonistic, and may be working to subvert or 
+compromise self-adaptation, (b) there is a need for the system to be proactive in its protection, and (c) there is a 
+preventative aspect to the self-adaptation - i.e., the system may need to prevent actions in the target system.
+<h4>Research</h4>
+<i>Our Position:</i> Self-adaptive systems can be applied to self-protection, but they need to overcome some 
+fundamental challenges to do so.
+
+<i>Research Questions:</i>
+<ul>
+<li>How can preventative measures be applied in self-adaptation? Can we synchronize the self-adaptive system and the target system?</li>
+<li>How can we have improve the accuracy of environment models in order to predict what an attacker is likely to do?</li>
+<li>How do we account for a possibly long-duration kill-chain (sequence of events) that are being used to carry out an attack?</li>
+<li>How can we improve self-protecting systems by providing context and prediction?</li>
+</ul>
+<h4>Contacts</h4>
+David Garlan, Bradley Schmerl, Javier Ca&#769;mara
+<!--<h4>Landmark Papers</h4>-->
+<h4>Related Papers</h4>
+<div id="securitySection" class="pub_section" style="margin-left: 1cm; height: 200px; overflow-y: auto;">
+If papers do not load, go <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Science%20of%20Security,Self-Adaptation&op=a">here</a>.
+<script>
+  makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Science%20of%20Security,Self-Adaptation&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showSecuritySection", "securitySection");
+</script>
+</div>
+</div>
+</section>
+
+
+
+
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="cleared"></div><div class="art-Footer">
+                    <div class="art-Footer-inner">
+                        <div class="art-Footer-text">
+                            <p><a href="ma&#105;lto&#58;s%63&#104;me&#37;72%&#54;C+able&#64;cs&#46;c&#109;&#117;&#46;e&#100;u">Contact Us</a> | <a href="https://s3d.cmu.edu/">Software and Societal Systems Department</a> | <a href="https://www.cs.cmu.edu">School of Computer Science</a> | <a href="https://www.cmu.edu">Carnegie Mellon University</a><br />
+                                Copyright &copy; <span id="footeryear">2017</span> ---. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="art-Footer-background"></div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer"><a href="http://webjestic.net/templates/">CSS Template</a> by webJestic.NET</p>
+    </div>
+    <script language="javascript">
+      document.getElementById("footeryear").innerHTML = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>

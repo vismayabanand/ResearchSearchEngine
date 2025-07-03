@@ -1,0 +1,801 @@
+
+
+<!--include page level css here -->
+
+<title>AlertSU FAQs - SUDPS</title>
+<meta name="description" content="AlertSU mass notification Frequently Asked Questions - Stanford Department of Public Saftey" />
+<meta name="author" content="Stanford Department of Public Saftey" />
+<head>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript"></script>
+    <script src="scripts.js"></script>
+<style>
+
+	a:hover {
+		text-decoration: none;
+	}
+	
+	.modal-header
+	{
+		 color:#4B77BE; /*blue-steel*/
+		 font-size: 25px;
+	}
+
+	.faq {
+		border-bottom:1px solid #eee;
+		padding: 15px 15px 5px 15px; /*top, right, bottom, left*/
+		cursor: pointer;
+	}
+	
+	.faq-color {
+		border-bottom:1px solid #eee;
+		padding: 15px 15px 5px 15px; /*top, right, bottom, left*/
+		background-color:#FAFAFA;
+		cursor: pointer;
+	}
+	
+	.faq-answer {
+		/*border:1px solid #eee;*/
+		padding: 15px 15px 15px 15px; /*top, right, bottom, left*/
+	}
+
+	.box {
+		border: 0px solid #eee;
+		padding: 15px 15px 15px 15px; /*top, right, bottom, left*/
+		width:80%;
+	}
+	
+	.center {
+		text-align:center;
+	}
+	
+</style>
+
+ 
+</head>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+<script src="/js/searchbar.js"></script> 
+<header>
+        <div class="announcement-bar">
+            <div class="content-width">
+                <img src="/images/SUSig_White.png" height="20px"/>
+            </div>
+        </div>
+        <div class="header-section content-width">
+            <div class="search-section  flex">
+                <a href="/index.html"><img src="/images/stanford-line1-31.png" height="24px"/></a>
+                <div class="search-bar ui-front">
+                    <input type="search" placeholder="Search" id="autocomplete-4" />
+                    <img src="/images/icon.svg"/>
+                </div>
+            </div>
+            <nav class="content-width">
+                <div class="desktop-nav">
+                    <ul class="menu flex">
+                        <li>
+                            <a>About</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/chief_message.html">Chief's Message</a>
+                                </li>
+                                <li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li> 
+                                <li>
+                                    <a href="/our-team.html">Our Team</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Alerts</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>
+                                <li>
+                                    <a href="/clery_act.html">Clery Act</a>
+                                </li>    
+                                <li>
+                                    <a href="/alertsu.html">Past Alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/bicycle-abatement.html">Bike Abatement</a>
+                                </li>
+								<li>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaulMLphJ41A7j2CEYKr1U1g-qbPxHs6vtqH_typqwVQJ3mw/viewform">Bike Safety Class Registration</a>
+								</li>
+                                <li>
+                                    <a href="/bicycle-sale.html">Bike Sales</a>
+                                </li>    
+                                <li>
+                                    <a href="/event-security-request.html">Event Security</a>
+                                </li>
+                                <li>
+                                    <a href="/house-checks.html">House Checks</a>
+                                </li>     
+                                <li>
+                                    <a href="/lost-found.html">Lost & Found</a>
+                                </li>    
+                                <li>
+                                    <a href="/StanfordSafeZone.html">SafeZone</a>
+                                </li>       
+                                <li>
+                                    <a href="/security-assessment.html">Security Assessment</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Information</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html" target="_blank">AlertSU</a>
+                                </li>    
+                                <li>
+                                    <a href="/bicycle-registration.html" target="_blank">Bike Registration</a>
+                                </li>   
+
+								<!--<li>
+                                    <a href="/bicycle-safety-class.html">Bike Safety Class</a>
+                                </li> 	-->							
+                                <li>
+                                    <a href="/hate-violence-report.html" target="_blank">Ca Ed. Code: Hate Violence Incidents</a>
+                                </li>
+								<li>
+								    <a href="/CPSA-course.html" target="_blank">Community Public Safety Academy (CPSA)</a>
+                                </li>
+                                <li>
+								    <a href="/core_values.html" target="_blank">Core Values</a>
+                                </li>
+                                <li>
+                                    <a href="/crime-map.html" target="_blank">Crime Map</a>
+                                </li>
+                                <!--<li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li>
+                                <li>
+                                    <a href="/parking-enforcement.html">Parking Enforcement</a>
+                                </li>-->        
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1gXviAXUVCCgZrXvvz4c9pIe4qnxtrLGO/view?usp=sharing" target="_blank">Parking & Circulation Map</a>
+                                </li>    
+                                <li>
+                                    <a href="/personnel-training.html" target="_blank">Sworn Personnel Training</a>
+                                </li>
+                                <li>
+                                    <a href="/sworn-policies.html" target="_blank">Sworn Policies & Procedures</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Safety, Security, & Fire Report</a>
+                                </li>
+								<li>
+                                    <a href="https://transparency.flocksafety.com/stanford-university-ca-pd" target="_blank">Stanford ALPR (Flock)</a>
+                                </li>
+                                <li>
+                                    <a href="/stanford-dish.html" target="_blank">Stanford Dish</a>
+                                </li>    
+                                <li>
+                                    <a href="https://ehs.stanford.edu/reference/suggested-travel-routes" target="_blank">Suggested Travel Routes</a>
+                                </li>    
+                                <li>
+                                    <a href="/transparency-dashboard.html">Transparency Dashboard</a>
+                                </li>
+								<!--<li>
+                                    <a href="/university-agent.html">University Agents</a>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Contact Us</a>
+                            <ul class="sub-menu">
+							<li>
+                                    <a href="/pdf/Collision_Report.pdf" target="_blank">Collision Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/EmployeeComplaintForm.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Email Us</a>
+                                </li> 
+								 <li>
+                                    <a href="/file-policereport.html">File a Police Report</a>
+                                </li>
+                                <li>
+                                    <!--<a href="/pdf/Report_Request_Form.pdf" target="_blank">Request Police Report</a>-->
+									 <a href="/police-report.html" target="_blank">Request Police Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Resources</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/active-threat.html">Active Threat</a>
+                                </li>    
+                                <li>
+                                    <a href="/campus-policies.html">Campus Policies</a>
+                                </li>    
+                                <li>
+                                    <a href="/county-contacts.html">County/Fire/Sheriff</a>
+                                </li>
+                                <li>
+                                    <a href="/domestic-violence.html">Domestic Violence</a>
+                                </li>
+                                <li>
+                                    <a href="/fraud-awareness.html">Fraud Awareness</a>
+                                </li>
+								<li>
+                                    <a href="https://eservices.sccgov.org/sfp">Livescan Services</a>
+                                </li>
+                                <li>    
+                                    <a href="/sexual-assult.html">Sexual Assault</a>
+                                </li>
+                                <li>
+                                    <a href="/victim-resources.html">Victim Resources</a>
+                                </li>
+								
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Clery Act/Annual Safety Report</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/clery_act.html">About Clery</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Annual Safety Report</a>
+                                </li>   
+                                <li>
+                                    <a href="/pdf/CSA-Flowchart.pdf" target="_blank">Clery Reporting Guideline</a>
+                                </li>    
+                                <li>
+                                    <a href="/cleryindex.html" target="_blank">Clery Travel Form</a>
+                                </li>
+                                <li>
+                                    <a href="/pdf/CSA-Report-Form.pdf" target="_blank">CSA Report Form</a>
+                                </li> 
+								<li>
+                                    <a href="/pdf/SU-CleryCrimeDefinitions.pdf" target="_blank">Clery Crime Definitions</a>
+                                </li> 								
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/employment.html" target="_blank">Employment</a>
+                        </li>
+						
+						<li>
+                            <a href="/feedback.html" target="_blank">Feedback</a>
+                        </li>
+					<!-------F E E D B A C K F O R M-------------------->
+					<!--<li>
+					<a>Feedback</a>
+                            <ul class="sub-menu">
+
+							<li>
+                                    <a href="/pdf/EmployeeComplaintForm2023.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Compliment</a>
+                                </li> 
+								 
+                                
+                            </ul>
+							</li>
+                        										
+						<!----------------------------------------------------------->
+
+                    </ul>
+                </div>
+                <div class="mobile-nav" id="mobileNavContainer">
+                    <button id="mobileMenuIcon">
+                        <img src="/images/Menu-Icon.svg"  width="40px" height="40px"/>
+                    </button>
+                    <div id="mobileOverlay"></div>
+                    <ul class="menu flex side-nav" id="MobileNavId">
+                        <button id="closeMenuIcon">
+                            <img src="/images/Close-Icon.svg"/>
+                        </button>
+                        <li>
+                            <a>About</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/chief_message.html">Chief's Message</a>
+                                </li>
+                                <!-- <li>
+                                    <a>History</a>
+                                </li> -->
+								
+								<li>
+                                    <a href="/memorandum-of-understanding.html" target="_blank">Memorandum of Understanding</a>
+                                </li> 
+                                <li>
+                                    <a href="/our-team.html">Our Team</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Alerts</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>
+                                <li>
+                                    <a href="/clery_act.html">Clery Act</a>
+                                </li>    
+                                <li>
+                                    <a href="/alertsu.html">Past Alerts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/bicycle-abatement.html" target="_blank">Bike Abatement</a>
+                                </li>
+								<li>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSeaulMLphJ41A7j2CEYKr1U1g-qbPxHs6vtqH_typqwVQJ3mw/viewform">Bike Safety Class Registration</a>
+								</li>
+                                <li>
+                                    <a href="/bicycle-sale.html" target="_blank">Bike Sales</a>
+                                </li>    
+                                <li>
+                                    <a href="/event-security-request.html" target="_blank">Event Security</a>
+                                </li>
+                                <li>
+                                    <a href="/house-checks.html">House Checks</a>
+                                </li>     
+                                <li>
+                                    <a href="/lost-found.html">Lost & Found</a>
+                                </li>    
+                                <li>
+                                    <a href="/StanfordSafeZone.html" target="_blank">SafeZone</a>
+                                </li>       
+                                <li>
+                                    <a href="/security-assessment.html" target="_blank">Security Assessment</a>
+                                </li>    
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Information</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/alertsu_home.html">AlertSU</a>
+                                </li>    
+                                <li>
+                                    <a href="/bicycle-registration.html">Bike Registration</a>
+                                </li>  
+
+								<!--<li>
+                                    <a href="/bicycle-safety-class.html">Bike Safety Class</a>
+                                </li>--> 								
+                                <li>
+                                    <a href="/hate-violence-report.html" target="_blank">Ca Ed. Code: Hate Violence Incidents</a>
+                                </li>
+								<li>
+								    <a href="/CPSA-course.html" target="_blank">Community Public Safety Academy (CPSA)</a>
+                                </li>
+                                <li>
+                                    <a href="/core_values.html" target="_blank">Core Values</a>
+                                </li>
+                                <li>
+                                    <a href="/crime-map.html" target="_blank">Crime Map</a>
+                                </li>
+                                <!--<li>
+                                    <a href="/memorandum-of-understanding.html">Memorandum of Understanding</a>
+                                </li>
+                                <li>
+                                    <a href="/parking-enforcement.html">Parking Enforcement</a>
+                                </li> -->       
+                                <li>
+                                    <a href="https://drive.google.com/file/d/1gXviAXUVCCgZrXvvz4c9pIe4qnxtrLGO/view?usp=sharing" target="_blank">Parking & Circulation Map</a>
+                                </li>    
+                                <li>
+                                    <a href="/personnel-training.html" target="_blank">Sworn Personnel Training</a>
+                                </li>
+                                <li>
+                                    <a href="/sworn-policies.html" target="_blank">Sworn Policies & Procedures</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Safety, Security, & Fire Report</a>
+                                </li>
+								<li>
+                                    <a href="https://transparency.flocksafety.com/stanford-university-ca-pd" target="_blank">Stanford ALPR (Flock)</a>
+                                </li>
+                                <li>
+                                    <a href="/stanford-dish.html" target="_blank">Stanford Dish</a>
+                                </li>   
+								<li>
+                                    <a href="https://ehs.stanford.edu/reference/suggested-travel-routes" target="_blank">Suggested Travel Routes</a>
+                                </li>    
+                                <li>
+                                    <a href="/transparency-dashboard.html" target="_blank">Transparency Dashboard</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Contact Us</a>
+                            <ul class="sub-menu">
+							<li>
+                                    <a href="/pdf/Collision_Report.pdf" target="_blank">Collision Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/EmployeeComplaintForm.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Email Us</a>
+                                </li> 
+								 <li>
+                                    <a href="/file-policereport.html">File a Police Report</a>
+                                </li> 
+                                <li>
+                                    <a href="/pdf/Report_Request_Form.pdf" target="_blank">Request Police Report</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Resources</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/active-threat.html">Active Threat</a>
+                                </li>    
+                                <li>
+                                    <a href="/campus-policies.html">Campus Policies</a>
+                                </li>    
+                                <li>
+                                    <a href="/county-contacts.html">County/Fire/Sheriff</a>
+                                </li>
+                                <li>
+                                    <a href="/domestic-violence.html">Domestic Violence</a>
+                                </li>
+                                <li>
+                                    <a href="/fraud-awareness.html">Fraud Awareness</a>
+                                </li>
+								<li>
+                                    <a href="https://eservices.sccgov.org/sfp">Livescan Services</a>
+                                </li>
+                                <li>    
+                                    <a href="/sexual-assult.html">Sexual Assult</a>
+                                </li>
+                                <li>
+                                    <a href="/victim-resources.html">Victim Resources</a>
+                                </li>
+								
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Clery Act/Annual Safety Report</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="/clery_act.html">About Clery</a>
+                                </li>
+                                <li>
+                                    <a href="/safety-report.html" target="_blank">Annual Safety Report</a>
+                                </li>   
+                                <li>
+                                    <a href="/pdf/CSA-Flowchart.pdf" target="_blank">Clery Reporting Guideline</a>
+                                </li>    
+                                <li>
+                                    <a href="/cleryindex.html" target="_blank">Clery Travel Form</a>
+                                </li>
+                                <li>
+                                    <a href="/pdf/CSA-Report-Form.pdf" target="_blank">CSA Report Form</a>
+                                </li> 
+								<li>
+                                    <a href="/pdf/SU-CleryCrimeDefinitions.pdf" target="_blank">Clery Crime Definitions</a>
+                                </li> 								
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/employment.html">Employment</a>
+                        </li> 
+						<li>
+                            <a href="/feedback.html" target="_blank">Feedback</a>
+                        </li>
+						
+						<!-------F E E D B A C K F O R M-------------------->
+					<!--<li>
+					<a>Feedback</a>
+                            <ul class="sub-menu">
+
+							<li>
+                                    <a href="/pdf/EmployeeComplaintForm2023.pdf" target="_blank">Complaint Form</a>
+                                </li>   
+                                <li>
+                                    <a href="/email-us.html">Compliment</a>
+                                </li> 
+								 
+                                
+                            </ul>
+							</li>-->
+                        										
+						<!----------------------------------------------------------->
+						
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+	<!--Body-->
+	
+	<div class="main-content">
+		<div class="heading">
+			<h1 class="content-width">AlertSU FAQs</h1>
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="background: #ffffff;">
+				<div id="sdps-intro" class="col-md-3 col-sm-3" style="background:#FAFAFA;min-width:320px;">
+					<div class="row center" style="padding-top:20px;">
+						<a href = "#" data-toggle="modal" data-target="#AlertModal">
+						<img src="images/siren-r.png" style="width:100px;height:100px;"> 
+						<p><div style="font-size:165%;color:#333333;">Alerts</div></p>
+						</a>
+					</div>
+						<!-- NEXT TEXT Verbiage -->
+<!-- 					<div class="row" style="padding-top:20px;padding-left:14px;padding-right:14px;font-weight: 500;color:#E35B5A;">
+						The AlertSU system will be tested on Thursday, October 13 2016 from 12:00pm - 12:30pm.
+						<a href = "#" data-toggle="modal" data-target="#AlertModal"></a>
+					</div> -->
+<!-- 					<div class="row" style="padding-top:30px;padding-left:14px;padding-right:14px;">
+						<p>Alert messages will be sent via text message, VoIP speaker phone, email and outdoor siren system to the Stanford community.
+						<p>Prior to the test, it is important you verify that your contact information is correct in <a href="https://axess.sahr.stanford.edu/" target="_blank">Axess</a> for students or <a href="https://stanfordyou.stanford.edu" target="_blank">StanfordYou</a> for staff & faculty.
+						<a href = "#" data-toggle="modal" data-target="#AlertModal"></a>
+					</div> -->
+					
+					<div class="row" style="padding-top:30px;padding-left:14px;padding-right:14px;">
+						<p>Alert messages can be sent to the Stanford community via text message, email and in extreme instances the outdoor siren system and VoIP speaker phones.
+						<p>It is important you verify your contact information in <a href="https://axess.sahr.stanford.edu/" target="_blank">Axess</a> for students or <a href="https://stanfordyou.stanford.edu" target="_blank">StanfordYou</a> for staff & faculty.
+						<a href = "#" data-toggle="modal" data-target="#AlertModal"></a>
+					</div>
+				</div>
+				<div id="main-content" class="col-sm-8 col-md-8" role="main" style="top:83px;min-width:300px;min-height:500px;margin-bottom:83px;">
+					<div class="center" style="padding-top:50px;"><h1>AlertSU FAQs</h1></div>
+					<div class="row box" style="width:95%;">
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#0">What is AlertSU?</a>
+							<div id="0" class="collapse faq-answer" >
+								AlertSU is Stanford University's emergency notification strategy used to communicate time-sensitive information during an emergency event affecting campus. The nature of the incident will determine which of the following methods will be employed to alert the campus community:
+								<ul style="list-style-type: circle;">
+								<li>Mass Notification System that sends messages via SMS text message, email, and/or phone to members of the Stanford community
+								<li>Outdoor Warning System composed of seven sirens positioned throughout main campus that emit alert tones and verbal instruction intended to reach those who are outdoors 
+								</ul>
+							</div>
+						</div>
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#1"> Who is authorized to issue an alert?</a>
+							<div id="1" class="collapse faq-answer" >
+								<p>Individuals authorized to initiate an AlertSU message include:
+								<ul style="list-style-type: circle;">
+								<li>University President and the Provost (or designee) 
+								<li>General Counsel
+								<li>Chief of Police (or on-scene SUDPS Incident Commander or designee)
+								<li>Associate Vice-Provost for Environmental Health & Safety
+								<li>Vice President for Public Affairs
+								<li>University Emergency Manager
+								<li>Director of the Stanford News Service
+								<li>Associate Director of Stanford News Service
+								<li>Executive Director of IT Services
+								<li>A Palo Alto Communications 911 dispatcher if authorized by the Chief of Police (or designee)
+								<ul>
+							</div>
+						</div>
+
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#2"> When is the AlertSU system activated?</a>
+							<div id="2" class="collapse faq-answer" >
+								<p>Authorized individuals will, without delay, utilize the AlertSU system to issue an immediate notification to the campus community upon first responder confirmation of any emergency or dangerous situation that poses an ongoing or continuing threat to the health or safety of the campus community. The notification will be sent to all students, faculty, and staff in the Stanford community (or an appropriate segment of the community if the event is limited to a defined area of the campus) unless issuance of the notification will, in the professional judgment of responsible authorities, compromise efforts to assist a victim or contain, respond to, or otherwise mitigate the emergency. The content of the message will vary depending on the situation, but will typically include the incident time, location, type, and recommended actions for safety.
+								<p>The University also conducts a campus wide test of the AlertSU system at least once each academic year. During the campus wide test, a message is sent to each member of the campus community via SMS text message, email, and phone. The outdoor warning system may also be activated to test its functionality and evaluate audio clarity.
+							</div>
+						</div>
+						
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#3"> What should I do when I receive an alert? </a>
+							<div id="3" class="collapse faq-answer" >
+								<p>Follow the directions of AlertSU messages unless doing so will place you in greater danger. AlertSU warnings are intended to support decisions for personal safety. When you become aware of a warning, make sure others around you are also aware of the potential danger. DO NOT respond to the scene of an emergency unless directed to do so. In addition to the possibility of becoming injured, your presence could interfere with the work of emergency response personnel.
+							</div>
+						</div>
+						
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#4">Where can I find out more information about the emergency or situation? </a>
+							<div id="4" class="collapse faq-answer" >
+								<p>As the emergency or dangerous situation progresses, University emergency response personnel will utilize one or more of the following channels to communicate additional information:
+								<ul style="list-style-type: circle;">
+									<li>Public Safety website: <a href=" https://police.stanford.edu" target="_blank"> https://police.stanford.edu</a>
+									<li>Emergency website: <a href="http://emergency.stanford.edu" target="_blank">http://emergency.stanford.edu</a> 
+									<li>Emergency information hotline:  <a href='tel:1-650-725-5555'>(650) 725-5555</a> 
+									<li>Out of Area information hotline <a href='tel:1-844-253-7878'>(844) 253-7878</a> (844-AlertSU)
+										<ul style="list-style-type: circle;">
+										<li>From abroad: 01-602-241-6769 
+										</ul>
+									<li>Hospital Emergency Information Hotline: <a href='tel:1-650-498-8888'>(650) 498-8888</a>  
+									<li>Radio: KZSU 90.1 FM
+									<li>Campus and local newspapers
+									<li>E-mail lists
+									<li>University's <a href="https://www.facebook.com/stanford" target="_blank">Facebook</a> or <a href="https://twitter.com/Stanford" target="_blank">Twitter</a> accounts 
+								</ul>
+							</div>
+						</div>
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#5"> How can I maintain my contact information to receive alerts?</a>
+							<div id="5" class="collapse faq-answer" >
+								<p>The AlertSU mass notification system is programmed to send alerts to all registered students, faculty, and staff. Emeriti and university affiliates may opt-in to receive AlertSU notifications as well.
+								<ul style="list-style-type: none;">
+									<li><b>Students and Post-docs:</b>
+										<ul style="list-style-type: circle;">
+											<p>Students and post-docs update their information through <a href="https://axess.stanford.edu" target="_blank">Axess</a>.
+											<p>University policy requires that students include the following:
+												<ul style="list-style-type: circle;">
+													<li>Stanford email address
+													<li>local phone number
+													<li>at least one additional point of contact. 
+												</ul>
+											<p>
+											<p>Contact information is removed from the AlertSU system when University affiliation changes (for students - graduation or leave of absence; for faculty/staff - change in employment status).
+										</ul>
+								</ul>
+								<ul style="list-style-type: none;">
+									<li><b>Faculty / Staff / Emeriti & Affiliates:</b>
+									<ul style="list-style-type: none;">
+										<p>The University requires that employees maintain their directory entry and opt in to AlertSU with their work phone number, email address, and any university-issued or reimbursed cell phone number. 
+										<p>Please allow the system 24 hours to implement any changes to contact information.
+										<p>Faculty and staff may update their AlertSU contact information in <a href="https://stanfordyou.stanford.edu" target="_blank">StanfordYou</a> under the "Maintain your directory and AlertSU emergency contact information" link. 
+										<p>The following fields in the "Maintain your directory and AlertSU emergency contact information" section of Stanfordyou are loaded into the AlertSU system:
+										<ul style="list-style-type: none;">
+											<li><b>SU Contact Info</b>
+												<br>Email address: Directory Listing Email
+												<br>Email address: Optional Secondary Email (may be a non-Stanford email address; must be a complete address, i.e., name@domain.com )
+												<p>
+											<li><b>Mobile Contact Info</b>
+												<br>Mobile contact info: Mobile Phone (must enter all 10 digits of number; international numbers are not recognized by the AlertSU system)
+												<p>
+											<li><b>Stanford Affiliation</b>
+												<br>Work phones: Work Phone 1
+												<br>Work phones: Work Phone 2
+												<p>
+											<li><b>Home Phones & Address</b>
+												<br>Permanent Phone & Address: Phone (international numbers are not recognized by the AlertSU system)
+												<br>Temporary Phone & Address: Temporary Phone
+										</ul>
+										<p>
+										<p>If you wish to receive voice or text messages on a personal phone enter that information into your Stanford directory account and verify the opt in box above the number is checked. If you do not check the box indicating "OK to use for AlertSU", the number will not be added to the AlertSU system.
+										<p>Emeriti and university affiliates sponsored at any level are eligible to opt themselves into the AlertSU mass notification system through the StanfordYou website. The opt in/out section is under the "Maintain your directory and AlertSU emergency contact information" link on the site. Affiliates may also be opted in by their sponsor in the Sponsorship Manager portal.
+									</ul>
+								</u>
+							</div>
+						</div>
+						
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#6"> Can I opt-out from receiving messages?</a>
+							<div id="6" class="collapse faq-answer" >
+							<p>The University requires students to provide one additional point of contact in addition to their local phone number and Stanford provided email address and to maintain this information in <a href="https://axess.stanford.edu" target="_blank">Axess</a>. We encourage all students to maintain current contact information and update changes as necessary so as to be able to receive emergency notices from the University.
+							<p>Faculty and staff are required to maintain their work phone number, Stanford provided email and any university reimbursed or provided cell phone information in their <a href="https://stanfordyou.stanford.edu" target="_blank">StanfordYou</a> account. We encourage faculty and staff to list personal phones and emails if this will increase the likelihood of reaching you with important information during an emergency.
+							<p>Faculty, staff, emeriti, and affiliates in AlertSU may opt their home phone, temporary home phone and personal cell phones out of AlertSU without removing the data from the directory. If Stanford supplies the mobile phone or reimburses you for any portion of it, the number must be listed in StanfordYou and be opted into AlertSU.
+							</div>
+						</div>
+						
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#7"> Will I still receive notices if I mark my information "Private" in StanfordYou?</a>
+							<div id="7" class="collapse faq-answer" >
+								<p><b>Yes.</b> StanfordYou provides three privacy settings to limit the availability of your information. They are "Public", "Stanford" and ""Private". Flagging your information as "Private"" will prevent it from being viewable by others but still allows the AlertSU system to contact you during an emergency. As of July 2010, Mobile, Temporary, and Permanent phones can be marked as Private in the directory and opted out of AlertSU by unchecking the "OK to use for AlertSU?" box near each phone number.
+								<p><b>Phones (for voicemail alerts)</b>
+								<ul style="list-style-type: circle;">
+									<li>Phone voice alerts arrive from 650-725-5555. We recommend that you program this number into your contacts for easy recognition. (This is also the University Emergency Information Hotline number.) 
+									<li>You must enter all 10 digits of your phone number into the directory system (<a href="https://axess.stanford.edu" target="_blank">Axess</a> or <a href="https://stanfordyou.stanford.edu" target="_blank">StanfordYou</a>) . Alerts are not delivered to phone numbers that are missing an area code, have an extension, or are international.
+								</ul>
+								
+								<p><b>Cell Phones (text message)</b>
+								<ul style="list-style-type: circle;">
+									<li>Text messages are only sent to text-capable phones listed in the directory "mobile phone" field. 
+									<li>There is no charge to be included in the AlertSU system, but depending on your service plan, your cellular provider may charge a nominal fee for you to receive SMS text messages. 
+									<li>Text alerts are 160 characters or less, but some carriers may still split the message into two parts. 
+									<li>Text message alerts arrive from either 67283 or 226787. We recommend that you program both of these numbers into your contacts for easy recognition when receiving an AlertSU text message. 
+									<li>So long as your number remains the same, you do not need to notify Stanford when you switch cellular providers
+								</ul>
+								
+								<p><b>Email</b>
+								<ul style="list-style-type: circle;">
+									<li>The system requires a complete email address for successful delivery. Common errors include: john.doe@stanford or "johndoe@gsb"; instead, enter the full address: john.doe@stanford.edu. 
+								</ul>
+							</div>
+						</div>
+						
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#8"> Why am I receiving alerts about recent crimes?</a>
+							<div id="8" class="collapse faq-answer" >
+							<p>A federal law (commonly referred to as the Clery Act) requires the University to issue timely warnings to the entire University community whenever crimes specified in the Clery Act occur on campus or in an area surrounding the campus, and the Chief of Police or her designee or other senior level University official has determined that the situation poses an immediate or ongoing threat to the community. The purpose of the warning is to aid in the prevention of similar crimes by alerting the community about the incident and providing information on precautions people can take to enhance their personal safety. The AlertSU system will be used to issue these warnings, and the method(s) used - SMS text message, email, and/or phone - will depend on the nature of the incident. 
+							</div>
+						</div>
+						
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#9"> What types of incidents are covered by the Clery Act?</a>
+							<div id="9" class="collapse faq-answer" >
+								<p>The Clery Act requires disclosure of crimes in the following categories: criminal homicide (including murder & nonnegligent manslaughter, and negligent manslaughter), sex offenses (forcible and non-forcible), aggravated assault, robbery, burglary, arson, motor vehicle theft, and arrests for drug-related offenses and illegal weapon possession. The act also requires the University to issue an immediate notification of hazards that pose a threat to the campus community's health and safety, such as a fire, an earthquake or an accidental hazardous materials release.
+							</div>
+						</div>
+						
+						<div class="row faq">
+							<a  data-toggle="collapse" data-target="#10">Why aren't crime alerts always issued immediately after an incident occurs?</a>
+							<div id="10" class="collapse faq-answer" >
+								<p>There are two types of alerts that might be issued - immediate notification and timely warnings. Immediate notifications are issued as soon as first responders are able to determine that the threat is credible and it is believed that the situation poses an ongoing threat to the community. It generally takes several minutes to determine and confirm the nature of an incident. A timely warning is similar to an immediate notification, but it may be issued after additional information has been gathered and could be issued several hours after an incident occurred. The most common reason for a delayed notification has been because the crime was not immediately reported to the police. 
+								<p>The Department of Public Safety will not issue a warning that could jeopardize a criminal investigation. The amount and type of information presented in the warning will vary depending on the circumstances of the crime. Significant criminal incidents that might elicit a timely warning include, but are not limited to, crimes of violence or patterns of property crimes.
+							</div>
+						</div>
+
+						<div class="row faq-color">
+							<a  data-toggle="collapse" data-target="#12">Who do I contact if I still have questions?</a>
+							<div id="12" class="collapse faq-answer" >
+								<p>Send an email to the Department of Public Safety at <a href="mailto:alertsudps@lists.stanford.edu?Subject=AlertSU%20Question">alertsudps@lists.stanford.edu</a> or submit a <a href="https://remedyweb.stanford.edu/helpsu/helpsu?pcat=alertsu" target="_blank">HelpSU ticket</a>. 
+							</div>
+						</div>
+						
+					</div> 
+				</div>
+			</div>
+		</div>	
+	</div>		
+	
+	
+
+
+	
+	
+  </div>
+  <!-- #su-content --> 
+</div>
+<!-- #su-wrap --> 
+
+
+ <footer>
+        <div class="content-width">
+            <div class="footer-container flex">
+                <img src="/images/SUSig_Stack_White-1.png" />
+                <div class="footer-nav flex">
+                    <ul class="flex">
+                        <li><a href="https://www.stanford.edu/"><strong>Stanford Home</strong></a></li>
+                        <li><a href="https://visit.stanford.edu/basics/index.html"><strong>Maps & Directions</strong></a></li>
+                        <li><a href="https://www.stanford.edu/search/"><strong>Search Stanford</strong></a></li>
+                        <li><a href="https://emergency.stanford.edu/"><strong>Emergency Info</strong></a></li>
+                    </ul>
+                    <ul class="flex">
+                        <li><a href="https://www.stanford.edu/site/terms/">Terms of Use</a></li>
+                        <li><a href="https://www.stanford.edu/site/privacy/">Privacy</a></li>
+                        <li><a href="https://uit.stanford.edu/security/copyright-infringement">Copyright</a></li>
+                        <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4">Trademark</a></li>
+                        <li><a href="http://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/">Non-Discrimination</a></li>
+                        <li><a href="https://www.stanford.edu/site/accessibility">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="padding: 5px 0;">©Copyright Stanford University.   Stanford, California 94305.</p>
+        </div>
+    </footer>
+<!-- Start Modals -->
+ 
+
+
+
+
+
+
+
+<!-- End Modals -->
+ 
+<!-- include page level javascript here -->
+
+
+ 
+</body>
+</html>

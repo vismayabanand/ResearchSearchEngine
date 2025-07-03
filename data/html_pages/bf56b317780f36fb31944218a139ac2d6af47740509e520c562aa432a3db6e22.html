@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" href="Third-Party/Slideshow/css/slideshow.css">
+	<style>
+		.slideshow {text-align:center; }
+	</style>
+	<script src="Third-Party/Slideshow/js/mootools-1.3.2-core.js"></script>
+	<script src="Third-Party/Slideshow/js/mootools-1.3.2.1-more.js"></script>
+	<script src="Third-Party/Slideshow/js/slideshow.js"></script>
+	<script src="Third-Party/Slideshow/js/slideshow.push.js"></script>
+	<script>
+		window.addEvent('domready', function(){
+			var data = {
+				'2019/vrgym_teaser.png': {'href': 'https://xuxie1031.github.io/projects/VRGym/VRGymProj.html', caption: 'VRGym: A Virtual Testbed for Physical and Interactive AI', "thumbnail": "2019/vrgym_icon.png"},
+				'2020/2020_XToM.png':{'href': 'https://vcla.stat.ucla.edu/Projects/ArjunXAI/XToM.html', caption: 'X-ToM Explaining with Theory-of-Mind for Gaining Justified Human Trust ', "thumbnail": "2020/2020_XToM_icon.png "},
+				'2019/vrkitchen_teaser.gif': {'href': 'https://sites.google.com/view/vr-kitchen/', caption: 'VRKitchen: An Interactive 3D Virtual Environment for Task-oriented Learning', "thumbnail": "2019/vrkitchen_icon.jpg"},
+				'2019/vrglove_teaser.gif': {'href': 'https://liuhx111.github.io/project_page/icra19_vrglove.html', caption: 'High-Fidelity Grasping in Virtual Reality using a Glove-based System', "thumbnail": "2019/vrglove_icon.png"},
+				'2018/indoor_syn_teaser.png': {'href': 'https://yzhu.io/publication/scenesynthesis2018cvpr', caption: 'Human-centric Indoor Scene Synthesis Using Stochastic Grammar', "thumbnail": "2018/indoor_syn_icon.png"},
+				'2017/openbottle_teaser.gif': {'href': 'https://fen9.github.io/projects/open_bottles/index.html', caption: 'Feeling the Force: Integrating Force and Pose for Fluent Discovery through Imitation Learning to Open Medicine Bottles', "thumbnail": "2017/openbottle_icon.png"},
+				'2019/openlock_teaser.gif': {'href': 'https://mjedmonds.com/projects/OpenLock/CogSci19_OpenLock_Learner.html', caption: 'Decomposing Human Causal Learning: Bottom-up Associative Learning and Top-down Schema Reasoning', "thumbnail": "2019/openlock_icon.png"},
+				'2015/vtt.png': {'href': 'http://web.cs.ucla.edu/~hangqi/vtt.html', caption: 'Restricted Visual Turing Test for Deep Scene and Event Understanding', "thumbnail": "2015/vttt.jpg"},
+
+                '2016/coop.gif': {'href': 'http://www.stat.ucla.edu/~ywu/CoopNets/main.html', caption: 'Cooperative Training of Descriptor and Generator Networks', "thumbnail": "2016/coop.png"},
+
+				'2015/iccv15_attribute.png': {'href': 'http://www.stat.ucla.edu/~xiaohan.nie/attr_pose.html', caption: 'Attributed Grammars for Joint Estimation of Human Attributes, Part and Pose'  , "thumbnail": "2015/iccv15_attributet.jpg"},
+				'2015/iccv15_aog.png': {'href': 'https://sites.google.com/site/quanshizhang/mining-and-or-graphs', caption: 'Mining And-Or Graphs for Graph Matching and Object Discovery', "thumbnail": "2015/iccv15_aogt.png"},
+				'2016/robot_lang.gif': {'href': 'http://vcla.stat.ucla.edu/Projects/TaskLearning_AAAI2016/', caption: 'Task Learning through Visual Demonstration and Situated Dialogue'  , "thumbnail": "2016/dialoguet.png"},
+				'2016/robot_fold.gif': {'href': 'http://vcla.stat.ucla.edu/Projects/RobotLearning_ICRA2016/', caption: 'Robot Learning with a Spatial, Temporal, and Causal And-Or Graph'  , "thumbnail": "2016/robotLearningt.png"},
+                '2015/robot.gif': {'href': 'http://www.stat.ucla.edu/~caiming/demos/RobotLearning/RobotLearning.html', caption: 'Robot Learning from Demonstration on a Unified Representation'  , "thumbnail": "2015/robott.png"},
+				'2015/cvpr2015_tool_02.gif': {'href': 'https://xiaozhuchacha.github.io/publication.html', caption: 'Understanding Tools: Task-Oriented Object Modeling, Learning and Recognition'  , "thumbnail": "2015/cvpr2015_tool_02t.jpg"},
+				'2015/cvpr15_aerialvideo.png': {'href': 'https://www.tshu.io/AerialVideo/AerialVideo.html', caption: 'Joint Inference of Groups, Events and Human Roles in Aerial Videos'  , "thumbnail": "2015/cvpr15_aerialvideot.png"},
+//				'2014/eccv14_car_detection.png': {'href': 'http://www.stat.ucla.edu/~boli/projects/context_occlusion/context_occlusion.html', caption: 'Integrating Context and Occlusion for Car Detection by Hierarchical And-Or Model'  , "thumbnail": "2014/eccv14_car_detectiont.jpg"},
+				'2014/IEEE_joint_suv.jpg': {'href': 'http://www.stat.ucla.edu/~tukw/JointParsing/', caption: 'Joint Video and Text Parsing for Understanding Events and Answering Queries'  , "thumbnail": "2014/IEEE_joint_suvt.jpg"},
+//				'2014/CVPR_singleview_scene.png': {'href': 'http://www.stat.ucla.edu/~ybzhao/research/attributedgrammar/', caption: 'Single-View 3D Scene Parsing by Attributed Grammar'  , "thumbnail": "2014/CVPR_singleview_scenet.jpg"},
+//				'2014/CVPR_multiview.png': {'href': 'http://www.stat.ucla.edu/~xiaohan.nie/multiview_action.html', caption: 'Cross-View Action Modeling, Learning and Recognition'  , "thumbnail": "2014/CVPR_multiviewt.jpg"},
+				'2014/cvpr2014_tlp_demo.png': {'href': 'http://www.stat.ucla.edu/~tfwu/project_posts/AOGTracker/', caption: 'Online Object Tracking, Learning and Parsing with And-Or Graphs'  , "thumbnail": "2014/cvpr2014_tlp_demot.png"},
+//				'2014/CVPR_tracking.png': {'href': 'http://www.stat.ucla.edu/~yanglu/Project/index.html', caption: 'Online Object Tracking, Learning and Parsing with And-Or Graphs'  , "thumbnail": "2014/CVPR_trackingt.jpg"},
+//				'2014/cvpr14_visual_persuasion.png': {'href': 'http://www.cs.ucla.edu/~joo/cvpr14_visual_persuasion.html', caption: 'Visual Persuasion: Inferring Communicative Intents of Images'  , "thumbnail": "2014/cvpr14_visual_persuasiont.jpg"},
+//				'2014/ICRA_office2.png': {'href': 'http://www.stat.ucla.edu/~ybzhao/research/fallingobjects/index.html', caption: 'Detecting Potential Falling Objects'  , "thumbnail": "2014/ICRA_office2t.png"},
+				'2013/iccv13_4DHOI.jpg': {'href': 'http://www.stat.ucla.edu/~ping.wei/items/projects/4DHOI/4DHOI.html', caption: 'Modeling 4D Human-Object Interactions for Event and Object Recognition'  , "thumbnail": "2013/iccv13_4DHOIt.jpg"},
+//				'2013/iccv13_decisionpolicy_demo.png': {'href': 'http://www.stat.ucla.edu/~tfwu/project/DecisionPolicy_2013.htm', caption: 'Learning Near-Optimal Cost-Sensitive Decision Policies for Object Detection'  , "thumbnail": "2013/iccv13_decisionpolicy_demot.png"},
+//				'2013/iccv13_dark_matter.png': {'href': 'http://www.stat.ucla.edu/~dan.xie/Projects/iccv13_dark_matter/index.html', caption: 'Inferring "Dark Matter" and "Dark Energy" from Videos'  , "thumbnail": "2013/iccv13_dark_mattert.png"},
+//				'2013/functionality.jpg': {'href': 'http://www.stat.ucla.edu/~ybzhao/research/functionality/', caption: 'Scene Parsing by Integrating Function, Geometry and Appearance Models'  , "thumbnail": "2013/functionalityt.jpg"},
+//				'2013/SceneAtt.png': {'href': 'http://www.stat.ucla.edu/~shuo.wang/SWang_Pub_SceneAtt.htm', caption: 'Weakly Supervised Learning for Attribute Localization in Outdoor Scenes'  , "thumbnail": "2013/SceneAttt.jpg"},
+//				'2013/CVIU_event.jpg': {'href': 'http://vcla.stat.ucla.edu/Event/Events.html', caption: 'Video Event Parsing and Learning with Goal and Intent Prediction'  , "thumbnail": "2013/CVIU_eventt.jpg"},
+
+			};
+			var randomnumber=Math.floor(Math.random()*Object.keys(data).length);
+			new Slideshow.Push('push', data, { controller: false, hu: 'images/projectImages/', transition: 'back:in:out', slide: randomnumber, delay: 6000});
+		});
+	</script>
+	<link rel="shortcut icon" href="images/logo_v3 - Tiny.png" type="image/png">
+	<title>Center for Vision, Cognition, Learning, and Autonomy (VCLA)</title>
+</head>
+
+<body id="top">
+
+<script type="text/javascript" src="header.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="navigation-wrapper">
+	<div id="navigation-wrapper-2">
+		<div class="center-wrapper">
+
+			<div id="navigation">
+
+				<ul class="tabbed">
+					<li class="current_page_item"><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="projects.html">&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="publications.html">&nbsp;&nbsp;&nbsp;&nbsp;Publications&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="people.html">&nbsp;&nbsp;&nbsp;&nbsp;People&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="links.html">&nbsp;&nbsp;&nbsp;&nbsp;Links&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="photos.html">&nbsp;&nbsp;&nbsp;&nbsp;Gallery&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="download.html">&nbsp;&nbsp;&nbsp;&nbsp;Download&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="demo.html">&nbsp;&nbsp;&nbsp;&nbsp;Demo&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="news.html">&nbsp;&nbsp;&nbsp;&nbsp;News&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+				</ul>
+
+				<div class="clearer">&nbsp;</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="content-wrapper">
+	<div class="center-wrapper">
+		<div class="content">
+
+        <div id="featured-wrapper">
+				<div id="main">
+					<div id = "intro">
+
+						<p>The Center for Vision, Cognition, Learning, and Autonomy (VCLA) is affiliated with the Departments of <a href="http://www.stat.ucla.edu">Statistics</a> and <a href="http://www.cs.ucla.edu">Computer Science</a>  at <a href="http://www.ucla.edu">UCLA</a>. We start from Computer Vision and expand to other disciplines. Our objective is to pursue a unified framework for  representation, learning, inference and reasoning, and to build intelligent computer systems for real world applications. Our projects span four directions:</p>
+
+						<ul compact>
+							  <li><strong><font size = "3">V</font>ision</strong>: image and video parsing, scene understanding, scheduling top-down/bottom-up processes, spatial-temporal-causal and-or graphs;
+						      </li>
+							  <li><strong><font size = "3">C</font>ognition</strong>:  functionality, intuitive physics, intentionality, perceptual causality, theory-of-mind,  and visual persuasion; </li>
+							  <li><strong><font size = "3">L</font>earning</strong>: information projection, stochastic grammars, and-or graph learning, and lifelong communicative learning; </li>
+							  <li><strong><font size = "3">A</font>utonomy</strong>: human robot collaboration, multi-agent task planning, situated dialogue,  human value and moral norm. </li>
+							<!--  <li><strong><font size = "3">A</font>rt</strong>: abstraction, expression, aesthetics, freedom, and perceptual entropy. </li> -->
+					  </ul>
+					</div>
+
+<div class="separator-vertical">
+					<div>
+					  In recent years, our projects have extended to areas in robot automation, language and dialogues, communications and social science, and AI.
+                      <a href="projects.html">Click to see MORE projects.</a><br/><br/>
+
+
+                    <div id="push" class="slideshow"></div>
+
+                    <br /> <br /> <br /> <br />
+<!--
+<p><h4>Press Coverage</h4></p>
+<ul>
+  <li><a href="http://www.cs.ucla.edu/~joo/cvpr14_visual_persuasion.html"> Visual Persuasion: Inferring Communicative Intents of Images</a>
+  <br/>
+  - <a href="http://www.bloombergview.com/articles/2014-06-25/is-a-picture-worth-1-000-polls">Is a Picture Worth 1,000 Polls</b></a> by Virginia Postrel. <i> Bloomberg View. </i> June 25, 2014.  </li>
+  <li><a href="http://www.stat.ucla.edu/~zyyao/projects/I2T.htm"> I2T: Image Parsing to Text Generation</a>
+  <br/>
+  - <a href="http://www.technologyreview.com/news/419171/surveillance-software-knows-what-a-camera-sees/">Surveillance Software Knows What a Camera Sees</b></a> by Tom Simonite. <i> MIT Technology Review. </i> June 1, 2010.  </li>
+</ul>
+
+<p><h4>Major Project sites</h4></p>
+<ul>
+  <li>Dark: <a href="http://vcla.stat.ucla.edu/Dark/"> Inferring the "Dark Matter" and "Dark Energy" from Image and Video</a> </li>
+  <li>MURI: <a href="http://muri.stat.ucla.edu"> Knowledge Representation, Reasoning and Learning for Understanding Scenes and Events</a> </li>
+  <li>SEE: <a href="http://vcla.stat.ucla.edu/see/">Sensor Exploitation and Execution on a Unified Foundation</a></li>
+  <li>CDI: <a href="http://vrnewsscape.sscnet.ucla.edu/">Image-Text Parsing for Understanding Social and Political News Events</a> </li>
+</ul>
+<p><h4>Related conferences</h4></p>
+    <ul>
+      <li><a href="http://www.visionmeetscognition.org/fpic2014/">Vision Meets Cognition Workshop</a>, in conjunction with
+<a href="http://www.pamitc.org/cvpr14/workshops.php">CVPR 2014</a></li>
+      <li><a href="http://www.cvpr2012.org">CVPR 2012</a></li>
+      <li><a href="http://vcla.stat.ucla.edu/sig12/">SIG-12: Turorial on Stochastic Image Grammars for Object, Scence and Event Understanding</a></li>
+      <li><a href="http://vcla.stat.ucla.edu/sig11/">SIG-11: Second International Workshop on Stochastic Image Grammars</a></li>
+      <li><a href="http://vcla.stat.ucla.edu/sig09/">SIG-09: First International Workshop on Stochastic Image Grammars</a></li>
+      <li><a href="http://www.imageparsing.com">Lotus Hill Image Datasets</a></li>
+    </ul>
+	<p> <h4>Related groups at UCLA </h4></p>
+    <ul><li><a href="http://www.math.ucla.edu/~imagers">UCLA Image Processing Research Group</a></li>
+							<li><a href="http://vision.ucla.edu">UCLA Vision Lab</a></li>
+							<li><a href="http://www.cs.ucla.edu/magix/">UCLA Computer Graphics Lab</a></li>
+							<li><a href="http://research.bmap.ucla.edu/">UCLA Brain Mapping Center</a></li>
+							<li><a href="http://cvl.psych.ucla.edu">UCLA Computational Vision and Learning Lab</a></li>
+							<li><a href="http://www.ipam.ucla.edu">UCLA Institute for Pure and Applied Mathematics</a></li>
+	  </ul>-->
+					</div>
+
+
+
+                </div>
+
+					<div class="clearer">&nbsp;</div>
+				</div>
+				</div>
+
+			</div>
+
+			</div>
+
+	</div>
+</div>
+
+
+<script type="text/javascript" src="footer.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19911240-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

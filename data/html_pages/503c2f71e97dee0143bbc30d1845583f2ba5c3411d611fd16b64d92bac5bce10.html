@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Research -     Machine Learning - CMU - Carnegie Mellon University</title>    
+    <meta content="Research" name="description"/>
+    <meta content="Carnegie Mellon University" name="author"/>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                	            	            	            	            
+                        
+              
+    
+        
+        
+            
+
+<meta content="Research - Machine Learning - CMU - Carnegie Mellon University" property="og:title"/>    
+    <meta content="Research" property="og:description"/>
+    <meta content="website" property="og:type"/>
+<meta content="https://www.ml.cmu.edu//research/index.html" property="og:url"/> 
+    <meta content="https://www.ml.cmu.edu//og-img.jpg" property="og:image"/>
+<meta data-siteId="cs-machine-learning-2" id="siteId"/>
+<!-- Page ID for Siteimprove deep linking. -->
+<meta content="1e26ad30800269db5200e9c0edff8af1" name="id"/>
+
+    
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//www.cmu.edu/common/standard-v6/css/main.6.7.min.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="//www.cmu.edu/common/standard-v6/css/print.min.css" media="print" rel="stylesheet" type="text/css"/>
+    
+    <link href="//www.cmu.edu/favicon.ico" rel="icon"/>
+    <link href="//www.cmu.edu/favicon-152.png" rel="apple-touch-icon-precomposed"/>
+    <meta content="#9f0000" name="msapplication-TileColor"/>
+    <meta content="//www.cmu.edu/favicon-144.png" name="msapplication-TileImage"/>
+    
+    <script>var dataLayer=window.dataLayer=window.dataLayer||[];</script>
+<script>
+  var siteId = document.getElementById('siteId').getAttribute('data-siteId');
+  var siteName = siteId.replace(/\-\d{1,2}$/, '');
+  dataLayer.push({
+    'siteId': siteId,
+    'siteName': siteName,
+    'cms': 'cascade'
+  });
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5Q36JQ');</script>
+
+    
+    
+                                                            <meta content="Machine learning, artificial intelligence, deep learning, natural language processing, automated machine learning, big data, data science, neural network, ethics and ai, computer science" name="Keywords"/>
+<meta content="The Machine Learning Department at Carnegie Mellon University is ranked as #1 in the world for AI and Machine Learning, we offer Undergraduate, Masters and PhD programs. Our faculty are world renowned in the field, and are constantly recognized for their contributions to Machine Learning and AI." name="Description"/>
+<meta content="Carnegie Mellon University" name="author"/> 
+<meta content="Machine Learning | Carnegie Mellon University" property="og:site_name"/>  
+<meta content="623120331377752" property="fb:app_id"/>
+<meta content="1950839991861836" property="fb:pages"/>
+<meta content="654417927" property="fb:admins"/>
+<meta content="654417927" property="fb:profile_id"/>
+<meta content="@mldcmu" name="twitter:site"/>
+<meta concent="@carnegiemellon" name="twitter:creator"/>    
+<meta content="summary" name="twitter:card"/>
+<meta content="noarchive" name="robots"/>
+<meta content="noarchive" name="googlebot"/>
+<meta content="#cc0000" name="theme-color"/>
+<meta content="#9f0000" name="msapplication-TileColor"/>
+<meta content="//mldcmu.ai/images/icons/favicon.png" name="msapplication-TileImage"/>
+<link href="../manifest.json" rel="manifest"/>
+<link href="//mldcmu.ai/images/icons/favicon.ico" rel="icon"/>
+<link href="//mldcmu.ai/images/icons/favicon.png" rel="apple-touch-icon-precomposed"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet"/></noscript>
+<link href="//mldcmu.ai/css/custom.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//mldcmu.ai/css/custom.css" rel="stylesheet"/></noscript>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" media="none" onload="if(media!='all')media='all'" rel="stylesheet"/><noscript><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet"/></noscript>
+                                                                                    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-114918459-1" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-114918459-1');
+// ]]></script>
+                                                            
+    
+</head>
+<body class="no-js">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5Q36JQ" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+
+
+<div id="container">
+
+            <header>
+        <div class="roof ">
+    <div>
+        <a class="wordmark" href="//www.cmu.edu/">Carnegie Mellon University</a>
+        <button aria-label="toggle menu" aria-pressed="false" class="menu-btn" href="#nav"><b>&#8212;</b><b>&#8212;</b><b>&#8212;</b></button>
+        <form action="https://search.cmu.edu" class="search search-form" method="get" name="customForm">
+            <input id="id_form_id" name="form_id" type="hidden" value="basic-form"/>
+            <input id="site" name="site" type="hidden" value=""/>
+            <input id="id_ie" name="ie" type="hidden" value="UTF-8"/>
+            <label><span>Search</span>
+                <input aria-label="Search" id="id_q" name="q" placeholder="Search"/>
+            </label>              <button title="Submit" type="submit">Search</button>
+                                                                                                                <label class="searchSite"> <span>Search this site only</span>                 <input checked="checked" name="site" type="checkbox" value="cs-machine-learning-2"/>
+            </label>
+
+                    </form>
+    </div>
+</div>       
+
+            <div id="sitename">
+                                        <div>
+                        <span class="sitetitle"><a href="/index">Machine Learning - CMU</a></span>                                                                                                                                                                            </div><a href="../index.html" target="_self"><img alt="Machine Learning Department | Carnegie Mellon University" src="../images/logo-mld.svg"/></a> 
+                        
+        </div>    
+    
+</header>
+    
+    <div id="content" tabindex="0">
+        
+    	    
+
+
+
+    	        
+    <div class="breadcrumbs">
+                                <a href="/index">Machine Learning - CMU</a>
+                                     &#160;&#8250;&#160;             Research
+                            </div>
+    
+    	
+    	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+        <script type="text/javascript">
+                    function addLoadEvent(func) {
+                        var oldonload = window.onload;
+                        if (typeof window.onload != 'function') {
+                            window.onload = func;
+                        } else {
+                            window.onload = function() {
+                            if (oldonload) {
+                                oldonload();
+                            }
+                            func();
+                            }
+                          }
+                        }
+                        </script>
+      
+    
+                                                <div class="content">
+                        <div>                             <h1><strong>Machine Learning Department Research</strong></h1>
+<img alt="Research" class="header-photo" src="wordle5-copy.jpg" width="100%"/>
+<table border="0">
+<tbody>
+<tr>
+<th style="vertical-align: bottom;">
+<h2>Lab or Research Group</h2>
+</th>
+<th style="vertical-align: bottom;">
+<h2>Description</h2>
+</th>
+</tr>
+<tr>
+<td>
+<p><strong>AI Institute for Societal Decision Making</strong><br/>(Aarti Singh, Bryan Wilder, Hoda Heidari, Roni Rosenfeld, Jeff Schneider, Aaditya Ramdas)</p>
+</td>
+<td>As part of the AI Institute for Societal Decision Making (AI-SDM), we develop AI to augment human decision-making in societal domains such as public health and disaster management that require complex, often life-saving, decisions to be made under uncertain, dynamic, and resource-constrained circumstances, while also accounting for people&#8217;s perceptions of risk, trust and equity. Using data-driven recommendations via bandit and reinforcement learning algorithms, adaptive control trials, counterfactual reasoning, and personalized interventions, we enable public health and emergency management organizations to identify effective and ethical policy decisions that are socially accepted. We are also training and upskilling the workforce at the intersection of AI and social sciences through targeted engagement with high schools, community colleges, universities, corporations, and government partners, all while creating public awareness about AI's potential to positively impact society.<br/><a href="https://www.cmu.edu/ai-sdm/">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>Databases Group</strong><br/>(Christos Faloutsos)</td>
+<td>The databases group at Carnegie Mellon University focuses on high performance database architectures, multimedia, and data mining. We participate in a number of cross-disciplinary efforts, and closely collaborate with a number of other groups at CMU.<br/> <a href="https://db.cs.cmu.edu/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>Delphi Research Group (Epidemiological Forecasting)<br/></strong>(Roni Rosenfeld, Ryan Tibshirani, Larry Wasserman, Valerie Ventura, Alex Reinhardt, Bryan Wilder)</td>
+<td>Epidemiological forecasting is critically needed for decision making by public health officials, commercial and non-commercial institutions, and the general public. We developed multiple award winning forecasting technologies, based on statistical machine learning and other techniques. Our long term vision is to make epidemiological forecasting as universally accepted and useful as weather forecasting is today. We have participated, and done very well, in all epidemiological forecasting challenges organized by the U.S. government to date: Influenza 2013&#8212;2014 (CDC); Chikungunya 2015 (DARPA); Dengue 2009&#8212;2014 (White House OSTP); Influenza 2014&#8212;2015 (CDC, winner); Influenza 2015&#8212;2016 (CDC, winner); Influenza 2016&#8212;2017 (CDC, winner), Influenza 2017&#8212;2018 (CDC, triple winner).<br/> <a href="https://delphi.cmu.edu/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>SAILING Lab</strong><br/>(Eric Xing)</td>
+<td>Our principal research interests lie in the development of machine learning and statistical methodology, and large-scale computational system and architecture, for solving problems involving automated learning, reasoning, and decision-making in high-dimensional, multimodal, and dynamic possible worlds in artificial, biological, and social systems.<br/> <a href="https://sailing-lab.github.io/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>SELECT Lab</strong><br/>(Geoff Gordon)</td>
+<td>Our long-term research goal is to develop smarter methods for learning and making decisions. Toward this goal, we look at ways to design, analyze, understand, and control complex real-world systems. Our research spans the entire spectrum from theoretical foundations to real-world applications.</td>
+</tr>
+<tr>
+<td><strong>The AUTON Lab</strong><br/>(Artur Dubrawski, Barnabas Poczos, Jeff Schneider)</td>
+<td>Our main research is focusing on exploring useful data structures and algorithms, and making interesting statistical and learning methods applicable on small and large volumes of data. We are very interested in the underlying computer science, mathematics, statistics, and in practical applications of our work. We collaborate closely with food safety analysts, public health agencies, nuclear safety experts, managers of fleets of equipment, social networkers, astrophysicists, biologists, chemists, drug companies, exploration companies and roboticists.<br/> <a href="https://www.autonlab.org/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>NeuroStats</strong><br/>(Rob Kass)</td>
+<td>Researchers throughout the world who investigate neural networks in the brain are trying to answer detailed questions using data sets that are large but noisy, creating new challenges for statistics and machine learning. The NeuroStats group contributes by focusing especially on methods for reliably identifying coordinated neural activity across multiple brain areas.<br/> <a href="https://www.stat.cmu.edu/neurostats/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>Foundations of Machine Learning, Theory of Computing, and Algorithmic Game Theory</strong><br/>(Nina Balcan)</td>
+<td>
+<ul>
+<li>Developing foundations and principled, practical algorithms for important modern learning paradigms. These include interactive learning, distributed learning, learning representations, life-long learning, metalearning, noise tolerant or robust learning, and neural architecture search.</li>
+<li>Foundations and applications of data driven algorithm design. Design and analysis of algorithms on realistic instances (a.k.a. beyond worst case).</li>
+<li>Computational and data-driven approaches in game theory and economics.</li>
+<li>Computational, learning theoretic, and game theoretic aspects of multi-agent systems.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Next Gen Statistical Machine Learning</strong><br/>(Pradeep Ravikumar)</td>
+<td>We focus on two fundamental aspects of "next gen statistical machine learning": Graceful AI, where we wish to learn models that are "graceful" beyond just high average case performance, and Scrappy AI, where we wish to learn models under resource constraints. Under Graceful AI, the group is engaged in research on Explainable AI (XAI), Robust ML, Adversarial ML, Reliable/Resilient ML for "out of distribution" (OOD) test environments, and Statistical Game Theory. Under Scrappy AI, the group is engaged in research on Structural Causal Models and Directed Graphical Models, Incorporating Domain Knowledge (what DARPA calls "Third Wave AI&#8221;), and Self-supervised Learning.</td>
+</tr>
+<tr>
+<td><strong>Learning from People</strong><br/>(Nihar Shah)</td>
+<td>Many applications which involve evaluation of a number of items by a set of people, but where each item is evaluated by only a subset of people and each person evaluates only a subset of items. This distributed nature of evaluations results in many issues of bias and unfairness. We address these problems via foundational theoretical analyses, algorithm design, real-world experiments, and emphasize making an impact. Our focus application is Peer Review, the backbone of scientific research. Our work also applies to other applications such as hiring, admissions, crowdsourcing, healthcare, online ratings and recommendations, and peer grading.</td>
+</tr>
+<tr>
+<td><strong>Brain ML</strong><br/>(Leila Wehbe)</td>
+<td>How does the human brain organize information while achieving complex tasks such as understanding a sentence or a visual scene? How does brain activity from humans performing everyday tasks relate to activations of AI algorithms processing the same information? We align brain recordings with AI representations to help us understand how information is processed in different brain areas and how these areas communicate with each other. This alignment can also help us improve our understanding of AI algorithms, and even propose ways to improve them. By studying how individual brains differ in terms of the information they represent, we can also predict differences in behavior, and propose tools to help understand neurological and psychiatric illnesses.</td>
+</tr>
+<tr>
+<td><strong>Foundations of Machine Learning, Deep Learning Theory</strong><br/>(Yuanzhi Li)</td>
+<td>
+<ul>
+<li>Developing mathematical foundations for the current deep learning models: Why they are more effective than traditional learners?</li>
+<li>Developing more efficient, and principle approaches for learning multi-layer neural networks.</li>
+<li>Understanding the new phenomenon associated with the non-convex optimization landscapes in deep learning, in particular the algorithmic regularization.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><strong>Catalyst</strong><br/>(Tianqi Chen)</td>
+<td>The rapid advance in ML models and ML-specific hardware makes it increasingly challenging to build efficient and scalable learning systems that can take full advantage of the performance capability of modern hardware and runtime environments. Today's ML systems heavily rely on human effort to optimize the training and deployment of ML models on specific target platforms. Unlike conventional application domains, learning systems need to address a continuously growing complexity and diversity in machine learning models, hardware backends, and runtime time environments. Our response to this unique challenge in ML systems is Catalyst (CMU automated learning systems group), a joint research group across the areas of machine learning, systems, programming languages, and computer architecture. Our mission is to build ML algorithms and learning systems that automate cross stack optimizations by leveraging mathematical and statistical properties of ML computations and by co-designing systems, hardware, and ML algorithms.<br/> <a href="https://catalyst.cs.cmu.edu/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>Approximately Correct Machine Intelligence (ACMI) Lab</strong><br/>(Zack Lipton)</td>
+<td>Building intelligent systems applicable in the real world requires more than prediction. Driving decisions requires causal insights. Reliability requires models that are provably robust under clear assumptions. Deploying data-driven technology in society requires accounting for the complex dynamics and feedback loops mediating this interaction. Aligning with social desiderata such as fairness requires a philosophically coherent treatment. ACMI lab studies core machine learning methods, their applications in healthcare, and their social impacts. We seek to address these outer loop questions, while leveraging breakthroughs in representation learning to address the diverse raw data sources that deep learning has made accessible.<br/> <a href="https://acmilab.org/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+<tr>
+<td><strong>Cell Organizer</strong><br/>(Robert Murphy)</td>
+<td>A team led by Bob Murphy, faculty emeritus in the Computational Biology Department, is combining image-derived modeling methods with active learning to build a continuously updating, comprehensive model of protein localization. Obtaining a complete picture of the localization of all proteins in cells and how it changes under various conditions is an important but daunting task, given that there are on the order of a hundred cell types in a human body, tens of thousands of proteins expressed in each cell types, and over a million conditions (which include presence of potential drugs or disease-causing mutations). Automated microscopy can help by allowing large numbers of images to be acquired rapidly, but even with automation it will not be possible to directly determine the localization of all proteins in all cell types under all conditions.<br/> <a href="http://www.cellorganizer.org/" rel="noopener" target="_blank">Learn more...</a></td>
+</tr>
+</tbody>
+</table>
+                                                    </div><div class="sidebar">                                                         <div class=" teal invert">
+                            <h1>Additional Research</h1>
+                        <ul>
+<li>In-depth descriptions of selected research projects are available on the <a href="https://blog.ml.cmu.edu/" rel="noopener" target="_blank" title="Machine Learning at CMU Blog">ML@CMU blog</a>.</li>
+<li>Additional research projects are described on the individual home pages of&#160;<a href="https://www.ml.cmu.edu/people/core-faculty.html" rel="noopener" target="_blank">ML faculty</a>.</li>
+<li>Examples of projects open to undergraduates can be found on our <a href="https://www.ml.cmu.edu/academics/minor-senior-projects.html" rel="noopener" target="_blank">ML Minor Senior Projects</a> page.</li>
+</ul>
+            </div>
+                                                <div class=" green invert">
+                            <h1>Dissertations &amp; Reports</h1>
+                        <ul>
+<li><a href="https://www.ml.cmu.edu/research/phd-dissertations.html">PhD Dissertations</a></li>
+<li><a href="https://www.ml.cmu.edu/research/data-analysis-projects.html">Data Analysis Projects</a></li>
+<li><a href="https://www.ml.cmu.edu/research/technical-reports.html">Technical Reports</a></li>
+</ul>
+            </div>
+                            </div>                          </div>                     
+        
+        
+
+
+        
+        <footer class="grid column3 invert">
+            
+<div>
+<p>
+            Machine Learning - CMU<br/>
+                    5000 Forbes Avenue<br/>Gates Hillman Center, 8th Floor<br/>Pittsburgh, PA 15213<br/>mldwebmaster@cs.cmu.edu<br/>                 <a href="../about/contact-us.html">Contact Us</a>
+</p>
+<ul>
+    <li><a href="//www.cmu.edu/legal/" target="_blank">Legal Info</a></li>
+    <li><a href="//www.cmu.edu/">www.cmu.edu</a></li>
+</ul>
+<ul><li>&#169; <span id="js-current-year">2025</span> Carnegie Mellon University</li>
+</ul>  
+</div>
+            
+<div>
+    
+
+    <ul class="social third">
+    <li>
+                            <a class="facebook" href="https://www.facebook.com/mldcmu" target="_blank">CMU on Facebook</a>
+        </li><li>
+                            <a class="twitter" href="https://twitter.com/mldcmu" target="_blank">CMU on Twitter</a>
+        </li><li>
+                            <a class="linkedin" href="https://www.linkedin.com/company/mldcmu" target="_blank">CMU on LinkedIn</a>
+        </li><li>
+                                                                                                                            <a class="more" href="https://github.com/organizations/mldcmu/" target="_blank" title="More Social Networks">CMU Social Media Directory</a>
+                    </li>    </ul>
+
+
+</div>
+            
+
+
+<div>
+   <nav id="nav">
+
+                                                                                                                                                                                
+                            <ul>
+                                                        <li class="">                              <a href="../about/index.html" target="_self">                     About
+    </a>
+                        
+                                          
+                                                                                                                                                     <ul>
+                                                        <li>                              <a href="../about/contact-us.html" target="_self">                     Contact Us
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../about/what-is-machine-learning-a-message-from-manuela-veloso-regarding-machine-learning-ml.html" target="_self">                     What is Machine Learning?
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../academics/index.html" target="_self">                     Academics
+    </a>
+                        
+                                          
+                                                                                                                   
+                            <ul>
+                                                        <li class="">                              <a href="../academics/rankings/index.html" target="_self">                     Machine Learning Graduate Programs Rankings
+    </a>
+                        
+                                          
+                                                                                                                                                                                 </li>
+            	                                                                                                                                                                                                                                                                                      <li>                              <a href="../academics/machine-learning-phd.html" target="_self">                     Machine Learning (ML) PhD
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/joint-ml-phd.html" target="_self">                     Joint Machine Learning PhD Degrees
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/primary-ms-machine-learning-masters.html" target="_self">                     MS in Machine Learning
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/5th-year-ms.html" target="_self">                     5th-Year Master's in Machine Learning
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <li>                              <a href="../academics/ml-intro-classes.html" target="_self">                     ML Intro Classes
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <li>                              <a href="../academics/primary-ms-machine-learning-applied-study-masters.html" target="_self">                     MS in Machine Learning - Applied Study
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../academics/joint-phd-ahdm.html" target="_self">                     Joint PhD ML/AHDM
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="active ">                              <a href="index.html" target="_self">                     Research
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul>
+                                                        <li>                              <a href="phd-dissertations.html" target="_self">                     PhD Dissertations
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li>                              <a href="data-analysis-projects.html" target="_self">                     Data Analysis Projects
+    </a>
+    </li>
+                                                                                                                                                                                                                                                              <li>                              <a href="technical-reports.html" target="_self">                     Technical Reports
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../people/index.html" target="_self">                     People
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <ul>
+                                                        <li>                              <a href="../people/core-faculty.html" target="_self">                     Core Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/adjunct-faculty.html" target="_self">                     Adjunct &amp; Visiting Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/affiliated-faculty.html" target="_self">                     Affiliated Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/related-faculty.html" target="_self">                     Related Faculty
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/staff.html" target="_self">                     Staff
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/postdocs-project-scientists.html" target="_self">                     Postdocs &amp; Project Scientists
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/visitors.html" target="_self">                     Visitors &amp; Interns
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../people/phd-students.html" target="_self">                     PhD Students
+    </a>
+    </li>
+                                                                                                                                                                                                                                                              <li>                              <a href="../people/alumni-phd.html" target="_self">                     PhD Alumni
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../honors-and-awards/index.html" target="_self">                     Honors and Awards
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                           <ul>
+                                                        <li>                              <a href="../honors-and-awards/best-paper-awards.html" target="_self">                     Best Paper Awards
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/faculty-awards1.html" target="_self">                     Faculty Awards
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/faculty-honors.html" target="_self">                     Faculty Honors
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../honors-and-awards/student-awards.html" target="_self">                     Student Awards
+    </a>
+    </li>
+                                                                                                                                                                                                                     </ul>
+                                        </li>
+            	                                                                       
+                                        <li class="">                              <a href="../resources/index.html" target="_self">                     Resources
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                           </li>
+            	                                                                                
+                                        <li class="">                              <a href="../join-us/index.html" target="_self">                     Join Us
+    </a>
+                        
+                                          
+                                                                                                                                                                                 </li>
+            	                                                                                                                                                                                                                                                                                                                                                                                    <li>                              <a class="external" href="https://mld.ai/give" target="_blank">                     Give
+    </a>
+    </li>
+                                                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                                                                               
+                                        <li class="secondary">                              <a href="../calendar/index.html" target="_self">                     Calendar
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                           </li>
+            	                                                                                   
+                                        <li class="secondary">                              <a href="../current-students/index.html" target="_self">                     Info for Current Students
+    </a>
+                        
+                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <ul>
+                                                        <li>                              <a href="../current-students/phd-peers.html" target="_self">                     PhD Peers
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../current-students/phd-committees.html" target="_self">                     PhD Committees
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                        <li class="">                              <a href="../current-students/student-orientation/index.html" target="_self">                     MLD Virtual Graduate Student Orientation
+    </a>
+                        
+                                          
+                                                                                            </li>
+            	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <li>                              <a href="../current-students/phd-courses-and-milestones.html" target="_self">                     PhD Courses &amp; Milestones
+    </a>
+    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li>                              <a href="../current-students/phd-ms-research.html" target="_self">                     MS Research on the way to a PhD
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                                                                                   
+                                        <li class="secondary">                              <a href="../wellness-network/index.html" target="_self">                     Wellness Network
+    </a>
+                        
+                                          
+                                                                                                                 <ul>
+                                                        <li>                              <a href="../wellness-network/wellness-network-confidentiality-details.html" target="_self">                     MLD Wellness Network Confidentiality
+    </a>
+    </li>
+                                                                                                                                                                                                             <li>                              <a href="../wellness-network/wellness-network-members.html" target="_self">                     Wellness Network Members
+    </a>
+    </li>
+                                                                                                                                                                         <li>                              <a href="../wellness-network/university-resources.html" target="_self">                     University Resources
+    </a>
+    </li>
+                                                                                            </ul>
+                                        </li>
+            	                             
+                                                 <li class="secondary">                              <a class="external" href="https://blog.ml.cmu.edu" target="_blank">                     ML@CMU Blog
+    </a>
+    </li>
+                     
+                         
+                         
+                </ul>
+    </nav>
+</div>
+
+
+
+
+        </footer>
+    </div>
+
+</div>
+
+ <script src="//www.cmu.edu/common/standard-v6/js/list.min.js" type="text/javascript"></script>
+ <script src="//www.cmu.edu/common/standard-v6/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+ <script src="//www.cmu.edu/common/standard-v6/js/main.6.7.min.js" type="text/javascript"></script>
+
+ 
+
+    
+    
+                                                                
+    
+        
+    
+    
+
+
+
+
+       
+                
+
+
+        
+
+    
+                                                                                                    <div class="hidden" id="microformats">
+<p class="vcard"><span class="org fn"> <span class="organization-unit">Machine Learning Department</span> <span class="organization-name">Carnegie Mellon University</span> </span> <span class="adr"> <span class="street-address">5000 Forbes Avenue,<br/>Gates Hillman Center,<br/>8th Floor</span> <span class="locality">Pittsburgh</span>, <span class="region">Pennsylvania</span> <span class="postal-code">15213</span>. <span class="photo"><img src="https://mldcmu.ai/images/og-img.jpg"/></span> <span class="pricerange">N/A</span> <span class="tel">(412) 268-2000</span> </span></p>
+</div>
+<a class="back-to-top" href="#" role="button" title="Back to Top Button"><span class="button-to-top fa fa-chevron-up"></span></a> <!-- Footer Mod -->
+<script id="modFooter" type="text/javascript">// <![CDATA[
+var replacetext = {
+                "Machine Learning - CMU": "<a title=\"Machine Learning | Carnegie Mellon University\" href=\"https://www.ml.cmu.edu\">Machine Learning Department</a><br/><a title=\"School of Computer Science | Carnegie Mellon University\" href=\"https://cs.cmu.edu\" target=\"_blank\" rel=\"noopener\">School of Computer Science</a>",
+                "mldwebmaster@cs.cmu.edu": "Questions?: <a title=\"Main Contacts | Machine Learning | Carnegie Mellon University\" href=\"https://www.ml.cmu.edu/about/contact-us.html\">Contact us</a>",
+                "Contact Us": "<a href=\"//www.mldcmu.ai/directions\" rel=\"noopener\" target=\"_blank\" title=\"Get One Click Directions on Google Maps for the Machine Learning Department at Carnegie Mellon University\">Get Directions</a>",
+                "social third": "social-icons",
+                "<a class=\"facebook\" href=\"https://www.facebook.com/mldcmu\" target=\"_blank\">CMU on Facebook</a>": "<a alt=\"Machine Learning at CMU on Facebook\" class=\"social-icon fa fa-facebook\" href=\"https://www.facebook.com/mldcmu/\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Facebook\"></a>",
+                "<a class=\"twitter\" href=\"https://twitter.com/mldcmu\" target=\"_blank\">CMU on Twitter</a>": "<a alt=\"Machine Learning at CMU on Twitter\" class=\"social-icon fa fa-twitter\" href=\"https://twitter.com/mldcmu?lang=en\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Twitter\"></a>",
+                "<a class=\"linkedin\" href=\"https://www.linkedin.com/company/mldcmu\" target=\"_blank\">CMU on LinkedIn</a>": "<a alt=\"Machine Learning at CMU on LinkedIn\" class=\"social-icon fa fa-linkedin\" href=\"https://www.linkedin.com/school/mldcmu/\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on LinkedIn\"></a>",
+                "<a class=\"more\" href=\"https://github.com/organizations/mldcmu/\" target=\"_blank\" title=\"More Social Networks\">CMU Social Media Directory</a>": "<li><a alt=\"Machine Learning at CMU on YouTube\" class=\"social-icon fa fa-youtube\" href=\"https://www.youtube.com/channel/UCBK21NDSe0ZghSRnfmDvaEg\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on YouTube\"></a></li><li><a alt=\"Machine Learning at CMU on Medium\" class=\"social-icon fa fa-medium\" href=\"https://medium.com/mldcmu\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU on Medium\"></a></li><li><a alt=\"Machine Learning at CMU News - RSS Feed\" class=\"social-icon fa fa-rss\" href=\"https://www.ml.cmu.edu/cmsint/mldcmu.rss\" rel=\"noopener\" target=\"_blank\" title=\"Machine Learning at CMU News - RSS Feed\"></a></li>",
+                "CMU on Facebook": "",
+                "CMU on Twitter": "",
+                "CMU on LinkedIn": "",
+                "CMU Social Media Directory": "",
+                "class=\"grid column3 invert\"": "class=\"grid2 column3 invert\" id=\"seal\"",
+            };
+
+            $.each(replacetext, function(txtorig, txtnew) {
+                var text = $('footer.grid').html();
+                $('footer.grid').html(text.replace(txtorig, txtnew));
+                $('footer.grid').attr('id', 'seal');
+            });
+
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = "footer.grid { display: block !important} footer.grid2 { display: none !important} .social-icons a { line-height: 1; padding-bottom: 10px !important} .social-icon.fa.fa-youtube,.social-icon.fa.fa-medium {margin-right: 6px}";
+            document.body.appendChild(css);
+
+            document.getElementById("js-current-year").textContent = (new Date().getFullYear());
+
+            /* Biases Mod */
+
+            // This code regulates randomization for main short bio pages
+            $(".content.stacked.grey").removeClass("grey");
+            $(".list.darkgrey.invert").removeClass("invert");
+            $(".list.darkgrey").toggleClass("darkgrey grey");
+            var cards = $(".content.stacked");
+            for(var i = 0; i < cards.length; i++){
+                var target = Math.floor(Math.random() * cards.length -1) + 1;
+                var target2 = Math.floor(Math.random() * cards.length -1) +1;
+                cards.eq(target).before(cards.eq(target2));
+            }
+
+            // The following piece control randomization for grid bio pages
+            var cards1 = $(".grid.column3.boxes div");
+            for(var i = 0; i < cards1.length; i++){
+                var target = Math.floor(Math.random() * cards1.length -1) + 1;
+                var target2 = Math.floor(Math.random() * cards1.length -1) +1;
+                cards1.eq(target).before(cards1.eq(target2));
+            }
+            /* /Biases Mod */
+// ]]></script>
+<!-- /Footer Mod -->
+                                        
+
+</body>
+</html>

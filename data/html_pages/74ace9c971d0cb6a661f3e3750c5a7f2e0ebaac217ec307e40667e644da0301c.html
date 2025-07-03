@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z5FJHJW2Y"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-6Z5FJHJW2Y", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+<link rel="canonical" href="https://www.library.cmu.edu/qatar" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Qatar Library | CMU Libraries</title>
+      <link href="//library.cmu.edu/favicon.svg" rel="icon"/>
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NYNxZ6e0g_JeIQBHW66e9B1eqkLNYmAJIobwENvKKLc.css?delta=0&amp;language=en&amp;theme=cmulibrary&amp;include=eJxFyFsKAyEMQNENWbOmaDJjID5ItDPuvkMp9OdyuBmVG6FB_iHOwpVDVnTf0Do9rkslGdqGU3tCfWX3cCjfrkJsIG3yaTiltzDQ8PEoDmRroMb_iauNlVS8MAXfPrlCQufwFr4cvo2101L-AKPNO1w" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_1XbJmlHUZFKah4Yqdi1InSQGv5aWYS8VvXbBhlYODRk.css?delta=1&amp;language=en&amp;theme=cmulibrary&amp;include=eJxFyFsKAyEMQNENWbOmaDJjID5ItDPuvkMp9OdyuBmVG6FB_iHOwpVDVnTf0Do9rkslGdqGU3tCfWX3cCjfrkJsIG3yaTiltzDQ8PEoDmRroMb_iauNlVS8MAXfPrlCQufwFr4cvo2101L-AKPNO1w" />
+
+    
+    <!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//webstats.library.cmu.edu/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+  </head>
+  <body class="title--qatar-library path-node page-node-type-page widepage" >
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <header role="banner">
+    <div class="layout-container">
+     
+    
+      <div class="layout-container"><a href = "https://www.qatar.cmu.edu" target="_blank"><img src = "/themes/custom/cmulibrary/images/qatar_logo.svg" class="liblogo qatar" alt="CMU Qatar Logo"></a>
+<div id="block-hamburgermenu">
+<p>
+-<br>
+-<br>
+-</p>
+</div></div>
+    
+   
+    
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script src="https://cmu.libcal.com/js/hours_today.js"></script> 
+
+<div id = "tophours" style="color:black;"><div class="layout-container">
+<a href="#hours" style="color:black;">
+<div class="legend">Hours:</div>
+	<div class="libraryHoursContainer"><div class="libraryHours"></div></div>
+</a>
+
+	<script>
+		fetch("https://cmu.libcal.com/api/1.0/hours/6859?key=f350ce8f5f34fd1cae1ccee509352e59").then(function(response){
+return response.json();
+}).then(function(data) {
+           //sigh - javascript date stuff...
+           var d = new Date();
+           day = d.getDate();
+           day = day.toString();
+           month = d.getMonth()+1;
+           month = month.toString();
+           year = d.getUTCFullYear().toString();
+
+           if(day.length===1){
+           	day="0"+day;
+           }
+           if(month.length===1){
+           	month="0"+month;
+           }
+           date = year+'-'+month+'-'+day;
+           data.forEach(function callback(loc,index){
+           	if(loc['dates'][date]['hours']!==undefined){
+           		hours = loc['dates'][date]['hours'][0]['from'] + " - " + loc['dates'][date]['hours'][0]['to'];
+           	}
+            else if(loc['dates'][date]['status']=="closed"){
+                hours="Closed";
+            }
+           	else{
+           	 	hours = loc['dates'][date]['text'];
+           	}
+           	loc_name = loc['name'];
+//           	$(".libraryHoursContainer .libraryName")[index].innerHTML=loc_name;
+           	$(".libraryHoursContainer .libraryHours")[index].innerHTML=hours;
+
+           });
+            
+        },
+    ).catch(function(error){
+    console.error('something went wrong with the hours');
+    console.error(error);
+    });
+
+</script> 
+</div>
+
+</div>
+    
+       
+              <ul class="qatar-menu">
+        <li class = "stickylogo"><a href = "/">
+            <img src ="/themes/custom/cmulibrary/images/qatar_logo.svg" alt="CMU Libraries Qatar Logo"></a></li>
+                <li class="menu-item">
+        <a href="https://bit.ly/3KEksCV" target="_blank">Policies</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://bit.ly/3mxjpgb" target="_blank">Pittsburgh Library</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://bit.ly/3mxb5wV" target="_blank">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://bit.ly/3mxkg0n">FAQs</a>
+              </li>
+        </ul>
+  
+
+
+       
+
+
+              <ul class="menu secondary">
+                    <li class="menu-item">
+        <a href="https://cmu.primo.exlibrisgroup.com/discovery/login?vid=01CMU_INST%3A01CMU&amp;lang=en" target="_blank" title="Log in to your account.">My Account</a>
+              </li>
+                <li class="menu-item">
+        <a href="/ask" data-drupal-link-system-path="node/2328">Ask Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="" class="searchtoggle" role="button" title="Click this icon to open a search dialog">Search</a>
+              </li>
+        </ul>
+  
+
+        </div>
+        <div class="layout-container" style="position: relative;">
+         <form id="searchbox" name="searchbox" action="/site-search" method="get" class="searchbox" aria-hidden="true">
+           <input id="magnifyingSearch" type = "text" name = "search" placeholder="search the site..." aria-label="Search term">
+          <input type = "submit" name = "submit" value = "submit" aria-label="Submit">
+        </form>
+        </div>
+
+  
+
+    </div>
+  </header>
+
+  <div class = "region region-primary-menu">
+    <div class = "menu-container">
+
+  
+    </div>
+
+  
+</div>
+</div>
+
+
+  <div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+  
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>    <div class="primary-content layout-container">
+
+      
+       
+    
+      
+<article data-history-node-id="2281" class="node node--type-page path-qatar-library node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+                  
+<div class="qatar-top-of-page fullwidth"
+>
+      <img src = "/sites/default/files/styles/focal_point_full_screen/public/2021-11/qatar_0_0.jpeg?h=07298254&amp;itok=FMlXlwJ1">
+           
+<div class="layout-container"
+>
+          <div class = "topsearch">
+      
+          
+          <script>
+function searchPrimo_E() {    // Everything search
+ document.getElementById("cmulib_search_output").value = "any,contains," + document.getElementById("cmulib_search_input").value.replace(/[,]/g, " ");  
+ document.forms["searchForm_E"].submit();
+}
+</script>
+<h1 id="page-title">Search</h1>
+<h2>Explore <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&mode=advanced&tab=CMU&lang=en&sortby=rank" target=“_blank” title=“Search books and media.”>books and media</a>, <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&mode=advanced&tab=CentralIndex&lang=en&sortby=rank" target="_blank" title="Search for articles.">articles</a>, <a href="https://cmu.primo.exlibrisgroup.com/discovery/jsearch?vid=01CMU_INST:01CMU" target=“_blank” title=“Search journals.”>journals</a> and <a href="https://cmu.primo.exlibrisgroup.com/discovery/search?vid=01CMU_INST:01CMU&mode=advanced&tab=CMU&lang=en&sortby=rank" target="_blank" title="Search the catalog.">advanced search</a>.</h2>
+<div class="searchblock">
+            <form  name="searchForm_E" method="get" action="https://cmu.primo.exlibrisgroup.com/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo_E()" target="_self" >
+<!-- Customizable Parameters -->
+<input type="hidden" name="institution" value="01CMU_INST">
+<input type="hidden" name="vid" value="01CMU_INST:QATAR">
+<input type="hidden" name="tab" value="Everything">
+<input type="hidden" name="search_scope" value="QATARPCI">
+<input type="hidden" name="mode" value="Basic">
+<!-- Fixed parameters -->
+<input type="hidden" name="displayMode" value="full">
+<input type="hidden" name="bulkSize" value="10">
+<input type="hidden" name="highlight" value="true">
+<input type="hidden" name="displayField" value="all">
+<input id="cmulib_search_output" name="query" type="hidden">
+<!-- Enable this if "Expand My Results" is enabled by default in Views Wizard -->
+<!-- input type="hidden" name="pcAvailabiltyMode" value="true" -->
+              <input type="text" name="searchtext" class="cmulib_search_main cmulib_search_input" id="cmulib_search_input" placeholder="Explore our collections...">
+            </form>
+      </div>
+
+      </div>
+
+
+    
+<div class="askus"
+>
+            <div>
+              <a href = "https://cmu.libanswers.com/widget_standalone.php?la_widget_id=16891">
+      
+            <img loading="lazy" src="/sites/default/files/styles/max_1300x1300/public/2024-02/3-Library%20Qatar%20Website%20Pic.jpg?itok=iolWjvVF" width="1300" height="876" alt="Qatar Library" class="image-style-max-1300x1300" />
+
+
+
+    
+          
+          </a>
+    </div>
+
+
+     <div class = "askbanner">
+              <a href = "https://cmu.libanswers.com/widget_standalone.php?la_widget_id=16891">
+      
+          
+          <a href="https://cmu.libanswers.com/widget_standalone.php?la_widget_id=16891" target="_blank"><h3>Ask Us</h3>
+
+<div class="datetext"></div></a>
+          </a>
+    </div>
+
+
+    
+  </div>
+
+    
+  </div>
+
+    
+<a name = "quicklinks" class="anchorlink"></a>
+<div class="subnav quicklinks"
+  id="quicklinks"
+     >
+          <div class = "layout-container">
+      
+          
+          <h3>Quick Links</h3><ul><li><a href="https://bit.ly/3odgtWt" target="_blank" title="Book a study room." rel=" noopener">Book a Study Room</a></li><li><a href="https://bit.ly/43AY5qM" target="_blank" title="Visit the Qatar guides." rel=" noopener">Qatar Guides</a></li><li><a href="https://bit.ly/3MKM3Ff" target="_blank" title="Visit our Research Guides." rel=" noopener">Research Guides</a></li><li><a href="https://bit.ly/3KLwSsz" target="_blank" title="Learn more about Databases, eResources and Tools." rel=" noopener">Databases</a></li><li><a href="https://bit.ly/3A5j3At" target="_blank" title="Visit the Kilthub Repository." rel=" noopener">Kilthub</a></li><li><a href="https://bit.ly/416W18d" title="Learn more about ILLiad.">Interlibrary Loan</a></li></ul>
+      </div>
+
+
+    
+  </div>
+
+    
+  </div>
+
+             
+<a name = "featured-resources" class="anchorlink"></a>
+<div class="featured-resources"
+  id="featured-resources"
+     >
+            <div>
+      
+          
+          <h3>Featured Resources</h3>
+      </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://bit.ly/3GPzrc0">
+      
+          
+          <h5>BIBLIOGRAPHY GENERATOR</h5><h3>ZoteroBib</h3><p><span>ZoteroBib helps you build a bibliography instantly from any computer or device, without creating an account or installing any software.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://guides.library.cmu.edu/QatarLibrary/print_online/test_prep">
+      
+          
+          <h5>PRACTICE PROGRAMMING</h5><h3>LeetCode</h3><p><span>A service that allows you to practice programming in preparation for technical interviews.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://bit.ly/3UKjr0P">
+      
+          
+          <h5>OPEN ACCESS PUBLISHING</h5><h3><strong>Article Processing Charge (APC) Fund</strong></h3><p><span>An opportunity for CMU faculty to have the library partially cover the costs associated with publishing in an open access or hybrid journal.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://bit.ly/3HdGHin">
+      
+          
+          <h5>PROFESSIONAL DEVELOPMENT</h5><h3><strong>LinkedIn Learning</strong></h3><p><span>LinkedIn Learning provides thousands of training videos and tutorials covering web languages, online technologies, website best practices and more.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://guides.library.cmu.edu/QatarLibrary/print_online/Textbooks">
+      
+          
+          <h5>TEXTBOOKS</h5><h3><strong>Redshelf</strong></h3><p><span>The majority of your textbooks will be online and available embedded in your course's Canvas page through the Redshelf platform.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://bit.ly/3A62NiH">
+      
+          
+          <h5>DATABASE</h5><h3><strong>Keenious</strong></h3><p><span>Use this tool to easily and effectively identify relevant literature for your research papers.</span></p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://guides.library.cmu.edu/QatarLibrary/print_online/test_prep">
+      
+          
+          <h5>TEST PREPARATION</h5><h3>Magoosh</h3><p>Magoosh offers online practice tests for GRE and GMAT with thousands of practice questions, in-depth video explanations, full-length practice tests, and personalized study plans.</p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://guides.library.cmu.edu/QatarLibrary/print_online/test_prep">
+      
+          
+          <h5>CASE INTERVIEW PREPARATION</h5><h3>RocketBlocks</h3><p>RocketBlocks.me is a series of modules to help you prepare for case interviews at management consulting firms.</p>
+          </a>
+    </div>
+
+
+     <div class = "whiteblock">
+              <a href = "https://guides.library.cmu.edu/QatarLibrary/print_online/Newspapers">
+      
+          
+          <h5>RESOURCES</h5><h3>Newspapers and Journals</h3><p>Quick access to the most popular newspapers, such as New York Times, Wall Street Journal, Washington Post and many more.</p>
+          </a>
+    </div>
+
+
+    
+  </div>
+
+             
+<div class="services-directory"
+>
+          <div class = "leftside">
+      
+    <h2>Services Directory
+    </h2>
+          
+          
+      </div>
+
+
+     <div class = "rightside">
+      
+          
+          <p><strong>Looking to enrich your research or save yourself time?</strong></p><p>Search our services and tools.</p><p><a class="button-yellow" href="/services" target="_blank" rel=" noopener">Search Here</a></p>
+      </div>
+
+
+    
+  </div>
+
+              <div class = "header">
+      
+    <h2>Staff &amp; Faculty
+    </h2>
+          
+          
+      </div>
+
+
+             
+<div class="views-element-container"><div class="all-staff-view view view-all-staff view-id-all_staff view-display-id-block_2 js-view-dom-id-219b0363df20e33bebe918f825e935c537148ab660a52d755c1df29c13eca444">
+  
+    
+      <div class="view-header">
+      
+    </div>
+      
+      <div class="view-content">
+      
+<div>
+    
+<div id="flexslider-1" class="flexslider optionset-people">
+ 
+<ul class="slides">
+    
+<li>
+      <a href="/about/people/evangeline-castillo" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/Evangeline%20i%20February%202016.jpg" width="670" height="960" alt="Image of Evangeline Castillo." />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/evangeline-castillo" hreflang="en">Evangeline Castillo</a></h3>
+<h5><p>Library Associate / Acquisitions Coordinator</p>
+</h5></div>
+    </li>
+<li>
+      <a href="/about/people/reya-saliba" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/R.Saliba%20Profile%20Pic_0.jpg" width="888" height="1154" alt="Reya Saliba" />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/reya-saliba" hreflang="en">Reya Saliba</a></h3>
+<h5><p>Instruction &amp; Outreach Librarian</p></h5></div>
+    </li>
+<li>
+      <a href="/about/people/amirah-mohamed-al-sarraj" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/dir-amirah-350x350.jpg" width="350" height="350" alt=" Amirah Mohamed Al Sarraj" />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/amirah-mohamed-al-sarraj" hreflang="en"> Amirah Mohamed Al Sarraj</a></h3>
+<h5><p>Library Associate, Collection Coordinator</p></h5></div>
+    </li>
+<li>
+      <a href="/about/people/shaima-sheriff" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/Shaima%20i%20February%202016.jpg" width="703" height="960" alt="Image of Shaima Sheriff." />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/shaima-sheriff" hreflang="en">Shaima Sheriff</a></h3>
+<h5><p>Library Associate / Facilities Coordinator</p>
+</h5></div>
+    </li>
+<li>
+      <a href="/about/people/fabeena-ummer" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/Fabeena%20i%20February%202016.jpg" width="678" height="960" alt="Image of Fabeena Ummer." />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/fabeena-ummer" hreflang="en">Fabeena Ummer</a></h3>
+<h5><p>Library Associate / Administrative and Textbook Coordinator</p>
+</h5></div>
+    </li>
+<li>
+      <a href="/about/people/tatiana-usova" hreflang="en"><img loading="lazy" src="/sites/default/files/person/images/Screen%20Shot%202022-03-16%20at%209.26.49%20AM.png" width="1018" height="1127" alt="Tatiana Usova" />
+</a>
+
+            <div class="flex-caption"><h3><a href="/about/people/tatiana-usova" hreflang="en">Tatiana Usova</a></h3>
+<h5><p>Director of the Library</p></h5></div>
+    </li>
+</ul>
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    
+
+                <div>
+      
+          
+          <a id="hours" rel="noopener" target="_blank"></a>
+<a class="anchorlink" href="#hours"></a>
+      </div>
+
+
+              <div class = "hourswidget header">
+      
+          
+          <h3>Hours</h3>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+<script src="https://cmu.libcal.com/js/hours_grid.js?002"></script> 
+<div id="s-lc-whw6859"></div> 
+<script>
+$(function(){ 
+var week6859 = new $.LibCalWeeklyGrid( $("#s-lc-whw6859"), { iid: 3942, lid: 6859, systemTime: true }); 
+});
+</script> 
+
+
+<style>
+td {
+font-size: 80%;
+line-height: 110%;
+font-family: "Open Sans",sans-serif;
+font-weight: 400;
+}
+.s-lc-whw thead { background-color: #F5F5F5; }
+.s-lc-whw-head-date { color: #5F5F5F; }
+.s-lc-whw-today-h {  background-color: #ddd; }
+.s-lc-whw-today { background-color: #F5F5F5; }
+.s-lc-whw-locname { font-weight: bold;}
+.s-lc-whw-sublocname{ padding-left: 10px!important; }
+.s-lc-whw-footnote { color: #555; font-size: 80%; }
+.s-lc-whw-footnote td:hover { background-color:#fff!important;}
+/* Below styles can be removed if you are already using Bootstap v3 in host page */
+.s-lc-whw-cont {font-family: "Open Sans",sans-serif;}
+.s-lc-whw-pr, .s-lc-whw-ne{ padding: 5px 10px; font-size: 12px; line-height: 1.5; border-radius: 3px; color: #333; background-color: #fff; border-color: #ccc; display: inline-block; margin-bottom: 0; font-weight: 400; text-align: center; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; white-space: nowrap; }
+.s-lc-whw-pr:disabled { background-color: #efefef; }
+.s-lc-whw-ne:disabled { background-color: #efefef; }
+.s-lc-whw { width: 100%; margin-bottom: 20px; max-width: 100%; background-color: transparent; border-bottom: none; border-left: none; border-collapse: collapse; border-spacing: 0; }
+.s-lc-whw>tbody>tr>td { padding: 5px; }
+.s-lc-whw>thead>tr>th { vertical-align: bottom; border-bottom: 2px solid #ddd; padding: 5px;}
+.s-lc-whw th { border-top: none; border-bottom: none; border-right: none;}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+@media (max-width: 768px) {
+   .s-lc-whw-cont .table-responsive { width: 100%; margin-bottom: 15px; overflow-y: hidden; overflow-x: scroll; -ms-overflow-style: -ms-autohiding-scrollbar; border: 1px solid #ddd; -webkit-overflow-scrolling: touch; }
+   .s-lc-whw td { white-space: nowrap; }
+}
+.s-lc-whw-today span.s-lc-time  {
+border: solid 2px #FFCC00;
+width: 88%;
+display: block;
+padding: 10px;
+}
+.s-lc-whw > tbody > tr > td.s-lc-whw-locname {
+padding: 10px 20px;
+font-size: 120%;
+line-height: 130%;
+margin-bottom: 0;
+font-family: "Open Sans",sans-serif;
+font-weight: 700;
+border-bottom: 5px solid transparent;
+display: inline-block;
+}
+.s-lc-whw > thead > tr > th {
+font-family: "Open Sans",sans-serif;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    padding: 5px;
+    font-size: 70%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.s-lc-whw-bh { text-align: left; white-space: nowrap; padding-left: 20px !important;}
+</style>
+      </div>
+
+
+             
+<div class="question fullwidth"
+>
+      <img src = "/sites/default/files/styles/focal_point_full_screen/public/2021-11/qatar_exterior_background_0.jpeg?h=07298254&amp;itok=Q0mWK3Fl">
+             <div class="cta circle yellow">
+    <a href="https://cmu.libcal.com/api_events.php?m=upc&amp;cid=7168_9148&amp;audience=&amp;c=6967-6285-6252&amp;d=&amp;l=5"  class="featureblock" title="Events &amp; Workshops: View a list of upcoming in-person/virtual events and workshops. Register online.&amp;nbsp;">
+      <div class="blend">
+        <img class="ctaimage" src="https://www.library.cmu.edu/sites/default/files/styles/focal_point_1_3_screen/public/2021-11/qatar_exterior2_0.jpeg?h=90660b89&amp;itok=bWtrRdwd"
+             alt="Qatar exterior" loading="lazy">
+        <div class="mixer"></div>
+      </div>
+      <div class="ctatext">
+        <h2>Events &amp; Workshops</h2>
+        <p>View a list of upcoming in-person/virtual events and workshops. Register online.&nbsp;</p>
+      </div>
+    </a>
+  </div>
+  <div class="clearfix"><p>&nbsp;</p></div>
+
+
+    
+  </div>
+
+             
+<div class="layout-container"
+>
+          <div class = "location">
+      
+    <h2>Location
+    </h2>
+            <img loading="lazy" src="/sites/default/files/styles/max_1300x1300/public/2021-11/qatarmap2_0.png?itok=n7zsdAEy" width="756" height="622" alt="Qatar Map" class="image-style-max-1300x1300" />
+
+
+
+    
+          <div class="contact-details">
+      <p><a href="https://www.google.com/maps/dir//Carnegie Mellon University in Qatar+Doha++" target="_blank" class="directions" rel="noopener">Directions</a></p>
+  <p>Carnegie Mellon University in Qatar</p>
+<p>Education City</p>
+<p>PO Box 24866</p>
+  <p>Doha, Qatar</p>
+<p>&nbsp;</p>
+            <p><a href="tel:+14454-8683
+    " class="phone" rel="noopener" target="_blank">4454-8683
+    </a></p>
+      
+            <p><a href="mailto:qatar@cmu.libanswers.com">qatar@cmu.libanswers.com</a></p>
+<p>Instagram: <a href="https://www.instagram.com/cmuqlibrary/?hl=en" rel="noopener" target="_blank">@cmuqlibrary</a></p>
+<p class="link"><a href="https://www.qatar.cmu.edu/" rel="noopener" target="_blank">Visit CMU-Qatar Website</a></p>
+<p class="link"><a href="https://scotty.qatar.cmu.edu/academic-resource-center/undergraduate-student-employment/" rel="noopener" target="_blank">Student Jobs in Qatar</a></p>
+          </div>
+      </div>
+
+
+    
+  </div>
+
+        
+  </div>
+
+</article>
+
+  
+
+
+    </div>
+    
+    
+  </main>
+
+    <footer role="contentinfo">
+      <div class = "layout-container">
+      <div class = "footer-links secondary">
+      
+      </div>
+      
+      <div class = "socialicons">
+       
+    
+      <p><a href="/about/giving" target="_blank"><img src = "/themes/custom/cmulibrary/images/give_to_lib_button.png" class="footergive" alt="give to the libraries"></a></p>
+
+    
+   
+      <h4>CMU-Qatar Social Icons</h4>
+    
+      <div class="socialicons">
+        <a href="https://www.instagram.com/cmuqlibrary/" target="_blank"><img src="/themes/custom/cmulibrary/images/insta.svg" alt="instagram"></a>
+        <a href="https://www.youtube.com/c/CarnegieMellonUniversityLibraries/videos" target="_blank"><img src="/themes/custom/cmulibrary/images/you.svg" alt="youtube"></a>
+      </div>
+    
+  
+
+      </div>
+      <img class="cmufooterlogo" src="/themes/custom/cmulibrary/images/cmu-lettermark-w.png" alt="CMU logo">
+      </div>
+    </footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/2281","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"google_analytics":{"account":"G-6Z5FJHJW2Y","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"flexslider":{"optionsets":{"people":{"animation":"slide","animationSpeed":600,"direction":"horizontal","slideshow":false,"easing":"swing","smoothHeight":false,"reverse":false,"slideshowSpeed":7000,"animationLoop":true,"randomize":false,"startAt":0,"itemWidth":210,"itemMargin":8,"minItems":1,"maxItems":5,"move":5,"directionNav":true,"controlNav":true,"thumbCaptions":false,"thumbCaptionsBoth":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"touch":true,"prevText":"Previous","nextText":"Next","namespace":"flex-","selector":".slides \u003E li","sync":"","asNavFor":"","initDelay":0,"useCSS":true,"video":false,"pausePlay":false,"pauseText":"Pause","playText":"Play","pauseOnAction":true,"pauseOnHover":false,"controlsContainer":"","manualControls":""}},"instances":{"flexslider-1":"people"}},"quicklink":{"admin_link_container_patterns":["#block-local-tasks-block a",".block-local-tasks-block a","#drupal-off-canvas a","#toolbar-administration a"],"ignore_admin_paths":true,"ignore_ajax_links":true,"ignore_file_ext":true,"total_request_limit":0,"concurrency_throttle_limit":0,"idle_wait_timeout":2000,"viewport_delay":0,"debug":false,"url_patterns_to_ignore":["user\/logout","#","\/admin","\/edit"]},"user":{"uid":0,"permissionsHash":"d3931732b00e2dce23a55be7a66da115a90c76e5b7c1db05974a65ba0ccdc643"}}</script>
+<script src="https://polyfill-fastly.io/v3/polyfill.min.js?features=IntersectionObserver%2CIntersectionObserverEntry%2CURL%2CObject.assign%2CArray.from%2CArray.prototype.includes%2CString.prototype.includes%2CElement.prototype.matches%2CPromise%2CPromise.prototype.finally"></script>
+<script src="/sites/default/files/js/js_1NX-6lPOVILXImEzBtL3EBF4CUQB1DrlqEyf3FW7YoE.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=cmulibrary&amp;include=eJxtyUsOgCAQBNELYTiSGRBJazujfBK5vTsXxl3lVTw6EYqU4TMtCKetupXprsSSioe2lIs0mLpslplmUeFoiNV_wV0dcSd092_92QxF-x2ncawgH9KuPGk"></script>
+<script src="https://unpkg.com/quicklink@2.2.0/dist/quicklink.umd.js"></script>
+<script src="/sites/default/files/js/js_e76dIcQ_rSZ-kQ3vLLgaGMEbYxlJzpzoGWiIVDbuzsU.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=cmulibrary&amp;include=eJxtyUsOgCAQBNELYTiSGRBJazujfBK5vTsXxl3lVTw6EYqU4TMtCKetupXprsSSioe2lIs0mLpslplmUeFoiNV_wV0dcSd092_92QxF-x2ncawgH9KuPGk"></script>
+
+  </body>
+</html>

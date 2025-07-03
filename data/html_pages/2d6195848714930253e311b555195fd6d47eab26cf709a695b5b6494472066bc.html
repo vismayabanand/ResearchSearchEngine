@@ -1,0 +1,282 @@
+
+<!-- Our standard header follows. -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>Account Provider Selection</title> 
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<style type="text/css" media="screen">
+	<!--
+		body {
+			font-family: Helvetica, sans-serif;
+			padding-left: 2em;
+			padding-right: 2em;
+			text-align: center;
+			font-size: 0.9em;
+		}
+		p {
+			margin: 0.0em 0 0.8em 0;
+		}
+		#container {
+			border: 1px solid #888;
+			background-color: #f4f4f4;
+			text-align: left;
+			max-width: 700px;
+			margin: 6em auto 0 auto;
+		}
+		#logos {
+			margin-left: 2px;
+			margin-right: 2px;
+			height: 60px;
+		}
+		#languageframe {
+			text-align: right;
+			font-size: small;
+			padding-right: 1.5em;
+			padding-top: 0.75em;
+		}
+		#languagebar {
+			padding-top: 7px;
+		}
+		.leftlogo {
+			float: left;
+			border: none;
+			margin: 10px;
+		}
+		#orgframe {
+			margin: 0.5em 3.8em 4em 3.8em;
+		}
+		#orgframe fieldset {
+	      background-color: #fff;
+			position: relative;
+			padding: 0 17px;
+		    background: white;
+			line-height: 1.5;
+		}
+		 /* IE-win fix */
+		* html fieldset legend {float: left; position: relative; margin-top: -1.4em /* equals actual line-height minus 0.35em */;}
+		* html p.comp {margin-bottom: 18px;}
+		.fieldsetContainer {
+		padding: 1em 0;
+		}
+
+		fieldset legend {
+			line-height: 1.4 /* note this line-height value */;
+			font-size: 1.4em;
+			font-weight: bold;
+			color: #222;
+		}
+		.providerinputs input[type="submit"], .providerinputs select {
+			font-size: 1.1em;
+			border: 3px inset #fff;
+			border-color: #fff #999 #999 #fff;
+			padding: 2px 0.5em;
+		}
+		.providerinputs input[type="submit"] {
+			border: 3px solid #fff;
+			border-color: #A7C687 #618938 #618938 #A7C687;
+			background-color: #7DB047;
+			color: #fff;
+		}
+		.providerinputs input[type="submit"]:hover
+		{
+			border-color: #eeeee1 #555 #555 #eeeee1;
+			background-color: #A7C687;
+			color: #000;
+		}
+		.loginhelp {
+			padding-left: 1em;
+		}		
+		.loginhelp a {
+			color: #888;
+			text-decoration: none;
+			border-bottom: 1px dotted #999;
+		}
+		.loginhelp a:hover {
+			color: black;
+			border-bottom: 1px solid black;
+		}
+		.selectedIdP
+		{
+			font-size: 1.1em;
+			color: #777;
+			border: 3px;
+			margin: 5px;
+			padding: 2px 1em;
+		}
+	-->
+	</style>
+	<script language="JavaScript" type="text/javascript">
+	<!--
+
+	function init () {
+		if (document.IdPList && document.IdPList.Select) {
+			document.IdPList.Select.focus();
+		}
+		if (document.languageList.language_submit.addEventListener) {
+			document.languageList.language_submit.addEventListener("click", changeLanguage, false);
+		} else {
+			document.languageList.language_submit.onclick = changeLanguage;
+		}
+	}
+
+	function changeLanguage (event) {
+		if (!event) {
+			event = window.event;
+		}
+		if (event.preventDefault) {
+			event.preventDefault();
+		}
+		// get code of new language from list
+		var newLang = document.languageList.lang.value.toLowerCase();
+		// if it's the same as what we're currently using, do nothing
+		var currentLang = getURLParam("lang");
+		if (currentLang && currentLang.toLowerCase() == newLang) {
+			return false;
+		}
+		// assume the URL already contains everything needed to reload this page in a new language
+		insertURLParam("lang", newLang);
+		return false;
+	}
+
+	function getURLParam (key) {
+		var result = null;
+		key = escape(key); 
+		var pairs = window.location.search.substr(1).split('&');
+		var x;
+		for (var i = pairs.length - 1; i >= 0; i--){
+			x = pairs[i].split('=');
+			if (x[0]==key)
+			{
+				result = unescape(x[1]);
+				break;
+			}
+		}
+		return result;
+	}
+
+	function insertURLParam(key, value) {
+		// replaces param if it already exists
+		key = escape(key); 
+		value = escape(value);
+
+		var pairs = window.location.search.substr(1).split('&');
+		var x;
+		for (var i = pairs.length - 1; i >= 0; i--){
+			x = pairs[i].split('=');
+
+			if (x[0]==key)
+			{
+				x[1] = value;
+				pairs[i] = x.join('=');
+				break;
+			}
+		}
+		if (i < 0) {
+			pairs[pairs.length] = [key,value].join('=');
+		}
+		// this will reload the page
+		window.location.search = "?" + pairs.join('&'); 
+	}
+	-->
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="init();">
+<script language="JavaScript" type="text/javascript">
+<!--
+function showConfirmation(){
+	
+	return confirm(unescape('Are you sure that you want to set the selected entry as your permanent account provider?  Do not do this if you use multiple account providers.'));
+}
+
+function getRadioValue(radio) {
+	if (radio && radio.length) {
+		for (var i = 0; i < radio.length; i++) {
+			if (radio[i].checked) {
+				return radio[i].value;
+			}
+		}
+	}
+	return "";
+}
+
+function checkForm(){
+	if(document.IdPList.user_idp[document.IdPList.user_idp.selectedIndex].value == "-"){
+		alert(unescape('Select the Home Organisation you are affiliated with'));
+		return false;
+	} else {
+		if (isNaN(parseInt(getRadioValue(document.IdPList.duration), 10))) {
+			return true;
+		} else {
+			return showConfirmation();
+		}
+	}
+}
+-->
+</script>
+
+<div id="container">
+	<div id="logos">
+		<img alt="Service Provider Logo" class="leftlogo" src="https://wayf.mit.edu/WAYF/images/footer_mit_logo_transparent.gif" />
+
+		<div id="languageframe">
+			<div id="languagebar"> 
+	
+			<form action="?" method="get" name="languageList" id="languageList">
+				<input type="submit" class="submit" name="language_submit" id="language_submit" value="Select" />
+				<select id="lang" name="lang" aria-label="Select language"> 
+				
+					<option value="en" selected="selected">English</option>
+					<option value="de">Deutsch</option>
+					<option value="it">Italiano</option>
+					<option value="pt">中文</option>				</select>
+			
+			</form>
+
+			</div>
+		</div>
+	</div>
+<!-- Body: Start -->
+
+<!-- Identity Provider Selection: Start-->
+<div id="orgframe">
+<form id="IdPList" name="IdPList" method="post" onSubmit="return checkForm()" action="/DS?entityID=https%3A%2F%2Feecsis.mit.edu%2Fshibboleth&amp;return=https%3A%2F%2Feecsis.mit.edu%2FShibboleth.sso%2FLogin%3FSAMLDS%3D1%26target%3Dss%253Amem%253A9fedc1f632ccb268c06c7734683989db312bff5748f709d4d979404c41e05aa1">
+	<fieldset>
+		<legend>Please choose your account provider</legend> 
+		<div class="fieldsetContainer">
+			<p class="providerinputs">
+				<select name="user_idp" aria-label="Select account provider"> 
+				
+	<optgroup label="MIT Touchstone">
+		<option value="https://idp.mit.edu/shibboleth" selected="selected">MIT Kerberos account (or MIT web certificate)</option>
+		<option value="https://idp.touchstonenetwork.net/shibboleth-idp">Touchstone Collaboration account</option>
+		<option value="https://idp-alum.mit.edu/shibboleth">MIT Alumni account</option>
+	</optgroup>
+	<optgroup label="Other Federations">
+		<option value="InCommon">InCommon Federation</option>
+	</optgroup>				</select>
+				<input type="submit" name="Select" id="Select" accesskey="s" value="Continue" > 
+			</p>
+						<p class="loginhelp"><a href="/WAYF/help/what-is-provider.html" target="_blank">What is my account provider?</a></p>
+			<p class="rememberinputs">
+
+				<input type="radio" name="duration" id="rememberNone" value="none" />
+				<label for="rememberNone"><span class="warning">Do not remember selection.</span></label><br>
+				<input type="radio" name="duration" id="rememberSession" value="session" checked />
+				<label for="rememberSession"><span class="warning">Remember selection for this session.</span></label><br>
+				<!-- Value permanent must be a number which is equivalent to the days the cookie shall be valid -->
+				<input type="radio" name="duration" id="rememberPermanent" value="120">
+				<label for="rememberPermanent"><span class="form-control-label">Remember selection permanently, skip this page from now on.</span></label>
+
+			</p>
+		</div>
+	</fieldset>
+</form>
+</div>
+<!-- Identity Provider Selection: End-->
+
+<!-- Body: End -->
+</div>
+
+</body>
+</html>

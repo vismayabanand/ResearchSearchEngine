@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Akshay Srivatsan" />
+  <meta name="description" content="Recent research. Classic and new papers. Topics: virtual memory management, synchronization and communication, file systems, protection and security, operating system extension techniques, fault tolerance, and the history and experience of systems programming." />
+  <title>CS 240: Advanced Topics in Operating Systems</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/class/cs240/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/class/cs240/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/class/cs240/favicon-16x16.png">
+  <link rel="manifest" href="/class/cs240/site.webmanifest">
+</head>
+<body>
+<main>
+<div style="margin: auto; max-width: 649px; width: 90vw">
+
+<p><img src="logo.png"
+alt="Code from Lions&#39; commentary on UNIX, displayed in a text editor. At the center of the screen is the line &quot;You are not expected to understand this.&quot;. In front of the text, the title of this course &quot;CS240: Advanced Topics in Operating Systems&quot;." /></p>
+</div>
+
+<h1 id="cs-240-advanced-topics-in-operating-systems">CS 240: Advanced
+Topics in Operating Systems</h1>
+<h2 id="autumn-2024dawson-engler">Autumn 2024—Dawson Engler</h2>
+<hr />
+<h2 id="class-abstract">Class Abstract</h2>
+<p>CS 240 is a graduate level course in operating systems, covering
+classic and new papers in virtual memory management, synchronization and
+communication, file systems, protection and security, extensions and
+fault tolerance, and the history and experience of systems
+programming.</p>
+<p>Most of the work in this course consists of reading journal and
+conference papers. We will usually cover one paper for each class
+meeting. This class is primarily discussion based, and attendance and
+active participation are required. We expect you to read the papers
+carefully <strong>before</strong> the relevant class session; class time
+will not be used to rehash the material in the papers. Instead, it will
+be used to highlight the important points and discuss some of the more
+interesting features. There will be as much as 10-15 hours of reading
+per week.</p>
+<p>This course will have reading questions (approximately one per class
+meeting) and one or two medium-sized programming assignments. We'll also
+have a midterm and final exam; each will be during class. The tentative
+policy for the exams is that you can bring in any number of <em>hard
+copy</em> resources, but no digital ones.</p>
+<p>Grades will be roughly weighted as follows, although the exact
+breakdown may change:</p>
+<ul>
+<li>Exams (60%)</li>
+<li>Participation (30%)</li>
+<li>Programming Assignments (10%)</li>
+</ul>
+<p>Reading questions are counted towards the participation portion of
+the grade.</p>
+<p>The course is organized roughly as follows:</p>
+<ul>
+<li>Concurrency (3 weeks)</li>
+<li>Memory Management (2 weeks)</li>
+<li>File Systems (2 weeks)</li>
+<li>Security (2 weeks)</li>
+</ul>
+<p>We assume you have taken an undergraduate OS class such as CS 112 or
+CS 140E, and have a working understanding of OS concepts.</p>
+<hr />
+<h2 id="course-information">Course Information</h2>
+<ul>
+<li><strong>Discussion</strong>: T/Th 4:30 PM–5:50 PM in Skilling
+Auditorium
+<ul>
+<li><em>This course is based on in-person discussion. Attendance and
+participation are required.</em></li>
+</ul></li>
+<li><strong>Instructor</strong>: Dawson Engler—Office Hours by
+appointment</li>
+<li><strong>Course Assistants</strong>
+<ul>
+<li>Akshay Srivatsan—Office Hours on Mondays, 9–11am in Gates 460</li>
+<li>Justin Weiler—Office Hours on Fridays, 2–3:30pm in Huang
+Basement</li>
+</ul></li>
+<li><strong>Staff Email</strong>: <a
+href="mailto:cs240-aut2425-staff@lists.stanford.edu"><span>cs240-aut2425-staff@lists.stanford.edu</span></a>
+<ul>
+<li><em>Please only use this email for urgent matters; anything related
+to course material or policies should be posted on Ed.</em></li>
+</ul></li>
+<li><strong>Newsgroup</strong>: <a
+href="https://edstem.org/us/courses/67845">Ed Discussion</a></li>
+<li><strong>Submissions</strong>: <a
+href="https://www.gradescope.com/courses/878889">Gradescope</a></li>
+</ul>
+<hr />
+<h2 id="schedule">Schedule</h2>
+<p>The exact schedule for this year is still being decided, but will
+approximately resemble <a href="past.html">previous years</a>.</p>
+<table>
+<thead>
+  <tr>
+    <th scope="col">Week</th>
+    <th scope="col">Tuesday</th>
+    <th scope="col">Thursday</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">1</th>
+<td>
+
+<p>9/24</p>
+<ul>
+<li><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html">The Rise
+of Worse is Better</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+<td>
+
+<p>9/26</p>
+<ul>
+<li><a href="readings/eraser.pdf">Eraser: A Dynamic Data Race Detector
+for Multithreaded Programs</a>
+<ul>
+<li><a href="readings/cs240-annot-eraser.pdf">annotated version</a></li>
+</ul></li>
+<li><a href="questions/eraser.html">reading question</a></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+<td>
+
+<p>10/1</p>
+<ul>
+<li><a href="readings/mesa.pdf">Experience with Processes and Monitors
+in Mesa</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/358818.358824">original
+version (no OCR)</a></li>
+<li><a href="questions/mesa.html">reading question</a></li>
+</ul>
+</td>
+<td>
+
+<p>10/3</p>
+<ul>
+<li><a href="readings/boehm.pdf">Threads Cannot Be Implemented as a
+Library</a></li>
+<li><a href="questions/boehm.html">reading question</a></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+<td>
+
+<p>10/8</p>
+<ul>
+<li>catch-up/review day</li>
+<li>no reading question</li>
+</ul>
+</td>
+<td>
+
+<p>10/10</p>
+<ul>
+<li><a href="readings/cooperative-task-management.pdf">Cooperative Task
+Management without Manual Stack Management</a> <strong>Only
+§1–3</strong></li>
+<li><a href="readings/threads-bad.pdf">Why Threads Are a Bad Idea (for
+most purposes)</a></li>
+<li><a href="readings/events-bad.pdf">Why Events Are a Bad Idea (for
+high-concurrency servers)</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">4</th>
+<td>
+
+<p>10/15</p>
+<ul>
+<li><a href="readings/livelock.pdf">Eliminating Receive Livelock in an
+Interrupt-Driven Kernel</a>
+<ul>
+<li><a href="readings/cs240-annot-livelock.pdf">annotated
+version</a></li>
+</ul></li>
+<li><a href="questions/livelock.html">reading question</a></li>
+</ul>
+</td>
+<td>
+
+<p>10/17</p>
+<ul>
+<li><a href="readings/esx.pdf">Memory Resource Management in VMware ESX
+Server</a>
+<ul>
+<li><a href="readings/cs240-annot-esx.pdf">annotated version</a></li>
+</ul></li>
+<li><a href="questions/esx.html">reading question</a></li>
+<li><strong>Lab 1 Released</strong>
+<ul>
+<li><a href="labs/lab1-skeleton.zip">skeleton code</a></li>
+<li><a href="labs/lab1.html">writeup</a></li>
+</ul></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">5</th>
+<td>
+
+<p>10/22</p>
+<ul>
+<li><a href="readings/superpages.pdf">Practical, Transparent Operating
+System Support for Superpages</a>
+<ul>
+<li><a href="readings/cs240-annot-superpages.pdf">annotated
+version</a></li>
+</ul></li>
+<li><a href="questions/superpages.html">reading question</a></li>
+</ul>
+</td>
+<td>
+
+<p>10/24</p>
+<ul>
+<li><a href="readings/nacl.pdf">Native Client: A Sandbox for Portable,
+Untrusted x86 Native Code</a>
+<ul>
+<li><a href="readings/cs240-annot-nacl.pdf">annotated version</a></li>
+</ul></li>
+<li><a href="readings/exploiting-nacl.pdf">Exploiting Native
+Client</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">6</th>
+<td>
+
+<p>10/29</p>
+<p><strong>Midterm Exam</strong></p>
+<ul>
+<li><a href="exams/midterm-11.pdf">Spring 2011 Exam</a></li>
+<li><a href="exams/midterm-13.pdf">Spring 2013 Exam</a></li>
+<li><a href="exams/midterm-15-solns.pdf">Spring 2015 Exam +
+Solutions</a></li>
+<li><a href="exams/midterm-16-solns.pdf">Spring 2016 Exam +
+Solutions</a></li>
+<li><a href="exams/midterm-24-solns.pdf"><strong>Autumn 2024 Exam +
+Solutions</strong></a></li>
+</ul>
+</td>
+<td>
+
+<p>10/31</p>
+<ul>
+<li><a href="readings/nfs.pdf">Design and Implementation of the Sun
+Network Filesystem</a>
+<ul>
+<li><a href="readings/cs240-annot-nfs.pdf">annotated version</a></li>
+</ul></li>
+<li><a href="readings/leases.pdf">Leases: An Efficient Fault-Tolerant
+Mechanism for Distributed File Cache Consistency</a>
+<ul>
+<li><a href="readings/cs240-annot-leases.pdf">annotated version</a></li>
+</ul></li>
+<li><a href="questions/nfs.html">reading question</a></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">7</th>
+<td>
+
+<p>11/5</p>
+<p><strong>No Class—Democracy Day</strong></p>
+</td>
+<td>
+
+<p>11/7</p>
+<ul>
+<li><a href="readings/LFS.pdf">The Design and Implementation of a
+Log-Structured File System</a></li>
+<li><a href="questions/lfs.html">reading question</a></li>
+<li><strong>Lab 1 Due on Sunday Night (11:59 PM)</strong></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">8</th>
+<td>
+
+<p>11/12</p>
+<ul>
+<li><a href="readings/rethink-sync.pdf">Rethink the Sync</a>
+<ul>
+<li><a href="readings/cs240-annot-rethink-sync.pdf">annotated
+version</a></li>
+</ul></li>
+<li><a href="questions/rethink-sync.html">reading question</a></li>
+</ul>
+</td>
+<td>
+
+<p>11/14</p>
+<ul>
+<li><a href="readings/mapreduce.pdf">MapReduce: Simplified Data
+Processing on Large Clusters</a>
+<ul>
+<li><a href="readings/cs240-annot-mapreduce.pdf">annotated
+version</a></li>
+</ul></li>
+<li>no reading question</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">9</th>
+<td>
+
+<p>11/19</p>
+<ul>
+<li><a href="readings/hwsw.pdf">A Comparison of Software and Hardware
+Techniques for x86 Virtualization</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+<td>
+
+<p>11/21</p>
+<ul>
+<li><a href="readings/klee.pdf">KLEE: Unassisted and Automatic
+Generation of High-Coverage Tests for Complex Systems Programs</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">&empty;</th>
+<td>
+
+<p>11/26</p>
+<p><strong>No Class - Thanksgiving</strong></p>
+</td>
+<td>
+
+<p>11/28</p>
+<p><strong>No Class - Thanksgiving</strong></p>
+</td>
+  </tr>
+  <tr>
+    <th scope="row">10</th>
+<td>
+
+<p>12/03</p>
+<ul>
+<li><a href="readings/exokernel.pdf">Application Performance and
+Flexibility on Exokernel Systems</a></li>
+<li>no reading question</li>
+</ul>
+</td>
+<td>
+
+<p>12/05</p>
+<p><strong>Final Exam</strong></p>
+<ul>
+<li><a href="exams/final-11.pdf">Spring 2011 Exam</a></li>
+<li><a href="exams/final-12.pdf">Spring 2012 Exam</a></li>
+<li><a href="exams/final-14.pdf">Spring 2014 Exam</a></li>
+<li><a href="exams/final-15-solns.pdf">Spring 2015 Exam +
+Solutions</a></li>
+<li><a href="exams/final-24-solns.pdf"><strong>Autumn 2024 Exam +
+Solutions</strong></a></li>
+</ul>
+</td>
+  </tr>
+</tbody>
+</table>
+
+<h1 id="scpd-information">SCPD Information</h1>
+<p>The attendance requirement is waived for SCPD students; other course
+requirements remain the same. SCPD students are encouraged to
+participate asynchronously via Ed. Exams may be taken in-person with
+non-SCPD students; if they are taken remotely instead, exam monitors
+must be nominated in accordance with SCPD policies, and the exams must
+be coordinated with the SCPD exams team. SCPD students may attend office
+hours virtually; however, please try to let us know in advance so we can
+do the necessary setup.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="past.html">Past Offerings</a></li>
+</ul>
+</main>
+</body>
+</html>

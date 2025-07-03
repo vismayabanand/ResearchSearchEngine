@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        #search-input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #projects-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #projects-list li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #projects-list li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        #projects-list li a:hover {
+            text-decoration: underline;
+        }
+        .year-header {
+            background-color: #8C1515;
+            color: white;
+            padding: 5px 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+	<img src="images/logo2.png">
+        <h1>CS191 Independent Research Projects</h1>
+        <input type="text" id="search-input" placeholder="Search by name, project, genre, or year...">
+        <div id="projects-list"></div>
+    </div>
+
+
+    <script>
+        // Project data
+        const projects = [
+            { name: "Renner Lucena", project: "Fine-Tuning a Brazilian Portuguese E-Commerce Agent for the Clothing Sector", genre: "E-Commerce, Clothing", year: 2024, pdf: "projects/renner_lucena.pdf" },
+            { name: "Aksh Garg", project: "Opportunities and Challenges in Legal AI", genre: "Legal, AI, ML", year: 2024, pdf: "projects/Garg, Aksh_CS191W.pdf" },
+            { name: "Chenchen Gu", project: "Timing Attacks on Prompt Caching in Language Model APIs", genre: "AI, Security", year: 2024, pdf: "projects/Gu, Chenchen_CS191W.pdf" },
+            { name: "Sheryl Hsu", project: "GROUNDING BY TRYING: LLMS WITH REINFORCEMENT LEARNING-ENHANCED RETRIEVAL", genre: "AI, ML", year: 2024, pdf: "projects/Hsu, Sheryl_CS191W.pdf" },
+            { name: "Flora Huang", project: "Understanding Asian Stereotyping and Bias in LLMs", genre: "AI, Ethics", year: 2024, pdf: "projects/Huang, Flora_CS191.pdf" },
+            { name: "Junyi Ji", project: "CTF Agents: An Analysis of Different Agent Scaffolds for Cybersecurity Tasks", genre: "Security", year: 2024, pdf: "projects/Ji, Junyi (Joey)_CS191W.pdf" },
+            { name: "Mantena Sriya", project: "From Steps to Stages: A Behavioral Science and Large Language Model-Driven Approach to Personalized Physical Activity Interventions in the My Heart Counts Cardiovascular Health Study", genre: "Health", year: 2024, pdf: "projects/Mantena, Sriya_CS191W.pdf" },
+            { name: "Sage McGinley-Smith", project: "Satellite Image Segmentation with U-Net Model and Sentinel-2 Data", genre: "Deep Learning", year: 2024, pdf: "projects/McGinley-Smith, Sage_CS191W.pdf" },
+            { name: "Shubhra Mishra", project: "MATHCAMPS: FINE-GRAINED SYNTHESIS OF MATHEMATICAL PROBLEMS FROM HUMAN CURRICULA", genre: "Math, ML", year: 2024, pdf: "projects/Mishra, Shubhra_CS191.pdf" },
+            { name: "Daniel Musachio", project: "Predicting Microbiome Dynamics: A Machine Learning Approach Using Longitudinal Gut Microbiome Data", genre: "Health, ML", year: 2024, pdf: "projects/Musachio, Daniel_CS191W.pdf" },
+            { name: "Sidra Nadeem", project: "Cortex-Level Brain MRI Generation Using Diffusion Models", genre: "Health, ML", year: 2024, pdf: "projects/Nadeem, Sidra_CS191W.pdf" },
+            { name: "Andrew Nordhagen", project: "Reconstructing Whole-body Motion of Piano Performance in 3D", genre: "Music", year: 2024, pdf: "projects/Nordhagen, Andrew_CS191W.pdf" },
+            { name: "Parth Sarthi", project: "High-Fidelity Text-to-Speech Through Low-Rate Acoustic Tokenization and Language Models", genre: "ML", year: 2024, pdf: "projects/Sarthi, Parth_CS191W.pdf" },
+            { name: "Luca Wheeler", project: "Dynamic Affinity Mapping for Rigid and Non-Rigid Objects Using Sequential Counterfactual Flow Predictions", genre: "ML", year: 2024, pdf: "projects/Wheeler, Luca_CS191W.pdf" },
+            { name: "Alan Zhang", project: "Voice-Based Practice with AI Patients for Psychotherapy Training", genre: "Health, AI", year: 2024, pdf: "projects/Zhang, Alan_CS191W.pdf" },
+
+       { name: "Joseph Tey", project: "Precise, Controllable Style Transfer using Sparse Autoencoder Feature Interventions", genre: "AI", year: 2024, pdf: "projects/Tey,Joseph_CS191W.pdf" },
+       { name: "Cynthia Chen", project: "Understanding and Correlating Quantitative and Qualitative Survey Clusters Using LLMs, Word2Vec, and Machine Learning", genre: "AI", year: 2025, pdf: "projects/Chen, Cynthia_Analytics 191W.pdf" },
+            { name: "Julia Biswas", project: "Mapping Emotion and Themes in Immigrant Narratives: A Computational Analysis of Oral Histories", genre: "History, AI", year: 2025, pdf: "projects/Biswas, Julia_NLP 191W.pdf" },
+            { name: "William Li", project: "ChETO: Generalizable Low-Resource NLU & Dialect Adaptation Framework for Chilean Spanish", genre: "NLP", year: 2025, pdf: "projects/Li, William_NLP 191W.pdf" },
+            { name: "Butch Nasser", project: "Codifying Medicare Using Computable Contracts for Improved Understandings of Medical Insurance", genre: "Health", year: 2025, pdf: "projects/Nasser, Butch_Other (AI, Computational Law, Computable Contracts) 191W.pdf" },
+            { name: "Joshua Delgadillo", project: "A fully client-side C++ IDE for CS1 using WebAssembly", genre: "Education, Systems", year: 2025, pdf: "projects/Delgadillo2025.pdf" },
+            { name: "Bala Vinaithirthan", project: "Code Less, Align More: A Language for Accessible and Efficient Sequence Analysis Pipelines", genre: "Systems", year: 2025, pdf: "projects/Vinaithirthan, Bala_Systems 191W.pdf" },
+            { name: "Pawan Wirawarn", project: "Towards Automated Feedback on Instructional Routines: A Case Study on Detecting Notice and Wonder Routines in Math Classrooms", genre: "NLP", year: 2025, pdf: "projects/Wirawarn, Pawan_NLP 191W" },
+            { name: "Aryan Gulati", project: "Controllable LLM Debugging: Knowing when to Stop Matters", genre: "NLP", year: 2025, pdf: "projects/Gulati, Aryan_NLP 191W.pdf" },
+            { name: "Yangyi Shen", project: "Zero-Shot Generalization of GNNs over Distinct Attribute Domains", genre: "ML", year: 2025, pdf: "projects/Shen, Yangyi_ML 191W.pdf" },
+            { name: "Devanshu Ladaria", project: "A Generalizable Framework for Parallel Tree Construction on GPUs", genre: "Systems", year: 2025, pdf: "projects/Ladaria, Devanshu_Systems 191W.pdf" },
+	    { name: "Jun Wang", project: "Robust Planning for Autonomous Vehicles with Diffusion-Based Failure Samplers", genre: "Autonomous Driving", year: 2025, pdf: "projects/Wang, Jun_Other, Autonomous Driving 191W.pdf" },
+            { name: "Alexander Shan", project: "Osiris: A Lightweight Open-Source Hallucination Detection System", genre: "NLP", year: 2025, pdf: "projects/Shan, Alexander_NLP 191W.pdf" },
+            { name: "Jay Yu", project: "PASS: A Provenanced Access Subaccount System for Blockchain Wallets", genre: "Systems", year: 2025, pdf: "projects/Yu, Jay_Systems 191W.pdf" },
+
+            { name: "Maximino DiGiacomo-Castillo", project: "Labeling Financial Time Series with LLMs", genre: "Finance, Data", year: 2024, pdf: "projects/DiGiacomo-Castillo, Maximino_CS191W.pdf" }
+        ];
+
+        const projectsList = document.getElementById('projects-list');
+        const searchInput = document.getElementById('search-input');
+
+        // Function to sort projects by year (descending) and then by project title
+        function sortProjects(projectsToSort) {
+            return projectsToSort.sort((a, b) => {
+                if (b.year !== a.year) {
+                    return b.year - a.year; // Sort by year descending
+                }
+                return a.project.localeCompare(b.project); // Then sort alphabetically by project title
+            });
+        }
+
+        // Function to render projects
+        function renderProjects(projectsToRender) {
+            projectsList.innerHTML = '';
+            let currentYear = null;
+
+            sortProjects(projectsToRender).forEach(project => {
+                if (project.year !== currentYear) {
+                    currentYear = project.year;
+                    const yearHeader = document.createElement('h2');
+                    yearHeader.textContent = currentYear;
+                    yearHeader.className = 'year-header';
+                    projectsList.appendChild(yearHeader);
+                }
+
+                const li = document.createElement('div');
+                li.innerHTML = `
+                    <strong>${project.name}</strong> - ${project.project} (${project.genre})
+                    <br>
+                    <a href="${project.pdf}" target="_blank">View PDF</a>
+                `;
+                projectsList.appendChild(li);
+            });
+        }
+
+        // Initial render
+        renderProjects(projects);
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredProjects = projects.filter(project => 
+                project.name.toLowerCase().includes(searchTerm) ||
+                project.project.toLowerCase().includes(searchTerm) ||
+                project.genre.toLowerCase().includes(searchTerm) ||
+                project.year.toString().includes(searchTerm)
+            );
+            renderProjects(filteredProjects);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta content='True' name='HandheldFriendly'>
+<meta content='width=device-width,initial-scale=1.0,shrink-to-fit=no' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='IDEALS' name='Generator'>
+<title>
+Online and active learning of big networks: theory and algorithms
+|
+IDEALS
+</title>
+<link rel="icon" type="image/png" sizes="16x16" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-192x192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="167x167" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-167x167.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/favicons/favicon-180x180.png">
+
+<link rel="stylesheet" href="/assets/scoped/application_scoped-e855f3c36cc25c31429222910a913a396e98965d4af9b09251b615aa4e4a2564.css" media="all" />
+<link href='/custom-styles' rel='stylesheet'>
+<script src="/assets/application-03f4f9df4dae4a6eead21fa957b0adfe0f74b46001cf2275576bba1f298c9cbd.js"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="3ceqasrXV0KmqkfUMzGF05pZWdv6ShWeiAaDdhyCSYq2eNZlSuDaqqtrRWo0pKrYcjhjdGJOTCy7hRvvenQGng" />
+
+<meta name="dc.title" content="Online and active learning of big networks: theory and algorithms"><meta name="dc.creator" content="Gu, Quanquan"><meta name="dc.date.issued" content="2014-09-16"><meta name="dc.contributor.advisor" content="Han, Jiawei"><meta name="dc.contributor.committeeChair" content="Han, Jiawei"><meta name="dc.contributor.committeeMember" content="Roth, Dan"><meta name="dc.contributor.committeeMember" content="Zhai, ChengXiang"><meta name="dc.contributor.committeeMember" content="Aggarwal, Charu C."><meta name="thesis.degree.department" content="Computer Science"><meta name="thesis.degree.discipline" content="Computer Science"><meta name="thesis.degree.grantor" content="University of Illinois at Urbana-Champaign"><meta name="thesis.degree.name" content="Ph.D."><meta name="thesis.degree.level" content="Dissertation"><meta name="dc.date.accessioned" content="2014-09-16T17:26:13Z"><meta name="dc.subject" content="Big Networks"><meta name="dc.subject" content="Online Learning"><meta name="dc.subject" content="Active Learning"><meta name="dc.description.abstract" content="We are living in the Internet Age, in which information entities and objects are interconnected, thereby forming gigantic information networks. These networks are not only massive, but also grow and evolve very quickly. It is critical to quickly process and understand these networks in order to enable data-driven applications. On the other hand, the labels of the nodes in big networks are scarce.  It is urgent to
+optimize the process by which the labels are collected, because it is unrealistic to get labels of every node. The objective of my research is to develop algorithms for big network analytics, which are both statistically and computationally efficient, and with provable guarantee on their performance. In particular, I present active learning, online learning, selective sampling (online active learning), and online learning with bandit feedback algorithms for learning in a network.
+In the first part of this thesis, I propose a \textit{nonadaptive} active learning approach on a graph, based on generalization error bound minimization. In particular, I present a data-dependent error bound for a graph-based learning method, namely learning with local and global consistency (LLGC). I show that the empirical transductive Rademacher complexity of the function class for LLGC provides a natural criterion for active learning. The resulting active learning approach is to select a subset of nodes on a graph such that the empirical transductive Rademacher complexity of LLGC is minimized. I propose a simple yet effective sequential optimization algorithm to solve it.
+In the second part of this thesis, I first present an online learning algorithm on a graph for binary node classification. It is an online version of
+the well-known Learning with Local and Global Consistency method
+(OLLGC). It is essentially a second-order online learning algorithm,
+and can be seen as an online ridge regression in the Hilbert space
+of functions defined on a graph. I prove its regret bound in terms
+of the structural property (cut size) of a graph. Based on OLLGC, I present a selective
+sampling algorithm, namely Selective Sampling with Local and Global
+Consistency (SSLGC), which adaptively queries the label of each node based on the
+confidence of the linear function on a graph. Its regret bound as well as its label
+complexity are also derived. I also analyze the low-rank approximation of graph kernels, which enables the online algorithms scale to large graphs.
+ In the third part of this thesis, I first extend the online binary classification algorithm to multi-class regime, based on spectral learning technique. The resulting algorithm is called online spectral learning on a graph (OSLG). Then I study online learning on a graph with bandit feedback, where after the learner makes a prediction of the node label, the oracle will return a single bit indicating whether the prediction is correct or not. I propose an algorithm namely online spectral learning on a graph with bandit feedback (OSLG Bandit), which uses upper-confidence bound of the nonparametric classifier on a graph to trade off the exploration and exploitation of label information. I derive regret bounds for both algorithms, which clearly characterize the difficulty of online learning on a graph for multi-class node classification, both in the full information setting and in the partial information setting.
+ 
+All in all, my efforts in this thesis have provided important findings in these areas, and have yielded new algorithms and theory."><meta name="dc.date.submitted" content="2014-08"><meta name="dc.identifier.uri" content="http://hdl.handle.net/2142/50757"><meta name="dc.rights" content="Copyright 2014 Quanquan Gu"><meta name="citation_public_url" content="https://hdl.handle.net/2142/50757">
+<meta name="citation_pdf_url" content="https://www.ideals.illinois.edu/items/50868/bitstreams/147796/data.pdf">
+<meta name="citation_title" content="Online and active learning of big networks: theory and algorithms">
+<meta name="citation_author" content="Gu, Quanquan">
+<meta name="citation_publication_date" content="2014-09-16">
+<meta name="citation_dissertation_institution" content="University of Illinois at Urbana-Champaign">
+<meta name="citation_dissertation_name" content="Ph.D.">
+<meta name="citation_online_date" content="2014-09-16T17:26:13Z">
+<meta name="citation_keywords" content="Big Networks">
+<meta name="citation_keywords" content="Online Learning">
+<meta name="citation_keywords" content="Active Learning">
+<meta name="citation_online_date" content="2014-08">
+<meta name="citation_public_url" content="http://hdl.handle.net/2142/50757">
+
+</head>
+<body data-nav='' id='show_item'>
+<div class='container-fluid'>
+<div class='toast-container position-fixed' style='position: absolute; top: 0; right: 0; z-index: 1000'>
+</div>
+
+
+<header>
+<div>
+<h1 class='sr-only'>University of Illinois Urbana-Champaign</h1>
+<div class='d-flex justify-content-between'>
+<div class='responsive-header-images'>
+<a href='https://illinois.edu/'>
+<img class="imark banner-image-uiuc" alt="University of Illinois I-Mark" src="/assets/library_wordmark_horizontal_1-b965c05fef1979c62eb91d7a03c3e052b29c49e48b4ede31ac639e40044afef3.png" />
+</a>
+<a href='https://www.library.illinois.edu'>
+<img class="col-xs-12 uiuc banner-image-university" alt="University" src="/assets/library_wordmark_horizontal_2-f2a035d9ba7679551d7166d05b6cff26c92120e42b6fa18935c156744f0d8aa5.png" />
+</a>
+<a href='https://www.library.illinois.edu'>
+<img class="col-xs-12 uiuc banner-image-library" alt="Library" src="/assets/library_wordmark_horizontal_3-a9e5b86fe1700833f27232f577c9395cfb312b21acd262c2397908c9d85faba7.png" />
+</a>
+</div>
+<div class='user-menus'>
+<button class='btn btn-sm btn-link' data-bs-target='#login-modal' data-bs-toggle='modal' type='button'>
+<i class='fa fa-sign-in-alt'></i>
+Log In
+</button>
+</div>
+</div>
+</div>
+
+<nav class='navbar navbar-expand-lg'>
+<div class='container-fluid'>
+<a class="navbar-brand" href="/">IDEALS</a>
+<button aria-controls='navbar-supported-content' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-bs-target='#navbar-supported-content' data-bs-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbar-supported-content'>
+<ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+<li class='nav-item' id='deposit-nav'>
+<a class="nav-link" href="/submit"><i class='fa fa-plus'></i>
+Submit an Item
+</a></li>
+<li class='nav-item dropdown' id='browse-nav'>
+<a class='nav-link dropdown-toggle' data-bs-toggle='dropdown' href='#' role='button'>
+<i class='fa fa-cubes'></i>
+Browse
+</a>
+<ul class='dropdown-menu'>
+<li><a class="dropdown-item" href="/units">Academic Units and Collections</a></li>
+<li><a class="dropdown-item" href="/recent-items">Most Recent Items</a></li>
+<li>
+<hr class='dropdown-divider'>
+<li><a class="dropdown-item" href="/search?prebuilt_search_id=1&amp;sort=d_element_dc_date_issued&amp;direction=desc">Items By Publication Date</a></li>
+</li>
+<li>
+<hr class='dropdown-divider'>
+<li><a class="dropdown-item" href="/index-pages/1">Author &amp; Contributor Index</a></li>
+<li><a class="dropdown-item" href="/index-pages/4">Director of Research (if dissertation) or Advisor (if thesis)</a></li>
+<li><a class="dropdown-item" href="/index-pages/3">Sponsor(s)/Grant Number(s)</a></li>
+</li>
+</ul>
+</li>
+<li class='nav-item' id='policies-nav'>
+<a class="nav-link" href="https://guides.library.illinois.edu/ideals"><i class="fa fa-info-circle"></i>
+About
+</a></li>
+</ul>
+<form role="search" action="/search" accept-charset="UTF-8" method="get"><div class='input-group'>
+<input aria-label='Search' class='form-control' name='q' placeholder='Search' type='search'>
+<button class='btn btn-outline-secondary me-3' type='submit'>
+<i class='fa fa-search'></i>
+<span class='sr-only'>Search</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</nav>
+</header>
+
+<div class='page-content'>
+
+<nav aria-label="breadcrumb"><ol class="breadcrumb "><li class="breadcrumb-item"><a href="/institutions/uiuc"><i class="fa fa-university"></i> University of Illinois Urbana-Champaign</a></li><li class="breadcrumb-item"><a href="/units"><i class="fa fa-building"></i> Academic Units</a></li><li class="breadcrumb-item"><a href="/units/68"><i class="fa fa-building"></i> Graduate Dissertations and Theses at Illinois</a></li><li class="breadcrumb-item"><a href="/collections/204"><i class="far fa-folder-open"></i> Graduate Dissertations and Theses at Illinois</a></li><li class="breadcrumb-item"><i class="file-pdf"></i> Online and active learning of big networks: theory and algorithms</li></ol></nav>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ31KCQJ2G"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WJ31KCQJ2G');
+      </script>
+<input type="hidden" name="item_id" id="item_id" value="50868" autocomplete="off" />
+<div class='btn-group float-end' role='group'>
+</div>
+<div aria-hidden='true' aria-labelledby='withdraw-modal-modal-label' class='modal fade' id='withdraw-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered ' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='withdraw-modal-modal-label'>
+Withdraw
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<h1>Online and active learning of big networks: theory and algorithms</h1>
+<h4 class='creators'>Gu, Quanquan</h4>
+<div class='mb-3'></div>
+<div id='file-navigator'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+<h2 class='mt-5'>Permalink</h2>
+<p class='permalink'>
+https://hdl.handle.net/2142/50757
+<button class='btn btn-light btn-sm copy'>
+<i class='fas fa-paste'></i>
+Copy
+</button>
+</p>
+<h2 class='mt-5'>
+Description
+</h2>
+<dl class="metadata"><dt>Title</dt><dd>Online and active learning of big networks: theory and algorithms</dd><dt>Author(s)</dt><dd>Gu, Quanquan</dd><dt>Issue Date</dt><dd>2014-09-16</dd><dt>Director of Research (if dissertation) or Advisor (if thesis)</dt><dd>Han, Jiawei</dd><dt>Doctoral Committee Chair(s)</dt><dd>Han, Jiawei</dd><dt>Committee Member(s)</dt><dd><ul><li>Roth, Dan</li><li>Zhai, ChengXiang</li><li>Aggarwal, Charu C.</li></ul></dd><dt>Department of Study</dt><dd>Computer Science</dd><dt>Discipline</dt><dd>Computer Science</dd><dt>Degree Granting Institution</dt><dd>University of Illinois at Urbana-Champaign</dd><dt>Degree Name</dt><dd>Ph.D.</dd><dt>Degree Level</dt><dd>Dissertation</dd><dt>Date of Ingest</dt><dd>2014-09-16T17:26:13Z</dd><dt>Keyword(s)</dt><dd><ul><li>Big Networks</li><li>Online Learning</li><li>Active Learning</li></ul></dd><dt>Abstract</dt><dd>We are living in the Internet Age, in which information entities and objects are interconnected, thereby forming gigantic information networks. These networks are not only massive, but also grow and evolve very quickly. It is critical to quickly process and understand these networks in order to enable data-driven applications. On the other hand, the labels of the nodes in big networks are scarce.  It is urgent to
+optimize the process by which the labels are collected, because it is unrealistic to get labels of every node. The objective of my research is to develop algorithms for big network analytics, which are both statistically and computationally efficient, and with provable guarantee on their performance. In particular, I present active learning, online learning, selective sampling (online active learning), and online learning with bandit feedback algorithms for learning in a network.
+In the first part of this thesis, I propose a \textit{nonadaptive} active learning approach on a graph, based on generalization error bound minimization. In particular, I present a data-dependent error bound for a graph-based learning method, namely learning with local and global consistency (LLGC). I show that the empirical transductive Rademacher complexity of the function class for LLGC provides a natural criterion for active learning. The resulting active learning approach is to select a subset of nodes on a graph such that the empirical transductive Rademacher complexity of LLGC is minimized. I propose a simple yet effective sequential optimization algorithm to solve it.
+In the second part of this thesis, I first present an online learning algorithm on a graph for binary node classification. It is an online version of
+the well-known Learning with Local and Global Consistency method
+(OLLGC). It is essentially a second-order online learning algorithm,
+and can be seen as an online ridge regression in the Hilbert space
+of functions defined on a graph. I prove its regret bound in terms
+of the structural property (cut size) of a graph. Based on OLLGC, I present a selective
+sampling algorithm, namely Selective Sampling with Local and Global
+Consistency (SSLGC), which adaptively queries the label of each node based on the
+confidence of the linear function on a graph. Its regret bound as well as its label
+complexity are also derived. I also analyze the low-rank approximation of graph kernels, which enables the online algorithms scale to large graphs.
+ In the third part of this thesis, I first extend the online binary classification algorithm to multi-class regime, based on spectral learning technique. The resulting algorithm is called online spectral learning on a graph (OSLG). Then I study online learning on a graph with bandit feedback, where after the learner makes a prediction of the node label, the oracle will return a single bit indicating whether the prediction is correct or not. I propose an algorithm namely online spectral learning on a graph with bandit feedback (OSLG Bandit), which uses upper-confidence bound of the nonparametric classifier on a graph to trade off the exploration and exploitation of label information. I derive regret bounds for both algorithms, which clearly characterize the difficulty of online learning on a graph for multi-class node classification, both in the full information setting and in the partial information setting.
+ 
+All in all, my efforts in this thesis have provided important findings in these areas, and have yielded new algorithms and theory.</dd><dt>Graduation Semester</dt><dd>2014-08</dd><dt>Permalink</dt><dd>http://hdl.handle.net/2142/50757</dd><dt>Copyright and License Information</dt><dd>Copyright 2014 Quanquan Gu</dd></dl>
+
+<h2 class='mt-5'>
+Owning Collections
+</h2>
+<div class="d-flex resource-list mb-3"><div class="flex-shrink-0 icon-thumbnail"><a href="https://www.ideals.illinois.edu/collections/204"><i class="far fa-folder-open"></i></a></div><div class="flex-grow-1 ms-3"><h5 class="mt-0 mb-0"><a href="https://www.ideals.illinois.edu/collections/204">Graduate Dissertations and Theses at Illinois</a> <span class="badge text-bg-primary">PRIMARY</span></h5>Graduate Theses and Dissertations at Illinois</div></div><div class="d-flex resource-list mb-3"><div class="flex-shrink-0 icon-thumbnail"><a href="https://www.ideals.illinois.edu/collections/587"><i class="far fa-folder-open"></i></a></div><div class="flex-grow-1 ms-3"><h5 class="mt-0 mb-0"><a href="https://www.ideals.illinois.edu/collections/587">Dissertations and Theses - Computer Science</a></h5>Dissertations and Theses from the Siebel School of Computer Science</div></div>
+
+
+
+
+
+
+<div aria-hidden='true' aria-labelledby='manage-item-files-modal-modal-label' class='modal fade' id='manage-item-files-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='manage-item-files-modal-modal-label'>
+Manage Files
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='edit-item-membership-modal-modal-label' class='modal fade' id='edit-item-membership-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='edit-item-membership-modal-modal-label'>
+Edit Collection Membership
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='edit-item-metadata-modal-modal-label' class='modal fade' id='edit-item-metadata-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='edit-item-metadata-modal-modal-label'>
+Edit Metadata
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='edit-item-properties-modal-modal-label' class='modal fade' id='edit-item-properties-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered ' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='edit-item-properties-modal-modal-label'>
+Edit Properties
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div aria-hidden='true' aria-labelledby='edit-item-embargoes-modal-modal-label' class='modal fade' id='edit-item-embargoes-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h4 class='modal-title' id='edit-item-embargoes-modal-modal-label'>
+Embargoes
+</h4>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='d-flex justify-content-center'>
+<div class="d-flex justify-content-center align-items-center" style="height: 100%">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading&hellip;</span>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="/chart.min.js"></script>
+
+</div>
+<div class='clearfix'></div>
+<footer role='contentinfo'>
+<div class='contact-area'>
+<div class='text-center'>
+<a role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="contact-form" href="#contact-form">Contact us</a>
+for questions and to provide feedback.
+</div>
+<div class='collapse mt-3' id='contact-form'>
+<div class='alert' id='contact-form-alert' style='display: none'></div>
+<form action="/contact?method=post" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="6-bSx1rsi9mEMUw-76LF8p5Ct71soSM-rjJbjwHxd_tPUwzFuNZmoX0zL6Mkkpt8PqzY6N4SW3Awx_mDeZJLAw" autocomplete="off" /><input type="hidden" name="page_url" id="page_url" value="https://www.ideals.illinois.edu/items/50868" autocomplete="off" />
+<div class='row'>
+<div class='col-sm-6'>
+<div class='mb-3'>
+<label class="form-label" for="name">Your Name (optional)</label>
+<input type="text" name="name" id="name" class="form-control" />
+</div>
+<div class='mb-3'>
+<label class="form-label" for="email">Your Email (optional)</label>
+<input type="text" name="email" id="email" class="form-control" />
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='mb-3'>
+<label class="form-label" for="comment">Your Comment</label>
+<textarea name="comment" id="comment" rows="5" class="form-control">
+</textarea>
+</div>
+</div>
+<div class='mb-3'>
+<label class="col-sm-3 col-form-label" for="answer">What is 1 &plus; 2?</label>
+<input type="text" name="honey_email" id="honey_email" placeholder="Leave this field blank." style="display: none" /><input type="text" name="answer" id="answer" class="form-control" /><input type="hidden" name="correct_answer_hash" id="correct_answer_hash" value="09741f2a62a3d7a188d697ad3d19d294" autocomplete="off" />
+</div>
+</div>
+<div class='mb-3'>
+<input type="submit" name="commit" value="Submit" class="btn btn-primary" data-disable-with="Submit" />
+</div>
+</form></div>
+
+</div>
+<div class='info-area'>
+<a href="https://illinois.edu"><img alt="Institution Logo" src="https://ideals-main.s3.us-east-2.amazonaws.com/institutions/uiuc/theme/footer.png" />
+</a><div class='footer-copyright text-center mt-3'>
+© 2023 University of Illinois Board of Trustees
+</div>
+</div>
+</footer>
+
+</div>
+<div class='modal' id='login-modal' tabindex='-1'>
+<div class='modal-dialog modal-dialog-centered modal-md'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='login-modal-label'>Log In</h5>
+<button aria-label='Close' class='btn-close' data-bs-dismiss='modal' type='button'></button>
+</div>
+<div class='modal-body'>
+<div class='carousel slide' data-bs-interval='9999999999' data-bs-ride='carousel' data-bs-touch='false' id='login-carousel'>
+<div class='carousel-inner'>
+<div class='carousel-item uiuc active'>
+<div class='text-center'>
+<form class="button_to" method="post" action="/auth/saml"><button class="btn btn-primary p-4" type="submit"><img style="height: 2em" alt="University of Illinois Logo" src="/assets/library_wordmark_horizontal_1-b965c05fef1979c62eb91d7a03c3e052b29c49e48b4ede31ac639e40044afef3.png" />
+<i class='fa fa-sign-in-alt'></i>
+&nbsp;Log in with Illinois NetID
+</button><input type="hidden" name="authenticity_token" value="LL5nNx-GiUpXKj8y1jdxbBkS1NlHdtTvu63Wf2B7LOVsS5dVj8ORdyEYgPwzowbd0IKHT4-pDBtpQfYB7EZX6g" autocomplete="off" /></form><p class='mt-4'>
+<a data-bs-slide='next' data-bs-target='#login-carousel' href='#'>
+I don't have an Illinois NetID
+</a>
+</p>
+</div>
+
+</div>
+<div class='carousel-item local-credential p-1'>
+<div class='alert alert-light'>
+<i class="fa fa-info-circle"></i>
+Use this login method if you
+<strong>don't</strong>
+have an
+<code>@illinois.edu</code>
+email address.
+<a data-bs-slide='prev' data-bs-target='#login-carousel' href='#'>
+(Oops, I do have one)
+</a>
+</div>
+<div class='alert alert-light'>
+<i class="fa fa-info-circle"></i>
+IDEALS migrated to a new platform on June 23, 2022. If you created
+your account prior to this date, you will have to reset your password
+using the forgot-password link below.
+</div>
+<div class='alert alert-danger login-status'></div>
+<form action="/auth/identity/callback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="dMHN2ctzPVnm8pOtDeFkgbn0NWeiXPS5T0lXl5PKTFbzRUwx__96s9GuXOYOXkcgcTu5xm8xMVYbj4TjLfWQbw" autocomplete="off" /><div class='mb-3 row'>
+<label class='col-sm-4 col-form-label' for='auth_key'>Email</label>
+<div class='col-sm-8'>
+<input type="email" name="auth_key" id="auth_key" class="form-control" />
+</div>
+</div>
+<div class='mb-3 row'>
+<label class='col-sm-4 col-form-label' for='password'>Password</label>
+<div class='col-sm-8'>
+<input type="password" name="password" id="password" class="form-control" />
+<a href="/reset-password">(I forgot my password)</a>
+</div>
+</div>
+<button class='btn btn-primary me-3' type='submit'>
+<i class='fa fa-sign-in-alt'></i>
+&nbsp;Log In
+</button>
+</form>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="root_url" id="root_url" value="https://www.ideals.illinois.edu" autocomplete="off" />
+<input type="hidden" name="root_path" id="root_path" value="/" autocomplete="off" />
+<input type="hidden" name="csrf_token" id="csrf_token" autocomplete="off" />
+<input type="hidden" name="institution_key" id="institution_key" value="uiuc" autocomplete="off" />
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <title>UCLA CS Meeting Room Scheduler - Log In</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.ico"/>
+    <!-- JavaScript -->
+            <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+        <script
+                src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+                integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+                crossorigin="anonymous"></script>
+        <script type="text/javascript"
+                src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <!-- End JavaScript -->
+
+    <!-- CSS -->
+            <link rel="stylesheet"
+              href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+              type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+              type="text/css"/>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+              type="text/css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css"
+              type="text/css"/>
+                                    
+    <script type="text/javascript" src="scripts/js/jquery-ui-timepicker-addon.js?v=2.8.4"></script>
+    <link rel='stylesheet' type='text/css' href='scripts/css/jquery-ui-timepicker-addon.css?v=2.8.4'/>
+    <link rel='stylesheet' type='text/css' href='css/booked.css?v=2.8.4'/>
+                <link rel='stylesheet' type='text/css' href='css/null-style.css?v=2.8.4'/>
+        
+        <!-- End CSS -->
+</head>
+<body >
+
+    <nav class="navbar navbar-default navbar-fixed-top"
+         role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#booked-navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"
+                   href="dashboard.php"><img src="img/custom-logo.png?2.8.4" title="UCLA CS Meeting Room Scheduler - Log In" alt="UCLA CS Meeting Room Scheduler - Log In"  class="logo"  /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="booked-navigation">
+                <ul class="nav navbar-nav">
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                                            <li class="dropdown" id="navScheduleDropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule <b
+                                        class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li id="navViewSchedule"><a href="view-schedule.php">View Schedule</a>
+                                </li>
+                                <li id="navViewCalendar"><a href="view-calendar.php">View Calendar</a>
+                                </li>
+                            </ul>
+                        </li>
+                                                            <li class="dropdown" id="navHelpDropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b
+                                    class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="navHelp"><a href="https://www.bookedscheduler.com/help/usage">Help</a></li>
+                                                        <li id="navAbout"><a href="help.php?ht=about">About</a></li>
+                        </ul>
+                    </li>
+                                            <li id="navLogIn"><a href="index.php">Log In</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+<div id="main" class="container-fluid" >
+
+
+<div id="page-login">
+	
+    
+    
+	<div class="col-md-offset-3 col-md-6 col-xs-12 ">
+		<form role="form" name="login" id="login" class="form-horizontal" method="post"
+			  action="/booked/Web/index.php">
+			<div id="login-box" class="col-xs-12 default-box">
+				<div class="col-xs-12 login-icon">
+					<img src="img/custom-logo.png?2.6" title="UCLA CS Meeting Room Scheduler - Log In" alt="UCLA CS Meeting Room Scheduler - Log In"   />
+				</div>
+									<div class="col-xs-12">
+						<div class="input-group margin-bottom-25">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input type="text" required="" class="form-control"
+								   id="email" name='email'
+								   placeholder="Username or Email"/>
+						</div>
+					</div>
+				
+									<div class="col-xs-12">
+						<div class="input-group margin-bottom-25">
+							<span class="input-group-addon">
+							<i class="glyphicon glyphicon-lock"></i>
+							</span>
+							<input type="password" required="" id="password" name='password'
+								   class="form-control"
+								   value="" placeholder="Password"/>
+						</div>
+					</div>
+				
+                                    <input type="hidden" name='captcha' value=""/>
+                
+								<div class="col-xs-12">
+					<button type="submit" class="btn btn-large btn-primary  btn-block" name="login"
+							value="submit">Log In</button>
+					<input type="hidden" name='resume' value=""/>
+				</div>
+				
+								<div class="col-xs-12 col-sm-6">
+					<div class="checkbox">
+						<input id="rememberMe" type="checkbox" name='persistLogin'>
+						<label for="rememberMe">Remember Me</label>
+					</div>
+				</div>
+				
+                                    <div class="col-xs-12 col-sm-6 register">
+                    <span class="bold">First Time User?
+                    <a href="register.php" 
+                       title="Register">Register</a>
+                    </span>
+                    </div>
+                
+				<div class="clearfix"></div>
+
+													
+											</div>
+			<div id="login-footer" class="col-xs-12">
+									<div id="forgot-password" class="col-xs-12 col-sm-6">
+						<a href="forgot.php"  class="btn btn-link pull-left-sm"><span><i
+										class="glyphicon glyphicon-question-sign"></i></span> I Forgot My Password</a>
+					</div>
+								<div id="change-language" class="col-xs-12 col-sm-6">
+					<button type="button" class="btn btn-link pull-right-sm" data-toggle="collapse"
+							data-target="#change-language-options"><span><i class="glyphicon glyphicon-globe"></i></span>
+						Change Language
+					</button>
+					<div id="change-language-options" class="collapse">
+						<select name='language' class="form-control input-sm" id="languageDropDown">
+							<option label="Basque" value="eu_es">Basque</option><option label="Bulgarian" value="bg_bg">Bulgarian</option><option label="Catalan" value="ca">Catalan</option><option label="Czech" value="cz">Czech</option><option label="Danish" value="da_da">Danish</option><option label="Deutsch" value="de_de">Deutsch</option><option label="Flemisch" value="du_be">Flemisch</option><option label="Dutch" value="du_nl">Dutch</option><option label="English US" value="en_us"selected="selected">English US</option><option label="English GB" value="en_gb">English GB</option><option label="Espa&ntilde;ol" value="es">Espa&ntilde;ol</option><option label="Estonian" value="ee_ee">Estonian</option><option label="Suomi" value="fi_fi">Suomi</option><option label="Fran&ccedil;ais" value="fr_fr">Fran&ccedil;ais</option><option label="Hrvatski" value="hr_hr">Hrvatski</option><option label="Hungarian" value="hu_hu">Hungarian</option><option label="עברית" value="he">עברית</option><option label="Bahasa Indonesia" value="id_id">Bahasa Indonesia</option><option label="Italiano" value="it_it">Italiano</option><option label="Japanese" value="ja_jp">Japanese</option><option label="Lietuvių" value="lt">Lietuvių</option><option label="Norsk bokmål" value="no_no">Norsk bokmål</option><option label="Polski" value="pl">Polski</option><option label="Portugu&ecirc;s" value="pt_pt">Portugu&ecirc;s</option><option label="Portugu&ecirc;s Brasileiro" value="pt_br">Portugu&ecirc;s Brasileiro</option><option label="Русский" value="ru_ru">Русский</option><option label="Slovenščina" value="si_si">Slovenščina</option><option label="Serbian" value="sr_sr">Serbian</option><option label="Romanian" value="ro_ro">Romanian</option><option label="Thai" value="th_th">Thai</option><option label="Türkçe" value="tr_tr">Türkçe</option><option label="Swedish" value="sv_sv">Swedish</option><option label="Tiếng Việt" value="vn_vn">Tiếng Việt</option><option label="简体中文" value="zh_cn">简体中文</option><option label="繁體中文" value="zh_tw">繁體中文</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">document.getElementById('email').focus();</script>
+
+
+    
+            
+    
+            
+    
+            
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/lodash/4.16.3/lodash.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
+        
+    <script type="text/javascript" src="scripts/phpscheduleit.js?v=2.8.4"></script>
+
+<script type="text/javascript">
+	var url = 'index.php?lang=';
+	$(document).ready(function () {
+		$('#languageDropDown').change(function () {
+			window.location.href = url + $(this).val();
+		});
+
+		var langCode = readCookie('language');
+
+		if (!langCode)
+		{
+			langCode = (navigator.language+"").replace("-", "_").toLowerCase();
+
+			var availableLanguages = ["eu_es","bg_bg","ca","cz","da_da","de_de","du_be","du_nl","en_us","en_gb","es","ee_ee","fi_fi","fr_fr","hr_hr","hu_hu","he","id_id","it_it","ja_jp","lt","no_no","pl","pt_pt","pt_br","ru_ru","si_si","sr_sr","ro_ro","th_th","tr_tr","sv_sv","vn_vn","zh_cn","zh_tw",];
+			if (langCode !== "" && langCode != 'en_us') {
+				if (availableLanguages.indexOf(langCode) !== -1)
+				{
+					window.location.href = url + langCode;
+				}
+			}
+		}
+	});
+</script>
+
+
+	</div><!-- close main-->
+
+	<footer class="footer navbar">
+		&copy; 2020 <a href="http://www.twinkletoessoftware.com">Twinkle Toes Software</a> <br/><a href="http://www.bookedscheduler.com">Booked Scheduler v2.8.4</a>
+	</footer>
+
+	<script type="text/javascript">
+		init();
+		$.blockUI.defaults.css.border = 'none';
+		$.blockUI.defaults.css.top = '25%';
+
+	</script>
+
+	
+	</body>
+</html>

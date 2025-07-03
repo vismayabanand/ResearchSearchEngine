@@ -1,0 +1,576 @@
+<DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CS279: Structure and Organization of Biomolecules and Cells</title>
+  <style>
+body{margin:10px 10px 10px 10px;width: 950px; font-family:sans-serif;}
+a{text-decoration:none}
+a:hover{background-color:#aaddff;}
+li{line-height : 130%;}
+.due{color: #bd2031;}
+  </style>
+
+<script>
+var isPoly = false;
+(function() {
+  if ('registerElement' in document
+      && 'import' in document.createElement('link')
+      && 'content' in document.createElement('template')) {
+    // platform is good!
+
+  } else {
+    // polyfill the platform!
+    isPoly = true;
+    var e = document.createElement('script');
+    e.src = 'webcomponents-hi-sd-ce.js';
+    document.body.appendChild(e);
+  }
+})();
+</script>
+
+<link rel="import" id="headerfile" href="header.html">
+
+</head>
+<body>
+
+<div id="headerPos"></div>
+<script>
+
+  if(isPoly){
+    window.addEventListener('WebComponentsReady', function() {
+      var link = document.querySelector('link[rel="import"]');
+      var content = link.import;
+      var el = content.querySelector('#header');
+      document.getElementById("headerPos").appendChild(el.cloneNode(true));
+    });
+  }
+  else{
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+    var el = content.querySelector('#header');
+    document.getElementById("headerPos").appendChild(el.cloneNode(true));
+  }
+</script>
+
+<br/>
+
+
+<a name="info"></a><h2>Course Information</h2>
+
+<p><b>Description</b>:
+This course will focus on computational techniques used to study the structure and dynamics of
+biomolecules, cells, and everything in between. For example, what is the structure of proteins, DNA,
+and RNA? How do their motions contribute to their function? How do they bind to other molecules?
+How are molecules distributed and compartmentalized within a cell, and how do they move around?
+How might one modify the behavior of these systems using drugs or other therapeutics? How can structural information and associated computational methods contribute to the design of drugs, vaccines, proteins, or other important molecules?
+<br/><br/>
+Computation can contribute to addressing such questions in at least two distinct ways. First, computational analysis is required to extract useful information from experimental measurements. Second, one can use computational techniques to predict structures, dynamics, and important biochemical properties.
+<br/><br/>
+The course will cover (1) atomic-level molecular modeling methods for proteins and other biomolecules, including structure prediction, molecular dynamics simulation, docking, and protein design, (2) computational methods involved in solving molecular structures by x-ray crystallography and cryo-electron microscopy, and (3) computational methods for studying spatial organization of cells, including computational analysis of optical microscopy images and video, and simulations at the cellular scale. The course will cover both foundational material and cutting-edge research in each of these areas, including recent advances in machine learning for structural biology.
+</p>
+
+<p><b>Coursework</b>:
+Students will be expected to complete three assignments, each of which will involve a combination of theoretical questions and computer work. Additionally, students will be expected to complete a project. The project will involve about as much work as an assignment, but it will be more open-ended and will allow students to delve into a topic of their choosing in more depth. Finally, students will be expected to complete an exam at the end of the quarter. More details regarding content of the exam will be released toward the second half of the quarter.
+</p>
+
+<p><b>Prerequisites</b>:
+Elementary programming background (at the level of CS 106A) and introductory course in biology.
+</p>
+
+<p><b>Class</b>: Tuesdays and Thursdays, 3:00 PM - 4:20 PM in <a href ="http://custom-maps.stanford.edu/view//Maps/37182?format=embed" target="_blank"> Packard 101</a>.</p>
+
+<p><b>Materials</b>:
+There is no required textbook. We will suggest a variety of optional reading material throughout the course.
+</p>
+
+<p><b>Live Streams and Recordings</b>:
+All lectures will be recorded this year and will be available to enrolled students on Canvas <a href="https://canvas.stanford.edu/courses/195742"> (linked here)</a>. After navigating to the CS279 Course Page on Canvas, click on the Panopto Course Videos tab on the left side of the screen. The live lecture will be available to view on Canvas in real-time.
+Lectures will also publish under this tab thirty minutes after class ends. We expect real-time attendance (either in-person or virtually) from students who are able to do so; please note our <a href="policies.html#participation"> participation policy</a>.
+All TA-led tutorials will be recorded (attendance is not required) and posted to Canvas (in the Kickstarts and Tutorials folder in the Panopto Course Videos tab).
+</p>
+
+<p><b>Instructor</b>: <a href="http://drorlab.stanford.edu/rondror.html" target="_blank">Ron Dror</a>
+<ul><li>Professor Dror's Office Hours: Tues. & Thurs. 4:20 - 4:45 PM, outside Packard 101 (i.e., right after each class, outside the classroom). If you are participating in lecture remotely, you can join these office hours through the zoom room located at <a href="bit.ly/Ron-OH-2024">bit.ly/Ron-OH-2024</a>.
+A TA will be monitoring this zoom and will be able to add you to a queue so Professor Dror can answer your questions.
+</li></ul>
+</p>
+
+<p><b>Contact and Questions: </b><br/>
+  Please use <a href="https://edstem.org/us/courses/66537/discussion/"> Ed Discussion</a> for questions related to assignments, lectures, 
+  and course logistics. If you have issues that cannot be resolved on Ed, please contact us at <a href="mailto:cs279-aut2425-staff@lists.stanford.edu" target="_blank">cs279-aut2425-staff@lists.stanford.edu</a>. For 
+  instructions on how to get set up on Ed, please see the <a href="handouts/Getting Set Up _ 2024 (1).pdf" target="_blank"><i>Getting Set Up</i></a> handout.
+</p> 
+
+<p><b>TA</b>: <a href="mailto:lucib@stanford.edu" target="_blank">Luci Bresette </a></p>
+<p><b>TA</b>: <a href="mailto:carriec6@stanford.edu" target="_blank">Carrie Chen </a></p>
+<p><b>TA</b>: <a href="mailto:ariglenn@stanford.edu" target="_blank">Ari Glenn</a></p>
+<p><b>TA</b>: <a href="mailto:chihoim@stanford.edu" target="_blank">Chiho Im </a></p>
+<p><b>TA</b>: <a href="mailto:mashka@stanford.edu" target="_blank">Masha Karelina</a></p>
+<p><b>TA</b>: <a href="mailto:hpark23@stanford.edu" target="_blank">Hannah Park </a></p>
+<p><b>TA</b>: <a href="mailto:ishaanks@stanford.edu" target="_blank">Ishaan Singh </a></p>
+<p><b>TA</b>: <a href="mailto:bsobecks@stanford.edu" target="_blank">Briana Sobecks </a></p>
+<p></p>
+
+
+<p><b>Office Hours: </b><br/>
+    <ul>
+    <li> Some office hours will be held in-person and others will be held virtually over zoom. The <a href="https://stanford.zoom.us/s/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1#success" target="_blank"> same zoom link</a> will be used for all virtual office hours. </li>
+    <li> <a href="https://queuestatus.com/queues/2873">Queuestatus</a> will be used to manage the queue for both virtual and in-person office hours. Please see the <a href="handouts/Getting Set Up _ 2024 (1).pdf" target="_blank"><i>Getting Set Up</i></a> handout for further instructions on QueueStatus. </li>
+    <li> The weekly office hour schedule can be viewed through <a href="https://docs.google.com/spreadsheets/d/1fGn09N5adxyO9bEUFXhDxe34s-VDs5HcMvewnOMrssw/edit?gid=0#gid=0"> this Google Spreadsheet link</a>. The in-person office hours will indicate the location and the virtual office hours will show the <a href="
+      https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> same zoom link</a> as described above. We will hold office hours beginning Week 2 (i.e., as of September 30). </li>
+    </ul>
+
+    <!-- Note to future CAs: embed office hours Google calendar by 
+     1. adding it to your own account
+     2. going to the calendar's settings
+     3. scroll to where it says "Use this URL to access this calendar from a web browser"
+     4. copy/paste the embed code (iframe element) into website code
+    -->
+    
+    <!-- <iframe src="https://calendar.google.com/calendar/embed?src=cs279.ta.24%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+
+</p>
+
+<p><b>Announcements: </b><br/>
+All announcements will be made on <a href="https://edstem.org/us/courses/66537/discussion/"> Ed Discussion</a>. For instructions on how to get set up on Ed, please see the <a href="handouts/Getting Set Up _ 2024 (1).pdf" target=
+"_blank"><i>Getting Set Up</i></a> handout.
+</p>
+
+<a name="handouts"></a><h2>Handouts</h2>
+  <ul>
+    <li> <a href="handouts/Getting Set Up _ 2024 (1).pdf" target="_blank">Getting Set Up</a></li>
+    <li> <a href="policies.html">Course Policies and Evaluation Criteria</a></li>
+    <li> <a href="handouts/Software.pdf" target="_blank">Software &amp; Using Terminal</a></li>
+    <li> <a href="handouts/Working_Remotely_on_LTS_Machines.pdf" target="_blank">Working Remotely on LTS Machines</a></li>
+  </ul>
+
+<a name="lectures"></a><h2>Lectures</h2>
+
+<em>Some topics may be covered a bit earlier or later than listed, due to circumstances beyond the instructor’s control. Slides and optional reading will be posted here for each lecture by the start of the given lecture. Annotated slides will be uploaded here shortly after each lecture. </em>
+
+<ul>
+    <li> Introduction  (Sept. 24)
+      <a href="lectures/lecture1.pdf" target="_blank">[slides]</a>
+      <a href="lectures/lecture1-annotated.pdf" target="_blank">[annotated slides]</a>
+    </li> <br/>
+
+    <li> Biomolecular structure, including protein structure (Sept. 26 and Oct. 1)
+      <a href="lectures/lecture2.pdf" target="_blank" >[slides]</a>
+      <a href="lectures/lecture2-annotated.pdf">[annotated slides]</a>
+    </li>
+    <br/><i class=due>Optional Reading:</i>
+      <ul>
+          <li>Michael Levitt's Molecular Architecture Lecture from former course SB228
+            <a href="https://web.stanford.edu/class/sbio228/public/lectures/Lecture2/SB228_Lec_2_2004.pdf" target="_blank">[slides]</a>
+          </li>
+          <li>Thoughts on how to think (and talk) about RNA structure
+            <a href="https://www.pnas.org/doi/10.1073/pnas.2112677119" target="_blank">[Public]</a>
+            <a href="protected/Thoughts on how to think (and talk) about RNA structure.pdf">[Stanford Only]</a>
+          </li>
+
+    <!--       <li>RNA Structure: Advances and Assessment of 3D Structure Prediction -->
+    <!--       <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-biophys-070816-034125" target="_blank">[Public]</a> -->
+    <!--       <a href="protected/RNA_structure_pred.pdf" target="_blank">[Stanford Only]</a> -->
+      </ul>
+    </li> <br/>
+    <li> [optional]  Python and Terminal tutorial (Sept. 27 at 10am, over <a href="
+      https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</i></a>) 
+      <a href="tutorials/Python and Terminal Tutorial 2024.pdf"> [slides] </a>
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eeafe247-d54f-43ed-b77a-b1f9002a549e"> [recording] </a> (available on Canvas)
+    </li><br/>
+    <li> [optional] Assignment 1 kickstart/PyMOL tutorial (Oct. 2 at 9am, over <a href="
+      https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>) 
+      <!-- <a href="tutorials/pymol_tutorial.pdf"> [PyMOL notes]</a> -->
+      <!-- <a href="tutorials/kickstart_1.pdf"> [assn1 notes]</a> -->
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8e6c8ade-39ee-49c1-a625-b1fe015b5ed4"> [recording] </a> (available on Canvas) </li>
+    </li> <br/>
+    <li> Energy functions & their relationship to molecular conformation (Oct. 1 and 8)
+      <a href="lectures/lecture3-v2.pdf" target="_blank" >[slides]</a>
+      <a href="lectures/lecture3-v2-annotated.pdf">[annotated slides]</a>
+    </li> 
+    <br/> <i class=due>Optional Reading:</i>
+    <ul>
+        <li>Biomolecular dynamics with machine-learned quantum-mechanical force fields trained on diverse chemical fragments
+          <a href="https://www.science.org/doi/full/10.1126/sciadv.adn4397" target="_blank">[Public]</a>
+          <a href="protected/biomolecular_dynamics_with_ML.pdf" target="_blank">[Stanford Only]</a>
+        </li>
+        <li>ANI-1: An Extensible Neural Network Potential with DFT Accuracy at Force Field Computational Cost
+          <a href="https://pubs.rsc.org/en/content/articlelanding/2017/sc/c6sc05720a" target="_blank">[Public]</a>
+          <a href="protected/ani1_force_field.pdf" target="_blank">[Stanford Only]</a>
+        </li>
+        <li>TorchANI: A Free and Open Source PyTorch-Based Deep Learning Implementation of the ANI Neural Network Potentials
+          <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00451" target="_blank">[Public]</a>
+          <a href="protected/torch_ani.pdf" target="_blank">[Stanford Only]</a>
+        </li>
+    </ul>
+    </li><br/>
+
+    <li> Oct. 3 - no class </li> <br>
+
+    <li> Molecular dynamics simulation (Oct. 8 and 10) 
+      <a href="lectures/lecture4-v2.pdf" target="_blank">[slides]</a>
+      <a href="lectures/lecture4-v2-annotated.pdf" target="_blank">[annotated slides]</a>
+    </li>
+    <br/> <i class=due>Optional Reading:</i>
+    <ul>
+      <li>Molecular Dynamics Simulation for All
+        <a href="https://www.cell.com/neuron/fulltext/S0896-6273(18)30684-6?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627318306846%3Fshowall%3Dtrue" target="_blank">[Public]</a>
+        <a href="protected/2018_Dror.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+
+      <li>Molecular Mechanism of Biased Signaling in a Prototypical G protein–coupled Receptor
+        <a href="https://science.sciencemag.org/content/367/6480/881" target="_blank">[Public]</a>
+        <a href="protected/881.full.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+
+      <li>Boltzmann Generators: Sampling Equilibrium States of Many-body Systems with Deep Learning
+        <a href="https://science.sciencemag.org/content/365/6457/eaaw1147" target="_blank">[Public]</a>
+        <a href="protected/eaaw1147.full.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+    </ul><br/>
+
+    <li> Predicting structures of proteins and other biomolecules, including machine learning methods (Oct. 10, 15, 17, and 29)
+      <a href="lectures/lecture5-v4.pdf" target="_blank" >[slides]</a>
+      <a href="lectures/lecture5-v4-annotated.pdf" target="_blank">[annotated slides]</a>
+    </li> 
+    <br/> <i class=due>Optional Reading:</i>
+    <ul>
+      <li>The Protein-Folding Problem, 50 Years On
+        <a href="http://science.sciencemag.org/content/338/6110/1042" target="_blank">[Public]</a>
+        <a href="protected/Science-2012-Dill-1042-6.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>The Phyre2 Web Portal for Protein Modeling, Prediction and Analysis
+        <a href="http://www.nature.com/nprot/journal/v10/n6/abs/nprot.2015.053.html" target="_blank">[Public]</a>
+        <a href="protected/nprot.2015.053.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>Highly Accurate Protein Structure Prediction with AlphaFold
+        <a href="https://www.nature.com/articles/s41586-021-03819-2" target="_blank">[Public]</a>
+        <a href="protected/s41586-021-03819-2.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>Geometric Deep Learning of RNA structure
+        <a href="https://www.science.org/doi/10.1126/science.abe5650" target="_blank">[Public]</a>
+        <a href="protected/science.abe5650.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>Evolutionary-scale prediction of atomic-level protein structure with a language model
+        <a href="https://www.science.org/doi/10.1126/science.ade2574" target="_blank">[Public]</a>
+        <a href="protected/science.ade2574.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>Accurate structure prediction of biomolecular interactions with AlphaFold 3
+        <a href="https://www.nature.com/articles/s41586-024-07487-w" target="_blank">[Public]</a>
+        <a href="protected/Accurate structure prediction of biomolecular interactions with AlphaFold 3.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>AlphaFold predictions are valuable hypotheses and accelerate but do not replace experimental structure determination
+        <a href="https://www.nature.com/articles/s41592-023-02087-4" target="_blank">[Public]</a>
+        <a href="protected/AlphaFold predictions.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>The Illustrated AlphaFold
+        <a href="https://elanapearl.github.io/blog/2024/the-illustrated-alphafold/" target="_blank">[Public]</a>
+        <a href="protected/The Illustrated AlphaFold.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+    </ul>
+    </li><br/>
+    <li> [optional] Assignment 2 kickstart/code tutorial (Session 1) (Oct. 18 at 9am, over <a href="https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>) 
+      <!-- <a href="tutorials/kickstart_2.pdf"> [kickstart notes]</a> -->
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=086bcc4b-cfd6-4336-bd83-b20e00783c1d"> [recording] </a> (available on Canvas) </li>
+    </li> <br/>
+    <li> [optional] Assignment 2 kickstart/code tutorial (Session 2) (Oct. 21 at 2pm, over 
+      <a href="https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>)
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=031a2707-5bcc-411d-91c1-b210016cdf71" target="_blank">[recording]</a> (available on Canvas)
+    </li><br/>
+    <li>Oct. 22 & Oct. 24 - no class</li><br/>
+    <li> Protein design (Oct. 29 and 31)
+      <a href="lectures/lecture6-v2.pdf" target="_blank" >[slides]</a>
+      <a href="lectures/lecture6-v2-annotated.pdf" target="_blank">[annotated slides]</a>
+    </li>
+    <br/><i class=due>Optional Reading:</i>
+    <ul>
+      <li>Robust deep learning–based protein sequence designusing ProteinMPNN
+        <a href="https://www.science.org/doi/epdf/10.1126/science.add2187" target="_blank">[Public]</a>
+        <a href="protected/Robust deep learning–based protein sequence designusing ProteinMPNN.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>Unsupervised evolution of protein and antibody complexes with a structure-informed language model
+        <a href="https://www.science.org/doi/full/10.1126/science.adk8946" target="_blank">[Public]</a>
+        <a href="protected/Unsupervised evolution of protein and antibody complexes.pdf">[Stanford Only]</a>
+      </li>
+      <li>Designed Proteins Assemble Antibodies into Modular Nanocages
+        <a href="https://www.science.org/doi/10.1126/science.abd9994" target="_blank">[Public]</a>
+        <a href="protected/science.abd9994.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>A Brief History of De Novo Protein Design: Minimal, Rational, and Computational
+        <a href="https://www.sciencedirect.com/science/article/pii/S0022283621003892#b0385" target="_blank">[Public]</a>
+        <a href="protected/1-s2.0-S0022283621003892-main.pdf" target="_blank">[Stanford Only]</a>
+      </li>
+      <li>De novo design of protein structure and function with RFdiffusion
+        <a href="https://www.nature.com/articles/s41586-023-06415-8">[Public]</a>
+        <a href="protected/s41586-023-06415-8.pdf">[Stanford Only]</a>
+      </li>
+    </ul>
+    </li><br/>
+    <li> Fourier transforms and convolution (asynchronous)
+      <a href="lectures/fourier_transforms_convolution_2023.pdf" target="_blank" >[2023 slides]</a>
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2f4f335a-76ac-401d-8577-b2140171fbfa" target="_blank">[2023 recording]</a>
+    </li>
+    <br/> <i class=due>Optional Reading:</i> 
+    <ul>
+      <li> <a href="notes/FT-notes.pdf" target="_blank">Fourier Transform notes</a>
+      </li>
+      <li> <a href="notes/CV-notes.pdf" target="_blank">Convolution notes</a>
+      </li>
+    </ul>
+    </li><br/>
+    <li> Image analysis (asynchronous)
+      <a href="lectures/image_analysis_2023.pdf" target="_blank" >[2023 slides]</a>
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d9db1a4-b246-45af-8d54-b2140171fbec" target="_blank">[2023 recording]</a>
+    </li> <br/>
+    <li> Microscopy (Oct. 31) 
+      <a href="lectures/lecture9.pdf" target="_blank">[slides]</a>
+      <a href="lectures/lecture9-annotated.pdf">[annotated slides]</a>
+    </li>
+      <br/><i class=due>Optional Reading:</i>
+      <ul>
+        <li>Fluorescence Microscopy
+          <a href="http://www.nature.com/nmeth/journal/v2/n12/abs/nmeth817.html">[Public]</a>
+          <a href="protected/nmeth817.pdf">[Stanford Only]</a>
+        </li>
+        <li>Super-resolution Fluorescence Imaging with Single Molecules
+          <a href="http://www.sciencedirect.com/science/article/pii/S0959440X13001437">[Public]</a>
+          <a href="protected/sahl-moerner.pdf">[Stanford Only]</a>
+        </li>
+        <li>The Diffraction Barrier in Optical Microscopy
+          <a href="https://www.microscopyu.com/articles/superresolution/diffractionbarrier.html">[Public]</a>
+           <a href="protected/diffraction_barrier.pdf">[Stanford Only]</a>
+        </li>
+        <li>Deep Learning Advances Super-Resolution Imaging
+          <a href="https://www.nature.com/articles/s41592-018-0028-9">[Public]</a>
+          <a href="protected/rita_strack.pdf">[Stanford Only]</a>
+        </li>
+        <li>Information-Rich Localization Microscopy through Machine Learning
+          <a href="https://www.nature.com/articles/s41467-019-10036-z">[Public]</a>
+          <a href="protected/taehwan_kim.pdf">[Stanford Only]</a>
+        </li>
+      </ul>
+    </li><br/>
+    <li> [optional] Assignment 3 kickstart/code tutorial (Session 1) (Nov. 4 at 9am, over <a href="https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>) 
+      <!-- <a href="tutorials/code_tutorial_1.pdf"> [code tutorial notes]</a> -->
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4cb15328-1008-4947-9bfd-b21e0130a0d4"> [recording] </a> (available on Canvas)
+    </li> <br/>
+
+    <li> Nov. 5 - Democracy Day, no class </li> <br>
+
+    <li> [optional] Assignment 3 kickstart/code tutorial (Session 2) (Nov. 7 at 9am, over <a href="https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>) 
+      <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16f43f2a-468a-4aef-b995-b22101698900"> [recording]</a> (available on Canvas)
+    </li> <br/>
+    
+    <li> Diffusion and cellular-level simulation (Nov. 7) 
+      <a href="lectures/lecture10-v2.pdf" target="_blank">[slides]</a>
+      <a href="lectures/lecture10-annotated.pdf">[annotated slides]</a>
+    </li>
+    <br/> <i class=due>Optional Reading:</i>
+    <ul>
+      <li>Random Walks and 1-D Diffusion
+        <a href="protected/BP205_1.pdf" >[Stanford Only]</a>
+        (notes from <a href="https://biology.mit.edu/people/chris_burge">Chris Burge</a> from his class at UCSF)
+      </li>
+      <li>Continuum Diffusion Equations
+        <a href="protected/BP205_2.pdf">[Stanford Only]</a>
+        (notes from <a href="https://biology.mit.edu/people/chris_burge">Chris Burge</a> from his class at UCSF)</li>
+      <li> Monte Carlo Methods for Simulating Realistic Synaptic Microphysiology Using MCell
+        <a href="protected/MC.pdf">[Stanford Only]</a>
+      </li>
+      <li> Colloidal Physics Modeling Reveals How Per-Ribosome Productivity Increases with Growth Rate in <i>Escherichia coli </i>
+        <a href="https://journals.asm.org/doi/full/10.1128/mbio.02865-22">[Public]</a>
+        <a href="protected/Colloidal Physics Modeling 2022.pdf">[Stanford Only]</a>
+      </li>
+    </ul>
+  </li> <br/>
+  <li> Project topics (Nov. 12) 
+    <a href="lectures/lecture11.pdf" target="_blank">[slides]</a> </li>
+  <br>
+  <li> Ligand docking and virtual screening (Nov. 14 and 19) 
+    <a href="lectures/lecture12.pdf" target="_blank">[slides]</a>
+    <a href="lectures/lecture12-annotated.pdf" target="_blank">[annotated slides]</a> 
+  </li>
+  <br/> <i class=due>Optional Reading:</i>
+  <ul>
+    <li>The Art and Science of Molecular Docking
+      <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-biochem-030222-120000">[Public]</a>
+      <a href="protected/The Art and Science of Molecular Docking.pdf">[Stanford Only]</a>
+    </li>
+    <li>Ultra-large Library Docking for Discovering New Chemotypes
+      <a href="https://www.nature.com/articles/s41586-019-0917-9?fbclid=IwAR1HDXx0kEsNlRQZXVtPkmX7hU_gDoT2aqVEiBZj04qhz_6x1WCbNkj75IE">[Public]</a>
+      <a href="protected/s41586-019-0917-9.pdf">[Stanford Only]</a>
+    </li>
+    <li>Glide: A New Approach for Rapid, Accurate Docking and Scoring
+      <a href="http://pubs.acs.org/doi/abs/10.1021/jm0306430">[Public]</a>
+      <a href="protected/Glide.pdf">[Stanford Only]</a>
+    </li>
+    <li>Prediction of Protein — Ligand Interactions. Docking and Scoring: Successes and Gaps
+      <a href="http://pubs.acs.org/doi/abs/10.1021/jm060999m">[Public]</a>
+      <a href="protected/ligand_docking.pdf">[Stanford Only]</a>
+    </li>
+    <li>Free Energy Methods in Drug Design: Prospects of 'Alchemical Perturbation' in Medicinal Chemistry
+      <a href="https://pubs.acs.org/doi/full/10.1021/acs.jmedchem.7b00681">[Public]</a>
+      <a href="protected/alchemical_perturbation.pdf">[Stanford Only]</a>
+
+    <li> Predicting Ligand Binding Potency using Free Energy Calculations
+      <a href="http://pubs.acs.org/doi/abs/10.1021/ja512751q">[Public]</a>
+      <a href="protected/ja512751q.pdf">[Stanford Only]</a>
+    </li>
+
+    <li> GNINA 1.0: Molecular Docking with Deep Learning
+      <a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00522-2">[Public]</a>
+      <a href="protected/gnina.pdf">[Stanford Only]</a>
+    </li>
+
+    <li> Accelerating High-throughput Virtual Screening through Molecular Pool-based Active Learning
+      <a href="https://pubs.rsc.org/en/content/articlehtml/2021/sc/d0sc06805e">[Public]</a>
+      <a href="protected/graff_2021.pdf">[Stanford Only]</a>
+    </li>
+
+    <li> Leveraging Nonstructural Data to Predict Structures and Affinities of Protein–ligand Complexes
+      <a href="https://www.pnas.org/doi/10.1073/pnas.2112621118">[Public]</a>
+      <a href="protected/paggi.pdf">[Stanford Only]</a>
+    </li>
+
+    <li> Generalized Biomolecular Modeling and Design with RoseTTAFold All-Atom 
+      <a href="https://www.biorxiv.org/content/10.1101/2023.10.09.561603v1.abstract">[Public]</a>
+      <a href="protected/rosetta.pdf">[Stanford Only]</a>
+    </li>
+    </li>
+  </ul>
+  </li><br/>
+
+  <li> [optional] Project kickstart (Nov. 21 at 8am, over <a href="https://stanford.zoom.us/j/99225087973?pwd=ETKOrSFVOKE4Si52Xoru85IHyOgv5n.1" target="_blank"> Zoom</a></i>)
+    <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b218f250-54c9-4eed-98a8-b22f0179471a"> [recording] </a> (available on Canvas) </li>
+  </li><br/>
+
+  <li> X-ray crystallography (Nov. 19 and 21) <a href="lectures/lecture13-v2.pdf" target="_blank">[slides]</a> 
+    <a href="notes/X-RayCrystallography.pdf" target="_blank">[notes]</a></li>
+  </li>
+  <br/><i class=due>Optional Reading:</i>
+      <ul>
+          <li>Deep learning applications in protein crystallography
+            <a href="https://journals.iucr.org/a/issues/2024/01/00/ae5136/ae5136.pdf">[Public]</a>
+            <a href="protected/Deep learning applications in protein crystallography.pdf">[Stanford Only]</a>
+          </li>
+          <li>Super-resolution biomolecular crystallography with low-resolution data
+            <a href="https://www.nature.com/articles/nature08892">[Public]</a>
+            <a href="protected/nature08892.pdf">[Stanford Only]</a>
+          </li>
+          <li>Improved low-resolution crystallographic refinement with Phenix and Rosetta
+            <a href="https://www.nature.com/articles/nmeth.2648">[Public]</a>
+            <a href="protected/nmeth.2648.pdf">[Stanford Only]</a>
+          </li>
+          <li>Improved AlphaFold Modeling with Implicit Experimental Information
+            <a href="https://www.nature.com/articles/s41592-022-01645-6">[Public]</a>
+            <a href="protected/terwilliger.pdf">[Stanford Only]</a>
+          </li>
+      </ul>
+    </li> <br/>
+  <li> Cryo-electron microscopy (Nov. 21 and Dec. 3)
+    <a href="lectures/lecture14-v2.pdf" target="_blank">[slides]</a>
+  </li><br/>
+  <i class=due>Optional Reading:</i>
+      <ul>
+        <li>A Primer to Single-Particle Cryo-Electron Microscopy
+          <a href="http://www.sciencedirect.com/science/article/pii/S0092867415003700">[Public]</a>
+          <a href="protected/S0092867415003700-main.pdf">[Stanford Only]</a>
+          <br>Supplemental Information:
+            <a href="https://www.sciencedirect.com/science/article/pii/S0092867415003700#app2">[Public]</a>
+            <a href="protected/mmc1.pdf">[Stanford Only]</a>
+        </li>
+
+        <li>Three-Dimensional Electron Microscopy of Macromolecular Assemblies
+          <a href="https://academic.oup.com/book/6747">[Public]</a>
+        </li>
+
+        <li>Iterative Stable Alignment and Clustering of 2D Transmission EM Images
+          <a href="http://www.cell.com/structure/fulltext/S0969-2126(11)00467-9">[Public]</a>
+          <a href="protected/iterative_stable.pdf">[Stanford Only]</a>
+        </li>
+
+        <li>CryoSPARC: Algorithms for Rapid Unsupervised Cryo-EM Structure Determination
+          <a href="https://www.nature.com/articles/nmeth.4169">[Public]</a>
+          <a href="protected/punjani.pdf">[Stanford Only]</a>
+        </li>
+
+        <li>CryoDRGN: Reconstruction of Heterogeneous Cryo-EM Structures using Neural Networks
+          <a href="https://www.nature.com/articles/s41592-020-01049-4">[Public]</a>
+          <a href="protected/zhong.pdf">[Stanford Only]</a>
+        </li>
+      </ul>
+      </li><br/>
+  <li> Review (Dec. 3 and Dec. 5)
+    <a href="lectures/lecture15-v3.pdf" target="_blank">[slides]</a>
+  </li><br/>
+  </ul>
+
+<a name="hw"></a><h2>Assignments</h2>
+
+<p>Please note that the following dates are approximate. When an assignment is released, the PDF and starter code will be available to download here.
+  An <b>optional</b> LaTeX template will also be provided specifically for students who wish to typeset their solutions in LaTeX, but you are <b>not</b> expected or required to do so.</p>
+
+
+<ul>
+<li>Assignment 1 – Biomolecular Structure and Visualization
+  <a href="assignments/Assignment_1_2024_v3.pdf" target="_blank"> [handout]</a>
+  <a href="assignments/assign1_starter_code.zip"> [starter code]</a>
+  <a href="assignments/assign1_latex_template.zip" target="_blank"> [latex template (optional)]</a>
+  <br/>
+    Out: Thursday, October 3, 2024  <br/> 
+    Due: Thursday, October 17, 2024 at 1:00 PM <br/><br/>
+
+<li>Assignment 2  – Atomic-Level Molecular Modeling
+  <a href="assignments/Assignment_2_2024_v3.pdf" target="_blank"> [handout]</a>
+  <a href="assignments/assign2_starter_code.zip"> [starter code]</a>
+  <a href="assignments/assign2_latex_template.zip" target="_blank"> [latex template (optional)]</a>
+  <a href="assignments/a2_challenge_problem.zip" target="_blank"> [challenge question]</a>
+  <br/>
+    Out: Thursday, October 17, 2024 <br/>
+    Due: Thursday, October 31, 2024 at 1:00 PM <br/><br/>
+
+<li>Assignment 3   – Cellular Structure and Dynamics
+  <a href="assignments/Assignment_3____Cellular_Structure_and_Dynamics.pdf" target="_blank"> [handout]</a>
+  <a href="assignments/assn3_starter_code.zip"> [starter code]</a>
+  <a href="assignments/Assignment 3 -- Cellular Structure and Dynamics.zip" target="_blank"> [latex template (optional)]</a>
+  <a href="assignments/assignment3challengefiles.zip" target="_blank"> [challenge question]</a>
+  <br/>
+    Out: Friday, November  1, 2024 <br/> 
+    Due: Friday, November 15, 2024 at 1:00 PM <br/><br/> 
+
+<li>Project 
+	<a href="assignments/Project Guidelines Handout.pdf" target="_blank">[Project Instructions]</a><br/>
+  <a href="restricted/Sample Projects 2023.zip">[Sample Projects from Previous Years (only accessible to enrolled students)]</a>
+  <br/>
+Out: Tuesday, November 12, 2024 <br/>
+Due: Friday, December 6, 2024 at 11:59 PM <br/><br/>
+
+</ul>
+
+<p><b>Submission</b>:
+All assignments and the project writeup should be submitted to <a href="https://www.gradescope.com/courses/866465" target="_blank">Gradescope</a>. If you are not already added to Gradescope, 
+see instructions for accessing Gradescope in the <a href="handouts/Getting Set Up _ 2024 (1).pdf" target="_blank"><i>Getting Set Up</i></a> handout. </p>
+
+<a name="exam"></a><h2>Exam</h2>
+The final exam will be on Thursday, December 12, 2024 from 12:15-3:15pm in <a href="https://campus-map.stanford.edu/?id=HEWLETT200" target="_blank"">Hewlett Teaching Center, Rm 200</a>.
+<br/>
+<ul>
+  <li><a href="handouts/Practice_Final_Fall2024.pdf" target="_blank">Practice Exam Questions</a><br/></li>
+  <li><a href="handouts/Practice_Final_Solutions_Fall2024.pdf" target="_blank">Practice Exam Questions and Solutions</a><br/></li>
+</ul>
+
+
+<a name="python"></a><h2>Python Resources</h2>
+In this class, the programming assignments will be in Python. If you have prior experience with Python, great! If you don't, no worries! All we expect is familiarity with basic programming. That said, if you've never worked with Python before, it may be helpful to look at some of the following resources to help you get up to speed.
+
+<ul>
+    <li> This class's "Python and Terminal Tutorial" tutorial will give a brief introduction to Python programming.
+    <li> <a href="https://www.codecademy.com/learn/learn-python-3">Codecademy</a> is a site that does a good job of introducing the basics of Python, organized by topic. If you're just getting started with Python or if you want to brush up on specific issues, this may be helpful. </li>
+    <li> Check out <a href="https://explorecourses.stanford.edu/search?q=CME+193&view=catalog&page=0&academicYear=&filter-term-Autumn=on&filter-units-1=on&collapse=%2C3%2C&filter-coursestatus-Active=on"> CME 193: Introduction to Scientific Python</a>! It's a 1-unit course that runs for eight weeks. It is recommended for students who want to use Python in math, science, or engineering courses and for students who want to learn the basics of Python programming. </li>
+</ul>
+<br>
+<a href="https://web.stanford.edu/class/archive/cs/cs279/cs279.1242"><h2>Click here for last year's (Fall 2023) website and content.</h2></a>
+
+
+&nbsp;
+
+</body></html>

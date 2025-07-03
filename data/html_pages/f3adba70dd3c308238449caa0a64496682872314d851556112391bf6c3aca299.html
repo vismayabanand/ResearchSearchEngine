@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://uit.stanford.edu/security/sensitivedata" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="/themes/custom/stanford_uit/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Protecting Sensitive Data at Stanford | University IT</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_rBA75HnzpP7HaK872-sDCrog1w-oKojH4qQYevYy9Bo.css?delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Oh1_AggXDnva7nDxTYmVSNU29kAy8H5HLZOib4FxoZE.css?delta=1&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+<link rel="stylesheet" media="all" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_L8aOI3w6lJQxXt3bHuzzHzsGiSW4lT2VGpHZGq9zriA.css?delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&amp;display=swap" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_Pi-aoP47PWwv8P-v8jw8rssCN0uKzI0bqQ0j1Q7NMI0.css?delta=5&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Or4ZPcGimrI7EkfpyL-pmd6MlV50pNAAvWs3SSpkrd8.css?delta=6&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_B9hIoG6yFLmV2pjUSTLgzR15TnQI0OWWApz_hNhzOSc.css?delta=7&amp;language=en&amp;theme=stanford_uit&amp;include=eJx1j9FuwyAMRX-IhId9EDLgJnRgI9sk7d8v6jZVTbcXS9fn6MoGVbRQ6IrJWHxSnSMQoYQM8hmskAXBxhtUB-9ul0P4C2gxDHvJ-B8srQtvGC7lhuois6kJ9BBBpLBfKkeok9q9FlreeUNVWFDDvh5lLrGgT9w6E5IdP5z8aWpI41vLMjrUGa5wcx0ElkNb9Xf93MyD-oi16IrZqQFdWHIYxfyzPWV6Rae7X5jykIRBgTR8nNBPmI7g9K6GzUdQdFvBXf1jzo3zqPgFq86sCA" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/29291","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJx1kFGOgzAMRC8UyMdKex3LgBtCkxjZBtrbN1pVqgLdHyszb2Q5g6pkEMtCo7H4UbUfsBQSmFDuYLEYCGXeMTm8ZlepgW9AoxEccaL_YMyr8E5wiw_Sc2j5lhmYTU1whQFFIvsbF8ODlDPB7xWHxAOmTu2ZYglXXt37l62ZVDGQwjHXE65ceZORQLEo_LiRhfzIeeVCxWp5p3jXZSqbC8whERgGH-o46x4XfLRmdisKhrppVj_JtmLqP06_lXUbUtSZJqeG5cYywRbNfw4Yp9Kitq8GnbpqWPvhFr1FV4XTpxplP6CSqxqUUMbZf55vV_ZY12EiMfVXCxZ1e6RD_d_sM09boheG6A3G","theme":"stanford_uit","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-5Z988HL"]},"user":{"uid":0,"permissionsHash":"a988d4fc29361f064bf336afca3e31947fac801f888bfeea930d031770cb6b83"}}</script>
+<script src="/sites/default/files/js/js_BOXzwC1_zhdXOpV7cWLckG7U-kuTLuUqCiTEHbuzKJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?svnqwp"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?svnqwp"></script>
+
+  </head>
+  <body class="layout-no-sidebars has-featured-top page-node-29291 path-security-sensitivedata path-node node--type-guide">
+    <a href="#main-content" class="visually-hidden-focusable">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z988HL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+  <div id="brand-bar"></div>
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+                        <nav class="navbar navbar-expand-lg bg-white" id="navbar-top">
+                        <div class="container">
+                                  <a href="/" title="Home" rel="home" class="navbar-brand">
+              <img src="/themes/custom/stanford_uit/logo.svg" alt="Home" class="img-fluid d-inline-block align-top" />
+            University IT
+    </a>
+    
+
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Main Menu</span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+                                        
+<nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu" region="primary_menu" class="block block-menu navigation menu--main">
+          
+  
+    
+
+        
+              <ul region="primary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu/services" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Explore services</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/services" class="nav-link--services" data-drupal-link-system-path="services">View all services</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">View services approved for High Risk Data</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://uit.stanford.edu" class="nav-link dropdown-toggle nav-link-https--uitstanfordedu" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">I want to ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/videoconferencing" class="nav-link--videoconferencing" data-drupal-link-system-path="node/25788">Use video conferencing tools</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/techtraining/schedule" class="nav-link--service-techtraining-schedule" data-drupal-link-system-path="node/2195">Get IT training</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/gsuite/google-forms" class="nav-link--service-gsuite-google-forms" data-drupal-link-system-path="node/27558">Create web forms and surveys</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/emailcalendar/config" class="nav-link--emailcalendar-config" data-drupal-link-system-path="node/24721">Set up email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/authentication/twostep" class="nav-link--service-authentication-twostep" data-drupal-link-system-path="node/3273">Set up two-step authentication</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/sponsorship/person" class="nav-link--service-sponsorship-person" data-drupal-link-system-path="node/23889">Sponsor a SUNet ID</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://software.stanford.edu" class="nav-link-https--softwarestanfordedu">Get software</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/connecting-to-network" class="nav-link--guide-connecting-to-network" data-drupal-link-system-path="node/23623">Connect to the network</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Secure my mobile device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website/hosting" class="menu-node-unpublished nav-link--guide-website-hosting" data-drupal-link-system-path="node/28122">Get website hosting</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/website" class="nav-link--guide-website" data-drupal-link-system-path="node/23659">Publish a website</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/tools" class="nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT at Stanford</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/" class="nav-link dropdown-toggle nav-link--" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="&lt;front&gt;">Log into ...</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://webmail.stanford.edu" class="nav-link-https--webmailstanfordedu">Email and calendar</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.zoom.us" class="nav-link-https--stanfordzoomus">Zoom video conferencing</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanfordmedicine.box.com/" class="nav-link-https--stanfordmedicineboxcom-">Medicine Box file storage</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mailman.stanford.edu/mailman/ownerlistinfo" class="nav-link-https--mailmanstanfordedu-mailman-ownerlistinfo">Mailing lists</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://accounts.stanford.edu" class="nav-link-https--accountsstanfordedu">Stanford Accounts</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://mydevices.stanford.edu" class="nav-link-https--mydevicesstanfordedu">MyDevices</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanforduniversity.qualtrics.com/" class="nav-link-https--stanforduniversityqualtricscom-">Qualtrics survey tool</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://drive.google.com/a/stanford.edu" class="nav-link-https--drivegooglecom-a-stanfordedu">Google Drive</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/single-sign-on" class="nav-link--guide-single-sign-on" data-drupal-link-system-path="node/26100">Understanding single sign on</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item">
+                          <a href="https://stanford.service-now.com/services?id=services_status" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidservices-status">View alerts</a>
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://stanford.service-now.com/it_services" class="nav-link dropdown-toggle nav-link-https--stanfordservice-nowcom-it-services" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Get support</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/report-incident" class="nav-link-https--uitstanfordedu-security-report-incident">Report a security incident</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                      <div class="form-inline navbar-form justify-content-end">
+                        <div id="block-searchbox" class="ps-lg-3 block block-uit-search block-uit-search-block" region="top_header_form">
+  
+    
+      <div class="content">
+      <gcse:searchbox-only linktarget="https://uit.stanford.edu" queryparametername="q_as"></gcse:searchbox-only>
+    </div>
+  </div>
+
+
+                    </div>
+                                                    </div>
+                                                    </div>
+                      </nav>
+                          <nav class="navbar navbar-expand-lg bg-lagunita-dark navbar-dark navbar-expand-lg" id="navbar-main">
+                        <div class="container">
+                          
+                              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CollapsingNavbar2" aria-controls="CollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><span class="sr-only">Topic Menu</span></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar2">
+                                              
+<nav role="navigation" aria-labelledby="secondary-menu-title" id="block-stanford-uit-informationsecurity" region="secondary_menu" class="block block-menu navigation menu--menu-security-category">
+    
+  
+    <h2 id="secondary-menu-title" ><a href="/security" class="menu-item--active-trail" data-drupal-link-system-path="node/24784">Information Security</a></h2>
+    
+
+        
+              <ul region="secondary_menu" class="clearfix nav navbar-nav">
+                    <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/organization/information-security-office" class="menu-node-unpublished nav-link dropdown-toggle menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished nav-link--organization-information-security-office" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/26784">About Us</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad" class="nav-link-https--stanfordservice-nowcom-it-servicesidsc-cat-itemsys-idf7ae081a13bce2008a9175c36144b0ad">Contact Us</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/security/team#section_3753" class="nav-link-https--uitstanfordedu-security-teamsection-3753">View all ISO services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded active dropdown">
+                          <a href="/security/getting-started" class="nav-link active dropdown-toggle nav-link--security-getting-started" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24802">Guides</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <span class="nav-link-">Data Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/copyright-infringement" class="nav-link--security-copyright-infringement" data-drupal-link-system-path="node/24892">Copyright infringement</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/crashplan" class="nav-link--service-crashplan" data-drupal-link-system-path="node/24150">File and data backup</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/secureemail" class="nav-link--service-secureemail" data-drupal-link-system-path="node/45">High risk data in email</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/identity-theft" class="nav-link--security-identity-theft" data-drupal-link-system-path="node/25023">Identity theft</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/travel" class="nav-link--security-travel" data-drupal-link-system-path="node/29188">International travel</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/sysadmin" class="nav-link--security-sysadmin" data-drupal-link-system-path="node/24803">IT system administrator guidance</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/password-manager" class="nav-link--service-password-manager" data-drupal-link-system-path="node/24793">Password manager</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/stay-safe-from-phishing" class="nav-link--security-stay-safe-from-phishing" data-drupal-link-system-path="node/29214">Phishing awareness</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/positionpapers" class="nav-link--security-positionpapers" data-drupal-link-system-path="node/26869">Position papers</a>
+              </li>
+                <li class="dropdown-item active">
+                          <a href="/security/sensitivedata" class="active nav-link--security-sensitivedata is-active" data-drupal-link-system-path="node/29291" aria-current="page">Protecting sensitive data</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/responsibleai" class="nav-link--security-responsibleai" data-drupal-link-system-path="node/29327">Responsible AI at Stanford</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/asp" class="nav-link--security-asp" data-drupal-link-system-path="node/24804">Third party security requirements</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/resources" class="nav-link--security-resources" data-drupal-link-system-path="node/24795">Other Stanford security resources</a>
+              </li>
+                <li class="dropdown-item">
+                          <span class="nav-link-">Device Security</span>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/exception" class="nav-link--security-exception" data-drupal-link-system-path="node/24786">Compliance exception</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/encrypt/config" class="nav-link--guide-encrypt-config" data-drupal-link-system-path="node/24863">Encrypt your device</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mobiledevice/management" class="nav-link--service-mobiledevice-management" data-drupal-link-system-path="node/3183">Mobile device security</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/service/mydevices" class="nav-link--service-mydevices" data-drupal-link-system-path="node/24569">View your Stanford-registered devices</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/guide/riskclassifications" class="nav-link dropdown-toggle nav-link--guide-riskclassifications" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/24632">Policies</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/guide/securitystandards" class="nav-link--guide-securitystandards" data-drupal-link-system-path="node/24600">Minimum Security Standards</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://pcicompliance.stanford.edu/" class="nav-link-https--pcicompliancestanfordedu-">Payment Card Industry (PCI)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/riskclassifications" class="nav-link--guide-riskclassifications" data-drupal-link-system-path="node/24632">Risk Classifications</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://uit.stanford.edu/guide/riskclassifications#security-approved-services" class="nav-link-https--uitstanfordedu-guide-riskclassificationssecurity-approved-services">Risk Classifications: Approved Services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/dra" class="nav-link dropdown-toggle nav-link--security-dra" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/29582">Privacy</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/security/dra" class="nav-link--security-dra" data-drupal-link-system-path="node/29582">Data Risk Assessment (DRA)</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/hipaa" class="nav-link--security-hipaa" data-drupal-link-system-path="node/24924">HIPAA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/FERPA-Policy" class="nav-link--ferpa-policy" data-drupal-link-system-path="node/27245">FERPA</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="https://privacy.stanford.edu" class="nav-link-https--privacystanfordedu">University Privacy Office</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="/security/internship" class="nav-link dropdown-toggle nav-link--security-internship" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-drupal-link-system-path="node/25934">Programs</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="/service/phishingawareness" class="nav-link--service-phishingawareness" data-drupal-link-system-path="node/28814">Phishing Awareness Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/bug-bounty" class="nav-link--security-bug-bounty" data-drupal-link-system-path="node/26809">Bug Bounty Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/vulnerability-disclosure" class="nav-link--security-vulnerability-disclosure" data-drupal-link-system-path="node/29897">Vulnerability Disclosure Program</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/security/cyberfest/2024" class="nav-link--security-cyberfest-2024" data-drupal-link-system-path="node/29733">Cybersecurity and Privacy Festival</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="nav-item menu-item--expanded dropdown">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link dropdown-toggle nav-link-https--wwwcisagov-news-events-cybersecurity-advisories" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Security Alerts</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                    <li class="dropdown-item">
+                          <a href="https://www.cisa.gov/news-events/cybersecurity-advisories" class="nav-link-https--wwwcisagov-news-events-cybersecurity-advisories">Cybersecurity alerts and advisories</a>
+              </li>
+                <li class="dropdown-item">
+                          <a href="/guide/sunset-schedule" class="nav-link--guide-sunset-schedule" data-drupal-link-system-path="node/26942">Service and Software Sunset Schedule</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+                                                    </div>
+                                                    </div>
+                      </nav>
+                  </header>
+    <main class="page-content" id="page-content">
+                <div class="fullwidth fullwidth-header">
+          <div class="fullwidth-header__inner section clearfix">
+              <section class="row region region-fullwidth-header">
+    <div id="block-cp-header" region="fullwidth_header" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <section class="text-center text-white bg-plum-lagunita hero"  style="background-image: url(/sites/default/files/styles/hero/public/banners/Custom-Page-Banner-PHI-v7.jpg?itok=nhmFzmvI); background-size: cover; background-repeat: no-repeat; background-position: 50% 30%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-11 p-3 p-sm-4 p-md-5 mx-auto my-2">
+				<h1 class="mb-4"><span class="field field--name-title field--type-string field--label-hidden">Protecting Sensitive Data at Stanford</span>
+</h1>
+				
+            <div class="clearfix text-formatted field field--name-field-guide-banner-text field--type-text-long field--label-hidden field__item"><p>Appropriate Access and Use of Sensitive Data</p>
+</div>
+      
+				<div class="hero-link">
+    <ul class="list-inline"><li class="list-inline-item py-2 px-4 mb-1"><a href="https://uit.stanford.edu/security/sensitivedata#section_2818">Learn</a></li><li class="list-inline-item py-2 px-4 mb-1"><a href="https://uit.stanford.edu/security/sensitivedata#section_3055">Report</a></li><li class="list-inline-item py-2 px-4 mb-1"><a href="https://uit.stanford.edu/security/sensitivedata#section_2833">Commit</a></li></ul>
+</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+    </div>
+  </div>
+<div class="views-element-container block block-views block-views-blockguide-menu-block" id="block-views-block-guide-menu-block" region="fullwidth_header">
+  
+    
+      <div class="content">
+      <div region="fullwidth_header"><div class="view view-guide-menu view-id-guide_menu view-display-id-block js-view-dom-id-c6c48740a556e6ca2e73fbde6894357726973f4850bd30521ffbfe9d15f782cf">
+  
+    
+      
+      <div class="view-content row">
+          <div class="secondary-nav">
+    <div class="item-list"><ul class="list-group"><li class="list-group-item"><a href="/sensitivedata#section_2815">Overview</a></li><li class="list-group-item"><a href="/sensitivedata#section_2818">Why it matters</a></li><li class="list-group-item"><a href="/sensitivedata#section_2819">Three questions to ask</a></li><li class="list-group-item"><a href="/sensitivedata#section_2852">Important facts</a></li><li class="list-group-item"><a href="/sensitivedata#section_2859">Definitions</a></li><li class="list-group-item"><a href="/sensitivedata#section_3055">Help and training</a></li><li class="list-group-item"><a href="/sensitivedata#section_2833">Your commitment</a></li></ul></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                        <div class="featured-top">
+            <section class="featured-top__inner section container clearfix" role="complementary">
+                <section class="row region region-featured-top">
+    
+  </section>
+
+            </section>
+          </div>
+                            <div id="main" class="container">
+          <div class="row">
+            <div class="col">
+              <div class="content-wrapper">
+                              <div class="highlighted">
+                      <section class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </section>
+
+                </div>
+                              
+                                    <div class="content-top">
+                      
+                    </div>
+                                <div class="row row-offcanvas row-offcanvas-left clearfix">
+                    <div class="main-content col" id="content" role="main">
+                      <section class="section">
+                        <a id="main-content" tabindex="-1"></a>
+                          <div id="block-stanford-uit-system-main" region="content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      <div >
+    
+
+
+</div>
+    </div>
+  </div>
+
+
+                      </section>
+                    </div>
+                                                    </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+                <div class="fullwidth fullwidth-content">
+          <div class="fullwidth-content__inner section clearfix">
+              <section class="row region region-fullwidth-content">
+    <div id="block-cp-content" region="fullwidth_content" class="block block-ctools block-entity-viewnode">
+  
+    
+      <div class="content">
+      <div >
+    
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+<section id="section_2815" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2815 section--default">
+		<div class="container">
+						<div id="section_content_2815" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center">This page is for everyone at Stanford University, Stanford Health Care (SHC), and Stanford Medicine Children’s Hospital (SMCH) with access to <a href="#section_2859">sensitive data</a>, including health care data and <a href="#section_2859">protected health information (PHI).</a></p><p class="center" style="font-size:1.2rem;"><strong>YOU are responsible for taking precautionary measures to protect any data you use, access, or share at Stanford.</strong></p><p class="center">Quick help needed? Grab the infographic:</p><figure class="center"><a style="border-style:none;letter-spacing:0.01em;" href="/sensitivedata-infographic"><img src="/sites/default/files/images/2023/09/08/Infographic-Sensitive-Data-Stanford-3-Questions_0.jpg" alt="Infographic showing 3 questions to ask to protect sensitive data. Described below." width="550" height="425"></a><figcaption class="sr-only">Protecting Sensitive Data at Stanford | YOU are responsible for taking precautionary measures to protect any Stanford data you use, access, or share at Stanford. Always ask these 3 questions protecting sensitive data at Stanford: 1: Is the data access approved and necessary? Only access data specifically required and approved for you to do your job. Access only the minimum amount of information that you need for your purpose. | 2. Are you using an approved service? Only use approved services for handling each type of data. Stanford provides approved services for working with our various data classifications, including protected health information (PHI), which is "High Risk PHI Data" | 3. Are you taking all needed security steps? Use all of the recommended and required security practices at Stanford. And never share High Risk Data with any non-Stanford persons or groups (including for research, publishing, or conferences) without all required approvals. Review approved services by Stanford data classification at dataclass.stanford.edu | Find specific guidance at sensitivedata.stanford.edu</figcaption></figure><p class="text-align-center"><span class="caption">Click the image to see full-size version</span></p>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2818" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--2818 section--default">
+		<div class="container">
+							<div id="section_title_2818" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-shield fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Why is protecting sensitive data so important?
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2818" class="primary-section-content  ">
+				
+				<div class="row section"><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2834"  class="paragraph paragraph--card paragraph-id--2834 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Our commitment</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p><strong>Stanford is committed to privacy and data security.</strong></p>
+
+<p>This commitment is important for everyone in the Stanford community to adopt for the protection of our people and our information, especially related to&nbsp;health care data.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2816"  class="paragraph paragraph--card paragraph-id--2816 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Legal requirements and consequences</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p><strong>Consequences for mishandling data can include fines (for Stanford or you), imprisonment, and loss of your professional license.</strong></p>
+
+<p>Privacy and data security laws include serious consequences for failing to protect confidentiality and security–for both Stanford and for you as an individual.</p>
+</div>
+      
+            
+        </div>
+                	<div class="card-footer pb-4 border-0 text-center">
+        		<a class="btn btn-secondary mx-1 mt-2" href="https://privacy.stanford.edu/policies">View privacy policies and laws »</a>
+                                                                        	</div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2817"  class="paragraph paragraph--card paragraph-id--2817 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Impact for others</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p><strong>Let's not forget the reason for our commitment—the potential impact for those who we are trying to protect, like&nbsp;patients and clinical trial participants.</strong></p>
+
+<p>Risks of mishandling sensitive data include:</p>
+
+<ul dir="ltr">
+	<li>Identity theft and fraud</li>
+	<li>Stigma and discrimination</li>
+	<li>Compromised healthcare due to mishandled data</li>
+	<li>Loss of trust in healthcare services, negatively affecting healthcare</li>
+	<li>Financial and legal consequences for costs related to resolving issues</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2819" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2819 section--default">
+		<div class="container">
+							<div id="section_title_2819" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-list-ol fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Three questions to help you protect sensitive data
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2819" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center">Open each section to see details.</p>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2822" class="primary-section      collapsed-section" >
+	<div  class="paragraph paragraph--section paragraph-id--2822 section--default">
+		<div class="container">
+							<div id="section_title_2822" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<a data-bs-toggle="collapse" href="#section_content_2822" role="button" aria-expanded="false" aria-controls="section_content_2822"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-angle-double-down fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+#1. Is the data access approved and necessary?</a>
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2822" class="primary-section-content collapse ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center" style="font-size:1.2rem;">When it comes to accessing (including querying) data, there is a significant difference between what you <em><strong>can</strong></em> access and what you <em>should</em> access.</p><p class="center" style="font-size:1.2rem;">For example,&nbsp;employees&nbsp;have access to operational and/or clinical systems with data based on their role within the organization and business need for access. That encompasses that data an employee <em>can</em> access.&nbsp;</p><p class="center" style="font-size:1.2rem;">However, employees&nbsp;<em>should</em> access only what is specifically required and approved.</p>
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3019"  class="paragraph paragraph--card paragraph-id--3019 card--default">
+    <div class="card card-green mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-check fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Approved</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><ul style="letter-spacing: 0.16px;">
+	<li>ONLY access data or run reports for functions and projects that have been approved for you to work on.</li>
+	<li>ONLY for the purpose to support internal operations and improvement purposes; access&nbsp;for other purposes is prohibited unless authorized by the&nbsp;<a href="#get-help">relevant privacy authority</a>.</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_2821"  class="paragraph paragraph--card paragraph-id--2821 card--default">
+    <div class="card card-green mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-check fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Necessary</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><ul dir="ltr">
+	<li>ONLY data specifically required for you to do your job at Stanford. (This is the "need to know" principle.)</li>
+	<li>ONLY the minimum amount of information or data that you need to accomplish your intended purpose. (This is the "minimum access" principle.)</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-lg-4 ">
+        
+<div id="section_3020"  class="paragraph paragraph--card paragraph-id--3020 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-times fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">NOT approved</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><ul style="letter-spacing: 0.16px;">
+	<li>High Risk Data should&nbsp;not be used for research, publishing, conferences, or any other sharing with external parties without approval from&nbsp;<a href="#get-help">relevant privacy authorities</a>.</li>
+	<li><span style="font-weight: 600;">Never share High Risk Data with non-Stanford individuals or groups&nbsp;without all required approvals.</span></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2826" class="primary-section      collapsed-section" >
+	<div  class="paragraph paragraph--section paragraph-id--2826 section--default">
+		<div class="container">
+							<div id="section_title_2826" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<a data-bs-toggle="collapse" href="#section_content_2826" role="button" aria-expanded="false" aria-controls="section_content_2826"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-angle-double-down fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+#2. Are you using an approved service?</a>
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2826" class="primary-section-content collapse ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center" style="font-size:1.2rem;">Only use approved services for the data which you are accessing or using.</p><p class="center" style="font-size:1.2rem;">The Stanford data classification for PHI is “High Risk PHI Data.” There are approved services for handling this type of data.*</p><div class="center section-link"><a class="more-button" href="/guide/riskclassifications#security-approved-services">Review approved services, by data classification</a></div><p class="center"><em>*Note that any solution(s) for High Risk PHI might have special processes and procedures also required in order to ensure data privacy and security. Be sure to review all of the related requirements. </em><a href="https://uit.stanford.edu/sensitivedata#get-help"><em>Seek assistance</em></a><em> or request a </em><a href="/security/dra"><em>data risk assessment (DRA)</em></a><em>.</em></p>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2829" class="primary-section      collapsed-section" >
+	<div  class="paragraph paragraph--section paragraph-id--2829 section--default">
+		<div class="container">
+							<div id="section_title_2829" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<a data-bs-toggle="collapse" href="#section_content_2829" role="button" aria-expanded="false" aria-controls="section_content_2829"><div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-angle-double-down fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+#3. Are you taking all needed security and documentation steps?</a>
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2829" class="primary-section-content collapse ">
+				
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_2827"  class="paragraph paragraph--card paragraph-id--2827 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Critical security steps</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><ul>
+	<li><span style="letter-spacing: 0.01em;">Your access credentials to Stanford&nbsp;applications and data have been granted solely for your use. </span><span style="letter-spacing: 0.01em;">&nbsp;</span><em style="letter-spacing: 0.01em;">Never share your access credentials (login IDs and passwords) with anyone. &nbsp; You will be held responsible for any activity that occurs using your login ID.</em></li>
+	<li>Use a strong password.</li>
+	<li>Only use Stanford-approved encrypted devices to access, capture, store or transmit confidential data.</li>
+	<li>Lock or secure workstation when walking away from your workstation.</li>
+	<li>SHC/SMCH Employees, specifically:
+	<ul>
+		<li>Store data on the SHC/SMCH secured network.</li>
+		<li>Use Secure email.</li>
+		<li>Use Stanford Medicine Box or remote access to store and transfer files.</li>
+		<li>Engage IT for secure external file transfers.</li>
+	</ul>
+	</li>
+	<li>Assume all data requires protection under the law unless it is properly <a href="https://privacy.stanford.edu/guidelines/data-de-identification-overview-and-guidance">de-identified</a>. There are specific legal requirements for information to be considered de-identified under the law. <a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=1ecf90ff1bf0409094c0fee58d4bcb3e">Contact the Privacy Office</a> for direction on how to de-identify information.</li>
+	<li>These are just some of the top tips for security. <a href="https://uit.stanford.edu/guide/security">Check out more security guidance.</a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_2828"  class="paragraph paragraph--card paragraph-id--2828 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Required documentation for accessing patient information</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><ul>
+	<li>You must maintain complete and accurate documentation for each project for which you access or query data applications containing patient information.&nbsp;</li>
+	<li>Documentation must be maintained for six (6) years.&nbsp;</li>
+	<li>Documentation must include the name &amp; purpose of the project, data fields required for the project, date range of project, sample reports, and executive sponsor.</li>
+	<li>Documentation can be in the form of a log (spreadsheet) or project plan/charter.</li>
+	<li>Reports (both electronic and paper) produced as a result of the project must include:
+	<ul>
+		<li>Project Name</li>
+		<li>Date</li>
+		<li>Name of individual who created report</li>
+		<li>Statement “For internal SHC (or SMCH as appropriate)&nbsp;business purposes only”</li>
+	</ul>
+	</li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2852" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2852 section--default">
+		<div class="container">
+							<div id="section_title_2852" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-search fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Important facts on protecting sensitive data
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2852" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center">Keep in mind that various <a href="https://privacy.stanford.edu/policies">protections and consequences</a> apply for specific types of data and situations.</p><p class="center">Let's look at a few details:</p>
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2851"  class="paragraph paragraph--card paragraph-id--2851 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">PHI and non-PHI sensitive data</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">PHI is protected by the Health Insurance Portability Act (<a href="https://privacy.stanford.edu/policies/hipaa-privacy-policies">HIPAA</a>). Yet data can be sensitive and require protection, even if not PHI. Data might&nbsp;be subject to other restrictions (for example, <a href="https://privacy.stanford.edu/policies/ferpa-overview">FERPA</a>, <a href="https://privacy.stanford.edu/policies/gdpr">GDPR</a>, <a href="https://privacy.stanford.edu/policies/human-subjects-research">IRB</a>, and contractual agreements.)</p>
+
+<p style="font-size: 1.2rem;"><!--EndFragment--></p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2854"  class="paragraph paragraph--card paragraph-id--2854 card--default">
+    <div class="card card-purple mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Proprietary sources</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">Data received from a proprietary source (such as corporate data or information about sponsored research projects) can be sensitive and require protection from disclosure.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2855"  class="paragraph paragraph--card paragraph-id--2855 card--default">
+    <div class="card card-orange mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">State laws and other geographically based laws</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">The State of California has its own legal requirements for different types of sensitive data, as do other states.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2856"  class="paragraph paragraph--card paragraph-id--2856 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">GDPR (General Data Protection Regulation)</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">Data subject to European Union&nbsp;privacy regulations (<a href="https://privacy.stanford.edu/policies/gdpr">GDPR</a>) must be treated as sensitive personal information even if coded (where HIPAA allows de-identified data to retain certain types of codes).</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2899"  class="paragraph paragraph--card paragraph-id--2899 card--default">
+    <div class="card card-green mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Individually-identifiable data  </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">Data that are individually identifiable (such as SSNs) but not created or maintained by a HIPAA-covered entity (such as a hospital) may not be subject to HIPAA&nbsp;but may be subject to other legal or contractual restrictions.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 col-xl-4">
+        
+<div id="section_2987"  class="paragraph paragraph--card paragraph-id--2987 card--default">
+    <div class="card card-red mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Research subject to IRB approval</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p style="font-size: 1.2rem;">For <a href="https://privacy.stanford.edu/policies/human-subjects-research">research subject to IRB approval</a>, data management is governed by the terms of that IRB approval, which may be more limiting or specific that Stanford's general guidelines for High Risk Data.</p>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2859" class="primary-section bg-white     " >
+	<div  class="paragraph paragraph--section paragraph-id--2859 section--default">
+		<div class="container">
+							<div id="section_title_2859" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-info-circle fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Definitions
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2859" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <dl class="faq"><dt><p>De-identification</p></dt><dd><p><a href="https://privacy.stanford.edu/guidelines/data-de-identification-overview-and-guidance">De-identification</a> is the removal or alteration of information in a dataset in order to make it more difficult or impossible to identify specific individuals. Data which has been HIPAA de-identified has had all <a href="https://med.stanford.edu/irt/security/stanfordinfo/hipaa.html">HIPAA identifiers</a> removed. What constitutes “anonymized” data may vary across different data protection laws. <a href="https://privacy.stanford.edu/guidelines/data-de-identification-overview-and-guidance">View Stanford's Data De-identification Overview and Guidance</a> for more details on GDPR "anonymous" and "pseudonymous" data.</p></dd><dt><p>Minimum Privacy Standards (<a href="https://minpriv.stanford.edu/">MinPriv</a>)</p></dt><dd><p>The Minimum Privacy Standards are intended to reflect best practices for the collection, processing, transfer, deletion and other use of personal data at Stanford.</p></dd><dt><p>Minimum Security Standards (<a href="https://minsec.stanford.edu/">MinSec</a>)</p></dt><dd><p>The Minimum Security Standards are intended to reflect the minimum level of care necessary for Stanford's sensitive data.</p></dd><dt><p>Personal Data</p></dt><dd><p>Any information that relates to an identifiable, unique human being.</p></dd><dt><p>Protected Health Information (PHI)</p></dt><dd><p>All individually identifiable health information that relates to a patient's past, present, or future physical or mental health or condition, the provision of health care to a patient, or the past, present, or future payment for health care provided to a patient. For questions about whether information is considered to be PHI, contact the University Privacy Office. <a href="https://med.stanford.edu/irt/security/stanfordinfo/hipaa.html">View 18 HIPAA&nbsp;identifiers of PHI</a>.</p></dd><dt><p>Sensitive Data</p></dt><dd><p>Any information that must be protected against unauthorized disclosure; its loss, misuse, modification, or unauthorized access could negatively impact an organization or individual.* At Stanford, sensitive data&nbsp;includes these <a href="https://uit.stanford.edu/guide/riskclassifications">risk classifications</a>: Moderate Risk, High Risk Non-PHI, and High Risk PHI.<br><em><span style="font-size:0.9em;">*What constitutes "sensitive personal data" is defined by applicable data protection laws.</span></em></p></dd></dl>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_3055" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--3055 section--default">
+		<div class="container">
+							<div id="section_title_3055" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-question-circle fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Help and training
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_3055" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <div id="get-help"><p class="center">If you suspect or know of a data compromise or risk, immediately report the incident to keep you and others safe:</p></div>
+    </div></div>
+				
+				<p class="text-center section-url"><a href="https://uit.stanford.edu/security/report-incident">Report an Incident</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2832" class="primary-section bg-fog-light     " >
+	<div  class="paragraph paragraph--section paragraph-id--2832 section--default">
+		<div class="container">
+						<div id="section_content_2832" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p class="center" style="margin-bottom:-2rem;margin-top:-6rem;"><img src="/sites/default/files/images/2023/08/21/microscope-icon-75.png" alt="" width="75" height="75"></p><h3 class="center">Report a UK Biobank incident</h3><p class="center"><strong>Note</strong>:&nbsp;For any incidents involving UK Biobank data,&nbsp;<a href="https://uit.stanford.edu/security/report-incident/uk-biobank">view the UK Biobank&nbsp;reporting protocols here</a>.</p>
+    </div></div>
+				<div class="row section"><div class="section-content col-md-6 ">
+        
+<div id="section_2830"  class="paragraph paragraph--card paragraph-id--2830 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Get help </div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p><strong style="letter-spacing: 0.01em;">University Privacy Office:&nbsp;</strong><span style="letter-spacing: 0.16px;">Get help</span><span style="letter-spacing: 0.16px;"> related to privacy questions.</span></p>
+
+<ul>
+	<li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=1ecf90ff1bf0409094c0fee58d4bcb3e">​Submit a help request for the Privacy Office</a>.</li>
+</ul>
+
+<p><b>University IT Information Security Office:&nbsp;</b><span style="letter-spacing: 0.16px;">Get help</span><span style="letter-spacing: 0.16px;">&nbsp;related to IT security.</span></p>
+
+<ul>
+	<li><a href="https://stanford.service-now.com/it_services?id=sc_cat_item&amp;sys_id=f7ae081a13bce2008a9175c36144b0ad">Submit a help request for the Information Security Office</a>.</li>
+</ul>
+
+<p style="letter-spacing: 0.16px;"><span style="font-weight: 700;">Stanford Health Care Privacy Office:&nbsp;</span>Get help&nbsp;related to patient data and PHI.</p>
+
+<ul style="letter-spacing: 0.16px;">
+	<li><a href="mailto:PrivacyOfficer@stanfordhealthcare.org">PrivacyOfficer@stanfordhealthcare.org</a>&nbsp;</li>
+	<li>Privacy Office main line: 650-724-2572</li>
+	<li>24/7 Compliance Hotline, including anonymous reporting: 800-216-1784</li>
+</ul>
+
+<p><span style="font-weight: 700; letter-spacing: 0.16px;">Research Compliance Office (IRB):&nbsp;</span><span style="letter-spacing: 0.16px;">Get help</span><span style="letter-spacing: 0.16px;">&nbsp;related to human subject research and the protection of participants.</span></p>
+
+<ul>
+	<li><a href="http://researchcompliance.stanford.edu/panels/hs/contacts"><span style="letter-spacing: 0.16px;">View IRB contact options.</span></a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div><div class="section-content col-md-6 ">
+        
+<div id="section_2831"  class="paragraph paragraph--card paragraph-id--2831 card--default">
+    <div class="card card-blue mb-4 box-shadow">
+                <div class="card-body">
+                                                <h2 class="h4 card-title text-center mt-0">
+            <div class="field field--name-field-card-title field--type-string field--label-hidden field__item">Training and resources</div>
+      </h2>
+                                        
+            <div class="clearfix text-formatted field field--name-field-card-body field--type-text-long field--label-hidden field__item"><p><strong>University Privacy Office Training</strong></p>
+
+<ul>
+	<li><a href="https://privacy.stanford.edu/training">University Privacy Office Training</a> (HIPAA, FERPA, GDPR, Privacy Office Tutorials)</li>
+</ul>
+
+<p><strong style="letter-spacing: 0.01em;">University IT Information Security Office&nbsp;Resources</strong></p>
+
+<ul>
+	<li><a href="https://uit.stanford.edu/guide/security">Secure Computing Practices</a>&nbsp;</li>
+	<li><a href="https://uit.stanford.edu/collabtools/highrisk">Collaboration Tools for PHI and High Risk Data</a> <!--EndFragment-->&nbsp;</li>
+</ul>
+
+<p style="letter-spacing: 0.16px;"><span style="font-weight: 700;">Stanford Medicine Training and&nbsp;Resources</span></p>
+
+<ul style="letter-spacing: 0.16px;">
+	<li><a href="https://med.stanford.edu/md/mdhandbook/section-3-md-requirements-procedures/section-3-15-stanford-medicine-policy-for-the-removal-and-transport-of-phi.html">Policy for the Removal and Transport of PHI</a></li>
+	<li><a href="https://med.stanford.edu/irt/security/stanfordinfo/hipaa.html">HIPAA Identifiers: Anonymizing Data</a></li>
+	<li><a href="https://med.stanford.edu/starr-tools/data-compliance/hipaa-primer.html">HIPAA Primer</a></li>
+	<li><a href="https://med.stanford.edu/box/phi.html">Stanford Medicine Box for PHI and PII</a></li>
+	<li><a href="https://med.stanford.edu/irt/security.html">School of Medicine Information Security Services</a></li>
+</ul>
+</div>
+      
+            
+        </div>
+            </div>
+</div>
+
+    </div></div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+              <div class="field__item">
+<section id="section_2833" class="primary-section      " >
+	<div  class="paragraph paragraph--section paragraph-id--2833 section--default">
+		<div class="container">
+							<div id="section_title_2833" class="primary-section-title">
+					<div class="row section-title">
+						<div class="mx-auto col-xs-10">
+							<h2 class="section-heading">
+																	<div class="fontawesome-icons">
+      <div class="fontawesome-icon">
+  <i class="fas fa-check-square fa-2x" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+</div>
+
+  </div>
+Make your commitment
+															</h2>
+						</div>
+					</div>
+				</div>
+						<div id="section_content_2833" class="primary-section-content  ">
+				<div class="row section-body justify-content-around"><div class="lead mx-auto col-md-9">
+        <p dir="ltr">Once you complete this form*, you will automatically receive an email with the details of your commitment. You can also choose to send your commitment to individuals you choose.</p><p><strong>*Note this commitment does not act as a replacement for the official training. This web page is a supplemental resource.</strong></p><p class="center"><iframe frameborder="0" height="1400" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSdJOMwlJgnxCAIrSMIz-e88Mra3m8Hl2fT6muyqA0oa06idNg/viewform?embedded=true" title="Commitment Form" width="85%">Loading…</iframe></p>
+    </div></div>
+				
+				
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+          </div>
+  
+</div>
+    </div>
+  </div>
+
+  </section>
+
+          </div>
+        </div>
+                </main>
+    <div class="spacer"></div>
+        <footer class="site-footer">
+              <div class="container">
+                                <div class="site-footer__bottom">
+                <section class="row region region-footer-fifth">
+      
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-footer-services-menu" id="block-stanford-uit-menu-menu-footer-services" region="footer_fifth" class="block block-menu navigation menu--menu-footer-services">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-footer-services-menu" >Services</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/services" class="nav-link nav-link--services" data-drupal-link-system-path="services">Explore all services</a>
+              </li>
+                <li class="nav-item">
+                <a href="/cloudsolutions-q-a" class="menu-node-unpublished nav-link menu-node-unpublished menu-node-unpublished nav-link--cloudsolutions-q-a" data-drupal-link-system-path="node/26733">Cloud Solutions Q&amp;As </a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/tools" class="nav-link nav-link--guide-tools" data-drupal-link-system-path="node/26099">Get started with IT</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/security" class="nav-link nav-link--guide-security" data-drupal-link-system-path="node/26098">Practice secure computing</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/telecommuting" class="nav-link nav-link--guide-telecommuting" data-drupal-link-system-path="node/26906">Work Anywhere Guide</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/perks" class="nav-link nav-link--guide-perks" data-drupal-link-system-path="node/26101">IT perks</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-support-menu" id="block-stanford-uit-menu-menu-support" region="footer_fifth" class="block block-menu navigation menu--menu-support">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-support-menu" >Support</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=kb_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidkb-home">Find answers</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/it_services?id=sc_home" class="nav-link nav-link-https--stanfordservice-nowcom-it-servicesidsc-home">Request something</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://stanford.service-now.com/services?id=get_help" class="nav-link nav-link-https--stanfordservice-nowcom-servicesidget-help">Get help</a>
+              </li>
+                <li class="nav-item">
+                <a href="/status-metrics" class="nav-link nav-link--status-metrics" data-drupal-link-system-path="node/25012">View system and project status</a>
+              </li>
+                <li class="nav-item">
+                <a href="/guide/browser-recommendations" class="nav-link nav-link--guide-browser-recommendations" data-drupal-link-system-path="node/24967">Browser recommendations</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://techsource.stanford.edu/" class="nav-link nav-link-https--techsourcestanfordedu-">Tech Resources &amp; Support (for students)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-university-it-menu" id="block-stanford-uit-menu-menu-university-it" region="footer_fifth" class="block block-menu navigation menu--menu-university-it">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-university-it-menu" >University IT</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/organization/structure" class="nav-link nav-link--organization-structure" data-drupal-link-system-path="node/2890">About us</a>
+              </li>
+                <li class="nav-item">
+                <a href="/organization/orgchart" class="nav-link nav-link--organization-orgchart" data-drupal-link-system-path="node/1927">Organization chart</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://careersearch.stanford.edu/page/uit-jobs-at-stanford-23" class="nav-link nav-link-https--careersearchstanfordedu-page-uit-jobs-at-stanford-23">Current job openings</a>
+              </li>
+                <li class="nav-item">
+                <a href="/2023-in-review" class="nav-link nav-link-__023-in-review" data-drupal-link-system-path="node/29871">UIT Annual Report</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+  
+<nav role="navigation" aria-labelledby="block-stanford-uit-menu-menu-news-menu" id="block-stanford-uit-menu-menu-news" region="footer_fifth" class="block block-menu navigation menu--menu-news">
+    
+  
+    <h2 id="block-stanford-uit-menu-menu-news-menu" >Connect</h2>
+    
+
+        
+                  <ul region="footer_fifth" class="clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="/news" class="nav-link nav-link--news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="nav-item">
+                <a href="/news" title="" class="nav-link nav-link--news" data-drupal-link-system-path="news">Recent Announcements</a>
+              </li>
+                <li class="nav-item">
+                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="events">Events</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://cop.stanford.edu/" class="nav-link nav-link-https--copstanfordedu-">Communities of Practice</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://uitcommunity.stanford.edu/" class="nav-link nav-link-https--uitcommunitystanfordedu-">UIT Community (UIT staff only)</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+<div id="block-stanford-uit-samlsunetidblock" class="span3 block block-stanford-samlauth block-stanford-samlauth-login-block" region="footer_fifth">
+  
+      <h2>UIT Web Editors</h2>
+    
+      <div class="content">
+      <a rel="nofollow" href="/saml/login?destination=/security/sensitivedata" class="su-button decanter-button">Login</a>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                  </div>
+          </footer>
+      </div>
+  <div id="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div id="bottom-logo" class="col-lg-2"><a href="https://www.stanford.edu"><img src="/themes/custom/stanford_uit/images/footer-stanford-logo@2x.png" alt="Stanford University"></a></div>
+        <div id="bottom-menu" class="col-lg-10">
+          <ul id="global-links">
+            <li><a href="https://www.stanford.edu">Stanford Home</a></li>
+            <li><a href="https://visit.stanford.edu/plan/">Maps & Directions</a></li>
+            <li><a href="https://www.stanford.edu/search/">Search Stanford</a></li>
+            <li><a href="https://emergency.stanford.edu">Emergency Info</a></li>
+          </ul>
+          <ul id="global-policy-links">
+            <li><a href="https://www.stanford.edu/site/terms/" title="Terms of use for sites">Terms of Use</a></li>
+            <li><a href="https://www.stanford.edu/site/privacy/" title="Privacy and cookie policy">Privacy</a></li>
+            <li><a href="https://uit.stanford.edu/security/copyright-infringement" title="Report alleged copyright infringement">Copyright</a></li>
+            <li><a href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4" title="Ownership and use of Stanford trademarks and images">Trademarks</a></li>
+            <li><a href="https://exploredegrees.stanford.edu/nonacademicregulations/nondiscrimination/" title="Non-discrimination policy">Non-Discrimination</a></li>
+            <li><a href="https://www.stanford.edu/site/accessibility" title="Report web accessibility issues">Accessibility</a></li>
+          </ul>
+        </div>
+        <div id="copyright" class="col-lg-10 offset-lg-2">
+            <p class="vcard"><span aria-hidden="true">©</span><span class="visually-hidden">Copyright</span>
+              <span class="fn org">Stanford University</span>.
+              <span class="adr">
+                <span class="locality">Stanford</span>,
+                <span class="region">California</span>
+                <span class="postal-code">94305</span>.
+              </span>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#global-footer -->
+</div>
+  </div>
+
+    
+    <script src="/sites/default/files/js/js_bdZWUpe4_pFf0I_p66rERrAOhJ8TpHSnyVJiv7gT2so.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/7832cd8505.js" crossorigin="anonymous"></script>
+<script src="/sites/default/files/js/js_ZeZNzGUPbMDLfr8MmJMXcaSH1GjUCp1LBNbbWj7QHW0.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=stanford_uit&amp;include=eJxljkESgzAIRS8Um12vw2DElEwMDlBrb18X7TixCxje-ws-mpEDt0LJRWOxm7ETL6vKRjDzThZGETdXXGFEVZaYq4xYB_N35ZZDFsmVwDHHfKwr37Dg3sslmGObRSd4ssfzQZpaH83SHF9kshDc--jSost-MBwQjgEj1PSI5_m1unEiwErqFv8VFPsANO1zCA"></script>
+
+  </body>
+</html>

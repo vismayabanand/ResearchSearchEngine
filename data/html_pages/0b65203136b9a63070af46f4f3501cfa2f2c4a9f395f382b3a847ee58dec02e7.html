@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Be Well Bruin | Be Well Bruin</title>
+<link rel="stylesheet" href="/themes/custom/ucla_campus/css/ucla_sa.css?v=a20250503131753">
+<link rel="stylesheet" href="/themes/custom/ucla_campus/css/ucla_campus.css?v=a20250503131753">
+<link rel="stylesheet" href="/themes/custom/ucla_campus/sites/ucla-bewellbruin.css?v=a20250503131753">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TDH1KT6VR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-4TDH1KT6VR');
+</script>
+<style type="text/css">
+.guide--dialog {
+  padding-bottom: 8rem;
+}
+
+/* improve padding from blobs overlapping people list on /about page */
+@media (min-width: 575px) {
+    [data-section-title="Who We Are"].paragraph--section:not(:last-child) {
+        padding-bottom: 8rem;
+    }
+}
+</style>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.body.dataset.uclaRef != 'bewellbruin/about') {
+        return;
+    }
+
+    const sortOrder = `
+        monroe-gorden-jr
+        suzanne-seppy-seplow
+        nicole-green
+        wendy-slusser
+        robert-bilder
+        chaitali-mukherjee
+        joshua-mayfield-ma
+        drea-letamendi
+        alea-orange-med
+    `
+        .split('\n')
+        .map(p => p.trim())
+        .filter(p => p.length)
+        .map(p => `/people/${p}`);
+    
+    const people = Array
+        .from(document.querySelectorAll('.person-card'))
+        .map((ele) => {
+            const url = new URL(ele.href);
+            const pathname = url.pathname;
+            return { ele, pathname };
+        })
+
+    for (const pathname of sortOrder.reverse()) {
+        const person = people.find(p => p.pathname == pathname)
+        if (!person) {
+            console.warn(`Could not find person ${window.origin}${pathname}`);
+            continue;
+        }
+
+        const list = person.ele.parentElement
+        list.removeChild(person.ele);
+        list.prepend(person.ele);
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* replace myucla form with minified version that won't throw an error in dev */
+const html = `<div class="uclaform"><form data-ucla-form-thanks="&quot;Thank you for completing DEV ONLY Be Well Bruin
+Contact Us.&quot;"><p class="uclaform-instruction">This form needs to be
+replaced with on in CAPS org and we need to identify who gets it.</p><div class="uclaform-question uclaform-question--short-text"><label class="uclaform-question__label" id="q156276346-label" tabindex="-1" for="q156276346">Name</label><div class="uclaform-question__input"><input aria-labelledby="q156276346-label" id="q156276346" type="text"></div></div><div class="uclaform-question uclaform-question--email"><label class="uclaform-question__label" id="q242140280-label" tabindex="-1" for="q242140280">Email</label><div class="uclaform-question__input"><input aria-labelledby="q242140280-label" id="q242140280" type="email"></div></div><div class="uclaform-question uclaform-question--long-text"><label class="uclaform-question__label" id="q717288361-label" tabindex="-1" for="q717288361">What is this about?</label><div class="uclaform-question__input"><textarea aria-labelledby="q717288361-label" id="q717288361"></textarea></div></div><div class="uclaform-submit"><button type="submit">Send</button></div></form><div class="uclaform-status" aria-live="polite"></div></div>`
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (!document.body.dataset.uclaOrigin.startsWith("http://localhost")) {
+//    console.log('not localhost');
+    return;
+  }
+  if (document.body.dataset.uclaPath != '/contact') {
+//    console.log('not /contact page');
+    return;
+  }
+  console.warn('Manually rendering form dev environment JS');
+  document.querySelector('[data-custom-embed-id="127"]').innerHTML = html;
+})
+</script>
+</head>
+<body
+    data-ucla-ref="bewellbruin/"
+    data-ucla-path="/"
+    data-ucla-origin="https://bewellbruin.ucla.edu"
+    data-ucla-theme-cache-version="a20250503131753"
+    data-ucla-theme-root="/themes/custom/ucla_campus"
+    class="no-js"
+>
+<script>document.body.classList.remove('no-js'); document.body.classList.add('js');</script>
+<header class="siteheader">
+  <div class="skiplink">
+      <a href="#main">Skip to Main Content</a>
+  </div>
+      <div class="topbar">
+    <div class="container">
+      <a href="http://www.ucla.edu/" aria-label="UCLA">UCLA</a>
+    </div>
+  </div>
+  <div class="navbar-wrapper">
+    <div class="navbar-grid container">
+        <span role="heading" aria-level="1">
+                      <a href="/" class="h2">
+              <img src="/themes/custom/ucla_campus/logos/ucla-be-well-bruin.svg" alt="UCLA Be Well Bruin" />
+            </a>
+                  </span>      
+        <nav aria-label="Secondary Top" class="navtop desktop-only">
+          
+        </nav>
+        <button class="mobile-only" aria-haspopup="true" aria-controls="menus" aria-expanded="false" aria-label="Main Menus">
+          <span class="menu-icon-wrap">
+            <span class="menu-icon">
+            </span>
+          </span>
+        </button>
+        <div class="navbar-position">
+          <div id="menus">
+            <nav class="navbar">
+              <form action="https://www.ucla.edu/search" method="GET" class="site-search mobile-only">
+                <label for="header-search-mobile-only">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-mobile-only"><button type="submit" class="ucla-button ucla-button-primary">Search</button>
+              </form>
+                            <ul>
+  <li><a href="/resources">Find a Resource</a></li>
+  <li><a href="/guide">Guide</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/faq">FAQ</a></li>
+  <li><a href="/help" class="bewellbruin-urgent-help">Urgent Help</a></li>
+</ul>
+
+                          </nav>
+            <nav aria-label="Secondary Menu" class="navtop mobile-only">
+            
+            </nav>
+          </div> 
+          <button aria-haspopup="true" aria-controls="desktop-search" aria-expanded="false" aria-label="Search..." class="desktop-only"></button>
+        </div>
+      </div>
+      <form id="desktop-search" action="https://www.ucla.edu/search" method="GET" class="site-search desktop-only">
+        <p class="container">
+          <label for="header-search-headerbar">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-headerbar">
+          <button type="submit" class="ucla-button ucla-button-primary">Search</button>
+        </p>
+      </form>
+  </div>
+</header>
+
+
+<main id="main">
+        <div class="page">
+<div class="page-header">
+  <div id="block-system-messages" class="container">
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+
+
+</div>
+<div class="page-content">
+  <div id="block-ucla-campus-mainpagecontent" class="block system-main-block">
+  
+    
+      <div data-ucla-node-id="8" data-repeat-body_content-max-count="0">
+    
+    
+            
+                                    <div class="collapse collapse-h3">
+                                        <div class="body--page background-be-well-bruin-blue light-font hero-header">
+                        <div class="container">
+                                                            <h1>Be Well Bruin</h1>
+                                                                                        
+    <p class="lead">Taking Care of the Whole U</p> <p>Find support, resources, and tools to be the best you</p> <p class="button"><a href="/resources">Find a Resource</a></p> 
+  <img loading="eager" src="/sites/default/files/styles/header_image/public/2022-12/bewellbruin-student-folder.png?itok=rvp16895" width="1170" height="703" alt="UCLA Student Holding Folder on Stylized Background">
+
+
+
+
+
+
+                                                    </div>
+                    </div>
+                                            
+    <div class="body-content paragraph--section section-healthy-community"  data-section-title="A Healthy University Community">
+        <div class="container">
+                            <h2>
+A Healthy University Community
+</h2>
+                
+<p>UCLA is dedicated to creating and sustaining a healthy University community so students can achieve their personal and academic goals.</p>
+
+<p>As a Bruin, you have access to a range of health and wellness services, from exceptional medical care and counseling to recreational activities, safety resources, peer advocacy, and more.</p>
+
+<p>Through Be Well Bruin, you can learn about resources that support the whole U.&nbsp;</p>
+
+<p>How can we help you today?</p>
+
+                    </div>
+    </div>
+
+    <div class="body-content paragraph--section background-be-well-bruin-blue light-font hero-header"  data-section-title="Be Well Bruin Guide">
+        <div class="container">
+                            <h2>
+Be Well Bruin Guide
+</h2>
+                
+<p>Take our short quiz to get matched with the support, resources, and&nbsp;tools to be the best you.</p>
+
+<p class="button"><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8cecde7f-55b6-462b-a621-af0791237dcf" href="/guide">Go to Guide</a></p>
+
+
+  <img loading="eager" src="/sites/default/files/styles/header_image/public/2022-12/bewellbruin-student-sitting.png?itok=H-9mF4CL" width="1170" height="780" alt="Student with UCLA Shirt sitting in front of sports graphics">
+
+
+
+
+
+
+                    </div>
+    </div>
+
+    <div class="paragraph--section paragraph--type--cards cards-theme-services cards-with-images cards background-lightest-blue"  data-section-title="Browse Resources">
+                    <div class="container">
+                <h2>
+Browse Resources
+</h2>
+                
+                <div class="cards-container">
+                    
+  <a href="/resources/physical"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-physical-3x2.png?itok=3Znm42N2" width="900" height="600" alt="Physical Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Physical
+</span>
+      <span class="card-summary">
+<p class="summary">Sustaining a positive quality of life through harm prevention, active living, nutrition, sleep, substance use, and sexual health.</p>
+</span>
+      </a>
+
+  <a href="/resources/academic"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-academic-3x2.png?itok=Kt49bAqd" width="900" height="600" alt="Academic Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Academic
+</span>
+      <span class="card-summary">
+<p class="summary">Managing workloads while balancing satisfaction in your program, performance, and progress.</p>
+</span>
+      </a>
+
+  <a href="/resources/emotional"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-emotional-3x2.png?itok=5wDfBsdz" width="900" height="600" alt="Emotional Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Emotional
+</span>
+      <span class="card-summary">
+<p class="summary">The ways our mental, psychological, and social wellbeing impact our thoughts, feelings, and actions.</p>
+</span>
+      </a>
+
+  <a href="/resources/financial"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-financial-3x2.png?itok=w_0D2Mks" width="900" height="600" alt="Financial Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Financial
+</span>
+      <span class="card-summary">
+<p class="summary">Strengthen your financial knowledge while finding support to overcome hardships so you can reach your goals.</p>
+</span>
+      </a>
+
+  <a href="/resources/social"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-social-3x2.png?itok=VNAw46in" width="900" height="600" alt="Social Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Social
+</span>
+      <span class="card-summary">
+<p class="summary">Building healthy, nurturing, and supportive relationships while fostering genuine connections with others.</p>
+</span>
+      </a>
+
+  <a href="/resources/basic-needs"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-12/tag-basic-needs-3x2.png?itok=PsbRRCmn" width="900" height="600" alt="Basic Needs Icon" />
+
+
+
+</span>
+      <span class="card-title">
+Basic Needs
+</span>
+      <span class="card-summary">
+<p class="summary">Access to basic needs, such as food, housing, childcare, and transportation.</p>
+</span>
+      </a>
+
+
+                </div>
+            </div>
+            </div>
+
+    <div class="paragraph--section resource-cards"  data-section-title="Resource Spotlight - Los Angeles Fires Support &amp; Wellbeing Resources">
+                    <div class="container">
+                <h2>
+Resource Spotlight - Los Angeles Fires Support &amp; Wellbeing Resources
+</h2>
+                
+<p class="summary">Resources curated by campus health &amp; well-being professionals, tailored to meet the pulse of community needs throughout the year.</p>
+
+                <div class="field-entities" data-field-name="field_entities" data-field-type="entity_reference" data-entity-type="paragraph" data-entity-bundle="resource_cards">
+<a href="/resource/therapy-shortcut-la-fires-support"  class="resource-card">
+                <span class="resource-image">  <img loading="eager" src="/sites/default/files/styles/resize_4_3/public/2025-01/Screenshot%202025-01-24%20132627_1.png?itok=uuIvH1j_" width="800" height="600" alt="Therapy Shortcut" />
+
+
+
+</span>
+        <span class="resource-card-header">
+                    <span class="resource-card-category">Emotional</span>
+                <span class="resource-card-title">Therapy Shortcut: LA Fires Support</span>
+    </span>
+</a>
+
+<a href="/resource/ucla-semel-hci-fire-disaster-resource-list"  class="resource-card">
+                <span class="resource-image">  <img loading="eager" src="/sites/default/files/styles/resize_4_3/public/2025-01/Screenshot%202025-01-24%20161443.png?itok=Kw0gx4fd" width="800" height="600" alt="UCLA Semel HCI BeWell" />
+
+
+
+</span>
+        <span class="resource-card-header">
+                    <span class="resource-card-category">Basic Needs &amp; Safety</span>
+                <span class="resource-card-title">UCLA Semel HCI: Fire Disaster Resource List</span>
+    </span>
+</a>
+
+<a href="/resource/counseling-and-psychological-services-caps"  class="resource-card">
+                <span class="resource-image">  <img loading="eager" src="/sites/default/files/styles/resize_4_3/public/2022-09/capslogowebpage.png?itok=vnT7lEDJ" width="800" height="600" alt="Health, Healing, Hope" />
+
+
+
+</span>
+        <span class="resource-card-header">
+                    <span class="resource-card-category">Emotional</span>
+                <span class="resource-card-title">Counseling and Psychological Services (CAPS)</span>
+    </span>
+</a>
+
+</div>
+                
+            </div>
+            </div>
+
+    <div class="body-content paragraph--section background-gray"  data-section-title="Frequently Asked Questions">
+        <div class="container">
+                            <h2>
+Frequently Asked Questions
+</h2>
+                
+<h3><strong>What is Be Well Bruin?</strong></h3>
+
+<p><strong>Be Well Bruin</strong> is a comprehensive resource directory that highlights UCLA's various resource centers, programs, and departments that support student health &amp; well-being. There are over 100 campus resources available on the site. Explore the resource guide, individual spotlights, and a variety of frequently asked questions students tend to have. Our goal is for students to use this website as a starting pointing to being a Bruin that is well &amp; thriving. <strong>We're happy to have you here!</strong></p>
+
+<h3><strong>As an incoming student, how can I find more ways to get involved in the campus community?</strong></h3>
+
+<p>Be Well Bruin is the perfect place to discover student organizations, resource centers &amp; programs to support belonging and engagement. Feel free to explore this website by category to discover some of the awesome opportunities you have as a Bruin!</p>
+
+<h3><strong>How can students engage in community programs and connection around health &amp; well-being ?</strong></h3>
+
+<p>There are many departments &amp; entities on campus that work to provide engaging programs around community care and mental health. There are also dozens of student organizations on campus that specialize in health &amp; well-being. Please explore our Emotional &amp; Social categories on this site. You can also explore our tags by category including: wellness, community, and health education.</p>
+
+<h3><strong>Where can students access mental health services on campus &amp; what does that process look like?</strong></h3>
+
+<p><a href="https://bewellbruin.ucla.edu/resource/counseling-and-psychological-services-caps">Counseling &amp; Psychological Services</a> (CAPS) is the mental healthcare home for UCLA students. Located in John Wooden Center West, CAPS provides comprehensive mental support services including individual &amp; group therapy, psychiatric services, wellness skills groups and more. To schedule an appointment, call 310-825-0768 for a triage assessment.&nbsp;</p>
+
+<p><a href="https://bewellbruin.ucla.edu/resource/rise-center">The RISE Center</a> is a great resource for students to participate in programs, workshops, and opportunities to support their well-being.&nbsp; RISE (Resilience in Your Student Experience) is an extension of&nbsp;CAPS, and is committed to helping students build a strong foundation of resilience that includes caring for their mental wellness through daily practice.</p>
+
+<h3><strong>How can I take full advantage of the Be Well Bruin website?</strong></h3>
+
+<p>Browse campus resources by categories or tags. We have designated resource tags including Health Education, Primary Care, Community, Wellness &amp; more. Please take some time to complete the BWB Guide to be directed to helpful campus resources based on responses directly on the site! If there are still questions you have, feel free to review the Frequently Asked Questions page.</p>
+    <div class="link-call-to-action"><a href="/faq">View All</a></div>
+
+                    </div>
+    </div>
+
+
+                    
+
+                    
+            
+                </div>
+    </div>
+
+  </div>
+
+
+</div>
+</div>
+
+
+          <footer class="site-footer" role="contentinfo">
+	      <div class="footer-logo">
+	                                  <a href="/" class="site-name">
+                            <img src="/themes/custom/ucla_campus/logos/ucla-be-well-bruin.svg" height="73" width="300" alt="UCLA Be Well Bruin">
+                          </a>
+               	      	      </div>
+        
+        <div class="container footer-content">
+  <address class="footer-address">
+    Los Angeles, CA 90095<br />
+    <a href="tel:+13108254321">(310) 825-4321</a>
+  </address>
+  <h2 class="footer-about"><a href="/about">About Be Well Bruin</a></h2>
+  <h2 class="footer-contact"><a href="/contact">Contact Us</a></h2>
+</div>
+
+      </footer>
+    </main>
+
+<footer class="global-footer">
+  <div class="container">
+    <p class="regents">© 2025 Regents of the
+      <a href="https://www.universityofcalifornia.edu/">University of California</a>
+    </p>
+    <div class="global-footer-links">
+      <a href="https://www.bso.ucla.edu/">Emergency</a>
+      <a href="https://www.ucla.edu/accessibility">Accessibility</a>
+      <a href="https://www.ucla.edu/terms-of-use">Privacy & Terms of Use</a>
+    </div>
+    <div class="social-links-container">
+      <a href="https://www.facebook.com/UCLA/"><span class="social-link-label">Facebook @UCLAhousing</span></a>
+      <a href="https://www.instagram.com/ucla/"><span class="social-link-label">Instagram @uclahousing</span></a>
+      <a href="https://www.linkedin.com/school/ucla"><span class="social-link-label">Linkedin @ucla</span></a>
+      <a href="https://x.com/ucla"><span class="social-link-label">X @ucla</span></a>  
+      <a href="https://www.youtube.com/user/UCLA"><span class="social-link-label">YouTube @ucla</span></a>
+      <a href="https://www.tiktok.com/@ucla?lang=en"><span class="social-link-label">TikTok @ucla</span></a>
+      <a href="https://story.snapchat.com/@uclaofficial"><span class="social-link-label">Snapchat @uclaofficial</span></a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/themes/custom/ucla_campus/js/ucla_sa.js?v=a20250503131753" async></script>
+<script src="/themes/custom/ucla_campus/js/node_modules/wicg-inert/dist/inert.min.js?v=a20250503131753"></script>
+<script src="/themes/custom/ucla_campus/js/ucla_campus.js?v=a20250503131753" async></script>
+<script src="/themes/custom/ucla_campus/sites/ucla-bewellbruin.js?v=a20250503131753" async></script>
+
+<script type="text/javascript">
+(function() {
+  if(document.querySelector('[data-ucla]')) {
+    var embed = document.createElement('script'); embed.type = 'text/javascript'; embed.async = true;
+    embed.src = '/themes/custom/ucla_campus/js/ucla_embed.js?v=20250503131753';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(embed, s);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Site description">
+  <meta name="author" content="Your Name">
+  <link rel="canonical" href="https://pal.cs.ucr.edu//resource.html">
+
+  <title>resources | UCR PAL</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://pal.cs.ucr.edu/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom fonts for this template -->
+  <link href="https://pal.cs.ucr.edu/assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this theme -->
+  <!--<link href="assets/css/agency.min.css" rel="stylesheet">-->
+  <link href="https://pal.cs.ucr.edu/assets/css/agency.css" rel="stylesheet" />
+
+  <!-- Page container change top padding when nav shrinks -->
+  
+  <style>
+    #pagecontainer {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer {
+        padding-top: 100px;
+      }
+    }
+  </style>
+  
+  <style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:80px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: #2578FF;
+    border-radius: 20%;
+    overflow: hidden;
+	cursor: pointer;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+	
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+</head>
+
+
+  <body id="page-top">
+
+        <!-- Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color:#003EA5">
+      <div class="container">
+	  <a class="navbar-brand js-scroll-trigger" href="https://pal.cs.ucr.edu//index.html">UCR PAL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/publications.html">Papers</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/people.html">People</a></li>
+        
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://pal.cs.ucr.edu/index.html#project">Projects</a></li>
+        
+          <li class="nav-item"><div class="nav-link">
+				<a>Resources</a>
+				<div class="di">
+					<ul>
+					
+						<li> <a href="https://pal.cs.ucr.edu/courses.html"> 
+						Courses
+						</a></li>
+					
+						<li> <a href="https://pal.cs.ucr.edu/students.html"> 
+						Recruiting
+						</a></li>
+					
+						<li> <a href="https://pal.cs.ucr.edu/resource.html"> 
+						Useful Resources
+						</a></li>
+					
+					</ul>
+				</div>
+				</div>
+			    </div></li>
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- End Navigation -->
+  
+
+
+
+<div class="maincontainer" id="pagecontainer">
+
+<div class="control">
+
+<h2 class="section-heading text-uppercase" style="padding:30px 0 30px 0">resources</h2>
+
+<h2 id="important-dates"><strong class="themetext">Important Dates:</strong></h2>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;mode=AGENDA&amp;src=YWM2NDUxOGQxMGMzZDVlMjE2MGZjNGY5Nzg5NTBkMjIyYzgwMTM2MmM1MWIwYmE1ODI0NGU5MWY2OWM4NjZjMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=N2I0dWl1dDRsdTMyNWtpdTNra2JmZWoxaWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=YjZlYjViZWZiZTFhZjczY2VlYWJlYTA3N2NhOTU3M2JiZDNmZTcwY2Y0ZDIzZWJiYWUwNmNiMWFkZmY2YjgyMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237986CB&amp;color=%23cc0000&amp;color=%238E24AA" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+</div>
+
+</div>
+
+	  <!-- Footer -->
+<footer class="footer" id="footer" style="background-color: white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <span class="copyright">Copyright &copy; UCR PAL 2023</span><br>
+		<span class="copyright">Website generated with <a href="http://jekyllthemes.org/themes/agency/">Jekyll agency theme</a> </span>
+      </div>
+      <!-- Social Media -->
+	  <!--
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          
+          <li class="list-inline-item">
+            
+            <a href="https://twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://facebook.com">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://linkedin.com">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://github.com/raviriley/agency-jekyll-theme">
+              <i class="fab fa-github"></i>
+            </a>
+            
+          </li>
+          
+          <li class="list-inline-item">
+            
+            <a href="https://instagram.com">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+          </li>
+          
+        </ul>
+      </div>
+	  -->
+      <!-- Legal -->
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li class="list-inline-item">
+		    <span>Last updated: January 29, 2023</span><br>
+            <a href="">BACK TO TOP</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  fixPageShort();
+  function fixPageShort() {
+    if (window.innerHeight > document.body.offsetHeight) {
+      document.getElementById("footer").style.position = "fixed";
+      document.getElementById("footer").style.bottom = 0;
+      document.getElementById("footer").style.right = 0;
+      document.getElementById("footer").style.left = 0;
+      document.getElementById("footer").style.width = "100%";
+    }
+  }
+</script>
+
+<!-- End Footer -->
+
+
+	  <!-- Bootstrap core JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/bootstrap.bundle.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jquery.easing.min.js"></script>
+
+	  <!-- Contact form JavaScript -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/jqBootstrapValidation.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/contact_me.js"></script>
+
+	  <!-- Custom scripts for this template -->
+	  <script src="https://pal.cs.ucr.edu/assets/js/agency.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/assets/js/copyCode.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/clipboard.min.js"></script>
+	  <script src="https://pal.cs.ucr.edu/js/codeselect.js"></script>
+
+
+  </body>
+</html>
+

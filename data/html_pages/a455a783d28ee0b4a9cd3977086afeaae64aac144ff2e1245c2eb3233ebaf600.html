@@ -1,0 +1,184 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0;" />
+<title>Stanford University Explore Courses</title>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" href="https://explorecourses.stanford.edu/css/mobile.css.optimized.62ddea119061bed1.css" type="text/css"  />
+</head>
+<body id="mainpage" onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+
+  
+<!--  HEADER  -->
+<div id="header">
+  <div id="logo"><a href="http://www.stanford.edu" title="Stanford University"><img src="https://explorecourses.stanford.edu/png/mobile_logo.1b1c53b972d39994.png" alt="Stanford University"  /></a></div>
+  <div id="site"><a href="http://explorecourses.stanford.edu/CourseSearch/m" title="Explore Courses">Explore Courses</a></div>
+  <div class="clear"></div>
+</div>
+
+	
+	
+
+	<div id="dock" style="margin-top: 1px; margin-bottom: 10px;">
+		<div style="float: left; width: 25%;">
+		    <div class="button" onclick="window.location='/m_search?null&filter-term-Autumn=on';" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Autumn</div>
+		</div>
+		<div style="float: left; width: 25%;">
+		    <div class="button" onclick="window.location='/m_search?null&filter-term-Winter=on';" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Winter</div>
+		</div>
+		<div style="float: left; width: 25%;">
+		    <div class="button" onclick="window.location='/m_search?null&filter-term-Spring=on';" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Spring</div>
+		</div>
+		<div style="float: left; width: 25%;">
+		    <div class="button" onclick="window.location='/m_search?null&filter-term-Summer=on';" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">Summer</div>
+		</div>
+	</div>
+	
+	
+	
+
+  <!--  MAIN PAGE CONTAINER  -->
+  <div id="container">	
+	  
+	<!--  SEARCH / NAV BAR -->
+	
+
+<div id="searchbox">
+	<form id="coursesearch" method="get" action="m_search">
+	  <div>
+	  	
+		<input type="hidden" name="filter-coursestatus-Active" value="on" />
+		
+	    <input type="hidden" name="page" value="0" />
+	    <input type="hidden" name="catalog" value="" />
+	    <input class="inputBox" onfocus="searchFocus()" onblur="searchBlur()" type="text" title="search" value=""  name="q" id="search_courses_input" alt="Search Courses" />
+	    <input id="submit" type="submit" value="go" />
+	  </div>
+	</form>
+</div>
+<script type="text/javascript">
+input = document.getElementById('search_courses_input');
+var defaultText = 'course name, instructor, title, or keyword...';
+
+searchFocus = function()
+{
+	if (input.value == defaultText)
+	{
+		input.value = '';
+	}
+};
+
+searchBlur = function()
+{
+	if (input.value == '')
+	{
+		input.value = defaultText;
+	}
+};
+
+searchBlur();
+</script>
+	  
+	<!--  RESULTS HEADER -->
+	<div id="resultsHeader">
+		<h1 class="resultsSummary">
+			1 - 0 of 0 results for:
+			<span class="searchTerm"></span>
+		</h1>
+	</div>
+	
+	<div class="pagination" id="paginationTop">
+	
+	
+ 	
+
+	</div>
+	
+	<div id="mainContent">
+	
+		<!--  RESULTS LIST -->
+    	<div id="searchResults">			
+    	
+		</div>
+		
+	</div>
+	
+	<div class="pagination" id="paginationBottom">
+	
+	
+ 	
+
+	</div>
+	  
+  </div>
+  
+  <!--  FOOTER  -->    
+
+<div id="footerStripe">  	  	
+  	&copy; Stanford University |
+  	<a href="http://stanford.edu/site/terms.html">Terms of Use</a> |
+  	<a href="http://stanford.edu/site/copyright.html">Copyright Complaints</a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3165447-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+	<script type="text/javascript">
+		hideSchedule = function(id)
+		{
+			document.getElementById('schedule_' + id).style.display = "none";
+			var link = document.getElementById('scheduleLink_' + id);
+			link.onclick = function() { return showSchedule(id); };
+	
+			return false;
+		};
+	
+		showSchedule = function(id)
+		{
+			document.getElementById('schedule_' + id).style.display = "block";
+	
+			var link = document.getElementById('scheduleLink_' + id);
+			link.onclick = function() { return hideSchedule(id); };
+	
+			return false;
+		};
+	
+		hideFull = function(id)
+		{
+			document.getElementById('shortDescription_' + id).style.display = 'block';
+			document.getElementById('fullDescription_' + id).style.display = 'none';
+		};
+	
+		showFull = function(id)
+		{
+			document.getElementById('shortDescription_' + id).style.display = 'none';
+			document.getElementById('fullDescription_' + id).style.display = 'block';
+		};
+
+		hideFullInstr = function(id)
+		{
+			document.getElementById('shortInstructors_' + id).style.display = 'block';
+			document.getElementById('fullInstructors_' + id).style.display = 'none';
+		};
+	
+		showFullInstr = function(id)
+		{
+			document.getElementById('shortInstructors_' + id).style.display = 'none';
+			document.getElementById('fullInstructors_' + id).style.display = 'block';
+		};
+	</script>
+  
+</body>
+</html>

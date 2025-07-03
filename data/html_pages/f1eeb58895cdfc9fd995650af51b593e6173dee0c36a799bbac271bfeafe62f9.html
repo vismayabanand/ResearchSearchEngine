@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>Software Architecture</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script type="text/javascript">
+    jQuery.loadScript = function (url, callback) {
+    jQuery.ajax({
+        url: url,
+        dataType: 'script',
+        success: callback,
+        async: true
+    });
+    }
+    
+    var ua = window.navigator.userAgent;
+
+    if (ua.indexOf("MSIE ") != -1 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  {
+      $.loadScript('sortBy-ie.js', loadContent);
+    }
+    else {
+
+      $.loadScript('sortBy.js', loadContent);
+    }
+
+    function loadContent() {
+      getMenu('research');
+    }
+    </script>
+
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="dynamic.js"></script>
+	<script language="JavaScript" type="text/javascript" src="pubs.js"></script>
+	<script type="text/javascript" src="https://acme.able.cs.cmu.edu/pubs/publications.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="pubstyle-projects.css" type="text/css" media="screen" />
+
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.cs.cmu.edu/~able/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://www.cs.cmu.edu/~able/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.cs.cmu.edu/~able/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://www.cs.cmu.edu/~able/favicons/manifest.json">
+    <link rel="shortcut icon" href="https://www.cs.cmu.edu/~able/favicons/favicon.ico">
+    <meta name="msapplication-config" content="https://www.cs.cmu.edu/~able/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<script type="text/javascript">
+function showAcmePubs (url) {
+  makePubsRequest(url, "archPubSection")
+}
+
+function showAcmeLandmarkPubs (url) {
+  makePubsRequest(url, "archLandmarkPubSection")
+}
+
+function showEUAPubs (url) {
+  makePubsRequest (url, "euaPubSection");
+}
+
+makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Acme,Architectural%20Style,Implicit%20Invocation,Software%20Architecture&op=o&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showAcmePubs", "archPubSection");
+makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=Software%20Architecture,Landmark&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showAcmeLandmarkPubs", "archLandmarkPubSection");
+makePubsRequest("https://acme.able.cs.cmu.edu/pubs/show-new.php?keyword=End-user%20Architecture&op=a&mode=ajax&type=html&httpPrefix=https://acme.able.cs.cmu.edu/pubs/&script=showEUAPubs", "euaPubSection");
+
+</script>
+<div id="art-page-background-simple-gradient">
+    </div>
+    <div id="art-page-background-glare">
+        <div id="art-page-background-glare-image"></div>
+    </div>
+    <div id="art-main">
+        <div class="art-Sheet">
+            <div class="art-Sheet-tl"></div>
+            <div class="art-Sheet-tr"></div>
+            <div class="art-Sheet-bl"></div>
+            <div class="art-Sheet-br"></div>
+            <div class="art-Sheet-tc"></div>
+            <div class="art-Sheet-bc"></div>
+            <div class="art-Sheet-cl"></div>
+            <div class="art-Sheet-cr"></div>
+            <div class="art-Sheet-cc"></div>
+            <div class="art-Sheet-body">
+                <div class="art-nav" id="nav-menu">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="art-menu">
+                		<li>
+                			<a href="index.html"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+                		</li>
+                		<li>
+                			<a href="#"  class=" active"><span class="l"></span><span class="r"></span><span class="t">Research</span></a>
+                			<ul>
+                				<li><a href="architecture.html">Software Architecture</a>
+                					<ul>
+                						<li><a href="https://acme.able.cs.cmu.edu">AcmeStudio</a></li>
+                					</ul>
+                				</li>
+                				<li><a href="self-adaptation.html">Self-Adaptive Systems</a></li>
+                				<li><a href="cyberphysical.html">Cyberphysical and IoT</a></li>
+                			</ul>
+                		</li>
+						<li>
+							<a href="publications.html"><span class="l"></span><span class="r"></span><span class="t">Publications</span></a>
+						</li>
+                                                <li>
+                                                        <a href="talks.html"><span class="l"></span><span class="r"></span><span class="t">Talks</span></a>
+                                                <li>
+
+						<li>
+						    <a href="members.html"><span class="l"></span><span class="r"></span><span class="t">Members</span></a>
+							<ul>
+								<li><a href="members.html#faculty">Faculty</a></li>
+								<li><a href="members.html#students">Students</a></li>
+								<li><a href="members.html#visitors">Visitors</a></li>
+								<li><a href="members.html#past">Past</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="https://acme.able.cs.cmu.edu/able-internal"><span class="l"></span><span class="r"></span><span class="t">Internal</span></a>
+						</li>
+                	</ul>
+                </div>
+                <div class="art-Header">
+                    <div class="art-Header-jpeg"></div>
+                    <div class="art-Logo">
+                        <h1 id="name-text" class="art-Logo-name"><a href="#">ABLE Research Group</a></h1>
+                        <div id="slogan-text" class="art-Logo-text">Changing Architecture</div>
+                    </div>
+                </div>
+                <div class="art-contentLayout">
+                    <div class="art-content-wide">
+                        <div class="art-Post">
+                            <div class="art-Post-body">
+                        <div class="art-Post-inner">
+                                        <h2 class="art-PostHeader">
+                                            Software Architecture
+                                        </h2>
+                                        <div class="art-PostContent">
+										    Successful design of complex software systems requires the ability to describe, create, and evaluate systems at an architectural level of abstraction. Software architecture allows designers to reason about quality attributes and their tradeoffs, to navigate the design space, and develop correct designs. 
+											The ABLE group has conducted research in software architecture languages and analysis since the mid 1990s. This research 
+											comprises foundational work on software architecture languages, tools, and analyses to support architectural design, and 
+											the use of architecture in modern and and upcoming systems. Projects related to fundamental software architecture research cover
+											the following topics:
+                                            
+											<ul>
+											  <li><b><a href="#acme">Architecture Description:</a></b> Creating languages, tools, and analysis for software architecture design.</li>
+											  <li><b><a href="#eua">End-user Architecture:</a></b> Using architectural concepts and tools to help end-users develop
+											  compositions of components.</li>
+											  <li><b><a href="#evolution">Architecture Evolution:</a></b> Developing tools and techniques to assist architects in planning architecture evolution, approaches that take advantage of common evolution patterns to help architects reason about architecture evolution.</li>
+											</ul>
+<section class="res_proj">
+											<h3><a name="acme"></a>Architeture Description</h3>
+<div class="contents">
+<h4>Project Description</h4>
+
+Acme is a simple, generic software architecture description language
+(ADL) that can be used as a common interchange format for architecture
+design tools and/or as a foundation for developing new architectural
+design and analysis tools. 
+
+The Acme language and toolkit provide three fundamental capabilities:
+<ul>
+
+<li><b>Architecture Description.</b> Acme provides a
+straightforward set of language constructs for describing
+architectural structure, architectural types and styles, and annotated
+properties of the architectural elements.</li>
+
+<li><b>Extensible foundation for new architecture design and analysis
+tools.</b> Many, if not most, architectural design and analysis tools
+require a representation for describing, storing, and manipulating
+architectural designs. Acme can
+reduce the cost and difficulty of building architectural tools by
+providing a language and toolkit to use as a tool-building foundation. 
+Acme provides a solid, extensible foundation and infrastructure
+that allows tool builders to avoid needlessly rebuilding standard
+tooling infrastructure. Further, Acme's origin as a generic
+interchange language allows tools developed using Acme as their native
+architectural representation to be compatible with a broad variety of
+existing architecture description languages and toolsets with little
+or no additional developer effort.</li>
+
+<li><b>Architectural interchange.</b> By providing a generic
+interchange format for architectural designs, Acme allows
+architectural tool developers to integrate their tools with
+other complementary tools. Likewise, architects using Acme-compliant
+tools have a broad array of analysis and design tools available at
+their disposal than architects locked into a single ADL.</li>
+
+</ul>
+
+<p><font size="2"><b>Project Home Page:</b></font>Acme is available for researchers and developers at <a href="https://www.cs.cmu.edu/~acme">http://www.cs.cmu.edu/~acme</a>
+
+<h4>Research</h4>
+
+<p><i>Our Position:</i>Architectural style can be used to provide
+effective tailoring of architectural tools for domain-specific
+notations and analyses.
+
+<p><i>Sample Research Questions</i>
+<ul>
+  <li>How can styles be mixed to provide tailored support for specific
+domains and multiple analyses?</li>
+  <li>How can one be assured that combining styles will enable valid
+architectural instantiations?</li>
+  <li>How can tools be developed that provide effective, scalable, and
+extensible architectural design environments, that seamlessly fit into
+a company's software development lifecycle?</li>
+  <li>How can architectural analysis inform designers about privacy-
+  and security related design concerns?</li>
+  <li>How can architectural notations be used to specify and analyze
+ dynamic software architectures?</li>
+  <li>Waht is an effective taxonomy of architecture styles to support reuse and refinement?</li>
+  <li>How can we formalize architectural behavior to enable deeper semantic analysis of architecture designs?</b>
+</ul>
+
+<h4>Contacts</h4>
+<p>David Garlan, Bradley Schmerl
+
+<h4>Landmark Papers</h4>
+<div id="archLandmarkPubSection" class="pub_section" style="height: 200px; overflow-y: auto;">
+If the papers do not load, go to <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Software%20Architecture,Landmark&op=a">here</a>.
+</div>
+
+<h4>Related Papers</h4>
+<div id="archPubSection" class="pub_section" style="height: 350px; overflow-y: auto;">If the papers do not load, go to <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=Acme,Architectural%20Style,Implicit%20Invocation,Software%20Architecture&op=o">here</a>.
+</div>
+</div>
+</section>                                                                                       
+<section class="res_proj">                                       
+ <h3><a name="eua"></a>End-User Architecture</h3>
+<div class="contents">
+ <h4>Project Description</h4>
+Within an increasing number of domains an important emerging need is the ability for technically naïve users to compose computational elements into novel configurations. Examples include astronomers who create new analysis pipelines to process telescopic data, intelligence analysts who must process diverse sources of unstructured text to discover socio-technical trends, and medical researchers who have to process brain image data in new ways to understand disease pathways. Creating such compositions today typically requires low-level technical expertise,limiting their use. 
+End-user Architecture exploits the similartiy between such compositional activities and those of software architects to help with end-user composition, analysis, and reasoning.
+
+<h4>Research</h4>
+<p><i>Our Position:</i> We can draw on the rich heritage of software architecture languages, methods, and tools to support end users in composing rich domain-specific computational systems.</p>
+
+<p><i>Sample questions:</i>
+<ul>
+<li>Can we use architectural styles to capture domain-specific computations?</li>
+<li>How can we leverage architectural support to generate end-user composition tools that are robust, correct, and capture domain concepts?</li>
+<li>What features of high-quality end-user composition environments can be provided in a generic, reusable way for different domains?</ul>
+<h4>Contacts</h4>
+David Garlan, Bradley Schmerl, Vishal Dwivedi
+
+<h4>Papers</h4>
+<div id="euaPubSection" class="pub_section" style="height: 200px; overflow-y: auto;">If the papers do not load, go to <a href="https://acme.able.cs.cmu.edu/pubs/show.php?keyword=End-user%20Architecture">here</a>.
+</div>
+</div>
+</section>
+                                        </div>
+                                        <div class="cleared"></div>
+                        </div>
+                        
+                        		<div class="cleared"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   </div>
+                <div class="cleared"></div><div class="art-Footer">
+                    <div class="art-Footer-inner">
+                        <div class="art-Footer-text">
+                            <p><a href="ma&#105;lto&#58;s%63&#104;me&#37;72%&#54;C+able&#64;cs&#46;c&#109;&#117;&#46;e&#100;u">Contact Us</a> | <a href="https://s3d.cmu.edu/">Software and Societal Systems Department</a> | <a href="https://www.cs.cmu.edu">School of Computer Science</a> | <a href="https://www.cmu.edu">Carnegie Mellon University</a><br />
+                                Copyright &copy; <span id="footeryear">2017</span> ---. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="art-Footer-background"></div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer"><a href="http://webjestic.net/templates/">CSS Template</a> by webJestic.NET</p>
+    </div>
+    <script language="javascript">
+      document.getElementById("footeryear").innerHTML = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>

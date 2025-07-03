@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>(CSC) CSAIL Student Committee</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w2-container">
+    <h2 class="w2-padding-64"><b>CSAIL Student Committee</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Events</a> 
+    <a href="#feedback" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Feedback</a> 
+    <a href="#amenities" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Amenities</a> 
+    <a href="#people" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">People</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>CSAIL Student Committee</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <img src="./imgs/csc-logo.png" style="width:50%" alt="Concrete meets bricks"><h1 class="w3-jumbo"><b>MIT CSAIL Student Committee (CSC)</b></h1>
+    <br>
+    <p style="font-size: 25pt;">The CSAIL Student Committee (CSC) is a student organization for the CSAIL graduate student body. CSC organizes a variety of social events and communicates the students' needs to the administration.</p>
+
+    <p style="font-size: 20pt;"><a href="https://accessibility.mit.edu/">Accessibility</a></p>
+
+    <div></div>
+
+    <h1 class="w3-xxxlarge w3-text-red" id="projects"><b>Events</b></h1>
+    <hr style="width:50px;border:5px solid #e6b524" class="w3-round">
+    <p style="font-size: 20pt;">We use our funding to run a variety of social activities. To obtain event updates, students may subscribe to the csail-social mailing list or find events through facebook and google calendar. Some of the events we organize are:</p>
+    <ul style="font-size: 15pt;">
+      <li><a href="https://goo.gl/forms/tOa7xuFfXVU3Gymo2">Semi Spontaneous Social Event (SSSE)</a>: Fill out the form to request reimbursement for an SSSE.</li>
+      <li><a href="http://projects.csail.mit.edu/olympics/2017/home.html">CSAIL Olympics</a>: A series of competitive events during IAP.</li>
+      <li><a href="https://projects.csail.mit.edu/gsb/archives.html">Girl Scout Benefit</a>: G9 on Fridays at 5:30pm</li>
+      <li>Muffin Monday: free muffins and other confections on Mondays at 5pm in G9.</li>
+      <li>CSAIL Karaoke: a night of karaoke with fellow CSAILors! food included</li>
+      <li>Pub Nights: cross-departmental social nights at the R&D pub semi-monthly on Fridays. 21+</li>
+      <li>Board Game Nights: board games and occasionally pizza on G9 every Friday</li>
+      <li>Movie Nights: group outings to watching movies - subsidized by the CSC with dinner</li>
+    </ul>
+
+    <h1 class="w3-xxxlarge w3-text-red" id="feedback"><b>Feedback</b></h1>
+    <hr style="width:50px;border:5px solid #e6b524" class="w3-round">
+    <p style="font-size: 15pt;">Event Feedback: Have something to say about and event we planned? Fill out the feedback form below and we'll do our best to address it. The feedback form is completely anonymous - providing any identifying information is optional.</p> 
+         <a href="http://goo.gl/forms/6F1V2ljwUI" target="_blank">
+                <button>Provide Event Feedback</button>
+            </a>
+
+    <p style="font-size: 15pt;">Event Idea: Have something to say about and event we planned? Fill out the feedback form below and we'll do our best to address it. The feedback form is completely anonymous - providing any identifying information is optional.</p> 
+            <a href="http://goo.gl/forms/xWcidFKuoo" target="_blank" >
+                <button>Submit an Event Idea</button>
+            </a>
+
+    <br><br><br>
+
+    <h1 class="w3-xxxlarge w3-text-red" id="amenities"><b>Amenities</b></h1>
+    <hr style="width:50px;border:5px solid #e6b524" class="w3-round">
+    <p style="font-size: 20pt;">On the 4th floor of Dreyfoos tower, near Star (D-463):</p>
+    <ul style="font-size: 15pt;">
+      <li>Pool Table</li>
+      <li>Pool/Foosball Locker: a locker that contains pool cues and foosball balls</li>
+      <li>Snack Locker: buy snacks from the snack locker for cheap</li>
+    </ul>
+
+    <p style="font-size: 20pt;">On the 5th floor catwalk, between Dreyfoos and Gates:</p>
+    <ul style="font-size: 15pt;">
+      <li>Ping Pong Table</li>
+      <li>DDR Mat: a hard DDR mat. bring your computer to play</li>
+      <li>Fun Locker: communal supplies! including pool balls, video game consoles, games, etc.</li>
+    </ul>   
+
+    <p style="font-size: 20pt;">On the Dreyfoos side of the 5th floor catwalk, near the stairwell:</p>
+    <ul style="font-size: 15pt;">
+      <li>'Coke Bunny' Vending Machine: buy snacks from the snack locker for cheap</li>
+    </ul> 
+  </div>
+  
+
+    <h1 class="w3-xxxlarge w3-text-red" id="people"><b>People</b></h1>
+    <hr style="width:50px;border:5px solid #e6b524" class="w3-round">
+
+<figure>
+    <img src="imgs/willie.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Willie Boag</b><br>President</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/matt.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Matt Bowers</b><br>Treasurer</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/nishad.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Nishad Gothoskar</b><br>Webmaster</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/vishwak.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Vishwak Srinivasan</b><br>Muffin Monday</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/ajay.jpg" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Ajay Brahmakshatriya</b><br>Board Games Czar</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/tej.jpeg" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Tej Chajed</b><br>Board Games Czar</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/quan.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Quan Nguyen</b><br>SIGTBD Chair</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/ola.png" width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Ola Zytek</b><br>Olympics Coordinator</p></figcaption>
+</figure>
+<figure>
+    <img src="imgs/." width="200" class="photo">
+    <figcaption><p style="font-size: 15pt; text-align: center"><b>Camille Biscarrat</b><br>Olympics Coordinator</p></figcaption>
+</figure>
+
+<!-- <img src="https://intimeand.space/images/profile.jpg" width="250" class="photo">
+<div class="caption"><h3>Ajay Brahmakshatriya | President</h3></div><br>
+
+<img src="https://digitalwatchdog.org/wp-content/uploads/2020/06/Willie-205x300.png" width="250" class="photo">
+<div class="caption"><h3>Willie Boag | Treasurer</h3></div><br>
+
+<img src="https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/58383233_2559743077388874_5062965443468197888_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQlTw2u8veoKDhzHdcgACY_iX7mb6BFE3Un0ai_Md8Crf1Nrr6rDsfKBjtdw0GBuVuM&_nc_ht=scontent.fzty2-1.fna&oh=ef8a99055da4e1b817b06b02d728b3d8&oe=5F128306" width="250" class="photo">
+<div class="caption"><h3>Ola Zytek | Olympics Coordinator </h3></div><br>
+
+<img src="https://scontent.fbed1-1.fna.fbcdn.net/v/t1.0-1/c210.0.540.540a/10385574_852039978191298_4412979942550270580_n.jpg?_nc_cat=105&_nc_sid=dbb9e7&_nc_oc=AQnAff0YIL_6KRjO8orBzOLE75lebn-AJtGkBgQ6wPlYR-G8wWXJYLNGwSrkZ2hUlFo&_nc_ht=scontent.fbed1-1.fna&oh=6c458be903f9e8af43e97c2f5acf321e&oe=5F128232" width="250" class="photo">
+<div class="caption"><h3>Camille Biscarrat | Olympics Coordinator </h3></div><br>
+
+<img src="https://scontent.fbed1-2.fna.fbcdn.net/v/t1.0-9/1510808_10153268844008098_7115601519611196343_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQnNEEUzHM88VcA_ifj2e1QutY-76Ncm4k1jvN5IpfRFVgXxaXjS8sP1iV276Eil6qA&_nc_ht=scontent.fbed1-2.fna&oh=5d37da85588955f7a38fd7a55b6e417b&oe=5F135114" width="250" class="photo">
+<div class="caption"><h3>Quan Nguyen | SIGTBD Chair </h3></div><br>
+
+<img src="https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/p960x960/50234277_10161502170775387_4537403047214579712_o.jpg?_nc_cat=108&_nc_sid=85a577&_nc_oc=AQn9XJjcb-PKXxZPnjQP2FPaX4W-UZ983t7LJChm19JLSX5rZ5TtxJJBNGSC9ME2ffI&_nc_ht=scontent.fzty2-1.fna&_nc_tp=6&oh=033fd2315bba4f3ac9ad96552d7d7f72&oe=5F104516" width="250" class="photo">
+<div class="caption"><h3>Jon Gjenset | Board Games Czar</h3></div><br>
+
+<img src="https://scontent.fbed1-1.fna.fbcdn.net/v/t1.0-9/13775913_482024361996937_1536762697862467184_n.jpg?_nc_cat=100&_nc_sid=7aed08&_nc_oc=AQnxTNvWt8B2aO29ivhALexhooQUaHauc1AiF6P9dY81TzqQ3gq6JEWiGkjwSIsO-Yo&_nc_ht=scontent.fbed1-1.fna&oh=8783dab5ad76a2cb7c05dfb84e3cbdbf&oe=5F128EA9" width="250" class="photo">
+<div class="caption"><h3>Manish Singh | Web Incharge</h3></div><br>
+ -->
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

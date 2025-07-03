@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="https://www.cs.ucr.edu/~yihans/images/sun.png" type="image/x-icon"/>
+  <meta name="viewport" content="initial-scale=1.0"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Home | Yihan Sun</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Home" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Yihan Sun" />
+<meta property="og:description" content="Yihan Sun" />
+<link rel="canonical" href="https://www.cs.ucr.edu/~yihans/" />
+<meta property="og:url" content="https://www.cs.ucr.edu/~yihans/" />
+<meta property="og:site_name" content="Home" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@type":"WebSite","description":"Yihan Sun","url":"https://www.cs.ucr.edu/~yihans/","headline":"Home","name":"Home","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<!--<link rel="stylesheet" href="/~yihans/assets/main.css">-->
+  <link rel="stylesheet" href="/~yihans/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://www.cs.ucr.edu/~yihans/feed.xml" title="Home" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+                <ul>
+                <li class="image-slider">
+                <!--<img src= "//~yihans/images/mao.jpg" alt="">-->
+				<img src= "/~yihans/images/mao.jpg" alt="" width="80%">
+                </li>
+                <!--<div class="logo">Yihan Sun</div>-->
+				
+                <li>
+				<div class="myname"> Yihan Sun </div>
+				<div class="contact">
+                <b>University of California, Riverside</b>
+				<br><br>
+                <p>yihans [at] cs.ucr.edu / syhlalala [at] gmail.com </p>
+                <p>Office: WCH 308</p>
+				<div>
+                </li>
+				</ul><!--<a class="site-title" rel="author" href="/~yihans/">Home</a>-->
+	<a class="site-title" rel="author" href="/~yihans/">Home</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+		
+        <div class="trigger">
+			<a class="page-link" href="/~yihans/cv.pdf">CV</a>
+            <!--<a class="page-link" href="/~yihans/publications/index.html">Publications</a>-->
+			<a class="page-link" href="/~yihans/publications/">Publications</a>
+            <!--<a class="page-link" href="/~yihans/service/index.html">Services</a>-->
+			<a class="page-link" href="/~yihans/service/">Services</a>
+            <!--<a class="page-link" href="/~yihans/courseteaching/index.html">Teaching</a>-->
+			<a class="page-link" href="/~yihans/courseteaching/">Teaching</a></div>
+      </nav></div>
+</header>
+
+<style>
+.backbox{
+    position:fixed;
+    right:10px;
+    bottom: 10px;
+    height:50px;
+    width: 70px;    
+    text-align:center;
+    padding-top:30px;    
+    background-color: lightblue;
+    border-radius: 20%;
+    overflow: hidden;
+}
+.backbox:hover:before{
+    top:50%
+}
+.backbox:hover .box-in{
+    visibility: hidden;
+}
+.backbox:before{
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content:'BACK TO TOP';
+    width: 40px;
+    color:#fff;
+    font-weight:bold;
+	font-size: 0.7em;
+}    
+.box-in{
+    visibility: visible;
+    display:inline-block;
+    height:20px;
+    width: 20px;
+    border: 3px solid black;
+    border-color: white transparent transparent white;
+    transform:rotate(45deg);
+	font-size: $base-font-size *0.9;
+}
+</style>
+
+<div id="backbox" class="backbox">
+    <div class="box-in"></div>
+</div>    
+
+<script>
+var timer  = null;
+backbox.onclick = function(){
+    cancelAnimationFrame(timer);
+    //get the current time
+    var startTime = +new Date();     
+    //get the current height
+    var b = document.body.scrollTop || document.documentElement.scrollTop;
+    var d = 500;
+    var c = b;
+    timer = requestAnimationFrame(function func(){
+        var t = d - Math.max(0,startTime - (+new Date()) + d);
+        document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+        timer = requestAnimationFrame(func);
+        if(t == d){
+          cancelAnimationFrame(timer);
+        }
+    });
+}
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><p>Hello! I am an Assistant Professor in the Computer Science and Engineering (CSE) Department at the University of California, Riverside (UCR). I received my Ph.D. degree from Carnegie Mellon University advised by Professor <a href="http://www.cs.cmu.edu/~./blelloch/">Guy Blelloch</a>. Prior to that, I received my Bachelor’s degree in Computer Science from Tsinghua University.</p>
+
+<p>My research interests include broad topics in the <strong>theory and practice of parallel computing</strong>, including algorithms, data structures, frameworks, implementations, programming tools and their applications. My work involves both designing algorithms with improved asymptotic bounds and developing efficient solutions to large-scale real-world problems. Much of my work aims at bridging the gap between theory and practice of parallel computing. I am a recipient of the NSF CAREER Award in 2023, and the Google Research Scholar Award in 2024. My work has won the Best Paper Awards at PPoPP’23 and ESA’23, and the Outstanding Paper Awards of SPAA’24 and SPAA’20.</p>
+
+<p>You can find my CV <a href="https://www.cs.ucr.edu/~yihans/cv.pdf">here</a>.</p>
+
+<!--You can find more information about our research group [here](https://pal.cs.ucr.edu/). -->
+
+<p>I’m currently teaching <a href="https://www.cs.ucr.edu/~yihans/teaching/142/S25/index.html">CS142</a> in Spring 2025.</p>
+
+<p>This is the <a href="https://www.cs.ucr.edu/~ygu/">homepage</a> of my lovely husband.</p>
+
+<h4 id="our-research-group"><a href="https://pal.cs.ucr.edu/"><strong>Our Research Group</strong></a></h4>
+
+<p><strong>Yan Gu and I are leading the <a href="https://pal.cs.ucr.edu/">Parallel Algorithms Lab at UCR (UCRPAL)</a></strong>. We are also part of the <a href="http://algorithms.cs.ucr.edu/index.html">Algorithms and Computational Biology Lab</a> (the theory group) at UCR.</p>
+
+<p><strong class="redtext">If you are interested in a Ph.D. position in our group, or working on a Master’s Project with me, you can find more information <a href="recruiting/">here</a> and <a href="https://pal.cs.ucr.edu/students.html">here</a>.</strong></p>
+
+<h4 id="ucrpc"><a href="https://ucrpc.cs.ucr.edu/"><strong>UCRPC</strong></a></h4>
+
+<p><strong>Our group also runs the annual event <a href="https://ucrpc.cs.ucr.edu/">UCR Programming Challenge (UCRPC)</a>.</strong> Usually UCRPC happens at the beginning of the Fall quarter. We welcome everyone inside and outside UCR to join!</p>
+
+<!--### **Currently Teaching:**{:.themetext}  
+
+Spring 2023: [CS218](https://www.cs.ucr.edu/~yihans/teaching/218/S23/index.html){:.button}
+-->
+
+<h3 id="publication-list"><strong class="themetext">Publication List:</strong></h3>
+
+<p><a href="https://scholar.google.com/citations?user=E5aLeuYAAAAJ&amp;hl=en" class="button">Google Scholar</a>  
+<a href="https://dblp.org/pers/hd/s/Sun_0001:Yihan" class="button">DBLP</a>  
+<a href="publications/index.html" class="button">By Year</a></p>
+
+<h3 id="phd-thesis"><strong class="themetext">Ph.D. Thesis:</strong></h3>
+
+<p>Join-based Parallel Balanced Binary Trees. <a href="papers/thesis.pdf">[Thesis]</a></p>
+
+<p><br /></p>
+
+<h2 id="selected-research-topics"><strong class="themetext">Selected Research Topics:</strong></h2>
+
+<p>A full list of my publications can be found <a href="publications/index.html">here</a>.</p>
+
+<h3 id="parallel-tree-structures--related-papers"><strong class="themetext">Parallel Tree Structures</strong>    <a href="publication/ptree/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<p>I have been working on parallel and concurrent tree structures, both in theory and in practice. In particular, I developed the <strong>join-based algorithms on trees</strong>, which base all other tree algorithms on a single function join. Other than join, all tree algorithms are generic across multiple balancing schemes. The tree structure is highly-parallelized, work-efficient, safe for concurrency, persistent (and functional), and also supports a full interface for commonly-used functions. This tree data structure is later referred to as <strong>P-trees</strong> (Parallel trees).</p>
+
+<p>The tree structure is implemented in a library called <strong>PAM</strong>, which is applied to and tested in vairious applications. See my <a href="publications/index.html">publication list</a> with tags <strong class="papernoteinline">#join-based tree algorithms</strong>, <strong class="papernoteinline">#the PAM libaray</strong>, and <strong class="papernoteinline">#P-trees</strong>, or see all related publications <a href="publication/ptree/index.html">here</a>.</p>
+
+<p><a href="https://github.com/cmuparlay/PAM" class="button">Download PAM</a>
+<a href="https://www.cs.ucr.edu/~yihans/PAMweb/SPAA-tutorial-tree.mp4" class="button">Tutorial Video</a>
+<a href="https://www.cs.ucr.edu/~yihans/PAMweb/spaa-tutorial.pdfs" class="button">Tutorial Slides</a></p>
+
+<p>Related Wikipedia Pages:</p>
+
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Augmented_map">Augmented map</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/PAM_library">PAM library</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Join-based_tree_algorithms">Join-based algorithms</a> (Also, join-based algorithms for <a href="https://en.wikipedia.org/wiki/AVL_tree#Set_operations_and_bulk_operations">AVL trees</a>, <a href="https://en.wikipedia.org/wiki/Red%E2%80%93black_tree#Set_operations_and_bulk_operations">red-black trees</a>, <a href="https://en.wikipedia.org/wiki/Weight-balanced_tree#Set_operations_and_bulk_operations">weight-balanced trees</a>, <a href="https://en.wikipedia.org/wiki/Treap#Bulk_operations">treaps</a>)</li>
+</ul>
+
+<p>The join-based algorithms are also used in Hackage (the Haskell central package archive) <a href="http://hackage.haskell.org/package/containers-0.5.11.0/docs/Data-Set.html">Data.Set</a> and <a href="https://hackage.haskell.org/package/containers-0.6.0.1/docs/Data-Map.html">Data.Map</a>, and <a href="https://dl.acm.org/doi/10.1145/3314221.3314598">C-trees</a> (a compressed purely-functional search tree structure) in Aspen (a graph-streaming framework).</p>
+
+<h3 id="parallelizing-sequential-iterative-algorithms---related-papers"><strong class="themetext">Parallelizing Sequential Iterative Algorithms</strong>     <a href="publication/incremental/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<p>I’m also interested in designing parallel algorithms from sequential iterative algorithms. The goal is to identify the “true dependences” among iterations/objects in the algorithm, and find efficient algorithm to parallelize them. This include algorithms under the randomized incremental construction (RIC) framework, dynamic programming algorithms, greedy algorithms, graph algorithms, etc. We show that many of these algorithms are highly parallel, with shallow dependence depth. See my <a href="publications/index.html">publication list</a> with tag <strong class="papernoteinline">#paralleling sequential iterative algorithms</strong>, or see all related publications <a href="publication/incremental/index.html">here</a>.</p>
+
+<h3 id="sequential-and-parallel-graph-algorithms--related-papers"><strong class="themetext">Sequential and Parallel Graph Algorithms</strong>  <a href="/publication/graphs/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<p>I have been working on many graph algorithms in both sequential and parallel setting. These include single-source shortest path (SSSP), graph metric embedding, strongly-connected component (SCC), biconnected components, and applications in data mining and compuational biology. See my <a href="publications/index.html">publication list</a> with tag <strong class="papernoteinline">#graph algorithms</strong>, or see all related publications <a href="publication/graphs/index.html">here</a>.</p>
+
+<h3 id="parallel-algorithms-on-computational-geometry---related-papers"><strong class="themetext">Parallel Algorithms on Computational Geometry</strong>     <a href="publication/geometry/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<p>I have been working on algorithms on computational geometry, most of them in parallel. Some of them are also write-efficient. The topics include range, segment, interval, rectangle queries in low dimensions, Delaunay triangulations, closest pair, smallest enclosing disk, convex hull, nearest neighbor search, etc. Many of them are based on efficient parallel tree structures, and the others use a parallel randomized incremental construction framework proposed by us. See my <a href="publications/index.html">publication list</a> with tag <strong class="papernoteinline">#geometry algorithms</strong>, or see all related publications <a href="publication/geometry/index.html">here</a>.</p>
+
+<h3 id="write-efficient-algorithms---related-papers"><strong class="themetext">Write-efficient Algorithms</strong>     <a href="publication/writeefficient/index.html" class="relatedpapers">[Related Papers]</a></h3>
+
+<p>I have been working on write-efficient algorithms, which means to optimize the overall (asymptotical) cost considering more expensive writes to the memory than reads. The research is motivated by the new <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-optane-technology.html">Non-Volatile Memory (NVM) technology</a>. See my <a href="publications/index.html">publication list</a> with tag <strong class="papernoteinline">#write-effienct algorithms</strong>, or see all related publications <a href="publication/writeefficient/index.html">here</a>.</p>
+
+<h3 id="other-topics"><strong class="themetext">Other Topics</strong></h3>
+
+<p>I have also been working on other interested research topics, including parallel sorting and semisorting, data mining on social networks, and computational biology.</p>
+
+
+  <!--<h2 class="post-list-heading">News</h2>
+    <ul class="post-list"><li><span class="post-meta">Jul 15, 2021</span>
+        <h3>
+          <a class="post-link" href="/~yihans/jekyll/update/2021/07/15/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li><li><span class="post-meta">Jul 15, 2021</span>
+        <h3>
+          <a class="post-link" href="/~yihans/jekyll/update/2021/07/15/test.html">
+            New Title!
+          </a>
+        </h3></li></ul>
+	--></div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/~yihans/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"> Yihan Sun </h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            <!--Home-->
+			University of California, Riverside
+            </li><li><a class="u-email" href="mailto:yihans [at] cs.ucr.edu">yihans [at] cs.ucr.edu</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <!--<ul class="social-media-list"><li><a href="https://github.com/syhlalala"><svg class="svg-icon"><use xlink:href="/~yihans/assets/minima-social-icons.svg#github"></use></svg> <span class="username">syhlalala</span></a></li></ul>
+-->
+		<p>Last updated: March 27, 2025</p>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <!--<p>Yihan Sun</p>-->
+		<a href="">BACK TO TOP</a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

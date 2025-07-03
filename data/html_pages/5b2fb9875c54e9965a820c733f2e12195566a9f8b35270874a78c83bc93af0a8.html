@@ -1,0 +1,1216 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Parallel Data Laboratory</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,
+				   viewport-fit=cover">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+        <!-- Favicone Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/Icons/favicon.ico">
+    <link rel="icon" type="image/png" href="/images/Icons/favicon.png">
+    <link rel="apple-touch-icon" href="/images/Icons/favicon.png">
+
+    <!-- custom CSS -->
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/bootstrap-custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery -->
+    <script src="/static/dist/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <!-- jquery-ui -->    
+    <link rel=stylesheet href="/static/dist/jquery-ui-1.13.0.complete/jquery-ui.css">
+    <script src="/static/dist/jquery-ui-1.13.0.complete/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="/static/dist/FitVids.js-master/jquery.fitvids.js" type="text/javascript"></script>
+
+    <!-- consider upgrading to 2.x - does not require jquery -->
+    <script src="/static/dist/viewport-checker-1.8.8/dist/jquery.viewportchecker.min.js" type="text/javascript"></script>
+    
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="/static/dist/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/dist/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">    
+    <script src="/static/dist/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+    <link rel=stylesheet href="/static/dist/wow.js-1.3.0-dist/css/libs/animate.css">
+    <script src="/static/dist/wow.js-1.3.0-dist/dist/wow.min.js"></script>
+
+    <!-- custom javascript -->
+    <script src="/static/init.js" type="text/javascript"></script>
+    <script src="/static/navmenu.js" type="text/javascript"></script>  
+
+    
+  </head>
+  <body>
+  
+    <!-- TOP MENU /static/ionicons/navmenu.js -->
+     <!-- navmenu -->
+<header id="header" class="header header-transparent header--sticky">
+  <div class="full-cap-wraper overlay-dark light-color">
+    <nav id="navigation" class="navbar header-nav navbar-expand-lg -center">
+
+      <!-- logo -->
+      <div class="logo nav-icons">
+       <a name="CMU" href="https://www.cmu.edu">
+	  <img class="logo-dark" src="/images/CM_logo_horiz_black.png" alt="CMU" />
+	  <img class="logo-light" src="/images/CM_logo_horiz_white.png" alt="CMU" />
+       </a>
+      </div>
+
+      <!-- space between logo and navicons mobile/small screen -->
+      <div class="nav-iconicons d-lg-none mr-auto">
+	&nbsp;
+      </div>
+
+      <!-- mobile/small screen navbar icons-->
+      <div class="nav-icons">
+	<!-- mobile home icon (trailer! hahaha) -->
+        <div class="nav-icon-item d-lg-none">
+          <span class="align-middle">
+	    <a class=white href="/index.shtml"><em class="fa fa-home"></em></a>
+	  </span>	  	    
+	</div>
+	
+	<!-- mobile search icon -->
+        <div class="nav-icon-item d-lg-none">
+          <span class="nav-icon-trigger search-menu_btn align-middle">
+			 <i class="ion ion-ios-search"></i>
+			</span>
+          <div class="search-menu-bar">
+            <form method=get action="/search.shtml">
+	      <script async src="https://cse.google.com/cse.js?cx=007634840976329386857:yb-tqqhstxg"></script>
+              <input class="seach-input input--sm form-full" id="seach_input" name="q" placeholder="Search" type="Search" />
+            </form>
+          </div>
+        </div>
+		  
+	<!-- mobile hamburger icon -->
+        <div class="nav-icon-item d-lg-none">
+          <span class="nav-icon-trigger menu-mobile-btn align-middle"><i class="ion"></i></span>
+        </div>
+      </div>
+
+      <!-- begin menu-all -->
+      <div class="nav-menu ml-0">
+	<ul>
+          <li class="nav-menu-item d-sm-none d-lg-inline-block">
+	    <a href="/index.shtml"><em class="fa fa-lg fa-home"></em></a>
+	  </li>
+	 <li class="nav-menu-item">
+            <a class="nav-icon-trigger search-menu_btn d-sm-none d-lg-inline-block"><i class="ion ion-search"></i></a>
+            <div class="search-menu-bar">
+	      <form method=get action="/search.shtml">
+		<script async src="https://cse.google.com/cse.js?cx=007634840976329386857:yb-tqqhstxg"></script>
+                <input class="seach-input input--sm form-full" id="seach_input" name="q" placeholder="Search" type="Search" />
+	      </form>
+            </div>	      
+	  </li>	  
+	  <li class="nav-menu-item">
+	    <a href="/about.shtml">Projects</a>
+	    <div class="nav-dropdown">
+	      <ul>
+		<li><a href="/BigLearning/index.shtml">Big Learning Systems</a></li>
+		<li><a href="/CacheEviction/index.shtml">Cache Eviction Tactics</a></li>
+		<li><a href="../CARP/index.shtml">CARP</a></li>
+		<li><a href="/CILES/index.shtml">CILES<br>
+		  &nbsp;&nbsp;(Caching Systems)</a></li>
+		<li><a href="/CostEfficientComputing/index.shtml">Cost-efficient<br>
+		  &nbsp;&nbsp;Computing on Cloud</a></li>
+		<li><a href="/DatabaseSystems/index.shtml">Database Systems</a></li>
+		<li><a href="/DCO/index.shtml">Data Center<br>
+		  &nbsp;&nbsp;Observatory (DCO)</a></li>
+		<li><a href="/DataLake/index.shtml">Data Lake Scheduling</a></li>
+		<li><a href="/DatabaseSystems/DBMS-Autotuning/index.shtml">DBMS-Autotuning</a></li>
+		<li><a href="/DeltaFS/index.shtml">DeltaFS</a></li>
+		<li><a href="/HeART/index.shtml">HeART<br>
+		  &nbsp;&nbsp;(Storage Reliability)</a></li>
+		<li><a href="/kvCacheMgmt/index.shtml">Key-value Cache Mgmt</a></li>
+		<li><a href="/Mimir/index.shtml">Mimir: Navigating <br>
+		  &nbsp;&nbsp;Cloud Storage</a></li>
+		<li><a href="/MLCodedComputation/index.shtml">ML Coded Computation</a></li>
+		<li><a href="/NoisePage/index.shtml">NoisePage <br>
+		  &nbsp;&nbsp;(Auto-Driving DBMS)</a></li>
+		<li><a href="/NVMRedundancy/index.shtml">NVM Redundancy</a></li>
+		<li><a href="/ZonedStorage/index.shtml">Zoned Storage</a></li>
+		<li><a href="/past-projects.shtml">Past Projects</a></li>
+	      </ul>
+	    </div>
+	  </li>
+	  <li class="nav-menu-item">
+	    <a href="/News/index.shtml">News/Jobs</a>
+	    <div class="nav-dropdown">
+	      <ul>
+		<li><a href="/News/index.shtml">PDL News</a></li>
+		<li><a class="drop" href="/Publications/packet.shtml">PDL Packet</a>
+		  <ul>
+		    <li><a href="/ftp/News/newsletter24.pdf">Fall 2024</a></li>
+              <li><a href="/ftp/News/newsletter23.pdf">Fall 2023</a></li>
+			  <li><a href="/ftp/News/newsletter22.pdf">Summer 2022</a></li>
+             
+		  </ul>
+		</li>
+		<li><a href="/Jobs/industry_jobs.shtml">Industry Employment <br>
+		  &nbsp;&nbsp;Opportunities</a></li>
+                
+              </ul>
+            </div>
+          </li>
+	  
+	  <li class="nav-menu-item">
+            <a href="/Retreat/index.shtml">Events</a>
+            <div class="nav-dropdown">
+              <ul>
+            <li><a href="/Retreat/retreat24.shtml">Retreat 2024</a></li>
+            <li><a href="/talk-series/index.shtml">Talk Series 2024</a></li>
+            <li><a href="/Retreat/retreat23.shtml">Retreat 2023</a></li>
+		    <li><a href="/talk-series/2023/index.shtml">Talk Series 2023</a></li>
+			<li><a href="/Retreat/retreat22.shtml">Retreat 2022</a></li>
+			<li><a href="/Retreat/svd22-1.shtml">Visit Day 2022</a></li>
+			<li><a href="/Retreat/svd20-1.shtml">Visit Day 2020</a><br>
+            </li>
+            <li><a href="/SDI/index.shtml">SDI Seminars</a></li>
+              </ul>
+            </div>
+          </li>
+	  <li class="nav-menu-item">
+            <a href="/Publications/index.shtml">Publications</a>
+            <div class="nav-dropdown">
+              <ul>
+        <li><a href="/Publications/index.shtml">Recent</a></li>
+		<li><a href="/Publications/pubs-date.shtml">By Date</a></li>
+		<li><a href="/Publications/pubs-project.shtml">By Project</a></li>
+		<li><a href="/Publications/pubs-tr.shtml">Tech Reports</a></li>
+		<li><a href="/Publications/pubs-pastprojects.shtml">Past Projects</a></li>
+		<li><a href="/Publications/copyright.shtml">Copyright Notices</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-menu-item">
+            <a href="/People/index.shtml">People</a>
+            <div class="nav-dropdown">
+              <ul>
+        <li><a href="/People/index.shtml#fac">Faculty</a></li>
+		<li><a href="/People/index.shtml#postdoc">Post Docs</a></li>
+		<li><a href="/People/index.shtml#staff">Staff</a></li>
+		<li><a href="/People/index.shtml#grad">Grad Students</a></li>
+		<li><a href="/People/index.shtml#under">Undergrads</a></li>
+		<li><a href="/People/alumni.shtml">Alumni</a></li>
+        <li><a href="/People/distinguished-alumni.shtml">Distinguished Alumni</a></li>
+              </ul>
+            </div>
+          </li>
+	  <li class="nav-menu-item">
+            <a href="/affiliates.shtml">Affiliates</a>
+            <div class="nav-dropdown">
+              <ul>
+		<li><a href="/Consortium/index.shtml">Member Login</a></li><br>
+		<li><a href="/affiliates.shtml#industry">PDL Consortium</a></li>
+		<li><a href="/affiliates.shtml#CMU">Affiliated Projects</a></li>
+		<li><a href="/affiliates.shtml#Gov">Federal Sponsors</a></li>
+              </ul>
+            </div>
+          </li>
+	  <li class="nav-menu-item">
+            <a href="/about.shtml">About</a>
+            <div class="nav-dropdown">
+              <ul>
+		<li><a href="/about.shtml">About</a></li>
+		<li><a href="/about.shtml#contact">Contact</a></li>
+		<li><a href="/visitor-info.shtml">Visitor Info</a></li>	<br>
+				  <li><a href="/Internal/index.shtml">Internal</a></li>
+              </ul>
+            </div>
+          </li>
+	</ul>
+      </div>
+      <!-- end menu-all -->
+    </nav>
+  </div>
+</header>
+<!-- end navmenu -->
+
+    <!-- END TOP MENU -->
+    
+
+ 
+
+        <!-- CONTENT --------------------------------------------------------------------------------->
+        <!-- Intro Section -->
+<section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" data-background-img="/images/front-banner14.jpg">
+           
+	<div class="container">
+                <div class="row title">
+                    <h2 class="h2">PARALLEL DATA LAB&nbsp;</h2>
+                  <!--  <div class="page-breadcrumb">
+                        <a>Home</a>/<span>Sidebar Left</span>
+                    </div>-->
+                </div>
+            </div>
+        </section>
+        <!-- End Intro Section -->
+
+        <!-- Sidebar Section -->
+        <section class="ptb ptb-sm-80">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3 col-sm-4 mt-xs-30">
+
+                        <div class="sidebar-widget">
+							 <h5>Contact</h5>
+                            <hr>
+                            <ul>
+                                <li><a href="/People/ganger.shtml">Greg Ganger</a></li>
+							  <li>&nbsp;</li>
+						  </ul>
+                            <h5>PDL Publications</h5>
+                            <hr>
+                             <ul>
+<li><a href="/Publications/index.shtml">Recent</a></li>
+<li><a href="/Publications/pubs-project.shtml">Pubs by Project</a></li>
+<li><a href="/Publications/pubs-date.shtml">Pubs by Date</a></li>
+<li><a href="/Publications/pubs-tr.shtml">Tech Reports</a></li>
+<li><a href="/Publications/pubs-pastprojects.shtml">Past Project Publications</a></li>
+<li><a href="/Publications/downloads.shtml">Code Distribution </a></li>
+<li><a href="/Publications/packet.shtml">The PDL Packet</a></li>
+        </ul>
+                        </div>
+
+                        
+
+                </div>
+                  <div class="col-md-12 col-sm-12 col-lg-9"><h2>Recent Publications</h2>
+                    <ul>
+                        <li><strong>H4H: Hybrid Convolution-Transformer Architecture Search for NPU-CIM Heterogeneous Systems for AR/VR Applications. </strong>Yiwei Zhao, Jinhui Chen, Sai Qian Zhang, Syed Shakib Sarwar, Kleber Hugo Stangherlin, Jorge Tomas Gomez, Jae-Sun Seo, Barbara De Salvo, Chiao Liu, Phillip B. Gibbons, Ziyun Li.  30th Asia and South Pacific Design Automation Conference (ASPDAC ’25), January 20–23, 2025, Tokyo, Japan.<br>
+                        <a href="/PDL-FTP/associated/ASP-DAC2025-1073-12_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/ASP-DAC2025-1073-12.pdf">PDF</a> [1.3M] <br>
+                        <br>
+                        </li>
+                        <li><strong>Can Increasing the Hit Ratio Hurt Cache Throughput?</strong> Ziyue Qiu, Juncheng Yang,  Mor Harchol-Balter. EAI International Conference on Performance Evaluation Methodologies and Tools, December 12-13, 2024 Milan, Italy. <strong><em>BEST PAPER AWARD AT VALUETOOLS '24!</em></strong><br>
+                          <a href="/PDL-FTP/Storage/ValueTools_Cache_Modeling-Qiu_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/ValueTools_Cache_Modeling-Qiu.pdf">PDF</a> [1M] <br>
+                          <br>
+                        </li>
+                        <li><strong>The Key to Effective UDF Optimization: Before Inlining, First Perform Outlining</strong>. Samuel Arch, Yuchen Liu, Todd Mowry, Jignesh Patel, Andrew Pavlo. Proceedings of the VLDB Endowment, Vol. 18, No. 1., December 2024. <br>
+                        <a href="/PDL-FTP/associated/vldb18-1-arch.shtml">Abstract</a> / <a href="/PDL-FTP/associated/vldb18-1-arch.pdf">PDF</a> [780K] <br>
+                        <br>
+                        </li>
+                        <li><strong>CARP: Range Query-Optimized Indexing for Streaming Data</strong>. Ankush Jain, Charles D. Cranor, Qing Zheng, Bradley W. Settlemeyer, George Amvrosiadis, Gary Grider. SC24, November 17-22, 2024, Atlanta, Georgia, USA.<br>
+                        <a href="/PDL-FTP/Storage/carp-jain-SC24_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/carp-jain-SC24.pdf">PDF</a> [1M] <br>
+                        <br>
+                        </li>
+                        <li><strong>The TYR Dataflow Architecture: Improving Locality by Taming Parallelism</strong>. Nikhil Agarwal, Mitchell Fream, Souradip Ghosh, Brian C. Schwedock*, Nathan Beckmann. 2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO), November 2-6, 2024, Austin, TX. <br>
+                        <a href="/PDL-FTP/Storage/Agarwal2024_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/Agarwal2024.pdf">PDF</a> [1.7M] <br>
+                        <br>
+                        </li>
+                        <li><strong>Morph: Efficient File-Lifetime Redundancy Management for Cluster File Systems</strong>. Timothy Kim, Sanjith Athlur, Saurabh Kadekodi, Francisco Maturana Dax Delvira, Arif Merchant, Gregory R. Ganger, K. V. Rashmi. SOSP ’24, November 4–6, 2024, Austin, TX, USA.<br>
+                        <a href="../../ftp/Storage/Morph_Final_abs.shtml">Abstract</a> / <a href="../../ftp/Storage/Morph_Final.pdf">PDF</a> [4.6M] <br>
+                        <br>
+                        </li>
+                        <li><strong>Reducing Cross-Cloud/Region Costs with the Auto-Configuring MACARON Cache</strong>. Hojin Park, Ziyue Qiu, Gregory R. Ganger, George Amvrosiadis. SOSP ’24, November 4–6, 2024, Austin, TX, USA.<br>
+                        <a href="../../ftp/CloudComputing/sosp24-final499_abs.shtml">Abstract</a> / <a href="../../ftp/CloudComputing/sosp24-final499.pdf">PDF</a> [2.7M] <br>
+                        <br>
+                        </li>
+                        <li><strong>GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism. </strong>Byungsoo Jeon, Mengdi Wu, Shiyi Cao, Sunghyun Kim, Sunghyun Park, Neeraj Aggarwal, Colin Unger, Daiyaan Arfeen, Peiyuan Liao, Xupeng Miao, Mohammad Alizadeh, Gregory R. Ganger, Tianqi Chen, Zhihao Jia. arXiv:2406.17145v2 [cs.DC] 28 Oct 2024.<br>
+                          <a href="/PDL-FTP/BigLearning/Graphpipe2406.17145v2_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Graphpipe2406.17145v2.pdf">PDF</a> [1.5M]<br>
+                          <br>
+                        </li>
+                        <li><strong>PipeFill: Using GPUs During Bubbles in Pipeline-parallel LLM Training. </strong>Daiyaan Arfeen, Zhen Zhang, Xinwei Fu, Gregory R. Ganger, Yida Wang: . arXiv:2410.07192v1 [cs.DC] 23 Sep 2024.<br>
+                          <a href="/PDL-FTP/BigLearning/Pipefill-2410.07192v1_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Pipefill-2410.07192v1.pdf">PDF</a> [615K] <br>
+                          <br>
+                        </li>
+                        <li><strong>The Holon Approach for Simultaneously Tuning Multiple Components in a Self-Driving Database Management System with Machine Learning via Synthesized Proto-Actions.</strong> William Zhang, Wan Shen Lim, Matthew Butrovich, Andrew Pavlo. Proceedings of the VLDB Endowment,  17(11): 3373-3387, 2024. July 2024.<br>
+                          <a href="../../ftp/Database/p3373-zhang_abs.shtml">Abstract</a> / <a href="../../ftp/Database/p3373-zhang.pdf">PDF</a> [2.6M]<br>
+                          <br>
+                        </li>
+                        <li> <strong>Hit the Gym: Accelerating Query Execution to Efficiently Bootstrap Behavior Models for Self-Driving Database Management Systems</strong>. Wan Shen Lim, Lin Ma, William Zhang, Matthew Butrovich, Samuel Arch, Andrew Pavlo. Proceedings of the VLDB Endowment, Vol. 17, No. 11, ISSN 2150-8097. July 2024. <br>
+                          <a href="../../ftp/Database/p3680-lim_abs.shtml">Abstract</a> / <a href="../../ftp/Database/p3680-lim.pdf">PDF</a> [1.25M] <br>
+                          <br>
+                        </li>
+                        <li><strong>D&eacute;j&agrave;Vu: KV-cache Streaming for Fast, Fault-tolerant Generative LLM Serving</strong>. Foteini Strati, Sara McAllister, Amar Phanishayee, Jakub Tarnawski, Ana Klimovic. Proceedings of the 41 st International Conference on Machine Learning, Vienna, Austria. PMLR 235, July 21-27, 2024. <br>
+                        <a href="/PDL-FTP/BigLearning/2024-icml-strati_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2024-icml-strati.pdf">PDF</a> [2.1M]<br>
+                        <br>
+                        </li>
+                        <li><strong>Erasure Coded Neural Network Inference via Fisher Averaging</strong>. Divyansh Jhunjhunwala, Neharika Jali, Gauri Joshi, Shiqiang Wang. IEEE International Symposium on Information Theory (ISIT), Athens, Greece, July 7-12, 2024.<br>
+                          <a href="../../ftp/CloudComputing/DJ_ISIT2024_abs.shtml">Abstract</a> / <a href="../../ftp/CloudComputing/DJ_ISIT2024.pdf">PDF</a> [175K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Data Caching for Enterprise-Grade Petabyte-Scale OLAP</strong>. Chunxu Tang, Bin Fan, Jing Zhao, Chen Liang, Yi Wang, Beinan Wang, Ziyue Qiu, Lu Qiu, Bowen Ding, Shouzhuo Sun, Saiguang Che, Jiaming Mai, Shouwei Chen, Yu Zhu, Jianjian Xie, Yutian (James) Sun, Yao Li, Yangjun Zhang, Ke Wang,  Mingmin Chen. Proceedings of the 2024 USENIX Annual Technical Conference. July 10–12, 2024 • Santa Clara, CA, USA.<br>
+                          <a href="/PDL-FTP/Storage/atc24-tang_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/atc24-tang.pdf">PDF</a> [932K] <br>
+                          <br>
+                        </li>
+                        <li><strong>A Call for Research on Storage Emissions.</strong> Sara McAllister, Fiodar Kazhamiaka, Daniel S. Berger, Rodrigo Fonseca, Kali Frost, Aaron Ogus, Maneesh Sah, Ricardo Bianchini, George Amvrosiadis, Nathan Beckmann, Gregory R. Ganger. HotCarbon’24, July 9, 2024, Santa Cruz, CA. <br>
+                          <a href="/PDL-FTP/Storage/McAllister-HotCarbon24_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/McAllister-HotCarbon24.pdf">PDF</a> [2.9M]  / <a href="../../ftp/Storage/2024-hotcarbon-mcallister-slides.pdf">Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>FairyWREN: A Sustainable Cache for Emerging Write-Read-Erase Flash Interfaces</strong>. Sara McAllister, Yucong “Sherry” Wang, Benjamin Berg*, Daniel S. Berger†, George Amvrosiadis, Nathan Beckmann, Gregory R. Ganger. 18th USENIX Symposium on Operating Systems Design and Implementation (OSDI '24), July 10–12, 2024. Santa Clara, CA, USA. <br>
+                        <a href="/PDL-FTP/NVM/2024-osdi-mcallister_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/2024-osdi-mcallister.pdf">PDF</a> [6.7M] / <a href="https://youtu.be/cahPflDTwYQ?si=0KY4SmYVjDLWz6_A">Talk Video &amp; Slides</a><br>
+                        <br>
+                        </li>
+                        <li><strong>Designing Cloud Servers for Lower Carbon</strong>. Jaylen Wang, Daniel S. Berger, Fiodar Kazhamiaka, Celine Irvene, Chaojie Zhang, Esha Choukse, Kali Frost, Rodrigo Fonseca, Brijesh Warrier, Chetan Bansal, Jonathan Stern, Ricardo Bianchini, Akshitha Sriraman. Proceedings of the 51st Intl. Symposium on Computer Architecture (ISCA 2024), Buenos Aires, Argentina, June 2024.<br>
+                          <a href="/PDL-FTP/CloudComputing/Wang_ISCA24_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/Wang_ISCA24.pdf">PDF</a> [1.35M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Perspective: A Principled Framework for Pliable and Secure Speculation in Operating Systems</strong>. Tae Hoon Kim, David Rudo, Kaiyang Zhao, Zirui Neil Zhao, Dimitrios Skarlatos. Proceedings of the 51st Intl. Symposium on Computer Architecture (ISCA 2024), Buenos Aires, Argentina, June 2024.<br>
+                          <a href="/PDL-FTP/associated/perspective_isca24_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/perspective_isca24.pdf">PDF</a> [600K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Agents of Autonomy: A Systematic Study of Robotics on Modern Hardware</strong>. Mohammad Bakhshalipour and Phillip B. Gibbons. In Abstracts of the 2024 ACM SIGMETRICS/IFIP PERFORMANCE Joint International Conference on Measurement and Modeling of Computer Systems. (SIGMETRICS/PERFORMANCE Abstracts ’24), June 10–14, 2024, Venice, Italy. ACM, New York, NY, USA. <strong><em>BEST PAPER AT SIGMETRICS '24!</em></strong><br>
+                        <a href="/PDL-FTP/associated/sigps002-bakhshalipour_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/bakshalipour-Agents-of-Autonomy.pdf">PDF</a> [425K] / <a href="https://github.com/cmu-roboarch/rowild">Code</a><br>
+                        <br>
+                        </li>
+                        <li><strong>Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs</strong>. Yixuan Mei, Yonghao Zhuang, Xupeng Miao, Juncheng Yang, Zhihao Jia, Rashmi Vinayak. arXiv:2406.01566v1 [cs.DC] 3 Jun 2024.<br>
+                        <a href="/PDL-FTP/BigLearning/2406.01566v1_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2406.01566v1.pdf">PDF</a> [775K] <br>
+                        <br>
+                        </li>
+                        <li><strong>Efficient Reinforcement Learning for Routing Jobs in Heterogeneous Queueing Systems</strong>. Neharika Jali, Guannan Qu, Weina Wang, Gauri Joshi. International Conference on Artificial Intelligence and Statistics (AISTATS), May 2nd - May 4th, 2024, Valencia, Spain.<br>
+                          <a href="../../ftp/BigLearning/jali24a_abs.shtml">Abstract</a> / <a href="../../ftp/BigLearning/jali24a.pdf">PDF</a> [800K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Extending the Mochi Methodology to Enable Dynamic HPC Data Services</strong>. M. Dorier, P. Carns, R. Ross, S. Snyder, R. Latham, A. Gueroudji, G. Amvrosiadis, C. Cranor, J. Soumagne. In 5th Workshop on Extreme-Scale Storage and Analysis (ESSA 2024), May 2024.<br>
+                          <a href="../../ftp/HECStorage/ext-mochi_essa24_abs.shtml">Abstract</a> / <a href="../../ftp/HECStorage/ext-mochi_essa24.pdf">PDF</a> [250K]<br>
+                          <br>
+                        </li>
+                        <li><strong>BBQ: A Fast and Scalable Integer Priority Queue for Hardware Packet Scheduling</strong>. Nirav Atre, Hugo Sadok, Justine Sherry. 21st USENIX Symposium on Networked Systems Design and Implementation (NSDI' 24), April 16–18, 2024. Santa Clara, CA.<br>
+                        <a href="/PDL-FTP/associated/nsdi2024-natre_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/nsdi2024-natre.pdf">PDF</a> [1M]<br>
+                        <br>
+                        </li>
+                        <li><strong>SIEVE is Simpler than LRU: An Efficient Turn-Key Eviction Algorithm for Web Caches</strong>. Yazhuo Zhang, Juncheng Yang, Yao Yue, Ymir Vigfusson, K. V. Rashmi. 21st USENIX Symposium on Networked Systems Design and Implementation (NSDI'24), April 16–18, 2024. Santa Clara, CA. <em><strong>COMMUNITY AWARD FOR BEST PAPER!</strong></em><br>
+                        <a href="/PDL-FTP/Storage/nsdi24-SIEVE_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/nsdi24-SIEVE.pdf">PDF</a> [1M]<br>
+                        <br>
+                        </li>
+                        <li><strong>Baleen: ML Admission &amp; Prefetching for Flash Caches</strong>. Daniel Lin-Kit Wong, Hao Wu, Carson Molder, Sathya Gunasekar, Jimmy Lu, Snehal Khandkar, Abhinav Sharma, Daniel S. Berger, Nathan Beckmann, Gregory R. Ganger. 22nd USENIX Conference on File and Storage Technologies (FAST'24), Feb. 27–29, 2024, Santa Clara, CA. <br>
+                          <a href="/PDL-FTP/BigLearning/baleen-fast24_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/baleen-fast24.pdf">PDF</a> [2.7M] <span class="alead"> / <a href="https://github.com/wonglkd/Baleen-FAST24">Code</a> / <a href="https://ftp.pdl.cmu.edu/pub/datasets/Baleen24/">Traces</a></span><br>
+                          <br>
+                        </li>
+                        <li><strong>Survey and Evaluation of Database Management System Extensibility</strong>. Abigale Kim. Carnegie Mellon University School of Computer Science M.S.Thesis CMU-CS-23-144. January 2024. <br>
+                        <a href="/PDL-FTP/Database/CMU-CS-23-144.shtml">Abstract</a> / <a href="/PDL-FTP/Database/CMU-CS-23-144.pdf">PDF</a> [1.25M] <br>
+                        <br>
+                        </li>
+                        <li><strong>Is Perfect Hashing Practical for OLAP Systems? </strong>Kevin P. Gaffney, Jignesh M. Patel. 4th Annual Conference on nnovative Data Systems Research (CIDR ’24) January 14-17, 2024, Chaminade, USA.<br>
+                          <a href="../../ftp/associated/p65-gaffney_abs.shtml">Abstract</a> / <a href="../../ftp/associated/p65-gaffney.pdf">PDF</a> [765K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Dear User-Defined Functions, Inlining isn’t working out so great for us. Let’s try batching to make our relationship work. Sincerely, SQL</strong>. Kai Franz, Samuel Arch, Denis Hirn, Torsten Grust, Todd C. Mowry, Andrew Pavlo. Conference on Innovative Data Systems Research (CIDR 2024), Chaminade, CA, USA, January 14-17, 2024. <br>
+                        <a href="/PDL-FTP/Database/p13-franz_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p13-franz.pdf">PDF</a> [545K] <br>
+                        <br>
+                        </li>
+                        <li><strong>Address Scaling: Architectural Support for Fine-Grained Thread-Safe Metadata Management</strong>. Deepanjali Mishra, Konstantinos Kanellopoulos, Ashish Panwar, Akshitha Sriraman, Vivek Seshadri, Onur Mutlu, Todd C. Mowry. IEEE Computer Architecture Letters, Volume: 23, Issue: 1, Jan.-June 2024.<br>
+                          <a href="../../ftp/associated/Address_Scaling_Architectural_Support_abs.shtml">Abstract</a> / <a href="../../ftp/associated/Address_Scaling_Architectural_Support.pdf">PDF</a> [540K] <br>
+                          <br>
+                        </li>
+                        <li><strong>UDIR: Towards a Unified Compiler Framework for Reconfigurable Dataflow Architectures</strong>. Nikhil Agarwal, Mitchell Fream, Souradip Ghosh, Brian C. Schwedock, Nathan Beckmann. IEEE Computer Architecture Letters ( Volume: 23, Issue: 1, Jan.-June 2024)UDIR: Towards a Unified Compiler Framework for Reconfigurable Dataflow Architectures. Nikhil Agarwal, Mitchell Fream, Souradip Ghosh, Brian C. Schwedock, Nathan Beckmann. IEEE Computer Architecture Letters (Volume: 23, Issue: 1, Jan.-June 2024).<br>
+                        <a href="../../ftp/associated/2023.wddsa.udir_abs.shtml">Abstract</a> / <a href="../../ftp/associated/2023.wddsa.udir.pdf">PDF</a> [1.28M] <br>
+                        <br>
+                        </li>
+                        <li><strong>Rethinking the Encoding of Integers for Scans on Skewed Data</strong>.  Martin Prammer, Jignesh  M. Patel.  Proc. ACM Manag. Data, Vol. 1, No. 4 (SIGMOD), Article 257. December 2023.<br>
+                        <a href="../../ftp/Database/rethinking-encoding_abs.shtml">Abstract</a> / <a href="../../ftp/Database/rethinking-encoding.pdf">PDF</a> [1.5M]<br>
+                        <br>
+                        </li>
+                        <li><strong>Tigger: A Database Proxy That Bounces With User-Bypass</strong>. Matthew Butrovich, Karthik Ramanathan, John Rollinson, Wan Shen Lim, William Zhang, Justine Sherry, Andrew Pavlo Proceedings of the VLDB Endowment, Vol. 16, No. 11, 2023.<br>
+                        <a href="../../ftp/Database/p3335-butrovich_abs.shtml">Abstract</a> / <a href="../../ftp/Database/p3335-butrovich.pdf">PDF</a> [1.3M]<br>
+                        <br>
+                        </li>
+                        <li><strong>Simple Adaptive Query Processing vs. Learned Query Optimizers: Observations and Analysis</strong>. Yunjia Zhang, Yannis Chronis, Jignesh M. Patel, Theodoros Rekatsinas. Proceedings of the VLDB Endowment, Vol. 16, No. 11.<br>
+                          <a href="../../ftp/Database/p2962-zhang_abs.shtml">Abstract</a> / <a href="../../ftp/Database/p2962-zhang.pdf">PDF</a> [950K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Agents of Autonomy: A Systematic Study of Robotics on Modern Hardware</strong>. Mohammad Bakhshalipour, Phillip B. Gibbons. Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS), Volume 7, Issue 3, Article No.: 43,  December 2023. To appear ACM SIGMETRICS / IFIP PERFORMANCE 2024, Venice, Italy, June 10-14, 2024.<br>
+                        <a href="/PDL-FTP/associated/bakshalipour-Agents-of-Autonomy_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/bakshalipour-Agents-of-Autonomy.pdf">PDF</a> [2.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Memento: Architectural Support for Ephemeral Memory Management in Serverless Environments</strong>. Ziqi Wang, Kaiyang Zhao, Pei Li, Andrew Jacob, Michael Kozuch, Todd Mowry, Dimitrios Skarlatos. MICRO '23: Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture. October 2023. Toronto, Canada.<br>
+                          <a href="/PDL-FTP/CloudComputing/Memento-MICRO23_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/Memento-MICRO23.pdf">PDF</a> [935K]<br>
+                          <br>
+                        </li>
+                        <li><strong>FIFO Queues Are All You Need for Cache Eviction</strong>. Juncheng Yang, Yazhuo Zhang, Ziyue Qiu, Yao Yue, Rashmi Vinayak SOSP '23: Proceedings of the 29th Symposium on Operating Systems Principles, October 2023. Koblenz, Germany.<br>
+                          <a href="/PDL-FTP/Storage/FIFOqueues-SOSP23_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/FIFOqueues-SOSP23.pdf">PDF</a> [1.6M] <br>
+                          <br>
+                        </li>
+                        <li><b>Sia: Heterogeneity-aware, Goodput-optimized ML-cluster Scheduling</b>. Suhas Jayaram Subramanya, Daiyaan Arfeen, Shouxu Lin, Aurick Qiao, Zhihao Jia, and Gregory R. Ganger. 2023. ACM SIGOPS 29th Symposium on Operating Systems Principles (SOSP ’23), October 23–26, 2023, Koblenz, Germany.<br>
+                        <a href="/PDL-FTP/BigLearning/sia_sosp23-final_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/sia_sosp23-final.pdf">PDF</a> [1.23M]<br>
+                        <br>
+                        </li>
+                        
+                        <li><strong>Ensō: A Streaming Interface for NIC-Application Communication</strong>. Hugo Sadok and Nirav Atre, Carnegie Mellon University; Zhipeng Zhao, Microsoft; Daniel S. Berger, Microsoft Research &amp; University of Washington; James C. Hoe, Carnegie Mellon University; Aurojit Panda, New York University; Justine Sherry, Carnegie Mellon University; Ren Wang, Intel.17th USENIX Symposium on Operating Systems Design and Implementation (OSDI). July 10–12, 2023. Boston, MA.<br>
+                          <a href="../../ftp/Storage/osdi23-sadok_abs.shtml">Abstract</a> / <a href="../../ftp/Storage/osdi23-sadok.pdf">PDF</a> [800K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Peeling Back the Carbon Curtain: Carbon Optimization Challenges in Cloud Computing</strong>. Jaylen Wang, Udit Gupta, Akshitha Sriraman. HotCarbon 2023.July 9, 2023, Boston, MA, USA.<br>
+                          <a href="/PDL-FTP/CloudComputing/Wang-HotCarbon23_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/Wang-HotCarbon23.pdf">PDF</a> [840K]<br>
+                          <br>
+                        </li>
+                        <li><b>Runahead A*: Speculative Parallelism for A* with Slow Expansions</b>. Mohammad Bakhshalipour, Mohamad Qadri, Dominic Guri, Seyed Borna, Ehsani, Maxim Likhachev, Phillip B. Gibbons. ICAPS 2023, Prague, Czech Republic, July 8-13, 2023. <br>
+                        <a href="/PDL-FTP/associated/rastar-icaps23_abs.shtml">Abstact</a> / <a href="/PDL-FTP/associated/rastar-icaps23.pdf">PDF</a> [710K] <br>
+                        <br>
+                        </li>
+                        <li><b>FIFO Can Be Better than LRU: The Power of Lazy Promotion and Quick Demotion</b>. Juncheng Yang, Ziyue Qiu, Yazhuo Zhang*, Yao Yue^, K. V. Rashmi. HotOS ’23, June 22–24, 2023, Providence, RI, USA. <br>
+                          <a href="/PDL-FTP/Storage/Yang-FIFO-HotOS23_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/Yang-FIFO-HotOS23.pdf">PDF</a> [1.2M] <br>
+                          <br>
+                        </li>
+                        <li><b>Contiguitas: The Pursuit of Physical Memory Contiguity in Datacenters</b>. Kaiyang Zhao, Kaiwen Xue, Ziqi Wang, Dan Schatzberg, Leon Yang, Antonis Manousis, Johannes Weiner, Rik van Riel, Bikash Sharma, Chunqiang Tang, Dimitrios Skarlatos. ISCA ’23, June 17–21, 2023, Orlando, FL, USA. <b>BEST PAPER AWARD!</b><br>
+                        <a href="/PDL-FTP/associated/KZhao-Contiguitas_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/KZhao-Contiguitas.pdf">PDF</a> [468K] <br>
+                        <br>
+                        </li>
+                        <li><strong>PIM-trie: A Skew-resistant Trie for Processing-in-Memory</strong>. Hongbo Kang, Yiwei Zhao, Guy E. Blelloch, Laxman Dhulipala, Yan Gu, Charles McGuffey, Phillip B. Gibbons. SPAA '23: Proceedings of the 35th ACM Symposium on Parallelism in Algorithms and Architectures, June 2023, Orlando, FL.<br>
+                          <a href="/PDL-FTP/associated/SPAA23-PIMtrie_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/SPAA23-PIMtrie.pdf">PDF</a> [1.23M] <br>
+                          <br>
+                        </li>
+                        <li><b>Mimir: Finding Cost-efficient Storage Configurations in the Public Cloud</b>. Hojin Park, Gregory R. Ganger, George Amvrosiadis. SYSTOR '23: Proceedings of the 16th ACM International Conference on Systems and Storage, Haifa, Israel, June 5-7, 2023.<br>
+                          <a href="/PDL-FTP/CloudComputing/HPark-Mimir_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/HPark-Mimir.pdf">PDF</a> [1.4M] <br>
+                          <br>
+                        </li>
+                        <li><b>Validating Large Language Models with ReLM</b>. Michael Kuchnik, Virginia Smith, George Amvrosiadis.6th MLSys Conference, Miami Beach, FL, USA, June 4-8, 2023. <b><i>OUTSTANDING PAPER AWARD AT MLSYS23!</i></b><br>
+                        <a href="/PDL-FTP/BigLearning/Kuchnik-MLSys-2023_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Kuchnik-MLSys-2023.pdf">PDF</a> [1.2M]<br>
+                        <br>
+                        </li>
+                        <li><strong>MANIC: A 19µW @ 4MHz, 256 MOPS/mW, RISC-V Microcontroller with Embedded MRAM Main Memory and Vector-Dataflow Co-Processor in 22nm Bulk FinFET CMOS</strong>. Graham Gobieski, Oguz Atli, Cagri Erbagci, Ken Mai, Nathan Beckmann, Brandon Lucia. IEEE International Symposium on Circuits and Systems (ISCAS), Monterey, CA, May 21-25, 2023.<br>
+                          <a href="../../ftp/associated/2023.iscas.manic_abs.shtml">Abstract</a> / <a href="../../ftp/associated/2023.iscas.manic.pdf">PDF</a> [3.6 M]<br>
+                          <br>
+                        </li>
+                        <li><strong>FrozenHot Cache: Rethinking Cache Management for Modern Hardware</strong>.  Ziyue Qiu, Juncheng Yang, Juncheng Zhang, Cheng Li, Xiaosong Ma, Qi Chen, Mao Yang, Yinlong Xu. EuroSys 2023, Rome, Italy, May 8th-12th, 2023.<br>
+                          <a href="/PDL-FTP/Storage/FrozenHot-Eurosys23_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/FrozenHot-Eurosys23.pdf">PDF</a> [1.14M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Federated Learning Under Distributed Concept Drift</strong>. Ellango Jothimurugesan, Kevin Hsieh, Jianyu Wang, Gauri Joshi, Phillip B. Gibbons. International Conference on Artificial Intelligence and Statistics (AISTATS), Apr 2023. In preprint arXiv:2206.00799v1. <br>
+                        <a href="/PDL-FTP/BigLearning/2206.00799_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2206.00799.pdf">PDF</a> [956K]<br>
+                        <br>
+                        </li>
+                        <li><strong>Design Principles for Replicated Storage Systems Built on Emerging Storage Technologies.</strong> Thomas Kim. Carnegie Mellon University School of Computer Science Ph.D. Dissertation CMU-CS-23-109. March 2023. <br>
+                          <a href="/PDL-FTP/Storage/CMU-CS-23-109_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/CMU-CS-23-109.pdf">PDF</a> [47.5M] <br>
+                          <br>
+                        </li>
+                        <li><b>Pond: CXL-Based Memory Pooling Systems for Cloud Platforms</b>. Huaicheng Li, Daniel S. Berger, Lisa Hsu, Daniel Ernst, Pantea Zardoshti, Stanko Novakovic, Monish Shah, Samir Rajadnya, Scott Lee, Ishwar Agarwal, Mark D. Hill, Marcus Fontoura, Ricardo Bianchini. ASPLOS ’23, March 25–29, 2023, Vancouver, BC, Canada. <b><i>DISTINGUISHED PAPER AWARD!</i></b><br>
+                          <a href="/PDL-FTP/CloudComputing/HLi-Pond_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/HLi-Pond.pdf">PDF</a> [1.7M] <br>
+                          <br>
+                        </li>
+                        <li><strong>GL-Cache: Group-level Learning for Efficient and High-performance Caching</strong>. Juncheng Yang, Ziming Mao, Yao Yue, K. V. Rashmi. 21st USENIX Conference on File and Storage Technologies (FAST '23). Feb. 21–23, 2023, Santa Clara, CA.<br>
+                          <a href="/PDL-FTP/BigLearning/2023_FAST_GL_Cache_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2023_FAST_GL_Cache.pdf">PDF</a> [1.84M]<br>
+                          <br>
+                        </li>
+                        <li><strong>RAIZN: Redundant Array of Independent Zoned Namespaces</strong>. Thomas Kim, Jekyeom Jeon, Nikhil Arora, Huaicheng Li, Michael Kaminsky, David G. Andersen, Gregory R. Ganger, George Amvrosiadis, Matias Bjørling. ASPLOS ’23, March 25–29, 2023, Vancouver, BC, Canada. Supoercedes Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-22-101, January 2022. <br>
+                          <a href="/PDL-FTP/Storage/RAIZN-kim_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/RAIZN-kim.pdf">PDF</a> [1.65M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Database Gyms</strong>. Wan Shen Lim, Matthew Butrovich, William Zhang, Andrew Crotty, Lin Ma, Peijing Xu, Johannes Gehrke, Andrew Pavlo.  CIDR 2023. 13th Annual Conference on Innovative Data Systems Research (CIDR ’23). January 8-11, 2023, Amsterdam, The Netherlands.<br>
+                          <a href="/PDL-FTP/Database/p27-lim_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p27-lim.pdf">PDF</a> [800K]  / <a href="https://www.cidrdb.org/cidr2023/slides/p27-lim-slides.pdf">Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Extending and Programming the NVMe I/O Determinism Interface for Flash Arrays</strong>. Huaicheng Li, Martin L Putra, Ronald Shi, Fadhil I Kurnia, Xing Lin, Jaeyoung Do, Achmad Imam Kistijantoro,  Gregory R Ganger, Haryadi S Gunawi. ACM Transactions on Storage, Vol. 19, No. 1, Article 5. January 2023.<br>
+                          <a href="/PDL-FTP/NVM/NVMeDeterminismInterface-Li_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/NVMeDeterminismInterface-Li.pdf">PDF</a> [1.6M]<br>
+                          <br>
+                        </li>
+                        <li><b>Realizing Value in Shared Compute Infrastructures</b>. Andrew Chung. Carnegie Mellon University PhD Dissertation CMU-CS-22-151, December 2022. <br>
+                        <a href="/PDL-FTP/CloudComputing/CMU-CS-22-151_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/CMU-CS-22-151.pdf">PDF</a> [3M]<br>
+                        <br>
+                        </li>
+                        <li><strong>PIM-tree: A Skew-resistant Index for Processing-in-Memory</strong>. Hongbo Kang, Yiwei Zhao, Guy E. Blelloch, Laxman Dhulipala, Yan Gu, Charles McGuffey, Phillip B. Gibbons. Proc. VLDB Endow. 16(4): 946-958 (2022). In preprint. <i><b>BEST PAPER RUNNER UP!</b></i><br>
+                          <a href="/PDL-FTP/associated/2211.10516v1_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2211.10516v1.pdf">PDF</a> [1.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Rateless Sum-Recovery Codes For Distributed Non-Linear Computations</strong>. Ankur Mallick,Gauri Joshi. Information Theory Workshop (ITW), November 6-9, 2022. Mumbai, India.<br>
+                          <a href="/PDL-FTP/BigLearning/rateless_sum_recovery_codes_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/rateless_sum_recovery_codes.pdf">PDF</a> [728K]<br>
+                          <br>
+                        </li>
+                        <li><strong>RipTide: A Programmable, Energy-minimal Dataflow Compiler and Architecture</strong>. Graham Gobieski, Souradip Ghosh, Marijn Heule, Todd Mowry, Tony Nowatzki, Nathan Beckmann, Brandon Lucia. MICRO 2022 - 55th IEEE/ACM International Symposium on Microarchitecture, October 1–5, 2022 Chicago, Illinois, USA.<br>
+                          <a href="/PDL-FTP/associated/2022.micro.riptide_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2022.micro.riptide.pdf">PDF</a> [3.7M]<br>
+                          <br>
+                        </li>
+                        <li><strong>MATCHA: A Matching-Based Link Scheduling Strategy to Speed up Distributed Optimization</strong>. Jianyu Wang, Anit Sahu, Gauri Joshi, Soummya Kar. IEEE Transactions on Signal Processing, Oct 2022.<br>
+                          <a href="/PDL-FTP/BigLearning/Matcha-WANG_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Matcha-WANG.pdf">PDF</a> [1.85M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Kangaroo: Theory and Practice of Caching Billions of Tiny Objects on Flash</strong>. Sara McAllister, Benjamin Berg, Julian Tutuncu-Macias, Juncheng Yang, Sathya Gunasekar, Jimmy Lu,  Daniel S Berger, Nathan Beckmann, Gregory R Ganger. ACM Transactions on Storage, Vol. 18, No. 3, Article 21. August 2022. <br>
+                          <a href="/PDL-FTP/NVM/kangaroo-TOS-0822_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/kangaroo-TOS-0822.pdf">PDF</a> [1.4M]<br>
+                          <br>
+                        </li>
+                        <li><strong>SurgeProtector: Mitigating Temporal Algorithmic Complexity Attacks using Adversarial Scheduling</strong>. Nirav Atre, Hugo Sadok, Erica Chiang, Weina Wang, Justine Sherry. SIGCOMM ’22, August 22–26, 2022, Amsterdam, Netherlands.<br>
+                          <a href="/PDL-FTP/associated/sigcomm-Atre_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/sigcomm-Atre.pdf">PDF</a> [2M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Plumber: Diagnosing and Removing Performance Bottlenecks in Machine Learning Data Pipelines</strong>. Michael Kuchnik, Ana Klimovic, Jirı Simsa, Virginia Smith, George Amvrosiadis. Proceedings of the 5th MLSys Conference, Santa Clara, CA, USA, August, 2022.<br>
+                          <a href="/PDL-FTP/BigLearning/MLSys-2022-plumber_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/MLSys-2022-plumber.pdf">PDF</a> [7M]<br>
+                          <br>
+                        </li>
+                        <li><strong>The CoRa Tensor Compiler: Compilation for Ragged Tensors with Minimal Padding.</strong> Pratik Fegade, Tianqi Chen, Phillip B. Gibbons, Todd C. Mowry. Proceedings of the 5th MLSys Conference, Santa Clara, CA, USA, August, 2022.<br>
+                          <a href="/PDL-FTP/BigLearning/MLSys-2022-the-cora-tensor-compiler_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/MLSys-2022-the-cora-tensor-compiler.pdf">PDF</a> [1.3M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Matchmaker: Data Drift Mitigation in Machine Learning for Large-scale Systems</strong>. Ankur Mallick, Kevin Hsieh, Behnaz Arzani, Gauri Joshi. Proceedings of the 5th MLSys Conference, Santa Clara, CA, USA, August, 2022.<br>
+                          <a href="/PDL-FTP/BigLearning/MLSys-2022-matchmaker_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/MLSys-2022-matchmaker.pdf">PDF</a> [500K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Extending and Programming the NVMe I/O Determinism Interface for Flash Arrays</strong>. Huaicheng Li, Martin L Putra, Ronald Shi, Fadhil I Kurnia, Xing Lin, Jaeyoung Do, Achmad Imam Kistijantoro,  Gregory R Ganger, Haryadi S Gunawi. To appear, ACM Transactions on Storage, 2022, (accepted July 2022). <br>
+                          <a href="../../ftp/NVM/Li-TOS-0722_abs.shtml">Abstract</a> / <a href="../../ftp/NVM/Li-TOS-0722.pdf">PDF</a> [656K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Tiger: Disk-Adaptive Redundancy Without Placement Restrictions</strong>.  Saurabh Kadekodi, Francisco Maturana, Sanjith Athlur, Arif Merchant, K. V. Rashmi, Gregory R. Ganger. Proceedings of the 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI'22), July 11–13, 2022, Carlsbad, CA, USA.<br>
+                          <a href="/PDL-FTP/Storage/osdi22-kadekodi_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/osdi22-kadekodi.pdf">PDF</a> [1.25M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Bandwidth Cost of Code Conversions in the Split Regime</strong>. Francisco Maturana and K. V. Rashmi. 2022 IEEE International Symposium on Information Theory (ISIT22). June 26-July 1, 2022, Espoo, Finland.<br>
+                          <a href="/PDL-FTP/Storage/ISIT22-Bandwidth_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/ISIT22-Bandwidth.pdf">PDF</a> [1.22M]<br>
+                          <br>
+                        </li>
+                        <li><strong>RACOD: Algorithm/Hardware Co-design for Mobile Robot Path Planning</strong>. Mohammad Bakhshalipour, Seyed Borna Ehsani, Mohamad Qadri, Dominic Guri, Maxim Likhachev, Phillip B. Gibbons. ISCA ’22, June 18–22, 2022, New York, NY, USA.<br>
+                          <a href="/PDL-FTP/BigLearning/racod-isca22_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/racod-isca22.pdf">PDF</a> [2.2M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Thermometer: Profile-Guided BTB Replacement for Data Center Applications</strong>. Shixin Song, Tanvir Ahmed Khan, Sara Mahdizadeh Shahri,  Akshitha Sriraman,  Niranjan K Soundararajan, Sreenivas Subramoney, Daniel A. Jiménez, Heiner Litz, Baris Kasikci. ISCA ’22, June 18–22, 2022, New York, NY, USA.<br>
+                          <a href="/PDL-FTP/associated/song-thermometer-isca-2022_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/song-thermometer-isca-2022.pdf">PDF</a> [1.45M]<br>
+                          <br>
+                        </li>
+                        <li><strong>täk&#333;: A Polymorphic Cache Hierarchy for General-Purpose Optimization of Data Movement</strong>. Brian C. Schwedock, Piratach Yoovidhya, Jennifer Seibert, Nathan Beckmann. ISCA ’22, June 18–22, 2022, New York, NY, USA.<br>
+                          <a href="/PDL-FTP/associated/schwedock-isca22-tako_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/schwedock-isca22-tako.pdf">PDF</a> [1.75M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Tastes Great! Less Filling! High Performance and Accurate Training Data Collection for Self-Driving Database Management</strong> <strong>Systems</strong>. Matthew Butrovich, Wan Shen Lim, Lin Ma, John Rollinson, William Zhang, Yu Xia, Andrew Pavlo. SIGMOD ’22, June 12–17, 2022, Philadelphia, PA, USA.<br>
+                          <a href="/PDL-FTP/Database/butrovich-sigmod22_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/butrovich-sigmod22.pdf">PDF</a> [1.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>RTRBench: A Benchmark Suite for Real-Time Robotics</strong>. Mohammad Bakhshalipour, Maxim Likhachev, Phillip B. Gibbons 2022 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), 22-24 May 2022, Singapore.<br>
+                          <a href="/PDL-FTP/associated/rtrbench-ispass22_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/rtrbench-ispass22.pdf">PDF</a> [1.85M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Adapting the RACER Architecture to Integrate Improved In-ReRAM Logic Primitives</strong>. Minh S. Q. Truong, Liting Shen, Alexander Glass, Alison Hoffmann, L. Richard Carley, James A. Bain, Saugata Ghose. IEEE Journal on Emerging and Selected Topics in Circuits and Systems, Early Access, 12 May 2022.<br>
+                          <a href="/PDL-FTP/NVM/22jetcas_oscar_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/22jetcas_oscar.pdf">PDF</a> [4.3M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Varuna: Scalable, Low-cost Training of Massive Deep Learning Models</strong>. Sanjith Athlur, Nitika Saran, Muthian Sivathanu, Ramachandran Ramjee, Nipun Kwatra. EuroSys ’22, April 5-8, 2022, Rennes, France.<strong> BEST PAPER AWARD!<br>
+                          </strong><a href="/PDL-FTP/BigLearning/varuna-eurosys22_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/varuna-eurosys22.pdf">PDF</a> [1.5M] <br>
+                          <br>
+                        </li>
+                        <li><strong>C2DN: How to Harness Erasure Codes at the Edge for Efficient Content Delivery.</strong> Juncheng Yang, Anirudh Sabnis,  Daniel S. Berger, K. V. Rashmi, Ramesh K. Sitaraman. 19th USENIX Symposium on Networked Systems Design and Implementation. April 4–6, 2022 • Renton, WA, USA.<br>
+                          <a href="/PDL-FTP/BigLearning/nsdi22-yang_juncheng_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/nsdi22-yang_juncheng.pdf">PDF</a> [1.9M] / <a href="/PDL-FTP/BigLearning/nsdi22_slides_yang_juncheng.pdf">Slides</a> / <a href="https://youtu.be/8g7XE98kmVk juncheng yang video">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>MetaSys: A Practical Open-source Metadata Management System to Implement and Evaluate Cross-layer Optimizations</strong>. Nandita Vijaykumar,  Ataberk Olgun,  Konstantinos Kanellopoulos, F. Nisa Bostanci,  Hasan Hassan,  Mehrshad Lotfi, 
+                          Phillip B. Gibbons, Onur Mutlu. ACM Transactions on Architecture and Code Optimization, Vol. 19, No. 2, Article 26. Publication date: March 2022.<br>
+                          <a href="/PDL-FTP/associated/MetaSys_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/MetaSys.pdf">PDF</a> [1.75M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Client Selection in Federated Learning: Convergence Analysis and Power-of-Choice Selection Strategies</strong>. Yae Jee Cho, Jianyu Wang, Gauri Joshi. International Conference on Artificial Intelligence and Statistics (AISTATS), March 2022.<br>
+                          <a href="/PDL-FTP/associated/2010.01243_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2010.01243.pdf">PDF</a> [1.85M]<br>
+                          <br>
+                        </li>
+                        <li><strong>TMO: Transparent Memory Offloading in Datacenters.</strong> Johannes Weiner, Niket Agarwal, Dan Schatzberg, Leon Yang, Hao Wang, Blaise Sanouillet, Bikash Sharma,  Tejun Heo, Mayank Jain, Chunqiang Tang, Dimitrios Skarlatos. ASPLOS ’22, February 28 – March 4, 2022, Lausanne, Switzerland. <strong>BEST PAPER AWARD AT ASPLOS '22!</strong><br>
+                          <a href="/PDL-FTP/NVM/tmo_asplos22_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/tmo_asplos22.pdf">PDF</a> [1.65M]<br>
+                          <br>
+                        </li>
+                        <li><strong>FedLite: A Scalable Approach for Federated Learning on Resource-constrained Clients</strong>. Jianyu Wang, Hang Qi, Ankit Singh Rawat, Sashank Reddi, Sagar Waghmare, Felix X. Yu, Gauri Joshi. arXiv:2201.11865v2 [cs.LG], 16 Feb 2022.<br>
+                          <a href="/PDL-FTP/associated/2201.11865_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2201.11865.pdf">PDF</a> [660K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Are You Sure You Want to Use MMAP in YourDatabase Management System?</strong> Andrew Crotty, Viktor Leis, Andrew Pavlo. 12th Annual Conference on Innovative Data Systems Research (CIDR ’22). January 9-12, 2022, Chaminade, USA. <br>
+                          <a href="/PDL-FTP/Database/p13-crotty_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p13-crotty.pdf">PDF</a> [690K] / <a href="https://www.youtube.com/watch?v=1BRGU_AS25c">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Leveraging Spatial and Temporal Correlations in Sparsified Mean Estimation</strong>. Divyansh Jhunjhunwala, Ankur Mallick, Advait Gadhikar, Swanand Kadhe, Gauri Joshi. 35th Conference on Neural Information Processing Systems (NeurIPS 2021), Dec. 6-14, 2021. Virtual Event.<br>
+                          <a href="/PDL-FTP/associated/NeurIPS-2021_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/NeurIPS-2021.pdf">PDF</a> [650K]<br>
+                          <br>
+                        </li>
+                        <li><strong>It’s Time to Talk About HPC Storage: Perspectives on the Past and Future</strong>.  Bradley Settlemyer, George Amvrosiadis, Philip Carns, Robert Ross. IEEE Computer Society Computing in Science &amp; Engineering November/December 2021.<br>
+                          <a href="/PDL-FTP/Storage/Its_Time_to_Talk_About_HPC_Storage_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/Its_Time_to_Talk_About_HPC_Storage.pdf">PDF</a> [483K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Arithmetic-Intensity-Guided Fault Tolerance for Neural Network Inference on GPUs</strong>. Jack Kosaian, K. V. Rashmi. SC’21, November 14–19, 2021, St. Louis, MO, USA. <br>
+                          <a href="/PDL-FTP/BigLearning/Kosaian-SC21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Kosaian-SC21.pdf">PDF</a> [256K] / <a href="/PDL-FTP/slides/2021/Kosaian-SC21.pdf">Slides</a> / <a href="https://github.com/Thesys-lab/arithmetic-intensity-guided-abft">Code</a><br>
+                          <br>
+                        </li>
+                        <li><strong>The Most Common Queueing Theory Questions Asked by Computer Systems Practitioners. </strong>Mor Harchol-Balter and Ziv Scully. First International Workshop on Teaching Performance Analysis of ComputerSystems (TeaPACS 2021) In conjunction with the IFIP Performance 2021 Conference. Milan, Italy, Nov 2021. <br>
+                          <a href="/PDL-FTP/associated/TeaPACS21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/TeaPACS21.pdf">PDF</a> [286K]<br>
+                          <br>
+                        </li>
+                        <li><strong>DeltaFS: A Scalable No-Ground-Truth Filesystem For Massively-Parallel Computing.</strong> Qing Zheng, Chuck Cranor, Greg Ganger, Garth Gibson, George Amvrosiadis, Brad Settlemyer, Gary Grider. SC ’21, November 14–19, 2021, St. Louis, MO, USA. Supersedes Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-21-101, July 2021.<br>
+                          <a href="/PDL-FTP/Storage/zheng-deltafs_sc21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/zheng-deltafs_sc21.pdf">PDF</a> [1M]  / <a href="/PDL-FTP/slides/2021/SC21-DeltaFS-1.7.pdf">Slides</a> / <a href="https://dl.acm.org/doi/abs/10.1145/3458817.3476148">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>The Case for Phase-Aware Scheduling of Parallelizable Jobs</strong>. Ben Berg, Justin Whitehouse, Ben Moseley, Weina Wang, Mor Harchol-Balter. IFIP Performance 2021. Milan, Italy, November 2021.<br>
+                          <a href="/PDL-FTP/associated/PEVA21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/PEVA21.pdf">PDF</a> [978K]<br>
+                          <br>
+                        </li>
+                        <li><strong>RACER: Bit-Pipelined Processing Using Resistive Memory</strong>. Minh S. Q. Truong, Eric Chen, Deanyone Su, Alexander Glass, Liting Shen, L. Richard Carley, James A. Bain, Saugata Ghose. 54th IEEE/ACM International Symposium on Microarchitecture, ser. MICRO 2021, Oct. 2021. <br>
+                          <a href="/PDL-FTP/NVM/21micro_racer_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/21micro_racer.pdf">PDF</a> [2.2M]<br>
+                          <br>
+                        </li>
+                        <li><strong>The Gittins Policy in the M/G/1 Queue.</strong> Ziv Scully, Mor Harchol-Balter. 19th International Symposium on Modeling and Optimization in Mobile, Ad hoc, and Wireless Networks (WiOpt 2021) Philadelphia, PA, Oct 2021.<br>
+                          <a href="/PDL-FTP/associated/WIOPT21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/WIOPT21.pdf">PDF</a> [265K]<br>
+                          <br>
+                        </li>
+                        <li><strong>WineFS: A Hugepage-aware File System for Persistent Memory that Ages Gracefully</strong>. Rohan Kadekodi, Saurabh Kadekodi, Soujanya Ponnapalli, Harshad Shirwadkar, Gregory R. Ganger, Aasheesh Kolli, Vijay Chidambaram. 28th ACM Symposium on Operating Systems Principles (SOSP '21) October 25-28, 2021. <br>
+                          <a href="/PDL-FTP/NVM/wine-sosp21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/wine-sosp21.pdf">PDF</a> [3M]<br>
+                          <br>
+                        </li>
+                        <li><strong>IODA: A Host/Device Co-Design for Strong Predictability Contract on Modern Flash Storage</strong>.  Huaicheng Li, Martin L. Putra, Ronald Shi, Xing Lin, Gregory R. Ganger, Haryadi S. Gunawi. SOSP ’21, October 26-29, 2021, Virtual Event, Germany.<br>
+                          <a href="/PDL-FTP/NVM/Li-SOSP21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/Li-SOSP21.pdf">PDF</a> [710K] / <a href="https://www.youtube.com/watch?v=Scv2M8QIZqE">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Personalized Federated Learning for Heterogeneous Clients with Clustered Knowledge Transfer.</strong> Yae Jee Cho, Jianyu Wang, Tarun Chiruvolu, Gauri Joshi. arXiv:2109.08119v1 [cs.LG] 16 Sep 2021.<br>
+                          <a href="/PDL-FTP/BigLearning/2109.08119_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2109.08119.pdf">PDF</a> [852K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Rateless Codes for Distributed Non-linear Computations</strong>. Ankur Mallick, Sophie Smith, Gauri Joshi. International Symposium on Topics in Coding, Montréal, Québec, Canada, from August 30th to September 3rd, 2021.<br>
+                          <a href="/PDL-FTP/BigLearning/Rateless_Codes-Distributed_NLC_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Rateless_Codes-Distributed_NLC.pdf">PDF</a> [1.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>A Novel Framework for the Analysis and Design of Heterogeneous Federated Learning</strong>. Jianyu Wang, Qinghua Liu, Hao Liang, Gauri Joshi, H. Vincent Poor. IEEE Transactions on Signal Processing, Sept 2021. <br>
+                          <a href="/PDL-FTP/BigLearning/Novel_Framework_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Novel_Framework.pdf">PDF</a> [835K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Cooperative SGD: A Unified Framework for the Analysis of Local-Update</strong>.  Jianyu Wang, Gauri Joshi. SGD Journal of Machine Learning Research (JMLR), 2021. September 2021.<br>
+                          <a href="/PDL-FTP/BigLearning/CoopSGD_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/CoopSGD.pdf">PDF</a> [860K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Kangaroo: Caching Billions of Tiny Objects on Flash</strong>. Sara McAllister, Benjamin Berg, Julian Tutuncu-Macias, Juncheng Yang, Sathya Gunasekar, Jimmy Lu, Daniel Berger, Nathan Beckmann, Gregory R. Ganger. Proceedings of the 28th ACM Symposium on Operating Systems Principles (SOSP '21) October 25-28, 2021. Virtual Event. <strong>BEST PAPER AT SOSP'21!</strong><br>
+                          <a href="/PDL-FTP/NVM/McAllister-SOSP21.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/McAllister-SOSP21.pdf">PDF</a> [7.8M] / <a href="https://youtu.be/d1dFmF3IJOI">Talk Video-Short</a> / <a href="https://youtu.be/bJ4rqSrcVqs">Talk Video-Long</a> / <a href="https://engineering.fb.com/2021/10/26/core-data/kangaroo/">Blog Post</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Irregular Array Codes with Arbitrary Access Sets for Geo-Distributed Storage</strong>. Francisco Maturana, K. V. Rashmi Carnegie Mellon University, Pittsburgh, PA, USA Email: fmaturan@cs.cmu.edu, rvinayak@cs.cmu.edu 2021 IEEE International Symposium on Information Theory (ISIT 2021) 12-20 July 2021 • Melbourne, Victoria, Australia.<br>
+                          <a href="/PDL-FTP/Storage/Irregular_Array_Codes-ISIT21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/Irregular_Array_Codes-ISIT21.pdf">PDF</a> [288K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Bandwidth Cost of Code Conversions in Distributed Storage: Fundamental Limits and Optimal Constructions</strong>. Francisco Maturana, K. V. Rashmi 2021 IEEE International Symposium on Information Theory (ISIT 2021) 12-20 July 2021 • Melbourne, Victoria, Australia.<br>
+                          <a href="/PDL-FTP/Storage/Bandwidth_Cost_of_Code_Conversion-ISIT21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/Bandwidth_Cost_of_Code_Conversion-ISIT21.pdf">PDF</a> [325K]<br>
+                          <br>
+                        </li>
+                        <li><strong>The Processing-in-Memory Model.</strong> Hongbo Kang, Phillip B. Gibbons, Guy E. Blelloch, Laxman Dhulipala, Yan Gu, Charles McGuffey. SPAA '21: Proceedings of the 33rd ACM Symposium on Parallelism in Algorithms and Architectures. July 2021.<br>
+                          <a href="/PDL-FTP/associated/SPAA21ProcessingInMemory_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/SPAA21ProcessingInMemory.pdf">PDF</a> [1.25M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Progressive Compressed Records: Taking a Byte out of Deep Learning Data</strong>. Michael Kuchnik, George Amvrosiadis, Virginia Smith.  Proceedings of the VLDB Endowment, Vol. 14, No. 11 ISSN 2150-8097, July 2021. <br>
+                          <a href="/PDL-FTP/BigLearning/p2627-kuchnik_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/p2627-kuchnik.pdf">PDF</a> [3.86M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Boosting the Throughput and Accelerator Utilization of Specialized CNN Inference Beyond Increasing Batch Size</strong>. Jack Kosaian, Amar Phanishayee, Matthai Philipose, Debadeepta Dey, K. V. Rashmi. Proceedings of the 38th International Conference on Machine Learning, PMLR 139,  18-24 July 2021, Virtual Event. <br>
+                          <a href="/PDL-FTP/BigLearning/Kosaian-icml2021folded-cnns_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/Kosaian-icml2021folded-cnns.pdf">PDF</a> [518K] / <a href="/PDL-FTP/BigLearning/kosaian21a-supp.pdf">Appendix</a> / <a href="https://github.com/msr-fiddle/folded-cnns">Code</a> / <a href="https://slideslive.com/38958707/boosting-the-throughput-and-accelerator-utilization-of-specialized-cnn-inference-beyond-increasing-batch-size?ref=speaker-18793-latest">Slides and Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>DeltaFS: A Scalable No-Ground-Truth Filesystem For Massively-Parallel Computing.</strong> Qing Zheng, Chuck Cranor, Greg Ganger, Garth Gibson, George Amvrosiadis, Brad Settlemyer, Gary Grider. Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-21-101, July 2021.<br>
+                          <a href="/PDL-FTP/Storage/CMU-PDL-21-101_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/CMU-PDL-21-101.pdf">PDF</a> [1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>ZNS: Avoiding the Block Interface Tax for Flash-based SSDs</strong>. Matias Bjørling, Abutalib Aghayev, Hans Holmberg, Aravind Ramesh, Damien Le Moal, Gregory R. Ganger, George Amvrosiadis. USENIX Annual Technical Conference (USENIX 2021), July 14-16, 2021, Virtual Event. <br>
+                          <a href="/PDL-FTP/Storage/USENIX_ATC_2021_ZNS_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/USENIX_ATC_2021_ZNS.pdf">PDF</a> [305K] / <a href="https://www.usenix.org/system/files/atc21_slides_bjorling.pdf">Slides</a> / <a href="https://www.youtube.com/watch?v=FJASdd6r4zo">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning</strong>. Aurick Qiao, Sang Keun Choe, Suhas Jayaram Subramanya, Willie Neiswanger, Qirong Ho, Hao Zhang, Gregory R. Ganger, Eric P. Xing. 15th USENIX Symposium on Operating Systems Design and Implementation, Virtual Event, July 14–16, 2021. <strong>BEST PAPER AT OSDI'21!</strong><br>
+                          <a href="/PDL-FTP/CloudComputing/osdi21-pollux_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/osdi21-pollux.pdf">PDF</a> [930K] / <a href="https://www.usenix.org/system/files/osdi21_slides_qiao.pdf">Slides</a> / <a href="https://www.youtube.com/watch?v=liPzlDAa8Ss">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Block-Granularity-Aware Caching</strong>. Nathan Beckmann, Phillip B. Gibbons, Charles McGuffey. SPAA '21: Proceedings of the 33rd ACM Symposium on Parallelism in Algorithms and Architectures. July 2021. <br>
+                          <a href="/PDL-FTP/ftp/Storage/SPAA21-Beckmann_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/SPAA21-Beckmann.pdf">PDF</a> [880K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Spitfire: A Three-Tier Buffer Manager for Volatile and Non-Volatile Memory</strong>. Xinjing Zhou, Joy Arulraj, Andrew Pavlo, David Cohen. SIGMOD/PODS '21: Proceedings of the 2021 International Conference on Management of Data. June 2021. <br>
+                          <a href="/PDL-FTP/NVM/spitfire_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/spitfire.pdf">PDF</a> [1.28M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Ripple: Profile-Guided Instruction Cache Replacement for Data Center Applications</strong>.  Tanvir Ahmed Khan, Dexin Zhang, Akshitha Sriraman, Joseph Devietti, Gilles A Pokam, Heiner Litz, Baris Kasikci.International Symposium on Computer Architecture (ISCA), June 2021.<br>
+                          <a href="/PDL-FTP/associated/ripple_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/ripple.pdf">PDF</a> [770K]<a href="https://www.youtube.com/watch?v=liPzlDAa8Ss"><br>
+                            </a><br>
+                        </li>
+                        <li><strong>MB2: Decomposed Behavior Modeling for Self-Driving Database Management Systems</strong>. Lin Ma, William Zhang, Jie Jiao, Wuwen Wang, Matthew Butrovich, Wan Shen Lim, Prashanth Menon, Andrew Pavlo. SIGMOD ’21, June 20–25, 2021, Virtual Event, China. <br>
+                          <a href="/PDL-FTP/Database/ma-sigmod2021_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/ma-sigmod2021.pdf">PDF</a> [1.25M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Filter Representation in Vectorized Query Execution</strong>. Amadou Ngom, Prashanth Menon, Matthew Butrovich, Lin Ma, Wan Shen Lim, Todd C. Mowry, Andrew Pavlo. International Workshop on Data Management on New Hardware, pages. 6:1—6:7, June 2021. <br>
+                          <a href="/PDL-FTP/Database/ngom-damon2021_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/ngom-damon2021.pdf">PDF</a> [720K]<br>
+                          <br>
+                        </li>
+                        <li><strong>HerQules: Securing Programs via Hardware-Enforced Message Queues</strong>. Daming D. Chen, Wen Shih Lim, Mohammad Bakhshalipour, Phillip B. Gibbons, James C. Hoe, Bryan Parno. ASPLOS ’21, April 19–23, 2021, Virtual, USA.<br>
+                          <a href="/PDL-FTP/associated/chen-asplos21-paper548_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/chen-asplos21-paper548.pdf">PDF</a> [1.7M] / <a href="/PDL-FTP/videos/herqules_5min.mp4">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Segcache: A Memory-efficient and Scalable In-memory Key-value Cache for Small Objects. </strong>Juncheng Yang, Yao Yue, K. V. Rashmi. 18th USENIX Symposium on Networked Systems Design and Implementation (NSDI). Virtual Event, April 12–14, 2021. <strong>NSDI'21 Community Award and NSDI'21 BEST PAPER AWARD!</strong><br>
+                          <a href="/PDL-FTP/Storage/NSDI21_segcache_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/NSDI21_segcache.pdf">PDF</a> [517K] / <a href="https://www.usenix.org/system/files/nsdi21_slides_yang-juncheng.pdf">Slides</a> / <a href="https://www.youtube.com/watch?v=s7YtO0rk9WM">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Learning on Distributed Traces for Data Center Storage Systems.</strong> Giulio Zhou, Martin Maas Conference on Machine Learning and Systems '21, April 5-9, 2021. Virtual Event.<br>
+                          <a href="/PDL-FTP/Storage/MLSys2021-zhou_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/MLSys2021-zhou.pdf">PDF</a> [1.3M] / <a href="https://mlsys.org/virtual/2021/oral/1627">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>CORTEX: A Compiler for Recursive Deep Learning Models</strong>. Pratik Fegade, Tianqi Chen, Phillip B. Gibbons, Todd C. Mowry. Proceedings of the 4th MLSys Conference, San Jose, CA, USA, Apr 4-7, 2021.<br>
+                          <a href="/PDL-FTP/BigLearning/MLSys21-cortex_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/MLSys21-cortex.pdf">PDF</a> [622K] / <a href="https://slideslive.com/38955080/session-2-compilers">Talk Video</a> (starts at 29:41)<br>
+                          <br>
+                        </li>
+                        <li><strong>Distributed Metadata and Streaming Data Indexing as Scalable Filesystem Services</strong>. Qing Zheng.  Carnegie Mellon University School of Computer Science Ph.D. Dissertation, CMU-CS-21-103. February 2021.<br>
+                          <a href="/PDL-FTP/Storage/q_zheng_csd_2021_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/q_zheng_csd_2021.pdf">PDF</a> [2.1M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Open Problems in Queueing Theory Inspired by Datacenter Computing</strong>. Mor Harchol-Balter. Queueing Systems, vol. 97, no. 1, February 2021, pp. 3-37. <br>
+                          <a href="/PDL-FTP/CloudComputing/QUESTA21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/QUESTA21.pdf">PDF</a> [690K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Everything is a Transaction: Unifying Logical Concurrency Control and Physical Data Structure Maintenance in Database Management Systems</strong>. Ling Zhang, Matthew Butrovich, Tianyu Li, Yash Nannapanei, Andrew Pavlo, John Rollinson, Huanchen Zhang, Ambarish Balakumar, Daniel Biales, Ziqi Dong, Emmanuel Eppinger, Jordi Gonzalez, Wan Shen Lim, Jianqiao Liu, Lin Ma, Prashanth Menon, Soumil Mukherjee, Tanuj Nayak, Amadou Ngom, Jeff Niu, Deepayan Patra, Poojita Raj, Stephanie Wang, Wuwen Wang, Yao Yu, William Zhang. Conference on Innovative Data Systems Research (CIDR) 2021. January 11-15, 2021. Virtual Event.<br>
+                          <a href="/PDL-FTP/Database/zhang-CIDR21_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/zhang-CIDR21.pdf">PDF</a> [352K] / <a href="https://m.youtube.com/watch?v=vZX4f9rT694">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>The Read-Only Semi-External Model</strong>. Guy E. Blelloch, Laxman Dhulipala, Phillip B. Gibbons, Yan Gu, Charles McGuffey, Julian Shun. APOCS 2021, January 13, 2021 Virtual Conference, Alexandria, Virginia, U.S. <br>
+                          <a href="/PDL-FTP/associated/ROSE_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/ROSE.pdf">PDF</a> [740K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Unearthing Inter-job Dependencies for Better Cluster Scheduling</strong>. Andrew Chung, Subru Krishnan, Konstantinos Karanasos, Carlo Curino, Gregory R. Ganger. 14th USENIX Symposium on Operating Systems Design and Implementation (OSDI'20), Virtual Event, Nov. 4–6, 2020.<br>
+                          <a href="/PDL-FTP/CloudComputing/chung-osdi20-final136_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/chung-osdi20-final136.pdf">PDF</a> [1.0M] / <a href="/PDL-FTP/slides/2020/osdi20_slides_chung.pdf">Slides</a> / <a href="https://youtu.be/iCw-10lXr9I">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>PACEMAKER: Avoiding HeART Attacks in Storage Clusters with Disk-adaptive Redundancy. </strong>Saurabh Kadekodi, Francisco Maturana, Suhas Jayaram Subramanya, Juncheng Yang, K. V. Rashmi, Gregory R. Ganger. 14th USENIX Symposium on Operating Systems Design and Implementation (OSDI'20), Virtual Event, Nov. 4–6, 2020.<br>
+                          <a href="/PDL-FTP/Storage/kadekodi-osdi20-final310_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/kadekodi-osdi20-final310.pdf">PDF</a> [2.1M] / <a href="/PDL-FTP/slides/2020/osdi20_slides_kadekodi_0.pdf">Slides</a> / <a href="https://youtu.be/uAEV3jiGrAc">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>The CacheLib Caching Engine: Design and Experiences at Scale</strong>. Benjamin Berg, Daniel S. Berger, Sara McAllister, Isaac Grosof, Sathya Gunasekar, Jimmy Lu, Michael Uhlar, Jim Carrig, Nathan Beckmann, Mor Harchol-Balter, Gregory R. Ganger. 14th USENIX Symposium on Operating Systems Design and Implementation (OSDI'20), Virtual Event, Nov. 4–6, 2020.<br>
+                          <a href="/PDL-FTP/CloudComputing/cache-lib-osdi20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/cache-lib-osdi20.pdf">PDF</a> [606K] / <a href="/PDL-FTP/slides/2020/osdi20_slides_berg.pdf">Slides</a> / <a href="https://youtu.be/JIM08lWPvNs">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>A Large Scale Analysis of Hundreds of In-memory Cache Clusters at Twitter</strong>. Juncheng Yang, Yao Yue, K. V. Rashmi. 14th USENIX Symposium on Operating Systems Design and Implementation (OSDI'20), Virtual Event, Nov. 4–6, 2020.<br>
+                          <a href="/PDL-FTP/associated/OSDI20_TwemcacheWorkload_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/OSDI20_TwemcacheWorkload.pdf">PDF</a> [1.6M] / <a href="/PDL-FTP/slides/2020/osdi20_slides_yang.pdf">Slides</a> / <a href="https://youtu.be/OQtMM5vdhlI">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Permutable Compiled Queries: Dynamically Adapting Compiled Queries without Recompiling</strong>. Prashanth Menon, Amadou Ngom, Lin Ma, Todd C. Mowry, Andrew Pavlo. Proceedings of the VLDB Endowment, vol. 14, iss. 2, pages. 101—113, October 2020. <br>
+                          <a href="/PDL-FTP/Database/p101-menon_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p101-menon.pdf">PDF</a> [904K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Mainlining Databases: Supporting Fast Transactional Workloads on Universal Columnar Data File Formats</strong>.  Tianyu Li, Matthew Butrovich, Amadou Ngom, Wan Shen Lim, Wes McKinney, Andrew Pavlo. Proceedings of the VLDB Endowment, Vol. 14, No. 4 ISSN 2150-8097, pp. 534-546, Dec. 2020.<br>
+                          <a href="/PDL-FTP/Database/p534-li_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p534-li.pdf">PDF</a> [633K]<br>
+                          <br>
+                        </li>
+                        <li><strong>GenASM: A High-Performance, Low-Power Approximate String Matching Acceleration Framework for Genome Sequence Analysis</strong>. Damla Senol Cali, Gurpreet S. Kalsi, Zülal Bingöl, Can Firtina, Lavanya Subramanian, Jeremie S. Kim, Rachata Ausavarungnirun, Mohammed Alser, Juan Gomez-Luna, Amirali Boroumand, Anant Nori, Allison Scibisz, Sreenivas Subramoney, Can Alkan, Saugata Ghose, Onur Mutlu. MICRO’20. 53rd IEEE/ACM International Symposium on Microarchitecture, Oct 17-21, 2020. Virtual Event.<br>
+                          <a href="/PDL-FTP/associated/GenASM-micro20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/GenASM-micro20.pdf">PDF</a> [1.3M] / <a href="https://people.inf.ethz.ch/omutlu/pub/GenASM-approximate-string-matching-framework-for-genome-analysis_micro20-talk.pdf">Slides</a> / <a href="https://www.youtube.com/watch?v=srQVqPJFqjo">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li> <strong>Jumanji: The Case for Dynamic NUCA in the Datacenter</strong>. Brian Schwedock, Nathan Beckmann. MICRO '53: Proceedings of the 53nd Annual IEEE/ACM International Symposium on Microarchitecture, Virtual Athens, Greece, October 17-21, 2020.<br>
+                          <a href="/PDL-FTP/associated/2020.micro.jumanji_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2020.micro.jumanji.pdf">PDF</a> [2.3M] / <a href="/PDL-FTP/associated/2020.micro.jumanji_slides.pdf">Slides</a> / <a href="https://www.youtube.com/watch?v=3cRPxFr34ig">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Challenges and Solutions for Fast Remote Persistent Memory Access</strong>. Anuj Kalia, David Andersen, Michael Kaminsky. SoCC ’20, October 19–21, 2020, Virtual Event, USA. <em>BEST PAPER AWARD!</em><br>
+                          <a href="/PDL-FTP/NVM/kalia-SoCC20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/kalia-SoCC20.pdf">PDF</a> [710K] / <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3419111.3421294&file=p105-kalia-presentation.mp4&download=true">Talk Video</a> <br>
+                          <br>
+                        </li>
+                        <li><strong>High Availability in Cheap Distributed Key Value Storage</strong>. Thomas Kim, Daniel Lin-Kit Wong, Gregory R. Ganger, Michael Kaminsky, David G. Andersen. SoCC ’20, October 19–21, 2020, Virtual Event, USA. <br>
+                          <a href="../ftp/NVM/socc20-final183_abs.shtml">Abstract</a> / <a href="../ftp/NVM/socc20-final183.pdf">PDF</a> [2.6M] / <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3419111.3421290&file=p165-kim-presentation.mp4&download=true">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Streaming Data Reorganization at Scale with DeltaFS Indexed Massive Directories</strong>. Qing Zheng, Charles D. Cranor, Ankush Jain, Gregory R. Ganger, Garth A. Gibson,  George Amvrosiadis, Bradley W. Settlemyer, Gary Grider. ACM Transactions on Storage, Vol. 16, No. 4, Article 23. September 2020.<br>
+                          <a href="/PDL-FTP/Storage/ACMToS-0920_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/ACMToS-0920.pdf">PDF</a> [2.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Unleashing In-network Computing on Scientific Workloads</strong>. Daehyeok Kim, Ankush Jain, Zaoxing Liu, George Amvrosiadis, Damian Hazen, Bradley Settlemyer, Vyas Sekar. arXiv:2009.02457v1 [cs.NI], 5 Sep 2020.<br>
+                          <a href="/PDL-FTP/associated/kim-unleashing-arxiv-9-20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/kim-unleashing-arxiv-9-20.pdf">PDF</a> [1.25M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Accelerating Genome Analysis: A Primer on an Ongoing Journey</strong>. Mohammed Alser, Zülal Bingöl, Damla Senol Cali, Jeremie Kim, Saugata Ghose, Can Alkan, Onur Mutlu. This is an extended and updated version of a paper published in IEEE Micro, vol. 40, no. 5, pp. 65-75, 1 Sept.-Oct. 2020.<br>
+                          <a href="/PDL-FTP/associated/AcceleratingGenomeAnalysis_ieeemicro20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/AcceleratingGenomeAnalysis_ieeemicro20.pdf">PDF</a> [320K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Caching with Delayed Hits</strong>. Nirav Atre, Justine Sherry, Weina Wang, Daniel S. Berger. SIGCOMM ’20, August 10–14, 2020, Virtual Event, NY, USA.<br>
+                          <a href="/PDL-FTP/Storage/sigcomm2020-natre_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/sigcomm2020-natre.pdf">PDF</a> [2.7M] / <a href="https://dl.acm.org/action/downloadSupplement?doi=10.1145%2F3387514.3405883&file=3387514.3405883.mp4&download=true">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Lightweight Preemptible Functions</strong>. Sol Boucher, Anuj Kalia, David G. Andersen, Michael Kaminsky. 2020 USENIX Annual Technical Conference (USENIX ATC '20). Virtual Boston, MA, July 15–17, 2020.<br>
+                          <a href="/PDL-FTP/associated/atc20-boucher_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/atc20-boucher.pdf">PDF</a> [1M] / <a href="https://youtu.be/haFknfKI3Sk">Talk Video</a> / <a href="/PDL-FTP/slides/2020/atc20-paper198-slides-boucher.pdf">Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Fast Software Cache Design for Network Appliances.</strong> Dong Zhou, Huacheng Yu, Michael Kaminsky, David Andersen. 2020 USENIX Annual Technical Conference (USENIX ATC '20). Virtual Boston, MA, July 15–17, 2020. <br>
+                          <a href="/PDL-FTP/Storage/atc20-zhou_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/atc20-zhou.pdf">PDF</a> [11M] / <a href="https://youtu.be/VR68-d9qf4Y">Talk Video</a> / <a href="/PDL-FTP/slides/2020/atc20-paper1-slides-zhou.pdf">Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>More IOPS for Less: Exploiting Burstable Storage in Public Clouds</strong>. Hojin Park, Gregory R. Ganger, George Amvrosiadis. 12th USENIX Workshop on Hot Topics in Cloud Computing (HotCloud ’20). Virtual Boston, MA, July 13-14, 2020.<br>
+                          <a href="/PDL-FTP/Storage/hotcloud20-hojin-park_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/hotcloud20-hojin-park.pdf">PDF</a> [600K] / <a href="https://youtu.be/gra0bowP3Os">Talk Video</a> / <a href="../ftp/slides/2020/hotcloud20-paper30-slides-park.pdf">Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>DriftSurf: A Risk-competitive Learning Algorithm under Concept Drift</strong>. 
+                          Ashraf Tahmasbi, Ellango Jothimurugesan, Srikanta Tirthapura, Phillip B. Gibbons. 
+                          arXiv:2003.06508 [cs.LG], August, 2020.<br>
+                          <a href="/PDL-FTP/BigLearning/driftsurf_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/driftsurf.pdf">PDF</a> [1.2M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Machine Learning on Volatile Instances</strong>. 
+                          Xiaoxi Zhang, Jianyu Wang, Gauri Joshi, Carlee Joe-Wong. 
+                          IEEE Intl. Conf. on Computer Communications (INFOCOM). Virtual Toronto, Canada, July 6-9, 2020.<br>
+                          <a href="/PDL-FTP/CloudComputing/zhang2020machine_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/zhang2020machine.pdf">PDF</a> [516K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Simple Near-Optimal Scheduling for the M/G/1</strong>. 
+                          Ziv Scully, Mor Harchol-Balter, Alan Scheller-Wolf. 
+                          Proceedings of the ACM Measurement and Analysis of Computer Systems - SIGMETRICS,  June 2020, Boston, MA.<br>
+                          <a href="/PDL-FTP/associated/Sigmetrics20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/Sigmetrics20.pdf">PDF</a> [885K] / <a href="https://www.youtube.com/watch?v=PXZ3ReFdRmQ">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Access-optimal Linear MDS Convertible Codes for All Parameters</strong>. Francisco Maturana, V. S. Chaitanya Mukka, K. V. Rashmi. 2020 IEEE International Symposium on Information Theory 21-26 June 2020 • Virtual Los Angeles, California, USA.<br>
+                          <a href="/PDL-FTP/BigLearning/linearMDS_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/linearMDS.pdf">PDF</a> [287K] / <a href="https://2020.ieee-isit-virtual.org/presentation/lecture/access-optimal-linear-mds-convertible-codes-all-parameters">Talk Video</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Order-Preserving Key Compression for In-Memory Search Trees</strong>. 
+                          Huanchen Zhang, Xiaoxuan Liu, David G. Andersen, Michael Kaminsky, Kimberly Keeton, Andrew Pavlo<br>
+                          SIGMOD’20, June 14–19, 2020. Virtual Portland, OR.<br>
+                          <a href="/PDL-FTP/Storage/zhang-sigmod20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/zhang-sigmod20.pdf">PDF</a> [2.15M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Improving Approximate Nearest Neighbor Search through Learned Adaptive Early Termination</strong>. Conglong Li, Minjia Zhang, David G. Andersen, Yuxiong He. SIGMOD ’20, June 14–19, 2020, Virtual Portland, OR, USA.<br>
+                          <a href="/PDL-FTP/BigLearning/mod0246-liA_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/mod0246-liA.pdf">PDF</a> [800K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Active Learning for ML Enhanced Database Systems</strong>. Lin Ma, Bailu Ding,  Sudipto Das, Adith Swaminathan. SIGMOD’20, June 14–19, 2020. Virtual Portland, OR.<br>
+                          <a href="/PDL-FTP/BigLearning/2020.active.sigmod_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/2020.active.sigmod.pdf">PDF</a> [2.4M]<br>
+                          <br>
+                        </li>
+                        <li><strong>TVARAK: Software-Managed Hardware Offload for Redundancy in Direct-Access NVM Storage</strong>. Rajat Kateja, Nathan Beckmann, Gregory R. Ganger. 47th  International Symposium on Computer Architecture, May 30 – June 3, 2020, Virtual Valencia, Spain.<br>
+                          <a href="/PDL-FTP/NVM/isca20-nvm-redundancy_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/isca20-nvm-redundancy.pdf">PDF</a> [1.6M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Sage: Parallel SemiAsymmetric Graph Algorithms for NVRAMs</strong>. Laxman Dhulipala, Charles McGuffey, Hongbo Kang, Yan Gu, Guy E. Blelloch, Phillip B. Gibbons, Julian Shun, Proceedings of the VLDB Endowment, Vol. 13, No. 9. May 2020.<br>
+                          <a href="/PDL-FTP/NVM/sage-vldb_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/sage-vldb.pdf">PDF</a> [630K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Overlap Local-SGD: An Algorithmic Approach to Hide Communication Delays in Distributed SGD</strong>. 
+                          Jianyu Wang, Hao Liang, Gauri Joshi. 
+                          International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2020. Virtual Barcelona, Spain, May 4-8, 2020.<br>
+                          <a href="/PDL-FTP/associated/overlap_local_SGD_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/overlap_local_SGD.pdf">PDF</a> [442K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Correlated Multi-armed Bandits with a Latent Random Source</strong>. 
+                          Samarth Gupta, Gauri Joshi, Osman Yağan. 
+                          International Conference on Acoustics, Speech, and Signal Processing (ICASSP) 2020. Virtual Barcelona, Spain, May 4-8, 2020.<br>
+                          <a href="/PDL-FTP/associated/1808.05904_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/1808.05904.pdf">PDF</a> [1.1M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Lookahead Converges to Stationary Points of Smooth Non-Convex Functions</strong>. 
+                          Jianyu Wang, Vinayak Tantia, Nicolas Ballas, Michael Rabbat. 
+                          ICASSP 2020: 45th International Conference on Acoustics, Speech, and Signal Processing. Virtual Barcelona, Spain, May 4-8, 2020.<br>
+                          <a href="/PDL-FTP/CloudComputing/Lookahead-converges_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/Lookahead-converges.pdf">PDF</a> [242K] <br>
+                          <br>
+                        </li>
+                        <li><strong>SlowMo: Improving Communication-Efficient Distributed SGD with Slow Momentum</strong>. 
+                          Jianyu Wang, Vinayak Tantia, Nicolas Ballas, Michael Rabbat. 
+                          ICLR 2020: International Conference on Learning Representations,  Apr 26-May 1, 2020, Virtual  Addis Ababa, Ethiopia.<br>
+                          <a href="/PDL-FTP/associated/SlowMo_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/SlowMo.pdf">PDF</a> [640K] / <a href="https://iclr.cc/virtual/poster_SkxJ8REYPH.html">Talk Video &amp; Slides</a><br>
+                          <br>
+                        </li>
+                        <li><strong>Vilamb: Low Overhead Asynchronous Redundancy for Direct Access NVM</strong>. 
+                          Rajat Kateja, Andy Pavlo, Gregory R. Ganger. 
+                          Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-20-101, April 2020.<br>
+                          <a href="/PDL-FTP/NVM/CMU-PDL-20-101_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/CMU-PDL-20-101.pdf">PDF</a> [665K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Learning-Based Coded Computation</strong>. Jack Kosaian, K.V. Rashmi, Shivaram Venkataraman. IEEE Journal on Selected Areas in Information Theory, March 2020.<br>
+                          <a href="/PDL-FTP/BigLearning/kosaian2020learning-based-coded-computation_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/kosaian2020learning-based-coded-computation.pdf">PDF</a> [654K]<br>
+                          <br>
+                        </li>
+                        <li><strong>The Case for Custom Storage Backends in Distributed Storage Systems</strong>. 
+                          Abutalib Aghayev, Sage Weil, Michael Kuchnik, Mark Nelson, Gregory R. Ganger, George Amvrosiadis. 
+                          To appear in ACM Transactions on Storage, Volume 16, Issue 1, March 2020.<br>
+                          <a href="/PDL-FTP/Storage/TOS1602-09_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/TOS1602-09.pdf">PDF</a> [2.6M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Livia: Data-Centric Computing Throughout the Memory Hierarchy</strong>. 
+                          Elliot Lockerman, Axel Feldmann, Mohammad Bakhshalipour, Alexandru Stanescu, Shashwat Gupta, Daniel Sanchez, Nathan Beckmann. 
+                          ASPLOS '20: Proceedings of the 25th International Conference on Architectural Support for Programming Languages and Operating Systems, Virtual Lausanne, Switzerland, March 16-20, March 2020. <br>
+                          <a href="/PDL-FTP/associated/aspolos20-lockerman_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/aspolos20-lockerman.pdf">PDF</a> [1.6M] / <a href="https://www.youtube.com/watch?v=Vu_ibDPRjOU&list=PLsLWHLZB96VeVp3IVzvSH58ttVz_Anr7H&index=19&t=0s">Talk Video</a><br>
+                          <strong><br>
+                          </strong></li>
+                        <li><strong>Learning Relaxed Belady for Content Distribution Network Caching</strong>. 
+                          Zhenyu Song, Daniel S. Berger, Kai Li, Wyatt Lloyd. 
+                          17th USENIX Symposium on Networked Systems Design and Implementation (NSDI ’20). February 25–27, 2020. Santa Clara, CA.<br>
+                          <a href="/PDL-FTP/associated/nsdi20-paper-song_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/nsdi20-paper-song.pdf">PDF</a> [2.25M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Scalable Pointer Analysis of Data Structures using Semantic Models</strong>. Pratik Fegade, Christian Wimmer. 29th Conference on Compiler Construction (CC ’20), February 22–23, 2020, San Diego, CA, USA.<br>
+                          <a href="/PDL-FTP/associated/fegade-CC20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/fegade-CC20.pdf">PDF</a> [700K]<br>
+                          <br>
+                        </li>
+                        <li><strong>Convertible Codes: New Class of Codes for Efficient Conversion of Coded Data in Distributed 
+                          Storage</strong>. 
+                          Francisco Maturana, K. V. Rashmi. 
+                          11th Innovations in Theoretical Computer Science Conference (ITCS 2020). Seattle, WA, January 12-14, 2020.<br>
+                          <a href="/PDL-FTP/BigLearning/LIPIcs-ITCS-2020-66_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/LIPIcs-ITCS-2020-66.pdf">PDF</a> [687K] <br>
+                          <br>
+                        </li>
+                        <li><strong>Mochi: Composing Data Services for High-Performance Computing Environments</strong>. Robert B. Ross, George Amvrosiadis, Philip Carns, Charles D. Cranor, Matthieu Dorier, Kevin Harms, Gregory R. Ganger, Garth A. Gibson, Samuel K. Gutierrez, Robert Latham, Bob Robey, Dana Robinson, Bradley Settlemyer, Galen Shipman, Shane Snyder, Jerome Soumagne, Qing Zheng. Journal of Computer Science and Technology 35(1): 121&ndash;144 Jan. 2020. <br />
+                          <a href="/PDL-FTP/HECStorage/Mochi-JCST-01-20_abs.shtml">Abstract</a> / <a href="/PDL-FTP/HECStorage/Mochi-JCST-01-20.pdf">PDF</a> [1.3M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Writeback-Aware Caching</strong>. 
+                          Nathan Beckmann, Phillip B. Gibbons, Bernhard Haeupler, Charles McGuffey. 
+                          Society for Industrial and Applied Mathematics. 2020.<br>
+                          <a href="/PDL-FTP/Storage/2020.apocs.writeback_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/2020.apocs.writeback.pdf">PDF</a> [847K] <br>
+                          <br>
+                        </li>
+                        <li><strong>MATCHA: Speeding Up Decentralized SGD via Matching Decomposition Sampling</strong>. 
+                          Jianyu Wang, Anit Sahu, Gauri Joshi, Soummya Kar. 
+                          NeurIPS workshop of Federated Learning for Data Privacy and Confidentiality, Dec 13, 2019. Vancouver, BC, Canada. <strong>Distinguished Student Paper Award</strong>.<br>
+                          <a href="/PDL-FTP/associated/1905.09435_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/1905.09435.pdf">PDF</a> [1.1M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Rateless Codes for Near-Perfect Load Balancing in Distributed Matrix-vector Multiplication</strong>. 
+                          Ankur Mallick, Malhar Chaudhari, Ganesh Palanikumar, Utsav Sheth, Gauri Joshi. 
+                          Proc. ACM Meas. Anal. Comput. Syst., Vol. 3, No. 3, Article 58. December 2019. <strong>BEST PAPER SIGMETRICS'20</strong>.<br>
+                          <a href="/PDL-FTP/associated/1804.10331_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/1804.10331.pdf">PDF</a> [1.9M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Demystifying Complex Workload–DRAM Interactions: An Experimental Study</strong>. 
+                          Saugata. Ghose, Tianshi Li, Nastaran Hajinazar, Damla Senol Cali, Onur Mutlu. 
+                          Proc. of the Joint ACM SIGMETRICS/IFIP Performance Conference, Phoenix, AZ, June 2019.
+                          To appear in Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS), Vol. 3, No. 3, December 2019.<br>
+                          <a href="/PDL-FTP/associated/19sigmetrics_dramcharacterization_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/19sigmetrics_dramcharacterization.pdf">PDF</a> [4M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Processing-in-Memory: A Workload-Driven Perspective</strong>. 
+                          Saugata Ghose, Amarali Boroumand, Jeremie. S. Kim, Juan. Gómez-Luna,  Onur Mutlu. 
+                          IBM Journal of Research and Development (JRD), Vol. 63, No. 6, November/December 2019.<br>
+                          <a href="/PDL-FTP/associated/1907.12947_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/19ibmjrd_pim.pdf">PDF</a> [2.1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>MANIC: A Vector-Dataflow Architecture for Ultra-Low-Power Embedded Systems</strong>. 
+                          Graham, Amolak Nagi, Nathan Serafin, Mehmet Meric Isgenc, Nathan Beckmann, Brandon Lucia. 
+                          MICRO '52: Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture, Columbus, OH, October 2019.<br>
+                          <a href="/PDL-FTP/PowerMgmt/micro52Gobieski_abs.shtml">Abstract</a> / <a href="/PDL-FTP/PowerMgmt/micro52Gobieski.pdf">PDF</a> [1.2M] <br>
+                          <br>
+                        </li>
+                        <li><strong>File Systems Unfit as Distributed Storage Backends: Lessons from 10 Years of Ceph Evolution</strong>. Abutalib Aghayev, Sage Weil, Michael Kuchnik, Mark Nelson, Gregory R. Ganger, George Amvrosiadis. SOSP &rsquo;19, October 27&ndash;30, 2019, Huntsville, ON, Canada.<br />
+                          <a href="/PDL-FTP/Storage/ceph-exp-sosp19_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/ceph-exp-sosp19.pdf">PDF</a> [870K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Parity Models: Erasure-Coded Resilience for Prediction Serving Systems</strong>. Jack Kosaian, K. V. Rashmi, Shivaram Venkataraman.  SOSP &rsquo;19, October 27&ndash;30, 2019, Huntsville, ON, Canada. <br />
+                          <a href="/PDL-FTP/BigLearning/parity_models-sosp19_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/parity_models-sosp19.pdf">PDF</a> [1M]<br />
+                          <br />
+                        </li>
+                        <li><strong>PipeDream: Generalized Pipeline Parallelism for DNN Training</strong>. Deepak Narayanan, Aaron Harlap, Amar Phanishayee, Vivek Seshadri, Nikhil R. Devanur, Gregory R. Ganger, Phillip B. Gibbons, Matei Zaharia. SOSP &rsquo;19, October 27&ndash;30, 2019, Huntsville, ON, Canada.<br />
+                          <a href="/PDL-FTP/BigLearning/sosp19-final271_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/sosp19-final271.pdf">PDF</a> [1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Efficient Remote Procedure Calls for Datacenters</strong>. Anuj Kalia. Carnegie Mellon University PhD Dissertation CMU-CS-19-126, September 2019.<br>
+                          <a href="/PDL-FTP/CloudComputing/CMU-CS-19-126_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/CMU-CS-19-126.pdf">PDF</a> [1.7M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Multiversioned Page Overlays: Enabling Faster Serializable Hardware Transactional Memory</strong>. Ziqi Wang, Michael A. Kozuch, Todd C. Mowry, Vivek Seshadri. 28th Parallel Architecture and Compiler Technologies 2019 (PACT'19), Sept 21-25, 2019, Seattle, WA.<br />
+                          <a href="/PDL-FTP/Storage/overlay-tm_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/overlay-tm.pdf">PDF</a> [475K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Compact Filters for Fast Online Data Partitioning</strong>. Qing Zheng, Charles D. Cranor, Ankush Jain, Gregory R. Ganger, Garth A. Gibson, George Amvrosiadis, Bradley W. Settlemyer, Gary Grider. IEEE CLUSTER 2019. September 23 - 26, 2019, Albuquerque, New Mexico, USA.<br />
+                          <a href="/PDL-FTPp/HECStorage/pap173s3_abs.shtml">Abstract</a> / <a href="/PDL-FTP/HECStorage/pap173s3.pdf">PDF</a> [1M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Vantage: Optimizing Video Upload for Time-shifted Viewing of Social Livestreams</strong>. 
+                          Devdeep Ray, Jack Kosaian, K. V. Rashmi, Srinivasan Seshan. 
+                          ACM SIGCOMM, August 19-24, 2019, Beijing, China.<br>
+                          <a href="/PDL-FTP/associated/vantage_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/vantage.pdf">PDF</a> [6.75M] <br />
+                          <br />
+                        </li>
+                        <li><strong>TVARAK: Software-Managed Hardware Offload for DAX NVM Storage Redundancy</strong>. Rajat Kateja, Nathan Beckmann, Gregory R. Ganger. Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-19-105, Aug 2019. <br />
+                          <a href="/PDL-FTP/NVM/CMU-PDL-19-105_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/CMU-PDL-19-105.pdf">PDF</a> [975K]<br />
+                          <br />
+                        </li>
+                        <li><strong>STRADS-AP: Simplifying Distributed Machine Learning Programming without Introducing a New Programming Model</strong>.  Jin Kyu Kim, Abutalib Aghayev, Garth A. Gibson, Eric P. Xing. Proceedings of the 2019 USENIX Annual Technical Conference, July 10&ndash;12, 2019 &bull; Renton, WA.<br />
+                          <a href="/PDL-FTP/Storage/atc19-kim-jin-kyu_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/atc19-kim-jin-kyu.pdf">PDF</a> [490K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Rateless Codes for Distributed Computations with Sparse Compressed Matrices</strong>. Ankur Mallick, Gauri Joshi. IEEE International Symposium on Information Theory (ISIT), July 7-12, 2019, Paris, France. <br />
+                          <a href="/PDL-FTP/BigLearning/rateless_coded_computing_icassp_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/rateless_coded_sparse.pdf">PDF</a> [672K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Peering through the Dark: An Owl&rsquo;s View of Inter-job Dependencies and Jobs&rsquo; Impact in Shared Clusters</strong>. Andrew Chung, Carlo Curino, Subru Krishnan, Konstantinos Karanasos, Panagiotis Garefalakis, Gregory R. Ganger. SIGMOD &rsquo;19, June 30&ndash;July 5, 2019, Amsterdam, Netherlands.<br />
+                          <a href="/PDL-FTP/CloudComputing/p1889-chung_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/p1889-chung.pdf">PDF</a> [1.6M]<br />
+                          <br />
+                        </li>
+                        <li><strong>Distribution-based Cluster Scheduling</strong>. Jun Woo Park. Carnegie Mellon University School of Computer Science PhD Dissertation, June 2019. <br />
+                          <a href="/PDL-FTP/CloudComputing/junwoopark_dissertation_2019_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/junwoopark_dissertation_2019.pdf">PDF</a> [1.47M]<br />
+                          <br />
+                        </li>
+                        <li><strong>Enabling Practical Processing in and Near Memory for Data-Intensive Computing</strong>. Onur Mutlu, Saugata Ghose, Juan G&oacute;mez-Luna, Rachata Ausavarungnirun. Proc. of the Design Automation Conference (DAC), Las Vegas, NV, June 2019.<br />
+                          <a href="/PDL-FTP/associated/19dac_pim_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/19dac_pim.pdf">PDF</a> [477K]<br />
+                          <br />
+                        </li>
+                        <li><strong>CROW: A Low-Cost Substrate for Improving DRAM Performance, Energy Efficiency, and Reliability</strong>. Hasan Hassan, Minesh Patel, Jeremie. S. Kim, A. Giray Yaglik&ccedil;i, Nandita Vijaykumar, Nika Mansouri Ghiasi, Saugata Ghose, Onur Mutlu. Proc. of the International Symposium on Computer Architecture (ISCA), Phoenix, AZ, June 2019.<br />
+                          <a href="/PDL-FTP/associated/19isca_crow_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/19isca_crow.pdf">PDF</a> [1.45M]<br />
+                          <br />
+                        </li>
+                        <li><strong>CoNDA: Efficient Cache Coherence Support for Near-Data Accelerators</strong>. Amarali Boroumand, Saugata Ghose, Minesh Patel, Hasan Hassan, Brandon Lucia, Rachata Ausavarungnirun, Kevin Hsieh, Nastaran Hajinazar, Krishna T. Malladi, Hongzhong Zheng, Onur Mutlu. Proc. of the International Symposium on Computer Architecture (ISCA), Phoenix, AZ, June 2019.<br />
+                          <a href="/PDL-FTP/associated/19isca_conda_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/19isca_conda.pdf">PDF</a> [1.1M]<br />
+                          <br />
+                        </li>
+                        <li><strong>Understanding the Interactions ofWorkloads and DRAM Types: A Comprehensive Experimental Study</strong>. Saugata Ghose, Tianshi Li, Nastaran Hajinazar, Damla Senol Cali, Onur Mutlu. Proc. of the Joint ACM SIGMETRICS/IFIP Performance Conference, Phoenix, AZ, June 2019; To appear in Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS), 2019. <br />
+                          <a href="/PDL-FTP/associated/1902.07609_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/1902.07609.pdf">PDF</a> [2M]<br />
+                          <br />
+                        </li>
+                        <li><strong>Compact Filter Structures for Fast Data Partitioning</strong>.  Qing Zheng, Charles D. Cranor, Ankush Jain, Gregory R. Ganger, Garth A. Gibson, George Amvrosiadis, Bradley W. Settlemyer, Gary A. Grider. Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-19-104, June 2019. <br />
+                          <a href="/PDL-FTP/HECStorage/CMU-PDL-19-104_abs.shtml">Abstract</a> / <a href="/PDL-FTP/HECStorage/CMU-PDL-19-104.pdf">PDF</a>[574K] <br />
+                          <br />
+                        </li>
+                        <li><strong>Improving ML Applications in Shared Computing Environments</strong>. Aaron Harlap. Carnegie Mellon University Electrical and Computer Engineering PhD Dissertation, May 2019.<br />
+                          <a href="/PDL-FTP/CloudComputing/aharlap_dissertation_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/aharlap_dissertation.pdf">PDF</a> [1.4M]<br />
+                          <br />
+                        </li>
+                        <li><strong>This is Why ML-driven Cluster Scheduling Remains Widely Impractical. </strong>Michael Kuchnik, Jun Woo Park, Chuck Cranor, Elisabeth Moore, Nathan DeBardeleben,  George Amvrosiadis.  Carnegie Mellon University Parallel Data Lab Technical Report CMU-PDL-19-103, May 2019.<br />
+                          <a href="/PDL-FTP/CloudComputing/CMU-PDL-19-103_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/CMU-PDL-19-103.pdf">PDF</a> [715K] <br />
+                          <br />
+                        </li>
+                        <li><strong>Fast and Efficient Distributed Matrix-Vector Multiplication Using Rateless Fountain Codes</strong>. Ankur Mallick, Malhar Chaudhari, Gauri Joshi. International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 12 - 17 May, 2019 &middot; Brighton, UK. <br />
+                          <a href="/PDL-FTP/BigLearning/rateless_coded_computing_icassp_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/rateless_coded_computing_icassp.pdf">PDF</a> [485K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Reconciling LSM-Trees with Modern Hard Drives using BlueFS</strong>. Abutalib Aghayev, Sage Weil, Gregory R. Ganger, George Amvrosiadis. Carnegie Mellon University Parallel Data Lab Technical Report  CMU-PDL-19-102, April 2019.<br />
+                          <a href="/PDL-FTP/FS/CMU-PDL-19-102_abs.shtml">Abstract</a> / <a href="/PDL-FTP/FS/CMU-PDL-19-102.pdf">PDF</a> [735K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Intelligence Beyond the Edge: Inference on Intermittent Embedded Systems</strong>. Graham Gobieski, Brandon Lucia, Nathan Beckmann Proceedings of the Twenty-Fourth International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS&rsquo;19), April 13th &ndash; April 17th, Providence, RI. <br />
+                          <a href="/PDL-FTP/associated/2019.asplos.sonic_abs.shtml">Abstract</a> / <a href="/PDL-FTP/associated/2019.asplos.sonic.pdf">PDF</a> [3.35M] </li>
+                      </ul>
+                      <ul>
+                        <li><strong>Lazy Redundancy for NVM Storage: Handing the Performance-Reliability Tradeoff to Applications.</strong> Rajat Kateja, Andy Pavlo, Gregory R.  Ganger  Carnegie Mellon University Parallel Data Lab Technical Report  CMU-PDL-19-101, April 2019.<br />
+                          <a href="/PDL-FTP/NVM/CMU-PDL-19-101_abs.shtml">Abstract</a> / <a href="/PDL-FTP/NVM/CMU-PDL-19-101.pdf">PDF</a> [800K] <br />
+                          <br />
+                        </li>
+                        <li><strong>Scaling Video Analytics on Constrained Edge Nodes</strong>. Christopher Canel, Thomas Kim, Giulio Zhou, Conglong Li, Hyeontaek Lim, David G. Andersen, Michael Kaminsky, Subramanya R. Dulloor. 2nd SysML Conference (SysML &rsquo;19). March 31-April 2, 2019, Palo Alto, CA. <br />
+                          <a href="/PDL-FTP/CloudComputing/ff_sysml19_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/ff_sysml19.pdf">PDF</a> [8.5M]<br>
+                          <br>
+                        </li>
+                        <li><strong>Automating Dependence-Aware Parallelization of Machine Learning Training on Distributed Shared Memory</strong>. 
+                          Jinliang Wei, Garth A. Gibson, Phillip B. Gibbons, Eric P. Xing. 
+                          EuroSys '19: Proceedings of the Fourteenth EuroSys Conference, March 2019, Dresden, Germany.<br>
+                          <a href="/PDL-FTP/BigLearning/3302424.3303954_abs.shtml">Abstract</a> / <a href="/PDL-FTP/BigLearning/3302424.3303954.pdf">PDF</a> [1.1M] <br>
+                          <br>
+                        </li>
+                        <li><strong>Non-Volatile Memory Database Management Systems</strong>. 
+                          Joy Arulraj, Andrew Pavlo. 
+                          Synthesis Lectures on Data Management, Morgan &amp; Claypool Publishers, February 2019.<br>
+                          <a href="/PDL-FTP/NVM/NVMDBmgmt_abs.shtml">Abstract</a> / PDF currently unavailable<br />
+                          <br />
+                        </li>
+                        <li><strong>Datacenter RPCs can be General and Fast</strong>. Anuj Kalia, Michael Kaminsky, David G. Andersen. 16th USENIX Symposium on Networked Systems Design and Implementation (NSDI), Feb. 26&ndash;28, 2019, Boston, MA. <strong>Best Paper award! </strong><br />
+                          <a href="/PDL-FTP/CloudComputing/erpc_nsdi19_abs.shtml">Abstract</a> / <a href="/PDL-FTP/CloudComputing/erpc_nsdi19.pdf">PDF</a> [555K]<br />
+                          <br />
+                        </li>
+                        <li><strong>Cluster Storage Systems Gotta Have HeART: Improving Storage Efficiency by Exploiting Disk-reliability Heterogeneity</strong>. Saurabh Kadekodi, K. V. Rashmi, Gregory R. Ganger. 17th USENIX Conference on File and Storage Technologies (FAST '19) Feb. 25&ndash;28, 2019 Boston, MA.<br />
+                          <a href="/PDL-FTP/Storage/fast19-HeART_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Storage/fast19-HeART.pdf">PDF</a> [1.1M]<br />
+                          <br />
+                        </li>
+                        <li><strong>A Scalable Priority-Aware Approach to Managing Data Center Server Power</strong>. Yang Li, Charles R. Lefurgy, Karthick Rajamani, Malcolm S. Allen-Ware, Guillermo J. Silva, Daniel D. Heimsoth, Saugata Ghose, Onur Mutlu. HPCA 2019: The 25th International Symposium on High-Performance Computer Architecture, February 16 - 20, 2019, Washington D.C. <br />
+                          <a href="/PDL-FTP/PowerMgmt/CapMaestro_HPCA2019_abs.shtml">Abstract</a> / <a href="/PDL-FTP/PowerMgmt/CapMaestro_HPCA2019.pdf">PDF</a> [610K]<br>
+                          <br>
+                        </li>
+                        <li><strong>External vs. Internal: An Essay on Machine Learning Agents for Autonomous Database Management Systems</strong>. 
+                          Andrew Pavlo, Matthew Butrovich, Ananya Joshi, Lin Ma, Prashanth Menon, Dana Van Aken, Lisa Lee, Ruslan Salakhutdinov. 
+                          Bulletin of the IEEE Computer Society Technical Committee on Data Engineering, 42(2): 32-46 (2019).<br>
+                          <a href="/PDL-FTP/Database/p32_abs.shtml">Abstract</a> / <a href="/PDL-FTP/Database/p32.pdf">PDF</a> [555K] <br />
+                        </li>
+                    </ul>
+<br />
+                       
+			    </div>
+
+              </div>
+  
+          </div>
+            </div>
+</section>
+        <!-- End Sidebar Section -->
+
+	
+	
+	
+        <!-- End CONTENT ------------------------------------------------------------------------------>
+
+        <!-- FOOTER -->
+    <!-- FOOTER -->
+        <footer class="footer">
+			<div align="center">
+            <div class="ptb-60">
+                <div class="container">
+<!--Footer Info -->
+                    <div class="row footer-info">
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="footer-block">
+                            
+                               <h4 class="white">Contact us</h4>
+      <ul>
+        <li><i class="fa fa-phone"></i>&nbsp; +1 (412) 268 6716</li>
+        <li><i class="fa fa-envelope"></i>&nbsp;<a href="mailto:contact-pdl@ece.cmu.edu">contact-pdl@ece.cmu.edu</a></li>
+        <li><i class="fa fa-university"></i>&nbsp;<a href="https://www.cs.cmu.edu/">School of Computer Science</a></li>
+        <li><i class="fa fa-university"></i>&nbsp;<a href="https://www.ece.cmu.edu/">Department of Electrical & <br>&nbsp;&nbsp;&nbsp;&nbsp;Computer Engineering</a></li>
+      </ul>  
+			</div>
+                    </div>
+						
+                        <div class="col-lg-4">
+                            <div class="footer-block">
+                              <h4  class="white">Recent Events</h4>
+      <ul>
+        
+        <li>
+         <h6 class="white">PDL Retreat 2024</h6>
+          Omni Bedford Springs<br>
+          <p class="nospace"><a href="/Retreat/retreat24.shtml" class="color">more info</a>&nbsp;</p>
+        </li>
+        <li>
+          <h6 class="white">PDL Retreat 2023</h6>
+          Omni Bedford Springs<br>
+          <p class="nospace"><a href="/Retreat/retreat23.shtml" class="color">more info</a>&nbsp;</p>
+        </li>
+           
+           <li>
+          <h6 class="white">PDL Retreat 2022</h6>
+            Pittsburgh Omni William Penn<br>
+            <p class="nospace"><a href="/Retreat/retreat22.shtml" class="color">more info</a>&nbsp;</p>
+           </li>
+      </ul>
+    </div>
+          </div>
+                       
+                        <div class="col-lg-4">
+                            <div class="footer-block">
+                              <h4 class="white">Social Media</h4>
+             <ul>
+              
+				 <li>
+					 <a href="https://www.facebook.com/groups/107359921205/"><i class="fab fa-facebook-f"></i></a> 
+					 &nbsp; &nbsp;
+				     <a href="https://www.linkedin.com/groups/1578567/?msgConversationId=6450780836924055552&msgOverlay=true"><i class="fab fa-linkedin-in"></i></a> 
+					 
+				</li>
+                <li>&nbsp;</li>
+				 
+        <li>
+          <a class="footer-logo mb-25" href="/index.shtml">
+           <img src="/images/Titles/skibo-darkbg.png" width="195" height="157" alt=""/> </a>
+				 </li>
+				 
+      </ul> 
+                            </div>
+                        </div>
+                    </div>
+</div>
+            </div>
+            <hr / width="100%">
+                    <!-- End Footer Info -->
+
+    <!-- Copyright Bar -->
+            <section class="copyright ptb-30">
+                <div class="container">
+                   <p><span class="color">Copyright &copy; 2025</span> - <a href="https://www.cmu.edu/legal/">Legal Info</a> - <a href="/index.shtml">Parallel Data Lab</a>
+                    </p>
+                </div>
+            </section>
+            <!-- End Copyright Bar -->
+            
+            
+</div>
+        </footer>
+        <!-- END FOOTER -->
+
+
+    <!-- Scroll Top -->
+    <a class="scroll-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- End Scroll Top -->
+              
+        <!-- END FOOTER -->
+
+     
+
+    </div>
+    <!-- Site Wraper End -->
+
+
+</body>
+</html>

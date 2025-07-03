@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Online Application for Graduate Admission</title>
+<script language="JavaScript" src="docs/jquery-1.2.6.min.js"></script>
+<link rel="stylesheet" type="text/css" href="docs/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="docs/staff_menu.css" media="all"  />
+<script language="JavaScript" src="docs/gsisgeneral_jquery.js"></script>
+<script language="JavaScript" src="docs/jquery.tablesorter.min.js"></script>
+<script language="JavaScript" src="docs/gsisgeneral.js?x=556.680312250170190940890909727074603054"></script>
+<script language="JavaScript" src="docs/ajax.js "></script>
+<script language="JavaScript" src="docs/cookies.js"></script>
+<script language="JavaScript" src="docs/formchek.js"></script>
+<script language="JavaScript" src="docs/ts_picker.js"></script>
+<script language="JavaScript" src="docs/gsislogin.js"></script>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" >
+
+                <!-- Begin Top title and graphic -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" height="86" background="docs/background_topbar.gif">
+                <tr>
+                <td width="205" height="86" align="left"><img src="docs/ucr_logo.gif" alt="UCR" longdesc="http://www.ucr.edu" border="0" /></td>
+                <td width="7" height="86" align="right"><img src="docs/ucr_logo_bar.gif" /></td>
+                <td width="100%" height="86" align="left" nowrap="nowrap" class="topbartrans">
+                <div class="headerText">
+<!--                    Graduate Studies -->
+                    Graduate Division <!-- CHANGED BANNER TEXT -S.B., 10-24-07 -->
+                </div></td>
+                </tr>
+                </table>
+
+                <span class="subtitle" style="position: absolute;top: 55;left: 102;">OFFICIAL APPLICATION</span>
+            <!-- End Top title and graphic -->
+                
+<link rel="stylesheet" type="text/css" href="w3.css">
+<link rel="stylesheet" type="text/css" href="GSIS_LOGIN.css">
+<script type=text/javascript src="GSIS_LOGIN.js"></script> 
+
+   
+<div class="w3-container w3-text-dark-grey w3-small login_instruction_div" >    
+Welcome to UCR's Graduate Application System (GradSIS). The system is no longer accepting applications for graduate study. However, applicants who applied for Summer/Fall 2022, Winter 2023, and Spring 2023 before September 13, 2022, will have access to review their application status and provide a decision to an offer of admission through this portal. 
+<br>
+<br>
+<div class="w3-text-dark-grey">
+<b>All saved applications in this system are no longer available to access or submit.</b> Please visit our new <a class="w3-small" target="_blank" href="https://grad.ucr.edu/apply/">Graduate Application Portal</a> to create an account and start a new application.
+</div>
+<br>
+<b>Mozilla Firefox and Internet Explorer are the best web browsers to use for our application system</b>. Other browsers like Google Chrome, have not been tested to confirm that GradSIS can support them. For more details, visit our <a href="https://gradsis.ucr.edu/gradsis/gsis_process.gsis_tech" target="_blank" style="font-size:1rem;" class="w3-small">Technical Considerations</a> page. If you require assistance within the GradSIS application system, please select the <i>Technical Problems/Feedback</i> link at the bottom of each page.
+<br>
+<br>
+Please note that items on this page in <i class="login_page_require_text w3-small">red italics</i> are required fields.
+<br>
+<br>
+</div>
+<div class="w3-text-dark-grey w3-small w3-container" ><div>
+<div class="w3-bar w3-text-dark-grey login_header_section">
+  <button id="tab-login-first-time-users" class="w3-bar-item w3-button login-tab-class " onclick="open_login_tab('login_first_time_users','login-tab-class','tab-login-first-time-users')"><h4 class="login_header_section"><BR>Create Account</h4></button>
+  <button id="tab-login-returning-users" class="w3-bar-item w3-button login-tab-class w3-gray w3-text-white" onclick="open_login_tab('login_returning_users','login-tab-class','tab-login-returning-users')"><h4 class="login_header_section"><BR>Log In</h4></button>
+  <button id="tab-login-forgot-password" class="w3-bar-item w3-button login-tab-class" onclick="open_login_tab('login_forgot_password','login-tab-class','tab-login-forgot-password')"><h4 class="login_header_section">Forgot Password &<br> Update Email Address</h4></button>
+  <button id="tab-return-ucr-grad" class="w3-bar-item w3-button login-tab-class" onclick="open_login_tab('login_return_ucr_grad','login-tab-class','tab-return-ucr-grad')"><h4 class="login_header_section">Continuing & <BR> Returning UCR Grad Students</h4></button>
+</div>   
+   
+   <div id="login_first_time_users" class="login_div w3-border w3-medium" style="display:none"><div class="w3-small"><b>Our Graduate Application has moved;</b> please navigate to our new <a class="w3-small" href="https://grad.ucr.edu/apply/" target="_blank">Graduate Application Portal</a> and add to your bookmarks.</div></div><div id="login_returning_users" class="login_div  w3-border" style="display:block"><div class="w3-small"><b>Our Graduate Application has moved;</b> please navigate to our new <a class="w3-small" href="https://grad.ucr.edu/apply/" target="_blank">Graduate Application Portal</a> and add to your bookmarks.</div></div><div id="login_return_ucr_grad" class="login_div w3-border" style="display:none"><b>You may only access applications submitted before September 13, 2022, for Spring 2023 and older. If you are applying for Winter 2023, Spring 2023, and Summer or Fall 2023, you must visit our new <a class="w3-small" href="https://grad.ucr.edu/apply/" target="_blank">Graduate Application Portal</a>.</b><br/><br/>
+If you are a current UCR Graduate student or withdrew as a graduate student after attending one or more quarters, use the below login to access the following application options.    
+ <ul class="login_page_list">
+<li>Readmission
+<li>Add a Major
+<li>Change of Major
+<li>Change of Degree Objective
+</ul>   
+<br>
+For additional information on those above options, visit our <a href="https://graduate.ucr.edu/returning-continuing-students" target="_blank" style="font-size:1rem;" class="w3-small">Returning & Continuing Students</a> page. You will use this same login to check your application status or accept an offer of admission. Access to this login requires your UCR Net ID and password used to access other campus systems. If you cannot log in, please contact the <a href="mailto:grdadmis@ucr.edu"  target="_blank" style="font-size:1rem;" class="w3-small">Graduate Admissions Office</a> for assistance.
+ <br><br> 
+<button class="w3-button w3-round-xxlarge w3-dark-gray login-box-margin-top-1rem" onclick="callCASAuth();">Login</button>
+
+</div><div id="login_forgot_password" class="login_div  w3-border" style="display:none"><div class="w3-small"><b>Our Graduate Application has moved;</b> please navigate to our new <a class="w3-small" href="https://grad.ucr.edu/apply/" target="_blank">Graduate Application Portal</a> and add to your bookmarks.</div></div></div></div></body>
+</html>

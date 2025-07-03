@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>We&#039;re Here to Serve | Volunteer Center</title>
+<link rel="stylesheet" href="/themes/custom/ucla_campus/css/ucla_sa.css?v=a20250503121734">
+<link rel="stylesheet" href="/themes/custom/ucla_campus/css/ucla_campus.css?v=a20250503121734">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EE2JTX87W7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-EE2JTX87W7');
+</script>
+<style type="text/css">
+.pager__items {
+  display: block;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0;
+}
+.pager__item {
+  display: inline;
+  font-size: 0;
+}
+.pager__item a {
+  line-height: 1.25;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px 12px 4px 12px;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #00598c;
+  border-radius: 2px;
+  margin: 2px;
+}
+.pager__item [aria-current="page"] {
+  color: #757575;
+  border-color: #757575;
+}
+.pager__item a:hover {
+  background-color: #0079bf;
+  border-color: #0079bf;
+  color: #fff;
+}
+.pager__item a:active {
+  background-color: #003b5c;
+  border-color: #003b5c;
+  color: #fff;
+}
+.pager__item--first,
+.pager__item--last {
+  display: none;
+}
+
+/* fix spacing on volunteer category pages (but don't apply the change to the main opportunity database view, which should be the only other volunteer page that has this class) */
+:not([data-ucla-ref="volunteer/volunteer-database"]) .views-element-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* hide the double h1 on volunteer opportunity category pages */
+[data-termid] {
+  display: none;
+}
+</style>
+<script type="text/javascript">
+(function() {
+
+    function removeFirstHeadingIfSameAsTitle() {
+        document.body.classList.add('js-loaded');
+        var bodySection = document.querySelector('.page-content .body--section');
+        if (bodySection) {
+          if (bodySection.innerText.trim() != "" && window.location.pathname != '/student-services') {
+            return;
+          }
+        }
+        var firstSection = document.querySelector('.page-content .paragraph--section');
+        if (!firstSection) {
+            return;
+        }
+        var h2 = firstSection.querySelector('h2');
+        if (!h2) {
+            return;
+        }
+        var h1 = document.querySelector('h1');
+        if (h2.textContent.trim().toUpperCase() != h1.textContent.trim().toUpperCase()) {
+            return;
+        }
+        firstSection.classList.add('paragraph--section--first-no-heading');
+        h2.remove();
+        var headings = firstSection.querySelectorAll('h3, h4, h5, h6');
+        for (var i = 0; i < headings.length; i++) {
+            var heading = headings[i];
+            var headingLevel = parseInt(heading.nodeName.replace('H', ''));
+            var newHeading = document.createElement('H' + (headingLevel - 1));
+            newHeading.setAttribute('class', heading.getAttribute('class'));
+            newHeading.innerHTML = heading.innerHTML;
+            heading.parentNode.replaceChild(newHeading, heading);
+        }
+
+    }
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // Document is already ready to go.
+        setTimeout(removeFirstHeadingIfSameAsTitle, 1);
+    } else {
+        document.addEventListener('DOMContentLoaded', function(event) {
+            removeFirstHeadingIfSameAsTitle();
+        });
+    }
+}
+)();
+</script>
+</head>
+<body
+    data-ucla-ref="volunteer/"
+    data-ucla-path="/"
+    data-ucla-origin="https://volunteer.ucla.edu"
+    data-ucla-theme-cache-version="a20250503121734"
+    data-ucla-theme-root="/themes/custom/ucla_campus"
+    class="no-js"
+>
+<script>document.body.classList.remove('no-js'); document.body.classList.add('js');</script>
+<header class="siteheader">
+  <div class="skiplink">
+      <a href="#main">Skip to Main Content</a>
+  </div>
+      <div class="topbar">
+    <div class="container">
+      <a href="http://www.ucla.edu/" aria-label="UCLA">UCLA</a>
+    </div>
+  </div>
+  <div class="navbar-wrapper">
+    <div class="navbar-grid container">
+        <span role="heading" aria-level="1">
+                      <a href="/" class="h2">
+              <div class="site-name">Volunteer Center</div>
+                          </a>
+                  </span>      
+        <nav aria-label="Secondary Top" class="navtop desktop-only">
+          <ul>
+  <li class="topbar-yellow-button"><strong><a href="/give">Give</a></strong></li>
+</ul>
+        </nav>
+        <button class="mobile-only" aria-haspopup="true" aria-controls="menus" aria-expanded="false" aria-label="Main Menus">
+          <span class="menu-icon-wrap">
+            <span class="menu-icon">
+            </span>
+          </span>
+        </button>
+        <div class="navbar-position">
+          <div id="menus">
+            <nav class="navbar">
+              <form action="https://www.ucla.edu/search" method="GET" class="site-search mobile-only">
+                <label for="header-search-mobile-only">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-mobile-only"><button type="submit" class="ucla-button ucla-button-primary">Search</button>
+              </form>
+                            <ul>
+  <li><a href="/about-us">About Us</a>
+  <li><a href="/programs">Programs</a></li>
+  <li><a href="/get-involved">Get Involved</a></li>
+</ul>
+                          </nav>
+            <nav aria-label="Secondary Menu" class="navtop mobile-only">
+            <ul>
+  <li class="topbar-yellow-button"><strong><a href="/give">Give</a></strong></li>
+</ul>
+            </nav>
+          </div> 
+          <button aria-haspopup="true" aria-controls="desktop-search" aria-expanded="false" aria-label="Search..." class="desktop-only"></button>
+        </div>
+      </div>
+      <form id="desktop-search" action="https://www.ucla.edu/search" method="GET" class="site-search desktop-only">
+        <p class="container">
+          <label for="header-search-headerbar">Search Website</label><input name="q" type="search" placeholder="Search..." id="header-search-headerbar">
+          <button type="submit" class="ucla-button ucla-button-primary">Search</button>
+        </p>
+      </form>
+  </div>
+</header>
+
+
+<main id="main">
+        <div class="page">
+<div class="page-header">
+  <div id="block-system-messages" class="container">
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+<div id="block-ucla-campus-headerimageblock" class="block">
+  
+    
+        <img loading="eager" src="/sites/default/files/styles/header_image/public/2025-03/51555577468_ef8192b22c_o.jpg?itok=G1IT-ebV" width="3000" height="2001" alt="A large group in blue shirts gathers outdoors, raising hands in a volunteer or community event. A speaker leads them in front of a modern building." />
+
+
+
+
+  </div>
+
+
+</div>
+<div class="page-content">
+  <div id="block-ucla-campus-mainpagecontent" class="block system-main-block">
+  
+    <div class="container">
+    <h1>We&#039;re Here to Serve</h1>
+  </div>
+    
+      <div data-ucla-node-id="1" data-repeat-cards_with_images-max-count="6">
+    
+    
+            
+                                    <div class="body--page">
+                        <div class="container">
+                                                                                        
+    <section class="callout"> <p><strong>The <a href="https://volunteer.ucla.edu/chancellorserviceaward">Chancellor's Service Award</a> Application for 2025 is now open until Friday, May 2, 2025 at 11:59 PM.</strong></p> <p><strong>The <a href="https://volunteer.ucla.edu/mongelli-awards">Mongelli Award</a> Application for 2025 is now open until Friday, May 2, 2025 at 11:59 PM.</strong></p> <p><strong>Register for our next <a href="https://volunteer.ucla.edu/nature-nexus-institute">One Bus, One Cause</a> event with Nature Nexus Institute on Saturday, May 31st!</strong></p> <p><strong>Join our <a href="https://volunteer.ucla.edu/letter-writing-campaign-wildfire-relief-0">Letter Writing Campaign</a> to provide support for those affected and for our brave first responders.</strong><br> <br> <strong>Follow our Instagram <a href="https://www.instagram.com/uclavolunteer/">@uclavolunteer</a> for additional updates/opportunities for service opportunities.</strong></p> <p><strong>If you would like more information on how to support our affected staff, faculty and students during this challenging time, please consider making a gift to the <a href="https://giveto.ucla.edu/bruin-wildfire-support/?utm_source=sfmc&amp;utm_medium=email&amp;utm_campaign=fy25_bruin_wildfire_support&amp;utm_content=AGEMULCURR&amp;utm_term=send01&amp;Finder=F-6137488752&amp;mg=f7fc8ea4-420c-4199-bfef-156edf39f1d6">UCLA Economic Crisis Fund</a>.</strong></p></section> <p></p> <div data-custom-embed-id="367" data-custom-embed-title="Events">
+
+<div data-ucla="calendar" data-ucla-calendar-heading-start="2" data-ucla-calendar-max-events="6" data-ucla-calendar-path="/program/volunteer" data-ucla-calendar-template="cards"> <p>Loading events...</p></div>
+
+</div>
+
+ <p><br> The UCLA Volunteer Center coordinates service activities on campus and throughout Greater Los Angeles to inspire members of the extended UCLA family to give their time and talent. As part of the Student Affairs division, the Center strives to make a positive impact upon UCLA and the Greater Los Angeles community. At UCLA, there are many ways to give back to the community. Through the Volunteer Center, students, faculty, staff, alumni and community members can participate in ongoing and annual service opportunities, suggest volunteer site locations, and lead service projects. The Volunteer Center also maintains an online listing of campus-wide service groups, and a volunteer database of community service opportunities. The UCLA Volunteer Center's mission is to inspire the more than 500,000 members of the extended UCLA family, as well as the community at large, to create social change through lifelong participation in volunteer programs and civic engagement.</p> <div data-custom-embed-id="29" data-custom-embed-title="In page buttons">
+
+<div class="in-page-buttons"></div>
+
+</div>
+
+ 
+  <img loading="eager" src="/sites/default/files/styles/header_image/public/2024-11/Impact%20Oct%2024.jpg?itok=2I8zC1E7" width="2700" height="1500" alt="lifetime impact report for volunteer center updated october 2024">
+
+
+
+
+ <p>UCLA Volunteer Center stats as of October 2024.</p>
+
+                                                    </div>
+                    </div>
+                                            
+    <div class="paragraph--section paragraph--type--cards cards-theme-services cards-with-images cards"  data-section-title="Get Involved ">
+                    <div class="container">
+                <h2>
+Get Involved 
+</h2>
+                
+                <div class="cards-container">
+                    
+  <a href="https://volunteer.ucla.edu/one-bus-one-cause"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2024-09/IMG_9621.jpg?itok=NSYtNqGW" width="900" height="600" alt="volunteers from the alumni scholar club at one of the one bus one cause events in 2024" />
+
+
+
+</span>
+      <span class="card-title">
+One Bus, One Cause 
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/volunteer-database"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-05/49450854026_e88dbd162f_k.jpg?itok=kHSyPYL4" width="900" height="600" alt="UCLA Group Volunteers in a school " />
+
+
+
+</span>
+      <span class="card-title">
+Volunteer Database
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/service-campus"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-05/47514468482_f2ad3c3360_k.jpg?itok=GDg5uFHs" width="900" height="600" alt="Group gardening " />
+
+
+
+</span>
+      <span class="card-title">
+Service On Campus 
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+
+                </div>
+            </div>
+            </div>
+
+    <div class="paragraph--section paragraph--type--cards cards-theme-services cards-with-images cards"  data-section-title="Programs">
+                    <div class="container">
+                <h2>
+Programs
+</h2>
+                
+                <div class="cards-container">
+                    
+  <a href="/nonprofit-networking-night"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2025-02/nnn_insta.jpg?itok=lKDns37F" width="900" height="600" alt="nnn flyer" />
+
+
+
+</span>
+      <span class="card-title">
+Nonprofit Networking Night
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/fall-harvest-feast"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2024-11/banner.jpg?itok=ujFeC1ED" width="900" height="600" alt="fhf" />
+
+
+
+</span>
+      <span class="card-title">
+Fall Harvest Feast
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="https://volunteer.ucla.edu/winter-wishlist"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-11/anniversary-birthday-bow-box-preview.jpeg?itok=Gh8zyKsz" width="900" height="600" alt="Wrapped gift boxes to depict the holiday season." />
+
+
+
+</span>
+      <span class="card-title">
+Winter Wishlist
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/one-bus-one-cause"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2024-09/IMG_9621.jpg?itok=NSYtNqGW" width="900" height="600" alt="volunteers from the alumni scholar club at one of the one bus one cause events in 2024" />
+
+
+
+</span>
+      <span class="card-title">
+One Bus, One Cause 
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/day"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2024-11/after%20banner%20small.jpg?itok=494urXox" width="900" height="600" alt="thank you for attending volunteer day 2024, see you again next year" />
+
+
+
+</span>
+      <span class="card-title">
+UCLA Volunteer Day
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="https://volunteer.ucla.edu/awards"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2022-03/ChancellorCommencement.jpg?itok=l6tlHkzy" width="900" height="600" alt="This is a photo of UCLA Chancellor Block at Commencement." />
+
+
+
+</span>
+      <span class="card-title">
+Awards
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+
+                </div>
+            </div>
+            </div>
+
+    <div class="paragraph--section paragraph--type--cards cards-theme-services cards-with-images cards"  data-section-title="About Us ">
+                    <div class="container">
+                <h2>
+About Us 
+</h2>
+                
+                <div class="cards-container">
+                    
+  <a href="/history-mission"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-05/VC-Alumni-Post-6.2.jpg?itok=4MnyqjiH" width="900" height="600" alt="Volunteer Group at LA Foodbank" />
+
+
+
+</span>
+      <span class="card-title">
+History and Impact
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="/meet-team"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-05/648x400_Gallery_62065O_5-648x400.jpg?itok=fbuY3c8f" width="900" height="600" alt="UCLA Volunteers group pose" />
+
+
+
+</span>
+      <span class="card-title">
+Meet The Team
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+  <a href="https://volunteer.ucla.edu/volunteer-center-newsletters"  class="card">
+          <span class="card-image">  <img loading="eager" src="/sites/default/files/styles/resize_3_2/public/2021-10/Untitled%20drawing.png?itok=0k_EXNlg" width="900" height="600" alt="Issue 1 of the UCLA Volunteer Center Newsletter." />
+
+
+
+</span>
+      <span class="card-title">
+Volunteer Center Newsletters
+</span>
+      <span class="card-summary"></span>
+      </a>
+
+
+                </div>
+            </div>
+            </div>
+
+
+                    
+
+                    
+            
+        </div>
+
+  </div>
+
+
+</div>
+</div>
+
+
+          <footer class="site-footer" role="contentinfo">
+	      <div class="footer-logo">
+	                                  <a href="/" class="site-name">
+                            <img src="/themes/custom/ucla_campus/logos/ucla-student-affairs-volunteer-center.svg" height="100" width="300" alt="UCLA Volunteer Center">
+                          </a>
+               	      	      </div>
+        
+        <div class="footer-content">
+  <address class="footer-contact">
+    315 Bradley International Hall<br>
+    417 Charles E Young Drive West<br>
+    Los Angeles, CA 90095
+    <br><br>
+    <a href="mailto:volunteer@saonet.ucla.edu">volunteer@saonet.ucla.edu</a><br>
+    <a href="/contacts">Contacts</a>
+  </address>
+</div>
+
+<div class="social-links-container">
+  <a href="http://www.facebook.com/uclavolunteer"><span class="social-link-label">Facebook @uclavolunteer</span></a>
+  <a href="http://www.twitter.com/uclavolunteer"><span class="social-link-label">Instagram @uclavolunteer</span></a>
+  <a href="https://www.snapchat.com/add/uclavolunteer"><span class="social-link-label">Snapchat @uclavolunteer</span></a>
+  <a href="http://www.youtube.com/uclavolunteer"><span class="social-link-label">YouTube @uclavolunteer</span></a> 
+  <a href="http://instagram.com/uclavolunteer"><span class="social-link-label">Instagram @uclavolunteer</span></a>
+</div>
+
+<div class="footer-covid19">
+  <a href="https://covid-19.ucla.edu">COVID-19 Resources</a>
+</div>
+
+      </footer>
+    </main>
+
+<footer class="global-footer">
+  <div class="container">
+    <p class="regents">© 2025 Regents of the
+      <a href="https://www.universityofcalifornia.edu/">University of California</a>
+    </p>
+    <div class="global-footer-links">
+      <a href="https://www.bso.ucla.edu/">Emergency</a>
+      <a href="https://www.ucla.edu/accessibility">Accessibility</a>
+      <a href="https://www.ucla.edu/terms-of-use">Privacy & Terms of Use</a>
+    </div>
+    <div class="social-links-container">
+      <a href="https://www.facebook.com/UCLA/"><span class="social-link-label">Facebook @UCLAhousing</span></a>
+      <a href="https://www.instagram.com/ucla/"><span class="social-link-label">Instagram @uclahousing</span></a>
+      <a href="https://www.linkedin.com/school/ucla"><span class="social-link-label">Linkedin @ucla</span></a>
+      <a href="https://x.com/ucla"><span class="social-link-label">X @ucla</span></a>  
+      <a href="https://www.youtube.com/user/UCLA"><span class="social-link-label">YouTube @ucla</span></a>
+      <a href="https://www.tiktok.com/@ucla?lang=en"><span class="social-link-label">TikTok @ucla</span></a>
+      <a href="https://story.snapchat.com/@uclaofficial"><span class="social-link-label">Snapchat @uclaofficial</span></a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/themes/custom/ucla_campus/js/ucla_sa.js?v=a20250503121734" async></script>
+<script src="/themes/custom/ucla_campus/js/node_modules/wicg-inert/dist/inert.min.js?v=a20250503121734"></script>
+<script src="/themes/custom/ucla_campus/js/ucla_campus.js?v=a20250503121734" async></script>
+
+<script type="text/javascript">
+(function() {
+  if(document.querySelector('[data-ucla]')) {
+    var embed = document.createElement('script'); embed.type = 'text/javascript'; embed.async = true;
+    embed.src = '/themes/custom/ucla_campus/js/ucla_embed.js?v=20250503121734';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(embed, s);
+  }
+})();
+</script>
+</body>
+</html>

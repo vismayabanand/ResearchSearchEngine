@@ -1,0 +1,601 @@
+<!doctype html>
+<html  lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+<head>
+    <meta charset="utf-8" />
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-Z1RGSBHBF7", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});gtag("config", "G-S8BZQKWST2", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location","allow_ad_personalization_signals":false});</script>
+<meta name="description" content="2024 [CCS&#039;24]  Kaiming Huang, Mathias Payer, Zhiyun Qian, Jack Sampson, Gang Tan, Trent Jaeger.  Top of the Heap: Efficient Memory Error Protection of Safe Heap Objects.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [CCS&#039;24]  Mingming Chen, Thomas La Porta, Teryl Taylor, Fred Araujo, Trent Jaeger.  Manipulating OpenFlow Link Discovery Packet Forwarding for Topology Poisoning.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [USENIX Security&#039;24]   Rahul George, Mingming Chen, Kaiming Huang, Zhiyun Qian, Thomas La Porta, Trent Jaeger. OptiSan: Using Multiple Spatial Error Defenses to Optimize Stack Memory Protection within a Budget." />
+<link rel="canonical" href="https://cresp.cs.ucr.edu/publications" />
+<meta property="og:site_name" content="Center for Research and Education in Cyber Security and Privacy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cresp.cs.ucr.edu/publications" />
+<meta property="og:title" content="Publications" />
+<meta property="og:description" content="2024 [CCS&#039;24]  Kaiming Huang, Mathias Payer, Zhiyun Qian, Jack Sampson, Gang Tan, Trent Jaeger.  Top of the Heap: Efficient Memory Error Protection of Safe Heap Objects.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [CCS&#039;24]  Mingming Chen, Thomas La Porta, Teryl Taylor, Fred Araujo, Trent Jaeger.  Manipulating OpenFlow Link Discovery Packet Forwarding for Topology Poisoning.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [USENIX Security&#039;24]   Rahul George, Mingming Chen, Kaiming Huang, Zhiyun Qian, Thomas La Porta, Trent Jaeger. OptiSan: Using Multiple Spatial Error Defenses to Optimize Stack Memory Protection within a Budget." />
+<meta property="og:updated_time" content="2024-08-06T16:20:45-0700" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="2024 [CCS&#039;24]  Kaiming Huang, Mathias Payer, Zhiyun Qian, Jack Sampson, Gang Tan, Trent Jaeger.  Top of the Heap: Efficient Memory Error Protection of Safe Heap Objects.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [CCS&#039;24]  Mingming Chen, Thomas La Porta, Teryl Taylor, Fred Araujo, Trent Jaeger.  Manipulating OpenFlow Link Discovery Packet Forwarding for Topology Poisoning.  In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024. [USENIX Security&#039;24]   Rahul George, Mingming Chen, Kaiming Huang, Zhiyun Qian, Thomas La Porta, Trent Jaeger. OptiSan: Using Multiple Spatial Error Defenses to Optimize Stack Memory Protection within a Budget." />
+<meta name="twitter:title" content="Publications" />
+<meta name="twitter:url" content="https://cresp.cs.ucr.edu/publications" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/ucr_cnas_1/favicon.ico" type="" />
+<script src="/sites/default/files/eu_cookie_compliance/eu_cookie_compliance.script.js?ss0iql" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Publications | Center for Research and Education in Cyber Security and Privacy</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_qZDH6dzEcE-byliJkP1LIcMlbq4LEU2EfGGqu5emNKk.css?delta=0&amp;language=en&amp;theme=ucr_cnas_1&amp;include=eJxtylEOAiEMBNALIY0nIqV0EbdQQ0Gzt3ej_rjZn5nJy2BKQ7FtgL_hl65tuDghTk83ppW7y6pZOGBD2UYhgyM422xwhYjGblIPiRecMiCLRpQLmZ3x_avU0ML1-P3X_cozkOpaeK_6kIKNGM4wROzsnoVfBp_0VdMUfgOLrVua" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:400,700|Roboto:400,700" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_iHx-mYCRYABLi29hwse14Vmfm7QqE1rRMRUyPb9Q2HQ.css?delta=2&amp;language=en&amp;theme=ucr_cnas_1&amp;include=eJxtylEOAiEMBNALIY0nIqV0EbdQQ0Gzt3ej_rjZn5nJy2BKQ7FtgL_hl65tuDghTk83ppW7y6pZOGBD2UYhgyM422xwhYjGblIPiRecMiCLRpQLmZ3x_avU0ML1-P3X_cozkOpaeK_6kIKNGM4wROzsnoVfBp_0VdMUfgOLrVua" />
+<link rel="stylesheet" media="all" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+<link rel="stylesheet" media="all" href="https://intra.engr.ucr.edu/css/engr-custom.css" />
+
+    
+</head>
+<body class="layout path-node node--type-page">
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header data-sticky-container >
+    <div class="header-sticky-container" data-ucr-sticky="1"  style="background-image:url(https://cresp.cs.ucr.edu/sites/default/files/theme-banners/01_cnas_new_header_june_2020_1600x212-2.png); background-repeat: no-repeat; background-size: cover;" >
+        <div class="grid-container full">
+                                    <div class="grid-x">
+                <div class="cell small-order-2 medium-order-1 audience-container">
+    <div class="grid-container audience-menu-bar">
+        <div class="grid-x align-middle">
+            <div class="cell medium-shrink show-for-medium global-header-menu">
+                <a class="skip-main" href="#main-content" tabindex="1">Skip to main content</a>
+
+                
+            </div>
+             <div id="block-ucr-cnas-1-organizationname" data-block-plugin-id="ucr_global_organization_name" class="cell auto hide-for-medium org-name">
+    
+        
+              <a class="skip-main" tabindex="1" href="#main-content">Skip to main content</a>
+
+<span class="parent-org-title">
+    <a href="https://www1.cs.ucr.edu/">Bourns College of Engineering - Computer Science and Engineering</a>
+</span>
+
+    </div>
+<div class="cell medium-shrink show-for-medium cnas-ucr-home-link-container">
+  <nav aria-label="global header menu">
+    <ul class="menu">
+      <li class="cnas-ucr-home-link"><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li>
+    </ul>
+  </nav>
+</div>
+    <div id="block-ucr-cnas-1-ucriversideaudiencesearchblock" data-block-plugin-id="ucr_global_audience_search" class="cell medium-shrink show-for-medium">
+        
+                
+            <section class="google-search">
+        <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button>
+    </section>
+
+    </div>
+
+<div id="audience-links-desktop-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell medium-shrink show-for-medium audience-links-desktop">
+    
+        
+            
+  
+  
+            <nav class="audience-links">
+        <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left">
+    
+                        <li class="audience-button is-dropdown-submenu-parent">
+                        <a href="" target="_self">BCOE Departments &amp; Programs</a>
+                                      
+  
+            <ul class="vertical menu">
+    
+                        <li>
+                        <a href="https://www.engr.ucr.edu/">MARLAN AND ROSEMARY BOURNS COLLEGE OF ENGINEERING</a>
+                            </li>
+                        <li>
+                        <a href="https://www.bioeng.ucr.edu/" target="_self">Bioengineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.cee.ucr.edu/" target="_self">Chemical and Environmental Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://cen.ucr.edu/" target="_self">Computer Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www1.cs.ucr.edu/" target="_self">Computer Science and Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://datascience.ucr.edu/">Data Science</a>
+                            </li>
+                        <li>
+                        <a href="https://www.ece.ucr.edu/" target="_self">Electrical and Computer Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.mse.ucr.edu/" target="_self">Materials Science and Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.me.ucr.edu/" target="_self">Mechanical Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://msol.ucr.edu/" target="_self">Online M.S. in Engineering</a>
+                            </li>
+            </ul>
+        
+                            </li>
+            </ul>
+      </nav>  
+
+
+    </div>
+             <div class="cell shrink hide-for-medium" data-responsive-toggle="main-menu-container" data-hide-for="medium">
+                <button class="mdi mdi-menu button mobile-menu-expander" id="mobile-menu-expander" type="button"
+                        data-toggle="main-menu-container" aria-label="Open Navigation">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="cell small-order-1 medium-order-2 masthead-container">
+    <div class="grid-container">
+        <div class="grid-x align-middle">
+                 <div class="cell shrink">
+        <a class="masthead-logo" href="/">
+            <span class="show-for-sr">UC Riverside</span>
+        </a>
+    </div>
+    <div class="cell auto">
+        <h1 class="masthead-title">
+            <a href="/"> Center for Research and Education in Cyber Security and Privacy </a>
+        </h1>
+    </div>
+    <div class="cell auto show-for-medium">
+        <p class="slogan">CRESP</p>
+    </div>
+         </div>
+    </div>
+</div>
+
+                <div class="cell small-order-3 medium-order-3 main-nav-bar">
+    <div class="grid-container" id="main-menu-container" data-animate="fade-in fade-out">
+        <div class="grid-x">
+                 <div id="block-ucr-cnas-1-ucriversideaudiencesearchblock-2" data-block-plugin-id="ucr_global_audience_search" class="cell hide-for-medium">
+        
+                
+            <section class="google-search">
+        <button class="button audience-search-button" data-open="gscSearchFormModal">Search</button>
+    </section>
+
+    </div>
+<div id="block-ucr-cnas-1-main-menu" data-block-plugin-id="menu_block:main" class="cell main-menu-cell">
+    
+        
+                        <nav id="primary-site-menu" aria-labelledby="primary-site-menu">
+    <ul class="standard-menu vertical medium-horizontal menu align-center-middle" data-responsive-menu="accordion medium-dropdown" data-closing-time="200">
+                <li>
+        <a href="/" target="_self" rel="" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                </li>
+            <li>
+        <a href="#aboutus">About us</a>
+                </li>
+            <li>
+        <a href="#faculty">Faculty</a>
+                </li>
+            <li>
+        <a href="">Research</a>
+                                <ul class="vertical menu submenu">
+                <li>
+        <a href="/publications" data-drupal-link-system-path="node/31" class="is-active">Publications</a>
+                </li>
+            </ul>
+        
+                </li>
+            <li>
+        <a href="/form/contact" data-drupal-link-system-path="webform/contact">Contact</a>
+                </li>
+            </ul>
+</nav>
+        
+
+
+
+
+    </div>
+
+<div class="cell medium-shrink show-for-small-only cnas-ucr-home-link-mobile-container">
+  <nav aria-label="global header menu">
+    <ul class="menu">
+      <li class="cnas-ucr-home-link-mobile"><a href="https://www.ucr.edu" target="_blank">UCR Home</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div id="audience-links-mobile-view" data-block-plugin-id="system_menu_block:ucr-audience-menu" class="cell hide-for-medium audience-links-mobile">
+    
+        
+            
+  
+  
+            <nav class="audience-links">
+        <ul class="vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown" data-closing-time="100" data-alignment="left">
+    
+                        <li class="audience-button is-dropdown-submenu-parent">
+                        <a href="" target="_self">BCOE Departments &amp; Programs</a>
+                                      
+  
+            <ul class="vertical menu">
+    
+                        <li>
+                        <a href="https://www.engr.ucr.edu/">MARLAN AND ROSEMARY BOURNS COLLEGE OF ENGINEERING</a>
+                            </li>
+                        <li>
+                        <a href="https://www.bioeng.ucr.edu/" target="_self">Bioengineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.cee.ucr.edu/" target="_self">Chemical and Environmental Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://cen.ucr.edu/" target="_self">Computer Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www1.cs.ucr.edu/" target="_self">Computer Science and Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://datascience.ucr.edu/">Data Science</a>
+                            </li>
+                        <li>
+                        <a href="https://www.ece.ucr.edu/" target="_self">Electrical and Computer Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.mse.ucr.edu/" target="_self">Materials Science and Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://www.me.ucr.edu/" target="_self">Mechanical Engineering</a>
+                            </li>
+                        <li>
+                        <a href="https://msol.ucr.edu/" target="_self">Online M.S. in Engineering</a>
+                            </li>
+            </ul>
+        
+                            </li>
+            </ul>
+      </nav>  
+
+
+    </div>
+         </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div id="content-container">
+                    <div id="hero-panel-area">
+        <div class="views-element-container" id="block-ucr-cnas-1-head-image-title-block" data-block-plugin-id="views_block:content_views-content_head_image_title_block">
+        
+                
+        <div><div class="js-view-dom-id-19fdad897b87fc8ca66a7443feff11049fb4e52a4c7b8de1c22a7c2c4f4140cf">
+  
+  
+  
+
+  
+  
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    </div>
+
+</div>
+
+                <div class="grid-container primary-content-header">
+                            <div class="grid-x grid-padding-x">
+                        <div class="cell">
+        <div data-drupal-messages-fallback class="hidden"></div>
+
+    </div>
+
+                </div>
+                        <div class="grid-x grid-padding-x">
+                    <div id="block-ucr-cnas-1-breadcrumbs" data-block-plugin-id="system_breadcrumb_block" class="cell">
+    
+        
+                <div><span id="system-breadcrumb" class="visually-hidden">Breadcrumb</span></div>
+    <div class="grid-container full">
+        <div class="grid-x breadcrumb-container">
+            <div class="shrink cell breadcrumb-home">
+                <a href="/" aria-label="Redirects to the homepage of this site."><span class="mdi mdi-home breadcrumb-home-icon"></span></a>
+            </div>
+            <div class="auto cell breadcrumb-list">
+                <nav aria-labelledby="system-breadcrumb">
+                    <ul class="breadcrumbs">
+                                                                                  <li class="list-no-display"><span>&nbsp;</span></li>
+                                                                                                                <li>
+                                                                            <span>Publications</span>
+                                                                    </li>
+                                                                        </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    </div>
+<div id="block-ucr-cnas-1-page-title" data-block-plugin-id="page_title_block" class="cell">
+    
+        
+            
+  <h1 class="page-title"><span>Publications</span>
+</h1>
+
+
+    </div>
+
+
+            </div>
+                            <div class="grid-x grid-padding-x">
+                    
+                </div>
+                    </div>
+        <div id="main-content"></div>
+                        <div class="grid-container full primary-content-area">
+                    <div class="grid-x">
+                                                                        <div class="cell large-auto small-order-3 medium-order-3 large-order-2 pca-content">
+                              <div>
+    <div id="block-ucr-cnas-1-content" data-block-plugin-id="system_main_block">
+  
+    
+      <article>
+
+  
+    
+
+  
+  <div>
+        <div  class="layout layout-one-col grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                                    <div  class="layout__region layout__region--main">
+                        <div data-block-plugin-id="field_block:node:page:body">
+  
+    
+      <div class="basic-body">
+                        <span><h3>2024</h3>
+
+<ul>
+	<li>[CCS'24] &nbsp;Kaiming Huang, Mathias Payer, Zhiyun Qian, Jack Sampson, Gang Tan, Trent Jaeger. &nbsp;Top of the Heap: Efficient Memory Error Protection of Safe Heap Objects. &nbsp;In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024.</li>
+	<li>[CCS'24] &nbsp;Mingming Chen, Thomas La Porta, Teryl Taylor, Fred Araujo, Trent Jaeger. &nbsp;Manipulating OpenFlow Link Discovery Packet Forwarding for Topology Poisoning. &nbsp;In Proceedings of the 2024 ACM Conference on Computer and Communications Security (ACM CCS), October 2024.</li>
+	<li>[USENIX Security'24] &nbsp; Rahul George, Mingming Chen, Kaiming Huang, Zhiyun Qian, Thomas La Porta, Trent Jaeger. OptiSan: Using Multiple Spatial Error Defenses to Optimize Stack Memory Protection within a Budget. In Proceedings of the 33rd USENIX Security Symposium, August 2024.</li>
+	<li>[USENIX Security'24] &nbsp;&nbsp;Yizhuo Zhai, Zhiyun Qian, Chengyu Song, Manu Sridharan, Trent Jaeger, Paul Yu, Srikanth Krishnamurthy. &nbsp;Don’t Waste My Efforts: Pruning Redundant Sanitizer Checks of Developer-Implemented Type Checks. &nbsp;In Proceedings of the 33rd USENIX Security Symposium, August 2024.</li>
+	<li>[USENIX Security'24] &nbsp; &nbsp;Meenatchi Sundaram Muthu Selva Annamalai, Georgi Ganev, Emiliano De Cristofaro. &nbsp;"What do you want from theory alone?" Experimenting with Tight Auditing of Differentially Private Synthetic Data Generation. &nbsp;In Proceedings of the 33rd USENIX Security Symposium, August 2024.</li>
+	<li>[USENIX Security'24] &nbsp;&nbsp;Zhenxiao Qi, Jie Hu, Zhaoqi Xiao, Heng Yin:<br>
+	SymFit: Making the Common (Concrete) Case Fast for Binary-Code Concolic Execution. &nbsp;In Proceedings of the 33rd USENIX Security Symposium, August 2024.</li>
+	<li>[USENIX Security'24] &nbsp;&nbsp;&nbsp;Carter Slocum, Yicheng Zhang, Erfan Shayegani, Pedram Zaree, Nael B. Abu-Ghazaleh, Jiasi Chen. &nbsp;That Doesn't Go There: Attacks on Shared State in Multi-User Augmented Reality. &nbsp;In Proceedings of the 33rd USENIX Security Symposium, August 2024.</li>
+	<li>[Oakland'24] &nbsp;Weiteng Chen, Yu Hao, Zheng Zhang, Xiaochen Zou, Dhilung Kirat, Shachee Mishra, Douglas Schales, Jiyong Jang, Zhiyun Qian. &nbsp;SyzGen++: Dependency Inference for Augmenting Kernel Driver Fuzzing. &nbsp;In Proceedings of the 2024 IEEE Symposium on Security and Privacy, May 2024.</li>
+	<li>[NDSS'24] &nbsp;Frank Capobianco, Quan Zhou, Aditya Basu, Trent Jaeger, Danfeng Zhang. &nbsp;Talisman: Tamper Analysis for Reference Monitors. &nbsp;In Proceedings of the 2024 Network and Distributed Systems Security Symposium (NDSS), February 2024. &nbsp;</li>
+	<li>[NDSS'24] &nbsp;Zhengchuan Liang, Xiaochen Zou, Chengyu Song, Zhiyun Qian. &nbsp;K-LEAK: Towards Automating the Generation of Multi-Step Infoleak Exploits against the Linux Kernel. &nbsp;In&nbsp;Proceedings of the 2024 Network and Distributed Systems Security Symposium (NDSS), February 2024.</li>
+	<li>[NDSS'24] &nbsp;Meenatchi Sundaram Muthu Selva Annamalai, Igor Bilogrevic, Emiliano De Cristofaro. &nbsp; &nbsp;FP-Fed: Privacy-Preserving Federated Detection of Browser Fingerprinting. &nbsp;&nbsp;In&nbsp;Proceedings of the 2024 Network and Distributed Systems Security Symposium (NDSS), February 2024.</li>
+	<li>[NDSS'24] &nbsp;Xiaochen Zou, Yu Hao, Zheng Zhang, Juefei Pu, Weiteng Chen, Zhiyun Qian. &nbsp;SyzBridge: Bridging the Gap in Exploitability Assessment of Linux Kernel Bugs in the Linux Ecosystem. &nbsp;In&nbsp;Proceedings of the 2024 Network and Distributed Systems Security Symposium (NDSS), February 2024.</li>
+</ul>
+
+<h3>2023</h3>
+
+<ul>
+	<li>[USENIX Security'23] &nbsp;&nbsp;Guoren Li, Hang Zhang, Jinmeng Zhou, Wenbo Shen, Yulei Sui, Zhiyun Qian. &nbsp;A Hybrid Alias Analysis and Its Application to Global Variable Protection in the Linux Kernel. In Proceedings of the 32nd USENIX Security Symposium, August 2023.</li>
+	<li>[USENIX Security'23] &nbsp; Jiyong Yu, Aishani Datta, Trent Jaeger, David Kohlbrenner, Christopher Fletcher. &nbsp;Synchronization Storage Channels (S2C): Timer-less Cache Side-Channel Attacks on the Apple M1 via Hardware Synchronization Instructions. &nbsp;In Proceedings of the 32nd USENIX Security Symposium, August 2023. &nbsp;</li>
+	<li>[USENIX Security'23] &nbsp;&nbsp;Carter Slocum, Yicheng Zhang, Nael B. Abu-Ghazaleh, Jiasi Chen:<br>
+	Going through the motions: AR/VR keylogging from user head motions. &nbsp;In Proceedings of the 32nd USENIX Security Symposium, August 2023. &nbsp;</li>
+	<li>[USENIX Security'23] &nbsp;&nbsp;Yicheng Zhang, Carter Slocum, Jiasi Chen, Nael B. Abu-Ghazaleh:<br>
+	It's all in your head(set): Side-channel attacks on AR/VR systems. &nbsp;&nbsp;In Proceedings of the 32nd USENIX Security Symposium, August 2023. &nbsp;</li>
+	<li>[Oakland'23] &nbsp;Yu Hao, Guoren Li, Xiaochen Zou, Weiteng Chen, Shitong Zhu, Zhiyun Qian, Ardalan Amiri Sani. &nbsp;SyzDescribe: Principled, Automated, Static Generation of Syscall Descriptions for Kernel Drivers. &nbsp;In Proceedings of the 2023&nbsp;IEEE Symposium on Security and Privacy, May 2023.</li>
+	<li>[Oakland'23] &nbsp;Pujan Paudel, Jeremy Blackburn, Emiliano De Cristofaro, Savvas Zannettou, Gianluca Stringhini. &nbsp;Lambretta: Learning to Rank for Twitter Soft Moderation. &nbsp;In Proceedings of the 2023&nbsp;IEEE Symposium on Security and Privacy, May 2023.</li>
+	<li>[MobiCom'23] &nbsp;&nbsp;Qianru Li, Zhehui Zhang, Yanbing Liu, Zhaowei Tan, Chunyi Peng, Songwu Lu.<br>
+	CA++: Enhancing Carrier Aggregation Beyond 5G. &nbsp;</li>
+	<li>[MobiCom'23] &nbsp;Yunqi Guo, Jinghao Zhao, Boyan Ding, Congkai Tan, Weichong Ling, Zhaowei Tan, Jennifer Miyaki, Hongzhe Du, Songwu Lu. &nbsp;Sign-to-911: Emergency Call Service for Sign Language Users with Assistive AR Glasses.</li>
+</ul>
+
+<h3>2022</h3>
+
+<ul>
+	<li>[CCS'22] &nbsp;Mohammad Naseri, Yufei Han, Enrico Mariconti, Yun Shen, Gianluca Stringhini, Emiliano De Cristofaro. &nbsp;CERBERUS: Exploring Federated Prediction of Security Events. &nbsp;&nbsp;In Proceedings of the 2022&nbsp;ACM Conference on Computer and Communications Security (ACM CCS), October 2022.</li>
+	<li>[CCS'22] &nbsp;&nbsp;&nbsp; &nbsp;Wai Man Si, Michael Backes, Jeremy Blackburn, Emiliano De Cristofaro, Gianluca Stringhini, Savvas Zannettou, Yang Zhang. &nbsp;Why So Toxic?: Measuring and Triggering Toxic Behavior in Open-Domain Chatbots. &nbsp;&nbsp;In Proceedings of the 2022&nbsp;ACM Conference on Computer and Communications Security (ACM CCS), October 2022.</li>
+	<li>[CCS'22] &nbsp;&nbsp;&nbsp; Xin'an Zhou, Jiale Guan, Luyi Xing, Zhiyun Qian. &nbsp;Perils and Mitigation of Security Risks of Cooperation in Mobile-as-a-Gateway IoT. &nbsp;&nbsp;In Proceedings of the 2022&nbsp;ACM Conference on Computer and Communications Security (ACM CCS), October 2022.</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;Ju Chen, Wookhyun Han, Mingjun Yin, Haochen Zeng, Chengyu Song, Byoungyoung Lee, Heng Yin, Insik Shin. &nbsp;SYMSAN: Time and Space Efficient Concolic Execution via Dynamic Data-flow Analysis. &nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022. &nbsp;</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;Sheng Yu, Yu Qu, Xunchao Hu, Heng Yin. &nbsp;DeepDi: Learning a Relational Graph Convolutional Network Model on Instructions for Fast and Accurate Disassembly. &nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022.</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;&nbsp;Yugeng Liu, Rui Wen, Xinlei He, Ahmed Salem, Zhikun Zhang, Michael Backes, Emiliano De Cristofaro, Mario Fritz, Yang Zhang. &nbsp;ML-Doctor: Holistic Risk Assessment of Inference Attacks Against Machine Learning Models. &nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022. &nbsp;</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;&nbsp;Xuewei Feng, Qi Li, Kun Sun, Zhiyun Qian, Gang Zhao, Xiaohui Kuang, Chuanpu Fu, Ke Xu. &nbsp; Off-Path Network Traffic Manipulation via Revitalized ICMP Redirect Attacks. &nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022. &nbsp;</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Xiaochen Zou, Guoren Li, Weiteng Chen, Hang Zhang, Zhiyun Qian. &nbsp; SyzScope: Revealing High-Risk Security Impacts of Fuzzer-Exposed Bugs in Linux kernel.&nbsp;&nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022. &nbsp;</li>
+	<li>[USENIX Security'22] &nbsp;&nbsp;Jian Liu, Lin Yi, Weiteng Chen, Chengyu Song, Zhiyun Qian, Qiuping Yi:<br>
+	LinKRID: Vetting Imbalance Reference Counting in Linux kernel with Symbolic Execution. &nbsp;In Proceedings of the 31st&nbsp;USENIX Security Symposium, August 2022. &nbsp;</li>
+	<li>[Oakland'22] &nbsp;&nbsp;&nbsp;Ju Chen, Jinghan Wang, Chengyu Song, Heng Yin. &nbsp;JIGSAW: Efficient and Scalable Path Constraints Fuzzing. &nbsp;In Proceedings of the 2022&nbsp;IEEE Symposium on Security and Privacy, May 2022.</li>
+	<li>[Oakland'22] &nbsp;&nbsp;&nbsp;Mohammad Hammas Saeed, Shiza Ali, Jeremy Blackburn, Emiliano De Cristofaro, Savvas Zannettou, Gianluca Stringhini. &nbsp;TrollMagnifier: Detecting State-Sponsored Troll Accounts on Reddit. &nbsp;In Proceedings of the 2022&nbsp;IEEE Symposium on Security and Privacy, May 2022.</li>
+	<li>[Oakland'22] &nbsp;&nbsp;&nbsp;&nbsp;Xuancheng Jin, Xuangan Xiao, Songlin Jia, Wang Gao, Dawu Gu, Hang Zhang, Siqi Ma, Zhiyun Qian, Juanru Li. &nbsp;Annotating, Tracking, and Protecting Cryptographic Secrets with CryptoMPK. &nbsp;In Proceedings of the 2022&nbsp;IEEE Symposium on Security and Privacy, May 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; &nbsp;Zhenxiao Qi, Yu Qu, Heng Yin. &nbsp;LogicMEM: Automatic Profile Generation for Binary-Only Memory Forensics via Logic Inference. &nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; &nbsp;Mohammad Naseri, Jamie Hayes, Emiliano De Cristofaro. &nbsp;Local and Central Differential Privacy for Robustness and Privacy in Federated Learning.&nbsp;&nbsp;&nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; &nbsp;Bristena Oprisanu, Georgi Ganev, Emiliano De Cristofaro. &nbsp;On Utility and Privacy in Synthetic Genomic Data.&nbsp;&nbsp;&nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; &nbsp;Yizhuo Zhai, Yu Hao, Zheng Zhang, Weiteng Chen, Guoren Li, Zhiyun Qian, Chengyu Song, Manu Sridharan, Srikanth V. Krishnamurthy, Trent Jaeger, Paul L. Yu. &nbsp;Progressive Scrutiny: Incremental Detection of UBI bugs in the Linux Kernel &nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; &nbsp;Kaiming Huang, Yongzhe Huang, Mathias Payer, Zhiyun Qian, Jack Sampson, Gang Tan, Trent Jaeger. &nbsp;The Taming of the Stack: Isolating Stack Data from Memory Errors. &nbsp;&nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[NDSS'22] &nbsp;&nbsp; Xuewei Feng, Qi Li, Kun Sun, Ke Xu, Baojun Liu, Xiaofeng Zheng, Qiushi Yang, Haixin Duan, Zhiyun Qian. &nbsp;PMTUD is not Panacea: Revisiting IP Fragmentation Attacks against TCP.&nbsp;&nbsp;In&nbsp;Proceedings of the 2022&nbsp;Network and Distributed Systems Security Symposium (NDSS), February 2022.</li>
+	<li>[IMC'22] &nbsp;&nbsp;Ali Davanian, Michalis Faloutsos. &nbsp;MalNet: a binary-centric network-level profiling of IoT malware.&nbsp;</li>
+	<li>[MobiCom'22]&nbsp; &nbsp; Yiwen Hu, Min-Yue Chen, Guan-Hua Tu, Chi-Yu Li, Sihan Wang, Jingwen Shi, Tian Xie, Li Xiao, Chunyi Peng, Zhaowei Tan, Songwu Lu. &nbsp;Uncovering insecure designs of cellular emergency services (911).</li>
+	<li>[SIGCOMM'22] &nbsp;&nbsp;Jinghao Zhao, Zhaowei Tan, Yifei Xu, Zhehui Zhang, Songwu Lu. &nbsp;SEED: a SIM-based solution to 5G failures.</li>
+</ul>
+
+<h3>2021</h3>
+
+<ul>
+	<li>[NDSS'21] Zhenxiao Qi, Qian Feng, Yueqiang Cheng, Mengjia Yan, Peng Li, Heng Yin, and Tao Wei.&nbsp;<a href="https://www.cs.ucr.edu/~heng/pubs/SpecTaint.pdf">SpecTaint: Speculative Taint Analysis for Discovering Spectre Gadgets</a>. &nbsp;In Proceedings of the 2022 Network and Distributed Systems Security Symposium (NDSS), August 2021.</li>
+	<li>[NDSS'21] Jinghan Wang, Chengyu Song, and Heng Yi.&nbsp;<a href="https://www.cs.ucr.edu/~heng/pubs/afl-hier.pdf">Reinforcement Learning-based Hierarchical Seed Scheduling for Greybox Fuzzing</a>.&nbsp;In Proceedings of the 2022 Network and Distributed Systems Security Symposium (NDSS), February 2021.</li>
+	<li>[USENIX Security'21] Yu-Tsung Lee, William Enck, Haining Chen, Hayawardh Vijayakumar, Ninghui Li, Zhiyun Qian, Daimeng Wang, Giuseppe Petracca, Trent Jaeger. <a href="https://www.cs.ucr.edu/~zhiyunq/pub/sec21_polyscope.pdff">PolyScope: Multi-Policy Access Control Analysis to Compute Authorized Attack Operations in Android Systems</a>, in Proceedings of USENIX Security 2021.</li>
+	<li>[USENIX Security'21] Seyed Mohammadjavad Seyed Talebi, Zhihao Yao, Ardalan Amiri Sani, Zhiyun Qian, Daniel Austin. <a href="https://www.cs.ucr.edu/~zhiyunq/pub/sec21_undo_workarounds.pdf">Undo Workarounds for Kernel Bugs</a>, in Proceedings of USENIX Security 2021.</li>
+	<li>[USENIX Security'21] Zheng Zhang, Hang Zhang, Zhiyun Qian, Billy Lau.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/sec21_kernel_patch_measurement.pdf">An Investigation of the Android Kernel Patch Ecosystem</a>, in Proceedings of USENIX Security 2021.</li>
+	<li>[HPCA'21] Zhihui Shao, Mohammad A. Islam, Shaolei Ren.&nbsp;<a href="https://intra.ece.ucr.edu/~sren/doc/paper/hpca_2021.pdf">Heat Behind the Meter: A Hidden Threat of Thermal Attacks in Edge Colocation Data Centers</a>, in Proceedings of IEEE International Symposium on High-Performance Computer Architecture (HPCA), 2021.</li>
+	<li>[AAAI'21] Jianyi Yang, Shaolei Ren.&nbsp;<a href="https://arxiv.org/pdf/2102.05018.pdf">Robust Bandit Learning with Imperfect Context</a>, in Proceedings of arXiv preprint arXiv:2102.05018 (2021).</li>
+	<br>
+	<li>&nbsp;</li>
+</ul>
+
+<h3>2020</h3>
+
+<ul>
+	<li>[CCS'20] Lei Zhao, Yuncong Zhu, Jiang Ming, Yichen Zhang, Haotian Zhang, and Heng Yin.&nbsp;<a href="https://www.cs.ucr.edu/~heng/pubs/PatchScope_ccs20.pdf">PatchScope: Memory Object Centric Patch Diffing</a>,&nbsp;in the ACM Conference on Computer and Communications Security(CCS), November 2020.</li>
+	<li>[ASPLOS'20] Pan Zhang, Chengyu Song, Heng Yin, Deqing Zou, Elaine Shi and Hai Jin. <a href="https://www.cs.ucr.edu/~heng/pubs/asplos20-klotski.pdf">KLOTSKI: Efficient Obfuscated Execution against Controlled-Channel Attacks</a>, in International Conference on Architectural Support for Programming Languages and Operating Systems, March 2020.</li>
+	<li>[NDSS'20] Yue Duan, Xuezixiang Li, Jinghan Wang, and Heng Yin.&nbsp;<a href="https://www.cs.ucr.edu/~heng/pubs/DeepBinDiff.pdf">DeepBinDiff: Learning Program-Wide Code Representations for Binary Diffing</a>, in the Network and Distributed System Security Symposium, Feburary 2020.</li>
+	<li>[CCS'20] Keyu Man, Zhiyun Qian, Zhongjie Wang, Xiaofeng Zheng, Youjun Huang, Haixin Duan.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/ccs20_dns_poisoning.pdf">DNS Cache Poisoning Attack Reloaded: Revolutions with Side Channels</a>, in Proceedings of ACM Conference on Computer and Communications Security (CCS) 2020.</li>
+	<li>[FSE'20] Yizhuo Zhai, Yu Hao, Hang Zhang, Daimeng Wang, Chengyu Song, Zhiyun Qian, Mohsen Lesani, Srikanth V. Krishnamurthy, Paul Yu.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/fse20_UBITect.pdf">UBITect: A Precise and Scalable Method to Detect Use-Before-Initialization bugs in Linux Kernel</a>, in Proceedings of the 2020 ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering(FSE), Sacramento, CA.</li>
+	<li>[USENIX Security'20] Xiaofeng Zheng, Chaoyi Lu, Jian Peng, Qiushi Yang, Dongjie Zhou, Baojun Liu, Keyu Man, Shuang Hao, Haixin Duan, Zhiyun Qian.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/sec20_dns_fowarder.pdf">Poison Over Troubled Forwarders: A Cache Poisoning Attack Targeting DNS Forwarding Devices</a>, in Proceedings of USENIX Security 2020, Boston MA.</li>
+	<li>[USENIX Security'20] Weiteng Chen, Xiaochen Zou, Guoren Li, Zhiyun Qian.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/sec20_koobe.pdf">KOOBE: Towards Facilitating Exploit Generation of Kernel Out-Of-Bounds Write Vulnerabilities</a>, in Proceedings of USENIX Security 2020, Boston MA.</li>
+	<li>[Sigmetrics'20] Pengxiong Zhu, Keyu Man, Zhongjie Wang, Zhiyun Qian, Roya Ensafi, J. Alex Halderman, Haixin Duan.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/sigmetrics20_slowdown.pdf">Characterizing Transnational Internet Performance and the Great Bottleneck of China</a>, in Proceedings of ACM SIGMETRICS 2020, Boston, MA.</li>
+	<li>[NDSS'20] Zhongjie Wang, Shitong Zhu, Yue Cao, Zhiyun Qian, Chengyu Song, Srikanth Krishnamurthy, Tracy D. Braun, Kevin S. Chan.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/ndss20_symtcp.pdf">SymTCP: Eluding Stateful Deep Packet Inspection with Automated Discrepancy Discover</a>, in Proceedings of Eurosys 2020, Dresden, Germany.</li>
+	<li>[S&amp;P'20] Umar Iqbal, Peter Snyder, Shitong Zhu, Benjamin Livshits, Zhiyun Qian, Zubair Shafiq.&nbsp;<a href="https://www.cs.ucr.edu/~zhiyunq/pub/oakland20_adgraph.pdf">AdGraph: A Graph-Based Approach to Ad and Tracker Blocking</a>, in Proceedings of IEEE Symposium on Security &amp; Privacy (Oakland), 2020, San Francisco CA.</li>
+	<li>[FSE'20] Suhwan Song, Chengyu Song, Yeongjin Jang, and Byoungyoung Lee.&nbsp;<a href="https://www.cs.ucr.edu/~csong/fse20-crfuzz.pdf">CrFuzz: Fuzzing Multi-purpose Programs through Input Validation</a>, in Proceedings of the 2020 ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, Sacramento, CA, November 2020.</li>
+	<li>[ECCV'20] Shasha Li, Shitong Zhu, Sudipta Paul, Amit K. Roy-Chowdhury, Chengyu Song, Srikanth V. Krishnamurthy, Ananthram Swami, and Kevin S. Chan. <a href="https://arxiv.org/pdf/2007.09763.pdf">Connecting the Dots: Detecting Adversarial Perturbations Using Context Inconsistency</a>, in Proceedings of the 16th European Conference on Computer Vision (ECCV'20), August 2020.</li>
+	<li>[Oakland'20] Esmaeil M. Koruyeh, Shirin H. Shirazi, Khaled N. Khaswaneh, Chengyu Song, and Nael Abu-Ghazaleh. <a href="https://www.cs.ucr.edu/~csong/oakland20-speccfi.pdf">SPECCFI: CFI Informed Branch Prediction</a>, in Proceedings of the 41st IEEE Symposium on Security and Privacy (Oakland'20), San Francisco, CA, May 2020.</li>
+	<li>[Micro'20] Hodjat Asghari Esfeden, Amirali Abdolrashidi, Shafiur Rahman, Daniel Wong, Nael Abu-Ghazaleh. <a href="https://www.cs.ucr.edu/~nael/pubs/micro20-bow.pdf">BOW: Breathing Operand Windows to Exploit Bypassing in GPUs</a>, in Proceedings of 2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece.</li>
+	<li>[Micro'20] Shafiur Rahman, Nael Abu-Ghazaleh, Rajiv Gupta. <a href="https://www.cs.ucr.edu/~nael/pubs/micro20-graphpulse.pdf">GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing</a>, in Proceedings of 2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO), Athens, Greece.</li>
+	<li>[Micro'20] Liang Zhou, Laxmi Bhuyan, K. K. Ramakrishnan. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9251983Liang">Gemini: Learning to Manage CPU Power for Latency-Critical Search Engines</a>, in Proceedings of Proc. 53rd IEEE/ACM International Symposium on Microarchitecture (MICRO 2020), Oct. 2020.</li>
+	<li>[ICFP'20] Jeremiah Griffin, Mohsen Lesani, Narges Shadab, Xizhe Yin. <a href="https://www.cs.ucr.edu/~lesani/companion/icfp20/ICFP20.pdf">TLC: Temporal Logic of Distributed Components</a>, in Proceedings of ACM SIGPLAN International Conference on Functional Programming.</li>
+	<li>[CAV'20] Xiao Li, Farzin Houshmand, Mohsen Lesani. <a href="https://www.cs.ucr.edu/~lesani/companion/cav20/CAV20.pdf">Hampa: Solver-aided Recency-Aware Replication</a>, in Proceedings of International Conference on Computer-Aided Verification.</li>
+	<li>[SIGMETRICS'20] Zhihui Shao, Mohammad A. Islam, Shaolei Ren. <a href="https://arxiv.org/abs/2001.06729">Your Noise, My Signal: Exploiting Switching Noise for Stealthy Data Exfiltration from Desktop Computers</a>, in Proceedings of ACM International Conference on Measurement and Modeling of Computer Systems (SIGMETRICS), 2020.</li>
+</ul>
+</span>
+            </div>
+
+  </div>
+
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+                        </div>
+                                            </div>
+                </div>
+                            </div>
+</main>
+<footer  style="background-image:url(https://cresp.cs.ucr.edu/sites/default/files/theme-banners/02_cnas_new_footer_june_2020_1600x376-2.png); background-repeat: no-repeat; background-size: cover;">
+    <div class="footer-container">
+        <div class="footer-content-area">
+            <div class="grid-container">
+                                <div class="grid-x grid-padding-x footer-columns">
+                                            <div class="cell medium-auto">
+      
+      
+      <section class="footer-item ucr-footer-info">
+        <span class="footer-logo"><span class="show-for-sr">University of California, Riverside</span></span>
+        <address>
+         <p>900 University Ave.<br />
+            Riverside, CA 92521</p>
+            <p>Tel: (951) 827-1012</p>
+        </address>
+            </section>
+
+
+</div>
+
+                                                                    <div class="cell medium-auto">
+            <section id="block-ucr-cnas-1-ucriversidefooterdeptinformationblock" data-block-plugin-id="ucr_global_footer_dept_info" class="footer-item footer-dept-info">
+        
+                
+                                                                                    
+    
+    
+    
+
+                        
+    
+    
+    
+
+    <h2>Bourns College of Engineering - Computer Science and Engineering</h2>
+    <address class="address_2">
+       <p> <a href="https://campusmap.ucr.edu/" target="_blank">            351 Winston Chung Hall
+            <br />900 University Ave.             <br />Riverside, CA 92521             </a></p>
+    		<p> tel: (951) 827-5639<br />                 fax: (951) 827-4643<br />         email: <a href="mailto:webmaster@engr.ucr.edu">webmaster@engr.ucr.edu</a>                </p>
+
+        </address>
+    
+    </section>
+
+    </div>
+
+                                                                
+                                                        </div>
+            </div>
+        </div>
+        <div class="site-legal-footer">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <ul>
+                            <!--<li><a href="/feedback" title="Send Feedback E-mail">Feedback</a></li>-->
+                            <li><a href="https://www.ucr.edu/privacy.html">Privacy and Accessibility</a></li>
+                            <li><a href="https://ucrsupport.service-now.com/ucr_portal?id=ucr_accessibility_form">Report barrier to accessibility</a></li>
+                            <li><a href="https://www.ucr.edu/terms.html">Terms and Conditions</a></li>
+                            <li>© 2025 Regents of the University of California</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div class="large reveal" id="gscSearchFormModal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <div class="gsc-modal-top">
+        <span class="gsc-welcome-text">Let us help you with your search</span>
+        <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <form id="audience-search-form" name="gsc-search-form" action="/results">
+        <div class="gsc-modal-body">
+            <div class="grid-container full">
+                <div class="grid-x grid-padding-x grid-padding-y align-center-middle text-center">
+                    <div class="cell">
+                        <label id="searchbox-label" class="hidden" aria-label="Enter your Search Criteria.">Enter your Search Criteria</label>
+                        <input type="text" maxlength="255" id="audience-search" name="q" value="" aria-labelledby="searchbox-label" placeholder="Search for..." />
+                    </div>
+                                            <div class="cell medium-4">
+                            <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="all">Search All UCR</button>
+                        </div>
+                        <div class="cell medium-4">
+                            <button class="button gsc-modal-button-submit" type="submit" name="search-by" value="https://cresp.cs.ucr.edu">Search This Site</button>
+                        </div>
+                        <div class="cell medium-4">
+                            <button type="button" class="button gsc-modal-button-close" data-close>Cancel</button>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/31","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bu":{"notify_ie":-2,"notify_firefox":-2,"notify_opera":-2,"notify_safari":-2,"notify_chrome":-2,"insecure":true,"unsupported":false,"mobile":true,"visibility_type":"hide","visibility_pages":"admin\/*","source":"\/\/browser-update.org\/update.min.js","show_source":"","position":"top","text_override":"","reminder":6,"reminder_closed":6,"new_window":true,"url":"","no_close":false,"test_mode":false},"google_analytics":{"account":"G-Z1RGSBHBF7","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Cp\u003E\u003Cstrong\u003EThis website uses cookies\u003C\/strong\u003E to enable essential site functionality, improve your experience, and analyze website traffic. By clicking \u0022\u003Cstrong\u003EAccept\u003C\/strong\u003E\u0022, you agree to our website\u0027s standard and known use of collected information as described in our \u003Ca href=\u0022https:\/\/www.ucr.edu\/privacy.html\u0022 title=\u0022UCR Privacy statement\u0022\u003Eprivacy statement\u003C\/a\u003E.\u003C\/p\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003EDecline\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003EDecline\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.ucr.edu\/privacy.html","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":365,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":false,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch5\u003E\u003Cspan\u003EThis site uses essential cookies to enable essential site functionality, improve your experience, and analyze website traffic.\u003C\/span\u003E\u003C\/h5\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button \u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":"","olivero_secondary_button_classes":"","close_button_action":"close_banner","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true},"ajax":[],"user":{"uid":0,"permissionsHash":"f08d04b41d27bd25c93e61957a09f8cf820e8ea788ab98b1c420354638083bfc"}}</script>
+<script src="/sites/default/files/js/js_uc8IUvayvqJq77KsbeuzHPEoPGiXEaQ7RgDlAWQckdg.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ucr_cnas_1&amp;include=eJxtylEOAiEMBNALIY0nIqV0EbdQQ0Gzt3ej_rjZn5nJy2BKQ7FtgL_hl65tuDghTk83ppW7y6pZOGBD2UYhgyM422xwhYjGblIPiRecMiCLRpQLmZ3x_avU0ML1-P3X_cozkOpaeK_6kIKNGM4wROzsnoVfBp_0VdMUfgOLrVua"></script>
+<script src="https://static.addtoany.com/menu/page.js" defer></script>
+<script src="/sites/default/files/js/js_4fkFCxTeK1NHn48q3ZQGxdsHwQjNOVe6JtKJ3LOSDP4.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=ucr_cnas_1&amp;include=eJxtylEOAiEMBNALIY0nIqV0EbdQQ0Gzt3ej_rjZn5nJy2BKQ7FtgL_hl65tuDghTk83ppW7y6pZOGBD2UYhgyM422xwhYjGblIPiRecMiCLRpQLmZ3x_avU0ML1-P3X_cozkOpaeK_6kIKNGM4wROzsnoVfBp_0VdMUfgOLrVua"></script>
+<script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.min.js?v=10.2.12" defer></script>
+
+</body>
+</html>

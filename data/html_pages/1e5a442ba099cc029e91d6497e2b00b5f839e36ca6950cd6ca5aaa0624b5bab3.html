@@ -1,0 +1,1193 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Stanford University Explore Courses</title>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic" />
+<link rel="stylesheet" href="https://explorecourses.stanford.edu/css/crsearch.css.optimized.432d26bfd847cc7b.css" type="text/css"  />
+
+					
+					
+					
+</head>
+<body id="mainpage">
+
+  
+
+<!--  HEADER  -->
+
+	<div id="header">
+	  <div class="wrap">
+		<div id="topNav">
+			<div id="adminNav">&nbsp;</div>
+			<a href="https://explorecourses.stanford.edu/about">About</a> |
+			
+				
+					<a href="https://bulletin.stanford.edu/">University Bulletin</a>
+				
+				
+			
+			|
+			
+				
+					<a href="https://explorecourses.stanford.edu/login?redirect=https%3A%2F%2Fexplorecourses.stanford.edu%2Fmyprofile">Sign in</a>
+				
+				
+			
+		</div>
+		<div id="logo">
+			<a href="/"><img src="https://explorecourses.stanford.edu/images/stanford-white.f5b5e52b436b2da0.png" alt="Stanford University"  /></a>
+		</div>
+		<div id="sitename">
+			<div id="bulletintext">
+				<a href="/" style="font-family: inherit; line-height: 1em;">Bulletin<small style="font-family: inherit; line-height: 1.4em;">ExploreCourses</small></a>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+
+
+  <!--  MAIN PAGE CONTAINER  -->
+  <div id="container">	
+	  
+	  <!--  SEARCH / NAV BAR -->
+	  <div id="topRow">
+	    
+	    
+	
+		<table id="years">
+	      <tr>
+	      
+	      
+	      	
+	        
+	        	
+	        	<td><a href="search;jsessionid=1ah1c9worxbd719c9jeviowy96?academicYear=20202021">2020-2021</a></td>
+	        
+	      
+	      
+	      
+	      	
+	        
+	        	
+	        	<td><a href="search;jsessionid=1ah1c9worxbd719c9jeviowy96?academicYear=20212022">2021-2022</a></td>
+	        
+	      
+	      
+	      
+	      	
+	        
+	        	
+	        	<td><a href="search;jsessionid=1ah1c9worxbd719c9jeviowy96?academicYear=20222023">2022-2023</a></td>
+	        
+	      
+	      
+	      
+	      	
+	        
+	        	
+	        	<td><a href="search;jsessionid=1ah1c9worxbd719c9jeviowy96?academicYear=20232024">2023-2024</a></td>
+	        
+	      
+	      
+	      
+	      	
+	        	<td class="selected"><a href="#" onclick="return false;">2024-2025</a></td>
+	        
+	        
+	      
+	      
+	      </tr>
+	    </table>
+	
+	    
+	    <table id="topControls">
+	      <tr>
+	      	<td class="left"></td>
+	        <td class="content" id="searchbox">
+	    	  
+
+<form id="coursesearch" method="get" action="search" onsubmit="addCollapsed();">
+  <div>
+  	
+  		
+		    <input type="hidden" name="view" value="catalog"/>
+		
+		
+	
+	
+	<input type="hidden" name="filter-coursestatus-Active" value="on" />
+	
+    <input type="hidden" name="page" value="0" />
+    <input type="hidden" name="catalog" value="" />
+    <input type="hidden" name="academicYear" value="" />
+    <input class="inputBox" onfocus="searchFocus()" onblur="searchBlur()" type="text" title="search" value=""  name="q" id="search_courses_input" alt="Search Courses" />
+    <input type="hidden" name="collapse" id="collapsedFiltersSearch" value="" />
+    <input id="submit" type="submit" value="go" />
+  </div>
+</form>
+
+<script type="text/javascript">
+input = document.getElementById('search_courses_input');
+var defaultText = 'course name, instructor, title, or keyword...';
+
+searchFocus = function()
+{
+	if (input.value == defaultText)
+	{
+		input.value = '';
+	}
+};
+
+searchBlur = function()
+{
+	if (input.value == '')
+	{
+		input.value = defaultText;
+	}
+};
+
+searchBlur();
+
+addCollapsed = function()
+{
+	document.getElementById('collapsedFiltersSearch').value = collapsed;
+};
+</script>
+	        </td>
+	        <td class="right"></td>
+	        
+	        <td class="spacer"></td>
+	        
+	        <td class="left"></td>
+	        
+	        <td class="content" id="browseByDepartment">
+	    	  <a href="browse"><span class="large">Browse</span><br />by subject...</a>
+	        </td>
+	        
+	        <td class="right"></td>
+	        
+	        <td class="spacer">&nbsp;</td>
+	        
+	        <td class="left">&nbsp;</td>
+	        <td class="content" id="browseBySchedule">
+	    	
+	    	  <a href="search;jsessionid=1ah1c9worxbd719c9jeviowy96"><span class="large">Schedule</span><br />view...</a>
+	        </td>
+	        <td class="right"></td>
+	        
+	        <td class="spacer">&nbsp;</td>
+	        
+	        <td id="bubbles"></td>
+	      </tr>
+	    </table>
+	  </div>
+	  
+	  
+	  
+	  
+	
+	
+	
+	
+	
+	  
+	
+	
+	  
+	  
+	  
+	  
+
+<!--  RESULTS HEADER -->
+<div id="resultsHeader">
+	<h1 class="resultsSummary">
+		1 - 0 of 0 results for:
+		<span class="searchTerm"></span>
+		
+		
+	</h1>
+	<div class="printButton">
+		
+		
+		<a href="print;jsessionid=1ah1c9worxbd719c9jeviowy96?catalog=" target="_blank"><img src="https://explorecourses.stanford.edu/images/printer_icon.40f8c3d6d3ce801f.png" alt="print preview"  /> printer friendly page</a>
+		
+	</div>
+</div>
+		  
+	<div id="mainContent">
+		    
+		<!--  RESULTS LIST -->
+    	<div id="searchResults">			
+    	
+		</div>
+		
+		
+
+
+<!--  FILTERS -->
+<div id="searchFilters">
+	<div class="filtesTitle">Filter Results:</div>	
+	
+	<div id="filtersContainer">
+		
+		<form id="coursesearch_filter" method="get" action="search">
+			<div>
+			<input type="hidden" name="q" value="" />
+			
+		  		
+				    <input type="hidden" name="view" value="academicYear"/>
+				
+				
+			
+			<input type="hidden" name="page" value="0" />
+			<input type="hidden" name="academicYear" value="" />
+				
+					
+					
+					
+					
+						<a href="#" id="filterHeader_1" class="filterHeader" onclick="hideFilter(1); return false;">
+							term offered
+						</a>
+					
+					
+						<div class="relative">
+						<div id="filter_1" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-term-Autumn" name="filter-term-Autumn" type="checkbox" onclick="document.getElementById('filter_1').style.visibility='hidden'; document.getElementById('filterUpdate_1').style.display='block'; submitFilterForm();"  />
+										<label for="filter-term-Autumn"> Autumn</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-term-Winter" name="filter-term-Winter" type="checkbox" onclick="document.getElementById('filter_1').style.visibility='hidden'; document.getElementById('filterUpdate_1').style.display='block'; submitFilterForm();"  />
+										<label for="filter-term-Winter"> Winter</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-term-Spring" name="filter-term-Spring" type="checkbox" onclick="document.getElementById('filter_1').style.visibility='hidden'; document.getElementById('filterUpdate_1').style.display='block'; submitFilterForm();"  />
+										<label for="filter-term-Spring"> Spring</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-term-Summer" name="filter-term-Summer" type="checkbox" onclick="document.getElementById('filter_1').style.visibility='hidden'; document.getElementById('filterUpdate_1').style.display='block'; submitFilterForm();"  />
+										<label for="filter-term-Summer"> Summer</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+					<div id="filterUpdate_1" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_2" class="filterHeader" onclick="showFilter(2); return false;">
+							teaching presence
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_2" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-INPERSON" name="filter-instructionmode-INPERSON" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-INPERSON"> in person</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-ONLINEASYNC" name="filter-instructionmode-ONLINEASYNC" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-ONLINEASYNC"> online: asynchronous</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-ONLINESYNC" name="filter-instructionmode-ONLINESYNC" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-ONLINESYNC"> online: synchronous</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-REMOTEASYNC" name="filter-instructionmode-REMOTEASYNC" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-REMOTEASYNC"> remote: asynchronous</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-REMOTESYNC" name="filter-instructionmode-REMOTESYNC" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-REMOTESYNC"> remote: synchronous</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-instructionmode-INDEPENDENTSTDY" name="filter-instructionmode-INDEPENDENTSTDY" type="checkbox" onclick="document.getElementById('filter_2').style.visibility='hidden'; document.getElementById('filterUpdate_2').style.display='block'; submitFilterForm();"  />
+										<label for="filter-instructionmode-INDEPENDENTSTDY"> independent studies</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_2").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_2" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_3" class="filterHeader" onclick="showFilter(3); return false;">
+							number of units
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_3" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-1" name="filter-units-1" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-1"> 1 unit</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-2" name="filter-units-2" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-2"> 2 units</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-3" name="filter-units-3" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-3"> 3 units</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-4" name="filter-units-4" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-4"> 4 units</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-5" name="filter-units-5" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-5"> 5 units</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-units-gt5" name="filter-units-gt5" type="checkbox" onclick="document.getElementById('filter_3').style.visibility='hidden'; document.getElementById('filterUpdate_3').style.display='block'; submitFilterForm();"  />
+										<label for="filter-units-gt5"> &gt;5 units</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_3").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_3" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_4" class="filterHeader" onclick="showFilter(4); return false;">
+							time offered
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_4" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-time-0" name="filter-time-0" type="checkbox" onclick="document.getElementById('filter_4').style.visibility='hidden'; document.getElementById('filterUpdate_4').style.display='block'; submitFilterForm();"  />
+										<label for="filter-time-0"> early morning (before 10am)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-time-1" name="filter-time-1" type="checkbox" onclick="document.getElementById('filter_4').style.visibility='hidden'; document.getElementById('filterUpdate_4').style.display='block'; submitFilterForm();"  />
+										<label for="filter-time-1"> morning (10am-12pm)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-time-2" name="filter-time-2" type="checkbox" onclick="document.getElementById('filter_4').style.visibility='hidden'; document.getElementById('filterUpdate_4').style.display='block'; submitFilterForm();"  />
+										<label for="filter-time-2"> lunchtime (12pm-2pm)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-time-3" name="filter-time-3" type="checkbox" onclick="document.getElementById('filter_4').style.visibility='hidden'; document.getElementById('filterUpdate_4').style.display='block'; submitFilterForm();"  />
+										<label for="filter-time-3"> afternoon (2pm-5pm)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-time-4" name="filter-time-4" type="checkbox" onclick="document.getElementById('filter_4').style.visibility='hidden'; document.getElementById('filterUpdate_4').style.display='block'; submitFilterForm();"  />
+										<label for="filter-time-4"> evening (after 5pm)</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_4").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_4" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_5" class="filterHeader" onclick="showFilter(5); return false;">
+							days
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_5" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-2" name="filter-day-2" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-2"> Monday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-3" name="filter-day-3" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-3"> Tuesday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-4" name="filter-day-4" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-4"> Wednesday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-5" name="filter-day-5" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-5"> Thursday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-6" name="filter-day-6" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-6"> Friday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-7" name="filter-day-7" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-7"> Saturday</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-day-1" name="filter-day-1" type="checkbox" onclick="document.getElementById('filter_5').style.visibility='hidden'; document.getElementById('filterUpdate_5').style.display='block'; submitFilterForm();"  />
+										<label for="filter-day-1"> Sunday</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_5").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_5" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_6" class="filterHeader" onclick="showFilter(6); return false;">
+							UG Requirements (GERs)
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_6" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYAII" name="filter-ger-WAYAII" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYAII"> WAY-A-II</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYAQR" name="filter-ger-WAYAQR" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYAQR"> WAY-AQR</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYCE" name="filter-ger-WAYCE" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYCE"> WAY-CE</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYEDP" name="filter-ger-WAYEDP" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYEDP"> WAY-EDP</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYER" name="filter-ger-WAYER" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYER"> WAY-ER</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYFR" name="filter-ger-WAYFR" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYFR"> WAY-FR</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYSI" name="filter-ger-WAYSI" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYSI"> WAY-SI</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WAYSMA" name="filter-ger-WAYSMA" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WAYSMA"> WAY-SMA</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-Language" name="filter-ger-Language" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-Language"> Language</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-Writing1" name="filter-ger-Writing1" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-Writing1"> Writing 1</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-Writing2" name="filter-ger-Writing2" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-Writing2"> Writing 2</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-WritingSLE" name="filter-ger-WritingSLE" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-WritingSLE"> Writing SLE</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERDBHum" name="filter-ger-GERDBHum" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERDBHum"> DB:Hum</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERDBMath" name="filter-ger-GERDBMath" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERDBMath"> DB:Math</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERDBSocSci" name="filter-ger-GERDBSocSci" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERDBSocSci"> DB:SocSci</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERDBEngrAppSci" name="filter-ger-GERDBEngrAppSci" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERDBEngrAppSci"> DB:EngrAppSci</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERDBNatSci" name="filter-ger-GERDBNatSci" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERDBNatSci"> DB:NatSci</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERECEthicReas" name="filter-ger-GERECEthicReas" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERECEthicReas"> EC:EthicReas</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERECGlobalCom" name="filter-ger-GERECGlobalCom" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERECGlobalCom"> EC:GlobalCom</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERECAmerCul" name="filter-ger-GERECAmerCul" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERECAmerCul"> EC:AmerCul</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERECGender" name="filter-ger-GERECGender" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERECGender"> EC:Gender</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERIHUM1" name="filter-ger-GERIHUM1" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERIHUM1"> IHUM1</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERIHUM2" name="filter-ger-GERIHUM2" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERIHUM2"> IHUM2</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-ger-GERIHUM3" name="filter-ger-GERIHUM3" type="checkbox" onclick="document.getElementById('filter_6').style.visibility='hidden'; document.getElementById('filterUpdate_6').style.display='block'; submitFilterForm();"  />
+										<label for="filter-ger-GERIHUM3"> IHUM3</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_6").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_6" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_7" class="filterHeader" onclick="showFilter(7); return false;">
+							component
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_7" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-LEC" name="filter-component-LEC" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-LEC"> Lecture (LEC)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-SEM" name="filter-component-SEM" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-SEM"> Seminar (SEM)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-DIS" name="filter-component-DIS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-DIS"> Discussion Section (DIS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-LAB" name="filter-component-LAB" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-LAB"> Laboratory (LAB)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-LBS" name="filter-component-LBS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-LBS"> Lab Section (LBS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-ACT" name="filter-component-ACT" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-ACT"> Activity (ACT)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-CAS" name="filter-component-CAS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-CAS"> Case Study (CAS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-COL" name="filter-component-COL" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-COL"> Colloquium (COL)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-WKS" name="filter-component-WKS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-WKS"> Workshop (WKS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-INS" name="filter-component-INS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-INS"> Independent Study (INS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-IDS" name="filter-component-IDS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-IDS"> Intro Dial, Sophomore (IDS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-ISF" name="filter-component-ISF" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-ISF"> Intro Sem, Freshman (ISF)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-ISS" name="filter-component-ISS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-ISS"> Intro Sem, Sophomore (ISS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-ITR" name="filter-component-ITR" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-ITR"> Internship (ITR)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-API" name="filter-component-API" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-API"> Arts Intensive Program (API)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-LNG" name="filter-component-LNG" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-LNG"> Language (LNG)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-CLK" name="filter-component-CLK" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-CLK"> Clerkship (CLK)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-PRA" name="filter-component-PRA" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-PRA"> Practicum (PRA)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-PRC" name="filter-component-PRC" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-PRC"> Practicum (PRC)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-RES" name="filter-component-RES" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-RES"> Research (RES)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-SCS" name="filter-component-SCS" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-SCS"> Sophomore College (SCS)</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-component-TD" name="filter-component-TD" type="checkbox" onclick="document.getElementById('filter_7').style.visibility='hidden'; document.getElementById('filterUpdate_7').style.display='block'; submitFilterForm();"  />
+										<label for="filter-component-TD"> Thesis/Dissertation (T/D)</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_7").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_7" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+					
+					
+					
+						<a href="#" id="filterHeader_8" class="filterHeader" onclick="showFilter(8); return false;">
+							career
+						</a>
+					
+					
+					
+						<div class="relative">
+						<div id="filter_8" class="filterOptions">
+							<div class="wrapper">
+							<table>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-academiclevel-UG" name="filter-academiclevel-UG" type="checkbox" onclick="document.getElementById('filter_8').style.visibility='hidden'; document.getElementById('filterUpdate_8').style.display='block'; submitFilterForm();"  />
+										<label for="filter-academiclevel-UG"> Undergraduate</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-academiclevel-GR" name="filter-academiclevel-GR" type="checkbox" onclick="document.getElementById('filter_8').style.visibility='hidden'; document.getElementById('filterUpdate_8').style.display='block'; submitFilterForm();"  />
+										<label for="filter-academiclevel-GR"> Graduate</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-academiclevel-GSB" name="filter-academiclevel-GSB" type="checkbox" onclick="document.getElementById('filter_8').style.visibility='hidden'; document.getElementById('filterUpdate_8').style.display='block'; submitFilterForm();"  />
+										<label for="filter-academiclevel-GSB"> Graduate School of Business</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-academiclevel-LAW" name="filter-academiclevel-LAW" type="checkbox" onclick="document.getElementById('filter_8').style.visibility='hidden'; document.getElementById('filterUpdate_8').style.display='block'; submitFilterForm();"  />
+										<label for="filter-academiclevel-LAW"> Law School</label>
+									</td></tr>
+								
+									<tr><td class="filterCell">
+									
+									
+										<input id="filter-academiclevel-MED" name="filter-academiclevel-MED" type="checkbox" onclick="document.getElementById('filter_8').style.visibility='hidden'; document.getElementById('filterUpdate_8').style.display='block'; submitFilterForm();"  />
+										<label for="filter-academiclevel-MED"> Medical School</label>
+									</td></tr>
+								
+							</table>
+							</div>
+						</div>
+					
+						<script type="text/javascript">
+							document.getElementById("filter_8").style.display = "none";
+						</script>
+					
+					<div id="filterUpdate_8" class="filterUpdate noDisplay">updating results...</div>
+					</div>
+				
+			
+			<input type="hidden" name="collapse" id="collapsedFilters" value="" />
+			
+			</div>
+			<input type="submit" id="filterSubmit" value="Filter Results"/>
+			<script type="text/javascript">
+				document.getElementById("filterSubmit").style.display = "none";
+			</script>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript" >
+	//
+	
+	var collapsed = '';
+	
+	showFilter = function(id)
+	{
+		changeStatus(id, true);
+	};
+
+	hideFilter = function(id)
+	{
+		changeStatus(id, false);
+	};
+
+	var animating = false;
+	
+	changeStatus = function(id, visible)
+	{
+		if(animating)
+			return;
+		
+		if(visible) {
+			animating = true;
+			Effect.BlindDown('filter_' + id, {duration:0.3, afterFinish: function(){animating = false;}});
+			document.getElementById('filterHeader_' + id).onclick = function() { hideFilter(id); return false; };
+		}
+		else {
+			animating = true;
+			Effect.BlindUp('filter_' + id, {duration:0.3, afterFinish: function(){animating = false;}});
+			document.getElementById('filterHeader_' + id).onclick = function() { showFilter(id); return false; };
+		}
+		
+		if(collapsed.indexOf(',' + id + ',') != -1)
+		{
+			collapsed = collapsed.substring(0, collapsed.indexOf(',' + id + ',')) + collapsed.substring(collapsed.indexOf(',' + id + ',') + (',' + id).length);
+		}
+		else
+		{
+			if(collapsed.length == 0)
+				collapsed = ',';
+
+			collapsed += id;
+			collapsed += ',';
+		}
+	};
+
+	submitFilterForm = function()
+	{
+		document.getElementById('collapsedFilters').value = collapsed;
+		document.getElementById('coursesearch_filter').submit();
+	};
+	
+</script>
+		
+	</div>
+	
+	
+
+<div id="pagination">
+	
+ 	<span id="pageLabel">Page:</span>
+ 	
+		
+		
+			
+				<span class="currentPage">1</span>
+			
+			
+		
+	
+	
+</div>
+<script type="text/javascript">
+
+	changePage = function(link)
+	{
+		window.location = link + "&collapse=" + collapsed;
+	};
+	
+</script>
+
+	  
+  </div>
+  
+  <!--  FOOTER  -->    
+
+<div id="footerStripe">  	  	
+  	&copy; Stanford University |
+  	<a href="http://stanford.edu/site/terms.html">Terms of Use</a> |
+  	<a href="http://stanford.edu/site/copyright.html">Copyright Complaints</a>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3165447-5");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+  
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/effects.js"></script>
+	<script type="text/javascript">
+		var scheduleAnimating = false;
+
+		hideSchedule = function(id)
+		{
+			if(scheduleAnimating)
+				return false;
+
+			scheduleAnimating = true;
+			
+			Effect.BlindUp('schedule_' + id, {duration:0.5, afterFinish: function(effect) { scheduleAnimating = false;} });
+	
+			var link = document.getElementById('scheduleLink_' + id);
+			link.onclick = function() { return showSchedule(id); };
+	
+			return false;
+		};
+	
+		showSchedule = function(id)
+		{
+			if(scheduleAnimating)
+				return false;
+
+			scheduleAnimating = true;
+			
+			Effect.BlindDown('schedule_' + id, {duration:0.5, afterFinish: function(effect) { scheduleAnimating = false;} });
+	
+			var link = document.getElementById('scheduleLink_' + id);
+			link.onclick = function() { return hideSchedule(id); };
+	
+			return false;
+		};
+	
+		hideFull = function(id)
+		{
+			document.getElementById('shortDescription_' + id).style.display = 'block';
+			document.getElementById('fullDescription_' + id).style.display = 'none';
+		};
+	
+		showFull = function(id)
+		{
+			document.getElementById('shortDescription_' + id).style.display = 'none';
+			document.getElementById('fullDescription_' + id).style.display = 'block';
+		};
+
+		hideFullInstr = function(id)
+		{
+			document.getElementById('shortInstructors_' + id).style.display = 'block';
+			document.getElementById('fullInstructors_' + id).style.display = 'none';
+		};
+	
+		showFullInstr = function(id)
+		{
+			document.getElementById('shortInstructors_' + id).style.display = 'none';
+			document.getElementById('fullInstructors_' + id).style.display = 'block';
+		};
+	</script>
+	
+	<script type="text/javascript">
+	<!-- Hotjar Tracking Code for Explore Courses -->
+	    (function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:3860827,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+  
+</body>
+</html>

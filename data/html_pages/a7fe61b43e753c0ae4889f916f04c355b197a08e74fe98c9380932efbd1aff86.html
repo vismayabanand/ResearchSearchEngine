@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+<title>Natural Programming</title>
+<link rel=stylesheet href="style.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="images/natprog.ico" type="image/x-icon" />
+<script type="text/javascript">
+
+function makeHeaderLink(name, link) {
+	
+	if(document.URL.indexOf(link) == -1) document.write("<a class=navlink href=\"" + link + "\">" + name + "</a>&nbsp;&nbsp;&nbsp;");
+	else document.write("<b class=navlink>" + name + "</b>&nbsp;&nbsp;&nbsp;");
+	
+}
+
+function timestamp() {
+	var d = new Date();
+	document.write("" + d.getSeconds() + " " + d.getMilliseconds())
+}		
+
+function embedMovie (path, width, height) {
+	var result =
+		"<div class='clickme'>click to play</div>" +
+		"<object class=\"demo\" standby=\"loading...\"" +
+		"width=" + width + " " +
+		"height=" + height + " " +
+		"classid=\"clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B\" " +
+		"codebase=\"http://www.apple.com/qtactivex/qtplugin.cab\"> " +
+		"<param name=\"src\" value=\"movies/" + path + ".jpg\" /> " +
+		"<param name=\"href\" value=\"" + path + ".mov\" /> " +
+		"<param name=\"target\" value=\"myself\" /> " +
+		"<param name=\"scale\" value=\"aspect\" />" +
+		"<param name=\"bgcolor\" value=\"000000\" />" +
+		"<embed type=\"video/quicktime\" src=\"movies/" + path + ".jpg\" href=\"" + path + ".mov\" width=" + width + " height=" + height + " target=\"myself\">" +
+		"</object>"
+	document.write(result)
+}
+</script>
+</head>
+<body>
+
+<br>
+
+<!-- match the width below: 40 + padding -->
+<div style="width:44em; margin: auto; text-align: justify;">
+
+	<a href="index.html"><img class=navlink style="width:6em;" src="images/logo.png"></a>
+		
+	<script type="text/javascript">
+	
+	var isTopPage = 
+		(document.URL.indexOf("index.html") >=0 || 
+		document.URL.indexOf("publications.html") >= 0 ||
+		document.URL.indexOf("contact.html") >= 0 ||
+		document.URL.indexOf("news.html") >= 0 ||
+		document.URL.indexOf("funding.html") >= 0)
+
+	if(isTopPage)
+		makeHeaderLink("projects", "index.html");
+	else 
+		document.write("<a href=\"index.html\" style=\"color:black;\"><b>projects</b></a>&nbsp;&nbsp;&nbsp;");
+		
+	makeHeaderLink("pubs", "publications.html");
+	makeHeaderLink("people", "contact.html");
+	makeHeaderLink("press", "news.html");
+	makeHeaderLink("funding", "funding.html");
+	
+	</script>
+
+
+	<a href="http://www.cmu.edu"><img class=navlink style="width:6em; margin-bottom: -.25em;" src="images/logo-cmu.jpg"></a>
+
+	<a href="http://www.hcii.cmu.edu"><img class=navlink style="width:3em;" src="images/logo-hcii.jpg"></a>
+
+</div>
+
+<br>
+
+<div style="margin: auto; width: 40em; background-color:#FFFAC9; border:solid 1px #D0D0D0; padding:2em;">
+	
+
+<head>
+<style type="text/css">
+.auto-style1 {
+	font-variant: small-caps;
+}
+</style>
+</head>
+
+<div style="float: right; width: 10em; border: solid rgb(200,200,200) 1px; padding: .5em; background: white; margin-top: 1em; margin-left: 1em; margin-bottom: 1em;">
+
+<p class="newsdate">oct 2018 &#8212;</p>
+<p class="news">At <a href="https://vlhcc18.github.io"><strong>VL/HCC'2018</strong></a>, our group will have 3 full papers, 2 posters, and a presentation in the <a href="https://www.cs.washington.edu/dtshps2018/">DTSHPS'2018 Workshop</a>.</p>
+
+
+<p class="newsdate">aug 2018 &#8212;</p>
+<p class="news"><strong>New NSF grant</strong> called "Multimodal Conversational Assistant that Learns from Demonstrations" to support the work related to Sugilite.</p>
+
+<p class="newsdate">jun 2018 &#8212;</p>
+<p class="news"><strong>New NSF grant</strong> called "Knowledge Acceleration for Programming" to support the work related to Unakite.</p>
+
+<p class="newsdate">jun 2018 &#8212;</p>
+<p class="news"><strong>Most Influential Paper award</strong> at The 30th International Conference on Software Engineering -- ICSE'2018, for "Debugging, Reinvented: Asking and Answering Why and Why Not Questions about Program Behavior" by Andrew J. Ko and Brad A. Myers from 2008.</p>
+
+<p class="newsdate">may 2018 &#8212;</p>
+<p class="news"><strong>Keynote address</strong>, WAPI: 1st International Workshop on API Usage and Evolution (<a href="https://w-api.github.io/">https://w-api.github.io/</a>), co-located with the 39th International Conference on Software Engineering (ICSE'2017), Buenos Aires, Argentina, Tuesday, May 23, 2017. "Human-Centered Methods for Improving API Usability".&nbsp;<a href="http://www.cs.cmu.edu/~NatProg/papers/Myers-WAPI-keynote%20submitted.pdf">local pdf</a> and <a href="http://www.cs.cmu.edu/~NatProg/papers/Myers%20WAPI%202017%20talk.pdf">slides</a> and <a href="http://academicscode.com/posts/2017/05/wapi17-keynote/">Sven Amann&rsquo;s summary of the talk</a>.</p>
+
+
+<p class="newsdate">feb 2018 and apr 2017 &#8212;</p>
+<p class="news"><strong>Google Faculty Research Awards</strong> for API Usability.</p>
+
+<p class="newsdate">oct 2017 &#8212;</p>
+<p class="news">Most Influential Paper award over the last 10+/-1 years by the VL/HCC conference in 2017, for J. Stylos; B. A. Myers: "Mica..." from VL/HCC 2006. <strong>This is the 4th time our group has won this award!</strong></p>
+
+
+	<p class="newsdate"><a href="news.html">more news...</a>    </p>
+</div>
+
+<p>
+
+The <b>Natural Programming Project</b> is working on making programming languages, APIs, and
+programming environments easier to learn, more effective, and less error prone. We are
+taking a <b>human-centered approach</b>, first studying how people perform their
+tasks and then designing languages, APIs, and environments around people's natural tendencies. We focus on all kinds of programming, including professional programmers, novice programmers who are trying to learn to be experts, and end-user programmers (EUPs), who program to support other jobs or hobbies, such as multimedia authoring, simulations, teaching, prototyping, and other activities supported by computing.
+
+<p>We have been affiliated with the <a href="http://eusesconsortium.org">EUSES consortium</a>, which is a group of researchers working on <a href="http://eusesconsortium.org/about.php">end-user software engineering</a>, and with the project on <a href="http://www.exploratoryprogramming.org/">Variations to Support Exploratory Programming</a>.</p>
+
+
+<h2>Ongoing Projects</h2>
+
+<div class=project>
+	<a href="apiusability.html"><img class=project-thumb src="images/api-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="apiusability.html"><b>API Usability</b></a>
+		<br>
+		<div class=acronym>Informing API design choices through human-centered methods.</div>
+	</div>
+</div>
+
+<div class=project>
+	<!-- 
+  <a href="https://dayenam.com/MARBLE/">
+     <img class=project-thumb src="images/MARBLE.jpg"></a>-->
+	<div class=project-data>
+		<a href="https://dayenam.com/MARBLE/"><b>MARBLE</b></a>
+		<br>
+		<div class=acronym>Mining API Repositories for Boilerplate Lessening Effort.<br/>
+        Mining Software Repositories for Boilerplate to help API Designers.
+</div>
+	</div>
+</div>
+
+
+<div class=project>
+<a href="https://github.com/fvoichick/alabaster/wiki"><img class=project-thumb src="images/alabaster-thumb.png"></a> 
+	<div class=project-data>
+		<a href="https://github.com/fvoichick/alabaster/wiki"><b>Alabaster</b></a>
+		<br>
+		<div class=acronym>Autocomplete Letting Apache Beam Applications Succeed Through Exploration Rapidly<br/>
+Research on helping programmers use the Apache Beam API. </div>
+	</div>
+</div>
+
+
+
+<div class=project>
+<a href="https://lxieyang.github.io/project-KAP/unakite/"><img class=project-thumb src="images/unakite-thumb.jpg"></a> 
+	<div class=project-data>
+		<a href="https://unakite.info/"><b>Unakite</b></a>
+		<br>
+		<div class=acronym>Users Need Accelerators for Knowledge for Implementations in Technology Environments<br/>
+Research on helping programmers organize knowledge found on the web. </div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="https://mcoblenz.github.io/Obsidian/"><img class=project-thumb src="images/obsidian-thumb.png"></a> 
+	<div class=project-data>
+		<a href="https://mcoblenz.github.io/Obsidian/"><b>Obsidian</b></a>
+		<br>
+		<div class=acronym>Object-oriented Blockchain State Interaction and Development Implementation And Notation<br />
+Research on a new language for programming blockchain programs. </div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="https://marybethkery.com/"><img class=project-thumb src="images/variolite-thumb.png"></a>
+	<div class=project-data>
+		<a href="https://marybethkery.com/"><b>Verdant and Variolite</b></a>
+		<br>
+		<div class=acronym>Variations Augment Real Iterative Outcomes Letting Information Transcend Exploration.<br />
+	    Research on supporting exploratory programming for Data Scientists.</div>
+	</div>
+</div>
+
+
+
+<div class=project>
+	<a href="sugilite.html"><img class=project-thumb src="images/sugilite_thumb2.png"></a>
+	<div class=project-data>
+		<a href="sugilite.html"><b>Sugilite and Epidosite and Appinite</b></a>
+		<br>
+		<div class=acronym>Smartphone Users Generating Intelligent Likeable Interfaces Through Examples
+        <br/>
+        Creating Smartphone scripts by example and speech.
+        </div>
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="http://mcoblenz.github.io/Glacier/"><img class=project-thumb src="images/glacier-thumb.png"></a>
+	<div class=project-data>
+	  <a href="http://mcoblenz.github.io/Glacier/"><b>Glacier</b></a>
+		<br>
+		<div class=acronym>Great Languages Allow Class Immutability Easily and Readily.<br />
+	    System to enforce immutability in Java.</div>
+	</div>
+</div>
+
+
+
+<h2>Former Projects</h2>
+
+
+<div class=project>
+	<a href="http://moonstone.fkistner.com/"><img class=project-thumb src="images/moonstone-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="http://moonstone.fkistner.com/"><b>Moonstone</b></a>
+		<br>
+		<div class=acronym>Making Object Oriented Novel Software Tools Optimized for Noting Exceptions.<br />
+	    Research on exception handling, and new plugin for Eclipse to help with exception handlers.</div>
+	</div>
+</div>
+
+
+
+<div class=project>
+	<a href="aquamarine.html"><img class=project-thumb src="images/aquamarine-thumbnail.jpg" style="margin-bottom:0"></a>
+	<div class=project-data>
+		<a href="aquamarine.html"><b>Aquamarine</b></a>
+		<br/>
+		<div class=acronym>Allowing Quick Undoing of Any Marks And Repairs to Improve Novel Editing<br/>Painting program to explore selective undo using the script model.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="dacite.html"><img class=project-thumb src="images/dacite-thumbnail.png" style="margin-bottom:0"></a>
+	<div class=project-data>
+		<a href="dacite.html"><b>Dacite</b></a>
+		<br/>
+		<div class=acronym>Design Annotations for Complementing Interfaces Targeting Effectiveness.<br />
+	    Plugin for Eclipse to help with API Usability.</div>
+	</div>
+</div>
+
+
+
+<div class=project>
+	<div class=project-data>
+		<a href="cryolite.html"><b>Cryolite</b></a>
+		<br/>
+		<div class=acronym>Cloud9 Recorder of Your Operations by Listening to Interactions in The Editor.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~shihpinc/gneiss.html"><img class=project-thumb src="gneiss/img/gneiss-s1.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~shihpinc/gneiss.html"><b>Gneiss</b></a>
+		<br>
+		<div class=acronym>Gathering Novel End-User Internet Services using Spreadsheets<br/>
+	  Uses a spreadsheet language to create interactive web applications using web service data.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="https://soney.github.io/interstate/"><img class=project-thumb src="images/euclase.png"></a>
+	<div class=project-data>
+		<a href="https://soney.github.io/interstate/"><b>InterState</b></a>
+		<br>
+		<div class=acronym>(Formerly called: <b>Euclase</b></a>: End User Centered Language, APIs, System, and Environment.)<br>
+	  New tool to allow designers to author web behaviors using state machines and constraints.</div>
+	</div>
+</div>
+
+<div class=project>
+  <a href="http://www.cs.cmu.edu/~azurite/"><img class=project-thumb src="images/azurite-thumb.png"></a>
+  <div class=project-data>
+    <a href="http://www.cs.cmu.edu/~azurite/"><b>Azurite</b></a>
+    <br>
+    <div class=acronym>Adding Zest to Undoing and Restoring Improves Textual Exploration<br>
+    A plug-in for Eclipse that facilitates backtracking (undoing) of code.</div>
+  </div>
+</div>
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~NatProg/graphite.html"><img class=project-thumb src="images/graphite-thumb.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~NatProg/graphite.html"><b>Graphite</b></a>
+		<br>
+		<div class=acronym>     GRAphical Palettes Help Instantiate
+    Types in the Editor.<BR>
+	A plug-in for Eclipse that supports type-specific palettes that help
+	  users enter code more easily.</div> 
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~fluorite/"><img class=project-thumb src="images/fluorite-thumb.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~fluorite/"><b>Fluorite</b></a>
+		<br>
+		<div class=acronym> Full of Low-level User Operations Recorded In The Editor.<BR>
+	A plug-in for Eclipse that records the low-level user and Eclipse events to enable analysis.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="https://soney.github.io/constraintjs/"><img class=project-thumb src="images/constraintJS.png"></a>
+	<div class=project-data>
+		<a href="https://soney.github.io/constraintjs/"><b>ConstraintJS</b></a>
+		<br>
+		<div class=acronym>A JavaScript library that supports constraints combined with state transitions.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="designerstudies.html"><img class=project-thumb src="images/designerstudies.jpg"></a>
+	<div class=project-data>
+		<a href="designerstudies.html"><b>Studies of Designers</b></a>
+		<br>
+		<div class=acronym>Understanding how interaction designers think about interaction</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="studies.html"><img class=project-thumb src="images/studies-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="studies.html"><b>Studies of software development</b></a>
+		<br>
+		<div class=acronym>By novices, end users, professionals and everyone between</div>
+	</div>
+</div>
+
+
+
+<div class=project>
+	<a href="http://edelstein.pebbles.cs.cmu.edu/jadeite/"><img class=project-thumb src="images/jadeite-font-sizes.png"></a>
+	<div class=project-data>
+		<a href="http://edelstein.pebbles.cs.cmu.edu/jadeite/"><b>Jadeite</b></a>
+		<br>
+		<div class=acronym>Java Documentation with Extra Information Tacked-on for Emphasis.</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://edelstein.pebbles.cs.cmu.edu/apatite/"><img class=project-thumb src="images/apatite-tiny.png"></a>
+	<div class=project-data>
+		<a href="http://edelstein.pebbles.cs.cmu.edu/apatite/"><b>Apatite</b></a>
+		<br>
+		<div class=acronym>Associative Perusing of APIs That Identifies Targets Easily.</div>
+	</div>
+</div>
+
+
+
+<div class=project>
+	<a href="http://www.ics.uci.edu/~tlatoza/research.html"><img class=project-thumb src="images/reacherdiagram.jpg"></a>
+	<div class=project-data>
+		<a href="http://www.ics.uci.edu/~tlatoza/research.html"><b>Reacher</b></a>
+		<br>
+		<div class=acronym>Visualization tool that allows developers to search and explore feasible paths and answer reachability questions.</div>
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~euklas/"><img class=project-thumb src="images/euklas_shows_error_markers.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~euklas/"><b>Euklas</b></a>
+		<br>
+		<div class=acronym>Eclipse Users' Keystrokes Lessened by Attaching from Samples<br>
+			(Eclipse plugin for JavaScript, that helps with copying and pasting code.)</div>
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~calcite"><img class=project-thumb src="images/calcite-factory-proposal.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~calcite"><b>Calcite</b></a>
+		<br>
+		<div class=acronym>Construction And Language Completion Integrated Throughout Eclipse</div>
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="fact-finding.html"><img class=project-thumb src="images/latoza-factgraph.png"></a>
+	<div class=project-data>
+		<a href="fact-finding.html"><b>Fact-finding</b></a>
+		<br>
+		<div class=acronym>Helping developers discover properties of software architectures</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="update-paths.html"><img class=project-thumb src="images/latoza-updatepath.png"></a>
+	<div class=project-data>
+		<a href="update-paths.html"><b>Update Paths</b></a>
+		<br>
+		<div class=acronym>Helping developers discover when code is executed</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://www.stephenoney.com/firecrystal.php"><img class=project-thumb src="images/FireCrystalIconBig.png"></a>
+	<div class=project-data>
+		<a href="http://www.stephenoney.com/firecrystal.php"><b>FireCrystal</b></a>
+		<br>
+		<div class=acronym>Firefox extension to show the html and Javascript code responsible for behaviors on web pages</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~webcrystal/"><img class=project-thumb src="images/webcrystal_icon.png"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~webcrystal/"><b>WebCrystal</b></a>
+		<br>
+		<div class=acronym>Plugin for Firefox that helps you understand how parts are implemented.</div>
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="whyline-java.html"><img class=project-thumb src="images/whyline-java.jpg"></a>
+	<div class=project-data>
+		<a href="whyline-java.html"><b>Whyline for Java</b></a>
+		<br>
+		<div class=acronym>a Workspace that Helps You Link Instructions, Numbers and Events</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="topes.html"><img class=project-thumb src="images/topes-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="topes.html"><b>Topes</b></a>
+		<br>
+		<div class=acronym>A data model to help end-user programmers validate and manipulate data</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="jasper.html"><img class=project-thumb src="images/jasper-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="jasper.html"><b>Jasper</b></a>
+		<br>
+		<div class=acronym>A Java Aid with Sets of Pertinent Elements for Recognition</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="barista.html"><img class=project-thumb src="images/barista-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="barista.html"><b>Barista</b></a>
+		<br>
+		<div class=acronym>Basic Abstractions for Rapidly Implementing Structured Text-editing Applications</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="crystal.html"><img class=project-thumb src="images/crystal-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="crystal.html"><b>Crystal</b></a>
+		<br>
+		<div class=acronym>Clarifications Regarding Your Software using a Toolkit, Architecture, and Language</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="mica.html"><img class=project-thumb src="images/mica.jpg"></a>
+	<div class=project-data>
+		<a href="mica.html"><b>Mica</b></a>
+		<br>
+		<div class=acronym>Makes Interfaces Clear and Accessible</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="citrus.html"><img class=project-thumb src="images/citrus-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="citrus.html"><b>Citrus</b></a>
+		<br>
+		<div class=acronym>a language for Creating Interactive Tools that Reshape and Utilize Structure</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="slate.html"><img class=project-thumb src="images/slate-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="slate.html"><b>Slate</b></a>
+		<br>
+		<div class=acronym>a Spreadsheet Language that Accentuates Type Errors</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="whyline.html"><img class=project-thumb src="images/whyline-thumb.jpg"></a>
+	<div class=project-data>
+		<a href="whyline.html"><b>Whyline for Alice</b></a>
+		<br>
+		<div class=acronym>a Workspace that Helps You Link Instructions, Numbers and Events</div>
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~pane/research.html"><img class=project-thumb src="images/hands.gif"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~pane/research.html"><b>Hands</b></a>
+		<br>
+		<div class=acronym>Human-centered Advances for Novice Development of Software</div>
+
+<!--
+
+<p>HANDS is a new programming system for children. HANDS provides a
+concrete model for computation as an alternative to requiring
+beginners to learn a whole new set of programming concepts like
+procedures, variables, parameters, scoping, flow of control, etc. In
+HANDS, the computation is represented by a character sitting at a
+table, reacting to events and manipulating cards that contain all of
+the program's data. The HANDS language provides primitives that
+closely match the language we observed in our studies of children, who
+were solving problems before they had learned how to program. For
+example, queries and aggregate operators in HANDS allow many tasks to
+be specified more naturally than in other languages that require the
+use of search and iteration. HANDS also includes built-in support to
+help the programmer create interactive simulations and games. HANDS is
+part of <A HREF="/~pane/research.html"> John Pane's Ph.D. research.
+</A>
+
+-->
+
+	</div>
+</div>
+
+
+<div class=project>
+	<a href="http://www.cs.cmu.edu/~silver"><img class=project-thumb src="images/silver.gif"></a>
+	<div class=project-data>
+		<a href="http://www.cs.cmu.edu/~silver"><b>Silver</b></a>
+		<br>
+		<div class=acronym>Scripting an Intelligent Video Editor</div>
+
+<!--
+	
+<p>The <A HREF="/~silver/">Silver Project</A> is applying Natural
+Programming techniques and principles to the scripting of an
+interactive video editor as part of the Digital Library
+Initiative. The goal is to make it just as easy to use and edit new
+video and video material found through searching video digital
+libraries, such as being created by the <a
+href="http://www.informedia.cs.cmu.edu"> Informedia</a> project, as it
+is to use and edit textual material.  For example, students and their
+teachers should be able to easily create multimedia reports using
+video.
+
+-->
+
+	</div>
+</div>
+
+<div class=project>
+	<a href="http://groups.csail.mit.edu/uid/lapis/"><img class=project-thumb src="images/lapis.jpg"></a>
+	<div class=project-data>
+		<a href="http://groups.csail.mit.edu/uid/lapis/"><b>Lapis</b></a>
+		<br>
+		<div class=acronym>Lightweight Structured Text Processing</div>
+
+<!--
+
+<p><a href="/~rcm/lapis/">LAPIS</a> is a web browser/text editor designed
+for representing and manipulating semi-structured text.  LAPIS
+includes a rich library of text structure (HTML, Java, document
+layout, etc.), which users can draw on and extend by writing patterns
+in a new pattern language developed according to Natural Programming
+principles.  LAPIS puts text structure to several uses, including:
+<i>text processing tools</i> for querying, sorting, and filtering;
+<i>simultaneous editing</i>, a technique for automating repetitive
+text editing by example; and <i>outlier finding</i>, which brings
+possible errors to the user's attention. LAPIS is part of <A
+HREF="/~rcm">Rob Miller</a>'s Ph.D. research.
+
+-->
+
+	</div>
+</div>
+
+
+
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<center>
+  Copyright &#169; 1996-2020 - Carnegie Mellon University - All Rights Reserved.
+</center>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4222815-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>

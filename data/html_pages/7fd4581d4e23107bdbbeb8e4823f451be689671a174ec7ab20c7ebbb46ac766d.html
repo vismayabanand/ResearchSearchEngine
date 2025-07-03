@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="eD_pZjh-aWkTGA3_iYHmMdGV2cNugc7FTwtgNv2EnZE" />
+    <meta name="msvalidate.01" content="4E61263975C6ABBF2ECE5A8CA5E592B7" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL7MQNBFW9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      const config = {};
+
+      gtag('config', 'G-ZL7MQNBFW9', config)
+    </script>
+
+    <title>EarthWorks</title>
+    <script>
+      document.querySelector('html').classList.remove('no-js');
+    </script>
+    <link href="https://earthworks.stanford.edu/catalog/opensearch.xml" title="EarthWorks" type="application/opensearchdescription+xml" rel="search" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png" type="image/png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-24/styles/icon.png">
+
+    <!-- viewer styles (non-render-blocking; deferred) -->
+    <link rel="preload" href="https://cdn.skypack.dev/leaflet@1.9.4/dist/leaflet.css" as="style" type="text/css" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/leaflet-fullscreen@1.0.2/dist/leaflet.fullscreen.css" as="style" type="text/css" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+    <link rel="preload" href="https://cdn.skypack.dev/ol@8.1.0/ol.css" as="style" type="text/css" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
+
+    <!-- main app styles -->
+    <link rel="stylesheet" href="/assets/geoblacklight-883a00bc.css" media="all" data-turbo-track="reload" />
+    <link rel="stylesheet" href="/assets/earthworks-a6d3e71c.css" media="all" data-turbo-track="reload" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sul-dlss/component-library@v2025-01-10/styles/sul.css" media="screen" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="screen" />
+
+    <!-- scripts -->
+      <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "ol": "https://esm.sh/ol@8.1.0",
+    "ol/": "https://esm.sh/ol@8.1.0/",
+    "ol-pmtiles": "https://cdn.skypack.dev/ol-pmtiles@0.3.0",
+    "leaflet": "https://cdn.skypack.dev/leaflet@1.9.4",
+    "esri-leaflet": "https://cdn.skypack.dev/esri-leaflet@3.0.12",
+    "leaflet-fullscreen": "https://cdn.skypack.dev/leaflet-fullscreen@1.0.2",
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "@samvera/clover-iiif/viewer": "https://esm.sh/@samvera/clover-iiif@2.10.0/dist/viewer",
+    "@samvera/clover-iiif/image": "https://esm.sh/@samvera/clover-iiif@2.10.0/dist/image",
+    "@hotwired/stimulus": "/assets/stimulus.min-4b1e420e.js",
+    "@hotwired/stimulus-loading": "/assets/stimulus-loading-1fc53fe7.js",
+    "@hotwired/turbo-rails": "/assets/turbo.min-fae85750.js",
+    "@popperjs/core": "https://cdn.skypack.dev/@popperjs/core@2.11.8",
+    "bootstrap": "https://cdn.skypack.dev/bootstrap@5.3.3",
+    "blacklight": "/assets/blacklight/index-0d4c5c93.js",
+    "@github/auto-complete-element": "https://cdn.skypack.dev/@github/auto-complete-element",
+    "blacklight/bookmark_toggle": "/assets/blacklight/bookmark_toggle-493f5516.js",
+    "blacklight/button_focus": "/assets/blacklight/button_focus-37304604.js",
+    "blacklight/checkbox_submit": "/assets/blacklight/checkbox_submit-6e30591b.js",
+    "blacklight/core": "/assets/blacklight/core-6e1a5185.js",
+    "blacklight/debounce": "/assets/blacklight/debounce-a77752c3.js",
+    "blacklight/facet_suggest": "/assets/blacklight/facet_suggest-e31ca8a6.js",
+    "blacklight/modal": "/assets/blacklight/modal-125d5c4f.js",
+    "blacklight/modalForm": "/assets/blacklight/modalForm-3b9ea8dc.js",
+    "blacklight/search_context": "/assets/blacklight/search_context-766f6300.js",
+    "geoblacklight/controllers/clipboard_controller": "/assets/geoblacklight/controllers/clipboard_controller-1847d66f.js",
+    "geoblacklight/controllers/clover_viewer_controller": "/assets/geoblacklight/controllers/clover_viewer_controller-437f72ff.js",
+    "geoblacklight/controllers/downloads_controller": "/assets/geoblacklight/controllers/downloads_controller-a0d8bded.js",
+    "geoblacklight/controllers/leaflet_viewer_controller": "/assets/geoblacklight/controllers/leaflet_viewer_controller-546da035.js",
+    "geoblacklight/controllers/oembed_viewer_controller": "/assets/geoblacklight/controllers/oembed_viewer_controller-831a2d64.js",
+    "geoblacklight/controllers/openlayers_viewer_controller": "/assets/geoblacklight/controllers/openlayers_viewer_controller-92389357.js",
+    "geoblacklight/controllers/search_results_controller": "/assets/geoblacklight/controllers/search_results_controller-4493f6a3.js",
+    "geoblacklight/core": "/assets/geoblacklight/core-c7cbd1f9.js",
+    "geoblacklight": "/assets/geoblacklight/index-3783b3f7.js",
+    "geoblacklight/initializers/metadata_download": "/assets/geoblacklight/initializers/metadata_download-33df98a8.js",
+    "geoblacklight/initializers/popovers": "/assets/geoblacklight/initializers/popovers-7de7b93d.js",
+    "geoblacklight/initializers/relations": "/assets/geoblacklight/initializers/relations-5bddae96.js",
+    "geoblacklight/initializers/tooltips": "/assets/geoblacklight/initializers/tooltips-c7242788.js",
+    "geoblacklight/initializers/truncation": "/assets/geoblacklight/initializers/truncation-cc57b6de.js",
+    "geoblacklight/leaflet/basemaps": "/assets/geoblacklight/leaflet/basemaps-d7848a19.js",
+    "geoblacklight/leaflet/constants": "/assets/geoblacklight/leaflet/constants-1e2f0b63.js",
+    "geoblacklight/leaflet/controls/geosearch": "/assets/geoblacklight/leaflet/controls/geosearch-6a33c2df.js",
+    "geoblacklight/leaflet/controls/layer_opacity": "/assets/geoblacklight/leaflet/controls/layer_opacity-30dd7fcb.js",
+    "geoblacklight/leaflet/inspection": "/assets/geoblacklight/leaflet/inspection-a88f1181.js",
+    "geoblacklight/leaflet/layer_index_map": "/assets/geoblacklight/leaflet/layer_index_map-0aa941f8.js",
+    "geoblacklight/leaflet/layer_wmts": "/assets/geoblacklight/leaflet/layer_wmts-c46090c9.js",
+    "geoblacklight/leaflet/layers": "/assets/geoblacklight/leaflet/layers-1ba7534d.js",
+    "geoblacklight/leaflet/utils": "/assets/geoblacklight/leaflet/utils-064809ff.js",
+    "geoblacklight/openlayers/basemaps": "/assets/geoblacklight/openlayers/basemaps-4f4a717c.js",
+    "geoblacklight/openlayers/layers": "/assets/geoblacklight/openlayers/layers-5e2ac6ea.js",
+    "controllers/application": "/assets/controllers/application-3affb389.js",
+    "controllers/clipboard_copy_controller": "/assets/controllers/clipboard_copy_controller-f6eec32e.js",
+    "controllers/description_controller": "/assets/controllers/description_controller-5958a202.js",
+    "controllers/expandcollapse_controller": "/assets/controllers/expandcollapse_controller-76a1b5a1.js",
+    "controllers": "/assets/controllers/index-236ab973.js",
+    "controllers/maptogglebutton_controller": "/assets/controllers/maptogglebutton_controller-40d2e2d4.js",
+    "controllers/searchmapcontainer_controller": "/assets/controllers/searchmapcontainer_controller-4563792d.js",
+    "application": "/assets/application-b8e9fc4c.js"
+  }
+}</script>
+<link rel="modulepreload" href="https://esm.sh/ol@8.1.0">
+<link rel="modulepreload" href="https://esm.sh/ol@8.1.0/">
+<link rel="modulepreload" href="https://cdn.skypack.dev/ol-pmtiles@0.3.0">
+<link rel="modulepreload" href="https://cdn.skypack.dev/leaflet@1.9.4">
+<link rel="modulepreload" href="https://cdn.skypack.dev/esri-leaflet@3.0.12">
+<link rel="modulepreload" href="https://cdn.skypack.dev/leaflet-fullscreen@1.0.2">
+<link rel="modulepreload" href="https://esm.sh/react@18.3.1">
+<link rel="modulepreload" href="https://esm.sh/react-dom@18.3.1/client">
+<link rel="modulepreload" href="https://esm.sh/@samvera/clover-iiif@2.10.0/dist/viewer">
+<link rel="modulepreload" href="https://esm.sh/@samvera/clover-iiif@2.10.0/dist/image">
+<link rel="modulepreload" href="/assets/stimulus.min-4b1e420e.js">
+<link rel="modulepreload" href="/assets/stimulus-loading-1fc53fe7.js">
+<link rel="modulepreload" href="/assets/turbo.min-fae85750.js">
+<link rel="modulepreload" href="https://cdn.skypack.dev/@popperjs/core@2.11.8">
+<link rel="modulepreload" href="https://cdn.skypack.dev/bootstrap@5.3.3">
+<link rel="modulepreload" href="/assets/blacklight/index-0d4c5c93.js">
+<link rel="modulepreload" href="https://cdn.skypack.dev/@github/auto-complete-element">
+<link rel="modulepreload" href="/assets/blacklight/bookmark_toggle-493f5516.js">
+<link rel="modulepreload" href="/assets/blacklight/button_focus-37304604.js">
+<link rel="modulepreload" href="/assets/blacklight/checkbox_submit-6e30591b.js">
+<link rel="modulepreload" href="/assets/blacklight/core-6e1a5185.js">
+<link rel="modulepreload" href="/assets/blacklight/debounce-a77752c3.js">
+<link rel="modulepreload" href="/assets/blacklight/facet_suggest-e31ca8a6.js">
+<link rel="modulepreload" href="/assets/blacklight/modal-125d5c4f.js">
+<link rel="modulepreload" href="/assets/blacklight/modalForm-3b9ea8dc.js">
+<link rel="modulepreload" href="/assets/blacklight/search_context-766f6300.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/clipboard_controller-1847d66f.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/clover_viewer_controller-437f72ff.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/downloads_controller-a0d8bded.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/leaflet_viewer_controller-546da035.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/oembed_viewer_controller-831a2d64.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/openlayers_viewer_controller-92389357.js">
+<link rel="modulepreload" href="/assets/geoblacklight/controllers/search_results_controller-4493f6a3.js">
+<link rel="modulepreload" href="/assets/geoblacklight/core-c7cbd1f9.js">
+<link rel="modulepreload" href="/assets/geoblacklight/index-3783b3f7.js">
+<link rel="modulepreload" href="/assets/geoblacklight/initializers/metadata_download-33df98a8.js">
+<link rel="modulepreload" href="/assets/geoblacklight/initializers/popovers-7de7b93d.js">
+<link rel="modulepreload" href="/assets/geoblacklight/initializers/relations-5bddae96.js">
+<link rel="modulepreload" href="/assets/geoblacklight/initializers/tooltips-c7242788.js">
+<link rel="modulepreload" href="/assets/geoblacklight/initializers/truncation-cc57b6de.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/basemaps-d7848a19.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/constants-1e2f0b63.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/controls/geosearch-6a33c2df.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/controls/layer_opacity-30dd7fcb.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/inspection-a88f1181.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/layer_index_map-0aa941f8.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/layer_wmts-c46090c9.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/layers-1ba7534d.js">
+<link rel="modulepreload" href="/assets/geoblacklight/leaflet/utils-064809ff.js">
+<link rel="modulepreload" href="/assets/geoblacklight/openlayers/basemaps-4f4a717c.js">
+<link rel="modulepreload" href="/assets/geoblacklight/openlayers/layers-5e2ac6ea.js">
+<link rel="modulepreload" href="/assets/controllers/application-3affb389.js">
+<link rel="modulepreload" href="/assets/controllers/clipboard_copy_controller-f6eec32e.js">
+<link rel="modulepreload" href="/assets/controllers/description_controller-5958a202.js">
+<link rel="modulepreload" href="/assets/controllers/expandcollapse_controller-76a1b5a1.js">
+<link rel="modulepreload" href="/assets/controllers/index-236ab973.js">
+<link rel="modulepreload" href="/assets/controllers/maptogglebutton_controller-40d2e2d4.js">
+<link rel="modulepreload" href="/assets/controllers/searchmapcontainer_controller-4563792d.js">
+<link rel="modulepreload" href="/assets/application-b8e9fc4c.js">
+<script type="module">import "application"</script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="n6M2KPOGX77UI2EW4jOu8fm-V1fFODI5PE7Kb9lRCQMaVmjFvs_Mg2jK7AcaOYHuoSIzeTGjp8usTAWWFQvLeQ" />
+      <meta name="blacklight-search-storage" content="server">
+
+  </head>
+  <body class="blacklight-catalog blacklight-catalog-index">
+    <nav id="skip-link" class="visually-hidden-focusable sr-only sr-only-focusable" aria-label="Skip links">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#main-container">Skip to main content</a>
+    <a class="d-inline-flex p-2 m-1" href="#q">Skip to search</a>
+    
+
+  </div>
+</nav>
+
+    <header>
+  <div class="container">
+  <a class="su-brand-bar__logo" href="https://www.stanford.edu"
+    >Stanford University</a
+  >
+</div>
+<nav
+  class="navbar navbar-expand-md bg-dark palo-alto-base"
+  role="navigation"
+>
+  <div class="container">
+    <a
+      class="mb-0 navbar-brand navbar-logo"
+      href="https://library.stanford.edu"
+      >Stanford University Libraries</a
+    >
+    <button
+      class="navbar-toggler navbar-toggler-right collapsed"
+      type="button"
+      data-toggle="collapse"
+      data-bs-toggle="collapse"
+      data-target="#user-util-collapse"
+      data-bs-target="#user-util-collapse"
+      aria-controls="user-util-collapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse justify-content-md-end"
+      id="user-util-collapse"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a id="bookmarks_nav" class="nav-link" href="/bookmarks">
+            Bookmarks
+            (<span data-role='bookmark-counter'>0</span>)
+</a>        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/search_history">Search history</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#feedback"
+            class="nav-link"
+            data-bs-toggle="collapse"
+            data-bs-target="#feedback"
+            >Feedback</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="/restricted/users/auth/webauth?referrer=https%3A%2F%2Fearthworks.stanford.edu%2F">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="feedback" class="collapse">
+  <div class="container pt-3">
+    <div class="row justify-content-center">
+      <form
+        class="col-md-8 feedback-form"
+        action="/feedback"
+        accept-charset="UTF-8"
+        method="post"
+      >
+        <input type="hidden" id="url" name="url" value="https://earthworks.stanford.edu/" />
+        <div class="alert alert-info" role="alert">
+          Reporting from:
+          https://earthworks.stanford.edu/
+        </div>
+        <div class="mb-3 row">
+          <label class="col-md-3 col-form-label" for="message"
+            >Message</label
+          >
+          <div class="col-md-9">
+            <textarea
+              class="form-control"
+              rows="5"
+              required="required"
+              data-form-type="other"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-md-3 col-form-label" for="name"
+            >Your name</label
+          >
+          <div class="col-md-9">
+            <input type="text" name="name" id="name" autocomplete="name" class="form-control" required="required" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-md-3 col-form-label" for="email"
+            >Your email</label
+          >
+          <div class="col-md-9">
+            <input type="email" name="email" id="email" autocomplete="email" class="form-control" required="required" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-md-9 offset-md-3">
+              <script src="https://www.recaptcha.net/recaptcha/api.js" async defer ></script>
+<div data-sitekey="6LfDgvQUAAAAAPN5qIgiM8uPrc-dz5ZXQv3ku8kC" class="g-recaptcha "></div>
+          <noscript>
+            <div>
+              <div style="width: 302px; height: 422px; position: relative;">
+                <div style="width: 302px; height: 422px; position: absolute;">
+                  <iframe
+                    src="https://www.recaptcha.net/recaptcha/api/fallback?k=6LfDgvQUAAAAAPN5qIgiM8uPrc-dz5ZXQv3ku8kC"
+                    name="ReCAPTCHA"
+                    style="width: 302px; height: 422px; border-style: none; border: 0; overflow: hidden;">
+                  </iframe>
+                </div>
+              </div>
+              <div style="width: 300px; height: 60px; border-style: none;
+                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                <textarea name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                  margin: 10px 25px; padding: 0px; resize: none;">
+                </textarea>
+              </div>
+            </div>
+          </noscript>
+
+
+              <p>(Stanford users can avoid this Captcha by logging in.)</p>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col-md-9 offset-md-3">
+            <input
+              type="submit"
+              name="commit"
+              value="Send"
+              class="btn btn-secondary"
+              data-disable-with="Send"
+            />
+            <button
+              name="button"
+              type="button"
+              data-action="feedback#cancel"
+              class="btn btn-outline-secondary"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="masthead bg-dark palo-alto-base">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8 d-flex">
+        <div class="h1 my-3"><a href="/">EarthWorks</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>
+
+
+    <main id="main-container" class="container-fluid" role="main" aria-label="Main content">
+      
+
+      <div class="row">
+  <div class="col-md-12">
+    <div id="main-flashes" class="container">
+      <div class="flash_messages">
+    
+    
+    
+    
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+      <div class="row">
+            <section class="col-md-12">
+      
+  <div class='mt-4 mb-4'>
+  <div class='row'>
+    <div class='col-sm'>
+    <search>
+  <form class="search-query-form" action="https://earthworks.stanford.edu/" accept-charset="UTF-8" method="get">
+    
+    <div class="input-group">
+      
+
+        <input value="all_fields" autocomplete="off" type="hidden" name="search_field" id="search_field" />
+
+      <label class="sr-only visually-hidden" for="q">search for</label>
+        <auto-complete src="/catalog/suggest" for="autocomplete-popup" class="search-autocomplete-wrapper rounded-left rounded-start">
+          <input placeholder="Try &quot;groundwater&quot;" class="search-q q form-control rounded-left rounded-start" aria-label="search for" aria-autocomplete="list" aria-controls="autocomplete-popup" type="search" name="q" id="q" />
+          <ul id="autocomplete-popup" class="dropdown-menu" role="listbox" aria-label="search for" hidden></ul>
+        </auto-complete>
+
+      
+      <button class="btn btn-primary search-btn" type="submit" id="search"><span class="submit-search-text">Search</span></button>
+    </div>
+</form>
+</search>
+
+    <hr>
+    <h1 class="h3 home-header">
+  <span class="blacklight-icons blacklight-icons-datasets"><!-- Generated by IcoMoon.io -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32">
+<title><span class="translation_missing" title="translation missing: en.blacklight.icon.datasets">Datasets</span></title>
+	<path fill="none" stroke="#6c757d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.72" d="M0.86 10.9h4.2v4.17h-4.2v-4.17zM16.87 10.9h4.2v4.17h-4.2v-4.17zM0.86 26.89h4.2v4.22h-4.2v-4.22zM16.87 26.89h4.2v4.22h-4.2v-4.22z"></path>
+<path fill="none" stroke="#6c757d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.44" d="M5.020 13.060h11.78M5.020 29.56h11.78M18.94 26.83v-11.76M3.010 26.83v-11.76"></path>
+<path fill="none" stroke="#6c757d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.72" d="M8.75 0.86h4.2v4.16h-4.2v-4.16zM24.76 0.86h4.2v4.16h-4.2v-4.16zM8.75 16.84h4.2v4.23h-4.2v-4.23zM24.76 16.84h4.2v4.22h-4.2v-4.22z"></path>
+<path fill="none" stroke="#6c757d" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.44" d="M12.91 3.010h11.77M12.91 19.52h11.77M26.83 16.79v-11.77M10.9 16.79v-11.77"></path>
+</svg>
+</span>
+  <span class="ms-1">Geospatial datasets</span>
+</h1>
+<div class="home-tab">
+  <div class="mb-1">
+    Data that includes location information (coordinates) and is natively usable in GIS software and services such as ArcGIS, QGIS, WFS, and WMS. Geospatial data types include vector data, such as Shapefile, GeoJSON, and GeoPackage, and raster data, such as GeoTIFFs, grid files, and georeferenced maps. There are <b>24,078 datasets</b> in EarthWorks.
+  </div>
+  <h2 class="h4 mt-3">Recently added</h2>
+  <ul class="list-unstyled">
+      <li class="my-1"><a href="/catalog/stanford-bb021mm7809">Finland 2G Mobile Coverage Explorer, 2014</a></li>
+      <li class="my-1"><a href="/catalog/stanford-kp035wh0543">Map of the Outside Lands of the City and County Of San Francisco (Raster Image)</a></li>
+      <li class="my-1"><a href="/catalog/stanford-xz278xc9073">東亞五十万分一圖 -- Tōa 1:500,000, Maps Index</a></li>
+      <li class="my-1"><a href="/catalog/stanford-vm491bz1561">空中寫真測圖 要圖 西部パプア十万分一 -- Kūchū shashin sokuzu yōzu Seibu Papua 1:100,000, Maps Index</a></li>
+  </ul>
+  <div class="d-flex justify-content-end">
+    <a class="btn btn-outline-primary" href="/catalog?f%5Bgbl_resourceClass_sm%5D%5B%5D=Datasets">Browse all datasets</a>
+  </div>
+</div>
+
+    <hr>
+    <h1 class="h3 home-header">
+  <span class="blacklight-icons blacklight-icons-maps"><!-- Generated by IcoMoon.io -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<title><span class="translation_missing" title="translation missing: en.blacklight.icon.maps">Maps</span></title>
+	<path fill="#6c757d" d="M9.143 0c0.309 0 0.571 0.263 0.571 0.571v26.286c-0.002 0.218-0.125 0.406-0.305 0.501l-0.003 0.002-8.571 4.571c-0.073 0.043-0.16 0.069-0.254 0.069-0.003 0-0.006-0-0.010-0h0c-0.313-0.006-0.565-0.258-0.571-0.571v-26.286c0-0.217 0.114-0.411 0.309-0.503l8.571-4.571c0.073-0.043 0.16-0.069 0.254-0.069 0.003 0 0.006 0 0.010 0h-0zM31.429 0c0.309 0 0.571 0.263 0.571 0.571v26.286c-0.002 0.218-0.125 0.406-0.305 0.501l-0.003 0.002-8.571 4.571c-0.073 0.043-0.16 0.069-0.254 0.069-0.003 0-0.006-0-0.010-0h0c-0.313-0.006-0.565-0.258-0.571-0.571v-26.286c0-0.217 0.114-0.411 0.309-0.503l8.571-4.571c0.073-0.043 0.16-0.069 0.254-0.069 0.003 0 0.006 0 0.010 0h-0zM11.429 0c0.001 0 0.002 0 0.002 0 0.091 0 0.176 0.021 0.252 0.059l-0.003-0.002 9.143 4.571c0.194 0.114 0.32 0.297 0.32 0.514v26.286c0 0 0 0.001 0 0.001 0 0.316-0.256 0.571-0.571 0.571-0.092 0-0.178-0.022-0.255-0.060l0.003 0.002-9.143-4.571c-0.188-0.099-0.315-0.291-0.32-0.514v-26.286c0-0.309 0.263-0.571 0.571-0.571z"></path>
+</svg>
+</span>
+  <span class="ms-1">Maps</span>
+</h1>
+<div class="home-tab">
+  <div class="mb-1">
+    Images of paper maps that have been scanned and/or georeferenced. These digital cartographic resources cover all parts of the world and include topographical maps, historical maps, nautical charts, thematic maps, and atlases. There are <b>35,151 maps</b> in EarthWorks.
+  </div>
+  <h2 class="h4 mt-3">Recently added</h2>
+  <ul class="list-unstyled">
+      <li class="my-1"><a href="/catalog/stanford-rg889rk2827">Usuri-shū</a></li>
+      <li class="my-1"><a href="/catalog/stanford-kp035wh0543">Map of the Outside Lands of the City and County Of San Francisco (Raster Image)</a></li>
+      <li class="my-1"><a href="/catalog/stanford-jz864sc3723">A Map of Egypt and Sinai (Raster Image)</a></li>
+      <li class="my-1"><a href="/catalog/stanford-cn302hj6329">Amerique septentrionale avec les routes</a></li>
+  </ul>
+  <div class="d-flex justify-content-end">
+    <a class="btn btn-outline-primary" href="/catalog?f%5Bgbl_resourceClass_sm%5D%5B%5D=Maps">Browse all maps</a>
+  </div>
+</div>
+
+    </div>
+    <div class='col-sm d-none d-md-block'>
+      <div id="leaflet-viewer" class="" data-controller="leaflet-viewer" data-leaflet-viewer-basemap-value="positron" data-leaflet-viewer-page-value="INDEX" data-leaflet-viewer-options-value="{&quot;MAP&quot;:null,&quot;BOUNDSOVERLAY&quot;:{&quot;INDEX&quot;:{&quot;color&quot;:&quot;#175E54&quot;},&quot;SHOW&quot;:{&quot;color&quot;:&quot;#175E54&quot;},&quot;STATIC_MAP&quot;:{&quot;color&quot;:&quot;#175E54&quot;}},&quot;LAYERS&quot;:{&quot;DETECT_RETINA&quot;:true,&quot;INDEX&quot;:{&quot;DEFAULT&quot;:{&quot;color&quot;:&quot;#006CB8&quot;,&quot;weight&quot;:1,&quot;radius&quot;:4},&quot;UNAVAILABLE&quot;:{&quot;color&quot;:&quot;#B1040E&quot;,&quot;weight&quot;:1,&quot;radius&quot;:4},&quot;SELECTED&quot;:{&quot;color&quot;:&quot;yellow&quot;,&quot;weight&quot;:1,&quot;radius&quot;:4}}},&quot;CONTROLS&quot;:{&quot;Geosearch&quot;:{&quot;dynamic&quot;:false}}}" data-leaflet-viewer-catalog-base-url-value="https://earthworks.stanford.edu/catalog"></div>
+
+    </div>
+  </div>
+</div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://earthworks.stanford.edu/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://earthworks.stanford.edu/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>
+
+
+    </section>
+
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+  <section id="pre-footer" class="pt-3 pb-2">
+    <div class="container">
+      <div class="row">
+        <div
+          id="sul-footer-img"
+          class="col-sm-12 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-center justify-content-md-start"
+        >
+          <a href="https://library.stanford.edu" class="prefooter-logo"
+            >Stanford University Libraries</a
+          >
+        </div>
+        <div
+          class="col d-flex justify-content-md-start justify-content-center"
+        >
+          <ul
+            class="list-unstyled d-flex mt-3 mt-md-1 mt-lg-3 ms-xl-3 text-center"
+          >
+            <li class="mx-2 mx-md-3">
+              <a
+                href="https://library.stanford.edu/libraries-0/branches-and-centers"
+                >Hours &amp; locations</a
+              >
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://mylibrary.stanford.edu">My Account</a>
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://library.stanford.edu/contact-us"
+                >Contact us</a
+              >
+            </li>
+            <li class="mx-2 mx-md-3">
+              <a href="https://library-status.stanford.edu/"
+                >System status</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="su-footer" class="text-white bg-dark pt-4 pb-4">
+    <div
+      class="container d-flex flex-column flex-lg-row align-items-center align-md-normal"
+      title="Common Stanford resources"
+    >
+      <div class="mt-1 mb-2 align-self-lg-start">
+        <a class="su-logo" href="https://www.stanford.edu"
+          >Stanford<br><span class="su-logo-university"
+            >University</span
+          ></a
+        >
+      </div>
+      <div class="ms-lg-5">
+        <nav
+          aria-label="global footer menu"
+          class="d-flex flex-row gap-4 gap-sm-0 flex-sm-column justify-content-center justify-content-lg-start align-items-start align-items-sm-center align-items-lg-start"
+        >
+          <ul
+            class="justify-content-center justify-content-lg-start fw-semibold gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row"
+          >
+            <li>
+              <a href="https://www.stanford.edu">
+                Stanford Home<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://visit.stanford.edu/plan/">
+                Maps &amp; Directions<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.stanford.edu/search/">
+                Search Stanford<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="https://emergency.stanford.edu">
+                Emergency Info<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="justify-content-center justify-content-lg-start gap-sm-2 gap-md-3 gap-lg-4 list-unstyled d-flex flex-column flex-sm-row"
+          >
+            <li>
+              <a
+                href="https://www.stanford.edu/site/terms/"
+                title="Terms of use for sites"
+              >
+                Terms of Use<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.stanford.edu/site/privacy/"
+                title="Privacy and cookie policy"
+              >
+                Privacy<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://uit.stanford.edu/security/copyright-infringement"
+                title="Report alleged copyright infringement"
+              >
+                Copyright<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4"
+                title="Ownership and use of Stanford trademarks and images"
+              >
+                Trademarks<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://studentservices.stanford.edu/more-resources/student-policies/non-academic/non-discrimination"
+                title="Non-discrimination policy"
+              >
+                Non-Discrimination<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.stanford.edu/site/accessibility"
+                title="Report web accessibility issues"
+              >
+                Accessibility<span class="visually-hidden"
+                  >(link is external)</span
+                >
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="text-center text-lg-start copyright">
+          <span class="text-nowrap">© Stanford University.</span
+          ><span class="text-nowrap"
+            >&nbsp; Stanford, California 94305.</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <dialog id="blacklight-modal" class="modal" data-turbo="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</dialog>
+
+  </body>
+</html>
