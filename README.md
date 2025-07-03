@@ -2,7 +2,7 @@
 *A focused .edu-domain crawler, Lucene indexer, and Flask search UI*
 
 > CS 172 – Group 29 • UCR  
-> Video demo: `https://drive.google.com/file/d/1jjd5EiegDYTAN0jiMLAWoNIiRuMdG036/view`
+> Video demo: https://drive.google.com/file/d/1jjd5EiegDYTAN0jiMLAWoNIiRuMdG036/view
 
 ---
 
